@@ -6,7 +6,7 @@ function isPublicPath(pathname: string): boolean {
   if (PUBLIC_PATHS.includes(pathname)) {
     return true;
   }
-  if (pathname.startsWith("/api/auth")) {
+  if (pathname.startsWith("/api/auth") || pathname.startsWith("/api/whoami")) {
     return true;
   }
   if (
@@ -19,31 +19,13 @@ function isPublicPath(pathname: string): boolean {
   return false;
 }
 
-async function sessionToken(secret: string): Promise<string> {
-  const key = await crypto.subtle.importKey(
-    "raw",
-    new TextEncoder().encode(secret),
-    { name: "HMAC", hash: "SHA-256" },
-    false,
-    ["sign"],
-  );
-  const signature = await crypto.subtle.sign(
-    "HMAC",
-    key,
-    new TextEncoder().encode("atlas" + secret),
-  );
-  return Array.from(new Uint8Array(signature))
-    .map((byte) => byte.toString(16).padStart(2, "0"))
-    .join("");
-}
-
-function tokensMatch(provided: string, expected: string): boolean {
-  if (provided.length !== expected.length) {
+function sessionValid(session: string | undefined, secret: string): boolean {
+  if (!session || session.length !== secret.length) {
     return false;
   }
   let mismatch = 0;
-  for (let index = 0; index < provided.length; index += 1) {
-    mismatch |= provided.charCodeAt(index) ^ expected.charCodeAt(index);
+  for (let index = 0; index < secret.length; index += 1) {
+    mismatch |= session.charCodeAt(index) ^ secret.charCodeAt(index);
   }
   return mismatch === 0;
 }
@@ -59,8 +41,7 @@ export async function middleware(request: NextRequest) {
   }
 
   const session = request.cookies.get("atlas_session")?.value;
-  const expected = await sessionToken(secret);
-  if (!session || !tokensMatch(session, expected)) {
+  if (!sessionValid(session, secret)) {
     return NextResponse.redirect(new URL("/login", request.url));
   }
 
