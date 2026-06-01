@@ -1,6 +1,5 @@
 import { timingSafeEqual } from "crypto";
 import { NextResponse } from "next/server";
-import { sign } from "@/lib/auth";
 
 function passwordsMatch(provided: string, expected: string): boolean {
   const providedBuf = Buffer.from(provided);
@@ -30,8 +29,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "wrong" }, { status: 401 });
   }
 
-  const response = NextResponse.json({ ok: true });
-  response.cookies.set("atlas_session", sign(secret), {
+  const response = NextResponse.redirect(new URL("/", request.url));
+  response.cookies.set("atlas_session", secret, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     sameSite: "lax",

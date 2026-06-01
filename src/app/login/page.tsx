@@ -1,11 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 
 export default function LoginPage() {
-  const router = useRouter();
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -26,11 +24,11 @@ export default function LoginPage() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ password }),
+        redirect: "follow",
       });
 
-      if (response.ok) {
-        router.push("/");
-        router.refresh();
+      if (response.ok || response.redirected) {
+        window.location.href = "/";
         return;
       }
 

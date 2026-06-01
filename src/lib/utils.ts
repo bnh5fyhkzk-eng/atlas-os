@@ -1,7 +1,7 @@
 import "server-only"
 
 import { cookies } from "next/headers"
-import { verify } from "@/lib/auth"
+import { verifySession } from "@/lib/auth"
 
 export async function getServerSession(): Promise<boolean> {
   const secret = process.env.ATLAS_SESSION_SECRET
@@ -15,5 +15,5 @@ export async function getServerSession(): Promise<boolean> {
     return false
   }
 
-  return verify(session, secret)
+  return verifySession(session, secret)
 }
