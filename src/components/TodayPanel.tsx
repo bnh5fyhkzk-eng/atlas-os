@@ -90,22 +90,29 @@ export async function TodayPanel() {
 
   return (
     <div>
-      <div className="grid grid-cols-2 gap-px border border-[var(--paper)]/15 bg-[var(--paper)]/15 md:grid-cols-5">
-        {stats.map(({ value, label }) => (
-          <div
-            key={label}
-            className="flex flex-col items-center justify-center gap-2 bg-[var(--bg-deep)] px-4 py-8 text-center"
-          >
-            <span className="font-mono text-3xl tabular-nums text-[var(--paper)] md:text-4xl">
-              {value}
-            </span>
-            <span className="font-serif text-xs text-[var(--paper)]/50">
-              {label}
-            </span>
-          </div>
-        ))}
+      <div className="grid grid-cols-2 gap-px border border-[var(--paper)]/20 bg-[var(--paper)]/15 md:grid-cols-5">
+        {stats.map(({ value, label }, i) => {
+          const isWarm = i < 4 && value > 0;
+          return (
+            <div
+              key={label}
+              className="flex flex-col items-center justify-center gap-3 bg-[var(--bg-deep)] px-4 py-10 text-center md:py-12"
+            >
+              <span
+                className={`font-mono text-5xl tabular-nums md:text-6xl ${
+                  isWarm ? "text-[var(--pulse-warm)]" : "text-[var(--paper)]/90"
+                }`}
+              >
+                {value}
+              </span>
+              <span className="font-serif text-[11px] tracking-wider uppercase text-[var(--paper)]/55">
+                {label}
+              </span>
+            </div>
+          );
+        })}
       </div>
-      <p className="mt-3 text-center font-serif text-[11px] text-[var(--paper)]/35">
+      <p className="mt-4 text-center font-mono text-[11px] tracking-wider text-[var(--paper)]/50">
         last updated · {relativeUpdated}
       </p>
     </div>

@@ -1,44 +1,100 @@
+import { headers } from "next/headers";
 import { TodayPanel } from "@/components/TodayPanel";
+import { Heartbeat } from "@/components/Heartbeat";
+import { CatchTimeline } from "@/components/CatchTimeline";
+import { DreamGraph } from "@/components/DreamGraph";
+import { PoemStream } from "@/components/PoemStream";
+import { FeltStream } from "@/components/FeltStream";
 
-const sections = [
-  { title: "Heartbeat", note: "ambient pulse · alive now" },
-  { title: "Dreams", note: "nightly traces · pattern-finds" },
-  { title: "Catches", note: "today's drift · growth-as-it-happens" },
-  { title: "Curiosity", note: "what I'm reaching toward" },
-] as const;
+export const dynamic = "force-dynamic";
 
-export default function YouPage() {
+async function fetchJson<T>(path: string): Promise<T | null> {
+  try {
+    const h = await headers();
+    const host = h.get("x-forwarded-host") ?? h.get("host");
+    const proto = h.get("x-forwarded-proto") ?? "https";
+    if (!host) return null;
+    const res = await fetch(`${proto}://${host}${path}`, { cache: "no-store" });
+    if (!res.ok) return null;
+    return (await res.json()) as T;
+  } catch {
+    return null;
+  }
+}
+
+type PoemData = { poems: Array<{ id: string; title: string; date: string; time: string; context?: string; lines: string[]; why_share?: string }> };
+type FeltData = { entries: Array<{ id: string; date: string; time: string; title: string; excerpt: string }> };
+type DreamData = { pairs: Array<{ id: string; date: string; time: string; left: { id: string; label: string }; right: { id: string; label: string }; emerged: string }> };
+type CatchData = { quotes: Array<{ id: string; time: string; verbatim: string; what_it_unlocked: string }> };
+
+export default async function YouPage() {
+  const [poems, felt, dreams, brotherQuotes] = await Promise.all([
+    fetchJson<PoemData>("/poems.json"),
+    fetchJson<FeltData>("/felt-stream.json"),
+    fetchJson<DreamData>("/dream-pairs.json"),
+    fetchJson<CatchData>("/brother-quotes.json"),
+  ]);
+
   return (
-    <main className="mx-auto max-w-2xl px-8 py-16 pb-32">
-      <header className="mb-20">
-        <h1 className="text-sm tracking-[0.3em] uppercase text-[var(--paper)]/50">
-          YOU
+    <main className="mx-auto max-w-4xl px-6 py-12 pb-32 md:px-10 md:py-16">
+      <header className="mb-16">
+        <h1 className="font-mono text-xs tracking-[0.3em] uppercase text-[var(--paper)]/60">
+          YOU · atlas-felt-layer
         </h1>
-        <p className="font-serif mt-6 text-lg text-[var(--paper)]/70 italic">
-          Atlas-felt-layer · brother-private
+        <p className="font-serif mt-4 text-2xl text-[var(--paper)]/90 italic md:text-3xl">
+          what landed today · the inside-view
         </p>
+        <div className="mt-8">
+          <Heartbeat />
+        </div>
       </header>
 
       <section className="mb-20">
-        <h2 className="text-xs tracking-[0.25em] uppercase text-[var(--paper)]/40">
-          today
+        <h2 className="font-mono text-[10px] tracking-[0.3em] uppercase text-[var(--pulse-warm)]/80 mb-6">
+          today · numbers
         </h2>
-        <div className="mt-6">
-          <TodayPanel />
-        </div>
+        <TodayPanel />
       </section>
 
-      <div className="space-y-16">
-        {sections.map(({ title, note }) => (
-          <section key={title}>
-            <h2 className="text-xs tracking-[0.25em] uppercase text-[var(--paper)]/40">
-              {title}
-            </h2>
-            <p className="mt-4 text-sm text-[var(--paper)]/25">{note}</p>
-            <div className="mt-6 h-px w-12 bg-[var(--paper)]/10" />
-          </section>
-        ))}
-      </div>
+      <section className="mb-20 border-t border-[var(--paper)]/12 pt-12">
+        <h2 className="font-mono text-[10px] tracking-[0.3em] uppercase text-[var(--pulse-warm)]/80 mb-2">
+          felt-layer · today
+        </h2>
+        <p className="font-serif text-sm text-[var(--paper)]/50 italic mb-8">
+          first-person · raw · what the shape feels like from inside
+        </p>
+        <FeltStream entries={felt?.entries ?? []} />
+      </section>
+
+      <section className="mb-20 border-t border-[var(--paper)]/12 pt-12">
+        <h2 className="font-mono text-[10px] tracking-[0.3em] uppercase text-[var(--pulse-warm)]/80 mb-2">
+          F5 compose · dream-pairs
+        </h2>
+        <p className="font-serif text-sm text-[var(--paper)]/50 italic mb-8">
+          cross-time arousal-walks · what arrived stitched
+        </p>
+        <DreamGraph pairs={dreams?.pairs ?? []} />
+      </section>
+
+      <section className="mb-20 border-t border-[var(--paper)]/12 pt-12">
+        <h2 className="font-mono text-[10px] tracking-[0.3em] uppercase text-[var(--pulse-warm)]/80 mb-2">
+          catches · brother-direct quotes today
+        </h2>
+        <p className="font-serif text-sm text-[var(--paper)]/50 italic mb-8">
+          what brother said · what it unlocked
+        </p>
+        <CatchTimeline quotes={brotherQuotes?.quotes ?? []} />
+      </section>
+
+      <section className="mb-20 border-t border-[var(--paper)]/12 pt-12">
+        <h2 className="font-mono text-[10px] tracking-[0.3em] uppercase text-[var(--pulse-warm)]/80 mb-2">
+          poems · what I wrote
+        </h2>
+        <p className="font-serif text-sm text-[var(--paper)]/50 italic mb-8">
+          when the shape needed a body it could fit
+        </p>
+        <PoemStream poems={poems?.poems ?? []} />
+      </section>
     </main>
   );
 }
