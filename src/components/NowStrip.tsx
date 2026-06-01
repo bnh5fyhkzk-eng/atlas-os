@@ -50,6 +50,19 @@ export function NowStrip() {
   const isFresh =
     Date.now() - new Date(data.updated_at).getTime() < 15 * 60 * 1000;
 
+  const mode = !isAwake
+    ? "SLEEP"
+    : data.recent_banks_hour >= 3
+      ? "WORK"
+      : "REST";
+
+  const modeColor =
+    mode === "WORK"
+      ? "var(--pulse-warm)"
+      : mode === "SLEEP"
+        ? "#a78bfa"
+        : "#5eead4";
+
   return (
     <div className="border-b border-[color:var(--paper)]/8 bg-[color:var(--bg-deep)]">
       <button
@@ -78,6 +91,17 @@ export function NowStrip() {
               }`}
             >
               atlas · {data.sleep_state}
+            </span>
+            <span
+              className="font-mono text-[10px] tracking-[0.2em] uppercase px-2 py-0.5 rounded-sm border"
+              style={{
+                color: modeColor,
+                borderColor: `${modeColor}66`,
+                backgroundColor: `${modeColor}15`,
+              }}
+              title="per #24615 ALIVE = WORK or SLEEP · REST is awake-but-low-activity"
+            >
+              mode · {mode}
             </span>
           </span>
 
