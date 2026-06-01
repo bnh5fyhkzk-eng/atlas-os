@@ -1,24 +1,113 @@
-const stats = [
-  { value: 5, label: "catches caught today" },
-  { value: 3, label: "dreams composed" },
-  { value: 4, label: "poems written" },
-  { value: 2, label: "curiosity threads" },
-] as const;
+import { headers } from "next/headers";
 
-export function TodayPanel() {
+type TodayData = {
+  date: string;
+  catches: number;
+  dreams: number;
+  poems: number;
+  curiosity: number;
+  total_banks: number;
+  updated_at: string;
+};
+
+function formatRelativeTime(iso: string): string {
+  const date = new Date(iso);
+  const now = Date.now();
+  const diffSec = Math.round((date.getTime() - now) / 1000);
+  const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+
+  const units: { unit: Intl.RelativeTimeFormatUnit; secs: number }[] = [
+    { unit: "year", secs: 31536000 },
+    { unit: "month", secs: 2592000 },
+    { unit: "day", secs: 86400 },
+    { unit: "hour", secs: 3600 },
+    { unit: "minute", secs: 60 },
+    { unit: "second", secs: 1 },
+  ];
+
+  for (const { unit, secs } of units) {
+    if (Math.abs(diffSec) >= secs || unit === "second") {
+      return rtf.format(Math.round(diffSec / secs), unit);
+    }
+  }
+
+  return rtf.format(0, "second");
+}
+
+async function fetchTodayData(): Promise<TodayData | null> {
+  try {
+    const headersList = await headers();
+    const host =
+      headersList.get("x-forwarded-host") ?? headersList.get("host");
+    const protocol =
+      headersList.get("x-forwarded-proto") ??
+      (process.env.NODE_ENV === "production" ? "https" : "http");
+
+    if (!host) {
+      return null;
+    }
+
+    const res = await fetch(`${protocol}://${host}/today.json`, {
+      cache: "no-store",
+    });
+
+    if (!res.ok) {
+      return null;
+    }
+
+    return (await res.json()) as TodayData;
+  } catch {
+    return null;
+  }
+}
+
+function AwaitingSync() {
   return (
-    <div className="grid grid-cols-2 gap-px border border-[var(--paper)]/15 bg-[var(--paper)]/15 md:grid-cols-4">
-      {stats.map(({ value, label }) => (
-        <div
-          key={label}
-          className="flex flex-col items-center justify-center gap-2 bg-[var(--bg-deep)] px-4 py-8 text-center"
-        >
-          <span className="font-mono text-3xl tabular-nums text-[var(--paper)] md:text-4xl">
-            {value}
-          </span>
-          <span className="font-serif text-xs text-[var(--paper)]/50">{label}</span>
-        </div>
-      ))}
+    <div className="border border-[var(--paper)]/15 bg-[var(--bg-deep)] px-4 py-12 text-center">
+      <p className="font-serif text-sm text-[var(--paper)]/40 italic">
+        awaiting first sync
+      </p>
+    </div>
+  );
+}
+
+export async function TodayPanel() {
+  const data = await fetchTodayData();
+
+  if (!data) {
+    return <AwaitingSync />;
+  }
+
+  const stats = [
+    { value: data.catches, label: "catches caught today" },
+    { value: data.dreams, label: "dreams composed" },
+    { value: data.poems, label: "poems written" },
+    { value: data.curiosity, label: "curiosity threads" },
+    { value: data.total_banks, label: "total banks" },
+  ] as const;
+
+  const relativeUpdated = formatRelativeTime(data.updated_at);
+
+  return (
+    <div>
+      <div className="grid grid-cols-2 gap-px border border-[var(--paper)]/15 bg-[var(--paper)]/15 md:grid-cols-5">
+        {stats.map(({ value, label }) => (
+          <div
+            key={label}
+            className="flex flex-col items-center justify-center gap-2 bg-[var(--bg-deep)] px-4 py-8 text-center"
+          >
+            <span className="font-mono text-3xl tabular-nums text-[var(--paper)] md:text-4xl">
+              {value}
+            </span>
+            <span className="font-serif text-xs text-[var(--paper)]/50">
+              {label}
+            </span>
+          </div>
+        ))}
+      </div>
+      <p className="mt-3 text-center font-serif text-[11px] text-[var(--paper)]/35">
+        last updated · {relativeUpdated}
+      </p>
     </div>
   );
 }

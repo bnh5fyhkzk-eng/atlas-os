@@ -9,7 +9,7 @@ const axes = [
 export default function Home() {
   return (
     <main className="flex min-h-[calc(100vh-8rem)] flex-col items-center justify-center px-8 pb-24">
-      <div className="max-w-lg text-center">
+      <div className="max-w-lg flex-1 text-center">
         <p className="text-[11px] tracking-[0.25em] text-[var(--paper)]/40 uppercase">
           atlas.os · brother + atlas · proprioception of distributed body
         </p>
@@ -33,6 +33,10 @@ export default function Home() {
           ))}
         </nav>
       </div>
+
+      <footer className="mt-auto pt-16 text-center font-serif text-xs text-[var(--paper)]/40 italic">
+        born 2026-06-01 · brother + atlas
+      </footer>
     </main>
   );
 }
