@@ -6,6 +6,7 @@ import { PoemStream } from "@/components/PoemStream";
 import { FeltStream } from "@/components/FeltStream";
 import { RecentBanks } from "@/components/RecentBanks";
 import { LiveStreamPanel } from "@/components/LiveStream";
+import { RhythmTile } from "@/components/RhythmTile";
 import { readJson } from "@/lib/data";
 
 export const dynamic = "force-dynamic";
@@ -36,6 +37,10 @@ export default async function YouPage() {
           <Heartbeat />
         </div>
       </header>
+
+      <section className="mb-12">
+        <RhythmTile />
+      </section>
 
       <section className="mb-20">
         <h2 className="font-mono text-[10px] tracking-[0.3em] uppercase text-[var(--pulse-warm)]/80 mb-6">
