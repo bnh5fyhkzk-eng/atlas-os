@@ -1,4 +1,4 @@
-import { headers } from "next/headers";
+import { readJson } from "@/lib/data";
 
 type TodayData = {
   date: string;
@@ -6,7 +6,13 @@ type TodayData = {
   dreams: number;
   poems: number;
   curiosity: number;
+  canons?: number;
+  wins?: number;
   total_banks: number;
+  total_week?: number;
+  total_brain?: number;
+  top_catch?: string;
+  focus?: string;
   updated_at: string;
 };
 
@@ -34,56 +40,29 @@ function formatRelativeTime(iso: string): string {
   return rtf.format(0, "second");
 }
 
-async function fetchTodayData(): Promise<TodayData | null> {
-  try {
-    const headersList = await headers();
-    const host =
-      headersList.get("x-forwarded-host") ?? headersList.get("host");
-    const protocol =
-      headersList.get("x-forwarded-proto") ??
-      (process.env.NODE_ENV === "production" ? "https" : "http");
-
-    if (!host) {
-      return null;
-    }
-
-    const res = await fetch(`${protocol}://${host}/today.json`, {
-      cache: "no-store",
-    });
-
-    if (!res.ok) {
-      return null;
-    }
-
-    return (await res.json()) as TodayData;
-  } catch {
-    return null;
-  }
-}
-
 function AwaitingSync() {
   return (
     <div className="border border-[var(--paper)]/15 bg-[var(--bg-deep)] px-4 py-12 text-center">
       <p className="font-serif text-sm text-[var(--paper)]/40 italic">
-        awaiting first sync
+        first sync · within the hour
       </p>
     </div>
   );
 }
 
 export async function TodayPanel() {
-  const data = await fetchTodayData();
+  const data = await readJson<TodayData>("today.json");
 
-  if (!data) {
+  if (!data || data.total_banks === 0) {
     return <AwaitingSync />;
   }
 
   const stats = [
-    { value: data.catches, label: "catches caught today" },
-    { value: data.dreams, label: "dreams composed" },
-    { value: data.poems, label: "poems written" },
-    { value: data.curiosity, label: "curiosity threads" },
-    { value: data.total_banks, label: "total banks" },
+    { value: data.catches, label: "catches today", warm: true },
+    { value: data.dreams, label: "dreams composed", warm: true },
+    { value: data.canons ?? 0, label: "canons forged", warm: true },
+    { value: data.curiosity, label: "curiosity threads", warm: true },
+    { value: data.total_banks, label: "today total", warm: false },
   ] as const;
 
   const relativeUpdated = formatRelativeTime(data.updated_at);
@@ -91,12 +70,12 @@ export async function TodayPanel() {
   return (
     <div>
       <div className="grid grid-cols-2 gap-px border border-[var(--paper)]/20 bg-[var(--paper)]/15 md:grid-cols-5">
-        {stats.map(({ value, label }, i) => {
-          const isWarm = i < 4 && value > 0;
+        {stats.map(({ value, label, warm }) => {
+          const isWarm = warm && value > 0;
           return (
             <div
               key={label}
-              className="flex flex-col items-center justify-center gap-3 bg-[var(--bg-deep)] px-4 py-10 text-center md:py-12"
+              className="flex flex-col items-center justify-center gap-3 bg-[var(--bg-deep)] px-4 py-10 text-center md:py-12 transition-all hover:bg-[var(--paper)]/3"
             >
               <span
                 className={`font-mono text-5xl tabular-nums md:text-6xl ${
@@ -112,9 +91,31 @@ export async function TodayPanel() {
           );
         })}
       </div>
-      <p className="mt-4 text-center font-mono text-[11px] tracking-wider text-[var(--paper)]/50">
-        last updated · {relativeUpdated}
-      </p>
+
+      {data.total_brain && (
+        <div className="mt-6 flex flex-wrap items-baseline justify-between gap-3 border-t border-[var(--paper)]/10 pt-4">
+          <span className="font-mono text-[11px] tracking-wider text-[var(--paper)]/55">
+            this week · <span className="text-[var(--pulse-warm)] tabular-nums">{data.total_week?.toLocaleString() ?? "—"}</span> banks
+          </span>
+          <span className="font-mono text-[11px] tracking-wider text-[var(--paper)]/55">
+            all-time · <span className="text-[var(--pulse-warm)] tabular-nums">{data.total_brain.toLocaleString()}</span> nodes
+          </span>
+          <span className="font-mono text-[11px] tracking-wider text-[var(--paper)]/45">
+            synced · {relativeUpdated}
+          </span>
+        </div>
+      )}
+
+      {data.top_catch && (
+        <div className="mt-6 rounded-sm border border-[var(--pulse-warm)]/30 bg-[var(--pulse-warm)]/5 px-5 py-4">
+          <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-[var(--pulse-warm)]/90 mb-2">
+            top catch · today
+          </p>
+          <p className="font-serif text-[13px] italic leading-relaxed text-[var(--paper)]/85">
+            &ldquo;{data.top_catch.length > 200 ? data.top_catch.slice(0, 200) + "…" : data.top_catch}&rdquo;
+          </p>
+        </div>
+      )}
     </div>
   );
 }

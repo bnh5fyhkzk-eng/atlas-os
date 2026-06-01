@@ -1,3 +1,5 @@
+import { ReactionBar } from "./ReactionBar";
+
 type Canon = {
   id: string;
   date: string;
@@ -47,6 +49,7 @@ export function CanonsGallery({ canons }: { canons: Canon[] }) {
           <p className="mt-2 font-mono text-[10px] tabular-nums tracking-wider text-[var(--paper)]/40">
             {c.date}
           </p>
+          <ReactionBar targetId={`canon-${c.id}`} />
         </li>
       ))}
     </ol>

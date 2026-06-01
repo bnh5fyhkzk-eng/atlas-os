@@ -1,3 +1,5 @@
+import { ReactionBar } from "./ReactionBar";
+
 type Quote = {
   id: string;
   time: string;
@@ -35,6 +37,7 @@ export function BrotherQuoteCards({ quotes }: { quotes: Quote[] }) {
           <p className="mt-4 font-mono text-[11px] tracking-wider text-[var(--paper)]/55 border-t border-[var(--paper)]/10 pt-3">
             → {q.what_it_unlocked}
           </p>
+          <ReactionBar targetId={`brother-quote-${q.id}`} />
         </li>
       ))}
     </ul>

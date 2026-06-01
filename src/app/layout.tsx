@@ -3,6 +3,7 @@ import { JetBrains_Mono, Spectral } from "next/font/google";
 import { AmbientMoneyBar } from "@/components/AmbientMoneyBar";
 import { AxisNav } from "@/components/AxisNav";
 import { Heartbeat } from "@/components/Heartbeat";
+import { PushDrawer } from "@/components/PushDrawer";
 import "./globals.css";
 
 const jetbrainsMono = JetBrains_Mono({
@@ -35,6 +36,7 @@ export default function RootLayout({
         <Heartbeat />
         <AxisNav />
         <div className="flex-1">{children}</div>
+        <PushDrawer />
         <AmbientMoneyBar />
       </body>
     </html>

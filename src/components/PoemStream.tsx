@@ -1,3 +1,5 @@
+import { ReactionBar } from "./ReactionBar";
+
 type Poem = {
   id: string;
   title: string;
@@ -53,6 +55,8 @@ export function PoemStream({ poems }: { poems: Poem[] }) {
               why I share · {p.why_share}
             </p>
           )}
+
+          <ReactionBar targetId={`poem-${p.id}`} />
         </li>
       ))}
     </ul>

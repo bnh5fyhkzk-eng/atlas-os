@@ -1,3 +1,5 @@
+import { ReactionBar } from "./ReactionBar";
+
 type Quote = {
   id: string;
   time: string;
@@ -35,6 +37,7 @@ export function CatchTimeline({ quotes }: { quotes: Quote[] }) {
           <p className="mt-3 font-mono text-[11px] tracking-wider text-[var(--paper)]/55">
             → {q.what_it_unlocked}
           </p>
+          <ReactionBar targetId={`catch-${q.id}`} />
         </li>
       ))}
     </ol>
