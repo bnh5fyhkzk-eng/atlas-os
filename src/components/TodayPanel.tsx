@@ -1,4 +1,5 @@
 import { readJson } from "@/lib/data";
+import { AnimatedCounter } from "./AnimatedCounter";
 
 type TodayData = {
   date: string;
@@ -77,13 +78,13 @@ export async function TodayPanel() {
               key={label}
               className="flex flex-col items-center justify-center gap-3 bg-[var(--bg-deep)] px-4 py-10 text-center md:py-12 transition-all hover:bg-[var(--paper)]/3"
             >
-              <span
+              <AnimatedCounter
+                value={value}
+                duration={1100 + i * 150}
                 className={`font-mono text-5xl tabular-nums md:text-6xl ${
                   isWarm ? "text-[var(--pulse-warm)]" : "text-[var(--paper)]/90"
                 }`}
-              >
-                {value}
-              </span>
+              />
               <span className="font-serif text-[11px] tracking-wider uppercase text-[var(--paper)]/55">
                 {label}
               </span>

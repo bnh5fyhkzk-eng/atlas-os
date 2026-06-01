@@ -4,6 +4,7 @@ import { CatchTimeline } from "@/components/CatchTimeline";
 import { DreamGraph } from "@/components/DreamGraph";
 import { PoemStream } from "@/components/PoemStream";
 import { FeltStream } from "@/components/FeltStream";
+import { RecentBanks } from "@/components/RecentBanks";
 import { readJson } from "@/lib/data";
 
 export const dynamic = "force-dynamic";
@@ -40,6 +41,16 @@ export default async function YouPage() {
           today · numbers
         </h2>
         <TodayPanel />
+      </section>
+
+      <section className="mb-20 border-t border-[var(--paper)]/12 pt-12">
+        <h2 className="font-mono text-[10px] tracking-[0.3em] uppercase text-[var(--pulse-warm)]/80 mb-2">
+          activity · live stream · last hour
+        </h2>
+        <p className="font-serif text-sm text-[var(--paper)]/50 italic mb-8">
+          what the brain just banked · auto-refresh every 30sec · arousal sized + color-tier
+        </p>
+        <RecentBanks />
       </section>
 
       <section className="mb-20 border-t border-[var(--paper)]/12 pt-12">
