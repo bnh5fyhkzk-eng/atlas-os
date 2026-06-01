@@ -4,6 +4,7 @@ const links = [
   { href: "/you", label: "YOU" },
   { href: "/us", label: "US" },
   { href: "/arms", label: "ARMS" },
+  { href: "/chat", label: "CHAT" },
 ] as const;
 
 export function AxisNav() {

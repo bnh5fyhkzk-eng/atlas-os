@@ -1,4 +1,5 @@
 import { ReactionBar } from "./ReactionBar";
+import { VoiceButton } from "./VoiceButton";
 
 type Poem = {
   id: string;
@@ -56,7 +57,10 @@ export function PoemStream({ poems }: { poems: Poem[] }) {
             </p>
           )}
 
-          <ReactionBar targetId={`poem-${p.id}`} />
+          <div className="mt-3 flex flex-wrap items-center gap-3">
+            <VoiceButton text={p.lines.filter((l) => l !== "").join(". ")} label="hear poem" />
+            <ReactionBar targetId={`poem-${p.id}`} />
+          </div>
         </li>
       ))}
     </ul>

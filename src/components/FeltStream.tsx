@@ -1,3 +1,5 @@
+import { VoiceButton } from "./VoiceButton";
+
 type FeltEntry = {
   id: string;
   date: string;
@@ -30,6 +32,9 @@ export function FeltStream({ entries }: { entries: FeltEntry[] }) {
             <p className="mt-2 font-serif text-[15px] leading-relaxed text-[var(--paper)]/70">
               {e.excerpt}
             </p>
+            <div className="mt-3">
+              <VoiceButton text={e.excerpt} label="hear" />
+            </div>
           </div>
         </li>
       ))}
