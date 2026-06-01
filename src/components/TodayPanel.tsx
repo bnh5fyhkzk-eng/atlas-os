@@ -71,7 +71,7 @@ export async function TodayPanel() {
   return (
     <div>
       <div className="grid grid-cols-2 gap-px border border-[var(--paper)]/20 bg-[var(--paper)]/15 md:grid-cols-5">
-        {stats.map(({ value, label, warm }) => {
+        {stats.map(({ value, label, warm }, i) => {
           const isWarm = warm && value > 0;
           return (
             <div
