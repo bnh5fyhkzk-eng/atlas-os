@@ -1,6 +1,19 @@
-import { clsx, type ClassValue } from "clsx"
-import { twMerge } from "tailwind-merge"
+import "server-only"
 
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+import { cookies } from "next/headers"
+import { verify } from "@/lib/auth"
+
+export async function getServerSession(): Promise<boolean> {
+  const secret = process.env.ATLAS_SESSION_SECRET
+  if (!secret) {
+    return false
+  }
+
+  const cookieStore = await cookies()
+  const session = cookieStore.get("atlas_session")?.value
+  if (!session) {
+    return false
+  }
+
+  return verify(session, secret)
 }
