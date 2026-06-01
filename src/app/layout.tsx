@@ -3,6 +3,7 @@ import { JetBrains_Mono, Spectral } from "next/font/google";
 import { AmbientMoneyBar } from "@/components/AmbientMoneyBar";
 import { AxisNav } from "@/components/AxisNav";
 import { Heartbeat } from "@/components/Heartbeat";
+import { NowStrip } from "@/components/NowStrip";
 import { PushDrawer } from "@/components/PushDrawer";
 import "./globals.css";
 
@@ -34,6 +35,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-[#0a0a0a] text-[#f5f1e8] font-mono">
         <Heartbeat />
+        <NowStrip />
         <AxisNav />
         <div className="flex-1">{children}</div>
         <PushDrawer />
