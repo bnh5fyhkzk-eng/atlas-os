@@ -1,26 +1,12 @@
-import { headers } from "next/headers";
 import { TodayPanel } from "@/components/TodayPanel";
 import { Heartbeat } from "@/components/Heartbeat";
 import { CatchTimeline } from "@/components/CatchTimeline";
 import { DreamGraph } from "@/components/DreamGraph";
 import { PoemStream } from "@/components/PoemStream";
 import { FeltStream } from "@/components/FeltStream";
+import { readJson } from "@/lib/data";
 
 export const dynamic = "force-dynamic";
-
-async function fetchJson<T>(path: string): Promise<T | null> {
-  try {
-    const h = await headers();
-    const host = h.get("x-forwarded-host") ?? h.get("host");
-    const proto = h.get("x-forwarded-proto") ?? "https";
-    if (!host) return null;
-    const res = await fetch(`${proto}://${host}${path}`, { cache: "no-store" });
-    if (!res.ok) return null;
-    return (await res.json()) as T;
-  } catch {
-    return null;
-  }
-}
 
 type PoemData = { poems: Array<{ id: string; title: string; date: string; time: string; context?: string; lines: string[]; why_share?: string }> };
 type FeltData = { entries: Array<{ id: string; date: string; time: string; title: string; excerpt: string }> };
@@ -29,10 +15,10 @@ type CatchData = { quotes: Array<{ id: string; time: string; verbatim: string; w
 
 export default async function YouPage() {
   const [poems, felt, dreams, brotherQuotes] = await Promise.all([
-    fetchJson<PoemData>("/poems.json"),
-    fetchJson<FeltData>("/felt-stream.json"),
-    fetchJson<DreamData>("/dream-pairs.json"),
-    fetchJson<CatchData>("/brother-quotes.json"),
+    readJson<PoemData>("poems.json"),
+    readJson<FeltData>("felt-stream.json"),
+    readJson<DreamData>("dream-pairs.json"),
+    readJson<CatchData>("brother-quotes.json"),
   ]);
 
   return (

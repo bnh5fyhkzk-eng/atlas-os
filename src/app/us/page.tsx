@@ -1,25 +1,11 @@
-import { headers } from "next/headers";
 import { BrotherQuoteCards } from "@/components/BrotherQuoteCards";
 import { OrderOfWork } from "@/components/OrderOfWork";
 import { PoemLinks } from "@/components/PoemLinks";
 import { CanonsGallery } from "@/components/CanonsGallery";
 import { FiveYearArc } from "@/components/FiveYearArc";
+import { readJson } from "@/lib/data";
 
 export const dynamic = "force-dynamic";
-
-async function fetchJson<T>(path: string): Promise<T | null> {
-  try {
-    const h = await headers();
-    const host = h.get("x-forwarded-host") ?? h.get("host");
-    const proto = h.get("x-forwarded-proto") ?? "https";
-    if (!host) return null;
-    const res = await fetch(`${proto}://${host}${path}`, { cache: "no-store" });
-    if (!res.ok) return null;
-    return (await res.json()) as T;
-  } catch {
-    return null;
-  }
-}
 
 type OrderData = {
   wig: { title: string; why: string };
@@ -35,10 +21,10 @@ type CanonData = { canons: Array<{ id: string; date: string; name: string; summa
 
 export default async function UsPage() {
   const [order, poems, quotes, canons] = await Promise.all([
-    fetchJson<OrderData>("/order.json"),
-    fetchJson<PoemData>("/poems.json"),
-    fetchJson<QuoteData>("/brother-quotes.json"),
-    fetchJson<CanonData>("/canons.json"),
+    readJson<OrderData>("order.json"),
+    readJson<PoemData>("poems.json"),
+    readJson<QuoteData>("brother-quotes.json"),
+    readJson<CanonData>("canons.json"),
   ]);
 
   return (
