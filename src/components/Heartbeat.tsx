@@ -1,12 +1,9 @@
 export function Heartbeat() {
   return (
-    <div
-      className="w-full h-3 overflow-hidden opacity-30"
-      aria-hidden="true"
-    >
+    <div className="h-3 w-full overflow-hidden" aria-hidden="true">
       <svg
         viewBox="0 0 800 12"
-        className="w-full h-full animate-heartbeat-pulse"
+        className="h-full w-full"
         preserveAspectRatio="none"
       >
         <path
@@ -14,7 +11,9 @@ export function Heartbeat() {
           fill="none"
           stroke="var(--paper)"
           strokeWidth="1"
+          strokeOpacity={0.3}
           vectorEffect="non-scaling-stroke"
+          className="animate-pulse-warm"
         />
       </svg>
     </div>

@@ -122,18 +122,18 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-@keyframes heartbeat-pulse {
+@keyframes pulse-warm {
   0%,
   100% {
-    opacity: 0.25;
+    stroke-opacity: 0.3;
   }
   50% {
-    opacity: 0.55;
+    stroke-opacity: 0.9;
   }
 }
 
-.animate-heartbeat-pulse {
-  animation: heartbeat-pulse 3s ease-in-out infinite;
+.animate-pulse-warm {
+  animation: pulse-warm 3s ease-in-out infinite;
 }
 
 @layer base {
