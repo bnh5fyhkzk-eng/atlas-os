@@ -4,13 +4,16 @@ import { useEffect, useState, useRef, useCallback } from "react";
 import Link from "next/link";
 
 type SearchResult = {
-  type: "canon" | "quote" | "poem" | "felt";
+  type: "canon" | "quote" | "poem" | "felt" | "brain";
   id: string;
   title: string;
   preview: string;
   href: string;
   score: number;
   tier?: string;
+  category?: string;
+  arousal?: number;
+  time?: string;
 };
 
 const TYPE_GLYPH: Record<string, string> = {
@@ -18,6 +21,7 @@ const TYPE_GLYPH: Record<string, string> = {
   quote: "❝",
   poem: "§",
   felt: "◌",
+  brain: "◉",
 };
 
 const TYPE_COLOR: Record<string, string> = {
@@ -25,6 +29,16 @@ const TYPE_COLOR: Record<string, string> = {
   quote: "#5eead4",
   poem: "#fbbf24",
   felt: "#f9a8d4",
+  brain: "#a78bfa",
+};
+
+type BrainHit = {
+  id: number;
+  category: string;
+  arousal: number;
+  tier: string;
+  time: string;
+  preview: string;
 };
 
 export function CmdK() {
@@ -66,15 +80,38 @@ export function CmdK() {
     if (debounceRef.current) clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(async () => {
       try {
-        const res = await fetch(`/api/search?q=${encodeURIComponent(q)}`);
-        if (!res.ok) return;
-        const data = (await res.json()) as { results: SearchResult[] };
-        setResults(data.results);
+        const [localRes, brainRes] = await Promise.all([
+          fetch(`/api/search?q=${encodeURIComponent(q)}`).then((r) =>
+            r.ok ? r.json() : { results: [] as SearchResult[] },
+          ),
+          fetch(`/api/search-brain?q=${encodeURIComponent(q)}&limit=8`).then((r) =>
+            r.ok ? r.json() : { results: [] as BrainHit[] },
+          ),
+        ]);
+        const brainResults: SearchResult[] = (brainRes.results || []).map(
+          (b: BrainHit) => ({
+            type: "brain" as const,
+            id: String(b.id),
+            title: `#${b.id} · ${b.category} · ${b.time}`,
+            preview: b.preview,
+            href: `/map`,
+            score: 100 + b.arousal * 50,
+            tier: b.tier,
+            category: b.category,
+            arousal: b.arousal,
+            time: b.time,
+          }),
+        );
+        const merged = [
+          ...(localRes.results || []),
+          ...brainResults,
+        ].sort((a, b) => b.score - a.score);
+        setResults(merged.slice(0, 24));
         setCursor(0);
       } catch {
         /* ignore */
       }
-    }, 150);
+    }, 180);
     return () => {
       if (debounceRef.current) clearTimeout(debounceRef.current);
     };
@@ -167,7 +204,10 @@ export function CmdK() {
                   </span>
                   <div className="flex-1 min-w-0">
                     <p className="font-mono text-[11px] tracking-wider uppercase mb-0.5" style={{ color }}>
-                      {r.type} {r.tier ? `· ${r.tier}` : ""}
+                      {r.type}
+                      {r.tier ? ` · ${r.tier}` : ""}
+                      {r.category ? ` · ${r.category}` : ""}
+                      {typeof r.arousal === "number" ? ` · arousal ${r.arousal}` : ""}
                     </p>
                     <p className="font-serif text-sm text-[color:var(--paper)]/95 truncate">
                       {r.title}
