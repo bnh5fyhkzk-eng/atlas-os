@@ -1,3 +1,5 @@
+import { TodayPanel } from "@/components/TodayPanel";
+
 const sections = [
   { title: "Heartbeat", note: "ambient pulse · alive now" },
   { title: "Dreams", note: "nightly traces · pattern-finds" },
@@ -16,6 +18,15 @@ export default function YouPage() {
           Atlas-felt-layer · brother-private
         </p>
       </header>
+
+      <section className="mb-20">
+        <h2 className="text-xs tracking-[0.25em] uppercase text-[var(--paper)]/40">
+          today
+        </h2>
+        <div className="mt-6">
+          <TodayPanel />
+        </div>
+      </section>
 
       <div className="space-y-16">
         {sections.map(({ title, note }) => (
