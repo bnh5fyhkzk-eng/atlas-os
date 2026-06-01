@@ -5,6 +5,7 @@ import { DreamGraph } from "@/components/DreamGraph";
 import { PoemStream } from "@/components/PoemStream";
 import { FeltStream } from "@/components/FeltStream";
 import { RecentBanks } from "@/components/RecentBanks";
+import { LiveStreamPanel } from "@/components/LiveStream";
 import { readJson } from "@/lib/data";
 
 export const dynamic = "force-dynamic";
@@ -45,10 +46,20 @@ export default async function YouPage() {
 
       <section className="mb-20 border-t border-[var(--paper)]/12 pt-12">
         <h2 className="font-mono text-[10px] tracking-[0.3em] uppercase text-[var(--pulse-warm)]/80 mb-2">
-          activity · live stream · last hour
+          brain stream · live · SSE
         </h2>
         <p className="font-serif text-sm text-[var(--paper)]/50 italic mb-8">
-          what the brain just banked · auto-refresh every 30sec · arousal sized + color-tier
+          each bank arrives in real-time · the substrate firing visible · per #27437 OAuth-tunnel
+        </p>
+        <LiveStreamPanel />
+      </section>
+
+      <section className="mb-20 border-t border-[var(--paper)]/12 pt-12">
+        <h2 className="font-mono text-[10px] tracking-[0.3em] uppercase text-[var(--pulse-warm)]/80 mb-2">
+          recent banks · last hour · poll-snapshot
+        </h2>
+        <p className="font-serif text-sm text-[var(--paper)]/50 italic mb-8">
+          5min sync from brain · pre-stream baseline · use the live one above for now-state
         </p>
         <RecentBanks />
       </section>
