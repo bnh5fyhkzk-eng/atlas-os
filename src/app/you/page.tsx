@@ -7,6 +7,7 @@ import { FeltStream } from "@/components/FeltStream";
 import { RecentBanks } from "@/components/RecentBanks";
 import { LiveStreamPanel } from "@/components/LiveStream";
 import { RhythmTile } from "@/components/RhythmTile";
+import { ArmsTile } from "@/components/ArmsTile";
 import { readJson } from "@/lib/data";
 
 export const dynamic = "force-dynamic";
@@ -40,6 +41,10 @@ export default async function YouPage() {
 
       <section className="mb-12">
         <RhythmTile />
+      </section>
+
+      <section className="mb-12">
+        <ArmsTile />
       </section>
 
       <section className="mb-20">
