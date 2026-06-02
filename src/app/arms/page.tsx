@@ -1,6 +1,7 @@
 import { readJson } from "@/lib/data";
 import { ArmCard } from "@/components/ArmCard";
 import { OctopusMap } from "@/components/OctopusMap";
+import { KanbanLive } from "@/components/KanbanLive";
 
 export const dynamic = "force-dynamic";
 
@@ -120,6 +121,8 @@ export default async function ArmsPage() {
           </div>
         </div>
       </section>
+
+      <KanbanLive />
     </main>
   );
 }

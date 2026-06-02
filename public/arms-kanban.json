@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-06-02T20:05:23Z",
+  "ok": true,
+  "error": null,
+  "by_assignee": {
+    "charle-arm": {
+      "ready": 8
+    },
+    "curiosity-arm": {
+      "ready": 3
+    },
+    "pascal-arm": {
+      "done": 7,
+      "ready": 4,
+      "running": 3
+    }
+  },
+  "running": [
+    {
+      "task_id": "t_358e7473",
+      "profile": "pascal-arm",
+      "title": "Strategic-Tool-2 Todos"
+    },
+    {
+      "task_id": "t_c179ea28",
+      "profile": "pascal-arm",
+      "title": "Strategic-Tool-3 Calendar"
+    },
+    {
+      "task_id": "t_4b7008fb",
+      "profile": "pascal-arm",
+      "title": "Strategic-Tool-4 Email Triage"
+    }
+  ],
+  "worker_count_live": 0,
+  "recent_events": [
+    "[2026-06-02 19:36] WARN dispatcher stuck: ready queue non-empty for 6 consecutive ticks but 0 workers spawned successfully. Check profile health (venv, PATH, credentials) and `hermes kanban list --status ready` / `hermes kanban list --status blocked` for recent spawn_failed tasks.",
+    "[2026-06-02 19:38] reclaimed=0 crashed=0 timed_out=0 stale=0 promoted=0 spawned=1 auto_blocked=0",
+    "[2026-06-02 19:44] WARN dispatcher stuck: ready queue non-empty for 6 consecutive ticks but 0 workers spawned successfully. Check profile health (venv, PATH, credentials) and `hermes kanban list --status ready` / `hermes kanban list --status blocked` for recent spawn_failed tasks.",
+    "[2026-06-02 19:49] WARN dispatcher stuck: ready queue non-empty for 11 consecutive ticks but 0 workers spawned successfully. Check profile health (venv, PATH, credentials) and `hermes kanban list --status ready` / `hermes kanban list --status blocked` for recent spawn_failed tasks.",
+    "[2026-06-02 19:54] reclaimed=0 crashed=0 timed_out=0 stale=0 promoted=0 spawned=1 auto_blocked=0",
+    "[2026-06-02 20:00] WARN dispatcher stuck: ready queue non-empty for 6 consecutive ticks but 0 workers spawned successfully. Check profile health (venv, PATH, credentials) and `hermes kanban list --status ready` / `hermes kanban list --status blocked` for recent spawn_failed tasks.",
+    "(dispatcher stopped)",
+    "Kanban dispatcher running STANDALONE via --force (interval=60.0s, pid=164904). Ctrl-C to stop. NOTE: if a gateway is also running with dispatch_in_gateway=true (default), you have two dispatchers racing for claims.",
+    "[2026-06-02 20:04] reclaimed=0 crashed=0 timed_out=0 stale=0 promoted=0 spawned=2 auto_blocked=0",
+    "==="
+  ],
+  "daemon_alive": true
+}
