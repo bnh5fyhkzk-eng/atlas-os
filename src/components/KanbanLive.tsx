@@ -37,11 +37,15 @@ function fmtAge(seconds: number): string {
   return `${Math.floor(seconds / 3600)}h`;
 }
 
+type CollectedEntry = { arm: string; collected_at: string; local_path: string };
+type Collected = Record<string, CollectedEntry>;
+
 export function KanbanLive() {
   const [data, setData] = useState<KanbanData | null>(null);
   const [age, setAge] = useState<number>(0);
   const [lastView, setLastView] = useState<number | null>(null);
   const [doneAtView, setDoneAtView] = useState<number | null>(null);
+  const [collected, setCollected] = useState<Collected | null>(null);
 
   useEffect(() => {
     try {
@@ -70,6 +74,26 @@ export function KanbanLive() {
     };
     fetchData();
     const id = setInterval(fetchData, 30_000);
+    return () => {
+      cancelled = true;
+      clearInterval(id);
+    };
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    const fetchCollected = async () => {
+      try {
+        const res = await fetch(`/arms-collected.json?ts=${Date.now()}`, { cache: "no-store" });
+        if (!res.ok) return;
+        const json = (await res.json()) as Collected;
+        if (!cancelled) setCollected(json);
+      } catch {
+        // silent
+      }
+    };
+    fetchCollected();
+    const id = setInterval(fetchCollected, 60_000);
     return () => {
       cancelled = true;
       clearInterval(id);
@@ -216,6 +240,36 @@ export function KanbanLive() {
           );
         })}
       </div>
+
+      {collected && Object.keys(collected).length > 0 && (() => {
+        const entries = Object.entries(collected);
+        const lastTs = entries.reduce((max, [, e]) => {
+          const t = new Date(e.collected_at).getTime();
+          return t > max ? t : max;
+        }, 0);
+        const sinceMin = Math.floor((Date.now() - lastTs) / 60_000);
+        const sinceStr = sinceMin < 1 ? "just now" : sinceMin < 60 ? `${sinceMin}min ago` : `${Math.floor(sinceMin / 60)}h ago`;
+        const byArm: Record<string, number> = {};
+        entries.forEach(([, e]) => {
+          byArm[e.arm] = (byArm[e.arm] || 0) + 1;
+        });
+        return (
+          <div className="mt-6 rounded border border-neutral-800 bg-neutral-950/40 px-4 py-3 text-xs text-neutral-400">
+            <span className="text-neutral-300">{entries.length}</span> briefs collected locally
+            <span className="text-neutral-600"> · </span>
+            {Object.entries(byArm).map(([arm, n], i) => (
+              <span key={arm}>
+                {i > 0 && <span className="text-neutral-700"> · </span>}
+                <span className={ARM_COLOR[arm]?.text || "text-neutral-300"}>{arm}</span>={n}
+              </span>
+            ))}
+            <span className="text-neutral-600"> · last {sinceStr}</span>
+            <a href="/arms-collected.json" className="ml-3 text-amber-400 hover:text-amber-300 underline">
+              browse
+            </a>
+          </div>
+        );
+      })()}
 
       {(data.events_default.length > 0 || data.events_charle.length > 0 || data.events_curiosity.length > 0) && (
         <details className="mt-6">
