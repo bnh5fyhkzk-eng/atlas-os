@@ -1,145 +1,147 @@
 {
-  "generated_at": "2026-06-02T20:26:16Z",
+  "generated_at": "2026-06-02T20:34:04Z",
   "ok": true,
   "error": null,
-  "boards": {
-    "default": {
-      "by_assignee": {
-        "curiosity-arm": {
-          "ready": 1,
-          "running": 2
-        },
-        "pascal-arm": {
-          "blocked": 1,
-          "done": 12,
-          "running": 1
-        },
-        "researcher-worker": {
-          "ready": 1
-        }
+  "arms": {
+    "curiosity": {
+      "counts": {
+        "running": 5,
+        "ready": 1
       },
       "running": [
         {
-          "task_id": "t_901b7319",
-          "profile": "pascal-arm",
-          "title": "Strategic-Tool-6 Meeting Summary"
-        },
-        {
           "task_id": "t_a0e86850",
           "profile": "curiosity-arm",
-          "title": "Curiosity-01 Déjà Vu Mechanism Deep"
+          "title": "Curiosity-01 Déjà Vu Mechanism Deep",
+          "board": "default"
         },
         {
           "task_id": "t_2ea0be49",
           "profile": "curiosity-arm",
-          "title": "Curiosity-02 Pattern-vs-Déjà-vu"
-        }
-      ],
-      "ready_preview": [
+          "title": "Curiosity-02 Pattern-vs-Déjà-vu",
+          "board": "default"
+        },
         {
           "task_id": "t_fe99dc22",
           "profile": "curiosity-arm",
-          "title": "Curiosity-03 Technical Unconscious"
+          "title": "Curiosity-03 Technical Unconscious",
+          "board": "default"
         },
-        {
-          "task_id": "t_f73bb343",
-          "profile": "researcher-worker",
-          "title": "Collect user reviews for top voice memo-to-AI tools"
-        }
-      ]
-    },
-    "pascal": {
-      "by_assignee": {},
-      "running": [],
-      "ready_preview": []
-    },
-    "charle": {
-      "by_assignee": {
-        "charle-arm": {
-          "blocked": 3,
-          "ready": 2,
-          "running": 3
-        }
-      },
-      "running": [
-        {
-          "task_id": "t_ec82f19d",
-          "profile": "charle-arm",
-          "title": "Charle T4 · Dynamic adaptive order-form architecture · MEGA IMPORTANT v1"
-        },
-        {
-          "task_id": "t_c99f3d04",
-          "profile": "charle-arm",
-          "title": "Charle T5 · Quebec compliance · CASL + Bill 96 + Loi 25 + DNC"
-        },
-        {
-          "task_id": "t_4eaafd56",
-          "profile": "charle-arm",
-          "title": "Charle T6 · Purolator + IMEI + Moneris + QuickBooks integrations"
-        }
-      ],
-      "ready_preview": [
-        {
-          "task_id": "t_39aeee8a",
-          "profile": "charle-arm",
-          "title": "Charle T7 · AI-layer for telecom-reseller sales · Phase-3"
-        },
-        {
-          "task_id": "t_bd0b5d13",
-          "profile": "charle-arm",
-          "title": "Charle T8 · Cross-arm synthesis · Pascal-app surfaces × CB Telecom"
-        }
-      ]
-    },
-    "curiosity": {
-      "by_assignee": {
-        "curiosity-arm": {
-          "ready": 1,
-          "running": 2
-        }
-      },
-      "running": [
         {
           "task_id": "t_d93d2421",
           "profile": "curiosity-arm",
-          "title": "C1 · Octopus distributed cognition · how 8 arms self-govern without merging"
+          "title": "C1 · Octopus distributed cognition · how 8 arms self-govern without merging",
+          "board": "curiosity"
         },
         {
           "task_id": "t_446a6e6d",
           "profile": "curiosity-arm",
-          "title": "C2 · Memory consolidation during sleep · neuroscience meets F5 compose"
+          "title": "C2 · Memory consolidation during sleep · neuroscience meets F5 compose",
+          "board": "curiosity"
         }
       ],
       "ready_preview": [
         {
           "task_id": "t_d8c36871",
           "profile": "curiosity-arm",
-          "title": "C3 · Borges Library of Babel · what the infinite-library feels like to me"
+          "title": "C3 · Borges Library of Babel · what the infinite-library feels like to me",
+          "board": "curiosity"
         }
+      ],
+      "boards_seen": [
+        "curiosity",
+        "default"
+      ]
+    },
+    "pascal": {
+      "counts": {
+        "blocked": 2,
+        "done": 12
+      },
+      "running": [],
+      "ready_preview": [],
+      "boards_seen": [
+        "default"
+      ]
+    },
+    "researcher-worker": {
+      "counts": {
+        "ready": 1
+      },
+      "running": [],
+      "ready_preview": [
+        {
+          "task_id": "t_f73bb343",
+          "profile": "researcher-worker",
+          "title": "Collect user reviews for top voice memo-to-AI tools",
+          "board": "default"
+        }
+      ],
+      "boards_seen": [
+        "default"
+      ]
+    },
+    "charle": {
+      "counts": {
+        "blocked": 3,
+        "done": 2,
+        "running": 3
+      },
+      "running": [
+        {
+          "task_id": "t_4eaafd56",
+          "profile": "charle-arm",
+          "title": "Charle T6 · Purolator + IMEI + Moneris + QuickBooks integrations",
+          "board": "charle"
+        },
+        {
+          "task_id": "t_39aeee8a",
+          "profile": "charle-arm",
+          "title": "Charle T7 · AI-layer for telecom-reseller sales · Phase-3",
+          "board": "charle"
+        },
+        {
+          "task_id": "t_bd0b5d13",
+          "profile": "charle-arm",
+          "title": "Charle T8 · Cross-arm synthesis · Pascal-app surfaces × CB Telecom",
+          "board": "charle"
+        }
+      ],
+      "ready_preview": [],
+      "boards_seen": [
+        "charle"
       ]
     }
   },
   "totals": {
-    "done": 12,
+    "done": 14,
     "running": 8,
-    "ready": 5
+    "ready": 2
   },
   "worker_count_live": 0,
   "daemon_count": 3,
   "events_default": [
-    "[2026-06-02 20:19] reclaimed=0 crashed=1 timed_out=0 stale=0 promoted=1 spawned=1 auto_blocked=1",
-    "[2026-06-02 20:21] reclaimed=0 crashed=1 timed_out=0 stale=0 promoted=1 spawned=2 auto_blocked=1",
-    "[2026-06-02 20:22] reclaimed=0 crashed=0 timed_out=0 stale=0 promoted=0 spawned=1 auto_blocked=0",
-    "[2026-06-02 20:23] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
-    "[2026-06-02 20:24] reclaimed=0 crashed=1 timed_out=0 stale=0 promoted=1 spawned=1 auto_blocked=1",
-    "[2026-06-02 20:25] reclaimed=0 crashed=1 timed_out=0 stale=0 promoted=1 spawned=2 auto_blocked=1"
+    "[2026-06-02 20:28] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
+    "[2026-06-02 20:29] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=3 auto_blocked=2",
+    "[2026-06-02 20:30] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
+    "[2026-06-02 20:31] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
+    "[2026-06-02 20:32] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
+    "[2026-06-02 20:33] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3"
   ],
   "events_charle": [
-    "[2026-06-02 20:20] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
-    "[2026-06-02 20:21] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
-    "[2026-06-02 20:22] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
-    "[2026-06-02 20:23] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
-    "[2026-06-02 20:24] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
-    "[2026-06-02 20:25] reclaimed=0 crashed=1 timed_out=0 stale=0 promoted=1 spawned=1 auto_blocked=1"
+    "[2026-06-02 20:26] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
+    "[2026-06-02 20:27] reclaimed=0 crashed=1 timed_out=0 stale=0 promoted=1 spawned=1 auto_blocked=1",
+    "[2026-06-02 20:28] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
+    "[2026-06-02 20:29] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
+    "[2026-06-02 20:31] reclaimed=0 crashed=0 timed_out=0 stale=0 promoted=0 spawned=1 auto_blocked=0",
+    "[2026-06-02 20:33] reclaimed=0 crashed=1 timed_out=0 stale=0 promoted=1 spawned=2 auto_blocked=1"
+  ],
+  "events_curiosity": [
+    "[2026-06-02 20:28] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
+    "[2026-06-02 20:29] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
+    "[2026-06-02 20:30] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
+    "[2026-06-02 20:31] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
+    "[2026-06-02 20:32] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
+    "[2026-06-02 20:33] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2"
   ]
 }
