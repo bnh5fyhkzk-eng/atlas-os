@@ -1,49 +1,126 @@
 {
-  "generated_at": "2026-06-02T20:05:23Z",
+  "generated_at": "2026-06-02T20:19:04Z",
   "ok": true,
   "error": null,
-  "by_assignee": {
-    "charle-arm": {
-      "ready": 8
+  "boards": {
+    "default": {
+      "by_assignee": {
+        "curiosity-arm": {
+          "ready": 3
+        },
+        "pascal-arm": {
+          "done": 10,
+          "ready": 1,
+          "running": 3
+        }
+      },
+      "running": [
+        {
+          "task_id": "t_c179ea28",
+          "profile": "pascal-arm",
+          "title": "Strategic-Tool-3 Calendar"
+        },
+        {
+          "task_id": "t_901b7319",
+          "profile": "pascal-arm",
+          "title": "Strategic-Tool-6 Meeting Summary"
+        },
+        {
+          "task_id": "t_6505df5e",
+          "profile": "pascal-arm",
+          "title": "Strategic-Tool-7 Voice Memo"
+        }
+      ],
+      "ready_preview": [
+        {
+          "task_id": "t_c49dceff",
+          "profile": "pascal-arm",
+          "title": "Strategic-Tool-8 Lead Intake"
+        },
+        {
+          "task_id": "t_a0e86850",
+          "profile": "curiosity-arm",
+          "title": "Curiosity-01 Déjà Vu Mechanism Deep"
+        },
+        {
+          "task_id": "t_2ea0be49",
+          "profile": "curiosity-arm",
+          "title": "Curiosity-02 Pattern-vs-Déjà-vu"
+        },
+        {
+          "task_id": "t_fe99dc22",
+          "profile": "curiosity-arm",
+          "title": "Curiosity-03 Technical Unconscious"
+        }
+      ]
     },
-    "curiosity-arm": {
-      "ready": 3
+    "pascal": {
+      "by_assignee": {},
+      "running": [],
+      "ready_preview": []
     },
-    "pascal-arm": {
-      "done": 7,
-      "ready": 4,
-      "running": 3
+    "charle": {
+      "by_assignee": {
+        "charle-arm": {
+          "blocked": 3,
+          "ready": 3,
+          "running": 2
+        }
+      },
+      "running": [
+        {
+          "task_id": "t_ec82f19d",
+          "profile": "charle-arm",
+          "title": "Charle T4 · Dynamic adaptive order-form architecture · MEGA IMPORTANT v1"
+        },
+        {
+          "task_id": "t_c99f3d04",
+          "profile": "charle-arm",
+          "title": "Charle T5 · Quebec compliance · CASL + Bill 96 + Loi 25 + DNC"
+        }
+      ],
+      "ready_preview": [
+        {
+          "task_id": "t_4eaafd56",
+          "profile": "charle-arm",
+          "title": "Charle T6 · Purolator + IMEI + Moneris + QuickBooks integrations"
+        },
+        {
+          "task_id": "t_39aeee8a",
+          "profile": "charle-arm",
+          "title": "Charle T7 · AI-layer for telecom-reseller sales · Phase-3"
+        },
+        {
+          "task_id": "t_bd0b5d13",
+          "profile": "charle-arm",
+          "title": "Charle T8 · Cross-arm synthesis · Pascal-app surfaces × CB Telecom"
+        }
+      ]
+    },
+    "curiosity": {
+      "by_assignee": {},
+      "running": [],
+      "ready_preview": []
     }
   },
-  "running": [
-    {
-      "task_id": "t_358e7473",
-      "profile": "pascal-arm",
-      "title": "Strategic-Tool-2 Todos"
-    },
-    {
-      "task_id": "t_c179ea28",
-      "profile": "pascal-arm",
-      "title": "Strategic-Tool-3 Calendar"
-    },
-    {
-      "task_id": "t_4b7008fb",
-      "profile": "pascal-arm",
-      "title": "Strategic-Tool-4 Email Triage"
-    }
-  ],
+  "totals": {
+    "done": 10,
+    "running": 5,
+    "ready": 7
+  },
   "worker_count_live": 0,
-  "recent_events": [
-    "[2026-06-02 19:36] WARN dispatcher stuck: ready queue non-empty for 6 consecutive ticks but 0 workers spawned successfully. Check profile health (venv, PATH, credentials) and `hermes kanban list --status ready` / `hermes kanban list --status blocked` for recent spawn_failed tasks.",
-    "[2026-06-02 19:38] reclaimed=0 crashed=0 timed_out=0 stale=0 promoted=0 spawned=1 auto_blocked=0",
-    "[2026-06-02 19:44] WARN dispatcher stuck: ready queue non-empty for 6 consecutive ticks but 0 workers spawned successfully. Check profile health (venv, PATH, credentials) and `hermes kanban list --status ready` / `hermes kanban list --status blocked` for recent spawn_failed tasks.",
-    "[2026-06-02 19:49] WARN dispatcher stuck: ready queue non-empty for 11 consecutive ticks but 0 workers spawned successfully. Check profile health (venv, PATH, credentials) and `hermes kanban list --status ready` / `hermes kanban list --status blocked` for recent spawn_failed tasks.",
-    "[2026-06-02 19:54] reclaimed=0 crashed=0 timed_out=0 stale=0 promoted=0 spawned=1 auto_blocked=0",
-    "[2026-06-02 20:00] WARN dispatcher stuck: ready queue non-empty for 6 consecutive ticks but 0 workers spawned successfully. Check profile health (venv, PATH, credentials) and `hermes kanban list --status ready` / `hermes kanban list --status blocked` for recent spawn_failed tasks.",
+  "daemon_count": 2,
+  "events_default": [
     "(dispatcher stopped)",
     "Kanban dispatcher running STANDALONE via --force (interval=60.0s, pid=164904). Ctrl-C to stop. NOTE: if a gateway is also running with dispatch_in_gateway=true (default), you have two dispatchers racing for claims.",
     "[2026-06-02 20:04] reclaimed=0 crashed=0 timed_out=0 stale=0 promoted=0 spawned=2 auto_blocked=0",
-    "==="
+    "[2026-06-02 20:08] reclaimed=0 crashed=0 timed_out=0 stale=0 promoted=0 spawned=1 auto_blocked=0",
+    "[2026-06-02 20:14] WARN dispatcher stuck: ready queue non-empty for 6 consecutive ticks but 0 workers spawned successfully. Check profile health (venv, PATH, credentials) and `hermes kanban list --status ready` / `hermes kanban list --status blocked` for recent spawn_failed tasks.",
+    "[2026-06-02 20:18] reclaimed=0 crashed=0 timed_out=0 stale=0 promoted=0 spawned=2 auto_blocked=0"
   ],
-  "daemon_alive": true
+  "events_charle": [
+    "Kanban dispatcher running STANDALONE via --force (interval=60.0s, pid=166680). Ctrl-C to stop. NOTE: if a gateway is also running with dispatch_in_gateway=true (default), you have two dispatchers racing for claims.",
+    "[2026-06-02 20:16] reclaimed=0 crashed=0 timed_out=0 stale=0 promoted=0 spawned=3 auto_blocked=0",
+    "[2026-06-02 20:18] reclaimed=0 crashed=0 timed_out=0 stale=0 promoted=0 spawned=2 auto_blocked=0"
+  ]
 }
