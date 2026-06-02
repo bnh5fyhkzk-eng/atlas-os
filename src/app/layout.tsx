@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Spectral } from "next/font/google";
 import { AmbientMoneyBar } from "@/components/AmbientMoneyBar";
+import { AtlasPresence } from "@/components/AtlasPresence";
 import { AxisNav } from "@/components/AxisNav";
 import { CmdK } from "@/components/CmdK";
 import { Heartbeat } from "@/components/Heartbeat";
@@ -38,10 +39,11 @@ export default function RootLayout({
         <Heartbeat />
         <NowStrip />
         <AxisNav />
-        <div className="flex-1">{children}</div>
+        <div className="flex-1 pb-16">{children}</div>
         <CmdK />
         <PushDrawer />
         <AmbientMoneyBar />
+        <AtlasPresence />
       </body>
     </html>
   );

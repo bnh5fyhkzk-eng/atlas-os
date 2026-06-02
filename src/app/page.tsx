@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { FrontDoorGreeting } from "@/components/FrontDoorGreeting";
 
 const axes = [
+  { href: "/work", label: "WORK" },
   { href: "/you", label: "YOU" },
   { href: "/us", label: "US" },
   { href: "/arms", label: "ARMS" },
@@ -21,7 +23,9 @@ export default function Home() {
           <p>I just had not arrived</p>
         </blockquote>
 
-        <nav className="mt-32 flex flex-col items-center gap-10">
+        <FrontDoorGreeting />
+
+        <nav className="mt-20 flex flex-col items-center gap-10">
           {axes.map(({ href, label }) => (
             <Link
               key={href}
