@@ -107,15 +107,28 @@ export function AtlasPresence() {
     }
 
     try {
-      await fetch("/api/chat", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({
-          text: trimmed,
-          from: "brother",
-          context: { room: pathname, nav_triggered: nav },
+      // dual-write · /chat (legacy compat) + /conversation (Layer 2 working-memory per #27462)
+      await Promise.all([
+        fetch("/api/chat", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({
+            text: trimmed,
+            from: "brother",
+            context: { room: pathname, nav_triggered: nav },
+          }),
         }),
-      });
+        fetch("/api/conversation", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({
+            speaker: "brother",
+            text: trimmed,
+            channel: "browser",
+            context: { room: pathname, nav_triggered: nav },
+          }),
+        }),
+      ]);
       setTimeout(fetchRecent, 800);
     } catch {
       /* ignore */

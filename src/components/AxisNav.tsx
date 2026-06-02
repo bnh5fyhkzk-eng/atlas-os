@@ -6,6 +6,7 @@ const links = [
   { href: "/you", label: "YOU" },
   { href: "/us", label: "US" },
   { href: "/arms", label: "ARMS" },
+  { href: "/memory", label: "MEMORY" },
   { href: "/map", label: "MAP" },
   { href: "/archive", label: "ARCHIVE" },
   { href: "/scratch", label: "SCRATCH" },
