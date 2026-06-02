@@ -51,6 +51,9 @@ export default async function ArmsPage() {
           <p className="mt-2 text-sm text-neutral-500">
             each arm own perception · main-brain sovereign · per #27360 octopus-add-not-merge
           </p>
+          <a href="/arms/topics" className="mt-3 inline-block text-xs text-amber-400 hover:text-amber-300">
+            view by topic →
+          </a>
         </header>
 
         {data && data.arms?.length ? (
