@@ -112,7 +112,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<ApiRespon
       result = { raw: stdout.trim() };
     }
 
-    const bankedAt = result?.banked_at ?? inputObject.timestamp;
+    const bankedAt = result?.banked_at ?? new Date().toISOString();
 
     return NextResponse.json({
       ok: true,
