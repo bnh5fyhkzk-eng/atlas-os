@@ -1,7 +1,11 @@
 // Inbox.tsx — ZONE-1 /kitchen v2 · fetch brain-v3 last-24h banks + Calendar + Signal via /api/inbox · auto-refresh 30s · stream-list with source-icon · timestamp · click-expand
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
+
+interface InboxProps {
+  onSelectItem?: (item: InboxItem) => void
+}
 
 interface InboxItem {
   id: string
@@ -17,7 +21,7 @@ interface InboxResponse {
   data: InboxItem[]
 }
 
-const SOURCE_ICONS: Record<string, JSX.Element> = {
+const SOURCE_ICONS: Record<string, React.ReactElement> = {
   brain: ( // simple brain SVG
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" strokeWidth="2"><path d="M12 2a7 7 0 0 1 7 7c0 2.1-.9 4.1-2.5 5.5l-.5.5V20a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-1l-.5-.5A7 7 0 0 1 5 9a7 7 0 0 1 7-7z"/></svg>
   ),
@@ -43,7 +47,7 @@ function relativeTime(iso: string): string {
   return `${Math.floor(hr / 24)}d`
 }
 
-export default function Inbox() {
+export default function Inbox({ onSelectItem }: InboxProps) {
   const [items, setItems] = useState<InboxItem[]>([])
   const [expandedId, setExpandedId] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
@@ -88,7 +92,7 @@ export default function Inbox() {
         {items.map((item) => (
           <div key={item.id}>
             <button
-              onClick={() => setExpandedId(expandedId === item.id ? null : item.id)}
+              onClick={() => { setExpandedId(expandedId === item.id ? null : item.id); onSelectItem?.(item) }}
               className="w-full flex items-start gap-2 px-2 py-2 hover:bg-gray-50 transition-colors text-left"
             >
               <span className="shrink-0 mt-0.5">{SOURCE_ICONS[item.source] || '?'}</span>
