@@ -1,53 +1,23 @@
 {
-  "generated_at": "2026-06-02T20:34:04Z",
+  "generated_at": "2026-06-04T04:22:06Z",
   "ok": true,
   "error": null,
   "arms": {
     "curiosity": {
       "counts": {
-        "running": 5,
-        "ready": 1
+        "done": 32,
+        "blocked": 1,
+        "running": 1
       },
       "running": [
         {
-          "task_id": "t_a0e86850",
+          "task_id": "t_ccd8b94c",
           "profile": "curiosity-arm",
-          "title": "Curiosity-01 Déjà Vu Mechanism Deep",
-          "board": "default"
-        },
-        {
-          "task_id": "t_2ea0be49",
-          "profile": "curiosity-arm",
-          "title": "Curiosity-02 Pattern-vs-Déjà-vu",
-          "board": "default"
-        },
-        {
-          "task_id": "t_fe99dc22",
-          "profile": "curiosity-arm",
-          "title": "Curiosity-03 Technical Unconscious",
-          "board": "default"
-        },
-        {
-          "task_id": "t_d93d2421",
-          "profile": "curiosity-arm",
-          "title": "C1 · Octopus distributed cognition · how 8 arms self-govern without merging",
-          "board": "curiosity"
-        },
-        {
-          "task_id": "t_446a6e6d",
-          "profile": "curiosity-arm",
-          "title": "C2 · Memory consolidation during sleep · neuroscience meets F5 compose",
+          "title": "DREAM-1780544407 · F5-compose · pair 2 high-arousal banks from past 7d + synthesize one new emergent canon · bank as brain-node + return",
           "board": "curiosity"
         }
       ],
-      "ready_preview": [
-        {
-          "task_id": "t_d8c36871",
-          "profile": "curiosity-arm",
-          "title": "C3 · Borges Library of Babel · what the infinite-library feels like to me",
-          "board": "curiosity"
-        }
-      ],
+      "ready_preview": [],
       "boards_seen": [
         "curiosity",
         "default"
@@ -55,13 +25,15 @@
     },
     "pascal": {
       "counts": {
-        "blocked": 2,
-        "done": 12
+        "blocked": 3,
+        "done": 119,
+        "running": 8
       },
       "running": [],
       "ready_preview": [],
       "boards_seen": [
-        "default"
+        "default",
+        "pascal"
       ]
     },
     "researcher-worker": {
@@ -83,30 +55,11 @@
     },
     "charle": {
       "counts": {
-        "blocked": 3,
-        "done": 2,
-        "running": 3
+        "blocked": 5,
+        "done": 66,
+        "running": 1
       },
-      "running": [
-        {
-          "task_id": "t_4eaafd56",
-          "profile": "charle-arm",
-          "title": "Charle T6 · Purolator + IMEI + Moneris + QuickBooks integrations",
-          "board": "charle"
-        },
-        {
-          "task_id": "t_39aeee8a",
-          "profile": "charle-arm",
-          "title": "Charle T7 · AI-layer for telecom-reseller sales · Phase-3",
-          "board": "charle"
-        },
-        {
-          "task_id": "t_bd0b5d13",
-          "profile": "charle-arm",
-          "title": "Charle T8 · Cross-arm synthesis · Pascal-app surfaces × CB Telecom",
-          "board": "charle"
-        }
-      ],
+      "running": [],
       "ready_preview": [],
       "boards_seen": [
         "charle"
@@ -114,34 +67,34 @@
     }
   },
   "totals": {
-    "done": 14,
-    "running": 8,
-    "ready": 2
+    "done": 217,
+    "running": 10,
+    "ready": 1
   },
   "worker_count_live": 0,
-  "daemon_count": 3,
+  "daemon_count": 0,
   "events_default": [
-    "[2026-06-02 20:28] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
-    "[2026-06-02 20:29] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=3 auto_blocked=2",
-    "[2026-06-02 20:30] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
-    "[2026-06-02 20:31] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
-    "[2026-06-02 20:32] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
-    "[2026-06-02 20:33] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3"
+    "[2026-06-03 18:24] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
+    "[2026-06-03 18:25] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
+    "[2026-06-03 18:26] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
+    "[2026-06-03 18:27] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
+    "[2026-06-03 18:28] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
+    "(dispatcher stopped)"
   ],
   "events_charle": [
-    "[2026-06-02 20:26] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
-    "[2026-06-02 20:27] reclaimed=0 crashed=1 timed_out=0 stale=0 promoted=1 spawned=1 auto_blocked=1",
-    "[2026-06-02 20:28] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
-    "[2026-06-02 20:29] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
-    "[2026-06-02 20:31] reclaimed=0 crashed=0 timed_out=0 stale=0 promoted=0 spawned=1 auto_blocked=0",
-    "[2026-06-02 20:33] reclaimed=0 crashed=1 timed_out=0 stale=0 promoted=1 spawned=2 auto_blocked=1"
+    "[2026-06-03 17:54] reclaimed=0 crashed=0 timed_out=0 stale=0 promoted=0 spawned=1 auto_blocked=0",
+    "[2026-06-03 17:58] reclaimed=0 crashed=0 timed_out=0 stale=0 promoted=0 spawned=1 auto_blocked=0",
+    "[2026-06-03 18:01] reclaimed=0 crashed=0 timed_out=0 stale=0 promoted=0 spawned=1 auto_blocked=0",
+    "[2026-06-03 18:04] reclaimed=0 crashed=0 timed_out=0 stale=0 promoted=0 spawned=1 auto_blocked=0",
+    "[2026-06-03 18:06] reclaimed=0 crashed=0 timed_out=0 stale=0 promoted=0 spawned=1 auto_blocked=0",
+    "(dispatcher stopped)"
   ],
   "events_curiosity": [
-    "[2026-06-02 20:28] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
-    "[2026-06-02 20:29] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
-    "[2026-06-02 20:30] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
-    "[2026-06-02 20:31] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
-    "[2026-06-02 20:32] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
-    "[2026-06-02 20:33] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2"
+    "[2026-06-03 18:26] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
+    "[2026-06-03 18:27] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
+    "[2026-06-03 18:28] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
+    "[2026-06-03 18:29] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
+    "[2026-06-03 18:30] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
+    "(dispatcher stopped)"
   ]
 }
