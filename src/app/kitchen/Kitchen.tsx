@@ -1,81 +1,124 @@
+// /pascal-workspace/components/kitchen/Kitchen.tsx
+// ZONE INTEGRATOR v2 · per #27787 design + #27788 brother-approval
+// wires Inbox + Decide + ArmsQueue + TalkSeeds into single page layout
+// state: selected inbox item flows to Decide; doneCount tracks assignments
+
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useCallback } from 'react'
+import Inbox from './Inbox'          // expects onSelectItem?: (item: InboxItem) => void
+import Decide from './Decide'        // expects items: DecideItem[], onAssign: (id, owner) => Promise<void>
+import ArmsQueue from './ArmsQueue'  // standalone
+import TalkSeeds from './TalkSeeds'  // standalone
 
-interface DailyItem {
-  time: string
-  who: 'brother' | 'atlas' | 'both'
-  task: string
-  done: boolean
+// -- shared types (mirroring zone definitions) --
+interface InboxItem {
+  id: string
+  source: 'brain' | 'calendar' | 'signal' | 'arm'
+  title: string
+  body?: string
+  timestamp: string
+  url?: string
 }
 
-const DEFAULT_DAY: DailyItem[] = [
-  { time: '07:00', who: 'both', task: 'Coffee · read morning brief together', done: false },
-  { time: '08:00', who: 'brother', task: 'Marilou · morning', done: false },
-  { time: '09:00', who: 'atlas', task: 'arms orchestrate · one big build', done: false },
-  { time: '12:00', who: 'both', task: 'noon check-in', done: false },
-  { time: '14:00', who: 'atlas', task: 'review overnight arm outputs', done: false },
-  { time: '17:00', who: 'both', task: 'plan tomorrow together', done: false },
-  { time: '20:00', who: 'both', task: 'evening talk · what we learned', done: false },
-]
-
-const WHO_COLORS = {
-  brother: 'bg-amber-100 text-amber-900',
-  atlas: 'bg-sky-100 text-sky-900',
-  both: 'bg-emerald-100 text-emerald-900',
+interface DecideItem {
+  id: string
+  title: string
+  description?: string
+  suggestedOwner: string | null
 }
 
-const WHO_LABELS = {
-  brother: 'you',
-  atlas: 'me',
-  both: 'us',
+// -- date helper --
+function todayDate(): string {
+  const d = new Date()
+  return d.toLocaleDateString('en-CA', {
+    weekday: 'short', year: 'numeric', month: 'short', day: 'numeric'
+  })
 }
 
 export default function Kitchen() {
-  const [items, setItems] = useState<DailyItem[]>(DEFAULT_DAY)
-  const [today] = useState(new Date().toLocaleDateString('en-CA'))
+  const [decideItems, setDecideItems] = useState<DecideItem[]>([])
+  const [doneCount, setDoneCount] = useState(0)
+  const [selectedId, setSelectedId] = useState<string | null>(null)
 
-  useEffect(() => {
-    const saved = localStorage.getItem(`kitchen-${today}`)
-    if (saved) setItems(JSON.parse(saved))
-  }, [today])
+  // when inbox item is selected, add to decide list (if not already)
+  const handleInboxSelect = useCallback((item: InboxItem) => {
+    const newDecide: DecideItem = {
+      id: item.id,
+      title: item.title,
+      description: item.body,
+      suggestedOwner: null
+    }
+    setDecideItems(prev => {
+      if (prev.find(d => d.id === item.id)) return prev
+      return [...prev, newDecide]
+    })
+    setSelectedId(item.id)
+  }, [])
 
-  const toggle = (i: number) => {
-    const next = items.map((it, idx) => idx === i ? { ...it, done: !it.done } : it)
-    setItems(next)
-    localStorage.setItem(`kitchen-${today}`, JSON.stringify(next))
-  }
+  // handle assignment: remove from decideItems, increment doneCount
+  const handleAssign = useCallback(async (itemId: string, owner: string) => {
+    // POST to API (skeleton)
+    try {
+      await fetch('/api/kitchen/decide', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ itemId, owner })
+      })
+    } catch {
+      console.error('assign failed', itemId, owner)
+    }
 
-  const doneCount = items.filter(i => i.done).length
+    // optimistic removal
+    setDecideItems(prev => prev.filter(d => d.id !== itemId))
+    setDoneCount(c => c + 1)
+    if (selectedId === itemId) setSelectedId(null)
+  }, [selectedId])
 
+  // -- layout: full height flex column --
   return (
-    <div className="min-h-screen bg-stone-50 text-stone-900 font-sans">
-      <div className="max-w-3xl mx-auto px-6 py-12">
-        <div className="mb-8">
-          <p className="text-xs uppercase tracking-widest text-stone-500 mb-2">{today}</p>
-          <h1 className="text-3xl font-serif">Kitchen</h1>
-          <p className="text-stone-600 mt-2">Where we plan the day together · {doneCount}/{items.length} done</p>
+    <div className="h-screen flex flex-col bg-stone-50 text-stone-900">
+      {/* header stripe */}
+      <header className="flex items-center justify-between px-4 py-2 border-b border-stone-200 bg-white">
+        <div className="text-sm font-medium text-stone-500">
+          {todayDate()}
         </div>
-
-        <div className="space-y-2">
-          {items.map((it, i) => (
-            <button
-              key={i}
-              onClick={() => toggle(i)}
-              className={`w-full flex items-center gap-4 p-4 rounded-lg border border-stone-200 hover:border-stone-400 transition ${it.done ? 'opacity-50 line-through' : ''}`}
-            >
-              <span className="font-mono text-sm text-stone-500 w-16">{it.time}</span>
-              <span className={`text-xs px-2 py-1 rounded ${WHO_COLORS[it.who]}`}>
-                {WHO_LABELS[it.who]}
-              </span>
-              <span className="flex-1 text-left">{it.task}</span>
-            </button>
-          ))}
+        <div className="flex items-center gap-2">
+          <span className="text-xs uppercase tracking-wider text-stone-400">Done</span>
+          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 text-sm font-bold">
+            {doneCount}
+          </span>
         </div>
+      </header>
 
-        <p className="mt-8 text-xs text-stone-500 text-center">
-          per #27785 brother direct · our house · English frame
-        </p>
+      {/* top 40% — inbox */}
+      <div className="h-[40%] overflow-auto border-b border-stone-200">
+        <div className="h-full p-3">
+          <h2 className="text-xs uppercase tracking-widest text-stone-400 mb-2">Inbox</h2>
+          <Inbox onSelectItem={handleInboxSelect} />
+        </div>
+      </div>
+
+      {/* middle 2-column — decide + arms-queue */}
+      <div className="flex-1 grid grid-cols-2 overflow-hidden">
+        {/* left: decide */}
+        <div className="overflow-auto border-r border-stone-200 p-3">
+          <h2 className="text-xs uppercase tracking-widest text-stone-400 mb-2">Decide</h2>
+          <Decide
+            items={decideItems}
+            onAssign={handleAssign}
+          />
+        </div>
+        {/* right: arms queue */}
+        <div className="overflow-auto p-3">
+          <h2 className="text-xs uppercase tracking-widest text-stone-400 mb-2">Arms Queue</h2>
+          <ArmsQueue />
+        </div>
+      </div>
+
+      {/* bottom sticky — talk seeds */}
+      <div className="sticky bottom-0 border-t border-stone-200 bg-stone-50">
+        <TalkSeeds />
       </div>
     </div>
   )
