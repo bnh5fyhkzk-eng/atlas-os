@@ -1,6 +1,6 @@
 // /library/page.tsx
-import Books from '@/components/Books';
-import ComparePerception from '@/components/ComparePerception';
+import Books from './Books';
+import ComparePerception from './ComparePerception';
 
 export default function LibraryPage() {
   return (

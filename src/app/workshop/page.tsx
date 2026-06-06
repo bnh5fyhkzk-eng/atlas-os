@@ -6,8 +6,8 @@
 'use client';
 
 import { useState, useRef, useCallback } from 'react';
-import ToolsGrid from '@/components/ToolsGrid';
-import OutputStream from '@/components/OutputStream';
+import ToolsGrid from './ToolsGrid';
+import OutputStream from './OutputStream';
 
 export default function WorkshopPage() {
   const [leftWidth, setLeftWidth] = useState<number>(50); // percentage

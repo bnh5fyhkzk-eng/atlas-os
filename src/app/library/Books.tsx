@@ -35,11 +35,18 @@ const books = [
   },
 ];
 
+interface Book {
+  title: string;
+  author: string;
+  atlasSynthesis?: string;
+  brotherPerception?: string;
+}
+
 export default function Books() {
-  const [selectedBook, setSelectedBook] = useState(null);
+  const [selectedBook, setSelectedBook] = useState<Book | null>(null);
   const [showComparison, setShowComparison] = useState(false);
 
-  const handleBookClick = (book) => {
+  const handleBookClick = (book: Book) => {
     setSelectedBook(book);
     setShowComparison(true);
   };

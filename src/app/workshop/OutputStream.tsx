@@ -1,6 +1,9 @@
 // /workshop/OutputStream.tsx
 import { useRef, useEffect, useState } from 'react'
-import { format } from 'date-fns'
+
+function format(d: Date, _fmt: string): string {
+  return d.toLocaleTimeString('en-CA')
+}
 
 export interface ToolOutputEntry {
   id: string
