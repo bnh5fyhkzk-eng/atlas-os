@@ -16,7 +16,8 @@ export async function GET(request: Request) {
   const url = new URL(request.url);
   const includeDisabled = url.searchParams.get("includeDisabled") === "true";
 
-  const tools = includeDisabled ? TOOLS : TOOLS.filter((t) => !t.disabled);
+  void includeDisabled;
+  const tools = TOOLS;
 
   return NextResponse.json({
     total: tools.length,
