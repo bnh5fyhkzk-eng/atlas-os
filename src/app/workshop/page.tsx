@@ -1,68 +1,107 @@
-// /workshop/page.tsx
-// CAVEMAN: atlas-os · NEW split integrator
-// PURPOSE: combine ToolsGrid + OutputStream side-by-side
-// STONE-50 background · English layout · NO em-dash
+// src/app/workshop/page.tsx
+// workshop dashboard: tool count + daily cost + click-to-fire cards
 
 'use client';
 
-import { useState, useRef, useCallback } from 'react';
-import ToolsGrid from './ToolsGrid';
-import OutputStream from './OutputStream';
+import { useState, useEffect } from 'react';
+
+interface Arm {
+  id: string;
+  name: string;
+  status: 'idle' | 'running' | 'error';
+  costToday: number;
+  lastFired: string | null;
+}
 
 export default function WorkshopPage() {
-  const [leftWidth, setLeftWidth] = useState<number>(50); // percentage
-  const containerRef = useRef<HTMLDivElement>(null);
-  const isDragging = useRef(false);
+  const [arms, setArms] = useState<Arm[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const handleMouseDown = useCallback((e: React.MouseEvent) => {
-    e.preventDefault();
-    isDragging.current = true;
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseup', handleMouseUp);
+  useEffect(() => {
+    // simulate arm data – replace with real API call
+    const mock: Arm[] = [
+      { id: 'code-arm', name: 'Code Arm', status: 'idle', costToday: 0.12, lastFired: '2025-06-05T10:30' },
+      { id: 'youtube-arm', name: 'YouTube Arm', status: 'running', costToday: 0.45, lastFired: '2025-06-05T11:00' },
+      { id: 'brain-arm', name: 'Brain Arm', status: 'idle', costToday: 0.08, lastFired: null },
+    ];
+    setArms(mock);
+    setLoading(false);
   }, []);
 
-  const handleMouseMove = useCallback((e: MouseEvent) => {
-    if (!isDragging.current || !containerRef.current) return;
-    const rect = containerRef.current.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const percent = (x / rect.width) * 100;
-    setLeftWidth(Math.min(Math.max(percent, 20), 80)); // clamp 20%-80%
-  }, []);
+  const totalCostToday = arms.reduce((sum, a) => sum + a.costToday, 0);
+  const activeCount = arms.filter(a => a.status === 'running').length;
 
-  const handleMouseUp = useCallback(() => {
-    isDragging.current = false;
-    document.removeEventListener('mousemove', handleMouseMove);
-    document.removeEventListener('mouseup', handleMouseUp);
-  }, []);
+  const handleFire = (id: string) => {
+    // placeholder click-to-fire – dispatch to arm-control API
+    console.log(`Firing arm: ${id}`);
+  };
+
+  if (loading) {
+    return (
+      <div className="flex h-screen items-center justify-center text-stone-400">
+        Loading workshop...
+      </div>
+    );
+  }
 
   return (
-    <div className="h-screen flex bg-stone-50 text-stone-900 overflow-hidden">
-      {/* LEFT PANEL - ToolsGrid */}
-      <div
-        className="overflow-auto border-r border-stone-200"
-        style={{ width: `${leftWidth}%` }}
-      >
-        <div className="p-4">
-          <h2 className="text-lg font-semibold mb-2">Tools Grid</h2>
-          <ToolsGrid />
+    <main className="mx-auto max-w-6xl px-4 py-8">
+      {/* header with counts */}
+      <header className="mb-8 flex flex-col gap-2 border-b border-stone-200 pb-4 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <h1 className="text-2xl font-bold text-stone-800">Workshop</h1>
+          <p className="text-sm text-stone-500">
+            {arms.length} tools registered · {activeCount} active
+          </p>
         </div>
+        <div className="rounded-lg bg-stone-100 px-4 py-2 text-sm font-medium text-stone-700">
+          Cost today: ${totalCostToday.toFixed(2)}
+        </div>
+      </header>
+
+      {/* arm grid: 1 col mobile, 2 col lg */}
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+        {arms.map((arm) => (
+          <div
+            key={arm.id}
+            className="flex flex-col rounded-lg border border-stone-200 bg-white p-4 shadow-sm transition hover:shadow-md"
+          >
+            <div className="mb-2 flex items-center justify-between">
+              <h2 className="text-lg font-semibold text-stone-800">{arm.name}</h2>
+              <span
+                className={`h-2.5 w-2.5 rounded-full ${
+                  arm.status === 'running' ? 'bg-green-500' : arm.status === 'error' ? 'bg-red-500' : 'bg-stone-400'
+                }`}
+              />
+            </div>
+            <p className="mb-1 text-sm text-stone-500">
+              Status: <span className="capitalize">{arm.status}</span>
+            </p>
+            <p className="mb-3 text-sm text-stone-500">
+              Cost today: ${arm.costToday.toFixed(2)}
+              {arm.lastFired && (
+                <span className="ml-3">
+                  Last fired: {new Date(arm.lastFired).toLocaleString()}
+                </span>
+              )}
+            </p>
+            <button
+              onClick={() => handleFire(arm.id)}
+              disabled={arm.status === 'running'}
+              className="mt-auto w-full rounded-md bg-stone-800 px-4 py-2 text-sm font-medium text-white transition hover:bg-stone-700 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {arm.status === 'running' ? 'Running...' : 'Fire Now'}
+            </button>
+          </div>
+        ))}
       </div>
 
-      {/* RESIZE HANDLE */}
-      <div
-        className="w-2 cursor-col-resize bg-stone-300 hover:bg-stone-400 active:bg-stone-500 transition-colors shrink-0"
-        onMouseDown={handleMouseDown}
-      />
-
-      {/* RIGHT PANEL - OutputStream */}
-      <div
-        className="overflow-auto flex-1"
-      >
-        <div className="p-4">
-          <h2 className="text-lg font-semibold mb-2">Output Stream</h2>
-          <OutputStream entries={[]} />
+      {/* empty state if no arms – unlikely but safe */}
+      {arms.length === 0 && (
+        <div className="mt-12 text-center text-stone-400">
+          No tools registered yet. Add an arm from the control panel.
         </div>
-      </div>
-    </div>
+      )}
+    </main>
   );
 }
