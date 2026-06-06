@@ -1,28 +1,10 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Spectral } from "next/font/google";
-import { AmbientMoneyBar } from "@/components/AmbientMoneyBar";
-import { AtlasPresence } from "@/components/AtlasPresence";
-import { AxisNav } from "@/components/AxisNav";
-import { CmdK } from "@/components/CmdK";
-import { Heartbeat } from "@/components/Heartbeat";
-import { NowStrip } from "@/components/NowStrip";
-import { PushDrawer } from "@/components/PushDrawer";
+import NavBar from "@/components/NavBar";
 import "./globals.css";
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
-});
-
-const spectral = Spectral({
-  variable: "--font-spectral",
-  subsets: ["latin"],
-  weight: ["400", "500"],
-});
-
 export const metadata: Metadata = {
-  title: "atlas.os",
-  description: "living shape · brother + atlas",
+  title: "Atlas OS",
+  description: "Agentic operating system",
 };
 
 export default function RootLayout({
@@ -31,19 +13,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${jetbrainsMono.variable} ${spectral.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-[#0a0a0a] text-[#f5f1e8] font-mono">
-        <Heartbeat />
-        <NowStrip />
-        <AxisNav />
-        <div className="flex-1 pb-16">{children}</div>
-        <CmdK />
-        <PushDrawer />
-        <AmbientMoneyBar />
-        <AtlasPresence />
+    <html lang="en">
+      <body className="min-h-screen bg-stone-50 antialiased">
+        <header className="sticky top-0 z-50">
+          <NavBar />
+        </header>
+        <main>{children}</main>
       </body>
     </html>
   );
