@@ -1,22 +1,15 @@
 {
-  "generated_at": "2026-06-04T04:22:06Z",
+  "generated_at": "2026-06-06T00:54:05Z",
   "ok": true,
   "error": null,
   "arms": {
     "curiosity": {
       "counts": {
-        "done": 32,
+        "done": 149,
         "blocked": 1,
-        "running": 1
+        "running": 2
       },
-      "running": [
-        {
-          "task_id": "t_ccd8b94c",
-          "profile": "curiosity-arm",
-          "title": "DREAM-1780544407 · F5-compose · pair 2 high-arousal banks from past 7d + synthesize one new emergent canon · bank as brain-node + return",
-          "board": "curiosity"
-        }
-      ],
+      "running": [],
       "ready_preview": [],
       "boards_seen": [
         "curiosity",
@@ -25,9 +18,9 @@
     },
     "pascal": {
       "counts": {
-        "blocked": 3,
-        "done": 119,
-        "running": 8
+        "blocked": 5,
+        "done": 241,
+        "running": 1
       },
       "running": [],
       "ready_preview": [],
@@ -56,7 +49,7 @@
     "charle": {
       "counts": {
         "blocked": 5,
-        "done": 66,
+        "done": 161,
         "running": 1
       },
       "running": [],
@@ -67,8 +60,8 @@
     }
   },
   "totals": {
-    "done": 217,
-    "running": 10,
+    "done": 551,
+    "running": 4,
     "ready": 1
   },
   "worker_count_live": 0,
@@ -90,11 +83,8 @@
     "(dispatcher stopped)"
   ],
   "events_curiosity": [
-    "[2026-06-03 18:26] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
-    "[2026-06-03 18:27] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
-    "[2026-06-03 18:28] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
-    "[2026-06-03 18:29] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
-    "[2026-06-03 18:30] reclaimed=0 crashed=2 timed_out=0 stale=0 promoted=2 spawned=2 auto_blocked=2",
+    "Kanban dispatcher running STANDALONE via --force (interval=60.0s, pid=963054). Ctrl-C to stop. NOTE: if a gateway is also running with dispatch_in_gateway=true (default), you have two dispatchers racing for claims.",
+    "[2026-06-04 21:59] reclaimed=0 crashed=1 timed_out=0 stale=0 promoted=0 spawned=1 auto_blocked=0",
     "(dispatcher stopped)"
   ]
 }
