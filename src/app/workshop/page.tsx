@@ -60,7 +60,7 @@ export default function WorkshopPage() {
       >
         <div className="p-4">
           <h2 className="text-lg font-semibold mb-2">Output Stream</h2>
-          <OutputStream />
+          <OutputStream entries={[]} />
         </div>
       </div>
     </div>
