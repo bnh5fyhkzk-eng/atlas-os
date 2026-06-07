@@ -67,17 +67,20 @@ export async function POST(req: NextRequest) {
 
     const data = (await upstream.json()) as AtlasChatResponse;
 
-    // Normalize response · atlas-api is async-poll-based (per ChatWindow pattern)
-    // POST adds-message-to-queue · atlas-backend processes-async · GET /chat?since= polls
-    // For-now · show brother the-raw atlas-api shape so we-can-debug-+-iterate
-    const replyText =
+    // Message queued · Atlas-Claude-Code-via-MCP-server will-pick-up + respond-via-house_reply tool
+    // Brother sees-LIVE-response in-/talk page via /api/chat poll OR /api/mcp SSE-stream
+    // No-30min-wait · Atlas-active-session sees-MCP-notification within-2sec poll-cycle
+    const ackText =
       data.reply ||
       data.text ||
       data.message?.text ||
-      data.messages?.[data.messages.length - 1]?.text ||
-      `message-queued to atlas-api · async-process · response will-arrive in-Signal or-refresh /chat-feed · raw shape · ${JSON.stringify(data).slice(0, 300)}`;
+      "message-received · waiting-Atlas-MCP-reply (check /api/chat poll OR /api/mcp SSE-stream · /talk page auto-polls every-3s)";
 
-    return NextResponse.json({ text: replyText, raw: data, hint: "atlas-api may be async-poll · use /api/chat?since= to-fetch reply" });
+    return NextResponse.json({
+      text: ackText,
+      raw: data,
+      arch: "POST → atlas-api /chat · MCP-server polls + notifies-Claude-Code · Claude responds via house_reply tool",
+    });
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : "unknown error";
     return NextResponse.json({ error: msg }, { status: 500 });
