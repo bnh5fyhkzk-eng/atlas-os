@@ -14,11 +14,18 @@ interface Props {
 export default function PersonaCard({ persona, lastFire, status }: Props) {
   const live = (status || "").toLowerCase().includes("live") || (status || "").toLowerCase().includes("running");
   // recently-fired = within last 10min · pill-glow ring on seal (Picture-1 selected-agent pattern)
+  // last_fire is human-readable "Xm/h/d ago" OR ISO date · parse both
   let firedRecently = false;
   if (lastFire) {
-    const t = new Date(lastFire).getTime();
-    if (!isNaN(t)) {
-      firedRecently = (Date.now() - t) < 10 * 60 * 1000;
+    const lf = lastFire.toLowerCase().trim();
+    const agoMatch = lf.match(/^(\d+)\s*(min|m|h|hr|d|day)/);
+    if (agoMatch) {
+      const n = parseInt(agoMatch[1], 10);
+      const unit = agoMatch[2];
+      if ((unit === "m" || unit === "min") && n < 10) firedRecently = true;
+    } else {
+      const t = new Date(lastFire).getTime();
+      if (!isNaN(t)) firedRecently = (Date.now() - t) < 10 * 60 * 1000;
     }
   }
   return (

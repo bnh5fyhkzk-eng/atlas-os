@@ -27,9 +27,14 @@ interface ArmsData {
   arms: ArmEntry[];
 }
 
+interface ArmContentEntry {
+  arm?: string;
+  collected_at?: string;
+  files?: string[];
+}
 interface ArmContentIndex {
   generated_at?: string;
-  tasks?: { task_id: string; arm?: string; title?: string; files?: number; mtime_iso?: string }[];
+  tasks?: Record<string, ArmContentEntry>;
 }
 
 async function loadArms(): Promise<ArmsData | null> {
@@ -59,7 +64,11 @@ export default async function AgentPage({ params }: Props) {
 
   const [armsData, contentIdx] = await Promise.all([loadArms(), loadArmContent()]);
   const armEntry = armsData?.arms?.find((a) => a.name.toLowerCase() === arm.toLowerCase());
-  const tasksForArm = (contentIdx?.tasks ?? []).filter((t) => (t.arm ?? "").toLowerCase() === arm.toLowerCase()).slice(0, 10);
+  const tasksObj = contentIdx?.tasks ?? {};
+  const tasksForArm = Object.entries(tasksObj)
+    .filter(([, v]) => (v.arm ?? "").toLowerCase() === arm.toLowerCase())
+    .slice(0, 10)
+    .map(([task_id, v]) => ({ task_id, files: v.files?.length ?? 0, collected_at: v.collected_at, title: task_id }));
 
   const live = (armEntry?.status || "").toLowerCase().includes("live") || (armEntry?.status || "").toLowerCase().includes("running");
 
@@ -139,9 +148,12 @@ export default async function AgentPage({ params }: Props) {
                     className="block rounded-lg border border-zinc-800 bg-zinc-900/30 p-4 hover:border-zinc-600 transition"
                   >
                     <div className="flex items-baseline justify-between gap-3 flex-wrap">
-                      <p className="text-sm text-zinc-200 truncate">{t.title ?? t.task_id}</p>
-                      <p className="text-xs font-mono text-zinc-500">{t.files ?? 0} files</p>
+                      <p className="text-sm text-zinc-200 truncate">{t.task_id}</p>
+                      <p className="text-xs font-mono text-zinc-500">{t.files} files</p>
                     </div>
+                    {t.collected_at && (
+                      <p className="text-[10px] text-zinc-600 mt-1">collected · {t.collected_at}</p>
+                    )}
                   </Link>
                 </li>
               ))}
