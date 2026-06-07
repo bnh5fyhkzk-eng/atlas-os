@@ -221,17 +221,24 @@ export function KanbanLive() {
                 <div className="space-y-1 border-t border-neutral-800 pt-3">
                   <div className="text-[10px] uppercase tracking-wider text-neutral-600">running now</div>
                   {arm.running.map(r => (
-                    <div key={r.task_id} className="text-xs text-neutral-400 truncate">
+                    <a
+                      key={r.task_id}
+                      href={`/arms/${r.task_id}`}
+                      className="block text-xs text-neutral-400 truncate hover:text-emerald-300 hover:bg-zinc-900/40 -mx-1 px-1 rounded transition"
+                    >
                       <span className="text-emerald-500">●</span>{" "}
                       <span className="font-mono text-neutral-600">{r.task_id.slice(0, 10)}</span> · {r.title}
-                    </div>
+                    </a>
                   ))}
                 </div>
               )}
               {arm.running.length === 0 && arm.ready_preview.length > 0 && (
-                <div className="mt-2 text-[11px] text-neutral-600 italic truncate">
+                <a
+                  href={`/arms/${arm.ready_preview[0].task_id}`}
+                  className="mt-2 block text-[11px] text-neutral-600 italic truncate hover:text-emerald-300 transition"
+                >
                   next · {arm.ready_preview[0].title}
-                </div>
+                </a>
               )}
               {arm.running.length === 0 && arm.ready_preview.length === 0 && (
                 <div className="mt-2 text-[11px] text-neutral-700 italic">queue empty</div>
