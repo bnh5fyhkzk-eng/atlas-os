@@ -132,14 +132,17 @@ export default async function WorkshopPage() {
         </section>
 
         {/* exits */}
-        <section className="flex flex-wrap gap-3 text-sm">
-          <Link href="/arms" className="text-sky-300/70 hover:text-sky-200 transition italic">
-            → 537 arm-task content files · /arms
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+          <Link href="/arms" className="block rounded-lg border border-zinc-800 bg-zinc-900/40 p-4 hover:border-zinc-600 transition">
+            <p className="text-xs uppercase tracking-widest text-zinc-500 mb-1">exit · arms</p>
+            <p className="text-sky-200">→ 537 arm-task content files</p>
           </Link>
           {data?.atlas_graphify && (
-            <span className="text-amber-300/70 italic">
-              · atlas-graphify · {data.atlas_graphify.status} · {data.atlas_graphify.files} files
-            </span>
+            <div className="rounded-lg border border-amber-800/40 bg-amber-950/15 p-4 shadow-[0_0_16px_rgba(245,158,11,0.08)]">
+              <p className="text-xs uppercase tracking-widest text-amber-400/60 mb-1">atlas-graphify</p>
+              <p className="text-amber-100">{data.atlas_graphify.files} files · {data.atlas_graphify.status}</p>
+              <p className="text-[10px] text-amber-200/40 font-mono mt-1 truncate">{data.atlas_graphify.path}</p>
+            </div>
           )}
         </section>
 

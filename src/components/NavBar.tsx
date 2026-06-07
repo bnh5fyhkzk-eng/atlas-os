@@ -12,11 +12,15 @@ interface Room {
 
 const rooms: Room[] = [
   { label: 'Home', path: '/', icon: '⌂' },
+  { label: 'Focus', path: '/focus', icon: '◉' },
+  { label: 'Goals', path: '/goals', icon: '◇' },
+  { label: 'Resume', path: '/resume', icon: '↻' },
+  { label: 'Jumps', path: '/jumps', icon: '⇄' },
   { label: 'Spine', path: '/spine', icon: '⟐' },
   { label: 'Talk', path: '/talk', icon: '☰' },
   { label: 'Kitchen', path: '/kitchen', icon: '⚗' },
-  { label: 'Dashboard', path: '/dashboard', icon: '⊞' },
   { label: 'Map', path: '/map', icon: '⌗' },
+  { label: 'Cosmos', path: '/map/cosmos', icon: '✦' },
   { label: 'Memory', path: '/memory', icon: '◎' },
   { label: 'Bedroom', path: '/bedroom', icon: '◷' },
   { label: 'Library', path: '/library', icon: '⊟' },

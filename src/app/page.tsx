@@ -10,6 +10,8 @@ import Link from "next/link";
 import DreamCards from "@/components/DreamCards";
 import ScoreOfDay from "@/components/ScoreOfDay";
 import SpendTile from "@/components/SpendTile";
+import TimePills from "@/components/TimePills";
+import TdahKbd from "@/components/TdahKbd";
 
 interface BrainStats {
   generated_at: string;
@@ -122,6 +124,14 @@ export default async function Home() {
           </p>
         </header>
 
+        {/* TIME PILLS · Picture-2 horizon-pick (A2) */}
+        <div className="mb-5">
+          <TimePills />
+        </div>
+
+        {/* TDAH KEYBOARD · ⌘1 focus · ⌘2 resume · ⌘3 jumps · ⌘4 goals (A3) */}
+        <TdahKbd />
+
         {/* SCORE OF DAY (G1 · Picture-2 inspired) */}
         <ScoreOfDay
           bankedToday={bankedToday}
@@ -160,23 +170,35 @@ export default async function Home() {
           <SpendTile bankedToday={bankedToday} bankedWeek={brain?.banked_week ?? 0} />
         </section>
 
-        {/* TDAH triple · /focus + /resume + /jumps + /goals shortcuts (G5) */}
+        {/* TDAH triple · /focus + /resume + /jumps + /goals shortcuts (G5) · ⌘1-4 keyboard */}
         <section className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-12">
-          <Link href="/focus" className="rounded-xl border border-emerald-800/40 bg-emerald-950/15 p-4 hover:bg-emerald-950/30 transition shadow-[0_0_16px_rgba(52,211,153,0.08)]">
-            <p className="text-[10px] uppercase tracking-widest text-emerald-400/70">focus</p>
-            <p className="text-sm text-emerald-100/90 mt-1">today's anchor</p>
+          <Link href="/focus" className="rounded-xl border border-emerald-800/40 bg-emerald-950/15 p-4 hover:bg-emerald-950/30 transition shadow-[0_0_16px_rgba(52,211,153,0.08)] group">
+            <div className="flex items-baseline justify-between mb-1">
+              <p className="text-[10px] uppercase tracking-widest text-emerald-400/70">focus</p>
+              <kbd className="font-mono text-[10px] text-emerald-400/40 group-hover:text-emerald-300/70 transition">⌘1</kbd>
+            </div>
+            <p className="text-sm text-emerald-100/90">today's anchor</p>
           </Link>
-          <Link href="/resume" className="rounded-xl border border-sky-800/40 bg-sky-950/15 p-4 hover:bg-sky-950/30 transition shadow-[0_0_16px_rgba(56,189,248,0.08)]">
-            <p className="text-[10px] uppercase tracking-widest text-sky-400/70">resume</p>
-            <p className="text-sm text-sky-100/90 mt-1">where you left off</p>
+          <Link href="/resume" className="rounded-xl border border-sky-800/40 bg-sky-950/15 p-4 hover:bg-sky-950/30 transition shadow-[0_0_16px_rgba(56,189,248,0.08)] group">
+            <div className="flex items-baseline justify-between mb-1">
+              <p className="text-[10px] uppercase tracking-widest text-sky-400/70">resume</p>
+              <kbd className="font-mono text-[10px] text-sky-400/40 group-hover:text-sky-300/70 transition">⌘2</kbd>
+            </div>
+            <p className="text-sm text-sky-100/90">where you left off</p>
           </Link>
-          <Link href="/jumps" className="rounded-xl border border-amber-800/40 bg-amber-950/15 p-4 hover:bg-amber-950/30 transition shadow-[0_0_16px_rgba(245,158,11,0.08)]">
-            <p className="text-[10px] uppercase tracking-widest text-amber-400/70">jumps</p>
-            <p className="text-sm text-amber-100/90 mt-1">how the day moved</p>
+          <Link href="/jumps" className="rounded-xl border border-amber-800/40 bg-amber-950/15 p-4 hover:bg-amber-950/30 transition shadow-[0_0_16px_rgba(245,158,11,0.08)] group">
+            <div className="flex items-baseline justify-between mb-1">
+              <p className="text-[10px] uppercase tracking-widest text-amber-400/70">jumps</p>
+              <kbd className="font-mono text-[10px] text-amber-400/40 group-hover:text-amber-300/70 transition">⌘3</kbd>
+            </div>
+            <p className="text-sm text-amber-100/90">how the day moved</p>
           </Link>
-          <Link href="/goals" className="rounded-xl border border-violet-800/40 bg-violet-950/15 p-4 hover:bg-violet-950/30 transition shadow-[0_0_16px_rgba(167,139,250,0.08)]">
-            <p className="text-[10px] uppercase tracking-widest text-violet-400/70">goals</p>
-            <p className="text-sm text-violet-100/90 mt-1">mission control</p>
+          <Link href="/goals" className="rounded-xl border border-violet-800/40 bg-violet-950/15 p-4 hover:bg-violet-950/30 transition shadow-[0_0_16px_rgba(167,139,250,0.08)] group">
+            <div className="flex items-baseline justify-between mb-1">
+              <p className="text-[10px] uppercase tracking-widest text-violet-400/70">goals</p>
+              <kbd className="font-mono text-[10px] text-violet-400/40 group-hover:text-violet-300/70 transition">⌘4</kbd>
+            </div>
+            <p className="text-sm text-violet-100/90">mission control</p>
           </Link>
         </section>
 
