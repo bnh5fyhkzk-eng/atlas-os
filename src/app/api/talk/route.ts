@@ -67,15 +67,17 @@ export async function POST(req: NextRequest) {
 
     const data = (await upstream.json()) as AtlasChatResponse;
 
-    // Normalize response · atlas-api may return reply directly OR latest message
+    // Normalize response · atlas-api is async-poll-based (per ChatWindow pattern)
+    // POST adds-message-to-queue · atlas-backend processes-async · GET /chat?since= polls
+    // For-now · show brother the-raw atlas-api shape so we-can-debug-+-iterate
     const replyText =
       data.reply ||
       data.text ||
       data.message?.text ||
       data.messages?.[data.messages.length - 1]?.text ||
-      "(no reply · check atlas-api shape)";
+      `message-queued to atlas-api · async-process · response will-arrive in-Signal or-refresh /chat-feed · raw shape · ${JSON.stringify(data).slice(0, 300)}`;
 
-    return NextResponse.json({ text: replyText, raw: data });
+    return NextResponse.json({ text: replyText, raw: data, hint: "atlas-api may be async-poll · use /api/chat?since= to-fetch reply" });
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : "unknown error";
     return NextResponse.json({ error: msg }, { status: 500 });
