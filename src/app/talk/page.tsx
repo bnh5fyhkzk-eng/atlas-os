@@ -20,36 +20,91 @@ export default function TalkPage() {
   const [error, setError] = useState<string | null>(null);
   const endRef = useRef<HTMLDivElement>(null);
 
+  const sinceRef = useRef<number>(0);
+
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, pending]);
 
+  // Poll /api/chat for new Atlas-replies (async-queue per atlas-api shape)
+  useEffect(() => {
+    let mounted = true;
+    async function poll() {
+      try {
+        const res = await fetch(`/api/chat?since=${sinceRef.current}`, {
+          cache: "no-store",
+        });
+        if (!res.ok || !mounted) return;
+        const data = await res.json();
+        const newMsgs = (data?.messages ?? []) as Array<{
+          id: string;
+          from: "brother" | "atlas";
+          text: string;
+          created_at: string;
+        }>;
+        if (newMsgs.length === 0) return;
+        const lastTs = new Date(newMsgs[newMsgs.length - 1].created_at).getTime();
+        sinceRef.current = Math.max(sinceRef.current, lastTs);
+        setMessages((prev) => {
+          const existing = new Set(prev.map((m) => `${m.role}:${m.content}:${m.ts}`));
+          const mapped = newMsgs.map((m) => ({
+            role: (m.from === "atlas" ? "assistant" : "user") as "user" | "assistant",
+            content: m.text,
+            ts: new Date(m.created_at).getTime(),
+          }));
+          const fresh = mapped.filter(
+            (m) => !existing.has(`${m.role}:${m.content}:${m.ts}`),
+          );
+          if (fresh.length === 0) return prev;
+          return [...prev, ...fresh].sort((a, b) => a.ts - b.ts);
+        });
+        // Once we receive an Atlas message after pending, clear pending state
+        if (newMsgs.some((m) => m.from === "atlas")) {
+          setPending(false);
+        }
+      } catch {
+        /* ignore */
+      }
+    }
+    const id = setInterval(poll, 3000);
+    poll(); // initial fetch
+    return () => {
+      mounted = false;
+      clearInterval(id);
+    };
+  }, []);
+
   async function send() {
     if (!input.trim() || pending) return;
     const userMsg: Msg = { role: "user", content: input.trim(), ts: Date.now() };
-    const history = messages.map((m) => ({ role: m.role, content: m.content }));
     setMessages((m) => [...m, userMsg]);
     setInput("");
     setPending(true);
     setError(null);
 
     try {
+      // POST to /api/talk · queues message · atlas-backend processes async
       const res = await fetch("/api/talk", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: userMsg.content, history }),
+        body: JSON.stringify({ message: userMsg.content }),
       });
       const data = await res.json();
       if (!res.ok) {
         setError(data?.error || `HTTP ${res.status}`);
+        setPending(false);
         return;
       }
-      const reply: Msg = { role: "assistant", content: data.text || "(empty)", ts: Date.now() };
-      setMessages((m) => [...m, reply]);
+      // If atlas-api returned an immediate reply, use it
+      if (data?.text && !data.text.startsWith("message-queued")) {
+        const reply: Msg = { role: "assistant", content: data.text, ts: Date.now() };
+        setMessages((m) => [...m, reply]);
+        setPending(false);
+      }
+      // Otherwise wait for poll to fetch async-reply (pending stays true · cleared by poll)
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : "unknown error";
       setError(msg);
-    } finally {
       setPending(false);
     }
   }
