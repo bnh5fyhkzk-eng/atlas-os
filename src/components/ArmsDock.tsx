@@ -74,7 +74,7 @@ export default function ArmsDock() {
   return (
     <aside
       aria-label="Arms dock"
-      className={`fixed right-0 top-16 z-40 hidden h-[calc(100vh-4rem)] flex-col border-l border-zinc-800 bg-zinc-950/95 text-zinc-100 backdrop-blur transition-[width] duration-300 md:flex ${
+      className={`fixed left-0 top-16 z-40 hidden h-[calc(100vh-4rem)] flex-col border-r border-zinc-800 bg-zinc-950/95 text-zinc-100 backdrop-blur transition-[width] duration-300 md:flex ${
         open ? 'w-80' : 'w-12'
       }`}
     >

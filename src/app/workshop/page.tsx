@@ -38,7 +38,7 @@ export default function WorkshopPage() {
 
   if (loading) {
     return (
-      <div className="flex h-screen items-center justify-center text-stone-400">
+      <div className="flex h-screen items-center justify-center text-sky-300/60">
         Loading workshop...
       </div>
     );
@@ -47,14 +47,14 @@ export default function WorkshopPage() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-8">
       {/* header with counts */}
-      <header className="mb-8 flex flex-col gap-2 border-b border-stone-200 pb-4 sm:flex-row sm:items-center sm:justify-between">
+      <header className="mb-8 flex flex-col gap-2 border-b border-sky-900/40 pb-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-stone-800">Workshop</h1>
-          <p className="text-sm text-stone-500">
+          <h1 className="text-2xl font-bold text-sky-100">Workshop</h1>
+          <p className="text-sm text-sky-300/70">
             {arms.length} tools registered · {activeCount} active
           </p>
         </div>
-        <div className="rounded-lg bg-stone-100 px-4 py-2 text-sm font-medium text-stone-700">
+        <div className="rounded-lg bg-sky-950/60 px-4 py-2 text-sm font-medium text-sky-100">
           Cost today: ${totalCostToday.toFixed(2)}
         </div>
       </header>
@@ -64,20 +64,20 @@ export default function WorkshopPage() {
         {arms.map((arm) => (
           <div
             key={arm.id}
-            className="flex flex-col rounded-lg border border-stone-200 bg-white p-4 shadow-sm transition hover:shadow-md"
+            className="flex flex-col rounded-lg border border-sky-900/40 bg-[#0a1428] p-4 shadow-sm transition hover:shadow-md hover:border-sky-700/60"
           >
             <div className="mb-2 flex items-center justify-between">
-              <h2 className="text-lg font-semibold text-stone-800">{arm.name}</h2>
+              <h2 className="text-lg font-semibold text-sky-100">{arm.name}</h2>
               <span
                 className={`h-2.5 w-2.5 rounded-full ${
-                  arm.status === 'running' ? 'bg-green-500' : arm.status === 'error' ? 'bg-red-500' : 'bg-stone-400'
+                  arm.status === 'running' ? 'bg-emerald-400' : arm.status === 'error' ? 'bg-rose-500' : 'bg-sky-700'
                 }`}
               />
             </div>
-            <p className="mb-1 text-sm text-stone-500">
+            <p className="mb-1 text-sm text-sky-300/70">
               Status: <span className="capitalize">{arm.status}</span>
             </p>
-            <p className="mb-3 text-sm text-stone-500">
+            <p className="mb-3 text-sm text-sky-300/70">
               Cost today: ${arm.costToday.toFixed(2)}
               {arm.lastFired && (
                 <span className="ml-3">
@@ -88,7 +88,7 @@ export default function WorkshopPage() {
             <button
               onClick={() => handleFire(arm.id)}
               disabled={arm.status === 'running'}
-              className="mt-auto w-full rounded-md bg-stone-800 px-4 py-2 text-sm font-medium text-white transition hover:bg-stone-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="mt-auto w-full rounded-md bg-sky-700 px-4 py-2 text-sm font-medium text-white transition hover:bg-sky-600 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {arm.status === 'running' ? 'Running...' : 'Fire Now'}
             </button>
@@ -98,7 +98,7 @@ export default function WorkshopPage() {
 
       {/* empty state if no arms – unlikely but safe */}
       {arms.length === 0 && (
-        <div className="mt-12 text-center text-stone-400">
+        <div className="mt-12 text-center text-sky-300/60">
           No tools registered yet. Add an arm from the control panel.
         </div>
       )}
