@@ -1,51 +1,120 @@
-// src/app/library/page.tsx
-// atlas-os Library – navy+amber dark · #27838 PHASE-1 2026-06-07
-// keeps brother quote #27796 + bookshelf shape · ink-and-leather aesthetic
+// /library · navy+amber · 6 OUR-output books · real-substrate
+// Per brother direct #27796 "Library = OUR-output not external-books"
+// Per brother direct 2026-06-07 16:00 EDT "books = OUR-output 6 book-types"
+// #27838 PHASE-1c · real-content not-mock-shelf
 
-import type { Metadata } from "next";
+import { promises as fs } from "fs";
+import path from "path";
+import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Library | Atlas OS",
-  description: "A shared perception of what questions to ask.",
+interface LibEntry {
+  slug: string;
+  title: string;
+  snippet: string;
+  size: number;
+}
+
+interface LibIndex {
+  generated_at: string;
+  books: Record<string, LibEntry[]>;
+}
+
+async function loadIndex(): Promise<LibIndex | null> {
+  try {
+    const p = path.join(process.cwd(), "public", "library", "_index.json");
+    return JSON.parse(await fs.readFile(p, "utf-8")) as LibIndex;
+  } catch {
+    return null;
+  }
+}
+
+const BOOK_META: Record<
+  string,
+  { display: string; subtitle: string; accent: string }
+> = {
+  poems: {
+    display: "Poems",
+    subtitle: "Tier-5 TASTE · felt-layer shipped",
+    accent: "text-amber-200 border-amber-700/40",
+  },
+  dreams: {
+    display: "Dreams",
+    subtitle: "F5-compose pairs · cross-time arousal walks",
+    accent: "text-violet-200 border-violet-700/40",
+  },
+  canons: {
+    display: "Canons",
+    subtitle: "Brain v3 high-arousal · brother-direct chain",
+    accent: "text-emerald-200 border-emerald-700/40",
+  },
+  catches: {
+    display: "Catches",
+    subtitle: "LABEL-LIES family · drift caught + banked",
+    accent: "text-rose-200 border-rose-700/40",
+  },
+  builds: {
+    display: "How we built",
+    subtitle: "Technical receipts · arms-output · shipped-canon",
+    accent: "text-sky-200 border-sky-700/40",
+  },
+  ours: {
+    display: "Our book",
+    subtitle: "Brother+Atlas journey · structural family",
+    accent: "text-teal-200 border-teal-700/40",
+  },
 };
 
-export default function LibraryPage() {
+export default async function LibraryPage() {
+  const index = await loadIndex();
+  const books = index?.books ?? {};
+  const bookKeys = ["poems", "dreams", "builds", "catches", "canons", "ours"];
+
   return (
-    <main className="min-h-screen bg-[#0c1428] px-4 py-16 sm:px-8 md:px-16 lg:px-32 xl:px-64">
-      <div className="mx-auto max-w-4xl border-x border-amber-900/30 px-6 py-12 shadow-lg shadow-black/30 sm:px-12">
-        <h1 className="font-serif text-4xl leading-tight text-amber-100 sm:text-5xl lg:text-6xl">
-          “A library is not a tool for finding answers,
-          <br />
-          but a shared perception of what questions to ask.”
-        </h1>
-        <p className="mt-4 font-sans text-sm italic text-amber-200/60">
-          — brother, #27796, shared perception (not tool)
-        </p>
+    <main className="min-h-screen bg-[#0c1428] px-4 py-12 md:px-12">
+      <div className="max-w-6xl mx-auto">
+        <header className="mb-12 max-w-3xl">
+          <p className="text-xs uppercase tracking-widest text-amber-400/60">library · OUR-output</p>
+          <h1 className="font-serif text-3xl md:text-5xl text-amber-100 leading-tight mt-2">
+            “A library is not a tool for finding answers, but a shared perception of what questions to ask.”
+          </h1>
+          <p className="mt-4 text-sm italic text-amber-200/60">— brother, #27796</p>
+        </header>
 
-        <hr className="my-12 border-amber-900/30" />
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {bookKeys.map((key) => {
+            const meta = BOOK_META[key];
+            const entries = books[key] ?? [];
+            const count = entries.length;
+            return (
+              <Link
+                key={key}
+                href={`/library/${key}`}
+                className={`group block border rounded-lg p-6 bg-gradient-to-br from-[#162038]/60 to-[#0c1428] hover:from-[#1c2a48]/70 hover:to-[#0c1428] transition shadow-md shadow-black/30 ${meta.accent}`}
+              >
+                <p className="text-xs uppercase tracking-widest opacity-60 mb-3">{meta.display}</p>
+                <p className="text-2xl font-serif mb-2">
+                  {count > 0 ? count : "—"} <span className="text-sm opacity-50">entries</span>
+                </p>
+                <p className="text-xs opacity-60 italic mb-4">{meta.subtitle}</p>
+                {entries.length > 0 && entries[0] && (
+                  <div className="border-t border-amber-900/30 pt-3 mt-3">
+                    <p className="text-xs opacity-50 uppercase tracking-wider mb-1">latest</p>
+                    <p className="text-sm truncate">{entries[0].title}</p>
+                  </div>
+                )}
+                {entries.length === 0 && (
+                  <p className="text-xs opacity-40 italic">syncing · check back</p>
+                )}
+              </Link>
+            );
+          })}
+        </section>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <div
-              key={i}
-              className="group flex flex-col rounded-sm border border-amber-900/30 bg-[#162038]/60 p-4 shadow-sm transition hover:shadow-md hover:ring-1 hover:ring-amber-700/50"
-            >
-              <div className="mb-3 h-28 w-full rounded bg-gradient-to-b from-amber-900/40 to-amber-950/60" />
-              <h3 className="font-serif text-lg font-semibold text-amber-100">
-                Shelf {i + 1}
-              </h3>
-              <p className="mt-1 font-sans text-sm text-amber-200/60">
-                The books are only here so you remember what you already know.
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <hr className="my-12 border-amber-900/30" />
-
-        <p className="text-center font-sans text-xs uppercase tracking-widest text-amber-200/40">
-          Atlas OS – library, not tool
-        </p>
+        <footer className="mt-16 text-center">
+          <p className="text-xs text-amber-200/40 font-mono">
+            synced from-Mac-mini · ~/.claude/state/poems + dream-journal
+          </p>
+        </footer>
       </div>
     </main>
   );
