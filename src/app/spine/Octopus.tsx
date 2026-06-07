@@ -54,10 +54,10 @@ export default function Octopus() {
   }
 
   return (
-    <div className="min-h-screen bg-stone-50 relative flex flex-col items-center justify-center font-sans text-stone-800">
+    <div className="min-h-screen bg-zinc-950 relative flex flex-col items-center justify-center font-sans text-zinc-100">
       {/* Cost widget top-right */}
-      <div className="absolute top-4 right-4 bg-white shadow rounded-lg px-4 py-2 text-sm">
-        <span className="text-stone-500">Budget OpenRouter :</span>{' '}
+      <div className="absolute top-4 right-4 bg-zinc-900 shadow rounded-lg px-4 py-2 text-sm">
+        <span className="text-zinc-400">Budget OpenRouter :</span>{' '}
         <span className="font-semibold">${cost.toFixed(2)}</span>
       </div>
 
@@ -105,10 +105,10 @@ export default function Octopus() {
 
       {/* Selected arm panel */}
       {selected && (
-        <div className="bg-white rounded-xl shadow-lg p-6 w-full max-w-md mx-auto transition-all">
-          <h2 className="text-xl font-bold mb-2 text-stone-700">{ARM_LABELS[selected].label}</h2>
+        <div className="bg-zinc-900 rounded-xl shadow-lg p-6 w-full max-w-md mx-auto transition-all">
+          <h2 className="text-xl font-bold mb-2 text-zinc-200">{ARM_LABELS[selected].label}</h2>
           {loading ? (
-            <p className="text-stone-400">Chargement en cours...</p>
+            <p className="text-zinc-500">Chargement en cours...</p>
           ) : (
             <div className="space-y-3">
               <div>

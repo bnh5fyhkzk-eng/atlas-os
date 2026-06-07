@@ -87,7 +87,7 @@ export default function Decide({ items, onAssign }: DecideProps) {
 
   if (!items || items.length === 0) {
     return (
-      <div className="flex flex-col items-center justify-center h-full text-stone-400 text-sm p-4">
+      <div className="flex flex-col items-center justify-center h-full text-zinc-500 text-sm p-4">
         <span className="text-4xl mb-2">📥</span>
         <span>no items to decide</span>
       </div>
@@ -95,11 +95,11 @@ export default function Decide({ items, onAssign }: DecideProps) {
   }
 
   return (
-    <div className="bg-stone-50 border-l border-stone-200 h-full overflow-y-auto">
+    <div className="bg-zinc-950 border-l border-zinc-800 h-full overflow-y-auto">
       {/* header */}
-      <div className="sticky top-0 z-10 bg-stone-50 border-b border-stone-200 px-4 py-2 flex items-center justify-between">
+      <div className="sticky top-0 z-10 bg-zinc-950 border-b border-zinc-800 px-4 py-2 flex items-center justify-between">
         <h2 className="text-sm font-medium text-stone-600">DECIDE</h2>
-        <span className="text-xs text-stone-400">{items.length} items</span>
+        <span className="text-xs text-zinc-500">{items.length} items</span>
       </div>
 
       {/* item list */}
@@ -114,8 +114,8 @@ export default function Decide({ items, onAssign }: DecideProps) {
               key={item.id}
               className={`rounded-md border cursor-pointer transition-colors ${
                 isSelected
-                  ? 'border-stone-400 bg-stone-100'
-                  : 'border-stone-200 bg-white hover:border-stone-300'
+                  ? 'border-stone-400 bg-zinc-800'
+                  : 'border-zinc-800 bg-zinc-900 hover:border-zinc-700'
               }`}
               onClick={() => {
                 setSelectedId(item.id);
@@ -130,14 +130,14 @@ export default function Decide({ items, onAssign }: DecideProps) {
                       {item.title}
                     </p>
                     {item.description && (
-                      <p className="text-xs text-stone-500 mt-0.5 truncate">
+                      <p className="text-xs text-zinc-400 mt-0.5 truncate">
                         {item.description}
                       </p>
                     )}
                   </div>
                   {/* suggested owner badge */}
                   {item.suggestedOwner && !isExpanded && (
-                    <span className="ml-2 inline-flex items-center px-1.5 py-0.5 rounded-full text-xs font-medium bg-stone-500/10 text-stone-500 whitespace-nowrap">
+                    <span className="ml-2 inline-flex items-center px-1.5 py-0.5 rounded-full text-xs font-medium bg-zinc-9500/10 text-zinc-400 whitespace-nowrap">
                       {item.suggestedOwner}
                     </span>
                   )}
@@ -172,41 +172,41 @@ export default function Decide({ items, onAssign }: DecideProps) {
                     <button
                       onClick={(e) => { e.stopPropagation(); assignOwner(item.id, 'code'); }}
                       disabled={isPending}
-                      className="text-xs px-2 py-1 rounded bg-stone-100 text-stone-600 border border-stone-200 hover:bg-stone-200 disabled:opacity-40"
+                      className="text-xs px-2 py-1 rounded bg-zinc-800 text-stone-600 border border-zinc-800 hover:bg-stone-200 disabled:opacity-40"
                     >
                       [a] code
                     </button>
                     <button
                       onClick={(e) => { e.stopPropagation(); assignOwner(item.id, 'curiosity'); }}
                       disabled={isPending}
-                      className="text-xs px-2 py-1 rounded bg-stone-100 text-stone-600 border border-stone-200 hover:bg-stone-200 disabled:opacity-40"
+                      className="text-xs px-2 py-1 rounded bg-zinc-800 text-stone-600 border border-zinc-800 hover:bg-stone-200 disabled:opacity-40"
                     >
                       [c] curiosity
                     </button>
                     <button
                       onClick={(e) => { e.stopPropagation(); assignOwner(item.id, 'pascal'); }}
                       disabled={isPending}
-                      className="text-xs px-2 py-1 rounded bg-stone-100 text-stone-600 border border-stone-200 hover:bg-stone-200 disabled:opacity-40"
+                      className="text-xs px-2 py-1 rounded bg-zinc-800 text-stone-600 border border-zinc-800 hover:bg-stone-200 disabled:opacity-40"
                     >
                       [p] pascal
                     </button>
                     <button
                       onClick={(e) => { e.stopPropagation(); assignOwner(item.id, 'research'); }}
                       disabled={isPending}
-                      className="text-xs px-2 py-1 rounded bg-stone-100 text-stone-600 border border-stone-200 hover:bg-stone-200 disabled:opacity-40"
+                      className="text-xs px-2 py-1 rounded bg-zinc-800 text-stone-600 border border-zinc-800 hover:bg-stone-200 disabled:opacity-40"
                     >
                       [r] research
                     </button>
                     <button
                       onClick={(e) => { e.stopPropagation(); assignOwner(item.id, 'infra'); }}
                       disabled={isPending}
-                      className="text-xs px-2 py-1 rounded bg-stone-100 text-stone-600 border border-stone-200 hover:bg-stone-200 disabled:opacity-40"
+                      className="text-xs px-2 py-1 rounded bg-zinc-800 text-stone-600 border border-zinc-800 hover:bg-stone-200 disabled:opacity-40"
                     >
                       [i] infra
                     </button>
                     {/* pending spinner */}
                     {isPending && (
-                      <span className="text-xs text-stone-400 animate-pulse ml-1">
+                      <span className="text-xs text-zinc-500 animate-pulse ml-1">
                         ...
                       </span>
                     )}
@@ -219,7 +219,7 @@ export default function Decide({ items, onAssign }: DecideProps) {
       </div>
 
       {/* keyboard legend */}
-      <div className="sticky bottom-0 bg-stone-50 border-t border-stone-200 px-4 py-2 text-xs text-stone-400 flex flex-wrap gap-x-3 gap-y-1">
+      <div className="sticky bottom-0 bg-zinc-950 border-t border-zinc-800 px-4 py-2 text-xs text-zinc-500 flex flex-wrap gap-x-3 gap-y-1">
         <span>y=you</span>
         <span>m=me</span>
         <span>u=us</span>

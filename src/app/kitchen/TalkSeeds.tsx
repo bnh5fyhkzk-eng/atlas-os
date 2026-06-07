@@ -66,7 +66,7 @@ export default function TalkSeeds() {
 
   if (loading && seeds.length === 0) {
     return (
-      <div className="flex items-center justify-center py-6 text-sm text-stone-500">
+      <div className="flex items-center justify-center py-6 text-sm text-zinc-400">
         <span className="animate-pulse">Loading talk seeds...</span>
       </div>
     );
@@ -81,22 +81,22 @@ export default function TalkSeeds() {
   }
 
   return (
-    <div className="flex flex-wrap items-center gap-3 border-t border-stone-200 bg-stone-50 px-4 py-3">
-      <span className="text-xs font-medium uppercase tracking-wider text-stone-400">
+    <div className="flex flex-wrap items-center gap-3 border-t border-zinc-800 bg-zinc-950 px-4 py-3">
+      <span className="text-xs font-medium uppercase tracking-wider text-zinc-500">
         Talk Seeds
       </span>
       {seeds.map((seed, index) => (
         <button
           key={seed.id}
           onClick={() => handleCopy(seed.text, index)}
-          className="group relative inline-flex cursor-pointer items-center rounded-full border border-stone-300 bg-white px-3 py-1.5 text-sm text-stone-700 shadow-sm transition-colors hover:border-stone-400 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-stone-400 focus:ring-offset-1"
+          className="group relative inline-flex cursor-pointer items-center rounded-full border border-zinc-700 bg-zinc-900 px-3 py-1.5 text-sm text-zinc-200 shadow-sm transition-colors hover:border-stone-400 hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-stone-400 focus:ring-offset-1"
         >
           <span className="truncate max-w-[200px]">{seed.text}</span>
           <span
             className={`ml-2 text-xs ${
               copiedIndex === index
                 ? "text-green-500"
-                : "text-stone-400 opacity-0 group-hover:opacity-100"
+                : "text-zinc-500 opacity-0 group-hover:opacity-100"
             } transition-opacity`}
           >
             {copiedIndex === index ? "Copied!" : "Copy"}
