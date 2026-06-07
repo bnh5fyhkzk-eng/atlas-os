@@ -1,22 +1,23 @@
-// /workshop · MY-prototyping-bench · LIVE me-tools-inventory + recent-builds
-// Per brother direct task #236 "Workshop redesign · MY-prototyping-bench"
-// #27838 PHASE-1c · replaces mock-arms-data with-real-substrate
-// blueprint aesthetic per HOUSE-FULL-PLAN
+// /workshop · MY-prototyping-bench v2 · workbench-mess (NOT card-grid)
+// Per HOUSE-FULL-PLAN G3 + impeccable-bans (no-default-card-grid) + brother direct
+// 3 zones · drafts-top + me-tools-middle + experiments-bottom
 
 import { promises as fs } from "fs";
 import path from "path";
 import Link from "next/link";
 import RoiPanel from "@/components/RoiPanel";
 
+export const dynamic = "force-dynamic";
+
 interface WorkshopData {
   generated_at: string;
-  me_tools_count: number;
-  me_tools_sh: number;
-  me_tools_py: number;
-  skill_proposals_7d: { name: string; mtime_iso: string }[];
-  atlas_graphify: { status: string; files: number; path: string };
-  launch_agents: string[];
-  recent_scripts: { name: string; mtime_iso: string }[];
+  me_tools_count?: number;
+  me_tools_sh?: number;
+  me_tools_py?: number;
+  skill_proposals_7d?: { name: string; mtime_iso?: string }[];
+  atlas_graphify?: { status: string; files: number; path: string };
+  launch_agents?: string[];
+  recent_scripts?: { name: string; mtime_iso?: string }[];
 }
 
 async function loadWorkshop(): Promise<WorkshopData | null> {
@@ -28,16 +29,6 @@ async function loadWorkshop(): Promise<WorkshopData | null> {
   }
 }
 
-function timeAgo(iso: string): string {
-  const ts = new Date(iso).getTime();
-  const diff = Date.now() - ts;
-  const mins = Math.floor(diff / 60000);
-  if (mins < 60) return `${mins}m ago`;
-  const hrs = Math.floor(mins / 60);
-  if (hrs < 24) return `${hrs}h ago`;
-  return `${Math.floor(hrs / 24)}d ago`;
-}
-
 async function loadArms(): Promise<{ arms?: { name: string; last_fire?: string }[] } | null> {
   try {
     const p = path.join(process.cwd(), "public", "arms.json");
@@ -47,132 +38,113 @@ async function loadArms(): Promise<{ arms?: { name: string; last_fire?: string }
   }
 }
 
+function timeAgo(iso?: string): string {
+  if (!iso) return "—";
+  const diff = Date.now() - new Date(iso).getTime();
+  const mins = Math.floor(diff / 60000);
+  if (mins < 60) return `${mins}m`;
+  const hrs = Math.floor(mins / 60);
+  if (hrs < 24) return `${hrs}h`;
+  return `${Math.floor(hrs / 24)}d`;
+}
+
 export default async function WorkshopPage() {
   const [data, arms] = await Promise.all([loadWorkshop(), loadArms()]);
 
   return (
-    <main className="min-h-screen bg-[#0a1428] px-4 py-12 md:px-12">
+    <main className="min-h-screen px-4 py-10 md:px-12 relative bg-[#0a1428]" style={{
+      backgroundImage:
+        "radial-gradient(circle at 10% 10%, rgba(56,189,248,0.04), transparent 40%), radial-gradient(circle at 90% 90%, rgba(245,158,11,0.03), transparent 35%), repeating-linear-gradient(0deg, rgba(56,189,248,0.03) 0 1px, transparent 1px 28px), repeating-linear-gradient(90deg, rgba(56,189,248,0.03) 0 1px, transparent 1px 28px)",
+    }}>
       <div className="max-w-5xl mx-auto">
-        <header className="mb-12">
-          <p className="text-xs uppercase tracking-widest text-sky-400/60">workshop · MY-bench</p>
-          <h1 className="font-serif text-3xl md:text-4xl text-sky-100 mt-2">
-            Where I sharpen tools.
+        <header className="mb-10">
+          <p className="text-xs uppercase tracking-widest text-sky-400/60">workshop · prototyping bench</p>
+          <h1 className="font-serif text-3xl md:text-5xl text-sky-100 leading-tight mt-2">
+            The bench, mid-build.
           </h1>
-          <p className="text-sm text-sky-300/70 mt-2 italic">
-            real-substrate · me-tools-inventory · recent-builds · LaunchAgents alive
+          <p className="text-sm text-sky-300/60 mt-2 italic">
+            drafts on top · tools in the middle · experiments running below. honest mess. blueprint grain.
           </p>
         </header>
 
-        {/* INVISIBLE WORK · ROI counters (M7 #27840) */}
         <RoiPanel workshop={data} arms={arms} />
 
-        {/* 3 LIVE TILES */}
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
-          <div className="border border-sky-800/40 rounded-lg p-5 bg-gradient-to-br from-sky-950/40 to-[#0a1428]">
-            <p className="text-xs uppercase tracking-widest text-sky-400/60 mb-2">me-tools</p>
-            <p className="text-4xl font-mono font-semibold text-sky-100">
-              {data?.me_tools_count ?? "—"}
-            </p>
-            <p className="text-xs text-sky-300/60 mt-2">
-              {data?.me_tools_sh ?? 0} bash · {data?.me_tools_py ?? 0} python
-            </p>
-          </div>
-
-          <div className="border border-emerald-800/40 rounded-lg p-5 bg-gradient-to-br from-emerald-950/30 to-[#0a1428]">
-            <p className="text-xs uppercase tracking-widest text-emerald-400/60 mb-2">LaunchAgents</p>
-            <p className="text-4xl font-mono font-semibold text-emerald-200">
-              {data?.launch_agents.length ?? "—"}
-            </p>
-            <p className="text-xs text-emerald-300/60 mt-2">com.uplift.* daemons LIVE</p>
-          </div>
-
-          <div className="border border-amber-800/40 rounded-lg p-5 bg-gradient-to-br from-amber-950/30 to-[#0a1428]">
-            <p className="text-xs uppercase tracking-widest text-amber-400/60 mb-2">atlas-graphify</p>
-            <p className="text-4xl font-mono font-semibold text-amber-200">
-              {data?.atlas_graphify.files ?? "—"}
-            </p>
-            <p className="text-xs text-amber-300/60 mt-2">
-              files · {data?.atlas_graphify.status}
-            </p>
-          </div>
-        </section>
-
-        {/* Recently sharpened scripts */}
-        <section className="mb-12">
-          <h2 className="text-lg font-medium text-sky-200 mb-4">Recently sharpened</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            {data?.recent_scripts.slice(0, 8).map((s) => (
-              <div
-                key={s.name}
-                className="border border-sky-900/40 rounded-lg p-4 bg-[#0a1428] hover:border-sky-700/60 transition"
-              >
-                <p className="font-mono text-sm text-sky-200 truncate">{s.name}</p>
-                <p className="text-xs text-sky-400/60 mt-1">{timeAgo(s.mtime_iso)}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Skill proposals queue */}
-        {data && data.skill_proposals_7d.length > 0 && (
-          <section className="mb-12">
-            <h2 className="text-lg font-medium text-sky-200 mb-4">
-              Skill proposals · last 7 days
-            </h2>
-            <ul className="space-y-2">
-              {data.skill_proposals_7d.map((s) => (
-                <li
-                  key={s.name}
-                  className="border-l-2 border-amber-700/40 pl-4 py-2 hover:border-amber-400 transition"
-                >
-                  <p className="text-sm text-sky-200 truncate">{s.name}</p>
-                  <p className="text-xs text-sky-400/40 mt-0.5">{timeAgo(s.mtime_iso)}</p>
+        {/* ZONE 1 · DRAFTS (top of bench) */}
+        <section className="mb-10 border-l-2 border-amber-700/60 pl-4">
+          <header className="flex items-baseline justify-between mb-3">
+            <h2 className="text-lg font-medium text-amber-200">Drafts · skill proposals</h2>
+            <p className="text-xs font-mono text-zinc-500">last 7 days</p>
+          </header>
+          {data?.skill_proposals_7d && data.skill_proposals_7d.length > 0 ? (
+            <ul className="space-y-1">
+              {data.skill_proposals_7d.slice(0, 12).map((s) => (
+                <li key={s.name} className="flex items-baseline justify-between gap-3 py-1.5 border-b border-amber-900/20 text-sm">
+                  <span className="text-amber-100/90 font-mono text-xs truncate">{s.name}</span>
+                  <span className="text-xs text-zinc-500 font-mono whitespace-nowrap">{timeAgo(s.mtime_iso)} ago</span>
                 </li>
               ))}
             </ul>
-          </section>
-        )}
+          ) : (
+            <p className="text-zinc-500 italic text-sm">no proposals queued · cycles will write here when patterns repeat</p>
+          )}
+        </section>
 
-        {/* LaunchAgents list */}
-        {data?.launch_agents && data.launch_agents.length > 0 && (
-          <section className="mb-12">
-            <h2 className="text-lg font-medium text-sky-200 mb-4">LaunchAgents · com.uplift.*</h2>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+        {/* ZONE 2 · TOOLS (middle of bench) */}
+        <section className="mb-10 border-l-2 border-sky-700/60 pl-4">
+          <header className="flex items-baseline justify-between mb-3">
+            <h2 className="text-lg font-medium text-sky-200">Tools · me-* sharpened</h2>
+            <p className="text-xs font-mono text-zinc-500">
+              {data?.me_tools_count ?? 0} total · {data?.me_tools_sh ?? 0} sh · {data?.me_tools_py ?? 0} py
+            </p>
+          </header>
+          {data?.recent_scripts && data.recent_scripts.length > 0 ? (
+            <ul className="space-y-1">
+              {data.recent_scripts.slice(0, 10).map((s) => (
+                <li key={s.name} className="flex items-baseline justify-between gap-3 py-1.5 border-b border-sky-900/20 text-sm">
+                  <span className="text-sky-100/90 font-mono text-xs truncate">{s.name}</span>
+                  <span className="text-xs text-zinc-500 font-mono whitespace-nowrap">{timeAgo(s.mtime_iso)} ago</span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="text-zinc-500 italic text-sm">no recent edits</p>
+          )}
+        </section>
+
+        {/* ZONE 3 · EXPERIMENTS RUNNING (bottom of bench) */}
+        <section className="mb-10 border-l-2 border-emerald-700/60 pl-4">
+          <header className="flex items-baseline justify-between mb-3">
+            <h2 className="text-lg font-medium text-emerald-200">Experiments · LaunchAgents running</h2>
+            <p className="text-xs font-mono text-zinc-500">{data?.launch_agents?.length ?? 0} daemons</p>
+          </header>
+          {data?.launch_agents && data.launch_agents.length > 0 ? (
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6">
               {data.launch_agents.map((agent) => (
-                <li
-                  key={agent}
-                  className="font-mono text-xs text-sky-300 border border-sky-900/40 rounded px-3 py-2 bg-[#0a1428]"
-                >
-                  <span className="text-emerald-400">●</span> {agent}
+                <li key={agent} className="flex items-baseline gap-2 py-1 text-xs font-mono border-b border-emerald-900/15">
+                  <span className="text-emerald-400 shadow-[0_0_4px_rgba(52,211,153,0.6)]">●</span>
+                  <span className="text-emerald-100/85 truncate">{agent}</span>
                 </li>
               ))}
             </ul>
-          </section>
-        )}
-
-        {/* CTAs · /arms + atlas-graphify */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Link
-            href="/arms"
-            className="block border border-zinc-800 rounded-lg p-6 bg-gradient-to-br from-zinc-900/60 to-[#0a1428] hover:from-zinc-800/60 transition"
-          >
-            <p className="text-xs uppercase tracking-widest text-zinc-400 mb-2">arms ↗</p>
-            <p className="text-sky-100">537 task-content-files browsable</p>
-          </Link>
-          <a
-            href={data?.atlas_graphify.path ?? "#"}
-            className="block border border-amber-800/40 rounded-lg p-6 bg-gradient-to-br from-amber-950/30 to-[#0a1428] hover:from-amber-900/40 transition"
-          >
-            <p className="text-xs uppercase tracking-widest text-amber-400/60 mb-2">atlas-graphify ↗</p>
-            <p className="text-sky-100">{data?.atlas_graphify.files ?? 0} files · OUR code-graph</p>
-            <p className="text-xs text-amber-200/40 mt-2 font-mono">{data?.atlas_graphify.path}</p>
-          </a>
+          ) : (
+            <p className="text-zinc-500 italic text-sm">no agents running</p>
+          )}
         </section>
 
-        <footer className="mt-12 text-center">
-          <p className="text-xs text-sky-400/40 font-mono">
-            workshop synced · {data?.generated_at ? timeAgo(data.generated_at) : "—"}
-          </p>
+        {/* exits */}
+        <section className="flex flex-wrap gap-3 text-sm">
+          <Link href="/arms" className="text-sky-300/70 hover:text-sky-200 transition italic">
+            → 537 arm-task content files · /arms
+          </Link>
+          {data?.atlas_graphify && (
+            <span className="text-amber-300/70 italic">
+              · atlas-graphify · {data.atlas_graphify.status} · {data.atlas_graphify.files} files
+            </span>
+          )}
+        </section>
+
+        <footer className="mt-12 text-xs text-sky-400/40 font-mono italic">
+          workshop synced · {data?.generated_at ? `${timeAgo(data.generated_at)} ago` : "—"}
         </footer>
       </div>
     </main>

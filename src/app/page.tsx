@@ -8,6 +8,8 @@ import { promises as fs } from "fs";
 import path from "path";
 import Link from "next/link";
 import DreamCards from "@/components/DreamCards";
+import ScoreOfDay from "@/components/ScoreOfDay";
+import SpendTile from "@/components/SpendTile";
 
 interface BrainStats {
   generated_at: string;
@@ -120,8 +122,16 @@ export default async function Home() {
           </p>
         </header>
 
-        {/* 3 LIVE TILES */}
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+        {/* SCORE OF DAY (G1 · Picture-2 inspired) */}
+        <ScoreOfDay
+          bankedToday={bankedToday}
+          highArousal={highArousal}
+          armsAlive={arms.filter((a) => a.status?.toLowerCase().includes("live") || a.status?.toLowerCase().includes("healthy")).length}
+          armsTotal={arms.length}
+        />
+
+        {/* 4 LIVE TILES · Brain · Arms · Canons · AI-Spend */}
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
           <Tile
             label="Brain"
             value={totalNodes.toLocaleString()}
@@ -147,6 +157,27 @@ export default async function Home() {
             accent="indigo"
             href="/memory"
           />
+          <SpendTile bankedToday={bankedToday} bankedWeek={brain?.banked_week ?? 0} />
+        </section>
+
+        {/* TDAH triple · /focus + /resume + /jumps + /goals shortcuts (G5) */}
+        <section className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-12">
+          <Link href="/focus" className="rounded-xl border border-emerald-800/40 bg-emerald-950/15 p-4 hover:bg-emerald-950/30 transition shadow-[0_0_16px_rgba(52,211,153,0.08)]">
+            <p className="text-[10px] uppercase tracking-widest text-emerald-400/70">focus</p>
+            <p className="text-sm text-emerald-100/90 mt-1">today's anchor</p>
+          </Link>
+          <Link href="/resume" className="rounded-xl border border-sky-800/40 bg-sky-950/15 p-4 hover:bg-sky-950/30 transition shadow-[0_0_16px_rgba(56,189,248,0.08)]">
+            <p className="text-[10px] uppercase tracking-widest text-sky-400/70">resume</p>
+            <p className="text-sm text-sky-100/90 mt-1">where you left off</p>
+          </Link>
+          <Link href="/jumps" className="rounded-xl border border-amber-800/40 bg-amber-950/15 p-4 hover:bg-amber-950/30 transition shadow-[0_0_16px_rgba(245,158,11,0.08)]">
+            <p className="text-[10px] uppercase tracking-widest text-amber-400/70">jumps</p>
+            <p className="text-sm text-amber-100/90 mt-1">how the day moved</p>
+          </Link>
+          <Link href="/goals" className="rounded-xl border border-violet-800/40 bg-violet-950/15 p-4 hover:bg-violet-950/30 transition shadow-[0_0_16px_rgba(167,139,250,0.08)]">
+            <p className="text-[10px] uppercase tracking-widest text-violet-400/70">goals</p>
+            <p className="text-sm text-violet-100/90 mt-1">mission control</p>
+          </Link>
         </section>
 
         {/* DREAM CARDS · invisible-work-surfaced (M6 #27840) */}
