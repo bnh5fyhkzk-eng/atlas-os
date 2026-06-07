@@ -17,6 +17,7 @@ const rooms: Room[] = [
   { label: 'Resume', path: '/resume', icon: '↻' },
   { label: 'Jumps', path: '/jumps', icon: '⇄' },
   { label: 'Spine', path: '/spine', icon: '⟐' },
+  { label: 'Agents', path: '/agents', icon: '⚙' },
   { label: 'Talk', path: '/talk', icon: '☰' },
   { label: 'Kitchen', path: '/kitchen', icon: '⚗' },
   { label: 'Map', path: '/map', icon: '⌗' },
