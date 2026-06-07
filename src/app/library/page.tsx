@@ -6,6 +6,7 @@
 import { promises as fs } from "fs";
 import path from "path";
 import Link from "next/link";
+import LibraryThumbCard from "@/components/LibraryThumbCard";
 
 interface LibEntry {
   slug: string;
@@ -79,6 +80,36 @@ export default async function LibraryPage() {
           </h1>
           <p className="mt-4 text-sm italic text-amber-200/60">— brother, #27796</p>
         </header>
+
+        {/* LATEST ARTIFACTS · thumbnail-cards (M2 #27840) */}
+        {(() => {
+          type LatestRow = { book: string; entry: LibEntry; accent: string };
+          const all: LatestRow[] = [];
+          for (const key of bookKeys) {
+            const meta = BOOK_META[key];
+            for (const e of books[key] ?? []) all.push({ book: key, entry: e, accent: meta?.accent ?? "text-amber-200 border-amber-700/40" });
+          }
+          all.sort((a, b) => (a.entry.slug < b.entry.slug ? 1 : -1));
+          const top = all.slice(0, 8);
+          if (top.length === 0) return null;
+          return (
+            <section className="mb-10">
+              <p className="text-xs uppercase tracking-widest text-amber-400/60 mb-4">latest · across the shelves</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                {top.map((row) => (
+                  <LibraryThumbCard
+                    key={`${row.book}-${row.entry.slug}`}
+                    book={row.book}
+                    slug={row.entry.slug}
+                    title={row.entry.title}
+                    snippet={row.entry.snippet}
+                    accent={row.accent}
+                  />
+                ))}
+              </div>
+            </section>
+          );
+        })()}
 
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {bookKeys.map((key) => {

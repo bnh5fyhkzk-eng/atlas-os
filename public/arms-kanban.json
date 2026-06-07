@@ -1,26 +1,22 @@
 {
-  "generated_at": "2026-06-06T02:56:04Z",
+  "generated_at": "2026-06-07T21:57:04Z",
   "ok": true,
   "error": null,
   "arms": {
     "curiosity": {
       "counts": {
-        "done": 149,
-        "blocked": 1,
-        "running": 2
+        "done": 3
       },
       "running": [],
       "ready_preview": [],
       "boards_seen": [
-        "curiosity",
         "default"
       ]
     },
     "pascal": {
       "counts": {
         "blocked": 5,
-        "done": 241,
-        "running": 1
+        "done": 242
       },
       "running": [],
       "ready_preview": [],
@@ -49,8 +45,7 @@
     "charle": {
       "counts": {
         "blocked": 5,
-        "done": 161,
-        "running": 1
+        "done": 162
       },
       "running": [],
       "ready_preview": [],
@@ -60,12 +55,12 @@
     }
   },
   "totals": {
-    "done": 551,
-    "running": 4,
+    "done": 407,
+    "running": 0,
     "ready": 1
   },
   "worker_count_live": 0,
-  "daemon_count": 0,
+  "daemon_count": 3,
   "events_default": [
     "[2026-06-03 18:24] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
     "[2026-06-03 18:25] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
@@ -85,6 +80,7 @@
   "events_curiosity": [
     "Kanban dispatcher running STANDALONE via --force (interval=60.0s, pid=963054). Ctrl-C to stop. NOTE: if a gateway is also running with dispatch_in_gateway=true (default), you have two dispatchers racing for claims.",
     "[2026-06-04 21:59] reclaimed=0 crashed=1 timed_out=0 stale=0 promoted=0 spawned=1 auto_blocked=0",
-    "(dispatcher stopped)"
+    "(dispatcher stopped)",
+    "kanban: could not initialize database: Refusing to open corrupt kanban DB at /root/.hermes/kanban/boards/curiosity/kanban.db: integrity_check returned 'row 40981 missing from index idx_events_task'. Original preserved; backup at /root/.hermes/kanban/boards/curiosity/kanban.db.corrupt.55562f158c66db30.bak."
   ]
 }

@@ -53,6 +53,14 @@ export default async function MapPage() {
         <p className="text-sm text-zinc-400 mt-2">
           click any room · enter the shape · canon graph below
         </p>
+        <Link
+          href="/map/cosmos"
+          className="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-widest text-violet-400/70 hover:text-violet-300 transition group"
+        >
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse shadow-[0_0_6px_rgba(167,139,250,0.8)]" />
+          view as cosmos · night-sky
+          <span className="opacity-60 group-hover:opacity-100 transition">→</span>
+        </Link>
       </header>
 
       {/* HOUSE FLOORPLAN · 3x3 click-to-enter */}

@@ -7,6 +7,7 @@
 import { promises as fs } from "fs";
 import path from "path";
 import Link from "next/link";
+import DreamCards from "@/components/DreamCards";
 
 interface BrainStats {
   generated_at: string;
@@ -76,11 +77,25 @@ function timeAgo(ts: string): string {
   return `${days}d ago`;
 }
 
+interface LibIndex {
+  books: Record<string, { slug: string; title: string; snippet: string; size: number }[]>;
+}
+
+async function readLibIndex(): Promise<LibIndex | null> {
+  try {
+    const p = path.join(process.cwd(), "public", "library", "_index.json");
+    return JSON.parse(await fs.readFile(p, "utf-8")) as LibIndex;
+  } catch {
+    return null;
+  }
+}
+
 export default async function Home() {
-  const [brain, banks, armsData] = await Promise.all([
+  const [brain, banks, armsData, libIndex] = await Promise.all([
     readJson<BrainStats>("brain-stats.json"),
     readJson<RecentBanks>("recent-banks.json"),
     readJson<ArmsData>("arms.json"),
+    readLibIndex(),
   ]);
 
   const totalNodes = brain?.total_nodes ?? 0;
@@ -133,6 +148,9 @@ export default async function Home() {
             href="/memory"
           />
         </section>
+
+        {/* DREAM CARDS · invisible-work-surfaced (M6 #27840) */}
+        <DreamCards index={libIndex} />
 
         {/* RECENT BANKS */}
         <section className="mb-12">
@@ -238,9 +256,9 @@ function Tile({
   href: string;
 }) {
   const colors = {
-    emerald: "border-emerald-800/40 hover:border-emerald-600/50 text-emerald-400",
-    amber: "border-amber-800/40 hover:border-amber-600/50 text-amber-400",
-    indigo: "border-indigo-800/40 hover:border-indigo-600/50 text-indigo-400",
+    emerald: "border-emerald-800/40 hover:border-emerald-600/50 text-emerald-400 shadow-[0_0_18px_rgba(52,211,153,0.10)] hover:shadow-[0_0_28px_rgba(52,211,153,0.22)]",
+    amber: "border-amber-800/40 hover:border-amber-600/50 text-amber-400 shadow-[0_0_18px_rgba(245,158,11,0.10)] hover:shadow-[0_0_28px_rgba(245,158,11,0.22)]",
+    indigo: "border-indigo-800/40 hover:border-indigo-600/50 text-indigo-400 shadow-[0_0_18px_rgba(129,140,248,0.10)] hover:shadow-[0_0_28px_rgba(129,140,248,0.22)]",
   };
   return (
     <Link

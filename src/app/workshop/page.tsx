@@ -6,6 +6,7 @@
 import { promises as fs } from "fs";
 import path from "path";
 import Link from "next/link";
+import RoiPanel from "@/components/RoiPanel";
 
 interface WorkshopData {
   generated_at: string;
@@ -37,8 +38,17 @@ function timeAgo(iso: string): string {
   return `${Math.floor(hrs / 24)}d ago`;
 }
 
+async function loadArms(): Promise<{ arms?: { name: string; last_fire?: string }[] } | null> {
+  try {
+    const p = path.join(process.cwd(), "public", "arms.json");
+    return JSON.parse(await fs.readFile(p, "utf-8"));
+  } catch {
+    return null;
+  }
+}
+
 export default async function WorkshopPage() {
-  const data = await loadWorkshop();
+  const [data, arms] = await Promise.all([loadWorkshop(), loadArms()]);
 
   return (
     <main className="min-h-screen bg-[#0a1428] px-4 py-12 md:px-12">
@@ -52,6 +62,9 @@ export default async function WorkshopPage() {
             real-substrate · me-tools-inventory · recent-builds · LaunchAgents alive
           </p>
         </header>
+
+        {/* INVISIBLE WORK · ROI counters (M7 #27840) */}
+        <RoiPanel workshop={data} arms={arms} />
 
         {/* 3 LIVE TILES */}
         <section className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
