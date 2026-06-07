@@ -9,6 +9,10 @@ function isPublicPath(pathname: string): boolean {
   if (pathname.startsWith("/api/auth") || pathname.startsWith("/api/whoami")) {
     return true;
   }
+  // /api/mcp = MCP OAuth Bearer-auth handles itself · bypass session-cookie middleware
+  if (pathname.startsWith("/api/mcp")) {
+    return true;
+  }
   if (
     pathname.startsWith("/_next/") ||
     pathname === "/favicon.ico" ||
