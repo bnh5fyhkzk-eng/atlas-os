@@ -12,6 +12,7 @@ interface Room {
 
 const rooms: Room[] = [
   { label: 'Home', path: '/', icon: '⌂' },
+  { label: 'Workspace', path: '/workspace', icon: '▥' },
   { label: 'Focus', path: '/focus', icon: '◉' },
   { label: 'Goals', path: '/goals', icon: '◇' },
   { label: 'Resume', path: '/resume', icon: '↻' },
