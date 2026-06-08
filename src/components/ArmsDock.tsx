@@ -42,7 +42,7 @@ function statusTone(status: string): { dot: string; text: string } {
 export default function ArmsDock() {
   const pathname = usePathname();
   // Hide on /workspace + /agents/[arm] · they have their own arm panels per brother direct 2026-06-07 23:38 EDT (noise)
-  const hideOnRoute = pathname === '/workspace' || pathname?.startsWith('/agents/');
+  const hideOnRoute = pathname === '/workspace' || pathname === '/agents' || pathname?.startsWith('/agents/');
   const [data, setData] = useState<ArmsData | null>(null);
   const [open, setOpen] = useState(true);
   const [expanded, setExpanded] = useState<string | null>(null);
