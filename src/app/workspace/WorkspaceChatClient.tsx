@@ -5,6 +5,7 @@
 // Per #27859 path-to-truly-continuous + #1775 flip-switch
 
 import { useEffect, useState, useRef, useCallback } from "react";
+import Link from "next/link";
 
 const API = "https://atlas-api.upliftai.app";
 
@@ -199,41 +200,62 @@ export default function WorkspaceChatClient() {
       </header>
 
       <div className="flex-1 flex overflow-hidden">
-        {/* LEFT · arms rail */}
+        {/* LEFT · arms rail · click NAVIGATES to dedicated /agents/[arm] page */}
         <aside className="w-60 border-r border-zinc-900 p-3 overflow-y-auto bg-zinc-950">
-          <p className="text-[10px] uppercase tracking-widest text-zinc-600 mb-2">arms · click to see board</p>
-          <ul className="space-y-1.5">
+          <p className="text-[10px] uppercase tracking-widest text-zinc-600 mb-2">arms · click for dedicated page</p>
+          <ul className="space-y-1.5 mb-4">
             {ARMS.map((a) => {
               const card = armCards.find((c) => c.name.toLowerCase() === a);
-              const isActive = boardFocus === a;
+              const liveDot = card?.status?.toLowerCase().includes("live") ? "bg-emerald-400" : "bg-zinc-700";
               return (
                 <li key={a}>
-                  <button
-                    type="button"
-                    onClick={() => setBoardFocus(isActive ? "" : a)}
-                    className={`w-full text-left flex items-center gap-2 px-2 py-1.5 rounded text-xs transition ${
-                      isActive ? "bg-emerald-900/30 text-emerald-100" : "text-zinc-400 hover:bg-zinc-900"
-                    }`}
+                  <Link
+                    href={`/agents/${a}`}
+                    className="w-full text-left flex items-center gap-2 px-2 py-1.5 rounded text-xs text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900 transition"
                   >
                     <span className="text-base">{ARM_META[a].emoji}</span>
                     <span className="font-medium">{a}</span>
-                    <span className="ml-auto text-[10px] text-zinc-500 truncate">
-                      {card?.status?.toLowerCase().includes("live") ? "●" : "○"}
-                    </span>
-                  </button>
-                  {isActive && boardTasks.length > 0 && (
-                    <ul className="ml-3 mt-1 mb-2 space-y-0.5">
-                      {boardTasks.slice(0, 6).map((t) => (
-                        <li key={t.id} className="text-[10px] font-mono text-zinc-500 truncate">
-                          {t.status === "done" ? "✓" : t.status === "blocked" ? "⊘" : "•"} {t.title.slice(0, 30)}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+                    <span className="text-[10px] text-zinc-600 ml-1 truncate">{ARM_META[a].persona}</span>
+                    <span className={`w-1.5 h-1.5 rounded-full ${liveDot} ml-auto`} />
+                  </Link>
                 </li>
               );
             })}
           </ul>
+          {/* Quick-peek board · optional */}
+          <div className="border-t border-zinc-900 pt-3">
+            <p className="text-[10px] uppercase tracking-widest text-zinc-600 mb-2">quick-peek board</p>
+            <select
+              value={boardFocus}
+              onChange={(e) => setBoardFocus(e.target.value as Arm | "")}
+              className="w-full bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs rounded px-2 py-1 focus:outline-none focus:border-emerald-700"
+            >
+              <option value="">pick arm…</option>
+              {ARMS.map((a) => (
+                <option key={a} value={a}>
+                  {ARM_META[a].emoji} {a}
+                </option>
+              ))}
+            </select>
+            {boardFocus && boardTasks.length > 0 && (
+              <ul className="mt-2 space-y-0.5">
+                {boardTasks.slice(0, 8).map((t) => (
+                  <li key={t.id} className="text-[10px] font-mono text-zinc-500 truncate">
+                    {t.status === "done" ? "✓" : t.status === "blocked" ? "⊘" : t.status === "running" ? "▶" : "•"}{" "}
+                    {t.title.slice(0, 28)}
+                  </li>
+                ))}
+              </ul>
+            )}
+            {boardFocus && (
+              <Link
+                href={`/agents/${boardFocus}`}
+                className="mt-2 block text-[10px] text-emerald-400/70 hover:text-emerald-300 underline"
+              >
+                → full {boardFocus} page
+              </Link>
+            )}
+          </div>
         </aside>
 
         {/* CENTER · chat-stream */}

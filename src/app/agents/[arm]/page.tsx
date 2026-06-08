@@ -8,6 +8,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import { getPersonaByArmId, PERSONAS } from "@/lib/personas";
 import PersonaSeal from "@/components/PersonaSeal";
+import ArmChatPanel from "@/components/ArmChatPanel";
 
 export const dynamic = "force-dynamic";
 
@@ -104,12 +105,14 @@ export default async function AgentPage({ params }: Props) {
         {/* TAB-ROW · Picture-1 style */}
         <nav className="mb-8 flex flex-wrap gap-1 border-b border-zinc-800">
           <TabPill label="Overview" active />
-          <TabPill label="Chat" href={`/talk`} />
+          <TabPill label="Workspace" href={`/workspace`} />
           <TabPill label="Goal" href={`/goals`} />
-          <TabPill label="Workspace" href={`/arms?arm=${arm}`} />
           <TabPill label="MCPs" disabled />
           <TabPill label="Control Room" disabled />
         </nav>
+
+        {/* CHAT + KANBAN · per-arm dedicated · per brother direct 23:35 EDT */}
+        <ArmChatPanel arm={arm} emoji={persona.emblem || "•"} persona={persona.name} />
 
         {/* OVERVIEW · 4 sections */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
