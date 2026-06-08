@@ -1,0 +1,88 @@
+{
+  "generated_at": "2026-06-08T18:19:04Z",
+  "ok": true,
+  "error": null,
+  "arms": {
+    "curiosity": {
+      "counts": {
+        "done": 158,
+        "blocked": 1
+      },
+      "running": [],
+      "ready_preview": [],
+      "boards_seen": [
+        "curiosity",
+        "default"
+      ]
+    },
+    "pascal": {
+      "counts": {
+        "blocked": 5,
+        "done": 242
+      },
+      "running": [],
+      "ready_preview": [],
+      "boards_seen": [
+        "default",
+        "pascal"
+      ]
+    },
+    "researcher-worker": {
+      "counts": {
+        "ready": 1
+      },
+      "running": [],
+      "ready_preview": [
+        {
+          "task_id": "t_f73bb343",
+          "profile": "researcher-worker",
+          "title": "Collect user reviews for top voice memo-to-AI tools",
+          "board": "default"
+        }
+      ],
+      "boards_seen": [
+        "default"
+      ]
+    },
+    "charle": {
+      "counts": {
+        "blocked": 5,
+        "done": 162
+      },
+      "running": [],
+      "ready_preview": [],
+      "boards_seen": [
+        "charle"
+      ]
+    }
+  },
+  "totals": {
+    "done": 562,
+    "running": 0,
+    "ready": 1
+  },
+  "worker_count_live": 0,
+  "daemon_count": 3,
+  "events_default": [
+    "[2026-06-03 18:24] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
+    "[2026-06-03 18:25] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
+    "[2026-06-03 18:26] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
+    "[2026-06-03 18:27] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
+    "[2026-06-03 18:28] reclaimed=0 crashed=3 timed_out=0 stale=0 promoted=3 spawned=3 auto_blocked=3",
+    "(dispatcher stopped)"
+  ],
+  "events_charle": [
+    "[2026-06-03 17:54] reclaimed=0 crashed=0 timed_out=0 stale=0 promoted=0 spawned=1 auto_blocked=0",
+    "[2026-06-03 17:58] reclaimed=0 crashed=0 timed_out=0 stale=0 promoted=0 spawned=1 auto_blocked=0",
+    "[2026-06-03 18:01] reclaimed=0 crashed=0 timed_out=0 stale=0 promoted=0 spawned=1 auto_blocked=0",
+    "[2026-06-03 18:04] reclaimed=0 crashed=0 timed_out=0 stale=0 promoted=0 spawned=1 auto_blocked=0",
+    "[2026-06-03 18:06] reclaimed=0 crashed=0 timed_out=0 stale=0 promoted=0 spawned=1 auto_blocked=0",
+    "(dispatcher stopped)"
+  ],
+  "events_curiosity": [
+    "Kanban dispatcher running STANDALONE via --force (interval=60.0s, pid=963054). Ctrl-C to stop. NOTE: if a gateway is also running with dispatch_in_gateway=true (default), you have two dispatchers racing for claims.",
+    "[2026-06-04 21:59] reclaimed=0 crashed=1 timed_out=0 stale=0 promoted=0 spawned=1 auto_blocked=0",
+    "(dispatcher stopped)",
+    "kanban: could not initialize database: Refusing to open corrupt kanban DB at /root/.hermes/kanban/boards/curiosity/kanban.db: integrity_check returned 'row 40981 missing from index idx_events_task'. Original preserved; backup at /root/.hermes/kanban/boards/curiosity/kanban.db.corrupt.55562f158c66db30.bak."
+  ]
+}
