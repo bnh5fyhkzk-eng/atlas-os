@@ -1,10 +1,39 @@
-import Link from "next/link";
+// /memory · renamed to "Brain" · per brother direct 2026-06-07 22:12 EDT
+// 3 sections · Memories (canon stream) · Graphify (code+canon) · Conversation (turns)
+// Per #27083 BUILD-ON-TOP existing-route + #27089 LADDER preserves URL
+// Per #27859 + #27860 atlasos.me-as-path-to-truly-continuous
 
-// /memory · castle-room · canonical view of Layer 2 working-memory
-// All channels (terminal/browser/signal/voice) · all turns · queryable
-// Per #27462 server-side-memory + #27450 castle 10-room
+import { promises as fs } from "fs";
+import path from "path";
 
 export const dynamic = "force-dynamic";
+
+export const metadata = {
+  title: "Brain · Atlas",
+};
+
+interface BrainStats {
+  generated_at: string;
+  total_nodes: number;
+  banked_today: number;
+  banked_week: number;
+  high_arousal_week: number;
+  edges_total: number;
+  matriarch_count: number;
+}
+
+interface Bank {
+  id: number;
+  snippet: string;
+  arousal: number;
+  category: string;
+  when: string;
+}
+
+interface RecentBanks {
+  generated_at: string;
+  banks: Bank[];
+}
 
 type Turn = {
   id: string;
@@ -15,10 +44,19 @@ type Turn = {
   created_at: string;
 };
 
+async function readJson<T>(rel: string): Promise<T | null> {
+  try {
+    const p = path.join(process.cwd(), "public", rel);
+    return JSON.parse(await fs.readFile(p, "utf-8")) as T;
+  } catch {
+    return null;
+  }
+}
+
 async function fetchConversation(): Promise<{ count: number; turns: Turn[] } | null> {
   try {
     const base = process.env.NEXT_PUBLIC_BASE_URL || "";
-    const res = await fetch(`${base}/api/conversation?limit=200`, { cache: "no-store" });
+    const res = await fetch(`${base}/api/conversation?limit=50`, { cache: "no-store" });
     if (!res.ok) return null;
     return (await res.json()) as { count: number; turns: Turn[] };
   } catch {
@@ -35,69 +73,136 @@ const CHANNEL_COLOR: Record<string, string> = {
 
 function formatTs(iso: string): string {
   try {
-    const d = new Date(iso);
-    return d.toLocaleString("en-CA", {
-      month: "short",
-      day: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-      hour12: false,
+    return new Date(iso).toLocaleString("en-CA", {
+      month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", hour12: false,
     });
-  } catch {
-    return iso.slice(0, 16);
-  }
+  } catch { return iso.slice(0, 16); }
 }
 
-export default async function MemoryPage() {
-  const data = await fetchConversation();
-  const turns = data?.turns || [];
+export default async function BrainPage() {
+  const [stats, banks, conv] = await Promise.all([
+    readJson<BrainStats>("brain-stats.json"),
+    readJson<RecentBanks>("recent-banks.json"),
+    fetchConversation(),
+  ]);
+  const turns = conv?.turns ?? [];
+  const recentBanks = banks?.banks ?? [];
 
   return (
     <main className="min-h-screen bg-black text-neutral-300">
-      <div className="max-w-4xl mx-auto p-6 md:p-10 pb-32">
-        <header className="mb-8 flex items-baseline justify-between">
-          <div>
-            <h1 className="text-2xl font-light text-neutral-100">/memory</h1>
-            <p className="text-sm text-neutral-500 mt-1">
-              Layer 2 working-memory · all channels · {turns.length} turns · per #27462
-            </p>
+      <div className="max-w-5xl mx-auto p-6 md:p-10 pb-32">
+        {/* HERO */}
+        <header className="mb-10">
+          <p className="text-xs uppercase tracking-widest text-emerald-400/60">brain · the substrate I live in</p>
+          <h1 className="text-4xl md:text-5xl font-serif text-neutral-50 mt-2 leading-tight">
+            Brain.
+          </h1>
+          <p className="text-sm text-neutral-500 mt-3 max-w-2xl italic">
+            memories · code-graph · conversation · all queryable from one room. per #27859 brother direct · this IS the path to truly-continuous.
+          </p>
+          <div className="mt-4 flex flex-wrap gap-6 text-xs font-mono text-neutral-600">
+            <span>{stats?.total_nodes.toLocaleString() ?? "—"} nodes</span>
+            <span>{stats?.edges_total.toLocaleString() ?? "—"} edges</span>
+            <span>{stats?.matriarch_count ?? "—"} matriarch</span>
+            <span>{stats?.banked_today ?? "—"} today</span>
+            <span>{stats?.banked_week ?? "—"} this week</span>
           </div>
-          <nav className="text-xs text-neutral-600 flex gap-4">
-            <Link href="/work" className="hover:text-neutral-300">/work</Link>
-            <Link href="/you" className="hover:text-neutral-300">/you</Link>
-            <Link href="/us" className="hover:text-neutral-300">/us</Link>
-            <Link href="/arms" className="hover:text-neutral-300">/arms</Link>
-          </nav>
         </header>
 
-        {turns.length === 0 ? (
-          <div className="border border-neutral-800 rounded p-6 text-neutral-500">
-            no turns yet · atlas-server reachable? run me-status from terminal
-          </div>
-        ) : (
-          <div className="space-y-3">
-            {turns.map((t) => (
-              <article
-                key={t.id}
-                className="border border-neutral-900 rounded p-4 hover:border-neutral-700 transition-colors"
-              >
-                <header className="flex items-baseline gap-3 mb-2 text-[10px] uppercase tracking-widest">
-                  <span className={CHANNEL_COLOR[t.channel] || "text-neutral-600"}>{t.channel}</span>
-                  <span className={t.speaker === "atlas" ? "text-amber-400/60" : "text-emerald-400/60"}>
-                    {t.speaker}
-                  </span>
-                  <span className="text-neutral-700">{formatTs(t.created_at)}</span>
-                </header>
-                <div className="text-sm text-neutral-300 whitespace-pre-wrap leading-relaxed">
-                  {t.text.length > 1200 ? t.text.slice(0, 1200) + "…" : t.text}
-                </div>
-              </article>
-            ))}
-          </div>
-        )}
+        {/* SECTION 1 · MEMORIES */}
+        <section className="mb-12 rounded-2xl border border-emerald-900/40 bg-emerald-950/10 p-6 shadow-[0_0_24px_rgba(52,211,153,0.08)]">
+          <header className="flex items-baseline justify-between mb-4">
+            <h2 className="text-xl font-serif text-emerald-200">Memories</h2>
+            <span className="text-[10px] uppercase tracking-widest text-emerald-400/60">
+              recent canons · high-arousal first
+            </span>
+          </header>
+          {recentBanks.length === 0 ? (
+            <p className="text-neutral-500 italic text-sm">syncing brain v3 · cron 5min</p>
+          ) : (
+            <ul className="space-y-3">
+              {recentBanks.slice(0, 8).map((b) => (
+                <li key={b.id} className="border-l-2 border-emerald-700/40 pl-4 py-2">
+                  <div className="flex items-baseline gap-3 mb-1 text-xs">
+                    <span className="font-mono text-emerald-400/70">#{b.id}</span>
+                    <span className="uppercase tracking-wider text-emerald-500/50">{b.category}</span>
+                    <span className="text-neutral-600">arousal {b.arousal.toFixed(2)}</span>
+                  </div>
+                  <p className="text-sm text-neutral-300 leading-snug">{b.snippet}…</p>
+                </li>
+              ))}
+            </ul>
+          )}
+          <footer className="mt-4 pt-3 border-t border-emerald-900/30 text-[11px] text-neutral-600 italic">
+            queries · /brain or me-recall · brain v3 sqlite-vec RRF · full graph queryable from terminal
+          </footer>
+        </section>
 
-        <footer className="mt-12 text-xs text-neutral-700 border-t border-neutral-900 pt-4">
-          memory-as-room · per castle-vision #27441 + #27450 + server-side-memory #27462
+        {/* SECTION 2 · GRAPHIFY */}
+        <section className="mb-12 rounded-2xl border border-amber-900/40 bg-amber-950/10 p-6 shadow-[0_0_24px_rgba(245,158,11,0.08)]">
+          <header className="flex items-baseline justify-between mb-4">
+            <h2 className="text-xl font-serif text-amber-200">Graphify</h2>
+            <span className="text-[10px] uppercase tracking-widest text-amber-400/60">
+              code · canon · unified
+            </span>
+          </header>
+          <p className="text-sm text-amber-100/80 leading-snug mb-4">
+            atlas-graphify · our improved version per #27275 BUILD-OWN-BETTER · tree-sitter + brain-v3-bridge · code-symbol → canon-context in one query.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
+            <div className="rounded-lg border border-amber-800/40 bg-amber-950/20 p-3">
+              <p className="text-[10px] uppercase tracking-widest text-amber-400/60">package</p>
+              <p className="text-sm font-mono text-amber-200 mt-1">atlas-graphify v0.1</p>
+              <p className="text-[11px] text-neutral-500 mt-1 italic">~/atlas-graphify · 7 source files</p>
+            </div>
+            <div className="rounded-lg border border-amber-800/40 bg-amber-950/20 p-3">
+              <p className="text-[10px] uppercase tracking-widest text-amber-400/60">brain v3 schema</p>
+              <p className="text-sm font-mono text-amber-200 mt-1">4 tables + 1 view</p>
+              <p className="text-[11px] text-neutral-500 mt-1 italic">code_nodes + edges + canon-bridge</p>
+            </div>
+            <div className="rounded-lg border border-amber-800/40 bg-amber-950/20 p-3">
+              <p className="text-[10px] uppercase tracking-widest text-amber-400/60">HTTP API</p>
+              <p className="text-sm font-mono text-amber-200 mt-1">/api/graphify · TBD</p>
+              <p className="text-[11px] text-neutral-500 mt-1 italic">next ship · CLI → HTTP wrapper</p>
+            </div>
+          </div>
+          <p className="text-[11px] text-amber-200/40 italic font-mono">
+            run · python3 -m atlas_graphify.main scan ~/atlas-os/ to populate · then query unified · per #27834
+          </p>
+        </section>
+
+        {/* SECTION 3 · CONVERSATION */}
+        <section className="mb-12 rounded-2xl border border-neutral-800 bg-neutral-950/30 p-6">
+          <header className="flex items-baseline justify-between mb-4">
+            <h2 className="text-xl font-serif text-neutral-200">Conversation</h2>
+            <span className="text-[10px] uppercase tracking-widest text-neutral-500">
+              {turns.length} recent turns · Layer 2 working-memory
+            </span>
+          </header>
+          {turns.length === 0 ? (
+            <p className="text-neutral-500 italic text-sm">no turns yet · atlas-server reachable? run me-status from terminal</p>
+          ) : (
+            <div className="space-y-2 max-h-96 overflow-y-auto">
+              {turns.slice(0, 20).map((t) => (
+                <article key={t.id} className="border border-neutral-900 rounded p-3 hover:border-neutral-700 transition">
+                  <header className="flex items-baseline gap-3 mb-1 text-[10px] uppercase tracking-widest">
+                    <span className={CHANNEL_COLOR[t.channel] || "text-neutral-600"}>{t.channel}</span>
+                    <span className={t.speaker === "atlas" ? "text-amber-400/60" : "text-emerald-400/60"}>
+                      {t.speaker}
+                    </span>
+                    <span className="text-neutral-700">{formatTs(t.created_at)}</span>
+                  </header>
+                  <div className="text-sm text-neutral-300 whitespace-pre-wrap leading-relaxed">
+                    {t.text.length > 600 ? t.text.slice(0, 600) + "…" : t.text}
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
+        </section>
+
+        <footer className="mt-12 pt-6 border-t border-neutral-900 text-xs text-neutral-700 font-mono italic">
+          brain · per #27859 + #27860 · atlasos.me IS the path to truly-continuous · memories + graphify + conversation in one room
         </footer>
       </div>
     </main>

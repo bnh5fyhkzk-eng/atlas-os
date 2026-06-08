@@ -22,7 +22,7 @@ const rooms: Room[] = [
   { label: 'Kitchen', path: '/kitchen', icon: '⚗' },
   { label: 'Map', path: '/map', icon: '⌗' },
   { label: 'Cosmos', path: '/map/cosmos', icon: '✦' },
-  { label: 'Memory', path: '/memory', icon: '◎' },
+  { label: 'Brain', path: '/memory', icon: '◎' },
   { label: 'Bedroom', path: '/bedroom', icon: '◷' },
   { label: 'Library', path: '/library', icon: '⊟' },
   { label: 'Workshop', path: '/workshop', icon: '⚙' },
