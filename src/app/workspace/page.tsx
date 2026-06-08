@@ -1,44 +1,13 @@
-// /workspace · brother + Atlas work-place · per brother direct 2026-06-07 22:38 EDT
-// "place we can work and live there together · CEO delegate · queue project with arms"
-// Per #27425 3-axis YOU/US/PER-ARM + #27572 arms-as-organs + #27859 path-to-truly-continuous
-// Per #27083 BUILD-ON-TOP existing arms.json sync + /api/dispatch
+// /workspace · brother + Atlas chat-stream with arms
+// Per brother direct VERBATIM 2026-06-07 23:13 EDT · "should it be like chathing with you in terminal where we see what each arms are doing"
+// Backend · Mac mini atlas-api at atlas-api.upliftai.app · /public/arms + /public/dispatch + /public/feed + /public/chat
+// Per #27083 BUILD-ON-TOP existing atlas-api (was disabled · revived as Atlas-self substrate)
 
-import { promises as fs } from "fs";
-import path from "path";
-import WorkspaceClient from "./WorkspaceClient";
+import WorkspaceChatClient from "./WorkspaceChatClient";
 
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Workspace · Atlas + Brother" };
+export const metadata = { title: "Workspace · brother + Atlas + arms" };
 
-interface Arm {
-  name: string;
-  emoji: string;
-  role: string;
-  where: string;
-  status: string;
-  last_fire: string;
-  next_action?: string;
-  blockers?: string;
-  color?: string;
-}
-
-interface ArmsData {
-  generated_at: string;
-  arms: Arm[];
-  summary?: { running: number; queued: number; blocked: number; done: number };
-}
-
-async function loadArms(): Promise<Arm[]> {
-  try {
-    const p = path.join(process.cwd(), "public", "arms.json");
-    const data = JSON.parse(await fs.readFile(p, "utf-8")) as ArmsData;
-    return data.arms ?? [];
-  } catch {
-    return [];
-  }
-}
-
-export default async function WorkspacePage() {
-  const arms = await loadArms();
-  return <WorkspaceClient arms={arms} />;
+export default function WorkspacePage() {
+  return <WorkspaceChatClient />;
 }
