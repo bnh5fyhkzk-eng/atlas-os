@@ -35,6 +35,20 @@ interface RecentBanks {
   banks: Bank[];
 }
 
+interface GraphifyStats {
+  generated_at: string;
+  code_nodes: number;
+  code_edges: number;
+  code_to_canon: number;
+  by_repo: { repo: string; count: number }[];
+  by_kind: { kind: string; count: number }[];
+}
+
+interface GraphifyRecent {
+  generated_at: string;
+  symbols: { id: number; kind: string; name: string; file: string; repo: string; line: number }[];
+}
+
 type Turn = {
   id: string;
   speaker: "brother" | "atlas";
@@ -80,13 +94,19 @@ function formatTs(iso: string): string {
 }
 
 export default async function BrainPage() {
-  const [stats, banks, conv] = await Promise.all([
+  const [stats, banks, conv, gStats, gRecent] = await Promise.all([
     readJson<BrainStats>("brain-stats.json"),
     readJson<RecentBanks>("recent-banks.json"),
     fetchConversation(),
+    readJson<GraphifyStats>("graphify-stats.json"),
+    readJson<GraphifyRecent>("graphify-recent.json"),
   ]);
   const turns = conv?.turns ?? [];
   const recentBanks = banks?.banks ?? [];
+  const codeNodes = gStats?.code_nodes ?? 0;
+  const codeByRepo = gStats?.by_repo ?? [];
+  const codeByKind = gStats?.by_kind ?? [];
+  const codeRecent = gRecent?.symbols ?? [];
 
   return (
     <main className="min-h-screen bg-black text-neutral-300">
@@ -138,36 +158,78 @@ export default async function BrainPage() {
           </footer>
         </section>
 
-        {/* SECTION 2 · GRAPHIFY */}
+        {/* SECTION 2 · GRAPHIFY · LIVE */}
         <section className="mb-12 rounded-2xl border border-amber-900/40 bg-amber-950/10 p-6 shadow-[0_0_24px_rgba(245,158,11,0.08)]">
           <header className="flex items-baseline justify-between mb-4">
             <h2 className="text-xl font-serif text-amber-200">Graphify</h2>
             <span className="text-[10px] uppercase tracking-widest text-amber-400/60">
-              code · canon · unified
+              {codeNodes.toLocaleString()} code symbols · brain v3 unified
             </span>
           </header>
           <p className="text-sm text-amber-100/80 leading-snug mb-4">
-            atlas-graphify · our improved version per #27275 BUILD-OWN-BETTER · tree-sitter + brain-v3-bridge · code-symbol → canon-context in one query.
+            atlas-graphify · OUR improved version per #27275 BUILD-OWN-BETTER · Python ast + regex parse + brain-v3 bridge · code-symbol → canon-context one query.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
             <div className="rounded-lg border border-amber-800/40 bg-amber-950/20 p-3">
-              <p className="text-[10px] uppercase tracking-widest text-amber-400/60">package</p>
-              <p className="text-sm font-mono text-amber-200 mt-1">atlas-graphify v0.1</p>
-              <p className="text-[11px] text-neutral-500 mt-1 italic">~/atlas-graphify · 7 source files</p>
+              <p className="text-[10px] uppercase tracking-widest text-amber-400/60">symbols</p>
+              <p className="text-2xl font-mono text-amber-200 mt-1">{codeNodes.toLocaleString()}</p>
             </div>
             <div className="rounded-lg border border-amber-800/40 bg-amber-950/20 p-3">
-              <p className="text-[10px] uppercase tracking-widest text-amber-400/60">brain v3 schema</p>
-              <p className="text-sm font-mono text-amber-200 mt-1">4 tables + 1 view</p>
-              <p className="text-[11px] text-neutral-500 mt-1 italic">code_nodes + edges + canon-bridge</p>
+              <p className="text-[10px] uppercase tracking-widest text-amber-400/60">repos</p>
+              <p className="text-2xl font-mono text-amber-200 mt-1">{codeByRepo.length}</p>
             </div>
             <div className="rounded-lg border border-amber-800/40 bg-amber-950/20 p-3">
-              <p className="text-[10px] uppercase tracking-widest text-amber-400/60">HTTP API</p>
-              <p className="text-sm font-mono text-amber-200 mt-1">/api/graphify · TBD</p>
-              <p className="text-[11px] text-neutral-500 mt-1 italic">next ship · CLI → HTTP wrapper</p>
+              <p className="text-[10px] uppercase tracking-widest text-amber-400/60">kinds</p>
+              <p className="text-2xl font-mono text-amber-200 mt-1">{codeByKind.length}</p>
+            </div>
+            <div className="rounded-lg border border-amber-800/40 bg-amber-950/20 p-3">
+              <p className="text-[10px] uppercase tracking-widest text-amber-400/60">canon nodes</p>
+              <p className="text-2xl font-mono text-amber-200 mt-1">{stats?.total_nodes?.toLocaleString() ?? "—"}</p>
             </div>
           </div>
-          <p className="text-[11px] text-amber-200/40 italic font-mono">
-            run · python3 -m atlas_graphify.main scan ~/atlas-os/ to populate · then query unified · per #27834
+          {codeByRepo.length > 0 && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <p className="text-[10px] uppercase tracking-widest text-amber-400/50 mb-2">by repo</p>
+                <ul className="space-y-1 text-xs font-mono">
+                  {codeByRepo.map(r => (
+                    <li key={r.repo} className="flex justify-between text-amber-100/80">
+                      <span>{r.repo}</span>
+                      <span className="text-amber-400/60">{r.count}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p className="text-[10px] uppercase tracking-widest text-amber-400/50 mb-2">by kind</p>
+                <ul className="space-y-1 text-xs font-mono">
+                  {codeByKind.map(k => (
+                    <li key={k.kind} className="flex justify-between text-amber-100/80">
+                      <span>{k.kind}</span>
+                      <span className="text-amber-400/60">{k.count}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          )}
+          {codeRecent.length > 0 && (
+            <div className="mt-4 pt-3 border-t border-amber-900/30">
+              <p className="text-[10px] uppercase tracking-widest text-amber-400/50 mb-2">recent symbols (newest 10)</p>
+              <ul className="space-y-1 text-[11px] font-mono">
+                {codeRecent.slice(0, 10).map(s => (
+                  <li key={s.id} className="flex gap-2 text-amber-100/70">
+                    <span className="text-amber-500/40 w-12">#{s.id}</span>
+                    <span className="text-amber-300/80 w-16 truncate">{s.kind}</span>
+                    <span className="text-amber-200 w-32 truncate">{s.name}</span>
+                    <span className="text-neutral-500 truncate flex-1">{s.file}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          <p className="text-[11px] text-amber-200/40 italic font-mono mt-4">
+            cli · python3 -m atlas_graphify.main {`{scan|query|stats}`} · sync · me-graphify-sync.sh (~/atlas-os/public/graphify-stats.json)
           </p>
         </section>
 
