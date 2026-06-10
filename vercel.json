@@ -7,6 +7,9 @@
   "rewrites": [
     { "source": "/api/(.*)", "destination": "https://api.atlasos.me/api/$1" },
     { "source": "/dashboard-plugins/(.*)", "destination": "https://api.atlasos.me/dashboard-plugins/$1" },
+    { "source": "/assets/(.*)", "destination": "https://api.atlasos.me/assets/$1" },
+    { "source": "/chat", "destination": "https://api.atlasos.me/" },
+    { "source": "/", "destination": "https://api.atlasos.me/" },
     { "source": "/(.*)", "destination": "https://api.atlasos.me/$1" }
   ]
 }
