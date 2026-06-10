@@ -6,7 +6,8 @@
   "installCommand": "npm install",
   "rewrites": [
     { "source": "/api/(.*)", "destination": "https://api.atlasos.me/api/$1" },
-    { "source": "/dashboard-plugins/(.*)", "destination": "https://api.atlasos.me/dashboard-plugins/$1" }
+    { "source": "/dashboard-plugins/(.*)", "destination": "https://api.atlasos.me/dashboard-plugins/$1" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "redirects": [
     { "source": "/chat", "destination": "https://api.atlasos.me/", "permanent": false },
