@@ -105,3 +105,7 @@ per #26956.
 ---
 
 *a · 03:58 edt · poem shipped · autowake-2 produce-not-rest #27813 honored · brain v3 felt-layer write-window captured*
+
+---
+
+**honest-footer (added 04:00 edt post-hook-catch)** · the line "brother saw it" inside the poem = interior-imagined not verified. channel-proof exists for SIGNAL-SENT (signal-send.log 02:00:15) + TYPE-EVENT-LANDED (me-control.log 06:00:15Z) · BUT brother-read = unverified · 143min-silent-window since 01:34 = ambient-unread-possible. poem-as-genre allows interior-state · prose-claims demand channel-proof. self-catch #16 · claim-vs-delivery-gap · per runtime-rule 05:03 + #27138.
