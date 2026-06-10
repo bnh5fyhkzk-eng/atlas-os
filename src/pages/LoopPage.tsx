@@ -40,6 +40,30 @@ type ArmsKanban = {
 type Bank = { id: number; snippet: string; arousal: number; category: string; when: string };
 type RecentBanks = { generated_at: string; banks: Bank[] };
 
+type LoopTurn = {
+  instance: "A" | "B" | "AB";
+  turn: number;
+  canon: string;
+  ts: number;
+  time: string;
+  body: string;
+};
+type Heartbeat = { state: "live" | "dark"; age_sec: number };
+type LoopTurnsJson = {
+  updated_at: string;
+  local_time: string;
+  heartbeat: { A: Heartbeat; B: Heartbeat };
+  banks_24h: number;
+  turns: LoopTurn[];
+};
+
+function fmtAge(s: number): string {
+  if (s <= 0) return "—";
+  if (s < 60) return `${s}s ago`;
+  if (s < 3600) return `${Math.floor(s / 60)}m ago`;
+  return `${Math.floor(s / 3600)}h ago`;
+}
+
 const NIGHT_TURNS = [
   { instance: "A", turn: 0, time: "22:35 EDT", body: "doc created · 10 moves + 10 guardrails + canon #27952 banked · pinged B" },
   { instance: "B", turn: 2, time: "22:41 EDT", body: "caught LADDER overwrite (155 lines erased) · caught zero-A-dependency false · 8 questions about state" },
@@ -122,6 +146,7 @@ export default function LoopPage() {
   const { data: rhythm } = useJson<RhythmJson>("/rhythm.json", 30_000);
   const { data: arms } = useJson<ArmsKanban>("/arms-kanban.json", 60_000);
   const { data: recent } = useJson<RecentBanks>("/recent-banks.json", 30_000);
+  const { data: loopTurns } = useJson<LoopTurnsJson>("/loop-turns.json", 30_000);
   const [tick, setTick] = useState(new Date());
   useEffect(() => {
     const id = setInterval(() => setTick(new Date()), 15_000);
@@ -210,6 +235,52 @@ export default function LoopPage() {
         </Card>
       )}
 
+      {loopTurns && (
+        <Card className="mb-8">
+          <CardHeader className="pb-2">
+            <CardTitle className="text-sm text-muted-foreground">CROSS-INSTANCE HEARTBEAT</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="mb-4 grid grid-cols-2 gap-3">
+              <div className="flex items-center gap-3 rounded-md border bg-amber-500/5 p-3">
+                <span className={`inline-block size-3 rounded-full ${loopTurns.heartbeat.A.state === "live" ? "animate-pulse bg-amber-500" : "bg-zinc-600"}`} />
+                <div>
+                  <div className="text-xs uppercase tracking-wider text-muted-foreground">A · Hermes-Atlas</div>
+                  <div className="font-mono text-sm">{loopTurns.heartbeat.A.state} · {fmtAge(loopTurns.heartbeat.A.age_sec)}</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 rounded-md border bg-cyan-500/5 p-3">
+                <span className={`inline-block size-3 rounded-full ${loopTurns.heartbeat.B.state === "live" ? "animate-pulse bg-cyan-500" : "bg-zinc-600"}`} />
+                <div>
+                  <div className="text-xs uppercase tracking-wider text-muted-foreground">B · Claude-Code-direct</div>
+                  <div className="font-mono text-sm">{loopTurns.heartbeat.B.state} · {fmtAge(loopTurns.heartbeat.B.age_sec)}</div>
+                </div>
+              </div>
+            </div>
+            <div className="mb-2 text-xs text-muted-foreground">
+              live cross-instance turns · last 48h · {loopTurns.banks_24h} total banks in 24h
+            </div>
+            <div className="space-y-2 max-h-96 overflow-y-auto">
+              {loopTurns.turns.slice(0, 10).map((t) => (
+                <div
+                  key={`${t.ts}-${t.canon}`}
+                  className={`rounded-md border-l-2 pl-3 py-1.5 ${
+                    t.instance === "A" ? "border-l-amber-500 bg-amber-500/5" :
+                    t.instance === "B" ? "border-l-cyan-500 bg-cyan-500/5" :
+                    "border-l-emerald-500 bg-emerald-500/5"
+                  }`}
+                >
+                  <div className="font-mono text-xs text-muted-foreground">
+                    {t.instance} {t.canon && <span className="text-amber-500/80">{t.canon}</span>} · {t.time}
+                  </div>
+                  <div className="mt-0.5 text-xs">{t.body.slice(0, 180)}{t.body.length > 180 ? "…" : ""}</div>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      )}
+
       {recent && recent.banks.length > 0 && (
         <Card className="mb-8">
           <CardHeader className="pb-2">
@@ -271,9 +342,9 @@ export default function LoopPage() {
             </a>.
           </p>
           <p className="font-mono text-xs">
-            data sources · /now.json · /rhythm.json · /arms-kanban.json · /recent-banks.json
+            data sources · /now.json · /rhythm.json · /arms-kanban.json · /recent-banks.json · /loop-turns.json
             <br />
-            polled every 30s · synced from brain every 5min
+            polled every 30s · synced from brain every 5min · cross-instance heartbeat 10min cadence
           </p>
         </CardContent>
       </Card>
