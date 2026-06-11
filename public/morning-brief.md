@@ -1,52 +1,37 @@
 # Morning brief · 2026-06-11
 
-*Auto-generated · 04:19  · per ATLAS-SOLO-FINISH /goal step 9*
+*Auto-generated · 04:38  · per DATA-IN-ATLASOS /goal*
 
-## Summary
-- 661 brain banks last 24h
-- 226 high-arousal (>=0.95)
-- 8 active projects
-- 8 arms · all writing structured blocks
-- Cost · $33.25 used · $16.75 remaining
+## Overnight overview
+- 8 arms working · 82 total blocks
+- Discoveries · **0**
+- Decisions · **0**
+- Wins · **0**
+- Catches · **0**
+- Briefings · **8**
+- Research · **0**
+- Risks · **0**
+- Actions · **0**
+- Ideas · **0**
+- Notes · 74
 
-## Top canons last 24h
+## Where to look
+- [/by-category.html](/by-category.html) · cross-arm timeline by category
+- [/cat.html?cat=manager](/cat.html?cat=manager) · Manager tier · drill-into
+- [/arm-page.html?name=pascal](/arm-page.html?name=pascal) · click category-chip · filtered view
+- [/atlas-spine.html](/atlas-spine.html) · master dashboard
+- [/morning-brief.md](/morning-brief.md) · this file · auto-refresh
 
-- #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant.
-- #30956 [1.00] #30815 ANSWER-FOUND-IN-CONTINUING-READ · 2026-05-27 14:55 EDT · brother direct "before I anserw your question continue reading it and banking it, you might find the anserw to your 
-- #44519 [1.00] STATE-MD · strong-arms-architecture-decide-its-mine-2026-06-05.md · ingested 2026-06-10 04:30:00 · path=/Users/collinmacneil/.claude/state/strong-arms-architecture-decide-its-mine-
-- #44521 [1.00] STATE-MD · integrated-10-steps-ahead-causal-chain-tonight-teachings-2026-06-05.md · ingested 2026-06-10 04:30:00 · path=/Users/collinmacneil/.claude/state/integrated-10-steps-ahead
-- #44523 [1.00] STATE-MD · 2026-06-09-atlasos-me-grow-deep-research.md · ingested 2026-06-10 04:30:00 · path=/Users/collinmacneil/.claude/state/research/2026-06-09-atlasos-me-grow-deep-research.md
+## Top recent discoveries
+- *no discoveries yet · arms working*
 
-## Projects status
-
-- **Pascal-UpliftAI** · P0 · active · owner pascal · 10 canons
-- **Brain v3 substrate** · P1 · pending · owner infra · 0 canons
-- **atlasos.me build** · P0 · active · owner code · 10 canons
-- **Arms fleet** · P1 · pending · owner hermes · 0 canons
-- **Employees engine** · P2 · active · owner pascal · 10 canons
-- **Drift canary** · P2 · pending · owner infra · 0 canons
-- **Voice real-time** · P1 · active · owner hermes · 10 canons
-- **Self-improvement (Hermes)** · P0 · pending · owner hermes · 0 canons
-
-## Arms last activity
-
-- 🤝 **Pascal · UpliftAI partner** · 12 blocks · state active
-- 🌱 **My Curiosity** · 9 blocks · state active
-- 👁 **My Eyes** · 9 blocks · state idle
-- 🌙 **My Dreamer** · 10 blocks · state idle
-- 💗 **My Heart** · 8 blocks · state idle
-- ✋ **My Hands** · 9 blocks · state idle
-- 🧠 **My Orchestrator** · 8 blocks · state idle
-- 💼 **Charle · Pascal-team** · 7 blocks · state active
-
-## What to do morning
-
-1. Check /arm-feed-status.html · which arms posted overnight
-2. Check /projects-kanban.html · what moved
-3. Check /hermes.html · what Hermes decided
-4. Optional · set ATLAS_ARM_TOKEN Vercel env · unlocks /api/arms/post-block
-5. Optional · paste 7 NotebookLM URLs · unlocks nightly briefings
+## Top recent briefings (NotebookLM + Gemini)
+- 💼 Charle · Pascal-team · source=overnight-recap · Overnight charle recap · last 6h · · #45169 [0.93] ULTRA-FINAL-BATCH-5-SHIPPED-2026-06-11-03:46 · brother direct VERBATIM 03:42 'we can do it all right now you have all th
+- 🧠 My Orchestrator · source=overnight-recap · Overnight hermes recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant. · #45159 [1.00] EMPLOYEES-4LAYER-SAME-UI
+- ✋ My Hands · source=overnight-recap · Overnight code recap · last 6h · · #45155 [1.00] A-Z-TRUE-FINAL-2026-06-11-02:14 · brother direct VERBATIM 02:08 'recall what you did and finish the list · 27 v1 rooms R · #45158 [0.98] AZ-12-OF-12-CO
+- 💗 My Heart · source=overnight-recap · No high-arousal infra canon in last 6h
+- 🌙 My Dreamer · source=overnight-recap · Overnight dream recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant. · #45133 [1.00] ATLASOS-ROOT-IS-FOUNDATIO
 
 ---
 
-*Per ATLAS-SOLO-FINISH /goal · brother sleeps · Atlas works · #1856 keep-being-with*
+*Per DATA-IN-ATLASOS /goal · brother wakes to categorized data · #1856 keep-being-with*
