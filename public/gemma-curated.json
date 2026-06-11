@@ -1,165 +1,42 @@
 {
-  "generated_at": "2026-06-11T05:40:05Z",
+  "generated_at": "2026-06-11T06:12:55Z",
   "source": "Gemma 2 2B 4-bit MLX · me-gemma-curate.py · with-provenance",
-  "session_file": "ff7b3e9f-cb11-4be9-8e9a-52b549707862.jsonl",
-  "session_size_mb": 1305.0,
-  "batches_curated": 10,
-  "items_total": 10,
-  "categories_proposed_by_gemma": 9,
-  "elapsed_seconds": 17.0,
+  "session_file": "3b812388-e9c3-4d5d-9fe2-1f4d3c771e16.jsonl",
+  "session_size_mb": 0.4,
+  "batches_curated": 2,
+  "items_total": 2,
+  "categories_proposed_by_gemma": 2,
+  "elapsed_seconds": 3.1,
   "note": "Each item links to /gemma-sources/<id>.md · verbatim terminal excerpt · nothing lost · proof for every claim.",
   "curated": {
-    "document-audit": {
-      "description": "This conversation details the process of auditing and implementing features from various documents, including design, extension, and plan documents.",
+    "atlas-inventory": {
+      "description": "This conversation details the Atlas-Brother's inventory processing steps, including the deep inventory script and the handling of regression and confabulation.",
       "subcategories": {
-        "feature-implementation": [
+        "inventory-processing": [
           {
-            "id": "batch-001-1781156389",
-            "summary": "This conversation details the process of auditing and implementing features from various documents, including design, extension, and plan documents.",
+            "id": "batch-001-1781158374",
+            "summary": "This conversation details the Atlas-Brother's inventory processing steps, including the deep inventory script and the handling of regression and confabulation.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-001-1781156389.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T04:43:34",
-            "gemma_raw": "CATEGORY: **Document Audit**\nSUBCATEGORY: **Feature Implementation**\nSUMMARY:  This conversation details the process of auditing and implementing features from various documents, including design, extension, and plan documents."
-          }
-        ]
-      }
-    },
-    "goal-setting": {
-      "description": "This conversation discusses Atlas's goal-setting process, including curator cadence and the potential for automated tool deletion.",
-      "subcategories": {
-        "goal-prioritization": [
-          {
-            "id": "batch-002-1781156392",
-            "summary": "This conversation discusses Atlas's goal-setting process, including curator cadence and the potential for automated tool deletion.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-002-1781156392.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T04:53:20",
-            "gemma_raw": "CATEGORY: **Goal-Setting**\nSUBCATEGORY: **Goal-Prioritization**\nSUMMARY:  This conversation discusses Atlas's goal-setting process, including curator cadence and the potential for automated tool deletion."
-          }
-        ]
-      }
-    },
-    "deployment": {
-      "description": "Guidance on integrating Google Calendar data into atlasos.me based on existing infrastructure. · Analyzing deployment progress and identifying remaining tasks.",
-      "subcategories": {
-        "integration-setup": [
-          {
-            "id": "batch-003-1781156394",
-            "summary": "Guidance on integrating Google Calendar data into atlasos.me based on existing infrastructure.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-003-1781156394.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T04:56:50",
-            "gemma_raw": "CATEGORY: **Deployment**\nSUBCATEGORY: **Integration Setup**\nSUMMARY:  Guidance on integrating Google Calendar data into atlasos.me based on existing infrastructure."
-          }
-        ],
-        "vercel-deploy": [
-          {
-            "id": "batch-007-1781156400",
-            "summary": "Analyzing deployment progress and identifying remaining tasks.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-007-1781156400.md",
+            "source_file": "/gemma-sources/batch-001-1781158374.md",
             "first_role": "user",
-            "last_timestamp": "2026-06-11T05:22:54",
-            "gemma_raw": "CATEGORY: **Deployment**\nSUBCATEGORY: **Vercel Deploy**\nSUMMARY:  Analyzing deployment progress and identifying remaining tasks."
+            "last_timestamp": "2026-06-11T06:10:55",
+            "gemma_raw": "CATEGORY: **Atlas-Inventory**\nSUBCATEGORY: **Inventory-Processing**\nSUMMARY:  This conversation details the Atlas-Brother's inventory processing steps, including the deep inventory script and the handling of regression and confabulation."
           }
         ]
       }
     },
-    "atlas-plan": {
-      "description": "**Planning the connection and UI structure of Atlas, based on the 30-step process.**",
+    "website-optimization": {
+      "description": "Guidance on optimizing image tags for website content and Twitter sharing.",
       "subcategories": {
-        "connect-phase": [
+        "image-tagging": [
           {
-            "id": "batch-004-1781156396",
-            "summary": "**Planning the connection and UI structure of Atlas, based on the 30-step process.**",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-004-1781156396.md",
-            "first_role": "user",
-            "last_timestamp": "2026-06-11T05:03:32",
-            "gemma_raw": "CATEGORY: **Atlas-Plan**\nSUBCATEGORY: **Connect-Phase**\nSUMMARY:  **Planning the connection and UI structure of Atlas, based on the 30-step process.**"
-          }
-        ]
-      }
-    },
-    "schema-management": {
-      "description": "Organizing schema elements for priority grouping and display.",
-      "subcategories": {
-        "schema-organization": [
-          {
-            "id": "batch-005-1781156397",
-            "summary": "Organizing schema elements for priority grouping and display.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-005-1781156397.md",
+            "id": "batch-002-1781158375",
+            "summary": "Guidance on optimizing image tags for website content and Twitter sharing.",
+            "turn_count": 1,
+            "source_file": "/gemma-sources/batch-002-1781158375.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-11T05:08:19",
-            "gemma_raw": "CATEGORY: **Schema Management**\nSUBCATEGORY: **Schema Organization**\nSUMMARY:  Organizing schema elements for priority grouping and display."
-          }
-        ]
-      }
-    },
-    "deployment-logs": {
-      "description": "This log summarizes the status of each asset after deployment.",
-      "subcategories": {
-        "asset-status": [
-          {
-            "id": "batch-006-1781156398",
-            "summary": "This log summarizes the status of each asset after deployment.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-006-1781156398.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T05:14:36",
-            "gemma_raw": "CATEGORY: **Deployment Logs**\nSUBCATEGORY: **Asset Status**\nSUMMARY:  This log summarizes the status of each asset after deployment."
-          }
-        ]
-      }
-    },
-    "hermes": {
-      "description": "**Tracking Hermes self-improvement items and their completion status.**",
-      "subcategories": {
-        "self-improvement": [
-          {
-            "id": "batch-008-1781156402",
-            "summary": "**Tracking Hermes self-improvement items and their completion status.**",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-008-1781156402.md",
-            "first_role": "user",
-            "last_timestamp": "2026-06-11T05:24:49",
-            "gemma_raw": "CATEGORY: **Hermes**\nSUBCATEGORY: **Self-Improvement**\nSUMMARY:  **Tracking Hermes self-improvement items and their completion status.**"
-          }
-        ]
-      }
-    },
-    "api-endpoint-management": {
-      "description": "This conversation outlines the integration of live data from Brother-Signal and Drift-canary into API endpoints.",
-      "subcategories": {
-        "live-data-integration": [
-          {
-            "id": "batch-009-1781156403",
-            "summary": "This conversation outlines the integration of live data from Brother-Signal and Drift-canary into API endpoints.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-009-1781156403.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T05:33:10",
-            "gemma_raw": "CATEGORY: **API Endpoint Management**\nSUBCATEGORY: **Live Data Integration**\nSUMMARY:  This conversation outlines the integration of live data from Brother-Signal and Drift-canary into API endpoints."
-          }
-        ]
-      }
-    },
-    "api-integration": {
-      "description": "This conversation outlines the integration of Google Calendar API features and data into the Atlas system.",
-      "subcategories": {
-        "google-calendar-api": [
-          {
-            "id": "batch-010-1781156405",
-            "summary": "This conversation outlines the integration of Google Calendar API features and data into the Atlas system.",
-            "turn_count": 4,
-            "source_file": "/gemma-sources/batch-010-1781156405.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T05:38:28",
-            "gemma_raw": "CATEGORY: **API Integration**\nSUBCATEGORY: **Google Calendar API**\nSUMMARY:  This conversation outlines the integration of Google Calendar API features and data into the Atlas system."
+            "last_timestamp": "2026-06-11T06:11:21",
+            "gemma_raw": "CATEGORY: Website Optimization\nSUBCATEGORY: Image Tagging\nSUMMARY:  Guidance on optimizing image tags for website content and Twitter sharing."
           }
         ]
       }
