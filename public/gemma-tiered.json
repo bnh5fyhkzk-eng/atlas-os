@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-11T11:54:51Z",
+  "generated_at": "2026-06-11T12:00:02Z",
   "source": "me-gemma-tier-into-7-cats.py (rule-based router · per brother direct #45099 1-YOU-2-ME-3-WORLD)",
-  "items_total": 2,
+  "items_total": 4,
   "tier_summary": {
     "atlas": {
       "subs": 0,
@@ -32,11 +32,11 @@
       "P2": 2
     },
     "arms": {
-      "subs": 0,
-      "items": 0,
+      "subs": 1,
+      "items": 1,
       "P0": 0,
       "P1": 0,
-      "P2": 0
+      "P2": 1
     },
     "world": {
       "subs": 0,
@@ -46,11 +46,11 @@
       "P2": 0
     },
     "future": {
-      "subs": 0,
-      "items": 0,
+      "subs": 1,
+      "items": 1,
       "P0": 0,
       "P1": 0,
-      "P2": 0
+      "P2": 1
     }
   },
   "tiers": {
@@ -97,10 +97,10 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-001-1781178588",
+                  "id": "batch-001-1781178894",
                   "summary": "Analyzing and executing directives, including the current cycle, to ensure proper workflow.",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-001-1781178588.md",
+                  "source_file": "/gemma-sources/batch-001-1781178894.md",
                   "first_role": "user",
                   "last_timestamp": "2026-06-11T11:09:53",
                   "gemma_raw": "CATEGORY: **Atlas-Cycle**\nSUBCATEGORY: **Directive Execution**\nSUMMARY:  Analyzing and executing directives, including the current cycle, to ensure proper workflow.",
@@ -123,10 +123,10 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-002-1781178589",
+                  "id": "batch-002-1781178896",
                   "summary": "This conversation details bug fixes and code validation related to a specific script and pattern bank.",
                   "turn_count": 5,
-                  "source_file": "/gemma-sources/batch-002-1781178589.md",
+                  "source_file": "/gemma-sources/batch-002-1781178896.md",
                   "first_role": "assistant",
                   "last_timestamp": "2026-06-11T11:15:01",
                   "gemma_raw": "CATEGORY: **Bug Fix**\nSUBCATEGORY: **Code Validation**\nSUMMARY:  This conversation details bug fixes and code validation related to a specific script and pattern bank.",
@@ -151,14 +151,45 @@
       ]
     },
     "arms": {
-      "subs": {},
-      "total": 0,
+      "subs": {
+        "arm-hermes-hermes-dedup-check": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "state-9e6b509f43",
+                  "summary": "Hermes Dedup Check #28284 already posted, skip.",
+                  "priority": "P2",
+                  "source_path": "/Users/collinmacneil/.claude/state/arm-outputs/hermes/arm-1781179118-hermes.md",
+                  "source_filename": "arm-1781179118-hermes.md",
+                  "file_mtime": "2026-06-11 07:58",
+                  "first_role": "mac-mini-file",
+                  "gemma_raw": "CATEGORY: arm-hermes\nSUBCATEGORY: hermes-dedup-check\nPRIORITY: P2\nSUMMARY:  Hermes Dedup Check #28284 already posted, skip.",
+                  "kind": "state-doc",
+                  "_original_cat": "arm-hermes",
+                  "_original_sub": "hermes-dedup-check"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        }
+      },
+      "total": 1,
       "priority_counts": {
         "P0": 0,
         "P1": 0,
-        "P2": 0
+        "P2": 1
       },
-      "original_categories": []
+      "original_categories": [
+        "arm-hermes"
+      ]
     },
     "world": {
       "subs": {},
@@ -171,14 +202,45 @@
       "original_categories": []
     },
     "future": {
-      "subs": {},
-      "total": 0,
+      "subs": {
+        "code-dedup-check": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "state-2e434a14bd",
+                  "summary": "Information about code duplication check #45594, skipped.",
+                  "priority": "P2",
+                  "source_path": "/Users/collinmacneil/.claude/state/arm-outputs/code/arm-1781179116-code.md",
+                  "source_filename": "arm-1781179116-code.md",
+                  "file_mtime": "2026-06-11 07:58",
+                  "first_role": "mac-mini-file",
+                  "gemma_raw": "CATEGORY: code\nSUBCATEGORY: DEDUP_CHECK\nPRIORITY: P2\nSUMMARY:  Information about code duplication check #45594, skipped.",
+                  "kind": "state-doc",
+                  "_original_cat": "code",
+                  "_original_sub": "dedup-check"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        }
+      },
+      "total": 1,
       "priority_counts": {
         "P0": 0,
         "P1": 0,
-        "P2": 0
+        "P2": 1
       },
-      "original_categories": []
+      "original_categories": [
+        "code"
+      ]
     }
   }
 }
