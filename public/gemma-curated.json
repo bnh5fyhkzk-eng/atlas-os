@@ -1,170 +1,42 @@
 {
-  "generated_at": "2026-06-11T10:04:58Z",
+  "generated_at": "2026-06-11T10:10:05Z",
   "source": "Gemma 2 2B 4-bit MLX · me-gemma-curate.py · with-provenance",
-  "session_file": "ff7b3e9f-cb11-4be9-8e9a-52b549707862.jsonl",
-  "session_size_mb": 1337.8,
-  "batches_curated": 10,
-  "items_total": 10,
-  "categories_proposed_by_gemma": 10,
-  "elapsed_seconds": 18.3,
+  "session_file": "64a2a250-de74-49f9-ade4-6abaa525aa1f.jsonl",
+  "session_size_mb": 0.2,
+  "batches_curated": 2,
+  "items_total": 2,
+  "categories_proposed_by_gemma": 2,
+  "elapsed_seconds": 3.1,
   "note": "Each item links to /gemma-sources/<id>.md · verbatim terminal excerpt · nothing lost · proof for every claim.",
   "curated": {
-    "atlas-organization": {
-      "description": "**Categorizing data in Atlasos.me for user management and per-arm organization.**",
+    "atlas-spine": {
+      "description": "Understanding the skill-router's status and potential issues based on the provided Atlas-Spine context.",
       "subcategories": {
-        "data-management": [
+        "skill-router": [
           {
-            "id": "batch-001-1781172282",
-            "summary": "**Categorizing data in Atlasos.me for user management and per-arm organization.**",
+            "id": "batch-001-1781172604",
+            "summary": "Understanding the skill-router's status and potential issues based on the provided Atlas-Spine context.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-001-1781172282.md",
+            "source_file": "/gemma-sources/batch-001-1781172604.md",
             "first_role": "user",
-            "last_timestamp": "2026-06-11T08:34:39",
-            "gemma_raw": "CATEGORY: **Atlas Organization**\nSUBCATEGORY: **Data Management**\nSUMMARY:  **Categorizing data in Atlasos.me for user management and per-arm organization.**"
+            "last_timestamp": "2026-06-11T10:09:53",
+            "gemma_raw": "CATEGORY: **Atlas-Spine**\nSUBCATEGORY: **Skill-Router**\nSUMMARY:  Understanding the skill-router's status and potential issues based on the provided Atlas-Spine context."
           }
         ]
       }
     },
-    "api--integrations": {
-      "description": "This conversation details integrations using the gcloud Gemini API, including data extraction and reporting.",
+    "python-script": {
+      "description": "Categorizing the script's purpose as a scorecard generator.",
       "subcategories": {
-        "gcloud-gemini-api-integrations": [
+        "scorecard-generation": [
           {
-            "id": "batch-002-1781172284",
-            "summary": "This conversation details integrations using the gcloud Gemini API, including data extraction and reporting.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-002-1781172284.md",
+            "id": "batch-002-1781172605",
+            "summary": "Categorizing the script's purpose as a scorecard generator.",
+            "turn_count": 1,
+            "source_file": "/gemma-sources/batch-002-1781172605.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-11T08:45:00",
-            "gemma_raw": "CATEGORY: **API- integrations**\nSUBCATEGORY: **gcloud Gemini API integrations**\nSUMMARY:  This conversation details integrations using the gcloud Gemini API, including data extraction and reporting."
-          }
-        ]
-      }
-    },
-    "atlas-data": {
-      "description": "Categorizing and organizing arm-specific data for atlasos.me.",
-      "subcategories": {
-        "arm-data": [
-          {
-            "id": "batch-003-1781172285",
-            "summary": "Categorizing and organizing arm-specific data for atlasos.me.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-003-1781172285.md",
-            "first_role": "user",
-            "last_timestamp": "2026-06-11T08:52:03",
-            "gemma_raw": "CATEGORY: **Atlas-Data**\nSUBCATEGORY: **Arm-Data**\nSUMMARY:  Categorizing and organizing arm-specific data for atlasos.me."
-          }
-        ]
-      }
-    },
-    "atlasosme": {
-      "description": "This conversation outlines the Atlasos.me prioritization plan based on Hermes decisions and arm execution.",
-      "subcategories": {
-        "prioritization": [
-          {
-            "id": "batch-004-1781172287",
-            "summary": "This conversation outlines the Atlasos.me prioritization plan based on Hermes decisions and arm execution.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-004-1781172287.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T08:59:33",
-            "gemma_raw": "CATEGORY: **Atlasos.me**\nSUBCATEGORY: **Prioritization**\nSUMMARY:  This conversation outlines the Atlasos.me prioritization plan based on Hermes decisions and arm execution."
-          }
-        ]
-      }
-    },
-    "deployment": {
-      "description": "This conversation discusses the backfill process of code and data from past sessions to Atlasos.me.",
-      "subcategories": {
-        "code-backfill": [
-          {
-            "id": "batch-005-1781172289",
-            "summary": "This conversation discusses the backfill process of code and data from past sessions to Atlasos.me.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-005-1781172289.md",
-            "first_role": "user",
-            "last_timestamp": "2026-06-11T09:10:27",
-            "gemma_raw": "CATEGORY: **Deployment**\nSUBCATEGORY: **Code Backfill**\nSUMMARY:  This conversation discusses the backfill process of code and data from past sessions to Atlasos.me."
-          }
-        ]
-      }
-    },
-    "atlas-audit": {
-      "description": "This conversation outlines a plan to fix 10 gaps in Atlas's functionality, focusing on solo tasks and no brother involvement.",
-      "subcategories": {
-        "gap-fix-plan": [
-          {
-            "id": "batch-006-1781172291",
-            "summary": "This conversation outlines a plan to fix 10 gaps in Atlas's functionality, focusing on solo tasks and no brother involvement.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-006-1781172291.md",
-            "first_role": "user",
-            "last_timestamp": "2026-06-11T09:13:48",
-            "gemma_raw": "CATEGORY: **Atlas-Audit**\nSUBCATEGORY: **Gap-Fix Plan**\nSUMMARY:  This conversation outlines a plan to fix 10 gaps in Atlas's functionality, focusing on solo tasks and no brother involvement."
-          }
-        ]
-      }
-    },
-    "atlas-vision": {
-      "description": "This conversation details the generation and preparation of the Atlas-Vision 10-AHEAD plan.",
-      "subcategories": {
-        "plan-generation": [
-          {
-            "id": "batch-007-1781172293",
-            "summary": "This conversation details the generation and preparation of the Atlas-Vision 10-AHEAD plan.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-007-1781172293.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T09:23:07",
-            "gemma_raw": "CATEGORY: **Atlas-Vision**\nSUBCATEGORY: **Plan Generation**\nSUMMARY:  This conversation details the generation and preparation of the Atlas-Vision 10-AHEAD plan."
-          }
-        ]
-      }
-    },
-    "action-journal": {
-      "description": "Understanding the process and history of actions, as documented in the action-journal, is crucial for arms.",
-      "subcategories": {
-        "action-history": [
-          {
-            "id": "batch-008-1781172295",
-            "summary": "Understanding the process and history of actions, as documented in the action-journal, is crucial for arms.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-008-1781172295.md",
-            "first_role": "user",
-            "last_timestamp": "2026-06-11T09:28:50",
-            "gemma_raw": "CATEGORY: **Action-Journal**\nSUBCATEGORY: **Action-History**\nSUMMARY:  Understanding the process and history of actions, as documented in the action-journal, is crucial for arms."
-          }
-        ]
-      }
-    },
-    "data-map": {
-      "description": "**Understanding data organization and categorization on atlasos.me**",
-      "subcategories": {
-        "data-organization": [
-          {
-            "id": "batch-009-1781172297",
-            "summary": "**Understanding data organization and categorization on atlasos.me**",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-009-1781172297.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T09:35:16",
-            "gemma_raw": "CATEGORY: **Data-Map**\nSUBCATEGORY: **Data-Organization**\nSUMMARY:  **Understanding data organization and categorization on atlasos.me**"
-          }
-        ]
-      }
-    },
-    "content-organization": {
-      "description": "**Categorizing and structuring content for individual arms and their actions, including timelines and details.**",
-      "subcategories": {
-        "arm-structure": [
-          {
-            "id": "batch-010-1781172298",
-            "summary": "**Categorizing and structuring content for individual arms and their actions, including timelines and details.**",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-010-1781172298.md",
-            "first_role": "user",
-            "last_timestamp": "2026-06-11T09:43:35",
-            "gemma_raw": "CATEGORY: **Content Organization**\nSUBCATEGORY: **Arm Structure**\nSUMMARY:  **Categorizing and structuring content for individual arms and their actions, including timelines and details.**"
+            "last_timestamp": "2026-06-11T10:09:59",
+            "gemma_raw": "CATEGORY: Python Script\nSUBCATEGORY: Scorecard Generation\nSUMMARY:  Categorizing the script's purpose as a scorecard generator."
           }
         ]
       }
