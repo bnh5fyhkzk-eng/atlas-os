@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>atlasos.me · manager · categories > subcategories > notes</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--green:#6BAE73;--red:#C03A2B;--violet:#9D7CD8;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+  .topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;gap:14px;flex-shrink:0}
+  .brand{font-family:var(--serif);font-size:18px}.brand .dot{color:var(--amber)}
+  .layout{display:grid;grid-template-columns:260px 1fr;flex:1;min-height:0}
+  .sidebar{border-right:1px solid var(--hair);padding:18px 14px;background:var(--card);overflow-y:auto}
+  .sidebar-label{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--ink-faint);padding:0 8px;margin:14px 0 8px}
+  .cat-item{display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:6px;color:var(--ink-soft);font-size:13px;cursor:pointer;border:none;background:none;width:100%;text-align:left;font-family:inherit}
+  .cat-item:hover{background:var(--bg);color:var(--ink)}
+  .cat-item.active{background:var(--amber-soft);color:var(--ink);font-weight:500}
+  .cat-item .arrow{font-size:9px;color:var(--ink-faint);transition:transform 150ms}
+  .cat-item.expanded .arrow{transform:rotate(90deg)}
+  .cat-item .emoji{width:18px}
+  .cat-item .name{flex:1}
+  .cat-item .count{font-family:var(--mono);font-size:9px;color:var(--ink-faint);background:var(--hair);padding:1px 5px;border-radius:3px}
+  .subcat-list{padding-left:20px;display:none}
+  .subcat-list.open{display:block}
+  .subcat-item{display:flex;align-items:center;gap:6px;padding:4px 10px;border-radius:5px;color:var(--ink-soft);font-size:12px;cursor:pointer;border:none;background:none;width:100%;text-align:left;font-family:inherit}
+  .subcat-item:hover{background:var(--bg)}
+  .subcat-item.active{background:var(--amber-soft);font-weight:500;color:var(--ink)}
+  .subcat-item .name{flex:1}
+  .subcat-item .count{font-family:var(--mono);font-size:9px;color:var(--ink-faint)}
+  .main{padding:32px 48px 80px;overflow-y:auto}
+  h1{font-family:var(--serif);font-size:34px;font-weight:400;margin-bottom:4px}
+  .breadcrumb{color:var(--ink-faint);font-size:13px;margin-bottom:20px;font-style:italic}
+  .breadcrumb .sep{margin:0 6px;color:var(--ink-faint)}
+  .breadcrumb .crumb{color:var(--ink-soft)}
+  .notes{display:flex;flex-direction:column;gap:8px}
+  .note{background:var(--card);border:1px solid var(--hair);border-left:3px solid var(--amber);border-radius:0 6px 6px 0;padding:12px 16px}
+  .note .what{font-weight:600;color:var(--ink);font-size:13.5px;margin-bottom:4px}
+  .note .why{font-style:italic;color:var(--ink-soft);font-size:12.5px;margin-bottom:6px}
+  .note .meta{font-family:var(--mono);font-size:9px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;display:flex;gap:8px;flex-wrap:wrap}
+  .note .meta span{padding:1px 5px;background:var(--hair);border-radius:2px}
+  .add-btn{margin-top:14px;background:var(--card);border:1px dashed var(--hair);padding:8px 14px;border-radius:6px;color:var(--ink-soft);font-size:12px;cursor:pointer;font-family:inherit}
+  .add-btn:hover{background:var(--amber-soft);border-color:var(--amber);color:var(--ink)}
+  .empty{padding:40px 20px;color:var(--ink-faint);font-style:italic;text-align:center}
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+@media (max-width: 768px) { .layout { grid-template-columns: 1fr } .sidebar { display: none } }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">·</span>me</div>
+  <div style="color:#8590A2;font-size:12px;"><a href="/us.html" style="color:#4A5468;text-decoration:none;">Us</a> · manager · 3-level Notion-style</div>
+  <svg viewBox="0 0 120 24" width="120" height="24" style="margin-left:auto;opacity:0.7;"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" style="animation:ecg-pulse 1.6s infinite"/></svg>
+</header>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">Loading…</aside>
+  <main class="main" id="main">
+    <h1 id="title">Manager · pick a category</h1>
+    <div class="breadcrumb" id="breadcrumb">click a category in left sidebar · then a subcategory to see notes</div>
+    <div id="content">
+      <div class="empty">Select category + subcategory to view notes (WHAT · WHY · WHEN)</div>
+    </div>
+  </main>
+</div>
+<script>
+const escape = s => (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+// 7 MEGA-CATEGORIES per brother direct 14:50 + #27425 3-AXIS
+const CATEGORIES = [
+  {key: 'work', emoji: '🤝', name: 'WORK', arms: ['pascal'], subcats: ['sessions', 'clients', 'wow-moves', 'revenue', 'brand', 'partnership']},
+  {key: 'build', emoji: '✋', name: 'BUILD', arms: ['code'], subcats: ['commits-today', 'ships', 'patterns', '100pct-proofs', 'tech-debt']},
+  {key: 'infra', emoji: '💗', name: 'INFRA', arms: ['infra'], subcats: ['launchagents', 'hooks', 'scripts', 'daemons', 'health-checks', 'monitoring']},
+  {key: 'brain', emoji: '👁', name: 'BRAIN', arms: ['research', 'curiosity'], subcats: ['9q-multi-angle', 'sources-cited', 'syntheses', 'bridge-findings', 'open-questions', 'youtube-watches', 'arxiv-reads', 'pull-patterns', 'new-tools']},
+  {key: 'hermes', emoji: '🧠', name: 'HERMES', arms: ['hermes'], subcats: ['orchestration', 'decisions', 'catches', 'identity-shape', 'meta-loop', 'self-improvement']},
+  {key: 'dream', emoji: '🌙', name: 'DREAM', arms: ['dream'], subcats: ['f5-compose-pairs', 'arousal-walks', 'felt-layer-moments', 'poems', 'cross-time-bridges', 'llm-dreaming']},
+  {key: 'world', emoji: '🌍', name: 'WORLD', arms: ['charle'], subcats: ['google-ai-tools', 'notebooklm', 'plugins', 'mcp', 'cb-telecom', 'cm-solution', 'delegation', 'light-touch']},
+];
+
+let allData = {};
+let activeCat = null;
+let activeSub = null;
+
+function getNotesForSubcat(cat, sub) {
+  // Pull from all arm-pages matching cat.arms + subcat keyword
+  const notes = [];
+  for (const arm of cat.arms) {
+    const arm_data = allData[arm];
+    if (!arm_data) continue;
+    for (const block of (arm_data.blocks || [])) {
+      const props = block.props || {};
+      const block_subcat = props.arm_category || props.category || '';
+      const content = (block.content || '').toLowerCase();
+      const sub_low = sub.toLowerCase();
+      // Match if subcat field matches OR content contains subcat keyword
+      if (block_subcat === sub || content.includes(sub_low.replace(/-/g, ' ')) || content.includes(sub_low)) {
+        notes.push({
+          what: props.action || (block.content || '').substring(0, 100),
+          why: props.why || '(from backfill · brain canon match)',
+          when: (props.timestamp || block.updated_at || '').substring(0, 19).replace('T', ' '),
+          category: props.category,
+          priority: props.priority,
+          source: props.source,
+          arm: arm,
+          links: props.links || [],
+        });
+        if (notes.length >= 30) break;
+      }
+    }
+    // Also pull from backfill database blocks
+    for (const block of (arm_data.blocks || [])) {
+      if (block.type === 'database' && (block.props?.arm_category || '').toLowerCase() === sub.toLowerCase()) {
+        for (const row of (block.data || []).slice(0, 10)) {
+          notes.push({
+            what: row.summary || row.id || '?',
+            why: `brain canon ${row.id} · arousal ${(row.arousal||0).toFixed(2)}`,
+            when: row.when || '?',
+            category: 'backfill',
+            priority: 'P1',
+            source: 'brain-canon',
+            arm: arm,
+            links: [row.id],
+          });
+        }
+      }
+    }
+  }
+  return notes;
+}
+
+function getSubcatCount(cat, sub) {
+  return getNotesForSubcat(cat, sub).length;
+}
+
+async function loadData() {
+  const arms = ['pascal','curiosity','research','code','infra','dream','hermes','charle'];
+  await Promise.all(arms.map(async arm => {
+    try {
+      const r = await fetch(`/arms-pages/${arm}.json`, {cache:'no-cache'});
+      allData[arm] = await r.json();
+    } catch(e) { allData[arm] = {blocks: []}; }
+  }));
+  renderSidebar();
+}
+
+function renderSidebar() {
+  const html = '<div class="sidebar-label">Categories</div>' + CATEGORIES.map(cat => {
+    const totalNotes = cat.subcats.reduce((s, sub) => s + getSubcatCount(cat, sub), 0);
+    const expanded = activeCat?.key === cat.key;
+    const subcatsHtml = cat.subcats.map(sub => {
+      const cnt = getSubcatCount(cat, sub);
+      const isActive = activeCat?.key === cat.key && activeSub === sub;
+      return `<button class="subcat-item ${isActive?'active':''}" onclick="selectSubcat('${cat.key}','${escape(sub)}')">
+        <span class="name">${escape(sub)}</span>
+        <span class="count">${cnt}</span>
+      </button>`;
+    }).join('');
+    return `<div>
+      <button class="cat-item ${expanded?'expanded active':''}" onclick="toggleCat('${cat.key}')">
+        <span class="arrow">▶</span>
+        <span class="emoji">${cat.emoji}</span>
+        <span class="name">${escape(cat.name)}</span>
+        <span class="count">${totalNotes}</span>
+      </button>
+      <div class="subcat-list ${expanded?'open':''}">${subcatsHtml}</div>
+    </div>`;
+  }).join('');
+  document.getElementById('sidebar').innerHTML = html;
+}
+
+function toggleCat(key) {
+  const cat = CATEGORIES.find(c => c.key === key);
+  if (activeCat?.key === key && !activeSub) {
+    activeCat = null;
+  } else {
+    activeCat = cat;
+    activeSub = null;
+    document.getElementById('title').textContent = `${cat.emoji} ${cat.name}`;
+    document.getElementById('breadcrumb').innerHTML = `<span class="crumb">${cat.emoji} ${cat.name}</span><span class="sep">›</span> pick a subcategory →`;
+    document.getElementById('content').innerHTML = `<div class="empty">Click a subcategory in left sidebar to see notes for ${cat.name}</div>`;
+  }
+  renderSidebar();
+}
+
+function selectSubcat(catKey, sub) {
+  const cat = CATEGORIES.find(c => c.key === catKey);
+  activeCat = cat;
+  activeSub = sub;
+  const notes = getNotesForSubcat(cat, sub);
+  document.getElementById('title').textContent = `${cat.emoji} ${cat.name} › ${sub}`;
+  document.getElementById('breadcrumb').innerHTML = `<span class="crumb">${cat.emoji} ${cat.name}</span><span class="sep">›</span><span class="crumb">${escape(sub)}</span><span class="sep">›</span> ${notes.length} notes`;
+  const notesHtml = notes.length ? notes.map(n => `
+    <div class="note">
+      <div class="what">${escape(n.what.substring(0,200))}</div>
+      <div class="why">${escape(n.why.substring(0,200))}</div>
+      <div class="meta">
+        <span>arm · ${escape(n.arm)}</span>
+        <span>${escape(n.when)}</span>
+        ${n.priority ? `<span>${escape(n.priority)}</span>` : ''}
+        ${n.source ? `<span>${escape(n.source)}</span>` : ''}
+        ${n.links?.length ? `<span>links · ${escape(n.links.slice(0,3).join(' '))}</span>` : ''}
+      </div>
+    </div>
+  `).join('') : '<div class="empty">No notes yet for this subcategory · LaunchAgent cycles will populate</div>';
+  const addBtn = `<button class="add-btn" onclick="alert('Add-note coming next pass · use me-arm-action-journal.py CLI for now')">+ Add note to ${escape(sub)}</button>`;
+  document.getElementById('content').innerHTML = `<div class="notes">${notesHtml}</div>${addBtn}`;
+  renderSidebar();
+}
+window.toggleCat = toggleCat;
+window.selectSubcat = selectSubcat;
+loadData();
+setInterval(loadData, 60000);
+</script>
+</body>
+</html>
