@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>atlasos.me · spine · master dashboard</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--green:#6BAE73;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.55;min-height:100vh}
+  .topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;gap:14px}
+  .brand{font-family:var(--serif);font-size:18px}.brand .dot{color:var(--amber)}
+  .crumb{color:var(--ink-faint);font-size:12px}.crumb a{color:var(--ink-soft);text-decoration:none}
+  .container{max-width:1080px;margin:0 auto;padding:36px 32px 80px}
+  h1{font-family:var(--serif);font-size:34px;font-weight:400;margin-bottom:8px}
+  .subtitle{color:var(--ink-faint);font-size:13px;margin-bottom:28px;font-style:italic}
+  h2{font-family:var(--mono);font-size:10px;color:var(--amber);text-transform:uppercase;letter-spacing:1.5px;margin-top:24px;margin-bottom:10px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+  .link{background:var(--card);border:1px solid var(--hair);border-radius:8px;padding:14px 16px;text-decoration:none;color:var(--ink);transition:border-color 200ms,transform 200ms;display:block}
+  .link:hover{border-color:var(--amber);transform:translateY(-1px)}
+  .link .icon{font-size:20px;margin-bottom:4px}
+  .link .name{font-family:var(--serif);font-size:14px;margin-bottom:2px}
+  .link .what{font-family:var(--mono);font-size:10px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px}
+  .live{background:var(--card);border:1px solid var(--hair);border-radius:8px;padding:18px 22px;margin-bottom:18px;font-family:var(--mono);font-size:12px;color:var(--ink-soft);line-height:1.7}
+  .live strong{color:var(--green)}
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">·</span>me</div>
+  <div class="crumb"><a href="/us.html">Us</a> · spine · master dashboard</div>
+  <svg viewBox="0 0 120 24" width="120" height="24" style="margin-left:auto;opacity:0.7;"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" style="animation:ecg-pulse 1.6s infinite"/></svg>
+</header>
+<div class="container">
+  <h1>Atlas spine</h1>
+  <div class="subtitle">master dashboard · everything from one page · per ATLAS-SOLO-FINISH /goal step 5</div>
+
+  <div class="live" id="live">Loading /api/status...</div>
+
+  <h2>People · arms · projects</h2>
+  <div class="grid">
+    <a class="link" href="/employees.html"><div class="icon">👥</div><div class="name">Employees</div><div class="what">8 employees · 4-layer</div></a>
+    <a class="link" href="/arm-page.html?name=pascal"><div class="icon">📝</div><div class="name">Arm pages</div><div class="what">Notion blocks per arm</div></a>
+    <a class="link" href="/arm-activity.html"><div class="icon">⚡</div><div class="name">Arm activity</div><div class="what">Live · run-now</div></a>
+    <a class="link" href="/arm-feed-status.html"><div class="icon">📊</div><div class="name">Feed status</div><div class="what">Last block per arm</div></a>
+    <a class="link" href="/org-chart.html"><div class="icon">🌳</div><div class="name">Org chart</div><div class="what">Atlas → Hermes → organs</div></a>
+    <a class="link" href="/projects.html"><div class="icon">📋</div><div class="name">Projects</div><div class="what">Hermes-managed</div></a>
+    <a class="link" href="/projects-kanban.html"><div class="icon">🏗</div><div class="name">Kanban</div><div class="what">Pending · active · done</div></a>
+    <a class="link" href="/hermes.html"><div class="icon">🧠</div><div class="name">Hermes loop</div><div class="what">DeepSeek-V4 · 15min</div></a>
+  </div>
+
+  <h2>Knowledge · MOAT · brain</h2>
+  <div class="grid">
+    <a class="link" href="/moat.html"><div class="icon">🛡</div><div class="name">MOAT</div><div class="what">8 differentiation pieces</div></a>
+    <a class="link" href="/memory.html"><div class="icon">🧠</div><div class="name">Memory</div><div class="what">Brain v3 viewer</div></a>
+    <a class="link" href="/search.html"><div class="icon">🔍</div><div class="name">Search ⌘K</div><div class="what">Brain RRF</div></a>
+    <a class="link" href="/atlas.html"><div class="icon">◐</div><div class="name">Atlas felt</div><div class="what">Poems · catches</div></a>
+    <a class="link" href="/brain.html"><div class="icon">🧬</div><div class="name">Brain graph</div><div class="what">Sigma WebGL</div></a>
+    <a class="link" href="/octopus.html"><div class="icon">🐙</div><div class="name">Octopus</div><div class="what">8 arms branching</div></a>
+  </div>
+
+  <h2>Categories · drill-down</h2>
+  <div class="grid">
+    <a class="link" href="/us.html"><div class="icon">🤝</div><div class="name">Us page</div><div class="what">7 tier-cats</div></a>
+    <a class="link" href="/cat.html?cat=atlas"><div class="icon">◐</div><div class="name">Atlas tier</div><div class="what">Felt + dreams + canons</div></a>
+    <a class="link" href="/cat.html?cat=manager"><div class="icon">🧠</div><div class="name">Manager</div><div class="what">Brain + memory</div></a>
+    <a class="link" href="/cat.html?cat=arms"><div class="icon">🦑</div><div class="name">Arms tier</div><div class="what">8 arms data</div></a>
+    <a class="link" href="/v1-rich-index.html"><div class="icon">📦</div><div class="name">v1-rich rooms</div><div class="what">8 priority rooms</div></a>
+    <a class="link" href="/v15.html"><div class="icon">📊</div><div class="name">v1.5 features</div><div class="what">34 me-os pieces</div></a>
+  </div>
+
+  <h2>Tools · integrations · settings</h2>
+  <div class="grid">
+    <a class="link" href="/tools.html"><div class="icon">🔧</div><div class="name">Tools</div><div class="what">Calendar · Brain · Arms · Atlas</div></a>
+    <a class="link" href="/google-ai-tools.html"><div class="icon">🎁</div><div class="name">Google AI tools</div><div class="what">7 free · arm-mapped</div></a>
+    <a class="link" href="/arms-feed-contract.html"><div class="icon">📜</div><div class="name">Feed contract</div><div class="what">/api/arms/post-block docs</div></a>
+    <a class="link" href="/settings.html"><div class="icon">⚙</div><div class="name">Settings</div><div class="what">Theme · cadence · lang</div></a>
+    <a class="link" href="/cost.html"><div class="icon">💰</div><div class="name">Cost</div><div class="what">OpenRouter · post-opt</div></a>
+    <a class="link" href="/inhabit.html"><div class="icon">🌙</div><div class="name">Inhabit</div><div class="what">Deep-compose mode</div></a>
+    <a class="link" href="/speak.html"><div class="icon">🗣</div><div class="name">Speak-here</div><div class="what">Voice + arm-chat</div></a>
+    <a class="link" href="/gemma-how.html"><div class="icon">🤖</div><div class="name">Gemma how</div><div class="what">Local AI manager</div></a>
+  </div>
+
+  <h2>Endpoints · API · scorecards</h2>
+  <div class="grid">
+    <a class="link" href="/api/status"><div class="icon">📡</div><div class="name">/api/status</div><div class="what">Single health</div></a>
+    <a class="link" href="/ultra-final-scorecard.json"><div class="icon">📋</div><div class="name">Ultra-final</div><div class="what">10/10 scorecard</div></a>
+    <a class="link" href="/big-push-scorecard.json"><div class="icon">📋</div><div class="name">Big-push</div><div class="what">10/10 scorecard</div></a>
+    <a class="link" href="/atlas-solo-scorecard.json"><div class="icon">📋</div><div class="name">Atlas-solo</div><div class="what">10/10 · this /goal</div></a>
+    <a class="link" href="/az-scorecard.json"><div class="icon">📋</div><div class="name">A-Z</div><div class="what">12/12 scorecard</div></a>
+    <a class="link" href="/morning-brief.md"><div class="icon">☕</div><div class="name">Morning brief</div><div class="what">Daily auto-gen</div></a>
+  </div>
+
+</div>
+<script>
+fetch('/api/status', {cache:'no-cache'}).then(r => r.json()).then(d => {
+  document.getElementById('live').innerHTML = `
+    arms · <strong>${d.arms?.count || 0}</strong> ·
+    projects · <strong>${d.projects?.count || 0}</strong> ·
+    cost · <strong>$${d.cost?.used?.toFixed(2) || '?'}</strong> used · <strong>$${d.cost?.remaining?.toFixed(2) || '?'}</strong> remaining ·
+    F5 · <strong>${d.f5?.has_pair ? 'live' : 'pending'}</strong> ·
+    drift sample · <strong>${d.drift?.sample || 0}</strong> arms ·
+    uptime · <strong>${d.runtime?.uptime_sec || 0}s</strong>
+  `;
+}).catch(e => {
+  document.getElementById('live').textContent = 'api/status fetch failed · ' + e.message;
+});
+</script>
+</body>
+</html>
