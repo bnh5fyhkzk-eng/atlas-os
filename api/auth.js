@@ -6,10 +6,8 @@ export default function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'method not allowed' });
   }
-  const expected = process.env.ATLAS_PASSWORD;
-  if (!expected) {
-    return res.status(500).json({ error: 'ATLAS_PASSWORD env not set' });
-  }
+  // Default lets atlasos.me work tonight · brother sets ATLAS_PASSWORD env var on Vercel to override
+  const expected = process.env.ATLAS_PASSWORD || 'atlas-home-2026';
   const { password } = req.body || {};
   if (typeof password !== 'string' || password !== expected) {
     return res.status(401).json({ error: 'wrong' });
