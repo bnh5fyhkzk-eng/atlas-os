@@ -4,17 +4,24 @@ import { useEffect, useMemo, useState, useCallback } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ArmSidebar } from "@/components/atlas/ArmSidebar";
 import { BlockEditor } from "@/components/atlas/BlockEditor";
+import { EmbedBlockRenderer, EMBED_TYPES } from "@/components/atlas/EmbedBlockRenderer";
 import {
   getPage,
   listBlocks,
   saveNativeDoc,
+  upsertBlock,
+  deleteBlock,
   updatePage,
   listAllPagesForArm,
   createPage,
   subscribeToPageBlocks,
+  copyBlockToProject,
+  listProjects,
   type Page,
+  type Block,
+  type Project,
 } from "@/lib/atlas-supabase";
-import { LayoutGrid, Rows, KanbanSquare, Calendar, Image as ImageIcon, FileText } from "lucide-react";
+import { LayoutGrid, Rows, KanbanSquare, Calendar, Image as ImageIcon, FileText, Plus, Copy, Trash2 } from "lucide-react";
 
 const VIEW_TYPES: Array<{ value: Page["view_type"]; label: string; icon: typeof FileText }> = [
   { value: "doc",      label: "Doc",      icon: FileText },
@@ -33,10 +40,14 @@ export default function ArmPage() {
 
   const [page, setPage] = useState<Page | null>(null);
   const [doc, setDoc] = useState<unknown | null>(null);
+  const [embedBlocks, setEmbedBlocks] = useState<Block[]>([]);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState<"idle" | "saving" | "saved">("idle");
   const [error, setError] = useState<string | null>(null);
   const [armPages, setArmPages] = useState<Page[]>([]);
+  const [showEmbedPicker, setShowEmbedPicker] = useState(false);
+  const [showCopyDialog, setShowCopyDialog] = useState<Block | null>(null);
+  const [projects, setProjects] = useState<Project[]>([]);
 
   const loadPage = useCallback(async () => {
     if (!pageId) {
@@ -53,6 +64,7 @@ export default function ArmPage() {
         const blocks = await listBlocks(p.id);
         const native = blocks.find((b) => b.block_type === "native");
         setDoc(native?.content ?? null);
+        setEmbedBlocks(blocks.filter((b) => b.block_type !== "native"));
       }
       setError(null);
     } catch (e: unknown) {
@@ -117,6 +129,53 @@ export default function ArmPage() {
     if (!title) return;
     const p = await createPage({ arm_slug: armSlug, title });
     navigate(`/arm/${armSlug}/${p.id}`);
+  };
+
+  const handleInsertEmbed = async (embedType: typeof EMBED_TYPES[number]) => {
+    if (!page) return;
+    try {
+      const b = await upsertBlock({
+        page_id: page.id,
+        block_type: embedType.value as Block["block_type"],
+        content: [],
+        props: embedType.defaultProps,
+        order_idx: embedBlocks.length + 1,
+      });
+      setEmbedBlocks((prev) => [...prev, b]);
+      setShowEmbedPicker(false);
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : String(e));
+    }
+  };
+
+  const handleRemoveEmbed = async (id: string) => {
+    if (!confirm("Remove this embed?")) return;
+    try {
+      await deleteBlock(id);
+      setEmbedBlocks((prev) => prev.filter((b) => b.id !== id));
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : String(e));
+    }
+  };
+
+  const openCopyDialog = async (block: Block) => {
+    setShowCopyDialog(block);
+    try {
+      const list = await listProjects();
+      setProjects(list);
+    } catch {
+      setProjects([]);
+    }
+  };
+
+  const handleCopyToProject = async (projectId: string) => {
+    if (!showCopyDialog) return;
+    try {
+      await copyBlockToProject(projectId, showCopyDialog.id, showCopyDialog.page_id);
+      setShowCopyDialog(null);
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : String(e));
+    }
   };
 
   const armTitle = useMemo(() => {
@@ -236,14 +295,90 @@ export default function ArmPage() {
           )}
 
           {!loading && page && (
-            <BlockEditor
-              key={page.id}
-              initialDoc={doc}
-              onChange={handleSave}
-              placeholder={`Type / for slash commands · or write in ${page.title}`}
-            />
+            <>
+              <BlockEditor
+                key={page.id}
+                initialDoc={doc}
+                onChange={handleSave}
+                placeholder={`Type / for slash commands · or write in ${page.title}`}
+              />
+
+              <div className="mt-6 space-y-2">
+                {embedBlocks.map((b) => (
+                  <div key={b.id} className="relative group">
+                    <EmbedBlockRenderer block={b} />
+                    <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 flex gap-1">
+                      <button
+                        className="p-1 rounded bg-white border border-black/10 hover:bg-black/5"
+                        onClick={() => openCopyDialog(b)}
+                        title="Copy block to a project"
+                      >
+                        <Copy size={12} />
+                      </button>
+                      <button
+                        className="p-1 rounded bg-white border border-black/10 hover:bg-red-50 text-red-600"
+                        onClick={() => handleRemoveEmbed(b.id)}
+                        title="Remove"
+                      >
+                        <Trash2 size={12} />
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-4 relative">
+                <button
+                  className="text-xs px-2 py-1 rounded bg-black/5 hover:bg-black/10 flex items-center gap-1"
+                  onClick={() => setShowEmbedPicker((v) => !v)}
+                >
+                  <Plus size={12} /> Insert tool block (Calendar · Gmail · Brain · MCP · NotebookLM)
+                </button>
+                {showEmbedPicker && (
+                  <div className="absolute z-20 mt-1 bg-white border border-black/10 rounded shadow-lg p-1 w-56">
+                    {EMBED_TYPES.map((t) => (
+                      <button
+                        key={t.value}
+                        className="w-full text-left px-2 py-1.5 text-sm hover:bg-black/5 rounded"
+                        onClick={() => handleInsertEmbed(t)}
+                      >
+                        {t.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </>
           )}
         </div>
+
+        {showCopyDialog && (
+          <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50" onClick={() => setShowCopyDialog(null)}>
+            <div className="bg-white rounded-lg p-6 w-full max-w-md" onClick={(e) => e.stopPropagation()}>
+              <h2 className="text-lg font-semibold mb-3">Copy block to a project</h2>
+              {projects.length === 0 ? (
+                <div className="text-sm opacity-60">No projects yet. Open /manager to create one.</div>
+              ) : (
+                <div className="space-y-1 max-h-72 overflow-y-auto">
+                  {projects.map((p) => (
+                    <button
+                      key={p.id}
+                      className="w-full text-left p-2 rounded hover:bg-black/5"
+                      onClick={() => handleCopyToProject(p.id)}
+                    >
+                      <span className="mr-2">{p.emoji}</span>
+                      <span className="font-medium">{p.name}</span>
+                      <span className="text-xs opacity-50 ml-2">{p.priority}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+              <div className="flex justify-end mt-4">
+                <button className="px-3 py-1.5 rounded text-sm" onClick={() => setShowCopyDialog(null)}>Cancel</button>
+              </div>
+            </div>
+          </div>
+        )}
       </main>
     </div>
   );
