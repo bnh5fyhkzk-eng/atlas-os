@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>atlasos.me · arm · Notion blocks</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--green:#6BAE73;--red:#C03A2B;--violet:#9D7CD8;--purple:#9D7CD8;--gray:#8590A2;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6;min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
+  .topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;gap:14px;flex-shrink:0}
+  .brand{font-family:var(--serif);font-size:18px}
+  .brand .dot{color:var(--amber)}
+  .crumb{color:var(--ink-faint);font-size:12px}
+  .crumb a{color:var(--ink-soft);text-decoration:none}
+  .layout{display:grid;grid-template-columns:280px 1fr;flex:1;min-height:0}
+  .nav{border-right:1px solid var(--hair);padding:24px 14px;background:var(--card);display:flex;flex-direction:column;gap:2px;overflow-y:auto}
+  .nav-label{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--ink-faint);padding:0 12px;margin:14px 0 8px}
+  .nav-item{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:6px;color:var(--ink-soft);font-size:14px;text-decoration:none;cursor:pointer}
+  .nav-item:hover{background:var(--bg);color:var(--ink)}
+  .nav-item.active{background:var(--amber-soft);color:var(--ink);font-weight:500}
+  .nav-item .ni-icon{width:22px;text-align:center;font-size:16px}
+  .main{padding:36px 56px 100px;overflow-y:auto;max-width:920px;width:100%}
+  .arm-header{display:flex;gap:18px;align-items:center;margin-bottom:8px}
+  .arm-header .glyph{font-size:48px;line-height:1}
+  .arm-header .meta{font-family:var(--mono);font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;margin-top:6px;display:flex;gap:12px;flex-wrap:wrap}
+  .arm-header .pill{padding:2px 8px;border-radius:4px;font-size:10px}
+  .pill.active{background:#D8EFDB;color:var(--green)}
+  .pill.idle{background:var(--hair);color:var(--ink-faint)}
+  .arm-role{font-size:13px;color:var(--ink-soft);font-style:italic;margin-bottom:24px}
+
+  .blocks{display:flex;flex-direction:column;gap:4px}
+  .block{position:relative;padding:6px 8px 6px 32px;border-radius:4px;transition:background 120ms;border:1px solid transparent}
+  .block:hover{background:rgba(0,0,0,0.015)}
+  .block-handle{position:absolute;left:8px;top:8px;width:16px;height:16px;display:flex;align-items:center;justify-content:center;cursor:grab;color:var(--ink-faint);opacity:0;transition:opacity 120ms;font-size:14px;user-select:none}
+  .block:hover .block-handle{opacity:1}
+  .block-handle:active{cursor:grabbing}
+  .block.dragging{opacity:0.4}
+  .block-content{outline:none;min-height:1.3em}
+  .block-content:focus{background:rgba(194,138,62,0.04);border-radius:3px}
+  .block-content[data-empty="true"]:before{content:attr(data-placeholder);color:var(--ink-faint);font-style:italic;pointer-events:none}
+
+  .b-paragraph .block-content{font-size:15px;line-height:1.65}
+  .b-heading h1{font-family:var(--serif);font-size:32px;font-weight:400;margin:18px 0 4px}
+  .b-heading h2{font-family:var(--serif);font-size:24px;font-weight:400;margin:14px 0 4px}
+  .b-heading h3{font-family:var(--serif);font-size:19px;font-weight:400;margin:10px 0 4px}
+  .b-callout{background:var(--amber-soft);border-left:3px solid var(--amber);padding:12px 16px;border-radius:0 6px 6px 0;display:flex;gap:10px;align-items:flex-start;margin:6px 0}
+  .b-callout.green{background:#D8EFDB;border-left-color:var(--green)}
+  .b-callout.purple,.b-callout.violet{background:rgba(157,124,216,0.12);border-left-color:var(--violet)}
+  .b-callout.gray{background:var(--hair);border-left-color:var(--gray)}
+  .b-callout .callout-emoji{font-size:18px;flex-shrink:0;line-height:1.4}
+  .b-code .block-content{font-family:var(--mono);font-size:13px;background:#FAF6EE;border:1px solid var(--hair);border-radius:6px;padding:10px 14px;white-space:pre-wrap;color:var(--ink)}
+  .b-divider{padding:14px 8px 14px 32px}
+  .b-divider hr{border:none;border-top:1px solid var(--hair);margin:0}
+  .b-todo .todo-item{display:flex;gap:8px;align-items:center;padding:3px 0}
+  .b-todo .todo-item input{cursor:pointer}
+  .b-todo .todo-item.done .todo-text{text-decoration:line-through;color:var(--ink-faint)}
+  .b-stat-card{background:var(--card);border:1px solid var(--hair);border-radius:8px;padding:14px 18px;display:inline-block;min-width:140px;margin:6px 8px 6px 0}
+  .b-stat-card .stat-value{font-family:var(--mono);font-size:26px;color:var(--ink)}
+  .b-stat-card .stat-label{font-family:var(--mono);font-size:10px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;margin-top:4px}
+  .b-stat-card .stat-trend{font-size:11px;color:var(--green);margin-left:6px}
+  .b-database table{width:100%;border-collapse:collapse;font-size:13px;margin:6px 0}
+  .b-database th{text-align:left;padding:8px 10px;border-bottom:1px solid var(--hair);font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:var(--ink-faint)}
+  .b-database td{padding:7px 10px;border-bottom:1px solid var(--hair);color:var(--ink)}
+  .b-database tr:last-child td{border-bottom:none}
+  .b-brain-feed .canon{background:var(--card);border:1px solid var(--hair);border-left:3px solid var(--amber);border-radius:0 6px 6px 0;padding:10px 14px;margin-bottom:6px;font-size:13px}
+  .b-brain-feed .canon-meta{font-family:var(--mono);font-size:10px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;display:flex;gap:10px}
+  .b-brain-feed .canon-meta .canon-id{color:var(--amber)}
+  .b-embed iframe{width:100%;border:1px solid var(--hair);border-radius:6px}
+
+  .add-block{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px dashed var(--hair);padding:8px 14px;border-radius:6px;color:var(--ink-soft);font-size:13px;cursor:pointer;margin-top:14px}
+  .add-block:hover{background:var(--amber-soft);border-color:var(--amber);color:var(--ink)}
+  .save-indicator{position:fixed;bottom:18px;right:18px;background:var(--card);border:1px solid var(--hair);border-radius:6px;padding:6px 12px;font-family:var(--mono);font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;opacity:0;transition:opacity 200ms}
+  .save-indicator.show{opacity:1}
+  .save-indicator.saving{color:var(--amber)}
+  .save-indicator.saved{color:var(--green)}
+  .save-indicator.error{color:var(--red)}
+
+  .slash-menu{position:absolute;background:var(--card);border:1px solid var(--hair);border-radius:8px;padding:6px;box-shadow:0 4px 12px rgba(0,0,0,0.08);z-index:100;width:240px;max-height:300px;overflow-y:auto}
+  .slash-menu .item{display:flex;gap:10px;padding:6px 10px;border-radius:5px;cursor:pointer;align-items:center}
+  .slash-menu .item:hover,.slash-menu .item.active{background:var(--amber-soft)}
+  .slash-menu .item .icon{width:22px;text-align:center;font-family:var(--mono);font-size:14px;color:var(--amber)}
+  .slash-menu .item .label{flex:1;font-size:13px}
+  .slash-menu .item .short{font-family:var(--mono);font-size:10px;color:var(--ink-faint)}
+
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+@media (max-width: 768px) {
+  .layout { grid-template-columns: 1fr !important; }
+  .nav { display: none; }
+  .main { padding: 24px 18px 80px !important; }
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">·</span>me</div>
+  <div class="crumb"><a href="/us.html">Us</a> · <a href="/employees.html">arms</a> · <span id="crumb-name">…</span> · Notion blocks</div>
+  <svg viewBox="0 0 120 24" width="120" height="24" style="margin-left:auto;opacity:0.7;"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" style="animation:ecg-pulse 1.6s infinite"/></svg>
+</header>
+
+<div class="layout">
+  <aside class="nav">
+    <div class="nav-label">arms</div>
+    <div id="nav-arms">loading…</div>
+    <div class="nav-label">block tips</div>
+    <div style="padding:6px 12px;font-size:11px;color:var(--ink-faint);line-height:1.6;">
+      <div>Type "/" on empty line → block picker</div>
+      <div>Drag ⋮⋮ to reorder</div>
+      <div>Click any text · edit · blur saves</div>
+    </div>
+  </aside>
+  <main class="main">
+    <div id="content">Loading arm page…</div>
+  </main>
+</div>
+
+<div class="save-indicator" id="save-indicator">saved</div>
+
+<script>
+const escape = s => (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const params = new URLSearchParams(location.search);
+const armName = params.get('name') || 'pascal';
+
+let armData = null;
+let registry = null;
+let blocks = [];
+let saveTimer = null;
+
+async function load() {
+  try {
+    const [armR, regR] = await Promise.all([
+      fetch(`/arms-pages/${armName}.json`, {cache:'no-cache'}),
+      fetch('/blocks-registry.json', {cache:'no-cache'}),
+    ]);
+    armData = armR.ok ? await armR.json() : null;
+    registry = regR.ok ? await regR.json() : null;
+    if (!armData) {
+      document.getElementById('content').innerHTML = '<p>Arm not found · check name in URL</p>';
+      return;
+    }
+    // Try fetch saved blocks · fall back to defaults from armData
+    try {
+      const savedR = await fetch(`/api/blocks?arm=${encodeURIComponent(armName)}`, {cache:'no-cache'});
+      if (savedR.ok) {
+        const saved = await savedR.json();
+        if (saved.blocks?.length) blocks = saved.blocks.map(b => ({...b}));
+      }
+    } catch (e) {}
+    if (!blocks.length) {
+      blocks = (armData.blocks || []).map(b => ({...b}));
+    } else {
+      // Hydrate dynamic data from armData
+      blocks.forEach(b => {
+        const orig = (armData.blocks || []).find(o => o.id === b.id);
+        if (orig?.data) b.data = orig.data;
+      });
+    }
+    render();
+  } catch (e) {
+    document.getElementById('content').innerHTML = `<p>Load failed · ${escape(e.message)}</p>`;
+  }
+}
+
+function renderNav() {
+  fetch('/arms-pages/_index.json', {cache:'no-cache'}).then(r => r.json()).then(idx => {
+    const nav = document.getElementById('nav-arms');
+    nav.innerHTML = (idx.arms || []).map(a => `
+      <a class="nav-item ${a.name === armName ? 'active' : ''}" href="/arm-page.html?name=${escape(a.name)}">
+        <span class="ni-icon">${a.identity?.glyph || '·'}</span>
+        <span>${escape(a.name)}</span>
+      </a>
+    `).join('');
+  }).catch(() => {});
+}
+
+function render() {
+  document.getElementById('crumb-name').textContent = armName;
+  document.title = `atlasos.me · ${armName} · Notion blocks`;
+  const id = armData.identity || {};
+  const status = armData.live_status || {};
+  const stateClass = status.state === 'active' ? 'active' : 'idle';
+  const headerHtml = `
+    <div class="arm-header" style="border-left:4px solid ${id.color || 'var(--amber)'};padding-left:14px;">
+      <div class="glyph">${id.glyph || '◐'}</div>
+      <div>
+        <h1 style="font-family:var(--serif);font-size:32px;font-weight:400;margin:0;">${escape(id.name || armName)}</h1>
+        <div class="meta">
+          <span class="pill ${stateClass}">${escape(status.state || '?')}</span>
+          <span>done · ${status.done_count || 0}</span>
+          <span>drift · ${status.vec_drift !== null && status.vec_drift !== undefined ? Number(status.vec_drift).toFixed(3) : '?'}</span>
+          <span>${blocks.length} blocks</span>
+        </div>
+      </div>
+    </div>
+    <div class="arm-role">${escape(id.role || '')}</div>
+  `;
+  const blocksHtml = `<div class="blocks" id="block-list">${blocks.map(renderBlock).join('')}</div>`;
+  const addBtn = `<div class="add-block" onclick="addBlockPrompt()">+ Add block · or type "/" on empty line</div>`;
+  document.getElementById('content').innerHTML = headerHtml + blocksHtml + addBtn;
+  attachHandlers();
+}
+
+function renderBlock(b) {
+  const t = b.type || 'paragraph';
+  const props = b.props || {};
+  const content = b.content || '';
+  const data = b.data;
+  const cls = `block b-${t}`;
+  const handle = `<div class="block-handle" draggable="true" data-id="${escape(b.id)}">⋮⋮</div>`;
+  if (t === 'paragraph') {
+    return `<div class="${cls}" data-id="${escape(b.id)}">${handle}<div class="block-content" contenteditable="true" data-placeholder="empty paragraph · type / for blocks" data-empty="${!content}">${escape(content)}</div></div>`;
+  }
+  if (t === 'heading') {
+    const lvl = props.level || 2;
+    return `<div class="${cls}" data-id="${escape(b.id)}">${handle}<h${lvl} class="block-content" contenteditable="true" data-placeholder="Heading" data-empty="${!content}">${escape(content)}</h${lvl}></div>`;
+  }
+  if (t === 'callout') {
+    const color = props.color || 'amber';
+    const emoji = props.emoji || '💡';
+    return `<div class="${cls} ${color}" data-id="${escape(b.id)}">${handle}<div class="callout-emoji">${emoji}</div><div class="block-content" contenteditable="true" data-placeholder="important note" data-empty="${!content}">${escape(content)}</div></div>`;
+  }
+  if (t === 'code') {
+    return `<div class="${cls}" data-id="${escape(b.id)}">${handle}<div class="block-content" contenteditable="true" data-placeholder="code · ${escape(props.language||'bash')}" data-empty="${!content}">${escape(content)}</div></div>`;
+  }
+  if (t === 'divider') {
+    return `<div class="${cls}" data-id="${escape(b.id)}">${handle}<hr></div>`;
+  }
+  if (t === 'todo') {
+    const items = (props.items || []);
+    const itemsHtml = items.map((it, i) => `
+      <div class="todo-item ${it.done ? 'done' : ''}">
+        <input type="checkbox" ${it.done ? 'checked' : ''} onchange="toggleTodo('${escape(b.id)}', ${i})">
+        <span class="todo-text block-content" contenteditable="true" data-todo-id="${escape(b.id)}" data-todo-idx="${i}">${escape(it.text || '')}</span>
+      </div>
+    `).join('');
+    return `<div class="${cls}" data-id="${escape(b.id)}">${handle}<div>${itemsHtml}<div style="font-size:11px;color:var(--ink-faint);cursor:pointer;margin-top:4px;" onclick="addTodoItem('${escape(b.id)}')">+ add todo</div></div></div>`;
+  }
+  if (t === 'stat-card') {
+    return `<div class="${cls}" data-id="${escape(b.id)}">${handle}<div class="stat-value block-content" contenteditable="true" data-placeholder="0" data-empty="${!content}">${escape(content)}</div><div class="stat-label">${escape(props.label || 'metric')}${props.unit ? ' · ' + escape(props.unit) : ''}<span class="stat-trend">${escape(props.trend || '')}</span></div></div>`;
+  }
+  if (t === 'database') {
+    const cols = props.columns || ['item', 'when'];
+    const rows = data || [];
+    const head = `<tr>${cols.map(c => `<th>${escape(c)}</th>`).join('')}</tr>`;
+    const body = rows.length ? rows.map(row => `<tr>${cols.map(c => `<td>${escape(String(row[c] || row.file || row.summary || ''))}</td>`).join('')}</tr>`).join('') : `<tr><td colspan="${cols.length}" style="color:var(--ink-faint);font-style:italic;">no rows · source ${escape(props.source || 'manual')}</td></tr>`;
+    return `<div class="${cls}" data-id="${escape(b.id)}">${handle}<table>${head}${body}</table></div>`;
+  }
+  if (t === 'brain-feed') {
+    const canons = data || [];
+    const html = canons.length ? canons.map(c => `
+      <div class="canon">
+        <div class="canon-meta"><span class="canon-id">${escape(c.id)}</span><span>arousal ${(c.arousal||0).toFixed(2)}</span><span>${escape(c.when)}</span></div>
+        <div>${escape(c.summary || '')}</div>
+      </div>
+    `).join('') : `<p style="color:var(--ink-faint);font-style:italic;">no canons match topics · ${escape((props.topics || []).join(', '))}</p>`;
+    return `<div class="${cls}" data-id="${escape(b.id)}">${handle}${html}</div>`;
+  }
+  if (t === 'embed') {
+    return `<div class="${cls}" data-id="${escape(b.id)}">${handle}${props.src ? `<iframe src="${escape(props.src)}" height="${props.height || 400}"></iframe>` : '<p style="color:var(--ink-faint);font-style:italic;">no src · edit props</p>'}</div>`;
+  }
+  return `<div class="${cls}" data-id="${escape(b.id)}">${handle}<div class="block-content">${escape(content)}</div></div>`;
+}
+
+function attachHandlers() {
+  document.querySelectorAll('.block-content[contenteditable="true"]').forEach(el => {
+    el.addEventListener('blur', e => {
+      const blockEl = el.closest('.block');
+      const id = blockEl?.dataset?.id;
+      if (!id) return;
+      const block = blocks.find(b => b.id === id);
+      if (!block) return;
+      const todoId = el.dataset.todoId;
+      const todoIdx = el.dataset.todoIdx;
+      if (todoId && todoIdx !== undefined) {
+        if (!block.props) block.props = {};
+        if (!block.props.items) block.props.items = [];
+        if (!block.props.items[todoIdx]) block.props.items[todoIdx] = {};
+        block.props.items[todoIdx].text = el.textContent;
+      } else {
+        block.content = el.textContent;
+      }
+      scheduleSave();
+    });
+    el.addEventListener('keydown', e => {
+      if (e.key === '/' && (el.textContent || '').trim() === '') {
+        e.preventDefault();
+        openSlashMenu(el);
+      }
+    });
+  });
+  document.querySelectorAll('.block-handle').forEach(h => {
+    h.addEventListener('dragstart', e => {
+      const blockEl = h.closest('.block');
+      blockEl.classList.add('dragging');
+      e.dataTransfer.effectAllowed = 'move';
+      e.dataTransfer.setData('text/plain', blockEl.dataset.id);
+    });
+    h.addEventListener('dragend', () => {
+      document.querySelectorAll('.block').forEach(b => b.classList.remove('dragging'));
+    });
+  });
+  document.querySelectorAll('.block').forEach(b => {
+    b.addEventListener('dragover', e => { e.preventDefault(); e.dataTransfer.dropEffect = 'move'; });
+    b.addEventListener('drop', e => {
+      e.preventDefault();
+      const draggedId = e.dataTransfer.getData('text/plain');
+      const targetId = b.dataset.id;
+      if (!draggedId || draggedId === targetId) return;
+      const fromIdx = blocks.findIndex(x => x.id === draggedId);
+      const toIdx = blocks.findIndex(x => x.id === targetId);
+      if (fromIdx < 0 || toIdx < 0) return;
+      const [moved] = blocks.splice(fromIdx, 1);
+      blocks.splice(toIdx, 0, moved);
+      scheduleSave();
+      render();
+    });
+  });
+}
+
+function openSlashMenu(el) {
+  closeSlashMenu();
+  const menu = document.createElement('div');
+  menu.className = 'slash-menu';
+  menu.id = 'slash-menu';
+  const r = el.getBoundingClientRect();
+  menu.style.left = (r.left) + 'px';
+  menu.style.top = (r.bottom + 6 + window.scrollY) + 'px';
+  const types = registry?.blocks || [];
+  menu.innerHTML = types.map((t, i) => `
+    <div class="item ${i===0?'active':''}" data-type="${escape(t.type)}">
+      <span class="icon">${escape(t.icon || '·')}</span>
+      <span class="label">${escape(t.label || t.type)}</span>
+      <span class="short">${escape(t.shortcut || '')}</span>
+    </div>
+  `).join('');
+  document.body.appendChild(menu);
+  menu.querySelectorAll('.item').forEach(item => {
+    item.addEventListener('mousedown', e => {
+      e.preventDefault();
+      const type = item.dataset.type;
+      const blockEl = el.closest('.block');
+      const targetId = blockEl?.dataset?.id;
+      replaceBlockType(targetId, type);
+      closeSlashMenu();
+    });
+  });
+}
+function closeSlashMenu() {
+  const m = document.getElementById('slash-menu');
+  if (m) m.remove();
+}
+document.addEventListener('click', e => {
+  if (!e.target.closest('.slash-menu')) closeSlashMenu();
+});
+
+function replaceBlockType(blockId, type) {
+  const idx = blocks.findIndex(b => b.id === blockId);
+  if (idx < 0) return;
+  const def = (registry?.blocks || []).find(r => r.type === type) || {};
+  blocks[idx] = {
+    id: blockId,
+    type,
+    props: JSON.parse(JSON.stringify(def.default_props || {})),
+    content: def.default_content || '',
+    updated_at: new Date().toISOString(),
+  };
+  scheduleSave();
+  render();
+}
+
+window.addBlockPrompt = function() {
+  const newId = Math.random().toString(36).substring(2, 14);
+  blocks.push({ id: newId, type: 'paragraph', props: {}, content: '', updated_at: new Date().toISOString() });
+  scheduleSave();
+  render();
+};
+
+window.toggleTodo = function(blockId, idx) {
+  const b = blocks.find(x => x.id === blockId);
+  if (!b || !b.props?.items?.[idx]) return;
+  b.props.items[idx].done = !b.props.items[idx].done;
+  scheduleSave();
+  render();
+};
+
+window.addTodoItem = function(blockId) {
+  const b = blocks.find(x => x.id === blockId);
+  if (!b) return;
+  if (!b.props) b.props = {};
+  if (!b.props.items) b.props.items = [];
+  b.props.items.push({ text: '', done: false });
+  scheduleSave();
+  render();
+};
+
+function scheduleSave() {
+  showIndicator('saving');
+  if (saveTimer) clearTimeout(saveTimer);
+  saveTimer = setTimeout(saveBlocks, 600);
+}
+
+async function saveBlocks() {
+  try {
+    const r = await fetch('/api/blocks', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ arm: armName, blocks: blocks.map(b => ({ id: b.id, type: b.type, props: b.props, content: b.content })) }),
+    });
+    if (!r.ok) throw new Error('save failed · HTTP ' + r.status);
+    showIndicator('saved');
+  } catch (e) {
+    showIndicator('error');
+  }
+}
+
+function showIndicator(state) {
+  const el = document.getElementById('save-indicator');
+  el.className = 'save-indicator show ' + state;
+  el.textContent = state === 'saving' ? 'saving…' : state === 'saved' ? '✓ saved' : '✗ ' + state;
+  if (state !== 'saving') {
+    setTimeout(() => { el.classList.remove('show'); }, 1800);
+  }
+}
+
+renderNav();
+load();
+</script>
+</body>
+</html>

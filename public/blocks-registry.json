@@ -1,0 +1,149 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "created_at": "2026-06-11T03:02:00Z",
+    "description": "Notion-style block registry · 10 types · per-arm page foundation · per /goal arms-notion-blocks",
+    "renderer_pattern": "render<TypeName>(block, env) returns HTML string",
+    "edit_pattern": "contentEditable on .block-content · blur auto-saves to /api/blocks"
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "label": "Paragraph",
+      "icon": "¶",
+      "default_props": {
+        "size": "medium"
+      },
+      "default_content": "",
+      "edit_inline": true,
+      "data_format": "string",
+      "shortcut": "/text"
+    },
+    {
+      "type": "heading",
+      "label": "Heading",
+      "icon": "H",
+      "default_props": {
+        "level": 2
+      },
+      "default_content": "Heading",
+      "edit_inline": true,
+      "data_format": "string",
+      "shortcut": "/h"
+    },
+    {
+      "type": "todo",
+      "label": "Todo list",
+      "icon": "☐",
+      "default_props": {
+        "items": []
+      },
+      "default_content": "",
+      "edit_inline": true,
+      "data_format": "array<{text, done}>",
+      "shortcut": "/todo"
+    },
+    {
+      "type": "callout",
+      "label": "Callout",
+      "icon": "💡",
+      "default_props": {
+        "emoji": "💡",
+        "color": "amber"
+      },
+      "default_content": "important note",
+      "edit_inline": true,
+      "data_format": "string",
+      "shortcut": "/callout"
+    },
+    {
+      "type": "code",
+      "label": "Code block",
+      "icon": "</>",
+      "default_props": {
+        "language": "bash"
+      },
+      "default_content": "",
+      "edit_inline": true,
+      "data_format": "string",
+      "shortcut": "/code"
+    },
+    {
+      "type": "divider",
+      "label": "Divider",
+      "icon": "—",
+      "default_props": {},
+      "default_content": "",
+      "edit_inline": false,
+      "data_format": "none",
+      "shortcut": "/divider"
+    },
+    {
+      "type": "embed",
+      "label": "Embed iframe",
+      "icon": "🖼",
+      "default_props": {
+        "src": "",
+        "height": 400
+      },
+      "default_content": "",
+      "edit_inline": true,
+      "data_format": "url",
+      "shortcut": "/embed"
+    },
+    {
+      "type": "database",
+      "label": "Database table",
+      "icon": "▦",
+      "default_props": {
+        "columns": [
+          "item",
+          "status",
+          "when"
+        ],
+        "source": "manual"
+      },
+      "default_content": "",
+      "edit_inline": true,
+      "data_format": "array<row>",
+      "shortcut": "/db",
+      "data_sources": [
+        "manual",
+        "brain-canons",
+        "arm-outputs",
+        "kanban"
+      ]
+    },
+    {
+      "type": "stat-card",
+      "label": "Stat card",
+      "icon": "📊",
+      "default_props": {
+        "label": "metric",
+        "unit": "",
+        "trend": ""
+      },
+      "default_content": "0",
+      "edit_inline": true,
+      "data_format": "{value, label, unit}",
+      "shortcut": "/stat"
+    },
+    {
+      "type": "brain-feed",
+      "label": "Brain feed",
+      "icon": "🧠",
+      "default_props": {
+        "topics": [],
+        "limit": 5,
+        "min_arousal": 0.9
+      },
+      "default_content": "",
+      "edit_inline": true,
+      "data_format": "array<canon>",
+      "shortcut": "/brain",
+      "data_sources": [
+        "brain-v3"
+      ]
+    }
+  ]
+}
