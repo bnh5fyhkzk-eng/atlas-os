@@ -24,6 +24,14 @@ h1 .g{font-size:36px}
 .card .status{font-family:var(--mono);font-size:9px;color:var(--amber);text-transform:uppercase;letter-spacing:0.5px;background:var(--amber-soft);padding:2px 8px;border-radius:3px;display:inline-block}
 .nav-back{margin-top:40px;display:inline-block;font-size:13px;color:var(--amber);text-decoration:none;padding:8px 14px;border:1px solid var(--hair);border-radius:6px}
 @keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+@media (max-width: 768px) {
+  .layout, .grid, .moat-grid, .arm-grid, .tool-grid { grid-template-columns: 1fr !important; }
+  .container { padding: 24px 18px !important; }
+  h1 { font-size: 24px !important; }
+  .topbar { padding: 0 14px !important; }
+  .nav, .sidebar { display: none; }
+  .crumb { font-size: 11px !important; }
+}
 </style>
 </head>
 <body>

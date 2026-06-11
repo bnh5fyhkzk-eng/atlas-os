@@ -468,7 +468,15 @@
     font-family: var(--mono);
     letter-spacing: 0.5px;
   }
-@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}</style>
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}@media (max-width: 768px) {
+  .layout, .grid, .moat-grid, .arm-grid, .tool-grid { grid-template-columns: 1fr !important; }
+  .container { padding: 24px 18px !important; }
+  h1 { font-size: 24px !important; }
+  .topbar { padding: 0 14px !important; }
+  .nav, .sidebar { display: none; }
+  .crumb { font-size: 11px !important; }
+}
+</style>
 </head>
 <body>
 
@@ -1087,7 +1095,16 @@ document.addEventListener('keydown', e => {
 function toggleLang() {
   const lang = localStorage.getItem('atlas-lang') === 'fr-CA' ? 'en' : 'fr-CA';
   localStorage.setItem('atlas-lang', lang);
-  alert(lang === 'fr-CA' ? 'Atlas parle français maintenant · per Quebec-FR-CA' : 'Atlas back to English');
+  if (lang === 'fr-CA') {
+    fetch('/i18n-fr-CA.json').then(r => r.json()).then(dict => {
+      // Translate visible elements
+      document.querySelectorAll('[data-i18n-key]').forEach(el => {
+        const k = el.dataset.i18nKey.split('.');
+        let v = dict; for (const p of k) v = v?.[p]; if (v) el.textContent = v;
+      });
+      alert('Atlas parle francais maintenant · Loi 25 OQLF · ' + Object.keys(dict.common).length + ' termes chargés');
+    });
+  } else { location.reload(); }
 }
 </script>
 </body>

@@ -20,6 +20,14 @@
   @keyframes pulse-glow{0%,100%{opacity:0.5;box-shadow:0 0 0 0 rgba(229,176,104,0.4)}50%{opacity:1;box-shadow:0 0 0 8px rgba(229,176,104,0)}}
   .nav-back{display:inline-block;margin-top:40px;font-size:13px;color:var(--amber);text-decoration:none;border:1px solid var(--amber-soft);padding:8px 16px;border-radius:6px}
 @keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+@media (max-width: 768px) {
+  .layout, .grid, .moat-grid, .arm-grid, .tool-grid { grid-template-columns: 1fr !important; }
+  .container { padding: 24px 18px !important; }
+  h1 { font-size: 24px !important; }
+  .topbar { padding: 0 14px !important; }
+  .nav, .sidebar { display: none; }
+  .crumb { font-size: 11px !important; }
+}
 </style>
 </head>
 <body>

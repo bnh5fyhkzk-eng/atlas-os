@@ -28,6 +28,14 @@
   .node .meta .pillar{padding:1px 6px;background:var(--bg);border-radius:3px}
   .node .content{font-size:13px;color:var(--ink);line-height:1.5}
 @keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+@media (max-width: 768px) {
+  .layout, .grid, .moat-grid, .arm-grid, .tool-grid { grid-template-columns: 1fr !important; }
+  .container { padding: 24px 18px !important; }
+  h1 { font-size: 24px !important; }
+  .topbar { padding: 0 14px !important; }
+  .nav, .sidebar { display: none; }
+  .crumb { font-size: 11px !important; }
+}
 </style>
 </head>
 <body>

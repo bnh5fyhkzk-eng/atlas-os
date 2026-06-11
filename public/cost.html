@@ -34,6 +34,14 @@
   .savings{background:#D8EFDB;border-left:3px solid var(--green);padding:14px 18px;border-radius:6px;margin-bottom:12px}
   .savings .label{font-family:var(--mono);font-size:11px;color:var(--green);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px}
 @keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+@media (max-width: 768px) {
+  .layout, .grid, .moat-grid, .arm-grid, .tool-grid { grid-template-columns: 1fr !important; }
+  .container { padding: 24px 18px !important; }
+  h1 { font-size: 24px !important; }
+  .topbar { padding: 0 14px !important; }
+  .nav, .sidebar { display: none; }
+  .crumb { font-size: 11px !important; }
+}
 </style>
 </head>
 <body>
@@ -108,6 +116,7 @@ async function load() {
   }
 }
 load();
+setInterval(load, 60000);
 </script>
 </body>
 </html>
