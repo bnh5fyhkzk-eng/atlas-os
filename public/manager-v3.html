@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>manager · v3 · + Add project</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--green:#6BAE73;--red:#C03A2B;--violet:#9D7CD8;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+  .topbar{height:52px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;gap:14px;background:var(--card)}
+  .brand{font-family:var(--serif);font-size:19px}.brand .dot{color:var(--amber)}
+  .topbar .hamburger{display:none;background:none;border:none;font-size:22px;cursor:pointer}
+  .layout{display:grid;grid-template-columns:260px 1fr;flex:1;min-height:0}
+  .sidebar{border-right:1px solid var(--hair);padding:14px 10px;background:var(--card);overflow-y:auto}
+  .sidebar-label{font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:var(--ink-faint);padding:12px 12px 6px;font-weight:500}
+  .nav-row{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:7px;text-decoration:none;color:var(--ink-soft);font-size:13.5px}
+  .nav-row:hover{background:var(--bg);color:var(--ink)}
+  .nav-row.active{background:var(--amber-soft);color:var(--ink);font-weight:500}
+  .nav-row .glyph{width:22px;text-align:center;font-size:16px}
+  .main{padding:32px 48px 80px;overflow-y:auto;max-width:1200px}
+  h1{font-family:var(--serif);font-size:34px;font-weight:400;margin-bottom:6px}
+  .subtitle{color:var(--ink-faint);font-size:13px;margin-bottom:20px;font-style:italic}
+  .toolbar{margin-bottom:24px}
+  .add-btn{background:var(--amber);color:white;border:none;padding:10px 18px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:500;font-family:inherit}
+  .add-btn:hover{background:#A77530}
+  .projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px}
+  .project{background:var(--card);border:1px solid var(--hair);border-left:5px solid var(--amber);border-radius:0 10px 10px 0;padding:16px 20px;position:relative}
+  .project.p0{border-left-color:var(--red)}.project.p1{border-left-color:var(--amber)}.project.p2{border-left-color:var(--ink-faint)}
+  .project .top{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+  .project .name{font-family:var(--serif);font-size:18px;flex:1}
+  .project .pri{font-family:var(--mono);font-size:9px;text-transform:uppercase;background:var(--hair);padding:2px 6px;border-radius:3px}
+  .project .actions{display:none;gap:4px;position:absolute;top:8px;right:8px}
+  .project:hover .actions{display:flex}
+  .project .icon-btn{background:var(--card);border:1px solid var(--hair);color:var(--ink-faint);cursor:pointer;font-size:11px;padding:3px 6px;border-radius:3px}
+  .project .icon-btn:hover{color:var(--amber)}
+  .project .desc{font-size:12.5px;color:var(--ink-soft);font-style:italic;margin-bottom:8px}
+  .project .arms-chips{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px}
+  .project .arm-chip{font-family:var(--mono);font-size:10px;color:var(--ink-soft);background:var(--bg);border:1px solid var(--hair);padding:1px 6px;border-radius:3px}
+  .modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:100;align-items:center;justify-content:center}
+  .modal.open{display:flex}
+  .modal-content{background:var(--card);border-radius:10px;padding:24px;max-width:520px;width:90%}
+  .modal-content h3{font-family:var(--serif);font-size:20px;margin-bottom:16px}
+  .row{margin-bottom:10px}.row label{display:block;font-family:var(--mono);font-size:9px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:3px}
+  .row input,.row textarea,.row select{width:100%;padding:8px 10px;border:1px solid var(--hair);border-radius:5px;font-family:inherit;font-size:13px;background:var(--bg)}
+  .row textarea{resize:vertical;min-height:50px}
+  .arms-multi{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+  .arms-multi label{display:flex;align-items:center;gap:4px;font-family:inherit;font-size:12px;color:var(--ink);background:var(--bg);padding:4px 8px;border-radius:4px;border:1px solid var(--hair);cursor:pointer}
+  .modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
+  .modal-actions button{padding:7px 14px;border:1px solid var(--hair);background:var(--card);border-radius:5px;cursor:pointer;font-family:inherit;font-size:12px}
+  .modal-actions button.primary{background:var(--amber);color:white;border-color:var(--amber)}
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+@media (max-width:768px){.layout{grid-template-columns:1fr}.sidebar{display:none}.topbar .hamburger{display:block}.main{padding:20px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <button class="hamburger" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+  <div class="brand">atlas<span class="dot">·</span>manager</div>
+  <div style="color:#8590A2;font-size:12px;flex:1;">v3 · brother adds projects · per /goal step 6</div>
+  <svg viewBox="0 0 120 24" width="120" height="24" style="opacity:0.7;"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" style="animation:ecg-pulse 1.6s infinite"/></svg>
+</header>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-label">Quick</div>
+    <a class="nav-row" href="/house.html"><span class="glyph">🏠</span><span>House</span></a>
+    <a class="nav-row active" href="/manager-v3.html"><span class="glyph">📂</span><span>Manager v3</span></a>
+    <a class="nav-row" href="/today.html"><span class="glyph">📅</span><span>Today</span></a>
+    <div class="sidebar-label">8 Arms</div>
+    <a class="nav-row" href="/arm-v3.html?name=pascal"><span class="glyph">🤝</span><span>Pascal</span></a>
+    <a class="nav-row" href="/arm-v3.html?name=curiosity"><span class="glyph">🌱</span><span>My Curiosity</span></a>
+    <a class="nav-row" href="/arm-v3.html?name=research"><span class="glyph">👁</span><span>My Eyes</span></a>
+    <a class="nav-row" href="/arm-v3.html?name=code"><span class="glyph">✋</span><span>My Hands</span></a>
+    <a class="nav-row" href="/arm-v3.html?name=infra"><span class="glyph">💗</span><span>My Heart</span></a>
+    <a class="nav-row" href="/arm-v3.html?name=dream"><span class="glyph">🌙</span><span>My Dreamer</span></a>
+    <a class="nav-row" href="/arm-v3.html?name=hermes"><span class="glyph">🧠</span><span>Hermes</span></a>
+    <a class="nav-row" href="/arm-v3.html?name=charle"><span class="glyph">💼</span><span>Charle</span></a>
+  </aside>
+  <main class="main">
+    <h1>Manager v3 · Projects</h1>
+    <div class="subtitle">brother creates + edits + deletes projects · click any arm-chip to drill · per NOTION-INTERACTIVE step 6</div>
+    <div class="toolbar">
+      <button class="add-btn" onclick="openProjModal()">+ Add project</button>
+    </div>
+    <div class="projects" id="projects">Loading…</div>
+  </main>
+</div>
+
+<div class="modal" id="proj-modal">
+  <div class="modal-content">
+    <h3 id="proj-title">+ Add project</h3>
+    <div class="row"><label>Name</label><input id="p-name" placeholder="e.g. Pascal-Monday-Q3-prep"></div>
+    <div class="row"><label>Emoji</label><input id="p-emoji" placeholder="🎯" maxlength="4"></div>
+    <div class="row"><label>Priority</label>
+      <select id="p-pri"><option>P2</option><option>P1</option><option>P0</option></select>
+    </div>
+    <div class="row"><label>Description</label><textarea id="p-desc" placeholder="What is this project about?"></textarea></div>
+    <div class="row"><label>Arms involved</label>
+      <div class="arms-multi" id="p-arms">
+        <label><input type="checkbox" value="pascal"> 🤝 Pascal</label>
+        <label><input type="checkbox" value="curiosity"> 🌱 Curiosity</label>
+        <label><input type="checkbox" value="research"> 👁 Eyes</label>
+        <label><input type="checkbox" value="code"> ✋ Hands</label>
+        <label><input type="checkbox" value="infra"> 💗 Heart</label>
+        <label><input type="checkbox" value="dream"> 🌙 Dreamer</label>
+        <label><input type="checkbox" value="hermes"> 🧠 Hermes</label>
+        <label><input type="checkbox" value="charle"> 💼 Charle</label>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button onclick="closeProjModal()">Cancel</button>
+      <button class="primary" onclick="saveProj()">Save</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="confirm-modal">
+  <div class="modal-content">
+    <h3 id="confirm-title">Delete?</h3>
+    <p id="confirm-text" style="margin:10px 0;color:var(--ink-soft);"></p>
+    <div class="modal-actions">
+      <button onclick="closeConfirmModal()">Cancel</button>
+      <button class="primary" style="background:#C03A2B;border-color:#C03A2B" onclick="confirmAction()">Delete</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const escape = s => (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let projects = [];
+let editingProj = null;
+let confirmFn = null;
+
+async function load() {
+  try {
+    const r = await fetch('/api/agentic-projects', {cache:'no-cache'});
+    if (r.ok) {
+      const d = await r.json();
+      projects = d.projects || [];
+    } else {
+      projects = [];
+    }
+  } catch(e) { projects = []; }
+  render();
+}
+
+function render() {
+  const html = projects.length ? projects.map(p => `<div class="project ${(p.priority||'P2').toLowerCase()}">
+    <div class="actions">
+      <button class="icon-btn" onclick="openProjModal('${p.id}')">✎ Edit</button>
+      <button class="icon-btn" onclick="askDelete('${p.id}','${escape(p.name)}')">🗑</button>
+    </div>
+    <div class="top"><span style="font-size:22px;">${escape(p.emoji||'📂')}</span><span class="name">${escape(p.name)}</span><span class="pri">${p.priority||'P2'}</span></div>
+    <div class="desc">${escape(p.description||'')}</div>
+    <div class="arms-chips">${(p.arms||[]).map(a => `<a class="arm-chip" href="/arm-v3.html?name=${escape(a)}" style="text-decoration:none">${escape(a)}</a>`).join('')}</div>
+  </div>`).join('') : '<div style="padding:40px;text-align:center;color:var(--ink-faint);font-style:italic;">No projects yet · click "+ Add project"</div>';
+  document.getElementById('projects').innerHTML = html;
+}
+
+function openProjModal(editId) {
+  editingProj = editId || null;
+  document.getElementById('proj-title').textContent = editId ? 'Edit project' : '+ Add project';
+  if (editId) {
+    const p = projects.find(x => x.id === editId);
+    if (p) {
+      document.getElementById('p-name').value = p.name;
+      document.getElementById('p-emoji').value = p.emoji;
+      document.getElementById('p-pri').value = p.priority || 'P2';
+      document.getElementById('p-desc').value = p.description || '';
+      document.querySelectorAll('#p-arms input').forEach(cb => { cb.checked = (p.arms||[]).includes(cb.value); });
+    }
+  } else {
+    document.getElementById('p-name').value = '';
+    document.getElementById('p-emoji').value = '';
+    document.getElementById('p-pri').value = 'P2';
+    document.getElementById('p-desc').value = '';
+    document.querySelectorAll('#p-arms input').forEach(cb => cb.checked = false);
+  }
+  document.getElementById('proj-modal').classList.add('open');
+}
+function closeProjModal() { document.getElementById('proj-modal').classList.remove('open'); }
+
+async function saveProj() {
+  const name = document.getElementById('p-name').value.trim();
+  const emoji = document.getElementById('p-emoji').value.trim() || '📂';
+  const description = document.getElementById('p-desc').value.trim();
+  const priority = document.getElementById('p-pri').value;
+  const arms = [...document.querySelectorAll('#p-arms input:checked')].map(cb => cb.value);
+  if (!name) { alert('Name required'); return; }
+  try {
+    if (editingProj) {
+      await fetch('/api/agentic-projects', {method:'PUT', headers:{'content-type':'application/json'}, body: JSON.stringify({id: editingProj, name, emoji, description, priority, arms})});
+    } else {
+      await fetch('/api/agentic-projects', {method:'POST', headers:{'content-type':'application/json'}, body: JSON.stringify({name, emoji, description, priority, arms})});
+    }
+    closeProjModal();
+    await load();
+  } catch(e) { alert('Error · ' + e.message); }
+}
+
+function askDelete(id, label) {
+  document.getElementById('confirm-title').textContent = `Delete "${label}"?`;
+  document.getElementById('confirm-text').textContent = `This will permanently remove the project.`;
+  confirmFn = async () => {
+    try {
+      await fetch(`/api/agentic-projects?id=${id}`, {method:'DELETE'});
+      closeConfirmModal();
+      await load();
+    } catch(e) { alert('Error · ' + e.message); }
+  };
+  document.getElementById('confirm-modal').classList.add('open');
+}
+function closeConfirmModal() { document.getElementById('confirm-modal').classList.remove('open'); confirmFn = null; }
+function confirmAction() { if (confirmFn) confirmFn(); }
+
+window.openProjModal = openProjModal;
+window.closeProjModal = closeProjModal;
+window.saveProj = saveProj;
+window.askDelete = askDelete;
+window.closeConfirmModal = closeConfirmModal;
+window.confirmAction = confirmAction;
+load();
+setInterval(load, 60000);
+</script>
+</body>
+</html>
