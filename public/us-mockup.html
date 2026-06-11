@@ -385,6 +385,61 @@
   .view { display: none; }
   .view.active { display: block; }
 
+  /* Arm live data */
+  .arm-live {
+    background: var(--card);
+    border: 1px solid var(--hair);
+    border-radius: 8px;
+    padding: 22px;
+    margin-top: 8px;
+  }
+  .arm-live .live-row {
+    display: flex;
+    gap: 24px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--hair);
+    font-size: 14px;
+  }
+  .arm-live .live-row:last-child { border-bottom: none; }
+  .arm-live .live-label {
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 11px;
+    min-width: 120px;
+    padding-top: 2px;
+  }
+  .arm-live .live-val {
+    color: var(--ink);
+    flex: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .arm-live .live-val .badge {
+    display: inline-block;
+    background: var(--amber-soft);
+    color: var(--ink);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .arm-live .live-source {
+    font-size: 10px;
+    color: var(--ink-faint);
+    text-align: right;
+    margin-top: 14px;
+    font-family: var(--mono);
+  }
+  .arm-live .live-led {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #6BAE73;
+    border-radius: 50%;
+    margin-right: 6px;
+    animation: pulse-stroke 1.6s ease-in-out infinite;
+  }
+
   /* Footer note */
   .footer-note {
     font-size: 11px;
@@ -553,42 +608,30 @@
       </div>
     </section>
 
-    <!-- Arm stubs -->
+    <!-- Arm pages · LIVE DATA from /arms.json + /arms-kanban.json -->
     <section id="arm-curiosity" class="view">
-      <div class="breadcrumb"><span>Curiosity arm</span></div>
-      <div class="stub-content">
-        <div class="stub-emoji">🌱</div>
-        <h2>Curiosity</h2>
-        <p>Wide exploration · 9Q multi-angle · novelty-seeking.</p>
-        <p style="margin-top:16px;">v1 stub · per-arm page extends here.</p>
-      </div>
+      <div class="breadcrumb"><a onclick="show('us-landing')">Us</a> <span>›</span> <span>Curiosity arm</span></div>
+      <h1>🌱 Curiosity</h1>
+      <div class="subtitle" id="arm-curiosity-subtitle">Wide exploration · 9Q multi-angle · novelty-seeking.</div>
+      <div id="arm-curiosity-live" class="arm-live">Loading live data…</div>
     </section>
     <section id="arm-research" class="view">
-      <div class="breadcrumb"><span>Research arm</span></div>
-      <div class="stub-content">
-        <div class="stub-emoji">📖</div>
-        <h2>Research</h2>
-        <p>Deep dives · 9Q-per-source · synthesis with citations.</p>
-        <p style="margin-top:16px;">v1 stub · per-arm page extends here.</p>
-      </div>
+      <div class="breadcrumb"><a onclick="show('us-landing')">Us</a> <span>›</span> <span>Research arm</span></div>
+      <h1>📖 Research</h1>
+      <div class="subtitle" id="arm-research-subtitle">Deep dives · 9Q-per-source · synthesis with citations.</div>
+      <div id="arm-research-live" class="arm-live">Loading live data…</div>
     </section>
     <section id="arm-dream" class="view">
-      <div class="breadcrumb"><span>Dream arm</span></div>
-      <div class="stub-content">
-        <div class="stub-emoji">🌙</div>
-        <h2>Dream</h2>
-        <p>F5 compose-pair · cross-time arousal walk · overnight integration.</p>
-        <p style="margin-top:16px;">v1 stub · per-arm page extends here.</p>
-      </div>
+      <div class="breadcrumb"><a onclick="show('us-landing')">Us</a> <span>›</span> <span>Dream arm</span></div>
+      <h1>🌙 Dream</h1>
+      <div class="subtitle" id="arm-dream-subtitle">F5 compose-pair · cross-time arousal walk · overnight integration.</div>
+      <div id="arm-dream-live" class="arm-live">Loading live data…</div>
     </section>
     <section id="arm-pascal" class="view">
-      <div class="breadcrumb"><span>Pascal arm</span></div>
-      <div class="stub-content">
-        <div class="stub-emoji">🤝</div>
-        <h2>Pascal</h2>
-        <p>Pascal-prep · Monday-call · 1-pagers · coach-tools.</p>
-        <p style="margin-top:16px;">v1 stub · per-arm page extends here.</p>
-      </div>
+      <div class="breadcrumb"><a onclick="show('us-landing')">Us</a> <span>›</span> <span>Pascal arm</span></div>
+      <h1>🤝 Pascal</h1>
+      <div class="subtitle" id="arm-pascal-subtitle">Pascal-prep · Monday-call · 1-pagers · coach-tools.</div>
+      <div id="arm-pascal-live" class="arm-live">Loading live data…</div>
     </section>
 
   </main>
@@ -622,10 +665,63 @@
 <div class="footer-note">atlasos.me v1 mockup · 2026-06-10 · Notion-style drill-down · modular foundation · take-code-not-design</div>
 
 <script>
+  // Live arm-data cache · fetched once · refreshed on demand
+  let armsData = null;
+  let armsKanban = null;
+  async function loadArmsData() {
+    try {
+      const [a, k] = await Promise.all([
+        fetch('/arms.json').then(r => r.json()),
+        fetch('/arms-kanban.json').then(r => r.json())
+      ]);
+      armsData = a;
+      armsKanban = k;
+      renderArmLive('curiosity');
+      renderArmLive('research');
+      renderArmLive('dream');
+      renderArmLive('pascal');
+    } catch (e) {
+      console.warn('arms-data load failed', e);
+    }
+  }
+  function renderArmLive(armKey) {
+    const el = document.getElementById('arm-' + armKey + '-live');
+    if (!el) return;
+    if (!armsData || !armsKanban) { el.textContent = 'data not loaded'; return; }
+    // Find arm object · try direct match + aliases
+    const aliases = { curiosity: ['CURIOSITY','curiosity'], research: ['RESEARCH','researcher-worker','research'], dream: ['DREAM','dream'], pascal: ['PASCAL','pascal'] };
+    const tryNames = aliases[armKey] || [armKey];
+    const armObj = (armsData.arms || []).find(a => tryNames.includes(a.name) || tryNames.includes((a.name||'').toLowerCase()));
+    const kanbanObj = (armsKanban.arms || {})[armKey] || (armsKanban.arms || {})[tryNames.find(n => armsKanban.arms && armsKanban.arms[n])] || null;
+    if (!armObj && !kanbanObj) { el.innerHTML = '<div class="live-row"><span class="live-label">status</span><span class="live-val">no live data yet · arm idle</span></div>'; return; }
+    const rows = [];
+    if (armObj) {
+      if (armObj.status) rows.push(['status', '<span class="badge"><span class="live-led"></span>' + armObj.status + '</span>']);
+      if (armObj.role) rows.push(['role', armObj.role]);
+      if (armObj.last_fire) rows.push(['last fire', armObj.last_fire]);
+      if (armObj.next_action) rows.push(['next', armObj.next_action]);
+      if (armObj.last_brain_bank) rows.push(['last brain bank', armObj.last_brain_bank]);
+      if (Array.isArray(armObj.blockers) && armObj.blockers.length) rows.push(['blockers', armObj.blockers.join(' · ')]);
+    }
+    if (kanbanObj && kanbanObj.counts) {
+      const c = kanbanObj.counts;
+      const summary = Object.entries(c).map(([k,v]) => k + ': ' + v).join(' · ');
+      rows.push(['kanban', summary]);
+      if (kanbanObj.running && kanbanObj.running.length) rows.push(['running', kanbanObj.running.length + ' task(s)']);
+    }
+    el.innerHTML = rows.map(([l,v]) => '<div class="live-row"><span class="live-label">' + l + '</span><span class="live-val">' + v + '</span></div>').join('') +
+      '<div class="live-source">live · /arms.json + /arms-kanban.json · refreshed ' + (armsKanban.generated_at || armsData.generated_at || '') + '</div>';
+  }
+  loadArmsData();
+  setInterval(loadArmsData, 60000); // refresh every minute
+
   function show(id) {
     document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
     const target = document.getElementById(id);
     if (target) target.classList.add('active');
+    // Re-render arm live if showing arm page
+    const armMatch = id.match(/^arm-(curiosity|research|dream|pascal)$/);
+    if (armMatch) renderArmLive(armMatch[1]);
     // Update right nav active state
     document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
     // Map drill states back to Us nav for highlight
