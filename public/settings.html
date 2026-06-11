@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>atlasos.me · settings</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+  [data-theme="dark"]{--bg:#1A1820;--card:#26222C;--ink:#FFFDF8;--ink-soft:#C7BFB3;--ink-faint:#8590A2;--hair:#2F2A36}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh}
+  .topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;gap:14px}
+  .brand{font-family:var(--serif);font-size:18px}.brand .dot{color:var(--amber)}
+  .crumb{color:var(--ink-faint);font-size:12px}.crumb a{color:var(--ink-soft);text-decoration:none}
+  .container{max-width:720px;margin:0 auto;padding:32px 32px}
+  h1{font-family:var(--serif);font-size:30px;font-weight:400;margin-bottom:6px}
+  .subtitle{color:var(--ink-faint);font-size:13px;margin-bottom:24px;font-style:italic}
+  .section{background:var(--card);border:1px solid var(--hair);border-radius:8px;padding:18px 22px;margin-bottom:14px}
+  .section h3{font-family:var(--serif);font-size:18px;font-weight:400;margin-bottom:14px;border-bottom:1px solid var(--hair);padding-bottom:6px}
+  .row{display:flex;gap:14px;align-items:center;padding:8px 0;border-bottom:1px solid var(--hair)}
+  .row:last-child{border-bottom:none}
+  .row label{flex:1;font-size:14px;color:var(--ink)}
+  .row .meta{font-size:11px;color:var(--ink-faint);font-family:var(--mono);text-transform:uppercase;letter-spacing:0.5px}
+  .seg{display:inline-flex;gap:0;border:1px solid var(--hair);border-radius:5px;overflow:hidden}
+  .seg button{padding:6px 14px;background:transparent;border:none;color:var(--ink-soft);font-family:inherit;font-size:13px;cursor:pointer}
+  .seg button.active{background:var(--amber-soft);color:var(--ink)}
+  select,input[type="number"]{padding:6px 10px;border:1px solid var(--hair);background:var(--bg);border-radius:5px;font-family:inherit;font-size:13px;color:var(--ink)}
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">·</span>me</div>
+  <div class="crumb"><a href="/us.html">Us</a> · settings</div>
+  <svg viewBox="0 0 120 24" width="120" height="24" style="margin-left:auto;opacity:0.7;"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" style="animation:ecg-pulse 1.6s infinite"/></svg>
+</header>
+<div class="container">
+  <h1>Settings</h1>
+  <div class="subtitle">brother + Atlas preferences · saved local + cookie · synced</div>
+
+  <div class="section">
+    <h3>Theme</h3>
+    <div class="row">
+      <label>Color mode</label>
+      <div class="seg" id="theme-seg">
+        <button data-theme="light">Light</button>
+        <button data-theme="dark">Dark</button>
+        <button data-theme="auto">Auto</button>
+      </div>
+    </div>
+    <div class="row">
+      <label>Language</label>
+      <div class="seg" id="lang-seg">
+        <button data-lang="en">English</button>
+        <button data-lang="fr-CA">Français (QC)</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Arm cadence overrides</h3>
+    <div class="row"><label>🧠 Hermes</label><input type="number" id="cad-hermes" value="30" min="5" max="1440"><span class="meta">min</span></div>
+    <div class="row"><label>🤝 Pascal</label><input type="number" id="cad-pascal" value="60" min="5" max="1440"><span class="meta">min</span></div>
+    <div class="row"><label>✋ Code</label><input type="number" id="cad-code" value="90" min="5" max="1440"><span class="meta">min</span></div>
+    <div class="row"><label>🌱 Curiosity</label><input type="number" id="cad-curiosity" value="120" min="5" max="1440"><span class="meta">min</span></div>
+    <div class="row"><label>💗 Infra</label><input type="number" id="cad-infra" value="180" min="5" max="1440"><span class="meta">min</span></div>
+    <div class="row"><label>👁 Research</label><input type="number" id="cad-research" value="240" min="5" max="1440"><span class="meta">min</span></div>
+    <div class="row"><label>🌙 Dream</label><input type="number" id="cad-dream" value="360" min="5" max="1440"><span class="meta">min</span></div>
+    <div class="row"><label>💼 Charle</label><input type="number" id="cad-charle" value="720" min="5" max="1440"><span class="meta">min</span></div>
+  </div>
+
+  <div class="section">
+    <h3>Notifications</h3>
+    <div class="row"><label>Signal on arm-run with high-arousal finding</label><div class="seg" id="notif-arm"><button data-notif="on">On</button><button data-notif="off">Off</button></div></div>
+    <div class="row"><label>Daily morning briefing</label><div class="seg" id="notif-brief"><button data-notif="on">On</button><button data-notif="off">Off</button></div></div>
+  </div>
+
+  <div class="section">
+    <h3>Reset</h3>
+    <p style="color:var(--ink-soft);font-size:13px;margin-bottom:10px;">Restore all defaults · re-fetch arm-configs from server.</p>
+    <button onclick="resetAll()" style="padding:8px 16px;background:var(--amber);color:white;border:none;border-radius:5px;cursor:pointer;font-family:inherit;font-size:13px;">Reset to defaults</button>
+  </div>
+
+  <p style="font-family:var(--mono);font-size:10px;color:var(--ink-faint);text-align:center;margin-top:24px;text-transform:uppercase;letter-spacing:0.5px;">cadence changes require LaunchAgent regen via me-arm-cadence-sync.sh</p>
+</div>
+
+<script>
+const KEY = 'atlas-settings';
+let prefs = JSON.parse(localStorage.getItem(KEY) || '{}');
+
+function applyTheme(theme) {
+  prefs.theme = theme;
+  if (theme === 'auto') {
+    const dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.body.setAttribute('data-theme', dark ? 'dark' : 'light');
+  } else {
+    document.body.setAttribute('data-theme', theme);
+  }
+  save();
+}
+function setSeg(id, val, attr) {
+  document.querySelectorAll(`#${id} button`).forEach(b => b.classList.toggle('active', b.dataset[attr] === val));
+}
+function save() {
+  localStorage.setItem(KEY, JSON.stringify(prefs));
+  document.cookie = `atlas-prefs=${encodeURIComponent(JSON.stringify(prefs))}; Path=/; Max-Age=2592000`;
+}
+function resetAll() {
+  localStorage.removeItem(KEY);
+  prefs = {};
+  document.cookie = 'atlas-prefs=; Path=/; Max-Age=0';
+  location.reload();
+}
+
+// Init
+applyTheme(prefs.theme || 'light');
+setSeg('theme-seg', prefs.theme || 'light', 'theme');
+setSeg('lang-seg', prefs.lang || 'en', 'lang');
+setSeg('notif-arm', prefs.notif_arm || 'on', 'notif');
+setSeg('notif-brief', prefs.notif_brief || 'on', 'notif');
+for (const arm of ['hermes','pascal','code','curiosity','infra','research','dream','charle']) {
+  const el = document.getElementById(`cad-${arm}`);
+  if (prefs[`cad_${arm}`]) el.value = prefs[`cad_${arm}`];
+  el.addEventListener('change', e => { prefs[`cad_${arm}`] = parseInt(e.target.value); save(); });
+}
+document.querySelectorAll('#theme-seg button').forEach(b => b.addEventListener('click', () => applyTheme(b.dataset.theme)));
+document.querySelectorAll('#lang-seg button').forEach(b => b.addEventListener('click', () => { prefs.lang = b.dataset.lang; setSeg('lang-seg', b.dataset.lang, 'lang'); save(); }));
+document.querySelectorAll('#notif-arm button').forEach(b => b.addEventListener('click', () => { prefs.notif_arm = b.dataset.notif; setSeg('notif-arm', b.dataset.notif, 'notif'); save(); }));
+document.querySelectorAll('#notif-brief button').forEach(b => b.addEventListener('click', () => { prefs.notif_brief = b.dataset.notif; setSeg('notif-brief', b.dataset.notif, 'notif'); save(); }));
+</script>
+</body>
+</html>

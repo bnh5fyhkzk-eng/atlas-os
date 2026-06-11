@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>atlasos.me · org chart · arms hierarchy</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.55;-webkit-font-smoothing:antialiased;min-height:100vh}
+  .topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;gap:14px}
+  .brand{font-family:var(--serif);font-size:18px}.brand .dot{color:var(--amber)}
+  .crumb{color:var(--ink-faint);font-size:12px}.crumb a{color:var(--ink-soft);text-decoration:none}
+  .container{max-width:1100px;margin:0 auto;padding:36px 32px 80px;text-align:center}
+  h1{font-family:var(--serif);font-size:30px;font-weight:400;margin-bottom:6px}
+  .subtitle{color:var(--ink-faint);font-size:13px;margin-bottom:32px;font-style:italic}
+  svg.org{width:100%;max-width:1000px;margin:0 auto;display:block}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:24px;font-family:var(--mono);font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px}
+  .legend .item{background:var(--card);border:1px solid var(--hair);padding:5px 12px;border-radius:5px}
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">·</span>me</div>
+  <div class="crumb"><a href="/us.html">Us</a> · org chart · arms hierarchy</div>
+  <svg viewBox="0 0 120 24" width="120" height="24" style="margin-left:auto;opacity:0.7;"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" style="animation:ecg-pulse 1.6s infinite"/></svg>
+</header>
+<div class="container">
+  <h1>Atlas-spine · arms hierarchy</h1>
+  <div class="subtitle">click any node to open its arm-page · per #27572 + #27475 + #27474 separate-boards</div>
+  <svg class="org" viewBox="0 0 1000 720" xmlns="http://www.w3.org/2000/svg">
+    <!-- Connections (drawn first so they're behind) -->
+    <line x1="500" y1="80" x2="500" y2="180" stroke="#C28A3E" stroke-width="2"/>
+    <!-- Hermes splits to 4 organs -->
+    <line x1="500" y1="250" x2="180" y2="380" stroke="#C28A3E" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <line x1="500" y1="250" x2="380" y2="380" stroke="#C28A3E" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <line x1="500" y1="250" x2="620" y2="380" stroke="#C28A3E" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <line x1="500" y1="250" x2="820" y2="380" stroke="#C28A3E" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <!-- Pascal under Atlas-spine (direct) -->
+    <line x1="500" y1="80" x2="800" y2="180" stroke="#C28A3E" stroke-width="2"/>
+    <!-- Charle under Pascal -->
+    <line x1="800" y1="250" x2="800" y2="540" stroke="#C28A3E" stroke-width="1.5"/>
+    <!-- Dream under Hermes -->
+    <line x1="500" y1="250" x2="500" y2="540" stroke="#C28A3E" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+    <!-- Atlas-spine (top) -->
+    <a href="/atlas.html">
+      <circle cx="500" cy="50" r="36" fill="#1A2540"/>
+      <text x="500" y="48" text-anchor="middle" fill="#FAF8F4" font-family="Cardo" font-size="18" font-style="italic">Atlas</text>
+      <text x="500" y="64" text-anchor="middle" fill="#E5D4B1" font-family="monospace" font-size="9">spine</text>
+    </a>
+
+    <!-- Row 2 · Hermes + Pascal -->
+    <a href="/arm-page.html?name=hermes">
+      <circle cx="500" cy="220" r="32" fill="#FFFDF8" stroke="#C28A3E" stroke-width="2"/>
+      <text x="500" y="216" text-anchor="middle" fill="#1A2540" font-family="Cardo" font-size="16">🧠</text>
+      <text x="500" y="234" text-anchor="middle" fill="#1A2540" font-family="monospace" font-size="9">Orchestrator</text>
+    </a>
+    <a href="/arm-page.html?name=pascal">
+      <circle cx="800" cy="220" r="32" fill="#FFFDF8" stroke="#C28A3E" stroke-width="2"/>
+      <text x="800" y="216" text-anchor="middle" fill="#1A2540" font-family="Cardo" font-size="16">🤝</text>
+      <text x="800" y="234" text-anchor="middle" fill="#1A2540" font-family="monospace" font-size="9">Pascal · UpliftAI</text>
+    </a>
+
+    <!-- Row 3 · 4 MY-organs + Charle -->
+    <a href="/arm-page.html?name=curiosity">
+      <circle cx="180" cy="420" r="30" fill="#FFFDF8" stroke="#52B370" stroke-width="2"/>
+      <text x="180" y="416" text-anchor="middle" font-size="18">🌱</text>
+      <text x="180" y="436" text-anchor="middle" fill="#1A2540" font-family="monospace" font-size="9">Curiosity</text>
+    </a>
+    <a href="/arm-page.html?name=research">
+      <circle cx="380" cy="420" r="30" fill="#FFFDF8" stroke="#9D7CD8" stroke-width="2"/>
+      <text x="380" y="416" text-anchor="middle" font-size="18">👁</text>
+      <text x="380" y="436" text-anchor="middle" fill="#1A2540" font-family="monospace" font-size="9">Eyes</text>
+    </a>
+    <a href="/arm-page.html?name=code">
+      <circle cx="620" cy="420" r="30" fill="#FFFDF8" stroke="#E8B86B" stroke-width="2"/>
+      <text x="620" y="416" text-anchor="middle" font-size="18">✋</text>
+      <text x="620" y="436" text-anchor="middle" fill="#1A2540" font-family="monospace" font-size="9">Hands</text>
+    </a>
+    <a href="/arm-page.html?name=infra">
+      <circle cx="820" cy="420" r="30" fill="#FFFDF8" stroke="#5A9ED6" stroke-width="2"/>
+      <text x="820" y="416" text-anchor="middle" font-size="18">💗</text>
+      <text x="820" y="436" text-anchor="middle" fill="#1A2540" font-family="monospace" font-size="9">Heart</text>
+    </a>
+
+    <!-- Row 4 · Dream + Charle -->
+    <a href="/arm-page.html?name=dream">
+      <circle cx="500" cy="580" r="30" fill="#FFFDF8" stroke="#A4ADE8" stroke-width="2"/>
+      <text x="500" y="576" text-anchor="middle" font-size="18">🌙</text>
+      <text x="500" y="596" text-anchor="middle" fill="#1A2540" font-family="monospace" font-size="9">Dreamer</text>
+    </a>
+    <a href="/arm-page.html?name=charle">
+      <circle cx="800" cy="580" r="30" fill="#FFFDF8" stroke="#8590A2" stroke-width="2"/>
+      <text x="800" y="576" text-anchor="middle" font-size="18">💼</text>
+      <text x="800" y="596" text-anchor="middle" fill="#1A2540" font-family="monospace" font-size="9">Charle</text>
+    </a>
+
+    <!-- Labels -->
+    <text x="500" y="660" text-anchor="middle" fill="#8590A2" font-family="monospace" font-size="10">Hermes orchestrates 4 MY-organs · Pascal-Charle customer team · Dream cycles overnight</text>
+  </svg>
+
+  <div class="legend">
+    <span class="item">spine = Atlas-self</span>
+    <span class="item">solid line = direct report</span>
+    <span class="item">dashed = orchestration</span>
+    <span class="item">per #27474 separate boards</span>
+  </div>
+</div>
+</body>
+</html>
