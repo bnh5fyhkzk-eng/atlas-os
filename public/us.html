@@ -477,7 +477,12 @@
       <div class="cat-list" id="cat-list-dynamic">
         <div style="color:var(--ink-faint);padding:24px;text-align:center;font-style:italic;">loading categories from Gemma · /gemma-curated.json</div>
       </div>
-      <div class="add-btn" style="margin-top:14px;">+ Add category (ask Gemma)</div>
+      <div style="display:flex;gap:8px;margin-top:14px;align-items:center;">
+        <input id="new-cat-input" type="text" placeholder="+ Add your own category · type name + Enter" onkeydown="if(event.key==='Enter'){addCustomCat();}" style="flex:1;padding:10px 14px;border:1px dashed var(--hair);background:var(--card);border-radius:6px;font-family:inherit;font-size:14px;color:var(--ink);outline:none;" onfocus="this.style.borderColor='var(--amber)';this.style.borderStyle='solid';" onblur="this.style.borderColor='var(--hair)';this.style.borderStyle='dashed';">
+        <button onclick="addCustomCat()" style="padding:10px 18px;background:var(--amber);color:var(--card);border:none;border-radius:6px;font-family:inherit;font-size:13px;cursor:pointer;">Add</button>
+        <button onclick="resetEdits()" style="padding:10px 14px;background:transparent;color:var(--ink-faint);border:1px solid var(--hair);border-radius:6px;font-family:inherit;font-size:12px;cursor:pointer;" title="reset all your edits">Reset</button>
+      </div>
+      <div style="margin-top:10px;font-size:11px;color:var(--ink-faint);font-family:var(--mono);">tip · click any category name to rename · drag ⋮⋮ to reorder · ✕ to hide · your edits stay on your device</div>
     </section>
 
     <!-- US PAGE · DRILL 1 · Research + data -->
@@ -643,26 +648,76 @@
 <script>
   // GEMMA-CURATED · Gemma own-categories with provenance · #45122 + brother direct 2026-06-10 21:50
   let gemmaCurated = null;
-  // LOCAL EDITS · stored in browser · merge with Gemma server data on render
-  // Lets brother+Atlas rename categories + customize without losing Gemma's auto-fill
+  // NOTION-STYLE EDITS · inline rename + reorder + hide + add custom
+  // Stored in browser · merges with Gemma server data on render
   function loadEdits() {
-    try { return JSON.parse(localStorage.getItem('atlas-cat-edits') || '{}'); }
-    catch { return {}; }
+    try {
+      const v2 = localStorage.getItem('atlas-cat-edits-v2');
+      if (v2) return JSON.parse(v2);
+      // Migrate v1 to v2 shape
+      const v1 = JSON.parse(localStorage.getItem('atlas-cat-edits') || '{}');
+      const renames = {};
+      for (const k of Object.keys(v1)) if (v1[k].name) renames[k] = v1[k].name;
+      return { renames, order: [], hidden: [], custom: {} };
+    } catch { return { renames:{}, order:[], hidden:[], custom:{} }; }
   }
-  function saveEdits(edits) {
-    try { localStorage.setItem('atlas-cat-edits', JSON.stringify(edits)); } catch {}
+  function saveEdits(e) {
+    try { localStorage.setItem('atlas-cat-edits-v2', JSON.stringify(e)); } catch {}
   }
-  function applyEdit(catKey, displayName) {
+  function commitInlineRename(catKey, el) {
     const edits = loadEdits();
-    if (displayName && displayName.trim()) edits[catKey] = { name: displayName.trim() };
-    else delete edits[catKey];
+    const fresh = el.textContent.trim();
+    const original = catKey.replace(/-/g, ' ');
+    if (fresh && fresh !== original) edits.renames[catKey] = fresh;
+    else delete edits.renames[catKey];
     saveEdits(edits);
     loadGemmaCurated();
   }
-  function promptRenameCat(catKey, currentName) {
-    const newName = prompt(`Rename category "${currentName}" to · (blank to reset · cancel to keep)`, currentName);
-    if (newName === null) return;
-    applyEdit(catKey, newName);
+  function hideCat(catKey, ev) {
+    ev.stopPropagation();
+    if (!confirm('Hide this category? (you can Reset to show again)')) return;
+    const edits = loadEdits();
+    if (!edits.hidden.includes(catKey)) edits.hidden.push(catKey);
+    saveEdits(edits);
+    loadGemmaCurated();
+  }
+  function addCustomCat() {
+    const input = document.getElementById('new-cat-input');
+    const name = input.value.trim();
+    if (!name) { input.focus(); return; }
+    const edits = loadEdits();
+    const key = 'custom-' + name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'').substring(0,40);
+    edits.custom[key] = { name, createdAt: new Date().toISOString().substring(0,10) };
+    saveEdits(edits);
+    input.value = '';
+    loadGemmaCurated();
+  }
+  function resetEdits() {
+    if (!confirm('Reset all your edits to Gemma defaults?')) return;
+    localStorage.removeItem('atlas-cat-edits-v2');
+    localStorage.removeItem('atlas-cat-edits');
+    loadGemmaCurated();
+  }
+  // Drag-drop reorder
+  let dragKey = null;
+  function dragStart(e, key) { dragKey = key; e.dataTransfer.effectAllowed = 'move'; }
+  function dragOver(e) { e.preventDefault(); e.dataTransfer.dropEffect = 'move'; }
+  function dragDrop(e, toKey) {
+    e.preventDefault();
+    if (!dragKey || dragKey === toKey) return;
+    const edits = loadEdits();
+    // Build full order list from current Gemma + custom
+    const allKeys = Object.keys(gemmaCurated?.curated || {}).concat(Object.keys(edits.custom || {}));
+    let order = edits.order.length ? edits.order.filter(k => allKeys.includes(k)) : allKeys.slice();
+    for (const k of allKeys) if (!order.includes(k)) order.push(k);
+    const fi = order.indexOf(dragKey);
+    if (fi >= 0) order.splice(fi, 1);
+    const ti = order.indexOf(toKey);
+    order.splice(ti < 0 ? order.length : ti, 0, dragKey);
+    edits.order = order;
+    saveEdits(edits);
+    dragKey = null;
+    loadGemmaCurated();
   }
 
   function catEmoji(name) {
@@ -695,30 +750,47 @@
         const subs = cats.reduce((acc, [_, c]) => acc + Object.keys(c.subcategories || {}).length, 0);
         const when = (gemmaCurated.generated_at || '').replace('T',' ').replace('Z',' UTC');
         banner.innerHTML = `<span style="color:var(--amber);font-weight:500;">🧠 Gemma curating</span> · ${cats.length} own-categories · ${subs} sub-cats · ${gemmaCurated.items_total} items · auto-fed from Mac mini files · refresh 30min · last <span style="color:var(--ink);">${when}</span>`;
-        // Sort by item count descending · most-active first
-        cats.sort((a, b) => {
-          const aN = Object.values(a[1].subcategories || {}).reduce((s, items) => s + items.length, 0);
-          const bN = Object.values(b[1].subcategories || {}).reduce((s, items) => s + items.length, 0);
-          return bN - aN;
-        });
         const edits = loadEdits();
-        list.innerHTML = cats.map(([cat, entry]) => {
+        // Filter hidden
+        let visibleCats = cats.filter(([k]) => !edits.hidden.includes(k));
+        // Add custom categories
+        const customEntries = Object.entries(edits.custom || {}).map(([k, c]) => [k, { description: '(your custom · empty)', subcategories: {}, _custom: true }]);
+        visibleCats = visibleCats.concat(customEntries);
+        // Apply user-defined order, else item-count desc
+        if (edits.order.length) {
+          const orderMap = new Map(edits.order.map((k, i) => [k, i]));
+          visibleCats.sort((a, b) => {
+            const ai = orderMap.has(a[0]) ? orderMap.get(a[0]) : 9999;
+            const bi = orderMap.has(b[0]) ? orderMap.get(b[0]) : 9999;
+            return ai - bi;
+          });
+        } else {
+          visibleCats.sort((a, b) => {
+            const aN = Object.values(a[1].subcategories || {}).reduce((s, items) => s + items.length, 0);
+            const bN = Object.values(b[1].subcategories || {}).reduce((s, items) => s + items.length, 0);
+            return bN - aN;
+          });
+        }
+        list.innerHTML = visibleCats.map(([cat, entry]) => {
           const subCount = Object.keys(entry.subcategories || {}).length;
           const itemCount = Object.values(entry.subcategories || {}).reduce((a, items) => a + items.length, 0);
           const desc = (entry.description || '').substring(0, 80);
-          const editedName = edits[cat]?.name;
-          const displayName = editedName || cat.replace(/-/g, ' ');
+          const editedName = edits.renames[cat];
+          const displayName = editedName || cat.replace(/^custom-/, '').replace(/-/g, ' ');
           const isEdited = !!editedName;
-          return `<div class="cat-row" style="display:flex;align-items:center;">
-            <span class="emoji" onclick="showGemmaCat('${cat.replace(/'/g, "\\'")}')" style="cursor:pointer;">${catEmoji(cat)}</span>
-            <span class="name" onclick="showGemmaCat('${cat.replace(/'/g, "\\'")}')" style="cursor:pointer;">${displayName}${isEdited ? ' <span style="font-size:9px;color:var(--amber);background:var(--amber-soft);padding:1px 4px;border-radius:3px;letter-spacing:0;">edited</span>' : ''}</span>
-            <span class="meta" onclick="showGemmaCat('${cat.replace(/'/g, "\\'")}')" style="cursor:pointer;">
+          const isCustom = entry._custom;
+          const catEsc = cat.replace(/'/g, "\\'");
+          return `<div class="cat-row" draggable="true" ondragstart="dragStart(event,'${catEsc}')" ondragover="dragOver(event)" ondrop="dragDrop(event,'${catEsc}')" style="display:flex;align-items:center;gap:8px;">
+            <span style="color:var(--ink-faint);font-size:13px;cursor:grab;padding:0 4px;" title="drag to reorder">⋮⋮</span>
+            <span class="emoji" onclick="showGemmaCat('${catEsc}')" style="cursor:pointer;">${isCustom ? '✨' : catEmoji(cat)}</span>
+            <span class="name" contenteditable="true" spellcheck="false" data-cat="${catEsc}" onblur="commitInlineRename('${catEsc}', this)" onkeydown="if(event.key==='Enter'){event.preventDefault();this.blur();}" style="outline:none;border-bottom:1px dashed transparent;padding:2px 4px;border-radius:3px;cursor:text;" onfocus="this.style.borderBottomColor='var(--amber)';" title="click to rename">${displayName}${isEdited ? ' <span style="font-size:9px;color:var(--amber);background:var(--amber-soft);padding:1px 4px;border-radius:3px;letter-spacing:0;" contenteditable="false">edited</span>' : ''}${isCustom ? ' <span style="font-size:9px;color:var(--amber);background:var(--amber-soft);padding:1px 4px;border-radius:3px;" contenteditable="false">custom</span>' : ''}</span>
+            <span class="meta" onclick="showGemmaCat('${catEsc}')" style="cursor:pointer;margin-left:auto;">
               <span>${subCount} sub${subCount !== 1 ? 's' : ''}</span>
               <span>${itemCount} item${itemCount !== 1 ? 's' : ''}</span>
-              ${desc ? `<span style="opacity:0.7;">${desc}</span>` : ''}
+              ${desc && !isCustom ? `<span style="opacity:0.7;">${desc}</span>` : ''}
             </span>
-            <span style="margin-left:8px;cursor:pointer;color:var(--ink-faint);font-size:11px;padding:4px 8px;" onclick="promptRenameCat('${cat.replace(/'/g, "\\'")}', '${displayName.replace(/'/g, "\\'")}')" title="rename">✎</span>
-            <span class="chevron" onclick="showGemmaCat('${cat.replace(/'/g, "\\'")}')" style="cursor:pointer;">›</span>
+            <span style="cursor:pointer;color:var(--ink-faint);font-size:14px;padding:4px 8px;" onclick="hideCat('${catEsc}',event)" title="hide">✕</span>
+            <span class="chevron" onclick="showGemmaCat('${catEsc}')" style="cursor:pointer;">›</span>
           </div>`;
         }).join('') || '<div style="color:var(--ink-faint);padding:24px;text-align:center;">no Gemma categories yet · cycle every 30min fills</div>';
       }
