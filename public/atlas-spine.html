@@ -37,6 +37,13 @@
   <h1>Atlas spine</h1>
   <div class="subtitle">master dashboard · everything from one page · per ATLAS-SOLO-FINISH /goal step 5</div>
 
+  
+  <div class="priority-panel" id="priority-panel" style="background:linear-gradient(135deg,var(--card),#FFF7E6);border:2px solid var(--amber);border-radius:10px;padding:20px 24px;margin-bottom:24px;">
+    <div style="font-family:var(--mono);font-size:10px;color:var(--amber);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;">Today · TOP 3 priorities (per Hermes-DeepSeek)</div>
+    <div id="priority-content">Loading...</div>
+    <a href="/priority.html" style="font-family:var(--mono);font-size:11px;color:var(--ink-soft);text-decoration:none;margin-top:8px;display:inline-block;">→ Full priorities</a>
+  </div>
+
   <div class="live" id="live">Loading /api/status...</div>
 
   <h2>People · arms · projects</h2>
@@ -88,6 +95,8 @@
     <a class="link" href="/api/status"><div class="icon">📡</div><div class="name">/api/status</div><div class="what">Single health</div></a>
     <a class="link" href="/ultra-final-scorecard.json"><div class="icon">📋</div><div class="name">Ultra-final</div><div class="what">10/10 scorecard</div></a>
     <a class="link" href="/big-push-scorecard.json"><div class="icon">📋</div><div class="name">Big-push</div><div class="what">10/10 scorecard</div></a>
+    <a class="link" href="/hermes-decisions.json"><div class="icon">📡</div><div class="name">Hermes decisions</div><div class="what">DeepSeek log</div></a>
+    <a class="link" href="/fix-everything-scorecard.json"><div class="icon">✅</div><div class="name">Fix-everything</div><div class="what">10/10 scorecard</div></a>
     <a class="link" href="/atlas-solo-scorecard.json"><div class="icon">📋</div><div class="name">Atlas-solo</div><div class="what">10/10 · this /goal</div></a>
     <a class="link" href="/az-scorecard.json"><div class="icon">📋</div><div class="name">A-Z</div><div class="what">12/12 scorecard</div></a>
     <a class="link" href="/morning-brief.md"><div class="icon">☕</div><div class="name">Morning brief</div><div class="what">Daily auto-gen</div></a>
@@ -95,6 +104,17 @@
 
 </div>
 <script>
+
+fetch('/priority.json', {cache:'no-cache'}).then(r => r.json()).then(d => {
+  const items = (d.top_3 || []).slice(0, 3);
+  if (!items.length) { document.getElementById('priority-content').textContent = 'No priorities yet'; return; }
+  document.getElementById('priority-content').innerHTML = items.map((t, i) => 
+    `<div style="margin-bottom:6px;font-size:13px;">${i+1}. ${t.arm_glyph||'·'} <strong>${(t.arm_name||t.arm||'?').replace(/[<>]/g,'')}</strong> · ${t.priority||'P2'} · ${((t.content||'').substring(0,140)).replace(/[<>]/g,'')}</div>`
+  ).join('');
+}).catch(e => {
+  document.getElementById('priority-content').textContent = 'fetch failed';
+});
+
 fetch('/api/status', {cache:'no-cache'}).then(r => r.json()).then(d => {
   document.getElementById('live').innerHTML = `
     arms · <strong>${d.arms?.count || 0}</strong> ·
