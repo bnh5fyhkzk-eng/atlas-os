@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>atlasos.me · cost</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--green:#6BAE73;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh}
+  .topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;gap:14px}
+  .brand{font-family:var(--serif);font-size:18px}.brand .dot{color:var(--amber)}
+  .crumb{color:var(--ink-faint);font-size:12px}.crumb a{color:var(--ink-soft);text-decoration:none}
+  .container{max-width:780px;margin:0 auto;padding:48px 32px}
+  h1{font-family:var(--serif);font-size:32px;font-weight:400;margin-bottom:8px}
+  .subtitle{color:var(--ink-faint);font-size:13px;margin-bottom:24px}
+  .card{background:var(--card);border:1px solid var(--hair);border-radius:8px;padding:18px 22px;margin-bottom:12px}
+  .card h3{font-family:var(--serif);font-size:14px;font-weight:400;margin-bottom:10px;border-bottom:1px solid var(--hair);padding-bottom:6px;color:var(--ink-soft)}
+  .card .value{font-size:24px;font-family:var(--mono);color:var(--ink)}
+  .card .meta{font-size:11px;color:var(--ink-faint);font-family:var(--mono);margin-top:4px;text-transform:uppercase;letter-spacing:0.5px}
+  .badge{display:inline-block;font-family:var(--mono);font-size:10px;background:var(--amber-soft);color:var(--ink);padding:2px 6px;border-radius:3px;margin-left:6px}
+  .badge.green{background:#D8EFDB;color:var(--green)}
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">.</span>me</div>
+  <div class="crumb"><a href="/us.html">Us</a> · cost monitor</div>
+  <svg viewBox="0 0 120 24" width="120" height="24" style="margin-left:auto;opacity:0.7;"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" style="animation:ecg-pulse 1.6s infinite"/></svg>
+</header>
+<div class="container">
+  <h1>Cost monitor</h1>
+  <div class="subtitle">Per ARM-PLAN · OpenRouter balance + per-task + 7-day · live JSON refresh 10min</div>
+  <div id="cost-area">Loading…</div>
+</div>
+<script>
+const escape = s => (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+async function load() {
+  try {
+    const r = await fetch('/cost-monitor.json', {cache:'no-cache'});
+    const d = await r.json();
+    document.getElementById('cost-area').innerHTML = `
+      <div class="card"><h3>OpenRouter balance</h3>
+        <div class="value">${escape(d.sources?.openrouter_balance || 'unknown')}</div>
+        <div class="meta">last update · ${escape(d.generated_at)}</div>
+      </div>
+      <div class="card"><h3>Free-tier sources</h3>
+        <div style="font-size:13px;color:var(--ink-soft);">
+          ${Object.entries(d.sources || {}).filter(([k,v]) => k !== 'openrouter_balance').map(([k,v]) => `<div style="padding:4px 0;display:flex;gap:14px;"><span style="min-width:140px;color:var(--ink-faint);font-family:var(--mono);font-size:11px;text-transform:uppercase;">${escape(k)}</span><span>${escape(v)}</span></div>`).join('')}
+        </div>
+      </div>
+      <div class="card"><h3>Projections</h3>
+        <div style="font-size:13px;color:var(--ink-soft);">7-day · <strong>${escape(d.projected_7d_spend)}</strong></div>
+        <div style="font-size:13px;color:var(--ink-soft);margin-top:6px;">30-day · <strong>${escape(d.projected_30d_spend)}</strong></div>
+      </div>
+      <p style="font-size:11px;color:var(--ink-faint);text-align:center;margin-top:18px;font-family:var(--mono);">${escape(d.note || '')}</p>
+    `;
+  } catch (e) {
+    document.getElementById('cost-area').innerHTML = '<div style="padding:40px;text-align:center;color:var(--ink-faint);font-style:italic;">cost-monitor.json fetch failed · script may not have run yet</div>';
+  }
+}
+load();
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>atlasos.me · speak-here</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh}
+  .topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;gap:14px}
+  .brand{font-family:var(--serif);font-size:18px}.brand .dot{color:var(--amber)}
+  .crumb{color:var(--ink-faint);font-size:12px}.crumb a{color:var(--ink-soft);text-decoration:none}
+  .container{max-width:780px;margin:0 auto;padding:48px 32px 100px}
+  h1{font-family:var(--serif);font-size:32px;font-weight:400;margin-bottom:6px}
+  .subtitle{color:var(--ink-faint);font-size:13px;margin-bottom:24px}
+  .arm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin-bottom:24px}
+  .arm-card{background:var(--card);border:1px solid var(--hair);border-radius:8px;padding:14px;cursor:pointer;text-align:center;transition:border-color 120ms}
+  .arm-card:hover{border-color:var(--amber)}
+  .arm-card.active{border-color:var(--amber);background:var(--amber-soft)}
+  .arm-card .glyph{font-size:24px;margin-bottom:4px}
+  .arm-card .name{font-size:13px;color:var(--ink)}
+  .chat-box{background:var(--card);border:1px solid var(--hair);border-radius:8px;padding:18px;min-height:200px}
+  .chat-box textarea{width:100%;border:1px dashed var(--hair);background:var(--bg);padding:10px;font-family:inherit;font-size:14px;color:var(--ink);outline:none;border-radius:6px;min-height:80px;resize:vertical}
+  .chat-box textarea:focus{border-color:var(--amber)}
+  .chat-box button{margin-top:10px;padding:10px 20px;background:var(--amber);color:var(--card);border:none;border-radius:6px;font-family:inherit;font-size:13px;cursor:pointer}
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">.</span>me</div>
+  <div class="crumb"><a href="/us.html">Us</a> · speak-here mode</div>
+  <svg viewBox="0 0 120 24" width="120" height="24" style="margin-left:auto;opacity:0.7;"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" style="animation:ecg-pulse 1.6s infinite"/></svg>
+</header>
+<div class="container">
+  <h1>Speak-here</h1>
+  <div class="subtitle">click an arm · voice or text chat with that arm's data pre-loaded · per me-os feature #26</div>
+  <div class="arm-grid">
+    <div class="arm-card" onclick="select('pascal')"><div class="glyph">🤝</div><div class="name">Pascal</div></div>
+    <div class="arm-card" onclick="select('curiosity')"><div class="glyph">🌱</div><div class="name">Curiosity</div></div>
+    <div class="arm-card" onclick="select('research')"><div class="glyph">📖</div><div class="name">Research</div></div>
+    <div class="arm-card" onclick="select('dream')"><div class="glyph">🌙</div><div class="name">Dream</div></div>
+    <div class="arm-card" onclick="select('infra')"><div class="glyph">⚙</div><div class="name">Infra</div></div>
+    <div class="arm-card" onclick="select('code')"><div class="glyph">🔧</div><div class="name">Code</div></div>
+    <div class="arm-card" onclick="select('hermes')"><div class="glyph">🧠</div><div class="name">Hermes</div></div>
+    <div class="arm-card" onclick="select('charle')"><div class="glyph">💼</div><div class="name">Charle</div></div>
+    <div class="arm-card" onclick="select('atlas-self')"><div class="glyph">◐</div><div class="name">Atlas-self</div></div>
+  </div>
+  <div class="chat-box">
+    <div id="selected" style="font-family:var(--mono);font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:10px;">select an arm above</div>
+    <textarea id="msg" placeholder="type message · or use voice (browser mic permission)"></textarea>
+    <button onclick="send()">Send to arm</button>
+    <p style="color:var(--ink-faint);font-size:11px;margin-top:14px;font-family:var(--mono);">v1 · UI stub · v2 wires to arm-dispatch /api/arms/dispatch + voice via existing me-hear:8125</p>
+  </div>
+</div>
+<script>
+let armSel = null;
+function select(arm) {
+  armSel = arm;
+  document.querySelectorAll('.arm-card').forEach(c => c.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+  document.getElementById('selected').textContent = 'speaking to · ' + arm;
+}
+function send() {
+  if (!armSel) { alert('select an arm first'); return; }
+  const msg = document.getElementById('msg').value.trim();
+  if (!msg) return;
+  alert(`speak-here · would dispatch to ${armSel} arm · v1 stub · v2 wires real arm-dispatch`);
+}
+</script>
+</body>
+</html>

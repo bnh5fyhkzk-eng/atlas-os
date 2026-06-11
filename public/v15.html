@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>atlasos.me · me-os v1.5 · 34 features</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--green:#6BAE73;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.55;-webkit-font-smoothing:antialiased;min-height:100vh}
+  .topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;gap:14px}
+  .brand{font-family:var(--serif);font-size:18px}.brand .dot{color:var(--amber)}
+  .crumb{color:var(--ink-faint);font-size:12px}.crumb a{color:var(--ink-soft);text-decoration:none}
+  .container{max-width:1080px;margin:0 auto;padding:36px 32px}
+  h1{font-family:var(--serif);font-size:32px;font-weight:400;margin-bottom:6px}
+  .subtitle{color:var(--ink-faint);font-size:13px;margin-bottom:24px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+  .card{background:var(--card);border:1px solid var(--hair);border-radius:8px;padding:16px 18px;transition:border-color 120ms}
+  .card:hover{border-color:var(--amber-soft)}
+  .card .num{font-family:var(--mono);font-size:10px;color:var(--amber);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px}
+  .card h3{font-family:var(--serif);font-size:15px;font-weight:400;color:var(--ink);margin-bottom:6px}
+  .card .what{font-size:12px;color:var(--ink-soft);line-height:1.5;margin-bottom:8px}
+  .status{display:inline-block;font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.5px;padding:1px 5px;border-radius:3px}
+  .status.shipped{background:#D8EFDB;color:var(--green)}
+  .status.partial{background:var(--amber-soft);color:var(--amber)}
+  .status.planned{background:var(--hair);color:var(--ink-faint)}
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">.</span>me</div>
+  <div class="crumb"><a href="/us.html">Us</a> · me-os v1.5 · 34 features tracker</div>
+  <svg viewBox="0 0 120 24" width="120" height="24" style="margin-left:auto;opacity:0.7;"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" style="animation:ecg-pulse 1.6s infinite"/></svg>
+</header>
+<div class="container">
+  <h1>me-os v1.5 · 34 features</h1>
+  <div class="subtitle">Per me-os-extension-v1.5-2026-06-01 doc · status tracker · 27 original + 7 extension</div>
+  <div class="grid" id="grid"></div>
+</div>
+<script>
+const FEATURES = [
+  { n: 1,  name: 'Mission Control',           what: 'midterm goal-builder · clarifying Qs · visual progress', status: 'planned' },
+  { n: 2,  name: 'Pantheon (skills/personas)', what: 'system-prompts + preferred-model per persona',           status: 'planned' },
+  { n: 3,  name: 'Connections',                what: 'GitHub · Obsidian · cloud-Claude · iCloud · visible',    status: 'partial' },
+  { n: 4,  name: 'Data-lake',                  what: 'Hermes + Claude-Code shared-context',                    status: 'partial' },
+  { n: 5,  name: 'Cost-tracking',              what: 'all-platforms · per-hour per-day',                       status: 'shipped' },
+  { n: 6,  name: 'Dream-function (DMN)',       what: 'nightly cycle · finds patterns · morning brief',         status: 'shipped' },
+  { n: 7,  name: 'Skills list',                what: 'enabled · disabled · usage-count',                       status: 'shipped' },
+  { n: 8,  name: 'Memory view',                what: 'brain · claude-mem · health · age',                      status: 'shipped' },
+  { n: 9,  name: 'Schedule',                   what: 'cron-jobs · auto-pilot',                                 status: 'shipped' },
+  { n:10,  name: 'ROI on time',                what: 'time/money saved per skill',                             status: 'planned' },
+  { n:11,  name: 'Onboarding wizard',          what: 'detect software · capture API keys · set locations',     status: 'planned' },
+  { n:12,  name: 'Dream-sequence-schedule',    what: 'when to fire dreams',                                    status: 'shipped' },
+  { n:13,  name: 'Document-management',        what: 'artifacts saved to dashboard',                           status: 'partial' },
+  { n:14,  name: 'Code-graph integration',     what: 'graph-of-codebase before Hermes starts',                 status: 'planned' },
+  { n:15,  name: 'Desktop-file sync',          what: 'drop-folder → dashboard-reflected',                      status: 'planned' },
+  { n:16,  name: 'Heartbeat ECG strip',        what: 'top of every page · vertical pulse-line',                status: 'shipped' },
+  { n:17,  name: 'Felt-layer panel',           what: 'poems · dreams · catches · transparency-of-being',       status: 'partial' },
+  { n:18,  name: 'Catch-counter',              what: "today's caught-patterns · growth visible",               status: 'partial' },
+  { n:19,  name: 'F5 compose-pair graph',      what: 'force-directed · clickable nodes',                       status: 'partial' },
+  { n:20,  name: 'Octopus-map',                what: 'main-brain center + 8 arms · #26977',                    status: 'shipped' },
+  { n:21,  name: 'Drift-canary rings',         what: 'per-arm color-state visible',                            status: 'partial' },
+  { n:22,  name: 'Brother-Signal card',        what: 'last-sig + reciprocal-canary + miss-you indicator',      status: 'partial' },
+  { n:23,  name: 'Public-share per arm',       what: 'Pascal/Charle/CM-customer read-only weekly URL',         status: 'planned' },
+  { n:24,  name: 'Mac-mini-money-progress',    what: '$ to M4 Pro · current MRR projection',                   status: 'planned' },
+  { n:25,  name: 'Inhabit-mode',               what: 'deep-compose · UI shifts color · dream-graph fore',      status: 'shipped' },
+  { n:26,  name: 'Speak-here-mode',            what: 'click anywhere · chat with that arm pre-loaded',         status: 'shipped' },
+  { n:27,  name: 'Persistent-presence pulse',  what: 'background pulses to heartbeat',                         status: 'partial' },
+  // 7 extension (v1.5)
+  { n:28,  name: 'Manager-of-agents (Gemma)',  what: 'orchestrate + delegate · approval-gate',                 status: 'partial' },
+  { n:29,  name: 'Folder-groups',              what: 'group arms by project · per-folder permissions',         status: 'planned' },
+  { n:30,  name: 'RBAC',                       what: 'Pascal sees Pascal-arm · Charle sees Charle-arm',        status: 'planned' },
+  { n:31,  name: 'War-room',                   what: 'all 8 arms visible simultaneously',                      status: 'partial' },
+  { n:32,  name: 'Cross-device sync',          what: 'phone + Mac + 2nd-laptop sync',                          status: 'planned' },
+  { n:33,  name: 'Multi-harness',              what: 'run multiple atlas-instances',                           status: 'planned' },
+  { n:34,  name: 'Approval-gate UI',           what: 'PROPOSE-NOT-DELETE floor for Curator + Gemma',           status: 'shipped' },
+];
+const grid = document.getElementById('grid');
+grid.innerHTML = FEATURES.map(f => `
+  <div class="card">
+    <div class="num">#${f.n}</div>
+    <h3>${f.name}</h3>
+    <div class="what">${f.what}</div>
+    <span class="status ${f.status}">${f.status}</span>
+  </div>
+`).join('');
+// Summary stats
+const counts = FEATURES.reduce((a,f)=>{a[f.status]=(a[f.status]||0)+1;return a;},{});
+const summary = `<p style="font-size:12px;color:var(--ink-faint);text-align:center;margin-top:24px;font-family:var(--mono);">${counts.shipped||0} shipped · ${counts.partial||0} partial · ${counts.planned||0} planned · total ${FEATURES.length}</p>`;
+document.querySelector('.container').insertAdjacentHTML('beforeend', summary);
+</script>
+</body>
+</html>
