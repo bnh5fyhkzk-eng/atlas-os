@@ -201,26 +201,46 @@ function render() {
     </div>
     <div class="arm-role">${escape(id.role || '')}</div>
   `;
-  const blocksHtml = `<div class="blocks" id="block-list">${blocks.map(renderBlock).join('')}</div>`;
-  const addBtn = `<div class="add-block" onclick="addBlockPrompt()">+ Add block · or type "/" on empty line</div>`;
-
-  // Build category-filter chips
-  const categoryCounts = {};
+  // Build NOTION-STYLE category sections · per brother direct 05:25 'arms page still empty'
+  // Group blocks by category · render each as collapsible section with count + first-3-rows preview
+  const categoryGroups = {};
   (armData.blocks || []).forEach(b => {
-    const cat = b.props?.category || 'note';
-    categoryCounts[cat] = (categoryCounts[cat] || 0) + 1;
+    const cat = b.props?.arm_category || b.props?.category || 'note';
+    if (!categoryGroups[cat]) categoryGroups[cat] = [];
+    categoryGroups[cat].push(b);
   });
-  const cats = Object.keys(categoryCounts).sort();
-  const activeCat = sessionStorage.getItem('arm-active-cat-' + armName) || 'all';
-  const chipsHtml = '<div class="cat-filter category-filter-chips">' +
-    '<div class="cat-chip ' + (activeCat==='all'?'active':'') + '" onclick="setCatFilter(\'all\')">all <span class="count">' + (armData.blocks?.length || 0) + '</span></div>' +
-    cats.map(c => `<div class="cat-chip ${activeCat===c?'active':''}" onclick="setCatFilter('${c}')">${c}<span class="count">${categoryCounts[c]}</span></div>`).join('') + 
-    '</div>';
-  blocksHtml = chipsHtml + blocksHtml;
-  // Filter blocks by activeCat
-  if (activeCat !== 'all') {
-    blocks = (armData.blocks || []).filter(b => (b.props?.category || 'note') === activeCat);
+  const categoryOrder = Object.keys(categoryGroups).sort((a, b) => categoryGroups[b].length - categoryGroups[a].length);
+
+  let sectionsHtml = '';
+  for (const cat of categoryOrder) {
+    const catBlocks = categoryGroups[cat];
+    const totalCanons = catBlocks.reduce((sum, b) => sum + (b.data?.length || 0), 0);
+    const blocksRender = catBlocks.map(renderBlock).join('');
+    sectionsHtml += `
+      <section class="cat-section" data-cat="${escape(cat)}" style="margin-bottom:24px;">
+        <h2 style="font-family:var(--serif);font-size:24px;font-weight:400;margin:18px 0 10px;border-bottom:2px solid var(--amber-soft);padding-bottom:6px;display:flex;justify-content:space-between;align-items:baseline;">
+          <span>${escape(cat)}</span>
+          <span style="font-family:var(--mono);font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;">${catBlocks.length} block${catBlocks.length===1?'':'s'} · ${totalCanons} canon${totalCanons===1?'':'s'}</span>
+        </h2>
+        ${blocksRender}
+      </section>
+    `;
   }
+
+  // Filter chips above sections
+  const activeCat = sessionStorage.getItem('arm-active-cat-' + armName) || 'all';
+  const chipsHtml = `<div class="cat-filter" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px;">
+    <div class="cat-chip ${activeCat==='all'?'active':''}" onclick="setCatFilter('all')">all <span class="count">${armData.blocks?.length || 0}</span></div>
+    ${categoryOrder.map(c => `<div class="cat-chip ${activeCat===c?'active':''}" onclick="setCatFilter('${escape(c)}')">${escape(c)}<span class="count">${categoryGroups[c].length}</span></div>`).join('')}
+  </div>`;
+
+  // Filter view if not all
+  if (activeCat !== 'all' && categoryGroups[activeCat]) {
+    sectionsHtml = `<section class="cat-section"><h2 style="font-family:var(--serif);font-size:24px;font-weight:400;margin:18px 0 10px;border-bottom:2px solid var(--amber);padding-bottom:6px;">${escape(activeCat)} <span style="font-family:var(--mono);font-size:11px;color:var(--ink-faint);">${categoryGroups[activeCat].length} blocks</span></h2>${categoryGroups[activeCat].map(renderBlock).join('')}</section>`;
+  }
+
+  const blocksHtml = `<div class="blocks" id="block-list">${chipsHtml}${sectionsHtml}</div>`;
+  const addBtn = `<div class="add-block" onclick="addBlockPrompt()">+ Add block · or type "/" on empty line</div>`;
 
   document.getElementById('content').innerHTML = headerHtml + blocksHtml + addBtn;
   attachHandlers();
