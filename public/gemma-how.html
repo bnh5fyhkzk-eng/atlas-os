@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>atlasos.me · how Gemma fills it</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--serif:'Cardo','Iowan Old Style',Georgia,serif;--sans:'Inter',-apple-system,sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;background:var(--bg);gap:14px}
+  .brand{font-family:var(--serif);font-size:18px}.brand .dot{color:var(--amber)}
+  .crumb{color:var(--ink-faint);font-size:12px}.crumb a{color:var(--ink-soft);text-decoration:none}
+  .container{max-width:780px;margin:0 auto;padding:48px 32px 100px}
+  h1{font-family:var(--serif);font-size:38px;font-weight:400;margin-bottom:6px;letter-spacing:-0.3px}
+  .subtitle{color:var(--ink-faint);font-size:14px;margin-bottom:32px;font-style:italic}
+  h2{font-family:var(--serif);font-size:24px;font-weight:400;border-bottom:1px solid var(--hair);padding-bottom:6px;margin-top:34px;margin-bottom:14px}
+  h3{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--ink);margin-top:20px;margin-bottom:8px}
+  p,li{font-size:15px;line-height:1.7;color:var(--ink-soft);margin-bottom:10px}
+  ul{padding-left:22px}
+  .rules{background:var(--amber-soft);border-left:3px solid var(--amber);padding:18px 22px;border-radius:8px;margin:18px 0;font-family:var(--serif);font-size:16px;color:var(--ink);line-height:1.7}
+  code{background:var(--card);border:1px solid var(--hair);padding:1px 6px;border-radius:3px;font-family:var(--mono);font-size:13px}
+  .pill{display:inline-block;padding:2px 8px;border-radius:3px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.5px;margin-right:6px}
+  .p0{background:#FBE5E1;color:#C03A2B}.p1{background:var(--amber-soft);color:var(--amber)}.p2{background:var(--hair);color:var(--ink-faint)}
+  .nav-back{margin-top:40px;font-size:13px;color:var(--ink-faint)}.nav-back a{color:var(--amber);text-decoration:none}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">.</span>me</div>
+  <div class="crumb"><a href="/us.html">Us</a> · how Gemma fills it</div>
+</header>
+<div class="container">
+  <h1>How Gemma fills atlasos.me</h1>
+  <div class="subtitle">For brother + Atlas + Gemma · so we all know the shape</div>
+
+  <h2>What Gemma does</h2>
+  <p>Gemma 2 2B runs locally on Mac mini · reads files in <code>~/.claude/state/</code> + the live Atlas terminal session · proposes a category + subcategory + priority + summary for each item · writes to <code>/gemma-curated.json</code> · atlasos.me reads it dynamically.</p>
+
+  <h2>The rules Gemma follows</h2>
+  <div class="rules">
+    1. CATEGORY · 2-3 words · kebab-case · SPECIFIC (e.g. <code>pascal-prep</code>, <code>atlas-identity</code>, <code>gemma-install</code>) · never generic (<em>not</em> "general" "system" "files")<br><br>
+    2. SUBCATEGORY · 1-3 words · narrower than category (e.g. category=<code>pascal-prep</code> · sub=<code>monday-call</code> or sub=<code>customer-corpus</code>)<br><br>
+    3. PRIORITY · how urgent for brother + Atlas right now<br><br>
+    4. SUMMARY · 1 clear sentence · what + why · so brother can find it later<br><br>
+    5. Stay POSITIVE · use REAL domain words from the file · NOT vague labels
+  </div>
+
+  <h2>Priority levels</h2>
+  <p><span class="pill p0">P0</span> brother-direct · canon-floor · identity · safety</p>
+  <p><span class="pill p1">P1</span> active project · pascal · arms · atlasos.me build · current focus</p>
+  <p><span class="pill p2">P2</span> research · reference · background · old plans</p>
+
+  <h2>How brother + Atlas can edit (Notion-style)</h2>
+  <ul>
+    <li><strong>Click any category name</strong> on the Us page · inline edit · type new name · blur or Enter saves</li>
+    <li><strong>Drag the ⋮⋮ handle</strong> · reorder categories by importance</li>
+    <li><strong>Add custom category</strong> · type name + Enter in the box at bottom · your own category with ✨ glyph</li>
+    <li><strong>Hide category</strong> · ✕ button · Gemma keeps it · just hidden from your view</li>
+    <li><strong>Reset</strong> · button restores all Gemma defaults</li>
+    <li><strong>Click any item</strong> inside a category · add notes inline · saves to your device</li>
+    <li><strong>Click "view source ↗"</strong> · opens the verbatim original file Gemma read</li>
+  </ul>
+  <p>Your edits persist on YOUR device. Gemma's new auto-fills don't overwrite them.</p>
+
+  <h2>How Gemma runs</h2>
+  <ul>
+    <li>launchd plist · <code>com.uplift.gemma-cycle</code> · fires every 30 minutes</li>
+    <li>3 scripts in pipeline · scan-state (Mac mini files) · curate (terminal session) · categorize (brain banks)</li>
+    <li>Output writes to <code>gemma-curated.json</code> + <code>gemma-sources/</code> (verbatim provenance)</li>
+    <li>Auto-commits + pushes to GitHub · Vercel redeploys · atlasos.me refreshes</li>
+  </ul>
+
+  <h2>What we could add (ideas for later)</h2>
+  <ul>
+    <li>Gemma auto-merges similar categories · "atlas-deploy" + "atlas-deployment" → suggests merge</li>
+    <li>Cross-category tags · "pascal" "brother-direct" "tonight" surface items across categories</li>
+    <li>Search box · find any item by content</li>
+    <li>Atlas writes back to Gemma · accept/reject category proposals</li>
+    <li>Sync notes via /api/notes POST (currently localStorage only)</li>
+    <li>Multiple-subcategory per item · Gemma proposes 2-3 sub-tags not 1</li>
+  </ul>
+
+  <div class="nav-back"><a href="/us.html">← back to Us</a></div>
+</div>
+</body>
+</html>

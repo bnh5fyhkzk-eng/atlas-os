@@ -860,12 +860,19 @@
     const items = Object.entries(entry.subcategories || {}).flatMap(([sub, list]) =>
       list.map(it => ({ ...it, _sub: sub }))
     );
+    // Sort by priority · P0 first · then P1 · then P2
+    const prioOrder = { P0: 0, P1: 1, P2: 2 };
+    items.sort((a, b) => (prioOrder[a.priority] ?? 3) - (prioOrder[b.priority] ?? 3));
     const html = items.map(it => {
       const itemId = it.id || (it.source_path || '').substring(0,80);
       const note = notes[itemId];
       const sourceLink = it.source_file || (it.source_path ? `file://${it.source_path}` : '');
-      return `<div class="note-card" style="position:relative;">
+      const prio = it.priority || 'P2';
+      const prioColor = prio === 'P0' ? '#C03A2B' : (prio === 'P1' ? 'var(--amber)' : 'var(--ink-faint)');
+      const prioBg = prio === 'P0' ? '#FBE5E1' : (prio === 'P1' ? 'var(--amber-soft)' : 'var(--hair)');
+      return `<div class="note-card" style="position:relative;border-left:3px solid ${prioColor};">
         <div class="nt-title">
+          <span style="font-size:10px;color:${prioColor};background:${prioBg};padding:2px 6px;border-radius:3px;text-transform:uppercase;letter-spacing:0.5px;margin-right:4px;font-weight:600;">${prio}</span>
           <span style="font-size:10px;color:var(--amber);background:var(--amber-soft);padding:1px 6px;border-radius:3px;text-transform:uppercase;letter-spacing:0.5px;margin-right:6px;">${escapeHtml(it._sub)}</span>
           ${escapeHtml((it.source_filename || it.id || '').substring(0,80))}
         </div>
