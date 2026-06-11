@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-11T10:41:32Z",
+  "generated_at": "2026-06-11T10:46:48Z",
   "source": "me-gemma-tier-into-7-cats.py (rule-based router · per brother direct #45099 1-YOU-2-ME-3-WORLD)",
-  "items_total": 3,
+  "items_total": 6,
   "tier_summary": {
     "atlas": {
       "subs": 2,
@@ -25,11 +25,11 @@
       "P2": 0
     },
     "manager": {
-      "subs": 1,
-      "items": 1,
+      "subs": 2,
+      "items": 3,
       "P0": 0,
       "P1": 0,
-      "P2": 1
+      "P2": 3
     },
     "arms": {
       "subs": 0,
@@ -46,11 +46,11 @@
       "P2": 0
     },
     "future": {
-      "subs": 0,
-      "items": 0,
+      "subs": 1,
+      "items": 1,
       "P0": 0,
       "P1": 0,
-      "P2": 0
+      "P2": 1
     }
   },
   "tiers": {
@@ -67,10 +67,10 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-001-1781174188",
+                  "id": "batch-001-1781174496",
                   "summary": "Understanding the skill-router's status and potential issues based on the provided Atlas-Spine context.",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-001-1781174188.md",
+                  "source_file": "/gemma-sources/batch-001-1781174496.md",
                   "first_role": "user",
                   "last_timestamp": "2026-06-11T10:09:53",
                   "gemma_raw": "CATEGORY: **Atlas-Spine**\nSUBCATEGORY: **Skill-Router**\nSUMMARY:  Understanding the skill-router's status and potential issues based on the provided Atlas-Spine context.",
@@ -93,10 +93,10 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-002-1781174189",
+                  "id": "batch-002-1781174497",
                   "summary": "Categorizing the Atlas-Spine scorecard generation process and its status.",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-002-1781174189.md",
+                  "source_file": "/gemma-sources/batch-002-1781174497.md",
                   "first_role": "assistant",
                   "last_timestamp": "2026-06-11T10:11:40",
                   "gemma_raw": "CATEGORY: Atlas-Spine\nSUBCATEGORY: Scorecard Generation\nSUMMARY:  Categorizing the Atlas-Spine scorecard generation process and its status.",
@@ -152,10 +152,10 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-003-1781174190",
+                  "id": "batch-003-1781174499",
                   "summary": "This conversation details inventory blind correction patterns and their impact on banked #45607.",
                   "turn_count": 1,
-                  "source_file": "/gemma-sources/batch-003-1781174190.md",
+                  "source_file": "/gemma-sources/batch-003-1781174499.md",
                   "first_role": "assistant",
                   "last_timestamp": "2026-06-11T10:14:08",
                   "gemma_raw": "CATEGORY: **Inventory Management**\nSUBCATEGORY: **Blind Correction Patterns**\nSUMMARY:  This conversation details inventory blind correction patterns and their impact on banked #45607.",
@@ -166,16 +166,58 @@
             }
           },
           "total_items": 1
+        },
+        "mac-mini-files-unsorted": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "state-b6a960c177",
+                  "summary": "",
+                  "priority": "P2",
+                  "source_path": "/Users/collinmacneil/.claude/state/atlas-brother-shared.md",
+                  "source_filename": "atlas-brother-shared.md",
+                  "file_mtime": "2026-06-11 06:45",
+                  "first_role": "mac-mini-file",
+                  "gemma_raw": "## CATEGORY: atlas-brother-shared.md\n## SUBCATEGORY: turn-cycle-fire\n## PRIORITY: P2\n## SUMMARY:  This file contains a self-inventory and a summary of the turn-cycle-fire process.",
+                  "kind": "state-doc",
+                  "_original_cat": "mac-mini-files",
+                  "_original_sub": "unsorted"
+                },
+                {
+                  "id": "state-25b993974c",
+                  "summary": "",
+                  "priority": "P2",
+                  "source_path": "/Users/collinmacneil/.claude/state/daemon-health-alert.md",
+                  "source_filename": "daemon-health-alert.md",
+                  "file_mtime": "2026-06-11 06:45",
+                  "first_role": "mac-mini-file",
+                  "gemma_raw": "##  Daemon Health Alert.md\n\n**CATEGORY:** daemon-health\n**SUBCATEGORY:**  alerts\n**PRIORITY:** P2\n**SUMMARY:**  6 stale daemons detected, check before new build.",
+                  "kind": "state-doc",
+                  "_original_cat": "mac-mini-files",
+                  "_original_sub": "unsorted"
+                }
+              ]
+            }
+          },
+          "total_items": 2
         }
       },
-      "total": 1,
+      "total": 3,
       "priority_counts": {
         "P0": 0,
         "P1": 0,
-        "P2": 1
+        "P2": 3
       },
       "original_categories": [
-        "inventory-management"
+        "inventory-management",
+        "mac-mini-files"
       ]
     },
     "arms": {
@@ -199,14 +241,45 @@
       "original_categories": []
     },
     "future": {
-      "subs": {},
-      "total": 0,
+      "subs": {
+        "dedup-check-28284": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "state-29f62f4e2b",
+                  "summary": "Research on Dedup_Check #28284, skip as already posted.",
+                  "priority": "P2",
+                  "source_path": "/Users/collinmacneil/.claude/state/arm-outputs/research/arm-1781174760-research.md",
+                  "source_filename": "arm-1781174760-research.md",
+                  "file_mtime": "2026-06-11 06:46",
+                  "first_role": "mac-mini-file",
+                  "gemma_raw": "CATEGORY: Dedup_Check\nSUBCATEGORY: #28284\nPRIORITY: P2\nSUMMARY:  Research on Dedup_Check #28284, skip as already posted.",
+                  "kind": "state-doc",
+                  "_original_cat": "dedup-check",
+                  "_original_sub": "28284"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        }
+      },
+      "total": 1,
       "priority_counts": {
         "P0": 0,
         "P1": 0,
-        "P2": 0
+        "P2": 1
       },
-      "original_categories": []
+      "original_categories": [
+        "dedup-check"
+      ]
     }
   }
 }
