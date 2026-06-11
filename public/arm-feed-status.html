@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>atlasos.me · arm feed status</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--green:#6BAE73;--red:#C03A2B;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.55;min-height:100vh}
+  .topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;gap:14px}
+  .brand{font-family:var(--serif);font-size:18px}.brand .dot{color:var(--amber)}
+  .crumb{color:var(--ink-faint);font-size:12px}.crumb a{color:var(--ink-soft);text-decoration:none}
+  .container{max-width:880px;margin:0 auto;padding:32px 32px 80px}
+  h1{font-family:var(--serif);font-size:28px;font-weight:400;margin-bottom:6px}
+  .subtitle{color:var(--ink-faint);font-size:13px;margin-bottom:24px;font-style:italic}
+  .arms{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
+  .arm{background:var(--card);border:1px solid var(--hair);border-left:4px solid var(--amber-soft);border-radius:8px;padding:14px 18px}
+  .arm.fresh{border-left-color:var(--green)}
+  .arm.stale{border-left-color:var(--red)}
+  .arm .top{display:flex;gap:10px;align-items:center;margin-bottom:8px}
+  .arm .glyph{font-size:22px}
+  .arm .name{font-family:var(--serif);font-size:16px;flex:1}
+  .arm .age{font-family:var(--mono);font-size:10px;color:var(--ink-faint);text-transform:uppercase}
+  .arm .last{font-size:12px;color:var(--ink-soft);margin-bottom:6px}
+  .arm .meta{font-family:var(--mono);font-size:10px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;display:flex;gap:8px;flex-wrap:wrap}
+  .arm .meta span{padding:1px 6px;background:var(--hair);border-radius:3px}
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">·</span>me</div>
+  <div class="crumb"><a href="/us.html">Us</a> · <a href="/arms-feed-contract.html">contract</a> · feed status</div>
+  <svg viewBox="0 0 120 24" width="120" height="24" style="margin-left:auto;opacity:0.7;"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" style="animation:ecg-pulse 1.6s infinite"/></svg>
+</header>
+<div class="container">
+  <h1>Arm feed status</h1>
+  <div class="subtitle">last block posted per arm · green = <1h · amber = <6h · red = stale 6h+</div>
+  <div class="arms" id="arms-list">Loading…</div>
+</div>
+<script>
+const escape = s => (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const ARMS = [['pascal','🤝'],['curiosity','🌱'],['research','👁'],['code','✋'],['infra','💗'],['dream','🌙'],['hermes','🧠'],['charle','💼']];
+async function load() {
+  const rows = await Promise.all(ARMS.map(async ([arm, gly]) => {
+    try {
+      const r = await fetch(`/arms-pages/${arm}.json`, {cache:'no-cache'});
+      const d = await r.json();
+      const lastBlock = (d.blocks || [])[d.blocks.length-1];
+      const ts = lastBlock?.updated_at || d.updated_at;
+      const date = ts ? new Date(ts) : null;
+      const ageHrs = date ? (Date.now() - date.getTime()) / 3600000 : null;
+      return { arm, gly, identity: d.identity, blocks: d.blocks?.length || 0, last: lastBlock, ageHrs, ts };
+    } catch(e) { return { arm, gly, error: e.message }; }
+  }));
+  document.getElementById('arms-list').innerHTML = rows.map(r => {
+    const cls = r.ageHrs === null ? 'stale' : r.ageHrs < 1 ? 'fresh' : r.ageHrs < 6 ? '' : 'stale';
+    const ageStr = r.ageHrs === null ? '?' : r.ageHrs < 1 ? `${Math.round(r.ageHrs*60)}m` : `${Math.round(r.ageHrs)}h`;
+    const lastContent = r.last?.content || 'no blocks';
+    return `<div class="arm ${cls}">
+      <div class="top">
+        <span class="glyph">${r.gly}</span>
+        <span class="name">${escape(r.identity?.my_name || r.arm)}</span>
+        <span class="age">${ageStr}</span>
+      </div>
+      <div class="last">${escape(lastContent.substring(0,140))}</div>
+      <div class="meta">
+        <span>blocks · ${r.blocks}</span>
+        ${r.last?.type ? `<span>${escape(r.last.type)}</span>` : ''}
+        ${r.last?.props?.category ? `<span>${escape(r.last.props.category)}</span>` : ''}
+        ${r.last?.props?.priority ? `<span>${escape(r.last.props.priority)}</span>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+}
+load();
+setInterval(load, 30000);
+</script>
+</body>
+</html>
