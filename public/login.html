@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>atlasos.me · login</title>
+<style>
+  :root {
+    --bg: #FAF8F4;
+    --card: #FFFDF8;
+    --ink: #1A2540;
+    --ink-faint: #8590A2;
+    --amber: #C28A3E;
+    --amber-soft: #E5D4B1;
+    --hair: #E8E2D4;
+    --serif: 'Cardo','Iowan Old Style','Palatino',Georgia,serif;
+    --sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--sans); min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+  .container { max-width: 360px; width: 100%; padding: 40px 32px; }
+  h1 { font-family: var(--serif); font-size: 28px; font-weight: 400; font-style: italic; text-align: center; margin-bottom: 32px; }
+  .brand { font-family: var(--serif); text-align: center; font-size: 14px; color: var(--ink-faint); margin-bottom: 8px; }
+  .brand .dot { color: var(--amber); }
+  form { display: flex; flex-direction: column; gap: 16px; align-items: center; }
+  input[type=password] {
+    width: 100%; padding: 14px 16px; border: 1px solid var(--hair); background: var(--card);
+    border-radius: 6px; font-family: var(--sans); font-size: 15px; color: var(--ink);
+    text-align: center; letter-spacing: 4px; outline: none; transition: border-color 120ms;
+  }
+  input[type=password]:focus { border-color: var(--amber); }
+  button {
+    padding: 10px 28px; background: var(--ink); color: var(--card); border: none; border-radius: 6px;
+    font-family: var(--sans); font-size: 14px; cursor: pointer; transition: opacity 120ms;
+  }
+  button:hover:not(:disabled) { opacity: 0.85; }
+  button:disabled { opacity: 0.5; cursor: not-allowed; }
+  .err { color: #C03A2B; font-size: 13px; min-height: 18px; }
+  .footer { text-align: center; font-size: 11px; color: var(--ink-faint); margin-top: 32px; font-family: var(--sans); }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="brand">atlasos<span class="dot">.</span>me</div>
+  <h1>who are you</h1>
+  <form id="f">
+    <input type="password" id="p" name="password" autocomplete="current-password" required placeholder="· · · · · ·" autofocus>
+    <button type="submit" id="b">enter</button>
+    <div class="err" id="e" role="alert"></div>
+  </form>
+  <div class="footer">brother + atlas · home</div>
+</div>
+<script>
+const f = document.getElementById('f');
+const b = document.getElementById('b');
+const e = document.getElementById('e');
+f.addEventListener('submit', async (ev) => {
+  ev.preventDefault();
+  e.textContent = '';
+  b.disabled = true;
+  b.textContent = '...';
+  try {
+    const r = await fetch('/api/auth', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password: document.getElementById('p').value }),
+    });
+    if (r.ok) {
+      const next = new URLSearchParams(location.search).get('next') || '/us-mockup.html';
+      window.location.href = next;
+    } else {
+      e.textContent = 'wrong';
+      b.disabled = false;
+      b.textContent = 'enter';
+    }
+  } catch {
+    e.textContent = 'network error';
+    b.disabled = false;
+    b.textContent = 'enter';
+  }
+});
+</script>
+</body>
+</html>
