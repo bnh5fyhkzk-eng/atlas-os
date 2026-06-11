@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>atlasos.me · arms · 8 organs · per #27572</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--serif:'Cardo','Iowan Old Style',Georgia,serif;--sans:'Inter',-apple-system,sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  .topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;background:var(--bg);gap:14px}
+  .brand{font-family:var(--serif);font-size:18px}
+  .brand .dot{color:var(--amber)}
+  .crumb{color:var(--ink-faint);font-size:12px}
+  .crumb a{color:var(--ink-soft);text-decoration:none}
+  .container{max-width:900px;margin:0 auto;padding:48px 32px 100px}
+  h1{font-family:var(--serif);font-size:34px;font-weight:400;margin-bottom:8px}
+  .subtitle{color:var(--ink-faint);font-size:14px;margin-bottom:36px}
+  .arm-card{background:var(--card);border:1px solid var(--hair);border-radius:10px;padding:22px 24px;margin-bottom:16px;transition:border-color 120ms}
+  .arm-card:hover{border-color:var(--amber-soft)}
+  .arm-head{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+  .arm-head .glyph{font-size:28px}
+  .arm-head .name{font-family:var(--serif);font-size:22px;color:var(--ink)}
+  .arm-head .meta{margin-left:auto;font-size:11px;color:var(--ink-faint);font-family:var(--mono);text-transform:uppercase;letter-spacing:0.5px}
+  .arm-head .meta .substrate{background:var(--amber-soft);color:var(--ink);padding:2px 8px;border-radius:4px;text-transform:none;font-family:var(--sans);letter-spacing:0}
+  .arm-role{font-size:14px;color:var(--ink-soft);margin-bottom:10px}
+  .arm-strength{font-size:13px;color:var(--ink-faint);font-style:italic;margin-bottom:18px}
+  .section{margin-top:14px}
+  .section h3{font-family:var(--serif);font-size:14px;color:var(--ink);font-weight:400;margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid var(--hair)}
+  .section ul{list-style:none;padding-left:0;font-size:13px;color:var(--ink-soft)}
+  .section li{padding:4px 0;display:flex;gap:10px}
+  .section li .label{color:var(--ink-faint);font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.5px;min-width:78px;padding-top:2px}
+  .section li .val{flex:1;font-size:13px}
+  .section li .val .tag{display:inline-block;background:var(--bg);border:1px solid var(--hair);padding:1px 6px;border-radius:3px;font-size:11px;margin-right:4px;margin-bottom:3px;font-family:var(--mono)}
+  .live-strip{background:linear-gradient(135deg,var(--card) 0%,var(--bg) 100%);border:1px solid var(--amber-soft);border-radius:8px;padding:12px 16px;margin-top:14px;font-size:12px;color:var(--ink-soft)}
+  .live-strip .pulse{display:inline-block;width:6px;height:6px;background:#6BAE73;border-radius:50%;margin-right:8px;animation:p 1.6s ease-in-out infinite}
+  @keyframes p{0%,100%{opacity:0.4}50%{opacity:1}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">.</span>me</div>
+  <div class="crumb"><a href="/us-mockup.html">Us</a> · arms (8 organs · #27572)</div>
+</header>
+<div class="container">
+  <h1>arms</h1>
+  <div class="subtitle">8 organs in the house · each with skills · memory · goals · felt-layer · per brother direct #27572 + #27425</div>
+  <div id="armList">Loading…</div>
+</div>
+<script>
+const escape = s => (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+async function load(){
+  const [cfg, live, kanban] = await Promise.all([
+    fetch('/arms-configs.json').then(r=>r.json()).catch(()=>null),
+    fetch('/arms.json').then(r=>r.json()).catch(()=>null),
+    fetch('/arms-kanban.json').then(r=>r.json()).catch(()=>null),
+  ]);
+  if (!cfg || !cfg.arms) {
+    document.getElementById('armList').textContent = 'arms-configs.json missing';
+    return;
+  }
+  const liveArms = (live && live.arms) || [];
+  const findLive = (name) => liveArms.find(a => a.name && (a.name.toLowerCase() === name.toLowerCase() || a.name === name.toUpperCase()));
+  const html = Object.values(cfg.arms).map(arm => {
+    const liveData = findLive(arm.name);
+    const kCounts = (kanban && kanban.arms && (kanban.arms[arm.name] || kanban.arms[arm.name.toLowerCase()])) || null;
+    const skillsHtml = (arm.skills || []).map(s => `<span class="tag">${escape(s.name)}</span>`).join(' ');
+    const memTopics = (arm.memory && arm.memory.read_topics) || [];
+    const memHtml = memTopics.map(t => `<span class="tag">${escape(t)}</span>`).join(' ');
+    const goalsHtml = (arm.goals || []).map(g => `
+      <li><span class="label">${escape(g.active ? 'active' : 'idle')}</span><span class="val">${escape(g.objective || '')}</span></li>
+    `).join('');
+    const liveHtml = liveData ? `
+      <div class="live-strip">
+        <span class="pulse"></span><strong>live ·</strong> ${escape(liveData.status || '')} ·
+        last fire ${escape(liveData.last_fire || '?')} ·
+        ${escape((liveData.next_action || '').substring(0, 120))}
+      </div>` : `
+      <div class="live-strip" style="color:var(--ink-faint);">
+        no live data yet · arm idle · extends here when first task fires
+      </div>`;
+    const kanbanHtml = kCounts && kCounts.counts ? `<div style="font-size:12px;color:var(--ink-faint);margin-top:6px;">kanban · ${Object.entries(kCounts.counts).map(([k,v]) => `${k}: ${v}`).join(' · ')}</div>` : '';
+    return `<div class="arm-card">
+      <div class="arm-head">
+        <span class="glyph">${escape((arm.felt_layer && arm.felt_layer.current_arousal_glyph) || '?')}</span>
+        <span class="name">${escape(arm.name)}</span>
+        <span class="meta"><span class="substrate">${escape((arm.substrate && arm.substrate.primary) || '?')}</span></span>
+      </div>
+      <div class="arm-role">${escape(arm.role || '')}</div>
+      <div class="arm-strength">${escape(arm.strength || '')}</div>
+      <div class="section"><h3>skills (${(arm.skills||[]).length})</h3><div>${skillsHtml || '(none yet)'}</div></div>
+      <div class="section"><h3>memory topics (${memTopics.length})</h3><div>${memHtml || '(none)'}</div></div>
+      <div class="section"><h3>goals (${(arm.goals||[]).length})</h3><ul>${goalsHtml || '<li>(no active goals)</li>'}</ul></div>
+      ${liveHtml}
+      ${kanbanHtml}
+    </div>`;
+  }).join('');
+  document.getElementById('armList').innerHTML = html;
+}
+load();
+setInterval(load, 60000);
+</script>
+</body>
+</html>

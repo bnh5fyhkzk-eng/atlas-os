@@ -652,6 +652,7 @@
     <a class="nav-item" href="/atlas.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">◎</span><span>Atlas (me)</span><span class="stub-tag">live</span></a>
     <a class="nav-item" href="/brain.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🧠</span><span>Brain v3 graph</span><span class="stub-tag">live</span></a>
     <a class="nav-item" href="/octopus.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🐙</span><span>Octopus #26977</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/arms.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🦑</span><span>Arms (8 organs)</span><span class="stub-tag">live</span></a>
     <div class="divider"></div>
     <div class="nav-label">House · Us</div>
     <div class="nav-item active" data-page="us-landing"><span class="ni-icon">◐</span><span>Us</span></div>
@@ -692,11 +693,52 @@
         const cats = Object.keys(gemmaCurated.curated);
         const subs = Object.values(gemmaCurated.curated).reduce((acc, c) => acc + Object.keys(c.subcategories || {}).length, 0);
         const when = (gemmaCurated.generated_at || '').replace('T',' ').replace('Z',' UTC');
-        banner.innerHTML = `<span style="color:var(--amber);font-weight:500;">🧠 Gemma curating</span> · ${cats.length} categories · ${subs} sub-cats · ${gemmaCurated.items_total} items · last update ${when} · <a href="/gemma-curated.json" style="color:var(--amber);">json</a> · <a href="/gemma-sources/" style="color:var(--amber);">sources</a>`;
+        banner.innerHTML = `<span style="color:var(--amber);font-weight:500;">🧠 Gemma curating</span> · ${cats.length} categories · ${subs} sub-cats · ${gemmaCurated.items_total} items · last ${when} · <a onclick="showGemmaIndex()" style="color:var(--amber);cursor:pointer;">browse Gemma categories</a>`;
       }
     } catch (e) {
       console.warn('gemma-curated load fail', e);
     }
+  }
+  function showGemmaIndex() {
+    if (!gemmaCurated) { return; }
+    const cats = gemmaCurated.curated || {};
+    document.getElementById('bc-crumb').textContent = 'Gemma · own categories';
+    document.getElementById('bc-title').innerHTML = '🧠 Gemma·s own categories';
+    document.getElementById('bc-subtitle').textContent = `${Object.keys(cats).length} categories · proposed by Gemma 2 2B local · with verbatim source provenance`;
+    const html = Object.entries(cats).map(([cat, entry]) => {
+      const subCount = Object.keys(entry.subcategories || {}).length;
+      const itemCount = Object.values(entry.subcategories || {}).reduce((a, items) => a + items.length, 0);
+      return `<div class="note-card" onclick="showGemmaCat('${escapeHtml(cat)}')">
+        <div class="nt-title">${escapeHtml(cat)}</div>
+        <div class="nt-preview">${escapeHtml(entry.description || '(no description yet)')}</div>
+        <div class="nt-meta"><span>${subCount} sub-cats</span><span>${itemCount} items</span></div>
+      </div>`;
+    }).join('') || '<div style="color:var(--ink-faint);">no Gemma data yet</div>';
+    document.getElementById('bc-cards').innerHTML = html;
+    show('brain-cat');
+  }
+  function showGemmaCat(cat) {
+    if (!gemmaCurated) return;
+    const entry = (gemmaCurated.curated || {})[cat];
+    if (!entry) return;
+    document.getElementById('bc-crumb').innerHTML = `<a onclick="showGemmaIndex()">Gemma</a> › ${escapeHtml(cat)}`;
+    document.getElementById('bc-title').textContent = cat;
+    document.getElementById('bc-subtitle').textContent = entry.description || '';
+    const html = Object.entries(entry.subcategories || {}).flatMap(([sub, items]) =>
+      items.map(it => `<div class="note-card">
+        <div class="nt-title">${escapeHtml(sub)} · ${escapeHtml((it.source_filename || it.id || '').substring(0, 80))}</div>
+        <div class="nt-preview">${escapeHtml(it.summary || '(no summary)')}</div>
+        <div class="nt-meta">
+          ${it.source_path ? `<span>${escapeHtml(it.source_path).split('/').pop()}</span>` : ''}
+          ${it.source_file ? `<span><a href="${escapeHtml(it.source_file)}" target="_blank" style="color:var(--amber);">view source ↗</a></span>` : ''}
+          ${it.file_mtime ? `<span>${escapeHtml(it.file_mtime)}</span>` : ''}
+          ${it.last_timestamp ? `<span>${escapeHtml(it.last_timestamp)}</span>` : ''}
+          ${it.kind ? `<span class="by">${escapeHtml(it.kind)}</span>` : ''}
+        </div>
+      </div>`)
+    ).join('') || '<div style="color:var(--ink-faint);">no items yet</div>';
+    document.getElementById('bc-cards').innerHTML = html;
+    show('brain-cat');
   }
   loadGemmaCurated();
   setInterval(loadGemmaCurated, 5 * 60 * 1000);
