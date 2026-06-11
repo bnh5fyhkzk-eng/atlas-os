@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-06-11T22:51:49Z",
+  "generated_at": "2026-06-11T22:57:34Z",
   "source": "me-gemma-tier-into-7-cats.py (rule-based router · per brother direct #45099 1-YOU-2-ME-3-WORLD)",
-  "items_total": 11,
+  "items_total": 12,
   "tier_summary": {
     "atlas": {
-      "subs": 1,
-      "items": 1,
+      "subs": 0,
+      "items": 0,
       "P0": 0,
       "P1": 0,
-      "P2": 1
+      "P2": 0
     },
     "us": {
       "subs": 0,
@@ -25,18 +25,18 @@
       "P2": 0
     },
     "manager": {
-      "subs": 10,
+      "subs": 9,
       "items": 10,
       "P0": 0,
       "P1": 0,
       "P2": 10
     },
     "arms": {
-      "subs": 0,
-      "items": 0,
+      "subs": 1,
+      "items": 1,
       "P0": 0,
       "P1": 0,
-      "P2": 0
+      "P2": 1
     },
     "world": {
       "subs": 0,
@@ -46,52 +46,23 @@
       "P2": 0
     },
     "future": {
-      "subs": 0,
-      "items": 0,
+      "subs": 1,
+      "items": 1,
       "P0": 0,
       "P1": 0,
-      "P2": 0
+      "P2": 1
     }
   },
   "tiers": {
     "atlas": {
-      "subs": {
-        "vercel-deploy-api-deployment": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "batch-004-1781217988",
-                  "summary": "This conversation details the deployment of the \"LLM Dreaming\" example to the Vercel API and its associated documentation.",
-                  "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-004-1781217988.md",
-                  "first_role": "assistant",
-                  "last_timestamp": "2026-06-11T21:37:54",
-                  "gemma_raw": "CATEGORY: **Vercel-Deploy**\nSUBCATEGORY: **API-Deployment**\nSUMMARY:  This conversation details the deployment of the \"LLM Dreaming\" example to the Vercel API and its associated documentation.",
-                  "_original_cat": "vercel-deploy",
-                  "_original_sub": "api-deployment"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        }
-      },
-      "total": 1,
+      "subs": {},
+      "total": 0,
       "priority_counts": {
         "P0": 0,
         "P1": 0,
-        "P2": 1
+        "P2": 0
       },
-      "original_categories": [
-        "vercel-deploy"
-      ]
+      "original_categories": []
     },
     "us": {
       "subs": {},
@@ -115,7 +86,7 @@
     },
     "manager": {
       "subs": {
-        "supabase-management-table-audit": {
+        "vercel-deployment-build-process": {
           "subsubs": {
             "P0": {
               "items": []
@@ -126,178 +97,22 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-001-1781217984",
-                  "summary": "Analyzing existing tables in Supabase to assess potential impact of migration.",
+                  "id": "batch-001-1781218331",
+                  "summary": "Analyzing and executing SQL queries to prepare for Vercel deployment.",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-001-1781217984.md",
+                  "source_file": "/gemma-sources/batch-001-1781218331.md",
                   "first_role": "assistant",
-                  "last_timestamp": "2026-06-11T21:27:47",
-                  "gemma_raw": "CATEGORY: Supabase Management\nSUBCATEGORY: Table Audit\nSUMMARY:  Analyzing existing tables in Supabase to assess potential impact of migration.",
-                  "_original_cat": "supabase-management",
-                  "_original_sub": "table-audit"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        },
-        "database-migration-namespace-renaming": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "batch-002-1781217985",
-                  "summary": "This conversation details the process of renaming a Supabase namespace to isolate and migrate data.",
-                  "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-002-1781217985.md",
-                  "first_role": "assistant",
-                  "last_timestamp": "2026-06-11T21:29:11",
-                  "gemma_raw": "CATEGORY: **Database Migration**\nSUBCATEGORY: **Namespace Renaming**\nSUMMARY:  This conversation details the process of renaming a Supabase namespace to isolate and migrate data.",
-                  "_original_cat": "database-migration",
-                  "_original_sub": "namespace-renaming"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        },
-        "vercel-deploy-deployment-script": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "batch-003-1781217987",
-                  "summary": "Analyzing and executing deployment scripts for Vercel environment.",
-                  "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-003-1781217987.md",
-                  "first_role": "assistant",
-                  "last_timestamp": "2026-06-11T21:32:47",
-                  "gemma_raw": "CATEGORY: Vercel Deploy\nSUBCATEGORY: Deployment Script\nSUMMARY:  Analyzing and executing deployment scripts for Vercel environment.",
-                  "_original_cat": "vercel-deploy",
-                  "_original_sub": "deployment-script"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        },
-        "documentation-content-update": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "batch-005-1781217990",
-                  "summary": "Updating the content of atlasos.me based on the provided instructions.",
-                  "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-005-1781217990.md",
-                  "first_role": "user",
-                  "last_timestamp": "2026-06-11T21:42:47",
-                  "gemma_raw": "CATEGORY: **Documentation**\nSUBCATEGORY: **Content Update**\nSUMMARY:  Updating the content of atlasos.me based on the provided instructions.",
-                  "_original_cat": "documentation",
-                  "_original_sub": "content-update"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        },
-        "deployment-workflow-vercel-deploy": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "batch-006-1781217991",
-                  "summary": "Analyzing and documenting the steps involved in deploying Atlas's Vercel-based applications.",
-                  "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-006-1781217991.md",
-                  "first_role": "assistant",
-                  "last_timestamp": "2026-06-11T21:48:36",
-                  "gemma_raw": "CATEGORY: **Deployment Workflow**\nSUBCATEGORY: **Vercel Deploy**\nSUMMARY:  Analyzing and documenting the steps involved in deploying Atlas's Vercel-based applications.",
-                  "_original_cat": "deployment-workflow",
-                  "_original_sub": "vercel-deploy"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        },
-        "deployment-static-file-conflicts": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "batch-007-1781217993",
-                  "summary": "Analyzing and resolving conflicts between static files and React routes during deployment.",
-                  "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-007-1781217993.md",
-                  "first_role": "assistant",
-                  "last_timestamp": "2026-06-11T22:19:48",
-                  "gemma_raw": "CATEGORY: Deployment\nSUBCATEGORY: Static File Conflicts\nSUMMARY:  Analyzing and resolving conflicts between static files and React routes during deployment.",
-                  "_original_cat": "deployment",
-                  "_original_sub": "static-file-conflicts"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        },
-        "vercel-deployment-static-site-optimization": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "batch-008-1781217994",
-                  "summary": "Identifying and addressing issues related to static site serving and SPA routing on Vercel.",
-                  "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-008-1781217994.md",
-                  "first_role": "assistant",
-                  "last_timestamp": "2026-06-11T22:30:38",
-                  "gemma_raw": "CATEGORY: **Vercel Deployment**\nSUBCATEGORY: **Static Site Optimization**\nSUMMARY:  Identifying and addressing issues related to static site serving and SPA routing on Vercel.",
+                  "last_timestamp": "2026-06-11T21:31:44",
+                  "gemma_raw": "CATEGORY: Vercel Deployment\nSUBCATEGORY: Build Process\nSUMMARY:  Analyzing and executing SQL queries to prepare for Vercel deployment.",
                   "_original_cat": "vercel-deployment",
-                  "_original_sub": "static-site-optimization"
+                  "_original_sub": "build-process"
                 }
               ]
             }
           },
           "total_items": 1
         },
-        "fable-integration-fable-development": {
+        "vercel-deployment-api-deployment": {
           "subsubs": {
             "P0": {
               "items": []
@@ -308,22 +123,22 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-009-1781217995",
-                  "summary": "This conversation discusses Fable 5 integration and the user's preference for a more efficient development approach.",
+                  "id": "batch-003-1781218334",
+                  "summary": "This conversation details the deployment of a Vercel API and its associated documentation.",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-009-1781217995.md",
+                  "source_file": "/gemma-sources/batch-003-1781218334.md",
                   "first_role": "assistant",
-                  "last_timestamp": "2026-06-11T22:36:19",
-                  "gemma_raw": "CATEGORY: **Fable Integration**\nSUBCATEGORY: **Fable Development**\nSUMMARY:  This conversation discusses Fable 5 integration and the user's preference for a more efficient development approach.",
-                  "_original_cat": "fable-integration",
-                  "_original_sub": "fable-development"
+                  "last_timestamp": "2026-06-11T21:42:36",
+                  "gemma_raw": "CATEGORY: **Vercel Deployment**\nSUBCATEGORY: **API Deployment**\nSUMMARY:  This conversation details the deployment of a Vercel API and its associated documentation.",
+                  "_original_cat": "vercel-deployment",
+                  "_original_sub": "api-deployment"
                 }
               ]
             }
           },
           "total_items": 1
         },
-        "architecture-specification-home-structure": {
+        "vercel-deployment-static-file-management": {
           "subsubs": {
             "P0": {
               "items": []
@@ -334,15 +149,145 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-010-1781217998",
-                  "summary": "This conversation proposes a home structure specification document for Atlas-OS, outlining room organization and customization options.",
+                  "id": "batch-006-1781218338",
+                  "summary": "Analyzing and resolving conflicts between Vercel's static file serving and React app routes.",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-010-1781217998.md",
+                  "source_file": "/gemma-sources/batch-006-1781218338.md",
                   "first_role": "assistant",
-                  "last_timestamp": "2026-06-11T22:44:32",
-                  "gemma_raw": "CATEGORY: **Architecture Specification**\nSUBCATEGORY: **Home Structure**\nSUMMARY:  This conversation proposes a home structure specification document for Atlas-OS, outlining room organization and customization options.",
-                  "_original_cat": "architecture-specification",
-                  "_original_sub": "home-structure"
+                  "last_timestamp": "2026-06-11T22:25:42",
+                  "gemma_raw": "CATEGORY: Vercel Deployment\nSUBCATEGORY: Static File Management\nSUMMARY:  Analyzing and resolving conflicts between Vercel's static file serving and React app routes.",
+                  "_original_cat": "vercel-deployment",
+                  "_original_sub": "static-file-management"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        },
+        "vercel-deploy-commit-push": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "batch-002-1781218332",
+                  "summary": "Analyzing commit and push actions for Vercel deployment.",
+                  "turn_count": 6,
+                  "source_file": "/gemma-sources/batch-002-1781218332.md",
+                  "first_role": "assistant",
+                  "last_timestamp": "2026-06-11T21:36:22",
+                  "gemma_raw": "CATEGORY: Vercel Deploy\nSUBCATEGORY: Commit Push\nSUMMARY:  Analyzing commit and push actions for Vercel deployment.",
+                  "_original_cat": "vercel-deploy",
+                  "_original_sub": "commit-push"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        },
+        "vercel-deploy-deployment-logs": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "batch-005-1781218337",
+                  "summary": "Analyzing Vercel deployment logs to confirm successful deployment and identify potential issues.",
+                  "turn_count": 6,
+                  "source_file": "/gemma-sources/batch-005-1781218337.md",
+                  "first_role": "assistant",
+                  "last_timestamp": "2026-06-11T22:18:08",
+                  "gemma_raw": "CATEGORY: **Vercel Deploy**\nSUBCATEGORY: **Deployment Logs**\nSUMMARY:  Analyzing Vercel deployment logs to confirm successful deployment and identify potential issues.",
+                  "_original_cat": "vercel-deploy",
+                  "_original_sub": "deployment-logs"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        },
+        "architecture-design-home-automation-system": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "batch-008-1781218342",
+                  "summary": "This conversation discusses the design of a home automation system that integrates various tools and features, including Notion, Google tools, and custom functionalities.",
+                  "turn_count": 6,
+                  "source_file": "/gemma-sources/batch-008-1781218342.md",
+                  "first_role": "assistant",
+                  "last_timestamp": "2026-06-11T22:40:12",
+                  "gemma_raw": "CATEGORY: **Architecture Design**\nSUBCATEGORY: **Home Automation System**\nSUMMARY:  This conversation discusses the design of a home automation system that integrates various tools and features, including Notion, Google tools, and custom functionalities.",
+                  "_original_cat": "architecture-design",
+                  "_original_sub": "home-automation-system"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        },
+        "home-structure-atlas-os-design": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "batch-009-1781218344",
+                  "summary": "**Generating a structured, final document outlining the Atlas-OS home structure and design based on user input and existing documentation.**",
+                  "turn_count": 6,
+                  "source_file": "/gemma-sources/batch-009-1781218344.md",
+                  "first_role": "assistant",
+                  "last_timestamp": "2026-06-11T22:49:43",
+                  "gemma_raw": "CATEGORY: **Home-Structure**\nSUBCATEGORY: **Atlas-OS Design**\nSUMMARY:  **Generating a structured, final document outlining the Atlas-OS home structure and design based on user input and existing documentation.**",
+                  "_original_cat": "home-structure",
+                  "_original_sub": "atlas-os-design"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        },
+        "documentation-technical-guide": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "batch-010-1781218345",
+                  "summary": "This conversation outlines the technical structure and content of a documentation guide.",
+                  "turn_count": 1,
+                  "source_file": "/gemma-sources/batch-010-1781218345.md",
+                  "first_role": "assistant",
+                  "last_timestamp": "2026-06-11T22:51:38",
+                  "gemma_raw": "CATEGORY: **Documentation**\nSUBCATEGORY: **Technical Guide**\nSUMMARY:  This conversation outlines the technical structure and content of a documentation guide.",
+                  "_original_cat": "documentation",
+                  "_original_sub": "technical-guide"
                 }
               ]
             }
@@ -360,12 +305,25 @@
             "P2": {
               "items": [
                 {
+                  "id": "state-479653c3a9",
+                  "summary": "",
+                  "priority": "P2",
+                  "source_path": "/Users/collinmacneil/.claude/state/continuity-log.md",
+                  "source_filename": "continuity-log.md",
+                  "file_mtime": "2026-06-11 18:54",
+                  "first_role": "mac-mini-file",
+                  "gemma_raw": "##  continuity-log.md\n\n**CATEGORY:** atlas-loop\n**SUBCATEGORY:** atlas-cycles\n**PRIORITY:** P1\n**SUMMARY:**  Detailed log of Atlas's loop cycles, including operator research, pricing, and hygiene.",
+                  "kind": "state-doc",
+                  "_original_cat": "mac-mini-files",
+                  "_original_sub": "unsorted"
+                },
+                {
                   "id": "state-54de662ec9",
                   "summary": "",
                   "priority": "P2",
                   "source_path": "/Users/collinmacneil/.claude/state/atlas-HOME-FINAL-PLAN-FOR-FABLE-2026-06-11.md",
                   "source_filename": "atlas-HOME-FINAL-PLAN-FOR-FABLE-2026-06-11.md",
-                  "file_mtime": "2026-06-11 18:51",
+                  "file_mtime": "2026-06-11 18:53",
                   "first_role": "mac-mini-file",
                   "gemma_raw": "## atlas-HOME-FINAL-PLAN-FOR-FABLE-2026-06-11.md\n\n**CATEGORY:** atlas-home\n**SUBCATEGORY:** home-structure\n**PRIORITY:** P1\n**SUMMARY:** This file outlines the plan for building a home for Fable, incorporating Notion-style modularity and a focus on brother and me's needs.",
                   "kind": "state-doc",
@@ -375,7 +333,7 @@
               ]
             }
           },
-          "total_items": 1
+          "total_items": 2
         }
       },
       "total": 10,
@@ -385,27 +343,52 @@
         "P2": 10
       },
       "original_categories": [
-        "architecture-specification",
-        "database-migration",
-        "deployment",
-        "deployment-workflow",
+        "architecture-design",
         "documentation",
-        "fable-integration",
+        "home-structure",
         "mac-mini-files",
-        "supabase-management",
         "vercel-deploy",
         "vercel-deployment"
       ]
     },
     "arms": {
-      "subs": {},
-      "total": 0,
+      "subs": {
+        "routing-spa-configuration": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "batch-007-1781218340",
+                  "summary": "**Categorizing the routing changes to ensure SPA serves at `/arm/*` via explicit ext-less routing.**",
+                  "turn_count": 6,
+                  "source_file": "/gemma-sources/batch-007-1781218340.md",
+                  "first_role": "assistant",
+                  "last_timestamp": "2026-06-11T22:34:19",
+                  "gemma_raw": "CATEGORY: **Routing**\nSUBCATEGORY: **SPA Configuration**\nSUMMARY:  **Categorizing the routing changes to ensure SPA serves at `/arm/*` via explicit ext-less routing.**",
+                  "_original_cat": "routing",
+                  "_original_sub": "spa-configuration"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        }
+      },
+      "total": 1,
       "priority_counts": {
         "P0": 0,
         "P1": 0,
-        "P2": 0
+        "P2": 1
       },
-      "original_categories": []
+      "original_categories": [
+        "routing"
+      ]
     },
     "world": {
       "subs": {},
@@ -418,14 +401,43 @@
       "original_categories": []
     },
     "future": {
-      "subs": {},
-      "total": 0,
+      "subs": {
+        "atlas-task-documentation-update": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "batch-004-1781218336",
+                  "summary": "Updating the atlasos.me documentation based on the provided task and goal.",
+                  "turn_count": 6,
+                  "source_file": "/gemma-sources/batch-004-1781218336.md",
+                  "first_role": "user",
+                  "last_timestamp": "2026-06-11T21:44:09",
+                  "gemma_raw": "CATEGORY: **Atlas-Task**\nSUBCATEGORY: **Documentation Update**\nSUMMARY:  Updating the atlasos.me documentation based on the provided task and goal.",
+                  "_original_cat": "atlas-task",
+                  "_original_sub": "documentation-update"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        }
+      },
+      "total": 1,
       "priority_counts": {
         "P0": 0,
         "P1": 0,
-        "P2": 0
+        "P2": 1
       },
-      "original_categories": []
+      "original_categories": [
+        "atlas-task"
+      ]
     }
   }
 }
