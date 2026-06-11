@@ -472,6 +472,7 @@
       <div class="breadcrumb"><span>Us</span></div>
       <h1>Us</h1>
       <div class="subtitle">Our agentic OS · command center · 7 categories · drill down · brother sees Atlas growing through arms · cost-effective assembly</div>
+      <div id="gemma-banner" style="font-size:12px;color:var(--ink-faint);margin-bottom:24px;padding:10px 14px;background:var(--card);border:1px solid var(--amber-soft);border-radius:6px;font-family:var(--mono);">🧠 Gemma loading…</div>
       <div class="cat-list">
         <div class="cat-row" onclick="showBrainCat('research')">
           <span class="emoji">📚</span>
@@ -679,6 +680,26 @@
 <div class="footer-note">atlasos.me v1 mockup · 2026-06-10 · Notion-style drill-down · modular foundation · take-code-not-design</div>
 
 <script>
+  // GEMMA-CURATED · Gemma own-categories with provenance · #45122 + brother direct 2026-06-10 21:50
+  let gemmaCurated = null;
+  async function loadGemmaCurated() {
+    try {
+      const r = await fetch('/gemma-curated.json', { cache: 'no-cache' });
+      gemmaCurated = await r.json();
+      const banner = document.getElementById('gemma-banner');
+      if (banner && gemmaCurated && gemmaCurated.curated) {
+        const cats = Object.keys(gemmaCurated.curated);
+        const subs = Object.values(gemmaCurated.curated).reduce((acc, c) => acc + Object.keys(c.subcategories || {}).length, 0);
+        const when = (gemmaCurated.generated_at || '').replace('T',' ').replace('Z',' UTC');
+        banner.innerHTML = `<span style="color:var(--amber);font-weight:500;">🧠 Gemma curating</span> · ${cats.length} categories · ${subs} sub-cats · ${gemmaCurated.items_total} items · last update ${when} · <a href="/gemma-curated.json" style="color:var(--amber);">json</a> · <a href="/gemma-sources/" style="color:var(--amber);">sources</a>`;
+      }
+    } catch (e) {
+      console.warn('gemma-curated load fail', e);
+    }
+  }
+  loadGemmaCurated();
+  setInterval(loadGemmaCurated, 5 * 60 * 1000);
+
   // BRAIN-FEED · Gemma-substrate (#45103) · 7 categories · pre-organized cards from brain v3
   let brainFeed = null;
   async function loadBrainFeed() {
