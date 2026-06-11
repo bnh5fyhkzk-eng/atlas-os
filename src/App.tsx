@@ -83,6 +83,9 @@ import ChannelsPage from "@/pages/ChannelsPage";
 import WebhooksPage from "@/pages/WebhooksPage";
 import SystemPage from "@/pages/SystemPage";
 import ChatPage from "@/pages/ChatPage";
+import ArmPage from "@/pages/ArmPage";
+import AtlasManagerPage from "@/pages/AtlasManagerPage";
+import AtlasCanvasPage from "@/pages/AtlasCanvasPage";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import { useI18n } from "@/i18n";
@@ -726,6 +729,11 @@ export default function App() {
                   {routes.map(({ key, path, element }) => (
                     <Route key={key} path={path} element={element} />
                   ))}
+                  {/* Atlas-OS Notion-modular routes · FOUNDATION-REBUILD 2026-06-11 */}
+                  <Route path="/arm/:name" element={<ArmPage />} />
+                  <Route path="/arm/:name/:pageId" element={<ArmPage />} />
+                  <Route path="/manager" element={<AtlasManagerPage />} />
+                  <Route path="/atlas-canvas" element={<AtlasCanvasPage />} />
                   <Route
                     path="*"
                     element={

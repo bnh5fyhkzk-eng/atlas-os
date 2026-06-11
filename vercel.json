@@ -9,6 +9,10 @@
       "source": "/",
       "destination": "/us.html"
     },
+    { "source": "/arm/:name",            "destination": "/us.html" },
+    { "source": "/arm/:name/:pageId",    "destination": "/us.html" },
+    { "source": "/manager",              "destination": "/us.html" },
+    { "source": "/atlas-canvas",         "destination": "/us.html" },
     {
       "source": "/api/auth",
       "destination": "/api/auth"
@@ -45,6 +49,9 @@
       "source": "/api/agentic-reorder",
       "destination": "/api/agentic-reorder"
     },
+    { "source": "/api/atlas-arms",   "destination": "/api/atlas-arms" },
+    { "source": "/api/atlas-pages",  "destination": "/api/atlas-pages" },
+    { "source": "/api/atlas-blocks", "destination": "/api/atlas-blocks" },
     {
       "source": "/api/status",
       "destination": "/api/status"
