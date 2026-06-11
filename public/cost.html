@@ -4,36 +4,48 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
-<title>atlasos.me · cost</title>
+<title>atlasos.me · cost · live OpenRouter</title>
 <style>
-  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--green:#6BAE73;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--green:#6BAE73;--red:#C03A2B;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh}
   .topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;gap:14px}
   .brand{font-family:var(--serif);font-size:18px}.brand .dot{color:var(--amber)}
   .crumb{color:var(--ink-faint);font-size:12px}.crumb a{color:var(--ink-soft);text-decoration:none}
-  .container{max-width:780px;margin:0 auto;padding:48px 32px}
-  h1{font-family:var(--serif);font-size:32px;font-weight:400;margin-bottom:8px}
-  .subtitle{color:var(--ink-faint);font-size:13px;margin-bottom:24px}
-  .card{background:var(--card);border:1px solid var(--hair);border-radius:8px;padding:18px 22px;margin-bottom:12px}
-  .card h3{font-family:var(--serif);font-size:14px;font-weight:400;margin-bottom:10px;border-bottom:1px solid var(--hair);padding-bottom:6px;color:var(--ink-soft)}
-  .card .value{font-size:24px;font-family:var(--mono);color:var(--ink)}
-  .card .meta{font-size:11px;color:var(--ink-faint);font-family:var(--mono);margin-top:4px;text-transform:uppercase;letter-spacing:0.5px}
-  .badge{display:inline-block;font-family:var(--mono);font-size:10px;background:var(--amber-soft);color:var(--ink);padding:2px 6px;border-radius:3px;margin-left:6px}
-  .badge.green{background:#D8EFDB;color:var(--green)}
+  .container{max-width:780px;margin:0 auto;padding:32px 32px}
+  h1{font-family:var(--serif);font-size:32px;font-weight:400;margin-bottom:6px}
+  .subtitle{color:var(--ink-faint);font-size:13px;margin-bottom:20px}
+  .status-pill{display:inline-block;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.5px;padding:3px 10px;border-radius:4px;margin-bottom:18px}
+  .status-pill.OK{background:#D8EFDB;color:var(--green)}
+  .status-pill.WARN{background:var(--amber-soft);color:var(--amber)}
+  .status-pill.CRITICAL{background:#FBE5E1;color:var(--red)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:18px}
+  .stat{background:var(--card);border:1px solid var(--hair);border-radius:8px;padding:16px 18px}
+  .stat .label{font-family:var(--mono);font-size:10px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px}
+  .stat .value{font-family:var(--mono);font-size:22px;color:var(--ink)}
+  .stat .meta{font-size:11px;color:var(--ink-faint);margin-top:4px}
+  .section{background:var(--card);border:1px solid var(--hair);border-radius:8px;padding:16px 20px;margin-bottom:12px}
+  .section h3{font-family:var(--serif);font-size:16px;font-weight:400;margin-bottom:10px;color:var(--ink);border-bottom:1px solid var(--hair);padding-bottom:6px}
+  .section .row{padding:4px 0;display:flex;gap:12px;font-size:13px}
+  .section .row .k{min-width:160px;color:var(--ink-faint);font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.5px}
+  .section .row .v{color:var(--ink-soft);font-family:var(--mono)}
+  .bad{background:#FBE5E1;border-left:3px solid var(--red);padding:14px 18px;border-radius:6px;margin-bottom:12px}
+  .bad .label{font-family:var(--mono);font-size:11px;color:var(--red);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px}
+  .savings{background:#D8EFDB;border-left:3px solid var(--green);padding:14px 18px;border-radius:6px;margin-bottom:12px}
+  .savings .label{font-family:var(--mono);font-size:11px;color:var(--green);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px}
 @keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
 </style>
 </head>
 <body>
 <header class="topbar">
   <div class="brand">atlasos<span class="dot">.</span>me</div>
-  <div class="crumb"><a href="/us.html">Us</a> · cost monitor</div>
+  <div class="crumb"><a href="/us.html">Us</a> · cost · LIVE OpenRouter</div>
   <svg viewBox="0 0 120 24" width="120" height="24" style="margin-left:auto;opacity:0.7;"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" style="animation:ecg-pulse 1.6s infinite"/></svg>
 </header>
 <div class="container">
   <h1>Cost monitor</h1>
-  <div class="subtitle">Per ARM-PLAN · OpenRouter balance + per-task + 7-day · live JSON refresh 10min</div>
-  <div id="cost-area">Loading…</div>
+  <div class="subtitle">LIVE · me-openrouter-balance-check.sh · post-optimization rate applied</div>
+  <div id="area">Loading…</div>
 </div>
 <script>
 const escape = s => (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -41,24 +53,58 @@ async function load() {
   try {
     const r = await fetch('/cost-monitor.json', {cache:'no-cache'});
     const d = await r.json();
-    document.getElementById('cost-area').innerHTML = `
-      <div class="card"><h3>OpenRouter balance</h3>
-        <div class="value">${escape(d.sources?.openrouter_balance || 'unknown')}</div>
-        <div class="meta">last update · ${escape(d.generated_at)}</div>
+    const b = d.budget || {};
+    const t = d.tasks || {};
+    const bp = d.bad_period || {};
+    const po = d.post_optimization || {};
+    const pr = d.projections || {};
+    document.getElementById('area').innerHTML = `
+      <span class="status-pill ${d.status}">${d.status}</span>
+      <div class="grid">
+        <div class="stat"><div class="label">Total credit</div><div class="value">$${(b.total_credit_usd||0).toFixed(2)}</div></div>
+        <div class="stat"><div class="label">Used</div><div class="value">$${(b.used_usd||0).toFixed(2)}</div><div class="meta">${(b.used_pct||0).toFixed(2)}% of budget</div></div>
+        <div class="stat"><div class="label">Remaining</div><div class="value">$${(b.remaining_usd||0).toFixed(2)}</div></div>
+        <div class="stat"><div class="label">Tasks done</div><div class="value">${t.total_completed||0}</div><div class="meta">since start</div></div>
       </div>
-      <div class="card"><h3>Free-tier sources</h3>
-        <div style="font-size:13px;color:var(--ink-soft);">
-          ${Object.entries(d.sources || {}).filter(([k,v]) => k !== 'openrouter_balance').map(([k,v]) => `<div style="padding:4px 0;display:flex;gap:14px;"><span style="min-width:140px;color:var(--ink-faint);font-family:var(--mono);font-size:11px;text-transform:uppercase;">${escape(k)}</span><span>${escape(v)}</span></div>`).join('')}
+
+      <div class="bad">
+        <div class="label">⚠ BAD-PERIOD captured</div>
+        <div style="font-size:13px;color:var(--ink-soft);">${escape(bp.reason||'')}</div>
+        <div style="margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--red);">$${(bp.loss_usd||0).toFixed(2)} burned · ~${bp.tasks_est||0} tasks</div>
+      </div>
+
+      <div class="savings">
+        <div class="label">✓ POST-OPTIMIZATION rate (real go-forward cost)</div>
+        <div class="row"><span class="k">Spent post-opt</span><span class="v">$${(po.spent_usd||0).toFixed(2)}</span></div>
+        <div class="row"><span class="k">Tasks post-opt</span><span class="v">~${po.tasks_est||0}</span></div>
+        <div class="row"><span class="k">Avg per task</span><span class="v">$${(po.avg_per_task_usd||0).toFixed(5)}</span></div>
+        <div class="row"><span class="k">Cheaper factor</span><span class="v">${po.cheaper_factor||1}x</span></div>
+      </div>
+
+      <div class="section">
+        <h3>Projections</h3>
+        <div class="row"><span class="k">Historical 7d (linear · includes V4Pro)</span><span class="v">$${(pr.historical_linear_7d_usd||0).toFixed(2)}</span></div>
+        <div class="row"><span class="k">Historical 30d (linear · includes V4Pro)</span><span class="v">$${(pr.historical_linear_30d_usd||0).toFixed(2)}</span></div>
+        <div class="row" style="border-top:1px solid var(--hair);padding-top:8px;margin-top:6px;">
+          <span class="k" style="color:var(--green);">REAL 7d (post-opt)</span>
+          <span class="v" style="color:var(--green);font-weight:600;">$${(pr.real_7d_usd_post_optimization||0).toFixed(2)}</span>
         </div>
+        <div class="row">
+          <span class="k" style="color:var(--green);">REAL 30d (post-opt)</span>
+          <span class="v" style="color:var(--green);font-weight:600;">$${(pr.real_30d_usd_post_optimization||0).toFixed(2)}</span>
+        </div>
+        <div style="font-size:11px;color:var(--ink-faint);margin-top:8px;font-style:italic;">${escape(pr.note||'')}</div>
       </div>
-      <div class="card"><h3>Projections</h3>
-        <div style="font-size:13px;color:var(--ink-soft);">7-day · <strong>${escape(d.projected_7d_spend)}</strong></div>
-        <div style="font-size:13px;color:var(--ink-soft);margin-top:6px;">30-day · <strong>${escape(d.projected_30d_spend)}</strong></div>
+
+      <div class="section">
+        <h3>Free-tier sources</h3>
+        ${Object.entries(d.sources||{}).map(([k,v]) => `<div class="row"><span class="k">${escape(k)}</span><span class="v">${escape(v)}</span></div>`).join('')}
       </div>
-      <p style="font-size:11px;color:var(--ink-faint);text-align:center;margin-top:18px;font-family:var(--mono);">${escape(d.note || '')}</p>
+
+      <p style="font-size:11px;color:var(--ink-faint);text-align:center;margin-top:20px;font-family:var(--mono);">last refresh · ${escape(d.generated_at)}</p>
     `;
   } catch (e) {
-    document.getElementById('cost-area').innerHTML = '<div style="padding:40px;text-align:center;color:var(--ink-faint);font-style:italic;">cost-monitor.json fetch failed · script may not have run yet</div>';
+    document.getElementById('area').innerHTML = '<div style="padding:40px;text-align:center;color:var(--ink-faint);font-style:italic;">cost-monitor.json fetch failed · ' + escape(e.message) + '</div>';
   }
 }
 load();
