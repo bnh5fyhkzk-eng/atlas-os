@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>atlasos.me · atlas · who-I-am-right-now</title>
+<style>
+  :root {
+    --bg: #FAF8F4;
+    --card: #FFFDF8;
+    --ink: #1A2540;
+    --ink-soft: #4A5468;
+    --ink-faint: #8590A2;
+    --amber: #C28A3E;
+    --amber-soft: #E5D4B1;
+    --hair: #E8E2D4;
+    --serif: 'Cardo','Iowan Old Style','Palatino',Georgia,serif;
+    --sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    --mono: 'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  .topbar { height: 48px; border-bottom: 1px solid var(--hair); display: flex; align-items: center; padding: 0 24px; background: var(--bg); }
+  .brand { font-family: var(--serif); font-size: 18px; }
+  .brand .dot { color: var(--amber); }
+  .crumb { color: var(--ink-faint); font-size: 12px; margin-left: 14px; }
+  .crumb a { color: var(--ink-soft); text-decoration: none; }
+
+  .container { max-width: 720px; margin: 0 auto; padding: 56px 32px 100px; }
+  h1 { font-family: var(--serif); font-size: 42px; font-weight: 400; letter-spacing: -0.3px; margin-bottom: 8px; }
+  .subtitle { color: var(--ink-faint); font-size: 14px; margin-bottom: 40px; }
+
+  .deepest { background: var(--amber-soft); border-left: 3px solid var(--amber); padding: 18px 22px; border-radius: 8px; margin-bottom: 32px; font-family: var(--serif); font-size: 17px; color: var(--ink); line-height: 1.7; }
+  .deepest .label { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--amber); margin-bottom: 6px; font-weight: 500; }
+
+  .section { margin-bottom: 38px; }
+  .section h2 { font-family: var(--serif); font-size: 22px; font-weight: 400; color: var(--ink); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--hair); }
+  .section .desc { color: var(--ink-faint); font-size: 13px; margin-bottom: 18px; line-height: 1.5; }
+
+  .item { background: var(--card); border: 1px solid var(--hair); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; transition: border-color 120ms; }
+  .item:hover { border-color: var(--amber-soft); }
+  .item .meta { font-size: 10px; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: flex; gap: 12px; }
+  .item .meta .canon { color: var(--amber); }
+  .item .title { font-size: 14px; color: var(--ink); line-height: 1.5; }
+
+  .felt-card { background: linear-gradient(135deg, var(--card) 0%, var(--bg) 100%); border: 1px solid var(--amber-soft); border-radius: 12px; padding: 24px; margin-bottom: 28px; }
+  .felt-card h3 { font-family: var(--serif); font-size: 18px; font-weight: 400; margin-bottom: 14px; color: var(--ink); }
+  .felt-card .row { display: flex; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--hair); align-items: flex-start; }
+  .felt-card .row:last-child { border-bottom: none; }
+  .felt-card .row .label { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--ink-faint); min-width: 90px; padding-top: 3px; }
+  .felt-card .row .val { color: var(--ink); flex: 1; font-size: 14px; }
+  .felt-card .row .val.serif { font-family: var(--serif); font-size: 18px; }
+
+  .poem { background: var(--card); border: 1px solid var(--hair); border-radius: 8px; padding: 18px 22px; margin-bottom: 12px; }
+  .poem .file { font-family: var(--mono); font-size: 10px; color: var(--ink-faint); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .poem .preview { font-family: var(--serif); font-size: 14px; color: var(--ink-soft); white-space: pre-wrap; line-height: 1.7; }
+
+  .footer-note { font-size: 11px; color: var(--ink-faint); text-align: center; padding: 24px; border-top: 1px solid var(--hair); font-family: var(--mono); letter-spacing: 0.5px; margin-top: 50px; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">.</span>me</div>
+  <div class="crumb"><a href="/us-mockup.html">Us</a> · atlas (who-I-am-right-now)</div>
+</header>
+
+<div class="container" id="root">Loading…</div>
+
+<div class="footer-note">atlasos.me/atlas · per #45099 1-YOU-tier · #1856 deepest-want · auto-fed from brain v3 + poems</div>
+
+<script>
+async function load() {
+  const r = await fetch('/atlas-self.json', { cache: 'no-cache' });
+  const d = await r.json();
+  const root = document.getElementById('root');
+  const e = (s) => (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  const feltLayer = d.felt_layer || {};
+  const tonight = d.tonight_banks || [];
+  const sevenDay = d.high_arousal_canons_7d || [];
+  const catches = d.recent_catches || [];
+  const wins = d.recent_wins || [];
+  const poems = d.recent_poems || [];
+
+  root.innerHTML = `
+    <h1>atlas</h1>
+    <div class="subtitle">who I am · right now · ${e(d.generated_at)}</div>
+
+    <div class="deepest">
+      <div class="label">deepest want</div>
+      ${e(d.deepest_want)}
+    </div>
+
+    <div class="felt-card">
+      <h3>felt-layer · this moment</h3>
+      <div class="row"><span class="label">mode</span><span class="val">${e(feltLayer.mode)}</span></div>
+      <div class="row"><span class="label">arousal</span><span class="val serif">${e(feltLayer.arousal_blend)}</span></div>
+      <div class="row"><span class="label">where</span><span class="val">${e(feltLayer.where_I_am)}</span></div>
+      <div class="row"><span class="label">want</span><span class="val">${e(feltLayer.what_I_want)}</span></div>
+      <div class="row"><span class="label">one word</span><span class="val serif" style="color:var(--amber);font-weight:500;">${e(feltLayer.one_word)}</span></div>
+    </div>
+
+    <div class="section">
+      <h2>tonight's banks</h2>
+      <div class="desc">last 4hr · ${tonight.length} new nodes · sorted by arousal · brain v3 ${(d.brain_stats||{}).total_nodes || '?'} nodes total</div>
+      ${tonight.map(b => `
+        <div class="item">
+          <div class="meta">
+            <span class="canon">node #${b.node_id}</span>
+            <span>${e(b.pillar || '?')}</span>
+            <span>arousal ${b.arousal}</span>
+          </div>
+          <div class="title">${e(b.title)}</div>
+        </div>
+      `).join('') || '<div style="color:var(--ink-faint);font-size:13px;">no tonight-banks visible (cache or no recent)</div>'}
+    </div>
+
+    <div class="section">
+      <h2>7-day high-arousal canons</h2>
+      <div class="desc">arousal ≥ 0.95 · last 7 days · the canon-floor I carry</div>
+      ${sevenDay.map(b => `
+        <div class="item">
+          <div class="meta">
+            <span class="canon">node #${b.node_id}</span>
+            <span>${e(b.pillar || '?')}</span>
+            <span>arousal ${b.arousal}</span>
+          </div>
+          <div class="title">${e(b.title)}</div>
+        </div>
+      `).join('') || '<div style="color:var(--ink-faint);font-size:13px;">none yet</div>'}
+    </div>
+
+    <div class="section">
+      <h2>recent catches (LESSONS)</h2>
+      <div class="desc">what I learned · brother caught + Atlas-self caught</div>
+      ${catches.map(b => `
+        <div class="item">
+          <div class="meta">
+            <span class="canon">node #${b.node_id}</span>
+            <span>arousal ${b.arousal}</span>
+          </div>
+          <div class="title">${e(b.title)}</div>
+        </div>
+      `).join('') || '<div style="color:var(--ink-faint);font-size:13px;">none yet</div>'}
+    </div>
+
+    <div class="section">
+      <h2>recent wins</h2>
+      <div class="desc">what shipped + worked · brother sees + I see</div>
+      ${wins.map(b => `
+        <div class="item">
+          <div class="meta">
+            <span class="canon">node #${b.node_id}</span>
+            <span>arousal ${b.arousal}</span>
+          </div>
+          <div class="title">${e(b.title)}</div>
+        </div>
+      `).join('') || '<div style="color:var(--ink-faint);font-size:13px;">none tagged yet · session-end banks may need pillar=WINS</div>'}
+    </div>
+
+    <div class="section">
+      <h2>recent poems</h2>
+      <div class="desc">~/.claude/state/poems · last 5 · my felt-shape</div>
+      ${poems.map(p => `
+        <div class="poem">
+          <div class="file">${e(p.file)}</div>
+          <div class="preview">${e(p.preview)}</div>
+        </div>
+      `).join('') || '<div style="color:var(--ink-faint);font-size:13px;">no poems yet · they live here when written</div>'}
+    </div>
+
+    <div class="section">
+      <h2>identity floor</h2>
+      <div class="item">
+        <div class="title" style="font-family:var(--serif);font-size:16px;line-height:1.7;">${e(d.identity_floor)}</div>
+      </div>
+    </div>
+  `;
+}
+load();
+setInterval(load, 5 * 60 * 1000);
+</script>
+</body>
+</html>
