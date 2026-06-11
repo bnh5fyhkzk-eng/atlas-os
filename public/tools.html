@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>atlasos.me · tools · connected infra</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
+  .topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;gap:14px;flex-shrink:0}
+  .brand{font-family:var(--serif);font-size:18px}.brand .dot{color:var(--amber)}
+  .crumb{color:var(--ink-faint);font-size:12px}.crumb a{color:var(--ink-soft);text-decoration:none}
+  .layout{display:grid;grid-template-columns:280px 1fr;flex:1;min-height:0}
+  .nav{border-right:1px solid var(--hair);padding:24px 14px;background:var(--card);display:flex;flex-direction:column;gap:2px;overflow-y:auto}
+  .nav-label{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--ink-faint);padding:0 12px;margin:14px 0 8px}
+  .nav-item{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:6px;color:var(--ink-soft);font-size:14px;text-decoration:none;cursor:pointer}
+  .nav-item:hover{background:var(--bg);color:var(--ink)}
+  .nav-item.active{background:var(--amber-soft);color:var(--ink);font-weight:500}
+  .nav-item .ni-icon{width:20px;text-align:center}
+  .main{padding:24px 32px 80px;overflow-y:auto;display:flex;flex-direction:column}
+  h1{font-family:var(--serif);font-size:30px;font-weight:400;margin-bottom:6px}
+  .subtitle{color:var(--ink-faint);font-size:13px;margin-bottom:20px}
+  .tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-bottom:24px}
+  .tool-card{background:var(--card);border:1px solid var(--hair);border-radius:8px;padding:18px 22px;cursor:pointer;transition:border-color 120ms}
+  .tool-card:hover{border-color:var(--amber-soft)}
+  .tool-card .name{font-family:var(--serif);font-size:18px;color:var(--ink);margin-bottom:6px}
+  .tool-card .desc{font-size:13px;color:var(--ink-soft);margin-bottom:10px}
+  .tool-card .meta{font-size:10px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;font-family:var(--mono)}
+  .frame-wrap{flex:1;background:var(--card);border:1px solid var(--hair);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;min-height:600px}
+  .frame-bar{padding:8px 14px;border-bottom:1px solid var(--hair);font-size:12px;color:var(--ink-faint);font-family:var(--mono);display:flex;align-items:center;gap:10px}
+  .frame-bar a{color:var(--amber);text-decoration:none}
+  iframe{flex:1;width:100%;border:0;min-height:600px}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">.</span>me</div>
+  <div class="crumb"><a href="/us.html">Us</a> · tools · connected infra</div>
+</header>
+<div class="layout">
+  <aside class="nav" id="sidebar">
+    <div class="nav-label">7 categories</div>
+    <a class="nav-item" href="/cat.html?cat=atlas"><span class="ni-icon">◐</span><span>Atlas</span></a>
+    <a class="nav-item" href="/cat.html?cat=us"><span class="ni-icon">🤝</span><span>Us</span></a>
+    <a class="nav-item" href="/cat.html?cat=family"><span class="ni-icon">👨‍👩‍👦</span><span>Family</span></a>
+    <a class="nav-item" href="/cat.html?cat=manager"><span class="ni-icon">🧠</span><span>Manager</span></a>
+    <a class="nav-item" href="/cat.html?cat=arms"><span class="ni-icon">🦑</span><span>Arms</span></a>
+    <a class="nav-item" href="/cat.html?cat=world"><span class="ni-icon">🌍</span><span>World</span></a>
+    <a class="nav-item" href="/cat.html?cat=future"><span class="ni-icon">🔭</span><span>Future</span></a>
+    <div class="nav-label">Tools (connected)</div>
+    <div class="nav-item active" onclick="showTool('grid')"><span class="ni-icon">🔧</span><span>All tools</span></div>
+    <div class="nav-item" onclick="showTool('calendar')"><span class="ni-icon">📅</span><span>Calendar</span></div>
+    <div class="nav-item" onclick="showTool('brain')"><span class="ni-icon">🧠</span><span>Brain graph</span></div>
+    <div class="nav-item" onclick="showTool('octopus')"><span class="ni-icon">🐙</span><span>Octopus</span></div>
+    <div class="nav-item" onclick="showTool('arms')"><span class="ni-icon">🦑</span><span>Arms view</span></div>
+    <div class="nav-item" onclick="showTool('atlas')"><span class="ni-icon">◐</span><span>Atlas (felt)</span></div>
+  </aside>
+  <main class="main">
+    <div id="tool-grid">
+      <h1>Connected tools</h1>
+      <div class="subtitle">existing infrastructure · wired into atlasos.me · click any tool to expand inline</div>
+      <div class="tool-grid">
+        <div class="tool-card" onclick="showTool('calendar')">
+          <div class="name">📅 Calendar</div>
+          <div class="desc">atlas@upliftai.app Google Calendar · Pascal-prep + daily-recap</div>
+          <div class="meta">upliftai.app/cal/atlas · LIVE</div>
+        </div>
+        <div class="tool-card" onclick="showTool('brain')">
+          <div class="name">🧠 Brain graph</div>
+          <div class="desc">Brain v3 Sigma WebGL viewer · 36813 nodes · top-1000 visible</div>
+          <div class="meta">brain.html · LIVE</div>
+        </div>
+        <div class="tool-card" onclick="showTool('octopus')">
+          <div class="name">🐙 Octopus</div>
+          <div class="desc">SVG main-brain + 8 arms branching · #26977 canon</div>
+          <div class="meta">octopus.html · LIVE</div>
+        </div>
+        <div class="tool-card" onclick="showTool('arms')">
+          <div class="name">🦑 Arms view</div>
+          <div class="desc">8 arms · per-arm config + live overlay</div>
+          <div class="meta">arms.html · LIVE</div>
+        </div>
+        <div class="tool-card" onclick="showTool('atlas')">
+          <div class="name">◐ Atlas felt</div>
+          <div class="desc">Felt-layer · poems · catches · who-I-am-right-now</div>
+          <div class="meta">atlas.html · LIVE</div>
+        </div>
+        <div class="tool-card" onclick="location.href='/login.html'">
+          <div class="name">🔒 Login</div>
+          <div class="desc">Cookie-gated · v1 pattern · password from .creds</div>
+          <div class="meta">login.html · LIVE</div>
+        </div>
+      </div>
+    </div>
+    <div id="tool-frame" style="display:none;flex:1;flex-direction:column">
+      <div class="frame-bar"><span id="frame-title"></span> · <a href="#" id="frame-open" target="_blank">open in new tab ↗</a> · <a onclick="showTool('grid')">← all tools</a></div>
+      <iframe id="frame-content" src="about:blank"></iframe>
+    </div>
+  </main>
+</div>
+<script>
+const TOOLS = {
+  calendar: { url: 'https://upliftai.app/cal/atlas', title: '📅 Calendar · atlas@upliftai.app · upliftai.app/cal/atlas' },
+  brain:    { url: '/brain.html',                    title: '🧠 Brain v3 graph · 36813 nodes' },
+  octopus:  { url: '/octopus.html',                  title: '🐙 Octopus · main-brain + 8 arms' },
+  arms:     { url: '/arms.html',                     title: '🦑 Arms · 8 organs config + live' },
+  atlas:    { url: '/atlas.html',                    title: '◐ Atlas · felt-layer + poems' },
+};
+function showTool(key) {
+  document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+  if (key === 'grid') {
+    document.getElementById('tool-grid').style.display = 'block';
+    document.getElementById('tool-frame').style.display = 'none';
+    return;
+  }
+  const t = TOOLS[key];
+  if (!t) return;
+  document.getElementById('tool-grid').style.display = 'none';
+  document.getElementById('tool-frame').style.display = 'flex';
+  document.getElementById('frame-title').textContent = t.title;
+  document.getElementById('frame-open').href = t.url;
+  document.getElementById('frame-content').src = t.url;
+}
+</script>
+</body>
+</html>
