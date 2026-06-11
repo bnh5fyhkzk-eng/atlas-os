@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-11T12:41:28Z",
+  "generated_at": "2026-06-11T12:46:41Z",
   "source": "me-gemma-tier-into-7-cats.py (rule-based router · per brother direct #45099 1-YOU-2-ME-3-WORLD)",
-  "items_total": 2,
+  "items_total": 4,
   "tier_summary": {
     "atlas": {
       "subs": 0,
@@ -25,11 +25,11 @@
       "P2": 0
     },
     "manager": {
-      "subs": 2,
-      "items": 2,
+      "subs": 4,
+      "items": 4,
       "P0": 0,
       "P1": 0,
-      "P2": 2
+      "P2": 4
     },
     "arms": {
       "subs": 0,
@@ -97,10 +97,10 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-001-1781181385",
+                  "id": "batch-001-1781181692",
                   "summary": "**Analyzing inventory script and hook script for Atlas-Brother's build process.**",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-001-1781181385.md",
+                  "source_file": "/gemma-sources/batch-001-1781181692.md",
                   "first_role": "user",
                   "last_timestamp": "2026-06-11T12:12:36",
                   "gemma_raw": "CATEGORY: **Atlas-Inventory**\nSUBCATEGORY: **Inventory-Script**\nSUMMARY:  **Analyzing inventory script and hook script for Atlas-Brother's build process.**",
@@ -123,10 +123,10 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-002-1781181386",
+                  "id": "batch-002-1781181693",
                   "summary": "**Verifies regex functionality in shared.md content for content validation.**",
                   "turn_count": 3,
-                  "source_file": "/gemma-sources/batch-002-1781181386.md",
+                  "source_file": "/gemma-sources/batch-002-1781181693.md",
                   "first_role": "assistant",
                   "last_timestamp": "2026-06-11T12:14:51",
                   "gemma_raw": "CATEGORY: **Content Validation**\nSUBCATEGORY: **Regex Testing**\nSUMMARY:  **Verifies regex functionality in shared.md content for content validation.**",
@@ -137,17 +137,74 @@
             }
           },
           "total_items": 1
+        },
+        "mac-mini-files-cycle-fire-context": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "state-b6a960c177",
+                  "summary": "Detailed log of the cycle-fire context, including the symlink and script issues.",
+                  "priority": "P2",
+                  "source_path": "/Users/collinmacneil/.claude/state/atlas-brother-shared.md",
+                  "source_filename": "atlas-brother-shared.md",
+                  "file_mtime": "2026-06-11 08:45",
+                  "first_role": "mac-mini-file",
+                  "gemma_raw": "## CATEGORY: atlas-brother-shared\nSUBCATEGORY: cycle-fire-context\nPRIORITY: P2\nSUMMARY:  Detailed log of the cycle-fire context, including the symlink and script issues. \n\n##",
+                  "kind": "state-doc",
+                  "_original_cat": "mac-mini-files",
+                  "_original_sub": "cycle-fire-context"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        },
+        "mac-mini-files-unsorted": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "state-25b993974c",
+                  "summary": "",
+                  "priority": "P2",
+                  "source_path": "/Users/collinmacneil/.claude/state/daemon-health-alert.md",
+                  "source_filename": "daemon-health-alert.md",
+                  "file_mtime": "2026-06-11 08:45",
+                  "first_role": "mac-mini-file",
+                  "gemma_raw": "##  Daemon Health Alert.md\n\n**CATEGORY:** daemon-health\n**SUBCATEGORY:**  alerts\n**PRIORITY:** P2\n**SUMMARY:**  6 stale daemons detected, check before new build.",
+                  "kind": "state-doc",
+                  "_original_cat": "mac-mini-files",
+                  "_original_sub": "unsorted"
+                }
+              ]
+            }
+          },
+          "total_items": 1
         }
       },
-      "total": 2,
+      "total": 4,
       "priority_counts": {
         "P0": 0,
         "P1": 0,
-        "P2": 2
+        "P2": 4
       },
       "original_categories": [
         "atlas-inventory",
-        "content-validation"
+        "content-validation",
+        "mac-mini-files"
       ]
     },
     "arms": {
