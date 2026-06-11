@@ -52,7 +52,17 @@
 
   .show-all{display:block;text-align:center;padding:12px;color:var(--amber);font-size:13px;text-decoration:none;border-top:1px solid var(--hair);margin-top:16px}
   .show-all:hover{background:var(--amber-soft);border-radius:6px}
-@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}</style>
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}@media (max-width: 768px) {
+  .layout { grid-template-columns: 1fr !important; }
+  .nav { display: none; }
+  .nav.open { display: flex; position: fixed; top: 48px; left: 0; right: 0; bottom: 0; z-index: 100; background: var(--bg); overflow-y: auto; }
+  .topbar .menu-btn { display: inline-flex !important; }
+  .main { padding: 32px 18px !important; }
+  h1 { font-size: 24px !important; }
+  .item-card, .sub-row, .cat-row { padding: 12px 14px !important; }
+}
+.menu-btn { display: none; cursor: pointer; padding: 6px 10px; border: 1px solid var(--hair); border-radius: 5px; background: var(--card); font-size: 14px; }
+</style>
 </head>
 <body>
 <header class="topbar">

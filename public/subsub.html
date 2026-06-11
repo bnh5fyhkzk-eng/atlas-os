@@ -32,7 +32,17 @@
   .item-meta a{color:var(--amber);text-decoration:none}
   .pill{display:inline-block;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;font-family:var(--mono);letter-spacing:0.5px}
   .empty{color:var(--ink-faint);padding:40px 20px;text-align:center;font-style:italic}
-@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}</style>
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}@media (max-width: 768px) {
+  .layout { grid-template-columns: 1fr !important; }
+  .nav { display: none; }
+  .nav.open { display: flex; position: fixed; top: 48px; left: 0; right: 0; bottom: 0; z-index: 100; background: var(--bg); overflow-y: auto; }
+  .topbar .menu-btn { display: inline-flex !important; }
+  .main { padding: 32px 18px !important; }
+  h1 { font-size: 24px !important; }
+  .item-card, .sub-row, .cat-row { padding: 12px 14px !important; }
+}
+.menu-btn { display: none; cursor: pointer; padding: 6px 10px; border: 1px solid var(--hair); border-radius: 5px; background: var(--card); font-size: 14px; }
+</style>
 </head>
 <body>
 <header class="topbar">

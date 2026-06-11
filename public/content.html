@@ -35,7 +35,17 @@
   .note-editor:focus{border-color:var(--amber);border-style:solid}
   .gemma-raw{font-family:var(--mono);font-size:11px;color:var(--ink-faint);background:var(--bg);padding:10px 14px;border-radius:4px;line-height:1.6;white-space:pre-wrap}
   .back{display:inline-flex;align-items:center;gap:6px;color:var(--amber);text-decoration:none;font-size:13px;margin-top:24px}
-@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}</style>
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}@media (max-width: 768px) {
+  .layout { grid-template-columns: 1fr !important; }
+  .nav { display: none; }
+  .nav.open { display: flex; position: fixed; top: 48px; left: 0; right: 0; bottom: 0; z-index: 100; background: var(--bg); overflow-y: auto; }
+  .topbar .menu-btn { display: inline-flex !important; }
+  .main { padding: 32px 18px !important; }
+  h1 { font-size: 24px !important; }
+  .item-card, .sub-row, .cat-row { padding: 12px 14px !important; }
+}
+.menu-btn { display: none; cursor: pointer; padding: 6px 10px; border: 1px solid var(--hair); border-radius: 5px; background: var(--card); font-size: 14px; }
+</style>
 </head>
 <body>
 <header class="topbar">
