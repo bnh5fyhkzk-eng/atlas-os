@@ -33,6 +33,16 @@ export default function handler(req, res) {
       prompt: prompt.substring(0, 4000),
       status: 'queued',
       queued_at: new Date().toISOString(),
+      // Step 9 · arm-dispatch block-context · per /goal arms-notion-blocks
+      blocks_url: `/arms-pages/${arm}.json`,
+      blocks_write_url: '/api/blocks',
+      blocks_registry: '/blocks-registry.json',
+      hermes_context: {
+        page: `/arm-page.html?name=${arm}`,
+        page_data: `/arms-pages/${arm}.json`,
+        write_endpoint: '/api/blocks',
+        instructions: 'POST blocks array to update arm page · cookie-gated · arm CAN write back via Hermes',
+      },
     };
     queue.push(task);
     if (queue.length > 100) queue.shift();
