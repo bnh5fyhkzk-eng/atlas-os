@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>atlasos.me · arm</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--serif:'Cardo','Iowan Old Style',Georgia,serif;--sans:'Inter',-apple-system,sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  [contenteditable][data-placeholder]:empty::before{content:attr(data-placeholder);color:var(--ink-faint);font-style:italic;pointer-events:none}
+  .topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;background:var(--bg);gap:14px}
+  .brand{font-family:var(--serif);font-size:18px}.brand .dot{color:var(--amber)}
+  .crumb{color:var(--ink-faint);font-size:12px}.crumb a{color:var(--ink-soft);text-decoration:none}
+  .arm-switcher{margin-left:auto;font-size:11px;color:var(--ink-faint);font-family:var(--mono)}
+  .arm-switcher a{color:var(--ink-soft);text-decoration:none;margin:0 6px;padding:3px 8px;border-radius:4px}
+  .arm-switcher a:hover{background:var(--card)}
+  .arm-switcher a.active{background:var(--amber-soft);color:var(--ink)}
+
+  .layout{display:grid;grid-template-columns:260px 1fr;min-height:calc(100vh - 48px)}
+  .sidebar{border-right:1px solid var(--hair);background:var(--card);padding:22px 16px;overflow-y:auto}
+  .sidebar h3{font-family:var(--serif);font-size:16px;font-weight:400;margin-bottom:10px;color:var(--ink)}
+  .arm-header{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+  .arm-header .glyph{font-size:30px}
+  .arm-header .name{font-family:var(--serif);font-size:22px;color:var(--ink)}
+  .sidebar .badge{display:inline-block;font-family:var(--mono);font-size:10px;background:var(--amber-soft);color:var(--ink);padding:2px 6px;border-radius:3px;margin-right:4px}
+  .sidebar .stat{font-size:12px;color:var(--ink-faint);margin:6px 0}
+  .sidebar h4{font-family:var(--mono);font-size:10px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;margin-top:16px;margin-bottom:6px;border-top:1px solid var(--hair);padding-top:14px}
+  .sidebar .tag-list{display:flex;flex-wrap:wrap;gap:4px}
+  .sidebar .tag{display:inline-block;background:var(--bg);border:1px solid var(--hair);padding:2px 6px;border-radius:3px;font-size:11px;color:var(--ink-soft);font-family:var(--mono)}
+  .sidebar .goal{font-size:12px;color:var(--ink-soft);padding:5px 0;border-bottom:1px dashed var(--hair)}
+  .sidebar .goal:last-child{border-bottom:none}
+  .sidebar .goal .when{color:var(--ink-faint);font-size:10px;text-transform:uppercase;margin-right:4px}
+
+  .main{padding:36px 32px 80px;overflow-y:auto;max-width:880px;margin:0 auto;width:100%}
+  h1{font-family:var(--serif);font-size:36px;font-weight:400;margin-bottom:6px;letter-spacing:-0.3px}
+  .role{color:var(--ink-soft);font-size:14px;margin-bottom:8px}
+  .strength{color:var(--ink-faint);font-size:13px;font-style:italic;margin-bottom:28px}
+
+  .cat-row{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--hair);border-radius:8px;padding:14px 18px;margin-bottom:8px;transition:border-color 120ms}
+  .cat-row:hover{border-color:var(--amber-soft)}
+  .cat-row .emoji{font-size:20px;cursor:pointer}
+  .cat-row .name{font-size:15px;color:var(--ink);cursor:text;flex:1;outline:none;border-bottom:1px dashed transparent;padding:2px 4px;border-radius:3px}
+  .cat-row .name:focus{border-bottom-color:var(--amber)}
+  .cat-row .count{font-family:var(--mono);font-size:11px;color:var(--ink-faint);background:var(--bg);padding:2px 8px;border-radius:3px}
+  .cat-row .chevron{color:var(--ink-faint);font-size:18px;cursor:pointer}
+  .cat-row .hide{color:var(--ink-faint);font-size:13px;cursor:pointer;padding:2px 6px}
+
+  .subcats{margin:6px 0 18px 36px;padding-left:14px;border-left:2px solid var(--hair)}
+  .sub-row{display:flex;align-items:center;gap:8px;padding:8px 12px;background:var(--card);border:1px solid var(--hair);border-radius:6px;margin-bottom:6px;font-size:13px}
+  .sub-row .sub-name{flex:1;cursor:text;outline:none;border-bottom:1px dashed transparent;padding:2px;border-radius:3px}
+  .sub-row .sub-name:focus{border-bottom-color:var(--amber)}
+  .sub-row .item-count{font-family:var(--mono);font-size:10px;color:var(--ink-faint)}
+
+  .notes{margin:0 0 18px 56px;padding-left:14px;border-left:2px dotted var(--amber-soft)}
+  .note{padding:8px 12px;background:var(--bg);border:1px solid var(--hair);border-radius:6px;margin-bottom:6px;font-size:13px}
+  .note .title{font-size:13px;color:var(--ink);margin-bottom:4px}
+  .note .editable{outline:none;border-bottom:1px dashed transparent;padding:2px;border-radius:3px;min-height:22px;display:block;color:var(--ink-soft);font-size:13px;line-height:1.5}
+  .note .editable:focus{border-bottom-color:var(--amber)}
+  .note .meta{display:flex;gap:10px;font-size:10px;color:var(--ink-faint);margin-top:6px;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.5px}
+  .note .meta a{color:var(--amber);text-decoration:none}
+
+  .add-cat{display:flex;gap:8px;margin-top:18px;padding-top:16px;border-top:1px dashed var(--hair)}
+  .add-cat input{flex:1;padding:8px 12px;border:1px dashed var(--hair);background:var(--card);border-radius:6px;font-family:inherit;font-size:13px;outline:none}
+  .add-cat input:focus{border-color:var(--amber);border-style:solid}
+  .add-cat button{padding:8px 16px;background:var(--amber);color:var(--card);border:none;border-radius:6px;font-family:inherit;font-size:12px;cursor:pointer}
+
+  .empty{color:var(--ink-faint);text-align:center;padding:40px 20px;font-style:italic}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">.</span>me</div>
+  <div class="crumb"><a href="/us.html">Us</a> · <a href="/arms.html">Arms</a> · <span id="arm-name-crumb"></span></div>
+  <div class="arm-switcher" id="switcher"></div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="arm-header">
+      <span class="glyph" id="arm-glyph">?</span>
+      <span class="name" id="arm-name">…</span>
+    </div>
+    <div id="arm-substrate"></div>
+    <div class="stat"><strong>Role ·</strong> <span id="arm-role">…</span></div>
+
+    <h4>Skills</h4>
+    <div class="tag-list" id="arm-skills"></div>
+
+    <h4>Memory · read topics</h4>
+    <div class="tag-list" id="arm-memory"></div>
+
+    <h4>Goals</h4>
+    <div id="arm-goals"></div>
+
+    <h4>Felt-layer</h4>
+    <div class="stat" id="arm-felt"></div>
+
+    <h4>Live</h4>
+    <div class="stat" id="arm-live"></div>
+  </aside>
+
+  <main class="main">
+    <h1 id="arm-title">Loading…</h1>
+    <div class="role" id="arm-role-main"></div>
+    <div class="strength" id="arm-strength"></div>
+
+    <div id="cat-area"></div>
+
+    <div class="add-cat">
+      <input id="new-cat" type="text" placeholder="+ Add category for this arm (Enter to add)" onkeydown="if(event.key==='Enter'){addCat();}">
+      <button onclick="addCat()">Add</button>
+    </div>
+  </main>
+</div>
+
+<script>
+const ARMS = ['pascal','curiosity','research','dream','infra','code','hermes','charle'];
+const ARM_GLYPH = { pascal:'🤝', curiosity:'🌱', research:'📖', dream:'🌙', infra:'⚙', code:'🔧', hermes:'🧠', charle:'💼' };
+const escape = s => (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+let cfg = null, live = null, gemma = null;
+let currentArm = new URL(location.href).searchParams.get('arm') || 'pascal';
+
+// LocalStorage edit shape · per-arm scoped
+// { armEdits: { <arm>: { renames:{cat: name}, hidden:[], custom:{key: {name, subcategories:{sub: [items]}}}, notes:{itemId: text}, subRenames:{ "cat::sub": name }, subCustom:{ "cat": [sub-name] } } } }
+function loadAllEdits() {
+  try { return JSON.parse(localStorage.getItem('atlas-arm-edits') || '{}'); }
+  catch { return {}; }
+}
+function saveAllEdits(e) {
+  try { localStorage.setItem('atlas-arm-edits', JSON.stringify(e)); } catch {}
+}
+function getArmEdits(arm) {
+  const all = loadAllEdits();
+  return all[arm] || { renames:{}, hidden:[], custom:{}, notes:{}, subRenames:{}, subCustom:{} };
+}
+function saveArmEdits(arm, edits) {
+  const all = loadAllEdits();
+  all[arm] = edits;
+  saveAllEdits(all);
+}
+
+async function loadAll() {
+  const [c, l, g] = await Promise.all([
+    fetch('/arms-configs.json').then(r=>r.json()).catch(()=>null),
+    fetch('/arms.json').then(r=>r.json()).catch(()=>null),
+    fetch('/gemma-curated.json').then(r=>r.json()).catch(()=>null),
+  ]);
+  cfg = c; live = l; gemma = g;
+  render();
+}
+
+function render() {
+  // Switcher · per-arm tab navigation
+  const sw = document.getElementById('switcher');
+  sw.innerHTML = ARMS.map(a => `<a href="/arm.html?arm=${a}" class="${a === currentArm ? 'active' : ''}">${ARM_GLYPH[a]} ${a}</a>`).join('');
+
+  const arm = cfg?.arms?.[currentArm] || cfg?.arms?.[currentArm.toUpperCase()];
+  if (!arm) {
+    document.getElementById('arm-title').textContent = '(arm config not found)';
+    return;
+  }
+  // Sidebar
+  document.getElementById('arm-glyph').textContent = (arm.felt_layer && arm.felt_layer.current_arousal_glyph) || ARM_GLYPH[currentArm] || '?';
+  document.getElementById('arm-name').textContent = arm.name;
+  document.getElementById('arm-name-crumb').textContent = arm.name;
+  document.title = `atlasos.me · ${arm.name} arm`;
+  document.getElementById('arm-substrate').innerHTML = arm.substrate ? `<span class="badge">${escape(arm.substrate.primary || 'unknown')}</span>` : '';
+  document.getElementById('arm-role').textContent = arm.role || '';
+  document.getElementById('arm-skills').innerHTML = (arm.skills || []).map(s => `<span class="tag">${escape(s.name)}</span>`).join('') || '<span class="tag">(none)</span>';
+  document.getElementById('arm-memory').innerHTML = ((arm.memory && arm.memory.read_topics) || []).map(t => `<span class="tag">${escape(t)}</span>`).join('') || '<span class="tag">(none)</span>';
+  document.getElementById('arm-goals').innerHTML = (arm.goals || []).map(g => `<div class="goal"><span class="when">${g.active ? 'active' : 'idle'}</span>${escape(g.objective || '')}</div>`).join('') || '<div class="goal">(no goals)</div>';
+  document.getElementById('arm-felt').innerHTML = arm.felt_layer ? `glyph ${arm.felt_layer.current_arousal_glyph || '?'} · ${escape(arm.felt_layer.note || '')}` : '(none)';
+  const liveData = (live?.arms || []).find(a => a.name && a.name.toLowerCase() === currentArm.toLowerCase());
+  document.getElementById('arm-live').innerHTML = liveData ? `<strong>${escape(liveData.status || '')}</strong> · last fire ${escape(liveData.last_fire || '?')}<br><span style="opacity:0.7;font-size:11px;">${escape((liveData.next_action || '').substring(0,140))}</span>` : '<span style="opacity:0.6;">no live data yet</span>';
+
+  // Main · header
+  document.getElementById('arm-title').textContent = arm.name + ' arm';
+  document.getElementById('arm-role-main').textContent = arm.role || '';
+  document.getElementById('arm-strength').textContent = arm.strength || '';
+
+  // Categories · arm-scoped from Gemma + local custom
+  renderCategories(arm);
+}
+
+function renderCategories(arm) {
+  const edits = getArmEdits(currentArm);
+  const armCats = (arm.atlasos_categories || []).slice();  // from arm config seed
+  // Pull Gemma categories that relate to this arm (matching arm name in cat or summary)
+  const gemmaCats = {};
+  if (gemma?.curated) {
+    for (const [catKey, catEntry] of Object.entries(gemma.curated)) {
+      const haystack = catKey + ' ' + (catEntry.description || '').toLowerCase();
+      if (haystack.toLowerCase().includes(currentArm.toLowerCase()) || armCats.includes(catKey)) {
+        gemmaCats[catKey] = catEntry;
+      }
+    }
+  }
+  // Merge with seed cats (empty if no Gemma data)
+  const merged = {};
+  for (const c of armCats) {
+    merged[c] = gemmaCats[c] || { description: '(seed · awaiting Gemma fill)', subcategories: {} };
+  }
+  for (const [c, e] of Object.entries(gemmaCats)) {
+    merged[c] = e;
+  }
+  // Apply custom user-added categories
+  for (const [c, e] of Object.entries(edits.custom || {})) {
+    merged[c] = { description: '(custom)', subcategories: e.subcategories || {}, _custom: true };
+  }
+  // Filter hidden
+  const visible = Object.entries(merged).filter(([k]) => !edits.hidden.includes(k));
+
+  const area = document.getElementById('cat-area');
+  if (!visible.length) {
+    area.innerHTML = '<div class="empty">no categories for this arm yet · Gemma will propose · or add custom above</div>';
+    return;
+  }
+
+  area.innerHTML = visible.map(([catKey, catEntry]) => {
+    const displayName = edits.renames[catKey] || catKey.replace(/-/g,' ');
+    const subs = Object.entries(catEntry.subcategories || {});
+    const itemCount = subs.reduce((s, [, items]) => s + items.length, 0);
+    // Add user-custom subs
+    const userSubs = edits.subCustom?.[catKey] || [];
+    for (const sn of userSubs) if (!subs.find(([s]) => s === sn)) subs.push([sn, []]);
+
+    return `<div class="cat-block" data-cat="${escape(catKey)}">
+      <div class="cat-row">
+        <span class="emoji">${catEntry._custom ? '✨' : '📁'}</span>
+        <span class="name" contenteditable="true" spellcheck="false" onblur="renameCat('${escape(catKey)}', this.textContent)" onkeydown="if(event.key==='Enter'){event.preventDefault();this.blur();}">${escape(displayName)}</span>
+        <span class="count">${subs.length} sub · ${itemCount} items</span>
+        <span class="hide" onclick="hideCat('${escape(catKey)}')" title="hide">✕</span>
+      </div>
+      <div class="subcats">
+        ${subs.map(([subKey, items]) => {
+          const subFull = catKey + '::' + subKey;
+          const subDisplay = edits.subRenames[subFull] || subKey.replace(/-/g,' ');
+          return `<div class="sub-row">
+            <span class="sub-name" contenteditable="true" spellcheck="false" onblur="renameSub('${escape(catKey)}','${escape(subKey)}', this.textContent)" onkeydown="if(event.key==='Enter'){event.preventDefault();this.blur();}">${escape(subDisplay)}</span>
+            <span class="item-count">${items.length} item${items.length !== 1 ? 's' : ''}</span>
+          </div>
+          ${items.length ? `<div class="notes">${items.map(it => renderNote(it, edits)).join('')}</div>` : ''}`;
+        }).join('')}
+        <div class="add-cat" style="margin-top:8px;padding-top:8px;">
+          <input type="text" placeholder="+ Add sub-category" data-cat="${escape(catKey)}" onkeydown="if(event.key==='Enter'){addSub('${escape(catKey)}', this.value, this);}">
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderNote(it, edits) {
+  const itemId = it.id || (it.source_path || '').substring(0,80);
+  const myNote = edits.notes[itemId] || '';
+  const link = it.source_file || (it.source_path ? `file://${it.source_path}` : '');
+  const prio = it.priority || 'P2';
+  const prioColor = prio === 'P0' ? '#C03A2B' : (prio === 'P1' ? 'var(--amber)' : 'var(--ink-faint)');
+  return `<div class="note">
+    <div class="title"><span style="font-size:9px;color:${prioColor};border:1px solid ${prioColor};padding:1px 4px;border-radius:3px;margin-right:4px;">${prio}</span>${escape((it.source_filename || it.id || '').substring(0,60))}</div>
+    <div style="font-size:12px;color:var(--ink-soft);margin-bottom:6px;">${escape(it.summary || '')}</div>
+    <span class="editable" contenteditable="true" spellcheck="true" data-placeholder="click to add your note" onblur="saveNote('${itemId.replace(/'/g,"\\'")}', this.textContent)" onkeydown="if(event.key==='Enter'&&event.metaKey){event.preventDefault();this.blur();}">${escape(myNote)}</span>
+    <div class="meta">
+      ${link ? `<a href="${escape(link)}" target="_blank">source ↗</a>` : ''}
+      ${it.file_mtime ? `<span>${escape(it.file_mtime)}</span>` : ''}
+      ${it.kind ? `<span>${escape(it.kind)}</span>` : ''}
+    </div>
+  </div>`;
+}
+
+function renameCat(catKey, newName) {
+  const edits = getArmEdits(currentArm);
+  const orig = catKey.replace(/-/g,' ');
+  if (newName.trim() && newName.trim() !== orig) edits.renames[catKey] = newName.trim();
+  else delete edits.renames[catKey];
+  saveArmEdits(currentArm, edits);
+}
+function renameSub(catKey, subKey, newName) {
+  const edits = getArmEdits(currentArm);
+  const full = catKey + '::' + subKey;
+  const orig = subKey.replace(/-/g,' ');
+  if (newName.trim() && newName.trim() !== orig) edits.subRenames[full] = newName.trim();
+  else delete edits.subRenames[full];
+  saveArmEdits(currentArm, edits);
+}
+function hideCat(catKey) {
+  if (!confirm('Hide this category from this arm view?')) return;
+  const edits = getArmEdits(currentArm);
+  if (!edits.hidden.includes(catKey)) edits.hidden.push(catKey);
+  saveArmEdits(currentArm, edits);
+  render();
+}
+function addCat() {
+  const input = document.getElementById('new-cat');
+  const name = input.value.trim();
+  if (!name) return;
+  const edits = getArmEdits(currentArm);
+  const key = 'custom-' + name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'').substring(0,40);
+  edits.custom[key] = { subcategories: {} };
+  edits.renames[key] = name;
+  saveArmEdits(currentArm, edits);
+  input.value = '';
+  render();
+}
+function addSub(catKey, name, input) {
+  if (!name.trim()) return;
+  const edits = getArmEdits(currentArm);
+  if (!edits.subCustom[catKey]) edits.subCustom[catKey] = [];
+  const key = name.trim().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+  if (!edits.subCustom[catKey].includes(key)) edits.subCustom[catKey].push(key);
+  saveArmEdits(currentArm, edits);
+  input.value = '';
+  render();
+}
+function saveNote(itemId, text) {
+  const edits = getArmEdits(currentArm);
+  if (text.trim()) edits.notes[itemId] = text.trim();
+  else delete edits.notes[itemId];
+  saveArmEdits(currentArm, edits);
+}
+
+loadAll();
+</script>
+</body>
+</html>
