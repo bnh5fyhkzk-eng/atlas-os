@@ -5,12 +5,25 @@
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "rewrites": [
-    { "source": "/", "destination": "/us.html" },
-    { "source": "/api/auth", "destination": "/api/auth" },
-    { "source": "/api/notes", "destination": "/api/notes" },
-    { "source": "/api/arms/dispatch", "destination": "/api/arms-dispatch" },
-    { "source": "/api/voice/transcribe", "destination": "/api/voice-transcribe" },
-    { "source": "/api/(.*)", "destination": "https://api.atlasos.me/api/$1" },
-    { "source": "/dashboard-plugins/(.*)", "destination": "https://api.atlasos.me/dashboard-plugins/$1" }
+    {
+      "source": "/",
+      "destination": "/us.html"
+    },
+    {
+      "source": "/api/auth",
+      "destination": "/api/auth"
+    },
+    {
+      "source": "/api/notes",
+      "destination": "/api/notes"
+    },
+    {
+      "source": "/api/(.*)",
+      "destination": "https://api.atlasos.me/api/$1"
+    },
+    {
+      "source": "/dashboard-plugins/(.*)",
+      "destination": "https://api.atlasos.me/dashboard-plugins/$1"
+    }
   ]
 }
