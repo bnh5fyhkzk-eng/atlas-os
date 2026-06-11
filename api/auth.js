@@ -15,8 +15,10 @@ export default function handler(req, res) {
   if (typeof password !== 'string' || password !== expected) {
     return res.status(401).json({ error: 'wrong' });
   }
+  // NOT HttpOnly so client-side JS gate in each page can read it
+  // This cookie is a presence-flag, not a session token (the actual secret check happens on /api/auth POST)
   res.setHeader('Set-Cookie', [
-    `atlas_auth=ok; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=${7*24*60*60}`,
+    `atlas_auth=ok; Path=/; Secure; SameSite=Lax; Max-Age=${7*24*60*60}`,
   ]);
   return res.status(200).json({ ok: true });
 }
