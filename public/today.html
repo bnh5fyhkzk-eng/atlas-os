@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>atlasos.me · today · what each arm did</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--green:#6BAE73;--red:#C03A2B;--violet:#9D7CD8;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.55;min-height:100vh}
+  .topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;gap:14px}
+  .brand{font-family:var(--serif);font-size:18px}.brand .dot{color:var(--amber)}
+  .container{max-width:1080px;margin:0 auto;padding:32px 32px 80px}
+  h1{font-family:var(--serif);font-size:34px;font-weight:400;margin-bottom:4px}
+  .subtitle{color:var(--ink-faint);font-size:13px;margin-bottom:28px;font-style:italic}
+  .arms-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
+  .arm-card{background:var(--card);border:1px solid var(--hair);border-radius:10px;padding:18px 20px;border-left:4px solid var(--amber)}
+  .arm-card .header{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+  .arm-card .glyph{font-size:24px}
+  .arm-card .name{font-family:var(--serif);font-size:18px;flex:1}
+  .arm-card .count{font-family:var(--mono);font-size:10px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;background:var(--hair);padding:2px 6px;border-radius:3px}
+  .arm-card .actions{display:flex;flex-direction:column;gap:8px}
+  .action-item{background:var(--bg);border:1px solid var(--hair);border-radius:6px;padding:10px 12px;font-size:12px;line-height:1.5}
+  .action-item .what{font-weight:600;color:var(--ink);margin-bottom:3px;font-size:12.5px}
+  .action-item .why{color:var(--ink-soft);font-style:italic;margin-bottom:3px}
+  .action-item .meta{font-family:var(--mono);font-size:9px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+  .action-item .meta span{padding:1px 5px;background:var(--hair);border-radius:2px}
+  .action-item .meta .p0{background:#F9D6CE;color:var(--red)}
+  .action-item .meta .p1{background:var(--amber-soft);color:var(--ink)}
+  .arm-card .link{margin-top:10px;font-family:var(--mono);font-size:10px;color:var(--amber);text-decoration:none;text-transform:uppercase;letter-spacing:0.5px;display:inline-block}
+  .empty{color:var(--ink-faint);font-style:italic;font-size:12px;padding:14px;text-align:center}
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">·</span>me</div>
+  <div style="color:#8590A2;font-size:12px;"><a href="/us.html" style="color:#4A5468;text-decoration:none;">Us</a> · today · what each arm did</div>
+  <svg viewBox="0 0 120 24" width="120" height="24" style="margin-left:auto;opacity:0.7;"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" style="animation:ecg-pulse 1.6s infinite"/></svg>
+</header>
+<div class="container">
+  <h1>Today · what each arm did + why</h1>
+  <div class="subtitle">per brother direct 05:36 · ONE place to see arm actions + reasoning · refresh 60s · 3 latest per arm</div>
+  <div class="arms-grid" id="arms-grid">Loading…</div>
+</div>
+<script>
+const escape = s => (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const ARMS = [['pascal','🤝','Pascal'],['curiosity','🌱','My Curiosity'],['research','👁','My Eyes'],['code','✋','My Hands'],['infra','💗','My Heart'],['dream','🌙','My Dreamer'],['hermes','🧠','My Orchestrator'],['charle','💼','Charle']];
+
+async function load() {
+  const rows = await Promise.all(ARMS.map(async ([arm, gly, name]) => {
+    try {
+      const r = await fetch(`/arms-pages/${arm}.json`, {cache:'no-cache'});
+      const d = await r.json();
+      const journals = (d.blocks || []).filter(b => b.props?.action);
+      const recent = journals.slice(-3).reverse();
+      return { arm, gly, name, count: journals.length, journals: recent };
+    } catch(e) { return { arm, gly, name, error: e.message, journals: [] }; }
+  }));
+  document.getElementById('arms-grid').innerHTML = rows.map(r => `
+    <div class="arm-card">
+      <div class="header">
+        <span class="glyph">${r.gly}</span>
+        <span class="name">${escape(r.name)}</span>
+        <span class="count">${r.count} journals</span>
+      </div>
+      <div class="actions">
+        ${r.journals.length ? r.journals.map(j => {
+          const p = j.props || {};
+          return `<div class="action-item">
+            <div class="what">${escape(p.action || '(no action)')}</div>
+            <div class="why">${escape(p.why || '(no why)')}</div>
+            <div class="meta">
+              <span class="${(p.priority||'p2').toLowerCase()}">${escape(p.priority || 'P2')}</span>
+              <span>${escape(p.category || 'note')}</span>
+              <span>${escape(p.source || '?')}</span>
+              <span>${escape((p.timestamp || p.cycle_id || '').substring(0,16).replace('T',' '))}</span>
+            </div>
+          </div>`;
+        }).join('') : '<div class="empty">No action-journals yet · cycles pending</div>'}
+      </div>
+      <a class="link" href="/arm-page.html?name=${escape(r.arm)}">→ Full arm page</a>
+    </div>
+  `).join('');
+}
+load();
+setInterval(load, 60000);
+</script>
+</body>
+</html>
