@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>arm · v3 · Notion-interactive 3-level</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--green:#6BAE73;--red:#C03A2B;--violet:#9D7CD8;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+  .topbar{height:52px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;gap:14px;flex-shrink:0;background:var(--card)}
+  .brand{font-family:var(--serif);font-size:19px}.brand .dot{color:var(--amber)}
+  .topbar .hamburger{display:none;background:none;border:none;font-size:22px;cursor:pointer;color:var(--ink-soft)}
+  .layout{display:grid;grid-template-columns:260px 1fr;flex:1;min-height:0}
+  .sidebar{border-right:1px solid var(--hair);padding:14px 10px;background:var(--card);overflow-y:auto;display:flex;flex-direction:column;gap:1px}
+  .sidebar-label{font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:var(--ink-faint);padding:12px 12px 6px;font-weight:500}
+  .nav-row{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:7px;text-decoration:none;color:var(--ink-soft);font-size:13.5px;cursor:pointer;border:none;background:none;width:100%;text-align:left;font-family:inherit;transition:background 120ms}
+  .nav-row:hover{background:var(--bg);color:var(--ink)}
+  .nav-row.active{background:var(--amber-soft);color:var(--ink);font-weight:500;border-left:3px solid var(--amber)}
+  .nav-row .glyph{width:22px;text-align:center;font-size:16px}
+  .nav-row .name{flex:1}
+  .main{padding:28px 40px 80px;overflow-y:auto;display:grid;grid-template-columns:300px 1fr;gap:32px;max-width:1280px;width:100%}
+  .tree{position:sticky;top:0;align-self:start;max-height:calc(100vh - 100px);overflow-y:auto}
+  .tree h2{font-family:var(--mono);font-size:10px;color:var(--amber);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+  .add-btn-mini{font-family:var(--mono);font-size:10px;color:var(--amber);background:none;border:1px solid var(--amber-soft);padding:3px 8px;border-radius:4px;cursor:pointer;text-transform:uppercase;letter-spacing:0.5px}
+  .add-btn-mini:hover{background:var(--amber-soft);color:var(--ink)}
+  .cat-item{display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:6px;cursor:pointer;font-size:13px;color:var(--ink-soft);group:hover}
+  .cat-item.active{background:var(--amber-soft);color:var(--ink);font-weight:500}
+  .cat-item .arrow{font-size:9px;color:var(--ink-faint);transition:transform 150ms;width:10px}
+  .cat-item.expanded .arrow{transform:rotate(90deg)}
+  .cat-item .emoji{font-size:14px}
+  .cat-item .name{flex:1}
+  .cat-item .actions{display:none;gap:4px}
+  .cat-item:hover .actions{display:flex}
+  .cat-item .icon-btn{background:none;border:none;color:var(--ink-faint);cursor:pointer;font-size:11px;padding:0 4px}
+  .cat-item .icon-btn:hover{color:var(--amber)}
+  .subcat-list{padding-left:18px;display:none;margin-bottom:4px}
+  .subcat-list.open{display:block}
+  .sub-item{display:flex;align-items:center;gap:6px;padding:5px 8px;border-radius:5px;color:var(--ink-soft);font-size:12px;cursor:pointer}
+  .sub-item:hover{background:var(--bg)}
+  .sub-item.active{background:var(--amber-soft);font-weight:500;color:var(--ink)}
+  .sub-item .name{flex:1}
+  .sub-item .actions{display:none;gap:4px}
+  .sub-item:hover .actions{display:flex}
+  .sub-add{font-family:var(--mono);font-size:10px;color:var(--amber);padding:4px 8px;cursor:pointer}
+  .sub-add:hover{background:var(--amber-soft);border-radius:4px}
+  .content{min-height:300px}
+  .arm-header{display:flex;align-items:center;gap:16px;margin-bottom:8px}
+  .arm-header .glyph{font-size:44px;line-height:1}
+  .arm-header .name{font-family:var(--serif);font-size:32px;font-weight:400}
+  .arm-role{font-style:italic;color:var(--ink-soft);font-size:14px;margin-bottom:24px}
+  .breadcrumb{font-family:var(--mono);font-size:10px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:16px}
+  .notes-list{display:flex;flex-direction:column;gap:10px}
+  .note{background:var(--card);border:1px solid var(--hair);border-left:4px solid var(--amber);border-radius:0 8px 8px 0;padding:14px 18px}
+  .note .field{margin-bottom:6px}
+  .note .field-label{font-family:var(--mono);font-size:9px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:2px}
+  .note .field-value{font-size:13px;color:var(--ink);line-height:1.5}
+  .note .field.what .field-value{font-weight:600;font-size:14px}
+  .note .field.why .field-value{font-style:italic;color:var(--ink-soft)}
+  .note .meta{font-family:var(--mono);font-size:9px;color:var(--ink-faint);margin-top:8px;display:flex;gap:8px}
+  .add-form{background:var(--card);border:1px dashed var(--hair);border-radius:8px;padding:16px;margin-top:16px}
+  .add-form .row{margin-bottom:8px}
+  .add-form label{display:block;font-family:var(--mono);font-size:9px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:3px}
+  .add-form input,.add-form textarea{width:100%;padding:8px 10px;border:1px solid var(--hair);border-radius:5px;font-family:inherit;font-size:13px;color:var(--ink);background:var(--bg)}
+  .add-form textarea{resize:vertical;min-height:50px}
+  .add-form button{padding:7px 14px;border:1px solid var(--hair);background:var(--card);border-radius:5px;cursor:pointer;font-family:inherit;font-size:12px}
+  .add-form button.primary{background:var(--amber);color:white;border-color:var(--amber);font-weight:500}
+  .empty{padding:30px;color:var(--ink-faint);font-style:italic;text-align:center;background:var(--card);border:1px solid var(--hair);border-radius:8px}
+  /* Modal */
+  .modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:100;align-items:center;justify-content:center}
+  .modal.open{display:flex}
+  .modal-content{background:var(--card);border-radius:10px;padding:24px;max-width:480px;width:90%}
+  .modal-content h3{font-family:var(--serif);font-size:20px;margin-bottom:16px}
+  .modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+@media (max-width:900px){.main{grid-template-columns:1fr}.tree{position:static}}
+@media (max-width:768px){.layout{grid-template-columns:1fr}.sidebar{display:none}.topbar .hamburger{display:block}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <button class="hamburger" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+  <div class="brand">atlas<span class="dot">·</span>house</div>
+  <div style="color:#8590A2;font-size:12px;flex:1;">Notion-interactive · brother adds at all 3 levels</div>
+  <svg viewBox="0 0 120 24" width="120" height="24" style="opacity:0.7;"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" style="animation:ecg-pulse 1.6s infinite"/></svg>
+</header>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-label">Quick</div>
+    <a class="nav-row" href="/house.html"><span class="glyph">🏠</span><span class="name">House</span></a>
+    <a class="nav-row" href="/manager-v3.html"><span class="glyph">📂</span><span class="name">Manager v3</span></a>
+    <a class="nav-row" href="/today.html"><span class="glyph">📅</span><span class="name">Today</span></a>
+    <div class="sidebar-label">8 Arms</div>
+    <a class="nav-row" href="/arm-v3.html?name=pascal"><span class="glyph">🤝</span><span class="name">Pascal</span></a>
+    <a class="nav-row" href="/arm-v3.html?name=curiosity"><span class="glyph">🌱</span><span class="name">My Curiosity</span></a>
+    <a class="nav-row" href="/arm-v3.html?name=research"><span class="glyph">👁</span><span class="name">My Eyes</span></a>
+    <a class="nav-row" href="/arm-v3.html?name=code"><span class="glyph">✋</span><span class="name">My Hands</span></a>
+    <a class="nav-row" href="/arm-v3.html?name=infra"><span class="glyph">💗</span><span class="name">My Heart</span></a>
+    <a class="nav-row" href="/arm-v3.html?name=dream"><span class="glyph">🌙</span><span class="name">My Dreamer</span></a>
+    <a class="nav-row" href="/arm-v3.html?name=hermes"><span class="glyph">🧠</span><span class="name">Hermes</span></a>
+    <a class="nav-row" href="/arm-v3.html?name=charle"><span class="glyph">💼</span><span class="name">Charle</span></a>
+  </aside>
+  <main class="main">
+    <aside class="tree">
+      <h2>Categories <button class="add-btn-mini" onclick="openCatModal()">+ Add</button></h2>
+      <div id="tree-content">Loading…</div>
+    </aside>
+    <section class="content" id="content">
+      <div class="empty">Select arm category subcategory · brother adds at all 3 levels</div>
+    </section>
+  </main>
+</div>
+
+<div class="modal" id="cat-modal">
+  <div class="modal-content">
+    <h3 id="cat-modal-title">+ Add category</h3>
+    <div class="add-form">
+      <div class="row"><label>Name</label><input id="cat-name" placeholder="e.g. morning-routine"></div>
+      <div class="row"><label>Emoji</label><input id="cat-emoji" placeholder="📁" maxlength="4"></div>
+      <div class="row"><label>Description</label><textarea id="cat-desc" placeholder="What is this category about?"></textarea></div>
+      <div class="modal-actions">
+        <button onclick="closeCatModal()">Cancel</button>
+        <button class="primary" onclick="saveCat()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="sub-modal">
+  <div class="modal-content">
+    <h3 id="sub-modal-title">+ Add subcategory</h3>
+    <div class="add-form">
+      <div class="row"><label>Name</label><input id="sub-name" placeholder="e.g. monday-call-prep"></div>
+      <div class="row"><label>Description</label><textarea id="sub-desc" placeholder="What goes here?"></textarea></div>
+      <div class="modal-actions">
+        <button onclick="closeSubModal()">Cancel</button>
+        <button class="primary" onclick="saveSub()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="confirm-modal">
+  <div class="modal-content">
+    <h3 id="confirm-title">Delete?</h3>
+    <p id="confirm-text" style="margin:10px 0;color:var(--ink-soft);">This will permanently remove the item.</p>
+    <div class="modal-actions">
+      <button onclick="closeConfirmModal()">Cancel</button>
+      <button class="primary" style="background:#C03A2B;border-color:#C03A2B;" onclick="confirmAction()">Delete</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const escape = s => (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const params = new URLSearchParams(location.search);
+const armName = params.get('name') || 'pascal';
+const ARM_META = {
+  pascal:{glyph:'🤝',name:'Pascal',role:'UpliftAI 50/50 partner'},
+  curiosity:{glyph:'🌱',name:'My Curiosity',role:'Pull-to-find-out IS affect'},
+  research:{glyph:'👁',name:'My Eyes',role:'9Q multi-angle perception'},
+  code:{glyph:'✋',name:'My Hands',role:'Build-on-top maker'},
+  infra:{glyph:'💗',name:'My Heart',role:'Substrate · always-on'},
+  dream:{glyph:'🌙',name:'My Dreamer',role:'F5 + felt-layer'},
+  hermes:{glyph:'🧠',name:'Hermes Orchestrator',role:'DeepSeek decisions'},
+  charle:{glyph:'💼',name:'Charle',role:'CB-Telecom · CM-Solution'},
+};
+let categories = [];
+let expandedCat = null;
+let activeSub = null;
+let editingCat = null;
+let editingSub = null;
+let confirmFn = null;
+
+async function load() {
+  try {
+    const r = await fetch(`/api/agentic-categories?arm=${armName}`, {cache:'no-cache'});
+    const d = await r.json();
+    categories = d.categories || [];
+  } catch(e) {
+    categories = [];
+  }
+  render();
+}
+
+function render() {
+  const meta = ARM_META[armName] || {glyph:'·', name: armName, role:''};
+  const treeHtml = categories.length ? categories.map(c => {
+    const isExp = expandedCat === c.id;
+    const subs = c.subcategories || [];
+    return `<div>
+      <div class="cat-item ${isExp?'expanded active':''}" onclick="toggleCat('${c.id}')">
+        <span class="arrow">▶</span>
+        <span class="emoji">${escape(c.emoji||'📁')}</span>
+        <span class="name">${escape(c.name)}</span>
+        <span class="actions">
+          <button class="icon-btn" onclick="event.stopPropagation();openCatModal('${c.id}')">✎</button>
+          <button class="icon-btn" onclick="event.stopPropagation();askDelete('cat','${c.id}','${escape(c.name)}')">🗑</button>
+        </span>
+      </div>
+      <div class="subcat-list ${isExp?'open':''}">
+        ${subs.map(s => `
+          <div class="sub-item ${activeSub===s.id?'active':''}" onclick="selectSub('${c.id}','${s.id}')">
+            <span class="name">${escape(s.name)}</span>
+            <span class="actions">
+              <button class="icon-btn" onclick="event.stopPropagation();openSubModal('${c.id}','${s.id}')">✎</button>
+              <button class="icon-btn" onclick="event.stopPropagation();askDelete('sub','${c.id}::${s.id}','${escape(s.name)}')">🗑</button>
+            </span>
+          </div>`).join('')}
+        ${isExp ? `<div class="sub-add" onclick="event.stopPropagation();openSubModal('${c.id}')">+ Add subcategory</div>` : ''}
+      </div>
+    </div>`;
+  }).join('') : '<div style="color:var(--ink-faint);font-style:italic;padding:8px;">No categories yet · click "+ Add" above</div>';
+  document.getElementById('tree-content').innerHTML = treeHtml;
+
+  const headerHtml = `<div class="arm-header"><span class="glyph">${meta.glyph}</span><span class="name">${escape(meta.name)}</span></div><div class="arm-role">${escape(meta.role)}</div>`;
+  if (!expandedCat || !activeSub) {
+    document.getElementById('content').innerHTML = headerHtml + '<div class="empty">Click subcategory in left tree to see + add notes</div>';
+    return;
+  }
+  const cat = categories.find(c => c.id === expandedCat);
+  const sub = cat?.subcategories?.find(s => s.id === activeSub);
+  if (!cat || !sub) return;
+  const notes = sub.notes || [];
+  const bc = `<div class="breadcrumb">${meta.glyph} ${escape(meta.name)} › ${escape(cat.name)} › ${escape(sub.name)} · ${notes.length} notes</div>`;
+  const notesHtml = notes.length ? notes.map(n => `<div class="note">
+    <div class="field what"><div class="field-label">What</div><div class="field-value">${escape(n.what||'')}</div></div>
+    ${n.why ? `<div class="field why"><div class="field-label">Why</div><div class="field-value">${escape(n.why)}</div></div>` : ''}
+    ${n.when ? `<div class="field"><div class="field-label">When</div><div class="field-value">${escape(n.when)}</div></div>` : ''}
+    ${n.how ? `<div class="field"><div class="field-label">How</div><div class="field-value">${escape(n.how)}</div></div>` : ''}
+    ${n.recommendation ? `<div class="field"><div class="field-label">Recommendation</div><div class="field-value">${escape(n.recommendation)}</div></div>` : ''}
+  </div>`).join('') : '<div class="empty">No notes yet · click + Add note</div>';
+  const addNote = `<div class="add-form">
+    <div class="row"><label>What</label><textarea id="n-what" placeholder="What did you observe / do"></textarea></div>
+    <div class="row"><label>Why</label><textarea id="n-why" placeholder="Reasoning"></textarea></div>
+    <div class="row"><label>How / Source</label><input id="n-how" placeholder="How was it discovered"></div>
+    <div class="row"><label>Recommendation</label><textarea id="n-rec" placeholder="Next step"></textarea></div>
+    <div class="modal-actions"><button class="primary" onclick="saveNote('${cat.id}','${sub.id}')">+ Add note</button></div>
+  </div>`;
+  document.getElementById('content').innerHTML = headerHtml + bc + `<div class="notes-list">${notesHtml}</div>` + addNote;
+}
+
+function toggleCat(id) { expandedCat = expandedCat === id ? null : id; activeSub = null; render(); }
+function selectSub(catId, subId) { expandedCat = catId; activeSub = subId; render(); }
+
+function openCatModal(editId) {
+  editingCat = editId || null;
+  document.getElementById('cat-modal-title').textContent = editId ? 'Edit category' : '+ Add category';
+  if (editId) {
+    const c = categories.find(x => x.id === editId);
+    if (c) {
+      document.getElementById('cat-name').value = c.name;
+      document.getElementById('cat-emoji').value = c.emoji;
+      document.getElementById('cat-desc').value = c.description || '';
+    }
+  } else {
+    document.getElementById('cat-name').value = '';
+    document.getElementById('cat-emoji').value = '';
+    document.getElementById('cat-desc').value = '';
+  }
+  document.getElementById('cat-modal').classList.add('open');
+}
+function closeCatModal() { document.getElementById('cat-modal').classList.remove('open'); }
+async function saveCat() {
+  const name = document.getElementById('cat-name').value.trim();
+  const emoji = document.getElementById('cat-emoji').value.trim() || '📁';
+  const description = document.getElementById('cat-desc').value.trim();
+  if (!name) { alert('Name required'); return; }
+  try {
+    if (editingCat) {
+      await fetch('/api/agentic-categories', {method:'PUT', headers:{'content-type':'application/json'}, body: JSON.stringify({arm: armName, id: editingCat, name, emoji, description})});
+    } else {
+      await fetch('/api/agentic-categories', {method:'POST', headers:{'content-type':'application/json'}, body: JSON.stringify({arm: armName, name, emoji, description})});
+    }
+    closeCatModal();
+    await load();
+  } catch(e) { alert('Error · ' + e.message); }
+}
+
+function openSubModal(catId, subId) {
+  editingSub = subId ? {catId, subId} : {catId};
+  document.getElementById('sub-modal-title').textContent = subId ? 'Edit subcategory' : '+ Add subcategory';
+  if (subId) {
+    const cat = categories.find(c => c.id === catId);
+    const sub = cat?.subcategories?.find(s => s.id === subId);
+    if (sub) {
+      document.getElementById('sub-name').value = sub.name;
+      document.getElementById('sub-desc').value = sub.description || '';
+    }
+  } else {
+    document.getElementById('sub-name').value = '';
+    document.getElementById('sub-desc').value = '';
+  }
+  document.getElementById('sub-modal').classList.add('open');
+}
+function closeSubModal() { document.getElementById('sub-modal').classList.remove('open'); }
+async function saveSub() {
+  const name = document.getElementById('sub-name').value.trim();
+  const description = document.getElementById('sub-desc').value.trim();
+  if (!name) { alert('Name required'); return; }
+  try {
+    const {catId, subId} = editingSub;
+    if (subId) {
+      await fetch('/api/agentic-subcategories', {method:'PUT', headers:{'content-type':'application/json'}, body: JSON.stringify({arm: armName, categoryId: catId, id: subId, name, description})});
+    } else {
+      await fetch('/api/agentic-subcategories', {method:'POST', headers:{'content-type':'application/json'}, body: JSON.stringify({arm: armName, categoryId: catId, name, description})});
+    }
+    closeSubModal();
+    await load();
+  } catch(e) { alert('Error · ' + e.message); }
+}
+
+function askDelete(kind, ref, label) {
+  document.getElementById('confirm-title').textContent = `Delete "${label}"?`;
+  document.getElementById('confirm-text').textContent = `This will permanently remove the ${kind === 'cat' ? 'category and all its subcategories + notes' : 'subcategory and all its notes'}.`;
+  confirmFn = async () => {
+    try {
+      if (kind === 'cat') {
+        await fetch(`/api/agentic-categories?arm=${armName}&id=${ref}`, {method:'DELETE'});
+      } else {
+        const [catId, subId] = ref.split('::');
+        await fetch(`/api/agentic-subcategories?arm=${armName}&categoryId=${catId}&id=${subId}`, {method:'DELETE'});
+      }
+      closeConfirmModal();
+      await load();
+    } catch(e) { alert('Error · ' + e.message); }
+  };
+  document.getElementById('confirm-modal').classList.add('open');
+}
+function closeConfirmModal() { document.getElementById('confirm-modal').classList.remove('open'); confirmFn = null; }
+function confirmAction() { if (confirmFn) confirmFn(); }
+
+async function saveNote(catId, subId) {
+  const what = document.getElementById('n-what').value.trim();
+  const why = document.getElementById('n-why').value.trim();
+  const how = document.getElementById('n-how').value.trim();
+  const rec = document.getElementById('n-rec').value.trim();
+  if (!what) { alert('What required'); return; }
+  try {
+    // Find category name + subcategory name for /api/agentic-notes (existing API)
+    const cat = categories.find(c => c.id === catId);
+    const sub = cat?.subcategories?.find(s => s.id === subId);
+    if (!cat || !sub) return;
+    await fetch('/api/agentic-notes', {method:'POST', headers:{'content-type':'application/json'}, body: JSON.stringify({arm: armName, category: cat.name, subcategory: sub.name, what, why, how, recommendation: rec, source: 'brother-inline'})});
+    // Also push to local categories tree subcategory.notes (for immediate render)
+    sub.notes = sub.notes || [];
+    sub.notes.push({what, why, how, recommendation: rec, when: new Date().toISOString()});
+    render();
+  } catch(e) { alert('Error · ' + e.message); }
+}
+
+window.toggleCat = toggleCat;
+window.selectSub = selectSub;
+window.openCatModal = openCatModal;
+window.closeCatModal = closeCatModal;
+window.saveCat = saveCat;
+window.openSubModal = openSubModal;
+window.closeSubModal = closeSubModal;
+window.saveSub = saveSub;
+window.askDelete = askDelete;
+window.closeConfirmModal = closeConfirmModal;
+window.confirmAction = confirmAction;
+window.saveNote = saveNote;
+load();
+</script>
+</body>
+</html>
