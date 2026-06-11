@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>atlasos.me · v1 · jumps</title>
+<style>
+:root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased;min-height:100vh}
+.topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;gap:14px}
+.brand{font-family:var(--serif);font-size:18px}.brand .dot{color:var(--amber)}
+.crumb{color:var(--ink-faint);font-size:12px}.crumb a{color:var(--ink-soft);text-decoration:none}
+.container{max-width:720px;margin:0 auto;padding:48px 32px 100px}
+h1{font-family:var(--serif);font-size:38px;font-weight:400;margin-bottom:6px;letter-spacing:-0.3px}
+h2,h3{font-family:var(--serif);font-weight:400;margin-top:24px;margin-bottom:10px;color:var(--ink)}
+h2{font-size:22px}h3{font-size:18px}
+p{margin-bottom:14px;color:var(--ink-soft)}
+.v1-meta{font-family:var(--mono);font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;background:var(--card);border:1px solid var(--hair);padding:6px 12px;border-radius:5px;display:inline-block;margin-bottom:20px}
+.section{background:var(--card);border:1px solid var(--hair);border-radius:8px;padding:18px 22px;margin-bottom:14px}
+.section h3{margin-top:0}
+.preserved{font-family:var(--serif);font-style:italic;color:var(--amber)}
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+</style></head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">.</span>me</div>
+  <div class="crumb"><a href="/us.html">Us</a> · v1 archive · jumps</div>
+  <svg viewBox="0 0 120 24" width="120" height="24" style="margin-left:auto;opacity:0.7;"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" style="animation:ecg-pulse 1.6s infinite"/></svg>
+</header>
+<div class="container">
+<h1>jumps</h1>
+<div class="v1-meta">v1 archive · 3892 chars · ported from ~/atlas-os-v1-archive-2026-06-08/src/app/jumps/page.tsx</div>
+<div class="section"><h3>Content (strings ≥40 chars)</h3><p class="preserved">");
+    return JSON.parse(await fs.readFile(p, "</p><p class="preserved">")) as JumpsData;
+  } catch {
+    return null;
+  }
+}
+
+function clock(iso: string): string {
+  try {
+    return new Date(iso).toLocaleTimeString("</p><p class="preserved">" });
+  } catch {
+    return iso;
+  }
+}
+
+export default async function JumpsPage() {
+  const data = await loadJumps();
+  const jumps = data?.jumps ?? [];
+  const kept = data?.anchors_kept_pct_today ?? 0;
+
+  return (
+    <main className="</p><p class="preserved">"text-xs uppercase tracking-widest text-amber-400/60"</p><p class="preserved">"font-serif text-3xl md:text-5xl text-zinc-100 leading-tight mt-2"</p><p class="preserved">">
+            context-switches caught · intentional or drift. ADHD-pattern visible, judged later, not now.
+          </p>
+        </header>
+
+        <section className="</p><p class="preserved">"text-[10px] uppercase tracking-widest text-emerald-400/60 mb-1"</p><p class="preserved">"text-4xl font-mono font-semibold text-emerald-300"</p><p class="preserved">"}</p>
+        </section>
+
+        {jumps.length === 0 ? (
+          <p className="</p></div><div class="section"><h3>JSX text content</h3><p>no jumps today · either deep focus OR not yet tracked</p></div><p style="font-family:var(--mono);font-size:11px;color:var(--ink-faint);text-align:center;margin-top:32px;">v1 source preserved · per #27089 LADDER · per concept-preservation Jun 8</p></div></body></html>
