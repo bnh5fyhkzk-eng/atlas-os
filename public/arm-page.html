@@ -90,6 +90,12 @@
   .nav { display: none; }
   .main { padding: 24px 18px 80px !important; }
 }
+
+  /* Category filter chips */
+  .cat-filter{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
+  .cat-chip{background:var(--card);border:1px solid var(--hair);border-radius:14px;padding:4px 12px;font-size:11px;color:var(--ink-soft);cursor:pointer;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.5px}
+  .cat-chip.active{background:var(--amber-soft);border-color:var(--amber);color:var(--ink)}
+  .cat-chip .count{margin-left:4px;color:var(--ink-faint)}
 </style>
 </head>
 <body>
@@ -197,6 +203,25 @@ function render() {
   `;
   const blocksHtml = `<div class="blocks" id="block-list">${blocks.map(renderBlock).join('')}</div>`;
   const addBtn = `<div class="add-block" onclick="addBlockPrompt()">+ Add block · or type "/" on empty line</div>`;
+
+  // Build category-filter chips
+  const categoryCounts = {};
+  (armData.blocks || []).forEach(b => {
+    const cat = b.props?.category || 'note';
+    categoryCounts[cat] = (categoryCounts[cat] || 0) + 1;
+  });
+  const cats = Object.keys(categoryCounts).sort();
+  const activeCat = sessionStorage.getItem('arm-active-cat-' + armName) || 'all';
+  const chipsHtml = '<div class="cat-filter category-filter-chips">' +
+    '<div class="cat-chip ' + (activeCat==='all'?'active':'') + '" onclick="setCatFilter(\'all\')">all <span class="count">' + (armData.blocks?.length || 0) + '</span></div>' +
+    cats.map(c => `<div class="cat-chip ${activeCat===c?'active':''}" onclick="setCatFilter('${c}')">${c}<span class="count">${categoryCounts[c]}</span></div>`).join('') + 
+    '</div>';
+  blocksHtml = chipsHtml + blocksHtml;
+  // Filter blocks by activeCat
+  if (activeCat !== 'all') {
+    blocks = (armData.blocks || []).filter(b => (b.props?.category || 'note') === activeCat);
+  }
+
   document.getElementById('content').innerHTML = headerHtml + blocksHtml + addBtn;
   attachHandlers();
 }
@@ -423,6 +448,11 @@ function showIndicator(state) {
   }
 }
 
+window.setCatFilter = function(c) {
+  sessionStorage.setItem('arm-active-cat-' + armName, c);
+  blocks = (armData.blocks || []).map(b => ({...b}));
+  render();
+};
 renderNav();
 load();
 </script>

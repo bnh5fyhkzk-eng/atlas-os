@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>atlasos.me · by category · cross-arm</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--green:#6BAE73;--red:#C03A2B;--violet:#9D7CD8;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.55;min-height:100vh}
+  .topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;gap:14px}
+  .brand{font-family:var(--serif);font-size:18px}.brand .dot{color:var(--amber)}
+  .crumb{color:var(--ink-faint);font-size:12px}.crumb a{color:var(--ink-soft);text-decoration:none}
+  .container{max-width:1100px;margin:0 auto;padding:32px 32px 80px}
+  h1{font-family:var(--serif);font-size:30px;font-weight:400;margin-bottom:6px}
+  .subtitle{color:var(--ink-faint);font-size:13px;margin-bottom:24px;font-style:italic}
+  .chips{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+  .chip{background:var(--card);border:1px solid var(--hair);border-radius:18px;padding:6px 14px;font-size:12px;color:var(--ink-soft);cursor:pointer;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.5px}
+  .chip.active{background:var(--amber-soft);border-color:var(--amber);color:var(--ink)}
+  .chip .count{margin-left:6px;color:var(--ink-faint)}
+  .cat-section{margin-bottom:32px}
+  .cat-section h2{font-family:var(--serif);font-size:22px;font-weight:400;margin-bottom:14px;border-bottom:1px solid var(--hair);padding-bottom:6px;display:flex;justify-content:space-between;align-items:baseline}
+  .cat-section h2 .count{font-family:var(--mono);font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px}
+  .item{background:var(--card);border:1px solid var(--hair);border-left:3px solid var(--amber-soft);border-radius:0 6px 6px 0;padding:10px 14px;margin-bottom:6px}
+  .item.p0{border-left-color:var(--red)}
+  .item.p1{border-left-color:var(--amber)}
+  .item .meta{font-family:var(--mono);font-size:10px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;display:flex;gap:10px;align-items:center}
+  .item .meta a{color:var(--amber);text-decoration:none}
+  .item .content{font-size:13px;color:var(--ink);line-height:1.5}
+  .empty{padding:10px 14px;color:var(--ink-faint);font-style:italic;font-size:12px}
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">·</span>me</div>
+  <div class="crumb"><a href="/us.html">Us</a> · by category (cross-arm)</div>
+  <svg viewBox="0 0 120 24" width="120" height="24" style="margin-left:auto;opacity:0.7;"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" style="animation:ecg-pulse 1.6s infinite"/></svg>
+</header>
+<div class="container">
+  <h1>By category · cross-arm</h1>
+  <div class="subtitle">all 8 arms grouped by block-category · click chip to filter · timeline newest first</div>
+  <div class="chips" id="chips">Loading…</div>
+  <div id="sections">Loading…</div>
+</div>
+<script>
+const escape = s => (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let agg = null;
+let activeFilter = 'all';
+async function load() {
+  try {
+    const r = await fetch('/manager-aggregate.json', {cache:'no-cache'});
+    agg = await r.json();
+    render();
+  } catch(e) {
+    document.getElementById('sections').textContent = 'Load failed · ' + e.message;
+  }
+}
+function render() {
+  const counts = agg.category_counts || {};
+  const categories = Object.keys(counts);
+  document.getElementById('chips').innerHTML = '<div class="chip ' + (activeFilter==='all'?'active':'') + '" onclick="setFilter(\'all\')">all <span class="count">' + (agg.total_blocks||0) + '</span></div>' +
+    categories.map(c => `<div class="chip ${activeFilter===c?'active':''}" onclick="setFilter('${escape(c)}')">${escape(c)}<span class="count">${counts[c]||0}</span></div>`).join('');
+  const show = activeFilter === 'all' ? categories : [activeFilter];
+  document.getElementById('sections').innerHTML = show.map(cat => {
+    const items = (agg.categories?.[cat] || []);
+    return `<div class="cat-section">
+      <h2>${escape(cat)} <span class="count">${items.length}</span></h2>
+      ${items.length ? items.map(it => `
+        <div class="item ${(it.priority||'p2').toLowerCase()}">
+          <div class="meta">
+            <a href="/arm-page.html?name=${escape(it.arm)}">${escape(it.arm_glyph || '·')} ${escape(it.arm_name || it.arm)}</a>
+            <span>${escape(it.priority||'?')}</span>
+            <span>${escape(it.source||'?')}</span>
+            <span>${escape((it.updated_at||'').substring(0,16).replace('T',' '))}</span>
+          </div>
+          <div class="content">${escape(it.content||'')}</div>
+        </div>
+      `).join('') : '<div class="empty">no items yet · arms haven\'t posted to this category yet</div>'}
+    </div>`;
+  }).join('');
+}
+function setFilter(c) { activeFilter = c; render(); }
+window.setFilter = setFilter;
+load();
+setInterval(load, 60000);
+</script>
+</body>
+</html>
