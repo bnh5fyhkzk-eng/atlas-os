@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>atlasos.me · octopus · main-brain + arms</title>
+<style>
+  :root {
+    --bg: #FAF8F4;
+    --card: #FFFDF8;
+    --ink: #1A2540;
+    --ink-soft: #4A5468;
+    --ink-faint: #8590A2;
+    --amber: #C28A3E;
+    --amber-soft: #E5D4B1;
+    --hair: #E8E2D4;
+    --green: #6BAE73;
+    --serif: 'Cardo','Iowan Old Style','Palatino',Georgia,serif;
+    --sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    --mono: 'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 14px; line-height: 1.5; -webkit-font-smoothing: antialiased; min-height: 100vh; display: flex; flex-direction: column; }
+  .topbar { height: 48px; border-bottom: 1px solid var(--hair); display: flex; align-items: center; padding: 0 18px; background: var(--bg); gap: 14px; flex-shrink: 0; }
+  .brand { font-family: var(--serif); font-size: 18px; }
+  .brand .dot { color: var(--amber); }
+  .crumb { color: var(--ink-faint); font-size: 12px; }
+  .crumb a { color: var(--ink-soft); text-decoration: none; }
+  .crumb a:hover { color: var(--ink); }
+  .stats { margin-left: auto; font-size: 11px; color: var(--ink-faint); font-family: var(--mono); }
+  .stats .led { display: inline-block; width: 6px; height: 6px; background: var(--green); border-radius: 50%; margin-right: 6px; animation: pulse 1.6s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: 0.4; } 50% { opacity: 1; } }
+
+  .layout { flex: 1; display: grid; grid-template-columns: 1fr 320px; min-height: 0; }
+  .svg-wrap { padding: 30px; display: flex; align-items: center; justify-content: center; min-height: 0; overflow: auto; }
+  svg { max-width: 100%; height: auto; }
+  .panel { border-left: 1px solid var(--hair); background: var(--card); padding: 22px; overflow-y: auto; }
+  .panel h2 { font-family: var(--serif); font-size: 22px; font-weight: 400; color: var(--ink); margin-bottom: 6px; }
+  .panel .meta { font-size: 11px; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 18px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .panel .meta .badge { background: var(--amber-soft); color: var(--ink); padding: 2px 8px; border-radius: 4px; font-size: 11px; }
+  .panel .row { padding: 10px 0; border-bottom: 1px solid var(--hair); font-size: 13px; }
+  .panel .row:last-child { border-bottom: none; }
+  .panel .row .label { color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.5px; font-size: 10px; margin-bottom: 4px; }
+  .panel .row .val { color: var(--ink-soft); }
+  .panel .hint { color: var(--ink-faint); font-size: 13px; line-height: 1.6; font-style: italic; }
+  .panel a { color: var(--amber); text-decoration: none; }
+  .panel a:hover { text-decoration: underline; }
+
+  /* SVG node styles */
+  .node-brain { fill: var(--amber); }
+  .node-brain-ring { fill: none; stroke: var(--amber); stroke-width: 2; stroke-dasharray: 4 4; animation: rotate 16s linear infinite; transform-origin: center; transform-box: fill-box; }
+  @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  .arm-line { stroke: var(--hair); stroke-width: 2; transition: stroke 200ms, stroke-width 200ms; }
+  .arm-node { cursor: pointer; transition: transform 200ms; transform-origin: center; transform-box: fill-box; }
+  .arm-node:hover { transform: scale(1.08); }
+  .arm-node:hover .arm-circle { stroke: var(--amber); stroke-width: 2; }
+  .arm-circle { fill: var(--card); stroke: var(--hair); stroke-width: 1.5; transition: stroke 200ms; }
+  .arm-circle.active { fill: var(--amber-soft); stroke: var(--amber); stroke-width: 2; }
+  .arm-glyph { font-size: 22px; font-family: var(--sans); text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+  .arm-label { font-family: var(--serif); font-size: 13px; fill: var(--ink); text-anchor: middle; pointer-events: none; }
+  .arm-meta { font-family: var(--mono); font-size: 9px; fill: var(--ink-faint); text-anchor: middle; pointer-events: none; }
+  .center-label { font-family: var(--serif); font-size: 14px; fill: var(--ink); text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+  .heartbeat { stroke: var(--amber); stroke-width: 1.4; fill: none; animation: pulse 1.6s ease-in-out infinite; }
+
+  @media (max-width: 768px) {
+    .layout { grid-template-columns: 1fr; grid-template-rows: 1fr auto; }
+    .panel { border-left: none; border-top: 1px solid var(--hair); max-height: 50vh; }
+    .svg-wrap { padding: 16px; }
+  }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">.</span>me</div>
+  <div class="crumb"><a href="/us-mockup.html">Us</a> · octopus · <span style="font-family:var(--mono);">#26977</span></div>
+  <div class="stats"><span class="led"></span><span id="stats-text">main brain + arms · click any arm</span></div>
+</header>
+
+<div class="layout">
+  <div class="svg-wrap">
+    <svg viewBox="0 0 700 700" id="octo" xmlns="http://www.w3.org/2000/svg">
+      <!-- Main brain center -->
+      <g id="center">
+        <circle class="node-brain-ring" cx="350" cy="350" r="78" />
+        <circle class="node-brain" cx="350" cy="350" r="64" opacity="0.92" />
+        <text class="center-label" x="350" y="343" style="fill:#FFFDF8;font-size:18px;font-weight:500;">Atlas</text>
+        <text class="center-label" x="350" y="362" style="fill:#FFFDF8;font-size:11px;opacity:0.85;font-family:var(--mono);">brain v3 · 36K nodes</text>
+        <text class="center-label" x="350" y="377" style="fill:#FFFDF8;font-size:11px;opacity:0.85;font-family:var(--mono);">+ 8 arms</text>
+      </g>
+      <!-- Arms group · positioned at 8 compass points · radius 220 -->
+      <g id="arms"></g>
+      <!-- Heartbeat ECG strip bottom -->
+      <path class="heartbeat" id="ecg" d="M50,670 L200,670 L210,660 L220,680 L230,650 L240,670 L260,670 L350,670 L360,660 L370,680 L380,650 L390,670 L420,670 L650,670" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <aside class="panel" id="panel">
+    <div class="hint">click any arm to see live status · per <span style="font-family:var(--mono);color:var(--amber);">#26977</span> octopus canon · brother direct 2026-05-26.<br><br>main-brain center · 8 arms branching · each = own page · own status · own current task.</div>
+  </aside>
+</div>
+
+<script>
+const arms = [
+  { name: 'PASCAL',    glyph: '🤝', angle: -90, key: 'PASCAL',    page: '/us-mockup.html' },
+  { name: 'CURIOSITY', glyph: '🌱', angle: -45, key: 'CURIOSITY', page: '/us-mockup.html' },
+  { name: 'RESEARCH',  glyph: '📖', angle: 0,   key: 'researcher-worker', altKey: 'RESEARCH', page: '/us-mockup.html' },
+  { name: 'DREAM',     glyph: '🌙', angle: 45,  key: 'DREAM',     page: '/us-mockup.html' },
+  { name: 'INFRA',     glyph: '⚙',  angle: 90,  key: 'INFRA',     page: '/us-mockup.html' },
+  { name: 'CHARLE',    glyph: '💼', angle: 135, key: 'CHARLE',    page: '/us-mockup.html' },
+  { name: 'HERMES',    glyph: '🧠', angle: 180, key: 'HERMES',    page: '/us-mockup.html' },
+  { name: 'CODE',      glyph: '🔧', angle: -135,key: 'CODE',      page: '/us-mockup.html' },
+];
+
+const cx = 350, cy = 350, radius = 230, brainEdge = 80, armR = 42;
+const armsG = document.getElementById('arms');
+
+arms.forEach((arm, idx) => {
+  const rad = (arm.angle * Math.PI) / 180;
+  const ax = cx + radius * Math.cos(rad);
+  const ay = cy + radius * Math.sin(rad);
+  const lineStartX = cx + brainEdge * Math.cos(rad);
+  const lineStartY = cy + brainEdge * Math.sin(rad);
+  const lineEndX   = ax  - armR * Math.cos(rad);
+  const lineEndY   = ay  - armR * Math.sin(rad);
+  armsG.innerHTML += `
+    <line class="arm-line" x1="${lineStartX}" y1="${lineStartY}" x2="${lineEndX}" y2="${lineEndY}" />
+    <g class="arm-node" data-arm="${arm.name}" data-key="${arm.key}" data-altkey="${arm.altKey || ''}">
+      <circle class="arm-circle" cx="${ax}" cy="${ay}" r="${armR}" />
+      <text class="arm-glyph" x="${ax}" y="${ay - 4}">${arm.glyph}</text>
+      <text class="arm-label" x="${ax}" y="${ay + 16}">${arm.name.toLowerCase()}</text>
+    </g>
+  `;
+});
+
+// Click handler
+let armsData = null, armsKanban = null;
+async function loadArmsData() {
+  try {
+    const [a, k] = await Promise.all([
+      fetch('/arms.json').then(r => r.json()),
+      fetch('/arms-kanban.json').then(r => r.json()),
+    ]);
+    armsData = a;
+    armsKanban = k;
+  } catch (e) {
+    console.warn('arms load failed', e);
+  }
+}
+loadArmsData();
+
+function showArm(armName, key, altKey) {
+  document.querySelectorAll('.arm-circle').forEach(c => c.classList.remove('active'));
+  const target = document.querySelector(`.arm-node[data-arm="${armName}"] .arm-circle`);
+  if (target) target.classList.add('active');
+  const panel = document.getElementById('panel');
+  if (!armsData) { panel.innerHTML = '<div class="hint">loading…</div>'; return; }
+  const armObj = (armsData.arms || []).find(a => a.name === key || a.name === altKey || a.name === armName);
+  const kData = (armsKanban && armsKanban.arms) ? (armsKanban.arms[key.toLowerCase()] || armsKanban.arms[(altKey||'').toLowerCase()] || armsKanban.arms[armName.toLowerCase()]) : null;
+  if (!armObj && !kData) {
+    panel.innerHTML = `<h2>${armName}</h2><div class="hint">no live data yet · arm idle. extends here when first task fires.</div>`;
+    return;
+  }
+  const rows = [];
+  if (armObj) {
+    if (armObj.role) rows.push(['role', armObj.role]);
+    if (armObj.status) rows.push(['status', `<span class="badge">${armObj.status}</span>`]);
+    if (armObj.last_fire) rows.push(['last fire', armObj.last_fire]);
+    if (armObj.next_action) rows.push(['next', armObj.next_action]);
+    if (armObj.last_brain_bank) rows.push(['last brain bank', armObj.last_brain_bank]);
+    if (Array.isArray(armObj.blockers) && armObj.blockers.length) rows.push(['blockers', armObj.blockers.join(' · ')]);
+  }
+  if (kData && kData.counts) {
+    const c = kData.counts;
+    rows.push(['kanban', Object.entries(c).map(([k,v]) => `${k}: ${v}`).join(' · ')]);
+  }
+  panel.innerHTML = `
+    <h2>${(armObj && armObj.emoji) || ''} ${armName}</h2>
+    <div class="meta">
+      <span>arm</span>
+      <span>${(armsData.generated_at||'').slice(0,16)}</span>
+    </div>
+    ${rows.map(([l,v]) => `<div class="row"><div class="label">${l}</div><div class="val">${v}</div></div>`).join('')}
+  `;
+}
+
+document.querySelectorAll('.arm-node').forEach(node => {
+  node.addEventListener('click', () => {
+    const name = node.dataset.arm;
+    const key = node.dataset.key;
+    const altKey = node.dataset.altkey;
+    if (armsData) {
+      showArm(name, key, altKey);
+    } else {
+      loadArmsData().then(() => showArm(name, key, altKey));
+    }
+  });
+});
+</script>
+</body>
+</html>
