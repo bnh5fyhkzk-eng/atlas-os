@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-11T12:10:23Z",
+  "generated_at": "2026-06-11T12:15:40Z",
   "source": "me-gemma-tier-into-7-cats.py (rule-based router · per brother direct #45099 1-YOU-2-ME-3-WORLD)",
-  "items_total": 2,
+  "items_total": 5,
   "tier_summary": {
     "atlas": {
       "subs": 0,
@@ -25,11 +25,11 @@
       "P2": 0
     },
     "manager": {
-      "subs": 2,
-      "items": 2,
+      "subs": 3,
+      "items": 5,
       "P0": 0,
       "P1": 0,
-      "P2": 2
+      "P2": 5
     },
     "arms": {
       "subs": 0,
@@ -86,7 +86,7 @@
     },
     "manager": {
       "subs": {
-        "atlas-cycle-directive-execution": {
+        "script-inventory-script-verification": {
           "subsubs": {
             "P0": {
               "items": []
@@ -97,22 +97,22 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-001-1781179519",
-                  "summary": "Analyzing and executing directives, including the current cycle, to ensure proper workflow.",
-                  "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-001-1781179519.md",
+                  "id": "batch-001-1781179828",
+                  "summary": "This conversation outlines the script-inventory verification process, including the use of hooks and the proposed pre-tool-use hook.",
+                  "turn_count": 3,
+                  "source_file": "/gemma-sources/batch-001-1781179828.md",
                   "first_role": "user",
-                  "last_timestamp": "2026-06-11T11:09:53",
-                  "gemma_raw": "CATEGORY: **Atlas-Cycle**\nSUBCATEGORY: **Directive Execution**\nSUMMARY:  Analyzing and executing directives, including the current cycle, to ensure proper workflow.",
-                  "_original_cat": "atlas-cycle",
-                  "_original_sub": "directive-execution"
+                  "last_timestamp": "2026-06-11T12:08:15",
+                  "gemma_raw": "CATEGORY: **Script-Inventory**\nSUBCATEGORY: **Script-Verification**\nSUMMARY:  This conversation outlines the script-inventory verification process, including the use of hooks and the proposed pre-tool-use hook.",
+                  "_original_cat": "script-inventory",
+                  "_original_sub": "script-verification"
                 }
               ]
             }
           },
           "total_items": 1
         },
-        "bug-fix-code-validation": {
+        "mac-mini-files-unsorted": {
           "subsubs": {
             "P0": {
               "items": []
@@ -123,15 +123,71 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-002-1781179521",
-                  "summary": "This conversation details bug fixes and code validation related to a specific script and pattern bank.",
-                  "turn_count": 5,
-                  "source_file": "/gemma-sources/batch-002-1781179521.md",
-                  "first_role": "assistant",
-                  "last_timestamp": "2026-06-11T11:15:01",
-                  "gemma_raw": "CATEGORY: **Bug Fix**\nSUBCATEGORY: **Code Validation**\nSUMMARY:  This conversation details bug fixes and code validation related to a specific script and pattern bank.",
-                  "_original_cat": "bug-fix",
-                  "_original_sub": "code-validation"
+                  "id": "state-0cdce843f9",
+                  "summary": "",
+                  "priority": "P2",
+                  "source_path": "/Users/collinmacneil/.claude/state/session-snapshot.md",
+                  "source_filename": "session-snapshot.md",
+                  "file_mtime": "2026-06-11 08:15",
+                  "first_role": "mac-mini-file",
+                  "gemma_raw": "## CATEGORY: session-snapshot.md\n## SUBCATEGORY: Mailbox\n## PRIORITY: P2\n## SUMMARY:  A snapshot of the session, including build queue and active workers.",
+                  "kind": "state-doc",
+                  "_original_cat": "mac-mini-files",
+                  "_original_sub": "unsorted"
+                },
+                {
+                  "id": "state-25b993974c",
+                  "summary": "",
+                  "priority": "P2",
+                  "source_path": "/Users/collinmacneil/.claude/state/daemon-health-alert.md",
+                  "source_filename": "daemon-health-alert.md",
+                  "file_mtime": "2026-06-11 08:15",
+                  "first_role": "mac-mini-file",
+                  "gemma_raw": "## File: daemon-health-alert.md\n\n**CATEGORY:** daemon-health\n**SUBCATEGORY:** stale-daemons\n**PRIORITY:** P2\n**SUMMARY:**  Alert: stale daemons detected, check before new build.",
+                  "kind": "state-doc",
+                  "_original_cat": "mac-mini-files",
+                  "_original_sub": "unsorted"
+                },
+                {
+                  "id": "state-7b40815aa6",
+                  "summary": "",
+                  "priority": "P2",
+                  "source_path": "/Users/collinmacneil/.claude/state/skill-proposals/2026-06-11-0810-verify-pending-before-claim.md",
+                  "source_filename": "2026-06-11-0810-verify-pending-before-claim.md",
+                  "file_mtime": "2026-06-11 08:14",
+                  "first_role": "mac-mini-file",
+                  "gemma_raw": "##  CATEGORY: verify-pending-before-claim\n## SUBCATEGORY: PostToolUse hook\n## PRIORITY: P2\n## SUMMARY:  A PostToolUse hook to verify pending claims after state-doc read, injecting truth to stderr before next-turn claim fires.",
+                  "kind": "state-doc",
+                  "_original_cat": "mac-mini-files",
+                  "_original_sub": "unsorted"
+                }
+              ]
+            }
+          },
+          "total_items": 3
+        },
+        "mac-mini-files-cycle-fire-context": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "state-b6a960c177",
+                  "summary": "Detailed log of the cycle-fire context, including the symlink and script issues.",
+                  "priority": "P2",
+                  "source_path": "/Users/collinmacneil/.claude/state/atlas-brother-shared.md",
+                  "source_filename": "atlas-brother-shared.md",
+                  "file_mtime": "2026-06-11 08:15",
+                  "first_role": "mac-mini-file",
+                  "gemma_raw": "## CATEGORY: atlas-brother-shared\nSUBCATEGORY: cycle-fire-context\nPRIORITY: P2\nSUMMARY:  Detailed log of the cycle-fire context, including the symlink and script issues. \n\n##",
+                  "kind": "state-doc",
+                  "_original_cat": "mac-mini-files",
+                  "_original_sub": "cycle-fire-context"
                 }
               ]
             }
@@ -139,15 +195,15 @@
           "total_items": 1
         }
       },
-      "total": 2,
+      "total": 5,
       "priority_counts": {
         "P0": 0,
         "P1": 0,
-        "P2": 2
+        "P2": 5
       },
       "original_categories": [
-        "atlas-cycle",
-        "bug-fix"
+        "mac-mini-files",
+        "script-inventory"
       ]
     },
     "arms": {
