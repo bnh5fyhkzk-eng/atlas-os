@@ -148,6 +148,12 @@
     flex-direction: column;
     gap: 10px;
   }
+  [contenteditable][data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: var(--ink-faint);
+    font-style: italic;
+    pointer-events: none;
+  }
   .cat-row {
     background: var(--card);
     border: 1px solid var(--hair);
@@ -818,26 +824,65 @@
     document.getElementById('bc-cards').innerHTML = html;
     show('brain-cat');
   }
+  // NOTES per item · contentEditable · localStorage backed · brother + Atlas notes survive Gemma refresh
+  function loadNotes() {
+    try { return JSON.parse(localStorage.getItem('atlas-item-notes') || '{}'); }
+    catch { return {}; }
+  }
+  function saveNotes(n) {
+    try { localStorage.setItem('atlas-item-notes', JSON.stringify(n)); } catch {}
+  }
+  function commitNote(itemId, el) {
+    const notes = loadNotes();
+    const txt = el.textContent.trim();
+    if (txt) notes[itemId] = { text: txt, updatedAt: new Date().toISOString().substring(0, 16) };
+    else delete notes[itemId];
+    saveNotes(notes);
+    // Flash save indicator
+    el.style.borderBottomColor = 'var(--amber)';
+    setTimeout(() => { el.style.borderBottomColor = 'transparent'; }, 500);
+  }
+
   function showGemmaCat(cat) {
     if (!gemmaCurated) return;
-    const entry = (gemmaCurated.curated || {})[cat];
+    let entry = (gemmaCurated.curated || {})[cat];
+    // Handle custom categories
+    const edits = loadEdits();
+    if (!entry && edits.custom?.[cat]) {
+      entry = { description: '(custom category · add notes + source links by editing)', subcategories: {} };
+    }
     if (!entry) return;
-    document.getElementById('bc-crumb').innerHTML = `<a onclick="showGemmaIndex()">Gemma</a> › ${escapeHtml(cat)}`;
-    document.getElementById('bc-title').textContent = cat;
+    const editedName = edits.renames?.[cat] || cat.replace(/^custom-/,'').replace(/-/g,' ');
+    document.getElementById('bc-crumb').innerHTML = `<a onclick="showGemmaIndex()">Gemma</a> › ${escapeHtml(editedName)}`;
+    document.getElementById('bc-title').textContent = editedName;
     document.getElementById('bc-subtitle').textContent = entry.description || '';
-    const html = Object.entries(entry.subcategories || {}).flatMap(([sub, items]) =>
-      items.map(it => `<div class="note-card">
-        <div class="nt-title">${escapeHtml(sub)} · ${escapeHtml((it.source_filename || it.id || '').substring(0, 80))}</div>
-        <div class="nt-preview">${escapeHtml(it.summary || '(no summary)')}</div>
+    const notes = loadNotes();
+    const items = Object.entries(entry.subcategories || {}).flatMap(([sub, list]) =>
+      list.map(it => ({ ...it, _sub: sub }))
+    );
+    const html = items.map(it => {
+      const itemId = it.id || (it.source_path || '').substring(0,80);
+      const note = notes[itemId];
+      const sourceLink = it.source_file || (it.source_path ? `file://${it.source_path}` : '');
+      return `<div class="note-card" style="position:relative;">
+        <div class="nt-title">
+          <span style="font-size:10px;color:var(--amber);background:var(--amber-soft);padding:1px 6px;border-radius:3px;text-transform:uppercase;letter-spacing:0.5px;margin-right:6px;">${escapeHtml(it._sub)}</span>
+          ${escapeHtml((it.source_filename || it.id || '').substring(0,80))}
+        </div>
+        <div class="nt-preview">${escapeHtml(it.summary || '(Gemma summary pending)')}</div>
+        <div style="margin-top:10px;border-left:3px solid var(--amber-soft);padding:8px 12px;background:var(--bg);border-radius:4px;">
+          <div style="font-size:10px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;font-family:var(--mono);">my notes${note ? ` · last ${escapeHtml(note.updatedAt)}` : ''}</div>
+          <div contenteditable="true" spellcheck="true" data-item="${escapeHtml(itemId)}" onblur="commitNote('${itemId.replace(/'/g,"\\'")}', this)" onkeydown="if(event.key==='Enter'&&event.metaKey){event.preventDefault();this.blur();}" style="outline:none;border-bottom:1px dashed transparent;padding:4px;min-height:22px;font-size:14px;color:var(--ink);line-height:1.5;border-radius:3px;cursor:text;transition:border-bottom-color 200ms;" onfocus="this.style.borderBottomColor='var(--amber)';" data-placeholder="click to add your notes">${note ? escapeHtml(note.text) : ''}</div>
+        </div>
         <div class="nt-meta">
-          ${it.source_path ? `<span>${escapeHtml(it.source_path).split('/').pop()}</span>` : ''}
-          ${it.source_file ? `<span><a href="${escapeHtml(it.source_file)}" target="_blank" style="color:var(--amber);">view source ↗</a></span>` : ''}
+          ${sourceLink ? `<span><a href="${escapeHtml(sourceLink)}" target="_blank" style="color:var(--amber);">view source ↗</a></span>` : ''}
+          ${it.source_path ? `<span title="${escapeHtml(it.source_path)}">${escapeHtml(it.source_path.split('/').pop())}</span>` : ''}
           ${it.file_mtime ? `<span>${escapeHtml(it.file_mtime)}</span>` : ''}
           ${it.last_timestamp ? `<span>${escapeHtml(it.last_timestamp)}</span>` : ''}
           ${it.kind ? `<span class="by">${escapeHtml(it.kind)}</span>` : ''}
         </div>
-      </div>`)
-    ).join('') || '<div style="color:var(--ink-faint);">no items yet</div>';
+      </div>`;
+    }).join('') || '<div style="color:var(--ink-faint);padding:24px;text-align:center;">no items yet · Gemma fills overnight · or add custom category items via Notes</div>';
     document.getElementById('bc-cards').innerHTML = html;
     show('brain-cat');
   }
