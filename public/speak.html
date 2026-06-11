@@ -50,24 +50,86 @@
   </div>
   <div class="chat-box">
     <div id="selected" style="font-family:var(--mono);font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:10px;">select an arm above</div>
-    <textarea id="msg" placeholder="type message · or use voice (browser mic permission)"></textarea>
-    <button onclick="send()">Send to arm</button>
-    <p style="color:var(--ink-faint);font-size:11px;margin-top:14px;font-family:var(--mono);">v1 · UI stub · v2 wires to arm-dispatch /api/arms/dispatch + voice via existing me-hear:8125</p>
+    <textarea id="msg" placeholder="type message · or click 🎤 mic for voice"></textarea>
+    <div style="display:flex;gap:10px;margin-top:10px;align-items:center;">
+      <button id="mic-btn" onclick="micToggle()" style="padding:10px 14px;background:var(--card);border:1px solid var(--hair);border-radius:6px;font-size:18px;cursor:pointer;">🎤</button>
+      <button onclick="send()" style="padding:10px 20px;background:var(--amber);color:var(--card);border:none;border-radius:6px;font-family:inherit;font-size:13px;cursor:pointer;">Send to arm</button>
+      <span id="mic-status" style="font-family:var(--mono);font-size:11px;color:var(--ink-faint);"></span>
+    </div>
+    <div id="reply" style="margin-top:14px;padding:10px;background:var(--bg);border-radius:6px;font-size:12px;color:var(--ink-soft);display:none;font-family:var(--mono);"></div>
+    <p style="color:var(--ink-faint);font-size:11px;margin-top:14px;font-family:var(--mono);">live · /api/arms/dispatch + /api/voice/transcribe wired · cookie-gated · me-hear:8125 via ME_HEAR_PUBLIC_URL env</p>
   </div>
 </div>
 <script>
 let armSel = null;
+let mediaRecorder = null;
+let chunks = [];
 function select(arm) {
   armSel = arm;
   document.querySelectorAll('.arm-card').forEach(c => c.classList.remove('active'));
   event.currentTarget.classList.add('active');
   document.getElementById('selected').textContent = 'speaking to · ' + arm;
 }
-function send() {
+async function micToggle() {
+  const status = document.getElementById('mic-status');
+  const btn = document.getElementById('mic-btn');
+  if (mediaRecorder && mediaRecorder.state === 'recording') {
+    mediaRecorder.stop();
+    btn.style.background = 'var(--card)';
+    status.textContent = 'processing...';
+    return;
+  }
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    chunks = [];
+    mediaRecorder = new MediaRecorder(stream);
+    mediaRecorder.ondataavailable = e => chunks.push(e.data);
+    mediaRecorder.onstop = async () => {
+      const blob = new Blob(chunks, { type: 'audio/webm' });
+      stream.getTracks().forEach(t => t.stop());
+      const r = await fetch('/api/voice/transcribe', {
+        method: 'POST',
+        headers: { 'content-type': 'audio/webm' },
+        body: blob,
+      });
+      const d = await r.json();
+      if (d.transcript) {
+        document.getElementById('msg').value = d.transcript;
+        status.textContent = d.stub ? '(stub · me-hear tunnel pending)' : 'transcribed';
+      } else {
+        status.textContent = 'transcribe failed';
+      }
+    };
+    mediaRecorder.start();
+    btn.style.background = 'var(--amber)';
+    status.textContent = 'recording... click 🎤 to stop';
+  } catch (e) {
+    status.textContent = 'mic permission denied';
+  }
+}
+async function send() {
   if (!armSel) { alert('select an arm first'); return; }
   const msg = document.getElementById('msg').value.trim();
   if (!msg) return;
-  alert(`speak-here · would dispatch to ${armSel} arm · v1 stub · v2 wires real arm-dispatch`);
+  const reply = document.getElementById('reply');
+  reply.style.display = 'block';
+  reply.textContent = 'dispatching...';
+  try {
+    const r = await fetch('/api/arms/dispatch', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ arm: armSel, prompt: msg }),
+    });
+    const d = await r.json();
+    if (d.task_id) {
+      reply.textContent = `queued · task_id ${d.task_id} · status ${d.status} · ${d.queued_at}`;
+      document.getElementById('msg').value = '';
+    } else {
+      reply.textContent = `error · ${d.error || 'unknown'}`;
+    }
+  } catch (e) {
+    reply.textContent = 'dispatch failed · ' + e.message;
+  }
 }
 </script>
 </body>
