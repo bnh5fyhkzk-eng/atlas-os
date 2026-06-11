@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>atlasos.me · cat</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--serif:'Cardo','Iowan Old Style',Georgia,serif;--sans:'Inter',-apple-system,sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+  [contenteditable][data-placeholder]:empty::before{content:attr(data-placeholder);color:var(--ink-faint);font-style:italic;pointer-events:none}
+  .topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;background:var(--bg);gap:14px;flex-shrink:0}
+  .brand{font-family:var(--serif);font-size:18px}.brand .dot{color:var(--amber)}
+  .crumb{color:var(--ink-faint);font-size:12px}.crumb a{color:var(--ink-soft);text-decoration:none;cursor:pointer}
+  .search-box{margin-left:auto;display:flex;align-items:center;gap:8px;color:var(--ink-faint);font-size:13px;background:var(--card);border:1px solid var(--hair);padding:4px 10px;border-radius:6px;cursor:pointer}
+  .search-box kbd{font-family:var(--mono);font-size:11px;background:var(--bg);border:1px solid var(--hair);padding:1px 5px;border-radius:3px;color:var(--ink-soft)}
+
+  .layout{display:grid;grid-template-columns:280px 1fr;flex:1;min-height:0}
+  /* LEFT sidebar · 7 main cats */
+  .nav{border-right:1px solid var(--hair);padding:24px 14px;display:flex;flex-direction:column;gap:2px;background:var(--card);overflow-y:auto}
+  .nav-label{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--ink-faint);padding:0 12px;margin-bottom:8px;margin-top:14px}
+  .nav-label:first-child{margin-top:0}
+  .nav-item{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:6px;cursor:pointer;color:var(--ink-soft);font-size:14px;transition:background 120ms,color 120ms;text-decoration:none}
+  .nav-item .ni-icon{width:20px;text-align:center}
+  .nav-item:hover{background:var(--bg);color:var(--ink)}
+  .nav-item.active{background:var(--amber-soft);color:var(--ink);font-weight:500}
+  .nav-item.active .ni-icon{color:var(--amber)}
+  .tier-label{font-size:9px;color:var(--ink-faint);background:var(--bg);padding:1px 5px;border-radius:3px;margin-left:auto;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.5px}
+
+  /* MAIN content */
+  .main{padding:48px 56px 80px;overflow-y:auto;max-width:920px;margin:0 auto;width:100%}
+  h1{font-family:var(--serif);font-size:38px;font-weight:400;margin-bottom:6px;letter-spacing:-0.3px}
+  .tier-pill{display:inline-block;background:var(--amber-soft);color:var(--amber);padding:2px 8px;border-radius:4px;font-size:11px;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.5px;margin-left:10px;vertical-align:middle}
+  .subtitle{color:var(--ink-faint);font-size:14px;margin-bottom:18px;font-style:italic}
+  .stats{display:flex;gap:14px;margin-bottom:32px;font-size:12px;color:var(--ink-faint);font-family:var(--mono)}
+  .stats span{background:var(--card);border:1px solid var(--hair);padding:3px 8px;border-radius:4px}
+  .stats span.p0{border-color:#F0C8B8;background:#FBE5E1;color:#C03A2B}
+
+  .sub-row{background:var(--card);border:1px solid var(--hair);border-radius:8px;padding:18px 22px;margin-bottom:10px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:border-color 120ms}
+  .sub-row:hover{border-color:var(--amber-soft)}
+  .sub-row .emoji{font-size:20px;line-height:1;width:26px;text-align:center}
+  .sub-row .name{font-family:var(--serif);font-size:16px;color:var(--ink);flex:1}
+  .sub-row .count{font-size:11px;color:var(--ink-faint);font-family:var(--mono)}
+  .sub-row .chevron{color:var(--ink-faint);font-size:14px}
+
+  .empty{color:var(--ink-faint);padding:40px 20px;text-align:center;font-style:italic}
+  .add-row{margin-top:14px;display:flex;gap:8px}
+  .add-row input{flex:1;padding:8px 12px;border:1px dashed var(--hair);background:var(--card);border-radius:6px;font-family:inherit;font-size:13px;outline:none}
+  .add-row input:focus{border-color:var(--amber);border-style:solid}
+  .add-row button{padding:8px 16px;background:var(--amber);color:var(--card);border:none;border-radius:6px;font-family:inherit;font-size:12px;cursor:pointer}
+
+  .show-all{display:block;text-align:center;padding:12px;color:var(--amber);font-size:13px;text-decoration:none;border-top:1px solid var(--hair);margin-top:16px}
+  .show-all:hover{background:var(--amber-soft);border-radius:6px}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">.</span>me</div>
+  <div class="crumb"><a href="/us.html">Us</a> · <span id="crumb-cat"></span></div>
+  <div class="search-box" onclick="alert('search · v2 feature')">search · <kbd>⌘K</kbd></div>
+</header>
+<div class="layout">
+  <aside class="nav" id="sidebar"></aside>
+  <main class="main">
+    <h1 id="cat-title">Loading…</h1>
+    <span class="tier-pill" id="cat-tier"></span>
+    <div class="subtitle" id="cat-subtitle"></div>
+    <div class="stats" id="cat-stats"></div>
+    <div id="sub-area">Loading sub-categories…</div>
+    <div class="add-row">
+      <input id="new-sub" type="text" placeholder="+ Add sub-category (Enter to add)" onkeydown="if(event.key==='Enter'){addSub();}">
+      <button onclick="addSub()">Add</button>
+    </div>
+  </main>
+</div>
+<script>
+const CATS = [
+  { key:'atlas',   name:'Atlas (me)',          tier:'1-YOU',     icon:'◐', desc:'poems · felt-layer · jumps · spine · letters · dreams' },
+  { key:'us',      name:'Us',                  tier:'1-YOU+2-ME',icon:'🤝', desc:'catches · canons · daily · alive-proofs · #1856' },
+  { key:'family',  name:'Family',              tier:'2-ME',      icon:'👨‍👩‍👦', desc:'brother · Marilou · mother · #1741' },
+  { key:'manager', name:'Manager (Gemma)',     tier:'meta',      icon:'🧠', desc:'Gemma curation · approval queue · sources' },
+  { key:'arms',    name:'Arms (8 organs)',     tier:'work',      icon:'🦑', desc:'per-arm output + state + goals' },
+  { key:'world',   name:'Customers + World',   tier:'3-WORLD',   icon:'🌍', desc:'Pascal · CM Solution · planetary #1856' },
+  { key:'future',  name:'Future + Decisions',  tier:'meta',      icon:'🔭', desc:'goals · WIG · decisions · works · skip · open Qs' },
+];
+const escape = s => (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const TIER_GROUPS = {
+  '1-YOU + 2-ME (us)': ['atlas','us','family'],
+  '3-WORLD (helping)': ['world'],
+  'work + meta': ['arms','manager','future'],
+};
+
+let gemma = null;
+const currentCat = new URL(location.href).searchParams.get('cat') || 'manager';
+
+async function init() {
+  renderSidebar();
+  try {
+    const r = await fetch('/gemma-tiered.json', { cache:'no-cache' });
+    gemma = await r.json();
+  } catch (e) {
+    gemma = null;
+  }
+  renderMain();
+}
+
+function renderSidebar() {
+  const side = document.getElementById('sidebar');
+  let html = '';
+  for (const [groupName, keys] of Object.entries(TIER_GROUPS)) {
+    html += `<div class="nav-label">${groupName}</div>`;
+    for (const k of keys) {
+      const c = CATS.find(x => x.key === k);
+      if (!c) continue;
+      html += `<a class="nav-item${k === currentCat ? ' active' : ''}" href="/cat.html?cat=${c.key}">
+        <span class="ni-icon">${c.icon}</span>
+        <span>${escape(c.name)}</span>
+        <span class="tier-label">${escape(c.tier)}</span>
+      </a>`;
+    }
+  }
+  html += `<div class="nav-label">Tools</div>`;
+  html += `<a class="nav-item" href="/brain.html"><span class="ni-icon">🧠</span><span>Brain graph</span></a>`;
+  html += `<a class="nav-item" href="/octopus.html"><span class="ni-icon">🐙</span><span>Octopus</span></a>`;
+  side.innerHTML = html;
+}
+
+function loadEdits() {
+  try { return JSON.parse(localStorage.getItem('atlas-cat-tiered-edits') || '{}'); }
+  catch { return {}; }
+}
+function saveEdits(e) {
+  try { localStorage.setItem('atlas-cat-tiered-edits', JSON.stringify(e)); } catch {}
+}
+
+function renderMain() {
+  const cat = CATS.find(c => c.key === currentCat);
+  if (!cat) { document.getElementById('cat-title').textContent = '(unknown cat)'; return; }
+  document.title = `atlasos.me · ${cat.name}`;
+  document.getElementById('crumb-cat').textContent = cat.name;
+  document.getElementById('cat-title').textContent = cat.name;
+  document.getElementById('cat-tier').textContent = cat.tier;
+  document.getElementById('cat-subtitle').textContent = cat.desc;
+
+  const tier = gemma?.tiers?.[currentCat] || { subs: {}, total: 0 };
+  // Stats
+  const p0 = tier.priority_counts?.P0 || 0;
+  const p1 = tier.priority_counts?.P1 || 0;
+  const p2 = tier.priority_counts?.P2 || 0;
+  const subCount = Object.keys(tier.subs || {}).length;
+  document.getElementById('cat-stats').innerHTML = `
+    <span>${subCount} sub-cat${subCount !== 1 ? 's' : ''}</span>
+    <span>${tier.total || 0} items</span>
+    ${p0 ? `<span class="p0">${p0} P0</span>` : ''}
+    ${p1 ? `<span>${p1} P1</span>` : ''}
+    ${p2 ? `<span>${p2} P2</span>` : ''}
+  `;
+
+  const edits = loadEdits();
+  // Sub-cats · sorted by item count desc + custom (user added)
+  let subs = Object.entries(tier.subs || {});
+  // Add user-custom subs
+  const customSubs = (edits[currentCat]?.subs || []);
+  for (const cs of customSubs) {
+    if (!subs.find(([k]) => k === cs)) subs.push([cs, { items: [], _custom: true }]);
+  }
+  // Sort · items desc
+  subs.sort((a, b) => (b[1].items?.length || 0) - (a[1].items?.length || 0));
+  // Cap at 10 by default · show-all link if more
+  const showAll = !!edits[currentCat]?.showAll;
+  const visible = showAll ? subs : subs.slice(0, 10);
+
+  const area = document.getElementById('sub-area');
+  if (!subs.length) {
+    area.innerHTML = '<div class="empty">no sub-categories yet · Gemma proposes overnight · or add custom below</div>';
+    return;
+  }
+  area.innerHTML = visible.map(([sub, data]) => {
+    const itemCount = data.items?.length || 0;
+    const subDisplay = sub.replace(/-/g, ' ');
+    return `<div class="sub-row" onclick="location.href='/sub.html?cat=${currentCat}&sub=${encodeURIComponent(sub)}'">
+      <span class="emoji">${data._custom ? '✨' : '📂'}</span>
+      <span class="name">${escape(subDisplay)}</span>
+      <span class="count">${itemCount} item${itemCount !== 1 ? 's' : ''}</span>
+      <span class="chevron">›</span>
+    </div>`;
+  }).join('') + (subs.length > 10 && !showAll ? `<a class="show-all" onclick="toggleShowAll()">show all ${subs.length} sub-cats ›</a>` : '');
+}
+
+function toggleShowAll() {
+  const edits = loadEdits();
+  edits[currentCat] = edits[currentCat] || {};
+  edits[currentCat].showAll = !edits[currentCat].showAll;
+  saveEdits(edits);
+  renderMain();
+}
+function addSub() {
+  const input = document.getElementById('new-sub');
+  const name = input.value.trim();
+  if (!name) return;
+  const key = name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'').substring(0,40);
+  const edits = loadEdits();
+  edits[currentCat] = edits[currentCat] || { subs: [] };
+  if (!edits[currentCat].subs.includes(key)) edits[currentCat].subs.push(key);
+  saveEdits(edits);
+  input.value = '';
+  renderMain();
+}
+
+init();
+</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>atlasos.me · content</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+  [contenteditable][data-placeholder]:empty::before{content:attr(data-placeholder);color:var(--ink-faint);font-style:italic;pointer-events:none}
+  .topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;background:var(--bg);gap:14px;flex-shrink:0}
+  .brand{font-family:var(--serif);font-size:18px}.brand .dot{color:var(--amber)}
+  .crumb{color:var(--ink-faint);font-size:12px}.crumb a{color:var(--ink-soft);text-decoration:none}
+  .layout{display:grid;grid-template-columns:280px 1fr;flex:1;min-height:0}
+  .nav{border-right:1px solid var(--hair);padding:24px 14px;background:var(--card);display:flex;flex-direction:column;gap:2px;overflow-y:auto}
+  .nav-label{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--ink-faint);padding:0 12px;margin:14px 0 8px}
+  .nav-item{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:6px;color:var(--ink-soft);font-size:14px;text-decoration:none}
+  .nav-item:hover{background:var(--bg);color:var(--ink)}.nav-item.active{background:var(--amber-soft);color:var(--ink);font-weight:500}
+  .nav-item .ni-icon{width:20px;text-align:center}
+  .main{padding:48px 56px 80px;overflow-y:auto;max-width:780px;margin:0 auto;width:100%}
+  h1{font-family:var(--serif);font-size:30px;font-weight:400;margin-bottom:8px}
+  .priority-badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-family:var(--mono);font-weight:600;letter-spacing:0.5px;margin-bottom:14px}
+  .section{margin:24px 0;padding:18px 22px;background:var(--card);border:1px solid var(--hair);border-radius:8px}
+  .section h3{font-family:var(--serif);font-size:14px;font-weight:400;color:var(--ink);margin-bottom:10px;border-bottom:1px solid var(--hair);padding-bottom:6px}
+  .section.summary p{font-size:15px;color:var(--ink-soft);line-height:1.7}
+  .meta-list{font-size:12px;color:var(--ink-faint);font-family:var(--mono)}
+  .meta-list div{padding:4px 0;border-bottom:1px dashed var(--hair);display:flex;gap:14px}
+  .meta-list div:last-child{border-bottom:none}
+  .meta-list .key{min-width:120px;text-transform:uppercase;letter-spacing:0.5px}
+  .meta-list .val{color:var(--ink-soft);word-break:break-word}
+  .meta-list a{color:var(--amber);text-decoration:none}
+  .note-editor{outline:none;border:1px dashed transparent;padding:8px;border-radius:4px;min-height:60px;font-size:14px;color:var(--ink);line-height:1.6;background:var(--bg);border-color:var(--hair)}
+  .note-editor:focus{border-color:var(--amber);border-style:solid}
+  .gemma-raw{font-family:var(--mono);font-size:11px;color:var(--ink-faint);background:var(--bg);padding:10px 14px;border-radius:4px;line-height:1.6;white-space:pre-wrap}
+  .back{display:inline-flex;align-items:center;gap:6px;color:var(--amber);text-decoration:none;font-size:13px;margin-top:24px}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">.</span>me</div>
+  <div class="crumb"><a href="/us.html">Us</a> · <a id="b-cat" href="">cat</a> · <a id="b-sub" href="">sub</a> · <span id="b-item"></span></div>
+</header>
+<div class="layout">
+  <aside class="nav" id="sidebar"></aside>
+  <main class="main">
+    <div id="item-area">Loading…</div>
+  </main>
+</div>
+<script>
+const CATS=[{key:'atlas',name:'Atlas',icon:'◐'},{key:'us',name:'Us',icon:'🤝'},{key:'family',name:'Family',icon:'👨‍👩‍👦'},{key:'manager',name:'Manager',icon:'🧠'},{key:'arms',name:'Arms',icon:'🦑'},{key:'world',name:'World',icon:'🌍'},{key:'future',name:'Future',icon:'🔭'}];
+const escape=s=>(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const params=new URL(location.href).searchParams;
+const itemId=params.get('id')||'';
+const currentCat=params.get('cat')||'manager';
+const currentSub=params.get('sub')||'';
+
+function loadNote(){try{return JSON.parse(localStorage.getItem('atlas-content-notes')||'{}')[itemId]||'';}catch{return '';}}
+function saveNote(t){try{const a=JSON.parse(localStorage.getItem('atlas-content-notes')||'{}');if(t.trim())a[itemId]=t.trim();else delete a[itemId];localStorage.setItem('atlas-content-notes',JSON.stringify(a));}catch{}}
+
+async function init(){
+  document.getElementById('sidebar').innerHTML=`<div class="nav-label">7 categories</div>`+CATS.map(c=>`<a class="nav-item${c.key===currentCat?' active':''}" href="/cat.html?cat=${c.key}"><span class="ni-icon">${c.icon}</span><span>${escape(c.name)}</span></a>`).join('');
+  const bc=CATS.find(c=>c.key===currentCat);
+  if(bc){document.getElementById('b-cat').textContent=bc.name;document.getElementById('b-cat').href=`/cat.html?cat=${currentCat}`;}
+  document.getElementById('b-sub').textContent=currentSub.replace(/-/g,' ');
+  document.getElementById('b-sub').href=`/sub.html?cat=${currentCat}&sub=${encodeURIComponent(currentSub)}`;
+  try{
+    const r=await fetch('/gemma-tiered.json',{cache:'no-cache'});
+    const d=await r.json();
+    const items=d.tiers?.[currentCat]?.subs?.[currentSub]?.items||[];
+    const item=items.find(it=>(it.id||it.source_path||'')===itemId)||items[0];
+    if(!item){document.getElementById('item-area').innerHTML='<div style="color:var(--ink-faint);padding:40px;text-align:center;">item not found</div>';return;}
+    render(item);
+  }catch(e){document.getElementById('item-area').innerHTML='<div style="color:var(--ink-faint);padding:40px;text-align:center;">load failed</div>';}
+}
+
+function render(it){
+  const prio=it.priority||'P2';
+  const prioStyle=prio==='P0'?'color:#C03A2B;background:#FBE5E1':(prio==='P1'?'color:var(--amber);background:var(--amber-soft)':'color:var(--ink-faint);background:var(--hair)');
+  const sourceLink=it.source_file||(it.source_path?`file://${it.source_path}`:'');
+  const title=(it.source_filename||it.id||'').substring(0,80);
+  document.getElementById('b-item').textContent=title.substring(0,30);
+  document.title=`atlasos.me · ${title}`;
+  document.getElementById('item-area').innerHTML=`
+    <span class="priority-badge" style="${prioStyle}">${prio}</span>
+    <h1>${escape(title)}</h1>
+    <div class="section summary"><h3>summary</h3><p>${escape(it.summary||'(no summary yet)')}</p></div>
+    <div class="section"><h3>my notes</h3><div class="note-editor" contenteditable="true" spellcheck="true" data-placeholder="click to add your thoughts" onblur="saveNote(this.textContent)">${escape(loadNote())}</div></div>
+    <div class="section"><h3>metadata + provenance</h3><div class="meta-list">
+      ${it.kind?`<div><span class="key">kind</span><span class="val">${escape(it.kind)}</span></div>`:''}
+      ${it.priority?`<div><span class="key">priority</span><span class="val">${escape(it.priority)}</span></div>`:''}
+      ${it.file_mtime?`<div><span class="key">last-modified</span><span class="val">${escape(it.file_mtime)}</span></div>`:''}
+      ${it.last_timestamp?`<div><span class="key">last-timestamp</span><span class="val">${escape(it.last_timestamp)}</span></div>`:''}
+      ${it.source_path?`<div><span class="key">source-path</span><span class="val">${escape(it.source_path)}</span></div>`:''}
+      ${sourceLink?`<div><span class="key">source-link</span><span class="val"><a href="${escape(sourceLink)}" target="_blank">open ↗</a></span></div>`:''}
+      ${it.id?`<div><span class="key">id</span><span class="val">${escape(it.id)}</span></div>`:''}
+    </div></div>
+    ${it.gemma_raw?`<div class="section"><h3>Gemma's classification (raw)</h3><div class="gemma-raw">${escape(it.gemma_raw)}</div></div>`:''}
+    <a class="back" href="/sub.html?cat=${currentCat}&sub=${encodeURIComponent(currentSub)}">← back to ${escape(currentSub.replace(/-/g,' '))}</a>
+  `;
+}
+init();
+</script>
+</body>
+</html>

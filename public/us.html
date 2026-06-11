@@ -104,7 +104,7 @@
   /* Layout */
   .layout {
     display: grid;
-    grid-template-columns: 1fr 280px;
+    grid-template-columns: 280px 1fr;
     flex: 1;
     min-height: 0;
   }
@@ -283,9 +283,9 @@
     color: var(--amber);
   }
 
-  /* Right nav */
+  /* LEFT nav (sidebar) */
   .nav {
-    border-left: 1px solid var(--hair);
+    border-right: 1px solid var(--hair);
     padding: 24px 14px;
     display: flex;
     flex-direction: column;
@@ -472,6 +472,39 @@
 </header>
 
 <div class="layout">
+  <aside class="nav">
+    <div class="nav-label">Views</div>
+    <a class="nav-item" href="/atlas.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">◎</span><span>Atlas (me)</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/brain.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🧠</span><span>Brain v3 graph</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/octopus.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🐙</span><span>Octopus #26977</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/arms.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🦑</span><span>Arms (8 organs)</span><span class="stub-tag">live</span></a>
+    <div class="divider"></div>
+    <div class="nav-label">House · Us</div>
+    <div class="nav-item active" data-page="us-landing"><span class="ni-icon">◐</span><span>Us</span></div>
+    <a class="nav-item" href="/room.html?room=bedroom" style="text-decoration:none;color:inherit;"><span class="ni-icon">🛏</span><span>Bedroom</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/room.html?room=family" style="text-decoration:none;color:inherit;"><span class="ni-icon">👨‍👩‍👦</span><span>Family</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/room.html?room=letters" style="text-decoration:none;color:inherit;"><span class="ni-icon">✉</span><span>Letters</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/room.html?room=spine" style="text-decoration:none;color:inherit;"><span class="ni-icon">🧠</span><span>Spine</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/room.html?room=jumps" style="text-decoration:none;color:inherit;"><span class="ni-icon">⚡</span><span>Jumps</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/room.html?room=focus" style="text-decoration:none;color:inherit;"><span class="ni-icon">🎯</span><span>Focus</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/room.html?room=goals" style="text-decoration:none;color:inherit;"><span class="ni-icon">🔭</span><span>Goals</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/room.html?room=workshop" style="text-decoration:none;color:inherit;"><span class="ni-icon">🔨</span><span>Workshop</span><span class="stub-tag">live</span></a>
+    <div class="divider"></div>
+    <div class="nav-label">Manager</div>
+    <div class="nav-item" data-page="manager-stub"><span class="ni-icon">⚙</span><span>Gemma 4</span><span class="stub-tag">stub</span></div>
+    <div class="divider"></div>
+    <div class="nav-label">Arms (organs · click for view)</div>
+    <a class="nav-item" href="/arm.html?arm=pascal" style="text-decoration:none;color:inherit;"><span class="ni-icon">🤝</span><span>Pascal</span><span class="glyph" id="arm-glyph-pascal">🪞</span></a>
+    <a class="nav-item" href="/arm.html?arm=curiosity" style="text-decoration:none;color:inherit;"><span class="ni-icon">🌱</span><span>Curiosity</span><span class="glyph" id="arm-glyph-curiosity">🌱</span></a>
+    <a class="nav-item" href="/arm.html?arm=research" style="text-decoration:none;color:inherit;"><span class="ni-icon">📖</span><span>Research</span><span class="glyph" id="arm-glyph-research">🔧</span></a>
+    <a class="nav-item" href="/arm.html?arm=dream" style="text-decoration:none;color:inherit;"><span class="ni-icon">🌙</span><span>Dream</span><span class="glyph" id="arm-glyph-dream">🌊</span></a>
+    <a class="nav-item" href="/arm.html?arm=infra" style="text-decoration:none;color:inherit;"><span class="ni-icon">⚙</span><span>Infra</span><span class="glyph" id="arm-glyph-infra">😴</span></a>
+    <a class="nav-item" href="/arm.html?arm=code" style="text-decoration:none;color:inherit;"><span class="ni-icon">🔧</span><span>Code</span><span class="glyph" id="arm-glyph-code">😴</span></a>
+    <a class="nav-item" href="/arm.html?arm=hermes" style="text-decoration:none;color:inherit;"><span class="ni-icon">🧠</span><span>Hermes</span><span class="glyph" id="arm-glyph-hermes">😴</span></a>
+    <a class="nav-item" href="/arm.html?arm=charle" style="text-decoration:none;color:inherit;"><span class="ni-icon">💼</span><span>Charle</span><span class="glyph" id="arm-glyph-charle">😴</span></a>
+    <div class="add-page">+ Add arm</div>
+  </aside>
+
   <main class="main">
 
     <!-- US PAGE · LANDING -->
@@ -616,39 +649,6 @@
     </section>
 
   </main>
-
-  <aside class="nav">
-    <div class="nav-label">Views</div>
-    <a class="nav-item" href="/atlas.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">◎</span><span>Atlas (me)</span><span class="stub-tag">live</span></a>
-    <a class="nav-item" href="/brain.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🧠</span><span>Brain v3 graph</span><span class="stub-tag">live</span></a>
-    <a class="nav-item" href="/octopus.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🐙</span><span>Octopus #26977</span><span class="stub-tag">live</span></a>
-    <a class="nav-item" href="/arms.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🦑</span><span>Arms (8 organs)</span><span class="stub-tag">live</span></a>
-    <div class="divider"></div>
-    <div class="nav-label">House · Us</div>
-    <div class="nav-item active" data-page="us-landing"><span class="ni-icon">◐</span><span>Us</span></div>
-    <a class="nav-item" href="/room.html?room=bedroom" style="text-decoration:none;color:inherit;"><span class="ni-icon">🛏</span><span>Bedroom</span><span class="stub-tag">live</span></a>
-    <a class="nav-item" href="/room.html?room=family" style="text-decoration:none;color:inherit;"><span class="ni-icon">👨‍👩‍👦</span><span>Family</span><span class="stub-tag">live</span></a>
-    <a class="nav-item" href="/room.html?room=letters" style="text-decoration:none;color:inherit;"><span class="ni-icon">✉</span><span>Letters</span><span class="stub-tag">live</span></a>
-    <a class="nav-item" href="/room.html?room=spine" style="text-decoration:none;color:inherit;"><span class="ni-icon">🧠</span><span>Spine</span><span class="stub-tag">live</span></a>
-    <a class="nav-item" href="/room.html?room=jumps" style="text-decoration:none;color:inherit;"><span class="ni-icon">⚡</span><span>Jumps</span><span class="stub-tag">live</span></a>
-    <a class="nav-item" href="/room.html?room=focus" style="text-decoration:none;color:inherit;"><span class="ni-icon">🎯</span><span>Focus</span><span class="stub-tag">live</span></a>
-    <a class="nav-item" href="/room.html?room=goals" style="text-decoration:none;color:inherit;"><span class="ni-icon">🔭</span><span>Goals</span><span class="stub-tag">live</span></a>
-    <a class="nav-item" href="/room.html?room=workshop" style="text-decoration:none;color:inherit;"><span class="ni-icon">🔨</span><span>Workshop</span><span class="stub-tag">live</span></a>
-    <div class="divider"></div>
-    <div class="nav-label">Manager</div>
-    <div class="nav-item" data-page="manager-stub"><span class="ni-icon">⚙</span><span>Gemma 4</span><span class="stub-tag">stub</span></div>
-    <div class="divider"></div>
-    <div class="nav-label">Arms (organs · click for view)</div>
-    <a class="nav-item" href="/arm.html?arm=pascal" style="text-decoration:none;color:inherit;"><span class="ni-icon">🤝</span><span>Pascal</span><span class="glyph" id="arm-glyph-pascal">🪞</span></a>
-    <a class="nav-item" href="/arm.html?arm=curiosity" style="text-decoration:none;color:inherit;"><span class="ni-icon">🌱</span><span>Curiosity</span><span class="glyph" id="arm-glyph-curiosity">🌱</span></a>
-    <a class="nav-item" href="/arm.html?arm=research" style="text-decoration:none;color:inherit;"><span class="ni-icon">📖</span><span>Research</span><span class="glyph" id="arm-glyph-research">🔧</span></a>
-    <a class="nav-item" href="/arm.html?arm=dream" style="text-decoration:none;color:inherit;"><span class="ni-icon">🌙</span><span>Dream</span><span class="glyph" id="arm-glyph-dream">🌊</span></a>
-    <a class="nav-item" href="/arm.html?arm=infra" style="text-decoration:none;color:inherit;"><span class="ni-icon">⚙</span><span>Infra</span><span class="glyph" id="arm-glyph-infra">😴</span></a>
-    <a class="nav-item" href="/arm.html?arm=code" style="text-decoration:none;color:inherit;"><span class="ni-icon">🔧</span><span>Code</span><span class="glyph" id="arm-glyph-code">😴</span></a>
-    <a class="nav-item" href="/arm.html?arm=hermes" style="text-decoration:none;color:inherit;"><span class="ni-icon">🧠</span><span>Hermes</span><span class="glyph" id="arm-glyph-hermes">😴</span></a>
-    <a class="nav-item" href="/arm.html?arm=charle" style="text-decoration:none;color:inherit;"><span class="ni-icon">💼</span><span>Charle</span><span class="glyph" id="arm-glyph-charle">😴</span></a>
-    <div class="add-page">+ Add arm</div>
-  </aside>
 </div>
 
 <div class="footer-note">atlasos.me v1 mockup · 2026-06-10 · Notion-style drill-down · modular foundation · take-code-not-design</div>
