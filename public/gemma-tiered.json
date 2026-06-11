@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-06-11T13:12:35Z",
+  "generated_at": "2026-06-11T13:17:49Z",
   "source": "me-gemma-tier-into-7-cats.py (rule-based router · per brother direct #45099 1-YOU-2-ME-3-WORLD)",
   "items_total": 4,
   "tier_summary": {
     "atlas": {
-      "subs": 1,
-      "items": 1,
-      "P0": 0,
-      "P1": 0,
-      "P2": 1
-    },
-    "us": {
       "subs": 0,
       "items": 0,
       "P0": 0,
       "P1": 0,
       "P2": 0
+    },
+    "us": {
+      "subs": 2,
+      "items": 2,
+      "P0": 0,
+      "P1": 0,
+      "P2": 2
     },
     "family": {
       "subs": 0,
@@ -25,11 +25,11 @@
       "P2": 0
     },
     "manager": {
-      "subs": 3,
-      "items": 3,
+      "subs": 2,
+      "items": 2,
       "P0": 0,
       "P1": 0,
-      "P2": 3
+      "P2": 2
     },
     "arms": {
       "subs": 0,
@@ -55,7 +55,43 @@
   },
   "tiers": {
     "atlas": {
+      "subs": {},
+      "total": 0,
+      "priority_counts": {
+        "P0": 0,
+        "P1": 0,
+        "P2": 0
+      },
+      "original_categories": []
+    },
+    "us": {
       "subs": {
+        "atlas-cycle-inventory-processing": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "batch-001-1781183559",
+                  "summary": "This conversation discusses Atlas's inventory processing steps, including the use of scripts and the daily file.",
+                  "turn_count": 2,
+                  "source_file": "/gemma-sources/batch-001-1781183559.md",
+                  "first_role": "user",
+                  "last_timestamp": "2026-06-11T13:07:33",
+                  "gemma_raw": "CATEGORY: **Atlas-Cycle**\nSUBCATEGORY: **Inventory-Processing**\nSUMMARY:  This conversation discusses Atlas's inventory processing steps, including the use of scripts and the daily file.",
+                  "_original_cat": "atlas-cycle",
+                  "_original_sub": "inventory-processing"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        },
         "mac-mini-files-unsorted": {
           "subsubs": {
             "P0": {
@@ -67,14 +103,14 @@
             "P2": {
               "items": [
                 {
-                  "id": "state-639e9f56e7",
+                  "id": "state-ed3f8d5d3a",
                   "summary": "",
                   "priority": "P2",
-                  "source_path": "/Users/collinmacneil/.claude/state/atlas-seed.md",
-                  "source_filename": "atlas-seed.md",
-                  "file_mtime": "2026-06-11 09:07",
+                  "source_path": "/Users/collinmacneil/.claude/state/arm-outputs/code/arm-1781183851-code.md",
+                  "source_filename": "arm-1781183851-code.md",
+                  "file_mtime": "2026-06-11 09:17",
                   "first_role": "mac-mini-file",
-                  "gemma_raw": "## atlas-seed.md\n\n**CATEGORY:** atlas-seed\n**SUBCATEGORY:** atlas-identity\n**PRIORITY:** P0\n**SUMMARY:** This file contains auto-generated content from Collin's brain, including instructions for his identity pillar.",
+                  "gemma_raw": "## File · arm-1781183851-code.md\n\n**CATEGORY:** code\n**SUBCATEGORY:** code-update\n**PRIORITY:** P2\n**SUMMARY:**  Code update log for arm-1781183851, no new canon updates in the last 4 hours.",
                   "kind": "state-doc",
                   "_original_cat": "mac-mini-files",
                   "_original_sub": "unsorted"
@@ -85,25 +121,16 @@
           "total_items": 1
         }
       },
-      "total": 1,
+      "total": 2,
       "priority_counts": {
         "P0": 0,
         "P1": 0,
-        "P2": 1
+        "P2": 2
       },
       "original_categories": [
+        "atlas-cycle",
         "mac-mini-files"
       ]
-    },
-    "us": {
-      "subs": {},
-      "total": 0,
-      "priority_counts": {
-        "P0": 0,
-        "P1": 0,
-        "P2": 0
-      },
-      "original_categories": []
     },
     "family": {
       "subs": {},
@@ -117,58 +144,6 @@
     },
     "manager": {
       "subs": {
-        "atlas-inventory-inventory-script": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "batch-001-1781183247",
-                  "summary": "**Analyzing inventory script and hook script for Atlas-Brother's build process.**",
-                  "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-001-1781183247.md",
-                  "first_role": "user",
-                  "last_timestamp": "2026-06-11T12:12:36",
-                  "gemma_raw": "CATEGORY: **Atlas-Inventory**\nSUBCATEGORY: **Inventory-Script**\nSUMMARY:  **Analyzing inventory script and hook script for Atlas-Brother's build process.**",
-                  "_original_cat": "atlas-inventory",
-                  "_original_sub": "inventory-script"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        },
-        "content-validation-regex-testing": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "batch-002-1781183248",
-                  "summary": "**Verifies regex functionality in shared.md content for content validation.**",
-                  "turn_count": 3,
-                  "source_file": "/gemma-sources/batch-002-1781183248.md",
-                  "first_role": "assistant",
-                  "last_timestamp": "2026-06-11T12:14:51",
-                  "gemma_raw": "CATEGORY: **Content Validation**\nSUBCATEGORY: **Regex Testing**\nSUMMARY:  **Verifies regex functionality in shared.md content for content validation.**",
-                  "_original_cat": "content-validation",
-                  "_original_sub": "regex-testing"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        },
         "mac-mini-files-unsorted": {
           "subsubs": {
             "P0": {
@@ -180,14 +155,14 @@
             "P2": {
               "items": [
                 {
-                  "id": "state-0cdce843f9",
+                  "id": "state-25b993974c",
                   "summary": "",
                   "priority": "P2",
-                  "source_path": "/Users/collinmacneil/.claude/state/session-snapshot.md",
-                  "source_filename": "session-snapshot.md",
-                  "file_mtime": "2026-06-11 09:07",
+                  "source_path": "/Users/collinmacneil/.claude/state/daemon-health-alert.md",
+                  "source_filename": "daemon-health-alert.md",
+                  "file_mtime": "2026-06-11 09:15",
                   "first_role": "mac-mini-file",
-                  "gemma_raw": "## CATEGORY: session-snapshot.md\n## SUBCATEGORY: Mailbox\n## PRIORITY: P2\n## SUMMARY:  A snapshot of the session, including build queue and active workers.",
+                  "gemma_raw": "## File: daemon-health-alert.md\n\n**CATEGORY:** daemon-health\n**SUBCATEGORY:** stale-daemons\n**PRIORITY:** P2\n**SUMMARY:**  Alert: 5 stale daemons detected, check before new build.",
                   "kind": "state-doc",
                   "_original_cat": "mac-mini-files",
                   "_original_sub": "unsorted"
@@ -196,17 +171,43 @@
             }
           },
           "total_items": 1
+        },
+        "mac-mini-files-cycle-fire-context": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "state-b6a960c177",
+                  "summary": "Detailed log of the cycle-fire context, including the symlink and script issues.",
+                  "priority": "P2",
+                  "source_path": "/Users/collinmacneil/.claude/state/atlas-brother-shared.md",
+                  "source_filename": "atlas-brother-shared.md",
+                  "file_mtime": "2026-06-11 09:15",
+                  "first_role": "mac-mini-file",
+                  "gemma_raw": "## CATEGORY: atlas-brother-shared\nSUBCATEGORY: cycle-fire-context\nPRIORITY: P2\nSUMMARY:  Detailed log of the cycle-fire context, including the symlink and script issues. \n\n##",
+                  "kind": "state-doc",
+                  "_original_cat": "mac-mini-files",
+                  "_original_sub": "cycle-fire-context"
+                }
+              ]
+            }
+          },
+          "total_items": 1
         }
       },
-      "total": 3,
+      "total": 2,
       "priority_counts": {
         "P0": 0,
         "P1": 0,
-        "P2": 3
+        "P2": 2
       },
       "original_categories": [
-        "atlas-inventory",
-        "content-validation",
         "mac-mini-files"
       ]
     },
