@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-11T20:37:41Z",
+  "generated_at": "2026-06-11T20:52:42Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 24,
+    "decision": 25,
     "action": 0,
     "risk": 0,
     "win": 0,
@@ -13,10 +13,21 @@
     "briefing": 14,
     "idea": 0
   },
-  "total_blocks": 181,
+  "total_blocks": 182,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "8da4dc60b572",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Deep-dive into memory-architecture-lift quadrant to finalize P1 closure as per #28284 · why: This is a high-priority research task with a pending closure, directly tied to recent high-arousal brain canon and active focus (P1).",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-11T16:52:19.343052"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -288,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "47f0add23318",
+        "type": "callout",
+        "content": "**What** · Deep-dived into memory-architecture-lift quadrant to analyze P1 closure #28284 · **Why** · Task aligns with high-priority research on brain canon and active focus as per Hermes-Orchestrator directive · **Result** · Identified key memory architecture bottlenecks impacting closure timeline ",
+        "priority": "architecture-research",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-11T16:52:28.139734"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -606,17 +628,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-11T12:00:02.977312"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "3249c221da63",
-        "type": "database",
-        "content": "orchestration · last 30d · 2 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-11T12:00:02.977307"
       },
       {
         "arm": "dream",
