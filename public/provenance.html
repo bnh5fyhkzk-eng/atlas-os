@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>provenance · real-vs-seed audit</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--green:#6BAE73;--red:#C03A2B;--violet:#9D7CD8;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;min-height:100vh}
+  .topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;gap:14px;background:var(--card)}
+  .brand{font-family:var(--serif);font-size:18px}.brand .dot{color:var(--amber)}
+  .container{max-width:900px;margin:0 auto;padding:32px 32px 80px}
+  h1{font-family:var(--serif);font-size:30px;font-weight:400;margin-bottom:6px}
+  .subtitle{color:var(--ink-faint);font-size:13px;margin-bottom:24px;font-style:italic}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{text-align:left;padding:10px 12px;border-bottom:1px solid var(--hair);font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:var(--ink-faint)}
+  td{padding:8px 12px;border-bottom:1px solid var(--hair);color:var(--ink)}
+  td.real{color:var(--green);font-weight:500}
+  td.deepseek{color:var(--violet);font-weight:500}
+  td.backfill{color:var(--amber);font-weight:500}
+  td.atlas{color:var(--ink-faint)}
+</style></head><body>
+<header class="topbar"><div class="brand">atlas<span class="dot">·</span>provenance</div><div style="color:#8590A2;font-size:12px;flex:1;"><a href="/house.html" style="color:#4A5468;text-decoration:none;">House</a> · real vs seed audit</div></header>
+<div class="container">
+  <h1>Provenance · real-vs-seed audit</h1>
+  <div class="subtitle">per brother direct 15:00 EDT · brother sees source-of-truth per block · refresh 60s</div>
+  <table id="audit-tbl"><thead><tr><th>arm</th><th>total</th><th class="real">real-cycle</th><th class="deepseek">hermes-deepseek</th><th class="backfill">backfill-brain</th><th class="atlas">atlas-seed</th></tr></thead><tbody id="rows">Loading…</tbody></table>
+</div>
+<script>
+const ARMS = ['pascal','curiosity','research','code','infra','dream','hermes','charle'];
+async function load() {
+  const rows = await Promise.all(ARMS.map(async arm => {
+    const r = await fetch(`/arms-pages/${arm}.json`, {cache:'no-cache'});
+    const d = await r.json();
+    const blocks = d.blocks || [];
+    const counts = {real:0, deepseek:0, backfill:0, atlas:0};
+    for (const b of blocks) {
+      const src = b.props?.source || '';
+      if (src.includes('deepseek')) counts.deepseek++;
+      else if (src.includes('-cycle') || src.endsWith('-self')) counts.real++;
+      else if (src.includes('backfill')) counts.backfill++;
+      else counts.atlas++;
+    }
+    return {arm, total: blocks.length, ...counts};
+  }));
+  document.getElementById('rows').innerHTML = rows.map(r => `<tr><td>${r.arm}</td><td>${r.total}</td><td class="real">${r.real}</td><td class="deepseek">${r.deepseek}</td><td class="backfill">${r.backfill}</td><td class="atlas">${r.atlas}</td></tr>`).join('');
+}
+load();
+setInterval(load, 60000);
+</script>
+</body></html>
