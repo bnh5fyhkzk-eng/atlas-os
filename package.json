@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && cp public/us.html dist/us.html",
+    "build": "tsc -b && vite build && cp public/us.html dist/us.html && mv dist/index.html dist/atlas-app.html",
     "lint": "eslint .",
     "preview": "vite preview"
   },
