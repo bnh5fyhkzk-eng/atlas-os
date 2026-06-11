@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>atlasos.me · Hermes</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--green:#6BAE73;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.55;min-height:100vh}
+  .topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;gap:14px}
+  .brand{font-family:var(--serif);font-size:18px}.brand .dot{color:var(--amber)}
+  .crumb{color:var(--ink-faint);font-size:12px}.crumb a{color:var(--ink-soft);text-decoration:none}
+  .container{max-width:920px;margin:0 auto;padding:36px 32px 80px}
+  h1{font-family:var(--serif);font-size:32px;font-weight:400;margin-bottom:6px;display:flex;align-items:center;gap:14px}
+  .subtitle{color:var(--ink-faint);font-size:13px;margin-bottom:24px;font-style:italic}
+  .stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-bottom:24px}
+  .stat{background:var(--card);border:1px solid var(--hair);border-radius:8px;padding:14px 18px}
+  .stat .value{font-family:var(--mono);font-size:22px;color:var(--ink)}
+  .stat .label{font-family:var(--mono);font-size:10px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;margin-top:4px}
+  h2{font-family:var(--serif);font-size:20px;font-weight:400;margin-top:28px;margin-bottom:12px;border-bottom:1px solid var(--hair);padding-bottom:6px}
+  .run{background:var(--card);border:1px solid var(--hair);border-left:3px solid var(--amber);border-radius:0 6px 6px 0;padding:10px 14px;margin-bottom:6px;font-size:13px}
+  .run .ts{font-family:var(--mono);font-size:10px;color:var(--amber);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px}
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">·</span>me</div>
+  <div class="crumb"><a href="/us.html">Us</a> · 🧠 Hermes dashboard</div>
+  <svg viewBox="0 0 120 24" width="120" height="24" style="margin-left:auto;opacity:0.7;"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" style="animation:ecg-pulse 1.6s infinite"/></svg>
+</header>
+<div class="container">
+  <h1>🧠 My Orchestrator</h1>
+  <div class="subtitle">Hermes-loop on DeepSeek-V4-flash · OpenRouter · every 15min · meta-orchestrates arms across projects</div>
+  <div class="stats" id="stats">Loading…</div>
+  <h2>Recent runs</h2>
+  <div id="runs">Loading log…</div>
+</div>
+<script>
+const escape = s => (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+fetch('/hermes-status.json', {cache:'no-cache'})
+  .then(r => r.ok ? r.json() : null)
+  .then(d => {
+    const stats = d || { total_runs: 0, last_run: 'never', model: 'deepseek-v4-flash', cadence: '15min' };
+    document.getElementById('stats').innerHTML = `
+      <div class="stat"><div class="value">${stats.total_runs || 0}</div><div class="label">total runs</div></div>
+      <div class="stat"><div class="value">${escape(stats.last_run || 'never')}</div><div class="label">last run</div></div>
+      <div class="stat"><div class="value">${escape(stats.model || 'deepseek')}</div><div class="label">model</div></div>
+      <div class="stat"><div class="value">${escape(stats.cadence || '15min')}</div><div class="label">cadence</div></div>
+    `;
+    const runs = stats.recent_runs || [];
+    document.getElementById('runs').innerHTML = runs.length
+      ? runs.map(r => `<div class="run"><div class="ts">${escape(r.ts)}</div>${escape(r.summary)}</div>`).join('')
+      : '<p style="color:var(--ink-faint);font-style:italic;">no runs yet · LaunchAgent fires every 15min</p>';
+  })
+  .catch(e => {
+    document.getElementById('stats').innerHTML = '<div class="stat"><div class="value">init</div><div class="label">waiting first run</div></div>';
+    document.getElementById('runs').innerHTML = '<p style="color:var(--ink-faint);font-style:italic;">no /hermes-status.json yet · LaunchAgent will create on first run</p>';
+  });
+</script>
+</body>
+</html>

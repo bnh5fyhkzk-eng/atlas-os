@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>atlasos.me · project</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--red:#C03A2B;--green:#6BAE73;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.55;min-height:100vh}
+  .topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;gap:14px}
+  .brand{font-family:var(--serif);font-size:18px}.brand .dot{color:var(--amber)}
+  .crumb{color:var(--ink-faint);font-size:12px}.crumb a{color:var(--ink-soft);text-decoration:none}
+  .container{max-width:860px;margin:0 auto;padding:36px 32px 80px}
+  h1{font-family:var(--serif);font-size:32px;font-weight:400;margin-bottom:6px}
+  .description{color:var(--ink-soft);font-size:14px;margin-bottom:18px;font-style:italic}
+  .meta-row{display:flex;gap:12px;margin-bottom:24px;font-family:var(--mono);font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;flex-wrap:wrap}
+  .pill{padding:3px 10px;border-radius:4px;background:var(--hair)}
+  .pill.active{background:#D8EFDB;color:var(--green)}
+  .pill.p0{background:#FBE5E1;color:var(--red)}
+  .pill.p1{background:var(--amber-soft);color:var(--amber)}
+  h2{font-family:var(--serif);font-size:20px;font-weight:400;margin-top:28px;margin-bottom:12px;border-bottom:1px solid var(--hair);padding-bottom:6px}
+  .canon{background:var(--card);border:1px solid var(--hair);border-left:3px solid var(--amber-soft);border-radius:0 6px 6px 0;padding:10px 14px;margin-bottom:6px}
+  .canon-meta{font-family:var(--mono);font-size:10px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;display:flex;gap:10px}
+  .canon-meta .id{color:var(--amber)}
+  .canon-summary{font-size:13px;color:var(--ink);line-height:1.5}
+  .arm-link{display:inline-block;background:var(--card);border:1px solid var(--hair);border-radius:6px;padding:6px 14px;text-decoration:none;color:var(--ink);font-size:13px;margin-right:6px}
+  .arm-link:hover{border-color:var(--amber)}
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">·</span>me</div>
+  <div class="crumb"><a href="/us.html">Us</a> · <a href="/projects.html">projects</a> · <span id="crumb-name">…</span></div>
+  <svg viewBox="0 0 120 24" width="120" height="24" style="margin-left:auto;opacity:0.7;"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" style="animation:ecg-pulse 1.6s infinite"/></svg>
+</header>
+<div class="container" id="content">Loading project…</div>
+<script>
+const escape = s => (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const params = new URLSearchParams(location.search);
+const slug = params.get('slug') || params.get('name') || 'atlasos-me';
+fetch(`/projects/${slug}.json`, {cache:'no-cache'})
+  .then(r => r.json())
+  .then(p => {
+    document.getElementById('crumb-name').textContent = p.name;
+    document.title = `atlasos.me · ${p.name}`;
+    const html = `
+      <h1>${escape(p.name)}</h1>
+      <div class="description">${escape(p.description)}</div>
+      <div class="meta-row">
+        <span class="pill ${p.status === 'active' ? 'active' : ''}">${escape(p.status)}</span>
+        <span class="pill ${(p.priority || 'p2').toLowerCase()}">${escape(p.priority)}</span>
+        <span>owner-arm · ${escape(p.owner_arm)}</span>
+        <span>last · ${escape(p.last_active)}</span>
+        <span>${p.canon_count} brain canons</span>
+      </div>
+      <h2>Owner arm</h2>
+      <a class="arm-link" href="/arm-page.html?name=${escape(p.owner_arm)}">→ Open ${escape(p.owner_arm)}-arm page</a>
+      <h2>Brain canons (top ${p.canons?.length || 0})</h2>
+      ${(p.canons || []).map(c => `
+        <div class="canon">
+          <div class="canon-meta"><span class="id">${escape(c.id)}</span><span>arousal ${(c.arousal||0).toFixed(2)}</span><span>${escape(c.when)}</span></div>
+          <div class="canon-summary">${escape(c.summary)}</div>
+        </div>
+      `).join('')}
+    `;
+    document.getElementById('content').innerHTML = html;
+  })
+  .catch(e => document.getElementById('content').textContent = 'Load failed · ' + e.message);
+</script>
+</body>
+</html>
