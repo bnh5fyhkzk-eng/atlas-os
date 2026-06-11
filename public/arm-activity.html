@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>atlasos.me · arm activity</title>
+<style>
+:root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--green:#6BAE73;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh}
+.topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;gap:14px}
+.brand{font-family:var(--serif);font-size:18px}.brand .dot{color:var(--amber)}
+.crumb{color:var(--ink-faint);font-size:12px}.crumb a{color:var(--ink-soft);text-decoration:none}
+.container{max-width:820px;margin:0 auto;padding:32px 32px 80px}
+h1{font-family:var(--serif);font-size:30px;font-weight:400;margin-bottom:6px}
+.subtitle{color:var(--ink-faint);font-size:13px;margin-bottom:24px;font-style:italic}
+.arm-row{background:var(--card);border:1px solid var(--hair);border-left:4px solid var(--amber);border-radius:8px;padding:12px 18px;margin-bottom:10px;display:flex;gap:14px;align-items:center}
+.arm-row .glyph{font-size:28px}
+.arm-row .name{font-family:var(--serif);font-size:18px;flex:1}
+.arm-row .last{font-family:var(--mono);font-size:10px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px}
+.arm-row .btn{background:var(--amber);color:white;border:none;padding:6px 14px;border-radius:5px;font-size:12px;cursor:pointer}
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+</style></head><body>
+<header class="topbar"><div class="brand">atlasos<span class="dot">·</span>me</div>
+<div class="crumb"><a href="/us.html">Us</a> · arm activity (live)</div>
+<svg viewBox="0 0 120 24" width="120" height="24" style="margin-left:auto;opacity:0.7;"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" style="animation:ecg-pulse 1.6s infinite"/></svg>
+</header>
+<div class="container">
+<h1>Arm activity</h1>
+<div class="subtitle">8 arms · LaunchAgent cadence · click Run to dispatch · auto-refresh 30s</div>
+<div id="arms-list">Loading…</div>
+</div>
+<script>
+const escape = s => (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const ARMS = [
+  ['pascal','🤝','1h'],
+  ['curiosity','🌱','2h'],
+  ['research','📖','4h'],
+  ['dream','🌙','6h'],
+  ['infra','⚙','3h'],
+  ['code','🔧','1.5h'],
+  ['hermes','🧠','30min'],
+  ['charle','💼','12h'],
+];
+async function loadArm(arm) {
+  try {
+    const [data, runs] = await Promise.all([
+      fetch(`/arms-pages/${arm}.json`, {cache:'no-cache'}).then(r => r.json()).catch(() => null),
+      fetch(`/api/arms/run?arm=${arm}`, {cache:'no-cache'}).then(r => r.ok ? r.json() : null).catch(() => null),
+    ]);
+    return { data, runs };
+  } catch (e) { return null; }
+}
+async function render() {
+  const rows = await Promise.all(ARMS.map(([name,gly,cad]) => loadArm(name).then(d => ({name, gly, cad, ...d}))));
+  document.getElementById('arms-list').innerHTML = rows.map(r => `
+    <div class="arm-row" style="border-left-color:${r.data?.identity?.color || 'var(--amber)'}">
+      <span class="glyph">${r.gly}</span>
+      <div style="flex:1;">
+        <div class="name">${escape(r.name)}</div>
+        <div class="last">cadence ${r.cad} · blocks ${r.data?.block_count || 0} · state ${r.data?.live_status?.state || '?'}</div>
+      </div>
+      <button class="btn" onclick="runArm('${escape(r.name)}')">Run now</button>
+    </div>
+  `).join('');
+}
+async function runArm(arm) {
+  try {
+    const r = await fetch('/api/arms/run', {method:'POST', headers:{'content-type':'application/json'}, body:JSON.stringify({arm})});
+    const d = await r.json();
+    alert('queued · ' + (d.task_id || d.error));
+  } catch (e) { alert('fail · ' + e.message); }
+}
+render();
+setInterval(render, 30000);
+</script>
+</body></html>
