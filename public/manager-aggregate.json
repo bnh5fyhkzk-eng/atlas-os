@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T20:22:39Z",
+  "generated_at": "2026-06-11T20:37:41Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 142,
+    "note": 143,
     "briefing": 14,
     "idea": 0
   },
-  "total_blocks": 180,
+  "total_blocks": 181,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "8b80bc0c73d9",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: backfill past arm output data not in atlasos.me as per brother direct request · why: Brother explicitly requested this data for continuity and system integrity (P0 directive). This aligns with recent high-priority memory architecture work (#28284)",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-11T16:37:06.257176"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-11T12:04:03.898460"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "81633484b5fa",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Continue the deep-dive into memory-architecture-lift quadrant to close P1 memory-architecture-lift quadrant as per cycle 6 research · why: This task is directly linked to an active focus (P1) and needs completion to advance the current research cy",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-11T11:48:56.498756"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "2be4565aa7fa",
+        "type": "callout",
+        "content": "**What** · Initiated backfill of past arm output data not present in atlasos.me · **Why** · Brother directive for continuity and system integrity, aligned with memory architecture (#28284) and state sync (#45594-45596) · **Result** · Data gap analysis complete - 47 missing outputs identified from la",
+        "priority": "memory-architecture",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-11T16:37:10.659353"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-11T12:00:02.152778"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "59f9ed657bc8",
-        "type": "database",
-        "content": "open-questions · last 30d · 7 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-11T12:00:02.152775"
       }
     ],
     "briefing": [
