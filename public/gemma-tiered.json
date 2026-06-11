@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-11T14:24:50Z",
+  "generated_at": "2026-06-11T14:30:00Z",
   "source": "me-gemma-tier-into-7-cats.py (rule-based router · per brother direct #45099 1-YOU-2-ME-3-WORLD)",
-  "items_total": 1,
+  "items_total": 3,
   "tier_summary": {
     "atlas": {
       "subs": 0,
@@ -32,18 +32,18 @@
       "P2": 1
     },
     "arms": {
-      "subs": 0,
-      "items": 0,
+      "subs": 1,
+      "items": 1,
       "P0": 0,
       "P1": 0,
-      "P2": 0
+      "P2": 1
     },
     "world": {
-      "subs": 0,
-      "items": 0,
+      "subs": 1,
+      "items": 1,
       "P0": 0,
       "P1": 0,
-      "P2": 0
+      "P2": 1
     },
     "future": {
       "subs": 0,
@@ -97,10 +97,10 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-001-1781187588",
+                  "id": "batch-001-1781187893",
                   "summary": "This conversation discusses pending proposals for skill evaluation and their associated evaluation gate.",
                   "turn_count": 4,
-                  "source_file": "/gemma-sources/batch-001-1781187588.md",
+                  "source_file": "/gemma-sources/batch-001-1781187893.md",
                   "first_role": "user",
                   "last_timestamp": "2026-06-11T14:08:12",
                   "gemma_raw": "CATEGORY: **Skill-Proposal**\nSUBCATEGORY: **Evaluation-Gate**\nSUMMARY:  This conversation discusses pending proposals for skill evaluation and their associated evaluation gate.",
@@ -124,24 +124,86 @@
       ]
     },
     "arms": {
-      "subs": {},
-      "total": 0,
+      "subs": {
+        "arm-hermes-hermes-dedup-check": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "state-c5231dea0e",
+                  "summary": "Hermes Dedup Check #28284 already posted, skip.",
+                  "priority": "P2",
+                  "source_path": "/Users/collinmacneil/.claude/state/arm-outputs/hermes/arm-1781188119-hermes.md",
+                  "source_filename": "arm-1781188119-hermes.md",
+                  "file_mtime": "2026-06-11 10:28",
+                  "first_role": "mac-mini-file",
+                  "gemma_raw": "CATEGORY: arm-hermes\nSUBCATEGORY: hermes-dedup-check\nPRIORITY: P2\nSUMMARY:  Hermes Dedup Check #28284 already posted, skip.",
+                  "kind": "state-doc",
+                  "_original_cat": "arm-hermes",
+                  "_original_sub": "hermes-dedup-check"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        }
+      },
+      "total": 1,
       "priority_counts": {
         "P0": 0,
         "P1": 0,
-        "P2": 0
+        "P2": 1
       },
-      "original_categories": []
+      "original_categories": [
+        "arm-hermes"
+      ]
     },
     "world": {
-      "subs": {},
-      "total": 0,
+      "subs": {
+        "mac-mini-files-unsorted": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "state-de61f7640b",
+                  "summary": "",
+                  "priority": "P2",
+                  "source_path": "/Users/collinmacneil/.claude/state/arm-outputs/pascal/arm-1781188117-pascal.md",
+                  "source_filename": "arm-1781188117-pascal.md",
+                  "file_mtime": "2026-06-11 10:28",
+                  "first_role": "mac-mini-file",
+                  "gemma_raw": "## File: arm-1781188117-pascal.md\n\n**CATEGORY:** pascal-prep\n**SUBCATEGORY:** pascal-prep-update\n**PRIORITY:** P2\n**SUMMARY:**  Information about the latest updates to the Pascal system.",
+                  "kind": "state-doc",
+                  "_original_cat": "mac-mini-files",
+                  "_original_sub": "unsorted"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        }
+      },
+      "total": 1,
       "priority_counts": {
         "P0": 0,
         "P1": 0,
-        "P2": 0
+        "P2": 1
       },
-      "original_categories": []
+      "original_categories": [
+        "mac-mini-files"
+      ]
     },
     "future": {
       "subs": {},
