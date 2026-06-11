@@ -36,12 +36,13 @@
   .live-strip{background:linear-gradient(135deg,var(--card) 0%,var(--bg) 100%);border:1px solid var(--amber-soft);border-radius:8px;padding:12px 16px;margin-top:14px;font-size:12px;color:var(--ink-soft)}
   .live-strip .pulse{display:inline-block;width:6px;height:6px;background:#6BAE73;border-radius:50%;margin-right:8px;animation:p 1.6s ease-in-out infinite}
   @keyframes p{0%,100%{opacity:0.4}50%{opacity:1}}
-</style>
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}</style>
 </head>
 <body>
 <header class="topbar">
   <div class="brand">atlasos<span class="dot">.</span>me</div>
   <div class="crumb"><a href="/us-mockup.html">Us</a> · arms (8 organs · #27572)</div>
+  <svg viewBox="0 0 120 24" width="120" height="24" style="margin-left:auto;opacity:0.7;" aria-label="heartbeat"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="animation: ecg-pulse 1.6s ease-in-out infinite;"/></svg>
 </header>
 <div class="container">
   <h1>arms</h1>

@@ -29,12 +29,13 @@
   .nothing{color:var(--ink-faint);font-size:13px;font-style:italic;padding:14px 0}
   .nav-back{margin-top:40px;font-size:13px;color:var(--ink-faint)}
   .nav-back a{color:var(--amber);text-decoration:none}
-</style>
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}</style>
 </head>
 <body>
 <header class="topbar">
   <div class="brand">atlasos<span class="dot">.</span>me</div>
   <div class="crumb"><a href="/us.html">Us</a> · <span id="crumb-room"></span></div>
+  <svg viewBox="0 0 120 24" width="120" height="24" style="margin-left:auto;opacity:0.7;" aria-label="heartbeat"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="animation: ecg-pulse 1.6s ease-in-out infinite;"/></svg>
 </header>
 <div class="container">
   <h1 id="title">Loading…</h1>

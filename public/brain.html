@@ -57,13 +57,14 @@
     .panel { border-left: none; border-top: 1px solid var(--hair); max-height: 45vh; }
     .controls input { width: 140px; }
   }
-</style>
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}</style>
 </head>
 <body>
 <header class="topbar">
   <div class="brand">atlasos<span class="dot">.</span>me</div>
   <div class="crumb"><a href="/us-mockup.html">Us</a> · brain v3</div>
   <div class="stats" id="stats"><span class="led"></span><span id="stats-text">loading…</span></div>
+  <svg viewBox="0 0 120 24" width="120" height="24" style="margin-left:auto;opacity:0.7;" aria-label="heartbeat"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="animation: ecg-pulse 1.6s ease-in-out infinite;"/></svg>
 </header>
 
 <div class="layout">
