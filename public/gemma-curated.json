@@ -1,188 +1,170 @@
 {
-  "generated_at": "2026-06-11T19:53:59Z",
-  "source": "Gemma 2 2B 4-bit MLX · me-gemma-curate.py · with-provenance + me-gemma-scan-state.py (state-docs from Mac mini)",
+  "generated_at": "2026-06-11T19:54:36Z",
+  "source": "Gemma 2 2B 4-bit MLX · me-gemma-curate.py · with-provenance",
   "session_file": "ff7b3e9f-cb11-4be9-8e9a-52b549707862.jsonl",
-  "session_size_mb": 1343.4,
+  "session_size_mb": 1343.8,
   "batches_curated": 10,
-  "items_total": 11,
-  "categories_proposed_by_gemma": 11,
-  "elapsed_seconds": 18.7,
+  "items_total": 10,
+  "categories_proposed_by_gemma": 10,
+  "elapsed_seconds": 18.6,
   "note": "Each item links to /gemma-sources/<id>.md · verbatim terminal excerpt · nothing lost · proof for every claim.",
   "curated": {
+    "database-structure": {
+      "description": "Understanding how Atlasos.me organizes data into categories is crucial for user experience.",
+      "subcategories": {
+        "category-grouping": [
+          {
+            "id": "batch-001-1781207659",
+            "summary": "Understanding how Atlasos.me organizes data into categories is crucial for user experience.",
+            "turn_count": 6,
+            "source_file": "/gemma-sources/batch-001-1781207659.md",
+            "first_role": "assistant",
+            "last_timestamp": "2026-06-11T09:33:46",
+            "gemma_raw": "CATEGORY: **Database-Structure**\nSUBCATEGORY: **Category-Grouping**\nSUMMARY:  Understanding how Atlasos.me organizes data into categories is crucial for user experience."
+          }
+        ]
+      }
+    },
+    "data-structure": {
+      "description": "**Categorize data by arm and provide explanations for each arm's actions.**",
+      "subcategories": {
+        "arm-categorization": [
+          {
+            "id": "batch-002-1781207661",
+            "summary": "**Categorize data by arm and provide explanations for each arm's actions.**",
+            "turn_count": 6,
+            "source_file": "/gemma-sources/batch-002-1781207661.md",
+            "first_role": "assistant",
+            "last_timestamp": "2026-06-11T09:37:02",
+            "gemma_raw": "CATEGORY: **Data-Structure**\nSUBCATEGORY: **Arm-Categorization**\nSUMMARY:  **Categorize data by arm and provide explanations for each arm's actions.**"
+          }
+        ]
+      }
+    },
+    "content-organization": {
+      "description": "This conversation outlines the organization and structure of action items within the content, including their formatting and associated data.",
+      "subcategories": {
+        "action-item-structure": [
+          {
+            "id": "batch-003-1781207663",
+            "summary": "This conversation outlines the organization and structure of action items within the content, including their formatting and associated data.",
+            "turn_count": 6,
+            "source_file": "/gemma-sources/batch-003-1781207663.md",
+            "first_role": "assistant",
+            "last_timestamp": "2026-06-11T18:42:35",
+            "gemma_raw": "CATEGORY: **Content Organization**\nSUBCATEGORY: **Action Item Structure**\nSUMMARY:  This conversation outlines the organization and structure of action items within the content, including their formatting and associated data."
+          }
+        ]
+      }
+    },
+    "work": {
+      "description": "Categorizing Atlas-Brother's work partnerships and related activities.",
+      "subcategories": {
+        "partnerships": [
+          {
+            "id": "batch-004-1781207665",
+            "summary": "Categorizing Atlas-Brother's work partnerships and related activities.",
+            "turn_count": 6,
+            "source_file": "/gemma-sources/batch-004-1781207665.md",
+            "first_role": "assistant",
+            "last_timestamp": "2026-06-11T18:57:14",
+            "gemma_raw": "CATEGORY: **work**\nSUBCATEGORY: **partnerships**\nSUMMARY:  Categorizing Atlas-Brother's work partnerships and related activities."
+          }
+        ]
+      }
+    },
+    "data-organization": {
+      "description": "Tracking journal sources and Atlas seeding status for accurate data organization.",
+      "subcategories": {
+        "journal-tracking": [
+          {
+            "id": "batch-005-1781207667",
+            "summary": "Tracking journal sources and Atlas seeding status for accurate data organization.",
+            "turn_count": 6,
+            "source_file": "/gemma-sources/batch-005-1781207667.md",
+            "first_role": "user",
+            "last_timestamp": "2026-06-11T19:05:51",
+            "gemma_raw": "CATEGORY: **Data Organization**\nSUBCATEGORY: **Journal Tracking**\nSUMMARY:  Tracking journal sources and Atlas seeding status for accurate data organization."
+          }
+        ]
+      }
+    },
     "atlas-ui": {
-      "description": "Understanding the UI structure and categorization of the Atlas page.",
+      "description": "**Defining the structure of arm-pages in the left sidebar, based on user's Q1 and Q2.**",
       "subcategories": {
-        "category-structure": [
+        "arm-page-structure": [
           {
-            "id": "batch-001-1781207315",
-            "summary": "Understanding the UI structure and categorization of the Atlas page.",
+            "id": "batch-006-1781207669",
+            "summary": "**Defining the structure of arm-pages in the left sidebar, based on user's Q1 and Q2.**",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-001-1781207315.md",
+            "source_file": "/gemma-sources/batch-006-1781207669.md",
             "first_role": "user",
-            "last_timestamp": "2026-06-11T09:27:49",
-            "gemma_raw": "CATEGORY: **Atlas-UI**\nSUBCATEGORY: **Category-Structure**\nSUMMARY:  Understanding the UI structure and categorization of the Atlas page."
+            "last_timestamp": "2026-06-11T19:21:19",
+            "gemma_raw": "CATEGORY: **Atlas-UI**\nSUBCATEGORY: **Arm-Page Structure**\nSUMMARY:  **Defining the structure of arm-pages in the left sidebar, based on user's Q1 and Q2.**"
           }
         ]
       }
     },
-    "data-map": {
-      "description": "This conversation discusses the organization and categorization of data within Atlasos.me.",
+    "atlas-sidebar": {
+      "description": "**Specifying the left sidebar's page structure and arm organization.**",
       "subcategories": {
-        "data-organization": [
+        "sidebar-structure": [
           {
-            "id": "batch-002-1781207317",
-            "summary": "This conversation discusses the organization and categorization of data within Atlasos.me.",
+            "id": "batch-007-1781207671",
+            "summary": "**Specifying the left sidebar's page structure and arm organization.**",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-002-1781207317.md",
-            "first_role": "user",
-            "last_timestamp": "2026-06-11T09:34:49",
-            "gemma_raw": "CATEGORY: **Data-Map**\nSUBCATEGORY: **Data-Organization**\nSUMMARY:  This conversation discusses the organization and categorization of data within Atlasos.me."
-          }
-        ]
-      }
-    },
-    "delivery-management": {
-      "description": "Propose a structured approach to verify channel proofs and ensure accurate delivery status tracking.",
-      "subcategories": {
-        "channel-proof-verification": [
-          {
-            "id": "batch-003-1781207319",
-            "summary": "Propose a structured approach to verify channel proofs and ensure accurate delivery status tracking.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-003-1781207319.md",
-            "first_role": "user",
-            "last_timestamp": "2026-06-11T09:39:59",
-            "gemma_raw": "CATEGORY: **Delivery Management**\nSUBCATEGORY: **Channel Proof Verification**\nSUMMARY:  Propose a structured approach to verify channel proofs and ensure accurate delivery status tracking."
-          }
-        ]
-      }
-    },
-    "atlas-organization": {
-      "description": "Improve Atlas-Organization structure by refining categories and subcategories for clarity and organization.",
-      "subcategories": {
-        "category-structure": [
-          {
-            "id": "batch-004-1781207321",
-            "summary": "Improve Atlas-Organization structure by refining categories and subcategories for clarity and organization.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-004-1781207321.md",
+            "source_file": "/gemma-sources/batch-007-1781207671.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-11T18:48:47",
-            "gemma_raw": "CATEGORY: **Atlas-Organization**\nSUBCATEGORY: **Category-Structure**\nSUMMARY:  Improve Atlas-Organization structure by refining categories and subcategories for clarity and organization."
+            "last_timestamp": "2026-06-11T19:30:05",
+            "gemma_raw": "CATEGORY: **Atlas-Sidebar**\nSUBCATEGORY: **Sidebar-Structure**\nSUMMARY:  **Specifying the left sidebar's page structure and arm organization.**"
           }
         ]
       }
     },
-    "taxonomy": {
-      "description": "Suggesting a structured data organization system based on the user's Notion-like approach, using 3-level categories and subcategories.",
+    "atlas-os": {
+      "description": "This conversation outlines the generation of a plan for Atlas-OS, incorporating CEO goals, self-improvement, and self-care.",
       "subcategories": {
-        "data-organization": [
+        "plan-generation": [
           {
-            "id": "batch-005-1781207323",
-            "summary": "Suggesting a structured data organization system based on the user's Notion-like approach, using 3-level categories and subcategories.",
+            "id": "batch-008-1781207673",
+            "summary": "This conversation outlines the generation of a plan for Atlas-OS, incorporating CEO goals, self-improvement, and self-care.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-005-1781207323.md",
+            "source_file": "/gemma-sources/batch-008-1781207673.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-11T18:58:59",
-            "gemma_raw": "CATEGORY: **Taxonomy**\nSUBCATEGORY: **Data Organization**\nSUMMARY:  Suggesting a structured data organization system based on the user's Notion-like approach, using 3-level categories and subcategories."
+            "last_timestamp": "2026-06-11T19:43:36",
+            "gemma_raw": "CATEGORY: **Atlas-OS**\nSUBCATEGORY: **Plan Generation**\nSUMMARY:  This conversation outlines the generation of a plan for Atlas-OS, incorporating CEO goals, self-improvement, and self-care."
           }
         ]
       }
     },
-    "atlas-data-organization": {
-      "description": "**Defining and structuring Atlas data for clarity and organization, based on user-provided examples.**",
+    "deployment": {
+      "description": "**Vercel deployment actions and updates based on user feedback.**",
       "subcategories": {
-        "categorization-structure": [
+        "vercel-deploy": [
           {
-            "id": "batch-006-1781207325",
-            "summary": "**Defining and structuring Atlas data for clarity and organization, based on user-provided examples.**",
+            "id": "batch-009-1781207675",
+            "summary": "**Vercel deployment actions and updates based on user feedback.**",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-006-1781207325.md",
+            "source_file": "/gemma-sources/batch-009-1781207675.md",
             "first_role": "user",
-            "last_timestamp": "2026-06-11T19:06:17",
-            "gemma_raw": "CATEGORY: **Atlas-Data-Organization**\nSUBCATEGORY: **Categorization-Structure**\nSUMMARY:  **Defining and structuring Atlas data for clarity and organization, based on user-provided examples.**"
+            "last_timestamp": "2026-06-11T19:50:42",
+            "gemma_raw": "CATEGORY: **Deployment**\nSUBCATEGORY: **Vercel Deploy**\nSUMMARY:  **Vercel deployment actions and updates based on user feedback.**"
           }
         ]
       }
     },
-    "sidebar": {
-      "description": "**Specifying dedicated arm pages for the left sidebar, including categories, subcategories, and notes.**",
+    "deployment-workflow": {
+      "description": "This conversation details the completion of Phase 1 steps 1-4 of the deployment process.",
       "subcategories": {
-        "arm-pages": [
+        "phase-1-completion": [
           {
-            "id": "batch-007-1781207327",
-            "summary": "**Specifying dedicated arm pages for the left sidebar, including categories, subcategories, and notes.**",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-007-1781207327.md",
-            "first_role": "user",
-            "last_timestamp": "2026-06-11T19:22:35",
-            "gemma_raw": "CATEGORY: **Sidebar**\nSUBCATEGORY: **Arm Pages**\nSUMMARY:  **Specifying dedicated arm pages for the left sidebar, including categories, subcategories, and notes.**"
-          }
-        ]
-      }
-    },
-    "atlas-structure": {
-      "description": "**Organizing pages in Atlas, ensuring consistency and coherence.**",
-      "subcategories": {
-        "page-organization": [
-          {
-            "id": "batch-008-1781207329",
-            "summary": "**Organizing pages in Atlas, ensuring consistency and coherence.**",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-008-1781207329.md",
-            "first_role": "user",
-            "last_timestamp": "2026-06-11T19:37:56",
-            "gemma_raw": "CATEGORY: **Atlas-Structure**\nSUBCATEGORY: **Page-Organization**\nSUMMARY:  **Organizing pages in Atlas, ensuring consistency and coherence.**"
-          }
-        ]
-      }
-    },
-    "project-management": {
-      "description": "This conversation outlines a breakdown of tasks and goals for a project, including a Notion-based modular UI and a plan for CEO self-improvement.",
-      "subcategories": {
-        "task-breakdown": [
-          {
-            "id": "batch-009-1781207331",
-            "summary": "This conversation outlines a breakdown of tasks and goals for a project, including a Notion-based modular UI and a plan for CEO self-improvement.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-009-1781207331.md",
-            "first_role": "user",
-            "last_timestamp": "2026-06-11T19:44:29",
-            "gemma_raw": "CATEGORY: **Project Management**\nSUBCATEGORY: **Task Breakdown**\nSUMMARY:  This conversation outlines a breakdown of tasks and goals for a project, including a Notion-based modular UI and a plan for CEO self-improvement."
-          }
-        ]
-      }
-    },
-    "project-workflow": {
-      "description": "This conversation outlines the project's phase-based workflow for the AGENTIC-OS-MEGA document.",
-      "subcategories": {
-        "phase-management": [
-          {
-            "id": "batch-010-1781207332",
-            "summary": "This conversation outlines the project's phase-based workflow for the AGENTIC-OS-MEGA document.",
-            "turn_count": 2,
-            "source_file": "/gemma-sources/batch-010-1781207332.md",
-            "first_role": "user",
-            "last_timestamp": "2026-06-11T19:44:40",
-            "gemma_raw": "CATEGORY: **Project Workflow**\nSUBCATEGORY: **Phase Management**\nSUMMARY:  This conversation outlines the project's phase-based workflow for the AGENTIC-OS-MEGA document."
-          }
-        ]
-      }
-    },
-    "mac-mini-files": {
-      "description": "",
-      "subcategories": {
-        "unsorted": [
-          {
-            "id": "state-479653c3a9",
-            "summary": "",
-            "priority": "P2",
-            "source_path": "/Users/collinmacneil/.claude/state/continuity-log.md",
-            "source_filename": "continuity-log.md",
-            "file_mtime": "2026-06-11 15:50",
-            "first_role": "mac-mini-file",
-            "gemma_raw": "##  continuity-log.md\n\n**CATEGORY:** atlas-loop\n**SUBCATEGORY:** atlas-cycles\n**PRIORITY:** P1\n**SUMMARY:**  Detailed log of Atlas's loop cycles, including operator research, pricing, and hygiene.",
-            "kind": "state-doc"
+            "id": "batch-010-1781207676",
+            "summary": "This conversation details the completion of Phase 1 steps 1-4 of the deployment process.",
+            "turn_count": 1,
+            "source_file": "/gemma-sources/batch-010-1781207676.md",
+            "first_role": "assistant",
+            "last_timestamp": "2026-06-11T19:51:12",
+            "gemma_raw": "CATEGORY: **Deployment Workflow**\nSUBCATEGORY: **Phase 1 Completion**\nSUMMARY:  This conversation details the completion of Phase 1 steps 1-4 of the deployment process."
           }
         ]
       }
