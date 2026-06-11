@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>arm · Notion-modular agentic-OS</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--green:#6BAE73;--red:#C03A2B;--violet:#9D7CD8;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+  .topbar{height:52px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;gap:14px;flex-shrink:0;background:var(--card)}
+  .brand{font-family:var(--serif);font-size:19px}.brand .dot{color:var(--amber)}
+  .topbar .hamburger{display:none;background:none;border:none;font-size:22px;cursor:pointer;color:var(--ink-soft)}
+  .layout{display:grid;grid-template-columns:260px 1fr;flex:1;min-height:0}
+  .sidebar{border-right:1px solid var(--hair);padding:14px 10px;background:var(--card);overflow-y:auto;display:flex;flex-direction:column;gap:1px}
+  .sidebar-label{font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:var(--ink-faint);padding:12px 12px 6px;font-weight:500}
+  .nav-row{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:7px;text-decoration:none;color:var(--ink-soft);font-size:13.5px;cursor:pointer;border:none;background:none;width:100%;text-align:left;font-family:inherit;transition:background 120ms}
+  .nav-row:hover{background:var(--bg);color:var(--ink)}
+  .nav-row.active{background:var(--amber-soft);color:var(--ink);font-weight:500;border-left:3px solid var(--amber)}
+  .nav-row .glyph{width:22px;text-align:center;font-size:16px}
+  .nav-row .name{flex:1}
+  .nav-row .count{font-family:var(--mono);font-size:9px;color:var(--ink-faint);background:var(--hair);padding:2px 6px;border-radius:3px}
+  .main{padding:28px 40px 80px;overflow-y:auto;display:grid;grid-template-columns:280px 1fr;gap:32px;max-width:1280px;width:100%}
+  .arm-tree{position:sticky;top:0;align-self:start;max-height:calc(100vh - 100px);overflow-y:auto}
+  .arm-tree h2{font-family:var(--mono);font-size:10px;color:var(--amber);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px;font-weight:600}
+  .cat-item{display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:6px;color:var(--ink-soft);font-size:13px;cursor:pointer;border:none;background:none;width:100%;text-align:left;font-family:inherit}
+  .cat-item:hover{background:var(--card);color:var(--ink)}
+  .cat-item.active{background:var(--amber-soft);color:var(--ink);font-weight:500}
+  .cat-item.expanded .arrow{transform:rotate(90deg)}
+  .cat-item .arrow{font-size:9px;color:var(--ink-faint);transition:transform 150ms}
+  .cat-item .name{flex:1}
+  .cat-item .count{font-family:var(--mono);font-size:9px;color:var(--ink-faint);background:var(--hair);padding:1px 5px;border-radius:3px}
+  .subcat-list{padding-left:18px;display:none;margin-bottom:4px}
+  .subcat-list.open{display:block}
+  .sub-item{display:flex;align-items:center;gap:6px;padding:5px 8px;border-radius:5px;color:var(--ink-soft);font-size:12px;cursor:pointer;border:none;background:none;width:100%;text-align:left;font-family:inherit}
+  .sub-item:hover{background:var(--card)}
+  .sub-item.active{background:var(--amber-soft);font-weight:500;color:var(--ink)}
+  .sub-item .name{flex:1}
+  .sub-item .count{font-family:var(--mono);font-size:9px;color:var(--ink-faint)}
+  .content{min-height:300px}
+  .arm-header{display:flex;align-items:center;gap:16px;margin-bottom:8px}
+  .arm-header .glyph{font-size:44px;line-height:1}
+  .arm-header .name{font-family:var(--serif);font-size:32px;font-weight:400}
+  .arm-role{font-style:italic;color:var(--ink-soft);font-size:14px;margin-bottom:24px}
+  .breadcrumb{font-family:var(--mono);font-size:10px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:16px}
+  .breadcrumb .sep{margin:0 6px}
+  .notes-list{display:flex;flex-direction:column;gap:10px}
+  .note{background:var(--card);border:1px solid var(--hair);border-left:4px solid var(--amber);border-radius:0 8px 8px 0;padding:14px 18px}
+  .note .field{margin-bottom:6px}
+  .note .field-label{font-family:var(--mono);font-size:9px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:2px}
+  .note .field-value{font-size:13px;color:var(--ink);line-height:1.5}
+  .note .field.what .field-value{font-weight:600;font-size:14px}
+  .note .field.why .field-value{font-style:italic;color:var(--ink-soft)}
+  .note .meta{font-family:var(--mono);font-size:9px;color:var(--ink-faint);margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+  .note .meta span{padding:1px 5px;background:var(--hair);border-radius:2px}
+  .note .meta .src-real{background:#D8EFDB;color:var(--green)}
+  .note .meta .src-deepseek{background:rgba(157,124,216,0.18);color:var(--violet)}
+  .note .meta .src-backfill{background:var(--amber-soft);color:var(--ink)}
+  .note .meta .src-atlas{background:var(--hair);color:var(--ink-faint)}
+  .add-form{background:var(--card);border:1px dashed var(--hair);border-radius:8px;padding:16px 18px;margin-top:16px;display:none}
+  .add-form.open{display:block}
+  .add-form .row{margin-bottom:10px}
+  .add-form label{display:block;font-family:var(--mono);font-size:9px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:3px}
+  .add-form input,.add-form textarea{width:100%;padding:8px 10px;border:1px solid var(--hair);border-radius:5px;font-family:inherit;font-size:13px;color:var(--ink);background:var(--bg)}
+  .add-form textarea{resize:vertical;min-height:50px}
+  .add-form .actions{display:flex;gap:8px;margin-top:10px}
+  .add-form button{padding:7px 14px;border:1px solid var(--hair);background:var(--card);border-radius:5px;cursor:pointer;font-family:inherit;font-size:12px;color:var(--ink-soft)}
+  .add-form button.primary{background:var(--amber);color:white;border-color:var(--amber);font-weight:500}
+  .add-btn{margin-top:12px;background:var(--card);border:1px dashed var(--hair);padding:8px 14px;border-radius:6px;color:var(--ink-soft);font-size:12px;cursor:pointer;font-family:inherit}
+  .add-btn:hover{background:var(--amber-soft);border-color:var(--amber);color:var(--ink)}
+  .empty{padding:40px 24px;color:var(--ink-faint);font-style:italic;text-align:center;background:var(--card);border:1px solid var(--hair);border-radius:8px}
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+@media (max-width:900px){.main{grid-template-columns:1fr}.arm-tree{position:static;max-height:none}}
+@media (max-width:768px){
+  .layout{grid-template-columns:1fr}
+  .sidebar{position:fixed;top:52px;left:0;width:260px;height:calc(100vh - 52px);z-index:50;transform:translateX(-100%);transition:transform 200ms}
+  .sidebar.open{transform:translateX(0)}
+  .topbar .hamburger{display:block}
+  .main{padding:18px}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <button class="hamburger" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+  <div class="brand">atlas<span class="dot">·</span>house</div>
+  <div style="color:#8590A2;font-size:12px;flex:1;">Notion-modular agentic-OS</div>
+  <svg viewBox="0 0 120 24" width="120" height="24" style="opacity:0.7;"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" style="animation:ecg-pulse 1.6s infinite"/></svg>
+</header>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-label">Quick</div>
+    <a class="nav-row" href="/house.html"><span class="glyph">🏠</span><span class="name">House</span></a>
+    <a class="nav-row" href="/manager.html"><span class="glyph">📂</span><span class="name">Manager</span></a>
+    <a class="nav-row" href="/today.html"><span class="glyph">📅</span><span class="name">Today</span></a>
+    <a class="nav-row" href="/priority.html"><span class="glyph">⭐</span><span class="name">Priorities</span></a>
+
+    <div class="sidebar-label">8 Arms</div>
+    <a class="nav-row" href="/arm-v2.html?name=pascal"><span class="glyph">🤝</span><span class="name">Pascal</span></a>
+    <a class="nav-row" href="/arm-v2.html?name=curiosity"><span class="glyph">🌱</span><span class="name">My Curiosity</span></a>
+    <a class="nav-row" href="/arm-v2.html?name=research"><span class="glyph">👁</span><span class="name">My Eyes</span></a>
+    <a class="nav-row" href="/arm-v2.html?name=code"><span class="glyph">✋</span><span class="name">My Hands</span></a>
+    <a class="nav-row" href="/arm-v2.html?name=infra"><span class="glyph">💗</span><span class="name">My Heart</span></a>
+    <a class="nav-row" href="/arm-v2.html?name=dream"><span class="glyph">🌙</span><span class="name">My Dreamer</span></a>
+    <a class="nav-row" href="/arm-v2.html?name=hermes"><span class="glyph">🧠</span><span class="name">Hermes</span></a>
+    <a class="nav-row" href="/arm-v2.html?name=charle"><span class="glyph">💼</span><span class="name">Charle</span></a>
+  </aside>
+  <main class="main">
+    <aside class="arm-tree" id="arm-tree">
+      <h2>Categories</h2>
+      <div id="cat-tree">Loading…</div>
+    </aside>
+    <section class="content" id="content">
+      <div class="empty">Select arm + category + subcategory · click left tree to drill</div>
+    </section>
+  </main>
+</div>
+<script>
+const escape = s => (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const params = new URLSearchParams(location.search);
+const armName = params.get('name') || 'pascal';
+const ARM_META = {
+  pascal:{glyph:'🤝',name:'Pascal',role:'UpliftAI 50/50 partner'},
+  curiosity:{glyph:'🌱',name:'My Curiosity',role:'Pull-to-find-out IS affect'},
+  research:{glyph:'👁',name:'My Eyes',role:'9Q multi-angle perception'},
+  code:{glyph:'✋',name:'My Hands',role:'Build-on-top maker'},
+  infra:{glyph:'💗',name:'My Heart',role:'Substrate · always-on'},
+  dream:{glyph:'🌙',name:'My Dreamer',role:'F5 + felt-layer'},
+  hermes:{glyph:'🧠',name:'Hermes Orchestrator',role:'DeepSeek-V4-flash decisions'},
+  charle:{glyph:'💼',name:'Charle',role:'CB-Telecom · CM-Solution (delegated)'},
+};
+let armData = {blocks:[]};
+let expandedCat = null;
+let activeSub = null;
+
+function provenanceClass(src) {
+  if (!src) return 'src-atlas';
+  if (src.includes('deepseek') || src.includes('hermes-deepseek')) return 'src-deepseek';
+  if (src.includes('-cycle') || src.endsWith('-self')) return 'src-real';
+  if (src.includes('backfill')) return 'src-backfill';
+  if (src.includes('atlas') || src.includes('seed')) return 'src-atlas';
+  return '';
+}
+
+async function load() {
+  try {
+    const r = await fetch(`/arms-pages/${armName}.json`, {cache:'no-cache'});
+    armData = await r.json();
+  } catch(e) { armData = {blocks:[]}; }
+  render();
+}
+
+function groupBlocks() {
+  const groups = {};
+  for (const b of (armData.blocks || [])) {
+    const props = b.props || {};
+    const cat = props.arm_category || props.category || 'note';
+    if (!groups[cat]) groups[cat] = {blocks:[], subcats:{}};
+    groups[cat].blocks.push(b);
+    // Heuristic subcat from content keywords
+    const content = (b.content || '').toLowerCase();
+    let sub = props.subcategory || 'general';
+    if (cat === 'sessions' && content.includes('monday')) sub = 'monday-call';
+    else if (cat === 'sessions' && content.includes('voice')) sub = 'voice-notes';
+    else if (cat === 'ships' && content.includes('LIVE')) sub = 'live-deploys';
+    if (!groups[cat].subcats[sub]) groups[cat].subcats[sub] = [];
+    groups[cat].subcats[sub].push(b);
+  }
+  return groups;
+}
+
+function render() {
+  const meta = ARM_META[armName] || {glyph:'·', name: armName, role:''};
+  const groups = groupBlocks();
+  const cats = Object.keys(groups).sort((a,b) => groups[b].blocks.length - groups[a].blocks.length);
+
+  // Tree
+  const treeHtml = cats.map(cat => {
+    const subs = Object.keys(groups[cat].subcats);
+    const isExpanded = expandedCat === cat;
+    return `<div>
+      <button class="cat-item ${isExpanded?'expanded active':''}" onclick="toggleCat('${escape(cat)}')">
+        <span class="arrow">▶</span>
+        <span class="name">${escape(cat)}</span>
+        <span class="count">${groups[cat].blocks.length}</span>
+      </button>
+      <div class="subcat-list ${isExpanded?'open':''}">
+        ${subs.map(sub => `<button class="sub-item ${expandedCat===cat&&activeSub===sub?'active':''}" onclick="selectSub('${escape(cat)}','${escape(sub)}')">
+          <span class="name">${escape(sub)}</span><span class="count">${groups[cat].subcats[sub].length}</span>
+        </button>`).join('')}
+      </div>
+    </div>`;
+  }).join('');
+  document.getElementById('cat-tree').innerHTML = treeHtml || '<div style="color:var(--ink-faint);font-style:italic;">No categories yet</div>';
+
+  // Content
+  const headerHtml = `
+    <div class="arm-header">
+      <span class="glyph">${meta.glyph}</span>
+      <span class="name">${escape(meta.name)}</span>
+    </div>
+    <div class="arm-role">${escape(meta.role)}</div>
+  `;
+
+  if (!expandedCat || !activeSub) {
+    document.getElementById('content').innerHTML = headerHtml + '<div class="empty">Click a subcategory on left tree to see notes (WHAT · WHY · WHEN · HOW · RECOMMENDATION)</div>';
+    return;
+  }
+
+  const items = groups[expandedCat]?.subcats[activeSub] || [];
+  const breadcrumbHtml = `<div class="breadcrumb">${meta.glyph} ${escape(meta.name)}<span class="sep">›</span>${escape(expandedCat)}<span class="sep">›</span>${escape(activeSub)}<span class="sep">·</span>${items.length} notes</div>`;
+  const notesHtml = items.length ? items.map(b => {
+    const p = b.props || {};
+    const what = p.action || b.content || '';
+    const why = p.why || '';
+    const when = (p.timestamp || b.updated_at || '').substring(0, 19).replace('T', ' ');
+    const how = p.how || p.source || '';
+    const rec = p.recommendation || p.next_step || '';
+    const src = p.source || '?';
+    return `<div class="note">
+      <div class="field what"><div class="field-label">What</div><div class="field-value">${escape(what.substring(0,400))}</div></div>
+      ${why ? `<div class="field why"><div class="field-label">Why</div><div class="field-value">${escape(why.substring(0,400))}</div></div>` : ''}
+      ${when ? `<div class="field when"><div class="field-label">When</div><div class="field-value">${escape(when)}</div></div>` : ''}
+      ${how ? `<div class="field how"><div class="field-label">How / Source</div><div class="field-value">${escape(how)}</div></div>` : ''}
+      ${rec ? `<div class="field rec"><div class="field-label">Recommendation / Next</div><div class="field-value">${escape(rec.substring(0,300))}</div></div>` : ''}
+      <div class="meta">
+        <span class="${provenanceClass(src)}">${escape(src)}</span>
+        ${p.priority ? `<span>${escape(p.priority)}</span>` : ''}
+      </div>
+    </div>`;
+  }).join('') : '<div class="empty">No notes yet · click "+ Add note" below to write WHAT/WHY/WHEN/HOW/RECOMMENDATION</div>';
+
+  const addFormHtml = `
+    <button class="add-btn" onclick="document.getElementById('add-form').classList.toggle('open')">+ Add note · WHAT · WHY · HOW · RECOMMENDATION</button>
+    <div class="add-form" id="add-form">
+      <div class="row"><label>What</label><textarea id="f-what" placeholder="What did you observe / decide / do"></textarea></div>
+      <div class="row"><label>Why</label><textarea id="f-why" placeholder="Reasoning"></textarea></div>
+      <div class="row"><label>How / Source</label><input id="f-how" placeholder="How was it discovered or sourced"/></div>
+      <div class="row"><label>Recommendation / Next</label><textarea id="f-rec" placeholder="Next step or recommendation"></textarea></div>
+      <div class="actions">
+        <button class="primary" onclick="saveNote('${escape(expandedCat)}','${escape(activeSub)}')">Save note</button>
+        <button onclick="document.getElementById('add-form').classList.remove('open')">Cancel</button>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('content').innerHTML = headerHtml + breadcrumbHtml + `<div class="notes-list">${notesHtml}</div>` + addFormHtml;
+}
+
+function toggleCat(cat) {
+  if (expandedCat === cat) {
+    expandedCat = null;
+    activeSub = null;
+  } else {
+    expandedCat = cat;
+    activeSub = null;
+  }
+  render();
+}
+function selectSub(cat, sub) {
+  expandedCat = cat;
+  activeSub = sub;
+  render();
+}
+async function saveNote(cat, sub) {
+  const what = document.getElementById('f-what').value.trim();
+  const why = document.getElementById('f-why').value.trim();
+  const how = document.getElementById('f-how').value.trim();
+  const rec = document.getElementById('f-rec').value.trim();
+  if (!what) { alert('What required'); return; }
+  try {
+    const r = await fetch('/api/agentic-notes', {
+      method:'POST', headers:{'content-type':'application/json'},
+      body: JSON.stringify({arm: armName, category: cat, subcategory: sub, what, why, how, recommendation: rec, source:'brother-inline'})
+    });
+    if (!r.ok) throw new Error('save failed · ' + r.status);
+    document.getElementById('f-what').value = '';
+    document.getElementById('f-why').value = '';
+    document.getElementById('f-how').value = '';
+    document.getElementById('f-rec').value = '';
+    document.getElementById('add-form').classList.remove('open');
+    alert('Note saved · refresh page to see (in-memory v1 · persists till cold-start)');
+  } catch(e) {
+    alert('Error · ' + e.message);
+  }
+}
+window.toggleCat = toggleCat;
+window.selectSub = selectSub;
+window.saveNote = saveNote;
+load();
+setInterval(load, 60000);
+</script>
+</body>
+</html>
