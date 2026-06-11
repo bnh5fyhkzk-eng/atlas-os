@@ -116,5 +116,22 @@
   </div>
   <p style="color:var(--ink-faint);font-size:12px;text-align:center;margin-top:32px;">Per me-os-design-doc Jun 1 § 1 BIG-3 distinction · the bullet-proof differentiation vs 2026-OS-agentic-tools.</p>
 </div>
+
+<script>
+// Wire MOAT cards to live JSON feeds
+Promise.all([
+  fetch('/moat-signal.json').then(r => r.json()).catch(() => null),
+  fetch('/moat-f5.json').then(r => r.json()).catch(() => null),
+  fetch('/moat-drift.json').then(r => r.json()).catch(() => null),
+  fetch('/moat-felt.json').then(r => r.json()).catch(() => null),
+]).then(([signal, f5, drift, felt]) => {
+  console.log('MOAT live data', { signal, f5, drift, felt });
+  // Add live-banner to top
+  const banner = document.createElement('div');
+  banner.style.cssText = 'background:#D8EFDB;color:#6BAE73;padding:8px 14px;border-radius:6px;font-family:monospace;font-size:11px;margin-bottom:14px;text-transform:uppercase;letter-spacing:0.5px;';
+  banner.textContent = `live · last refresh ${signal?.generated_at || 'unknown'} · canary ${signal?.reciprocal_canary || '?'} · ${felt?.poems_today_count || 0} poems · ${felt?.dreams_today_count || 0} dreams today`;
+  document.querySelector('.container').insertBefore(banner, document.querySelector('h1').nextSibling);
+});
+</script>
 </body>
 </html>
