@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T17:06:00Z",
+  "generated_at": "2026-06-11T17:11:12Z",
   "source": "me-gemma-tier-into-7-cats.py (rule-based router · per brother direct #45099 1-YOU-2-ME-3-WORLD)",
   "items_total": 3,
   "tier_summary": {
@@ -25,11 +25,11 @@
       "P2": 0
     },
     "manager": {
-      "subs": 2,
-      "items": 2,
+      "subs": 3,
+      "items": 3,
       "P0": 0,
       "P1": 0,
-      "P2": 2
+      "P2": 3
     },
     "arms": {
       "subs": 0,
@@ -46,11 +46,11 @@
       "P2": 0
     },
     "future": {
-      "subs": 1,
-      "items": 1,
+      "subs": 0,
+      "items": 0,
       "P0": 0,
       "P1": 0,
-      "P2": 1
+      "P2": 0
     }
   },
   "tiers": {
@@ -97,10 +97,10 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-001-1781197254",
+                  "id": "batch-001-1781197564",
                   "summary": "Analyzing Atlas-Cycle inventory and recall steps, including root cause identification and fix implementation.",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-001-1781197254.md",
+                  "source_file": "/gemma-sources/batch-001-1781197564.md",
                   "first_role": "user",
                   "last_timestamp": "2026-06-11T16:10:44",
                   "gemma_raw": "CATEGORY: Atlas-Cycle\nSUBCATEGORY:  Inventory-Recall\nSUMMARY:  Analyzing Atlas-Cycle inventory and recall steps, including root cause identification and fix implementation.",
@@ -123,10 +123,10 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-002-1781197255",
+                  "id": "batch-002-1781197565",
                   "summary": "Understanding the timing of plist unload and its impact on system stability.",
                   "turn_count": 1,
-                  "source_file": "/gemma-sources/batch-002-1781197255.md",
+                  "source_file": "/gemma-sources/batch-002-1781197565.md",
                   "first_role": "assistant",
                   "last_timestamp": "2026-06-11T16:11:42",
                   "gemma_raw": "CATEGORY: Launchctl\nSUBCATEGORY:  plist Management\nSUMMARY:  Understanding the timing of plist unload and its impact on system stability.",
@@ -137,17 +137,46 @@
             }
           },
           "total_items": 1
+        },
+        "mac-mini-files-unsorted": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "state-479653c3a9",
+                  "summary": "",
+                  "priority": "P2",
+                  "source_path": "/Users/collinmacneil/.claude/state/continuity-log.md",
+                  "source_filename": "continuity-log.md",
+                  "file_mtime": "2026-06-11 13:06",
+                  "first_role": "mac-mini-file",
+                  "gemma_raw": "##  continuity-log.md\n\n**CATEGORY:** atlas-loop\n**SUBCATEGORY:** atlas-cycles\n**PRIORITY:** P1\n**SUMMARY:**  Detailed log of Atlas's loop cycles, including operator research, pricing, and hygiene.",
+                  "kind": "state-doc",
+                  "_original_cat": "mac-mini-files",
+                  "_original_sub": "unsorted"
+                }
+              ]
+            }
+          },
+          "total_items": 1
         }
       },
-      "total": 2,
+      "total": 3,
       "priority_counts": {
         "P0": 0,
         "P1": 0,
-        "P2": 2
+        "P2": 3
       },
       "original_categories": [
         "atlas-cycle",
-        "launchctl"
+        "launchctl",
+        "mac-mini-files"
       ]
     },
     "arms": {
@@ -171,45 +200,14 @@
       "original_categories": []
     },
     "future": {
-      "subs": {
-        "dedup-check-28284": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "state-ed9c68df26",
-                  "summary": "Research on Dedup_Check #28284, skip as already posted.",
-                  "priority": "P2",
-                  "source_path": "/Users/collinmacneil/.claude/state/arm-outputs/research/arm-1781197483-research.md",
-                  "source_filename": "arm-1781197483-research.md",
-                  "file_mtime": "2026-06-11 13:04",
-                  "first_role": "mac-mini-file",
-                  "gemma_raw": "CATEGORY: Dedup_Check\nSUBCATEGORY: #28284\nPRIORITY: P2\nSUMMARY:  Research on Dedup_Check #28284, skip as already posted.",
-                  "kind": "state-doc",
-                  "_original_cat": "dedup-check",
-                  "_original_sub": "28284"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        }
-      },
-      "total": 1,
+      "subs": {},
+      "total": 0,
       "priority_counts": {
         "P0": 0,
         "P1": 0,
-        "P2": 1
+        "P2": 0
       },
-      "original_categories": [
-        "dedup-check"
-      ]
+      "original_categories": []
     }
   }
 }
