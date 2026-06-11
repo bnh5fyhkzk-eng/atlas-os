@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>atlasos.me · employee</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--green:#6BAE73;--red:#C03A2B;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6;min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
+  .topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;background:var(--bg);gap:14px;flex-shrink:0}
+  .brand{font-family:var(--serif);font-size:18px}
+  .brand .dot{color:var(--amber)}
+  .crumb{color:var(--ink-faint);font-size:12px}
+  .crumb a{color:var(--ink-soft);text-decoration:none}
+  .layout{display:grid;grid-template-columns:280px 1fr;flex:1;min-height:0}
+  .nav{border-right:1px solid var(--hair);padding:24px 14px;background:var(--card);display:flex;flex-direction:column;gap:2px;overflow-y:auto}
+  .nav-label{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--ink-faint);padding:0 12px;margin:14px 0 8px}
+  .nav-item{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:6px;color:var(--ink-soft);font-size:14px;text-decoration:none;cursor:pointer}
+  .nav-item:hover{background:var(--bg);color:var(--ink)}
+  .nav-item.active{background:var(--amber-soft);color:var(--ink);font-weight:500}
+  .nav-item .ni-icon{width:20px;text-align:center}
+  .nav-item .count{margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--ink-faint)}
+  .main{padding:32px 36px 80px;overflow-y:auto}
+  .identity-card{background:var(--card);border:1px solid var(--hair);border-radius:10px;padding:24px 28px;margin-bottom:24px;display:flex;gap:22px;align-items:center}
+  .identity-card .glyph{font-size:54px;line-height:1}
+  .identity-card .name{font-family:var(--serif);font-size:30px;font-weight:400;margin-bottom:4px}
+  .identity-card .role{font-size:13px;color:var(--ink-soft);margin-bottom:8px}
+  .identity-card .meta{font-family:var(--mono);font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;display:flex;gap:14px;flex-wrap:wrap}
+  .identity-card .pill{padding:3px 10px;border-radius:4px;font-size:10px;font-family:var(--mono);text-transform:uppercase}
+  .pill.stable{background:#D8EFDB;color:var(--green)}
+  .pill.warn{background:var(--amber-soft);color:var(--amber)}
+  .pill.drift{background:#FBE5E1;color:var(--red)}
+  .section-head{font-family:var(--serif);font-size:22px;font-weight:400;margin-top:32px;margin-bottom:14px;border-bottom:1px solid var(--hair);padding-bottom:6px}
+  .sub-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;margin-bottom:18px}
+  .sub-card{background:var(--card);border:1px solid var(--hair);border-radius:8px;padding:14px 18px;cursor:pointer;transition:border-color 120ms}
+  .sub-card:hover{border-color:var(--amber-soft)}
+  .sub-card .sub-name{font-family:var(--serif);font-size:15px;color:var(--ink);margin-bottom:4px}
+  .sub-card .sub-meta{font-family:var(--mono);font-size:10px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px}
+  .sub-card .sub-meta .p0{color:var(--red)}.sub-card .sub-meta .p1{color:var(--amber)}.sub-card .sub-meta .p2{color:var(--ink-faint)}
+  .item{background:var(--card);border:1px solid var(--hair);border-left:3px solid var(--amber-soft);border-radius:6px;padding:10px 14px;margin-bottom:8px;font-size:13px;color:var(--ink)}
+  .item.p0{border-left-color:var(--red)}.item.p1{border-left-color:var(--amber)}
+  .item .item-meta{font-family:var(--mono);font-size:10px;color:var(--ink-faint);margin-top:4px}
+  .notes-box{background:var(--card);border:1px dashed var(--hair);border-radius:8px;padding:14px 18px;margin-top:14px}
+  .notes-box textarea{width:100%;border:none;background:transparent;font-family:var(--serif);font-style:italic;font-size:14px;outline:none;min-height:60px;resize:vertical;color:var(--ink)}
+  .notes-box label{font-family:var(--mono);font-size:10px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;display:block;margin-bottom:6px}
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+@media (max-width: 768px) {
+  .layout { grid-template-columns: 1fr !important; }
+  .nav { display: none; }
+  .container { padding: 24px 18px !important; }
+  h1 { font-size: 24px !important; }
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">·</span>me</div>
+  <div class="crumb"><a href="/us.html">Us</a> · <a href="/employees.html">employees</a> · <span id="crumb-name">…</span></div>
+  <svg viewBox="0 0 120 24" width="120" height="24" style="margin-left:auto;opacity:0.7;"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" style="animation:ecg-pulse 1.6s infinite"/></svg>
+</header>
+
+<div class="layout">
+  <aside class="nav" id="sidebar">
+    <div class="nav-label">categories</div>
+    <div id="nav-cats">loading…</div>
+    <div class="nav-label">Hermes access</div>
+    <div id="nav-hermes" style="padding:6px 12px;font-size:11px;color:var(--ink-faint);font-family:var(--mono);"></div>
+  </aside>
+  <main class="main">
+    <div id="content">Loading employee…</div>
+  </main>
+</div>
+
+<script>
+const escape = s => (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const params = new URLSearchParams(location.search);
+const empName = params.get('name') || 'pascal';
+const activeCat = params.get('cat');
+const activeSub = params.get('sub');
+let emp = null;
+
+async function load() {
+  try {
+    const r = await fetch(`/employees/${empName}.json`, {cache:'no-cache'});
+    if (!r.ok) {
+      document.getElementById('content').innerHTML = '<p>Employee not found · check name in URL</p>';
+      return;
+    }
+    emp = await r.json();
+    render();
+  } catch (e) {
+    document.getElementById('content').innerHTML = '<p>Load failed · ' + escape(e.message) + '</p>';
+  }
+}
+
+function render() {
+  document.getElementById('crumb-name').textContent = emp.name;
+  document.title = `atlasos.me · ${emp.name} · employee`;
+
+  // Sidebar categories
+  const cats = Object.keys(emp.tiers || {});
+  const navHtml = cats.map(c => {
+    const tier = emp.tiers[c];
+    const total = tier.total || 0;
+    const isActive = c === activeCat;
+    return `<a class="nav-item ${isActive ? 'active' : ''}" href="/employee.html?name=${escape(emp.name)}&cat=${encodeURIComponent(c)}"><span class="ni-icon">${getEmoji(c)}</span><span>${escape(c)}</span><span class="count">${total}</span></a>`;
+  }).join('');
+  document.getElementById('nav-cats').innerHTML = navHtml || '<div style="padding:6px 12px;font-size:12px;color:var(--ink-faint);">no categories</div>';
+  document.getElementById('nav-hermes').textContent = emp.identity.hermes_access || '';
+
+  // Identity card
+  const status = emp.live_status || {};
+  const stateClass = status.state === 'active' ? 'stable' : status.state === 'idle' ? 'warn' : '';
+  const idCardHtml = `
+    <div class="identity-card" style="border-left:4px solid ${emp.identity.color || 'var(--amber)'}">
+      <div class="glyph">${emp.identity.glyph || '◐'}</div>
+      <div style="flex:1;">
+        <div class="name">${escape(emp.identity.name)}</div>
+        <div class="role">${escape(emp.identity.role || '')}</div>
+        <div class="meta">
+          <span class="pill ${stateClass}">${escape(status.state || '?')}</span>
+          <span>model · ${escape(emp.identity.model || '?')}</span>
+          <span>pillar · ${escape(emp.identity.pillar || '?')}</span>
+          <span>done · ${status.done_count || 0}</span>
+          <span>drift · ${status.vec_drift !== null ? (status.vec_drift || 0).toFixed(3) : '?'}</span>
+          <span>canons · ${emp.total_canons || 0}</span>
+        </div>
+      </div>
+    </div>
+  `;
+
+  // Build main content based on what's selected
+  let mainHtml = idCardHtml;
+  if (!activeCat) {
+    // Show all categories overview
+    mainHtml += '<div class="section-head">Categories</div><div class="sub-list">';
+    for (const c of cats) {
+      const tier = emp.tiers[c];
+      const counts = tier.priority_counts || {};
+      mainHtml += `
+        <a class="sub-card" href="/employee.html?name=${escape(emp.name)}&cat=${encodeURIComponent(c)}" style="text-decoration:none;">
+          <div class="sub-name">${getEmoji(c)} ${escape(c)}</div>
+          <div class="sub-meta">
+            <span class="p0">${counts.P0 || 0} P0</span> · <span class="p1">${counts.P1 || 0} P1</span> · <span class="p2">${counts.P2 || 0} P2</span>
+            · ${Object.keys(tier.subs || {}).length} subs
+          </div>
+        </a>`;
+    }
+    mainHtml += '</div>';
+    // Recent outputs section
+    if (emp.recent_outputs && emp.recent_outputs.length) {
+      mainHtml += '<div class="section-head">Recent outputs</div>';
+      for (const o of emp.recent_outputs.slice(0, 10)) {
+        mainHtml += `<div class="item"><div>${escape(o.file)}</div><div class="item-meta">${o.size}b · ${escape(o.mtime)}</div></div>`;
+      }
+    }
+  } else if (!activeSub) {
+    // Show subcategories of activeCat
+    const tier = emp.tiers[activeCat];
+    if (!tier) {
+      mainHtml += '<p>Category not found</p>';
+    } else {
+      mainHtml += `<div class="section-head">${getEmoji(activeCat)} ${escape(activeCat)} · ${tier.total || 0} items</div><div class="sub-list">`;
+      for (const [sn, sd] of Object.entries(tier.subs || {})) {
+        const subCounts = (sd.subsubs ? Object.entries(sd.subsubs).map(([p, pd]) => `<span class="${p.toLowerCase()}">${pd.items.length} ${p}</span>`).join(' · ') : '');
+        mainHtml += `
+          <a class="sub-card" href="/employee.html?name=${escape(emp.name)}&cat=${encodeURIComponent(activeCat)}&sub=${encodeURIComponent(sn)}" style="text-decoration:none;">
+            <div class="sub-name">${escape(sn.replace(/-/g, ' '))}</div>
+            <div class="sub-meta">${subCounts || 'empty'}</div>
+          </a>`;
+      }
+      mainHtml += '</div>';
+    }
+  } else {
+    // Show items of activeSub (4-layer · subsub priority groups + items)
+    const tier = emp.tiers[activeCat];
+    const subData = tier?.subs?.[activeSub];
+    if (!subData) {
+      mainHtml += '<p>Sub-category not found</p>';
+    } else {
+      mainHtml += `<div class="section-head">${escape(activeSub.replace(/-/g, ' '))} · ${subData.total_items || 0} items</div>`;
+      for (const [prio, pd] of Object.entries(subData.subsubs || {})) {
+        if (!pd.items.length) continue;
+        mainHtml += `<h3 style="font-family:var(--mono);font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:1px;margin-top:18px;margin-bottom:8px;">${prio} · ${pd.items.length} items</h3>`;
+        for (const it of pd.items) {
+          mainHtml += `
+            <div class="item ${prio.toLowerCase()}">
+              <div>${escape(it.summary || it.id || '')}</div>
+              <div class="item-meta">${escape(it.id || '')} · arousal ${it.arousal !== undefined ? it.arousal.toFixed(2) : '?'} · ${escape(it.when || '')} · pillar ${escape(it.pillar || '?')}</div>
+            </div>`;
+        }
+      }
+    }
+    // Notes
+    mainHtml += `
+      <div class="section-head">My notes on ${escape(empName)} · ${escape(activeSub)}</div>
+      <div class="notes-box">
+        <label>brother-notes · saved local · auto-bank planned</label>
+        <textarea id="notes" placeholder="type your notes about ${escape(emp.name)}'s ${escape(activeSub)} here..."></textarea>
+      </div>`;
+  }
+  document.getElementById('content').innerHTML = mainHtml;
+  // Wire notes
+  const notesEl = document.getElementById('notes');
+  if (notesEl) {
+    const key = `${emp.notes_localStorage_key}-${activeCat}-${activeSub}`;
+    notesEl.value = localStorage.getItem(key) || '';
+    notesEl.addEventListener('input', () => localStorage.setItem(key, notesEl.value));
+  }
+}
+
+function getEmoji(name) {
+  const map = {
+    sessions: '🎯', corpus: '📚', pipeline: '🚀', 'wow-moves': '✨',
+    queue: '📋', completed: '✓', patterns: '🔄',
+    'active-investigations': '🔬', 'synthesis-bank': '🗂', 'pending-decisions': '⏳',
+    tonight: '🌃', 'recent-pairs': '🔗', 'felt-layer': '🌊', integration: '🌅',
+    launchagents: '⏰', hooks: '🪝', scripts: '📜', monitoring: '📊',
+    'shipped-today': '🚢', 'active-prs': '🔧', queue: '📋', patterns: '🔄',
+    'self-improvement': '⚙', orchestration: '🎭', 'meta-loop': '🌀', identity: '◐',
+    delegated: '📤', archive: '🗄', monitor: '👁',
+  };
+  return map[name] || '·';
+}
+
+load();
+</script>
+</body>
+</html>
