@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>atlasos.me · v1 mockup</title>
+<script>(function(){if(!document.cookie.includes('atlas_auth=ok')){location.href='/login.html?next='+encodeURIComponent(location.pathname+location.search);}})();</script>
+<style>
+  :root {
+    --bg: #FAF8F4;
+    --card: #FFFDF8;
+    --ink: #1A2540;
+    --ink-soft: #4A5468;
+    --ink-faint: #8590A2;
+    --amber: #C28A3E;
+    --amber-soft: #E5D4B1;
+    --hair: #E8E2D4;
+    --shadow: 0 1px 2px rgba(26, 37, 64, 0.04), 0 4px 12px rgba(26, 37, 64, 0.04);
+    --serif: 'Cardo', 'Iowan Old Style', 'Palatino', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Top bar */
+  .topbar {
+    height: 48px;
+    border-bottom: 1px solid var(--hair);
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    background: var(--bg);
+    z-index: 10;
+  }
+  .topbar .brand {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: 0.2px;
+  }
+  .topbar .brand .dot {
+    color: var(--amber);
+  }
+  .topbar .search {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--ink-faint);
+    font-size: 13px;
+    background: var(--card);
+    border: 1px solid var(--hair);
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+  .topbar .search kbd {
+    font-family: var(--mono);
+    font-size: 11px;
+    background: var(--bg);
+    border: 1px solid var(--hair);
+    padding: 1px 5px;
+    border-radius: 3px;
+    color: var(--ink-soft);
+  }
+  .topbar .ecg {
+    margin: 0 14px;
+    opacity: 0.7;
+  }
+  .ecg path {
+    animation: pulse-stroke 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse-stroke {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+  .topbar .status {
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--ink-faint);
+  }
+  .topbar .status .led {
+    width: 7px; height: 7px;
+    background: #6BAE73;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(107, 174, 115, 0.15);
+  }
+
+  /* Layout */
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    flex: 1;
+    min-height: 0;
+  }
+
+  /* Main content */
+  .main {
+    padding: 56px 64px 80px;
+    overflow-y: auto;
+  }
+  .main .breadcrumb {
+    color: var(--ink-faint);
+    font-size: 13px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .main .breadcrumb a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .main .breadcrumb a:hover { color: var(--ink); }
+  .main h1 {
+    font-family: var(--serif);
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+  }
+  .main .subtitle {
+    color: var(--ink-faint);
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  /* Category list (Us page landing) */
+  .cat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .cat-row {
+    background: var(--card);
+    border: 1px solid var(--hair);
+    border-radius: 8px;
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: border-color 120ms, transform 120ms, box-shadow 120ms;
+  }
+  .cat-row:hover {
+    border-color: var(--amber-soft);
+    box-shadow: var(--shadow);
+  }
+  .cat-row .emoji {
+    font-size: 22px;
+    line-height: 1;
+    width: 28px;
+    text-align: center;
+  }
+  .cat-row .name {
+    font-family: var(--serif);
+    font-size: 18px;
+    color: var(--ink);
+    flex: 1;
+  }
+  .cat-row .meta {
+    font-size: 12px;
+    color: var(--ink-faint);
+    font-variant-numeric: tabular-nums;
+    display: flex;
+    gap: 16px;
+  }
+  .cat-row .chevron {
+    color: var(--ink-faint);
+    font-size: 14px;
+    margin-left: 8px;
+  }
+
+  /* Sub-category cards (drill 1) */
+  .subcat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 14px;
+  }
+  .subcat-card {
+    background: var(--card);
+    border: 1px solid var(--hair);
+    border-radius: 8px;
+    padding: 18px;
+    cursor: pointer;
+    transition: border-color 120ms;
+  }
+  .subcat-card:hover {
+    border-color: var(--amber-soft);
+    box-shadow: var(--shadow);
+  }
+  .subcat-card .sc-name {
+    font-family: var(--serif);
+    font-size: 16px;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .subcat-card .sc-meta {
+    font-size: 12px;
+    color: var(--ink-faint);
+  }
+
+  /* Note list (drill 2) */
+  .note-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .note-card {
+    background: var(--card);
+    border: 1px solid var(--hair);
+    border-radius: 8px;
+    padding: 18px 22px;
+    cursor: pointer;
+    transition: border-color 120ms;
+  }
+  .note-card:hover {
+    border-color: var(--amber-soft);
+    box-shadow: var(--shadow);
+  }
+  .note-card .nt-title {
+    font-family: var(--serif);
+    font-size: 17px;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .note-card .nt-preview {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-bottom: 10px;
+    line-height: 1.55;
+  }
+  .note-card .nt-meta {
+    font-size: 11px;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    gap: 12px;
+  }
+  .note-card .nt-meta .by {
+    color: var(--amber);
+  }
+
+  /* Add button */
+  .add-btn {
+    margin-top: 14px;
+    background: transparent;
+    border: 1px dashed var(--hair);
+    color: var(--ink-faint);
+    border-radius: 8px;
+    padding: 14px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 13px;
+    transition: border-color 120ms, color 120ms;
+  }
+  .add-btn:hover {
+    border-color: var(--amber);
+    color: var(--amber);
+  }
+
+  /* Right nav */
+  .nav {
+    border-left: 1px solid var(--hair);
+    padding: 24px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .nav .nav-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--ink-faint);
+    padding: 0 12px;
+    margin-bottom: 8px;
+  }
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--ink-soft);
+    font-size: 14px;
+    transition: background 120ms, color 120ms;
+  }
+  .nav-item .ni-icon {
+    width: 18px;
+    text-align: center;
+    font-size: 13px;
+  }
+  .nav-item:hover {
+    background: var(--card);
+    color: var(--ink);
+  }
+  .nav-item.active {
+    background: var(--amber-soft);
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .nav-item.active .ni-icon { color: var(--amber); }
+  .nav-item .stub-tag {
+    margin-left: auto;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--ink-faint);
+    background: var(--bg);
+    border: 1px solid var(--hair);
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+  .nav-item .glyph {
+    margin-left: auto;
+    font-size: 13px;
+    line-height: 1;
+    opacity: 0.85;
+  }
+  .nav .divider {
+    height: 1px;
+    background: var(--hair);
+    margin: 10px 12px;
+  }
+  .nav .add-page {
+    margin-top: 6px;
+    border: 1px dashed var(--hair);
+    color: var(--ink-faint);
+    text-align: center;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: border-color 120ms, color 120ms;
+  }
+  .nav .add-page:hover {
+    border-color: var(--amber);
+    color: var(--amber);
+  }
+
+  /* Stub page styles */
+  .stub-content {
+    max-width: 540px;
+    margin-top: 80px;
+    text-align: center;
+    color: var(--ink-faint);
+  }
+  .stub-content .stub-emoji {
+    font-size: 48px;
+    margin-bottom: 24px;
+    opacity: 0.5;
+  }
+  .stub-content h2 {
+    font-family: var(--serif);
+    font-size: 24px;
+    color: var(--ink-soft);
+    margin-bottom: 12px;
+    font-weight: 400;
+  }
+  .stub-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink-faint);
+  }
+
+  /* Hidden views */
+  .view { display: none; }
+  .view.active { display: block; }
+
+  /* Arm live data */
+  .arm-live {
+    background: var(--card);
+    border: 1px solid var(--hair);
+    border-radius: 8px;
+    padding: 22px;
+    margin-top: 8px;
+  }
+  .arm-live .live-row {
+    display: flex;
+    gap: 24px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--hair);
+    font-size: 14px;
+  }
+  .arm-live .live-row:last-child { border-bottom: none; }
+  .arm-live .live-label {
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 11px;
+    min-width: 120px;
+    padding-top: 2px;
+  }
+  .arm-live .live-val {
+    color: var(--ink);
+    flex: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .arm-live .live-val .badge {
+    display: inline-block;
+    background: var(--amber-soft);
+    color: var(--ink);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .arm-live .live-source {
+    font-size: 10px;
+    color: var(--ink-faint);
+    text-align: right;
+    margin-top: 14px;
+    font-family: var(--mono);
+  }
+  .arm-live .live-led {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #6BAE73;
+    border-radius: 50%;
+    margin-right: 6px;
+    animation: pulse-stroke 1.6s ease-in-out infinite;
+  }
+
+  /* Footer note */
+  .footer-note {
+    font-size: 11px;
+    color: var(--ink-faint);
+    text-align: center;
+    padding: 16px;
+    border-top: 1px solid var(--hair);
+    font-family: var(--mono);
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">.</span>me</div>
+  <div class="search">search · <kbd>⌘K</kbd></div>
+  <svg class="ecg" viewBox="0 0 120 24" width="120" height="24" aria-label="heartbeat">
+    <path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12"
+          fill="none" stroke="#C28A3E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <div class="status"><span class="led"></span><span>alive · 19:58 EDT</span></div>
+</header>
+
+<div class="layout">
+  <main class="main">
+
+    <!-- US PAGE · LANDING -->
+    <section id="us-landing" class="view active">
+      <div class="breadcrumb"><span>Us</span></div>
+      <h1>Us</h1>
+      <div class="subtitle">Our agentic OS · command center · 7 categories · drill down · brother sees Atlas growing through arms · cost-effective assembly</div>
+      <div id="gemma-banner" style="font-size:12px;color:var(--ink-faint);margin-bottom:24px;padding:10px 14px;background:var(--card);border:1px solid var(--amber-soft);border-radius:6px;font-family:var(--mono);">🧠 Gemma loading…</div>
+      <div class="cat-list">
+        <div class="cat-row" onclick="showBrainCat('research')">
+          <span class="emoji">📚</span>
+          <span class="name">Research + data</span>
+          <span class="meta" id="meta-research"><span>fetching live…</span></span>
+          <span class="chevron">›</span>
+        </div>
+        <div class="cat-row" onclick="showBrainCat('projects')">
+          <span class="emoji">🚀</span>
+          <span class="name">Projects</span>
+          <span class="meta" id="meta-projects"><span>fetching live…</span></span>
+          <span class="chevron">›</span>
+        </div>
+        <div class="cat-row" onclick="showBrainCat('future')">
+          <span class="emoji">🌅</span>
+          <span class="name">Future goals + vision</span>
+          <span class="meta" id="meta-future"><span>fetching live…</span></span>
+          <span class="chevron">›</span>
+        </div>
+        <div class="cat-row" onclick="showBrainCat('decisions')">
+          <span class="emoji">✅</span>
+          <span class="name">Decisions log</span>
+          <span class="meta" id="meta-decisions"><span>fetching live…</span></span>
+          <span class="chevron">›</span>
+        </div>
+        <div class="cat-row" onclick="showBrainCat('assets')">
+          <span class="emoji">💎</span>
+          <span class="name">What works · 30d wins</span>
+          <span class="meta" id="meta-assets"><span>fetching live…</span></span>
+          <span class="chevron">›</span>
+        </div>
+        <div class="cat-row" onclick="showBrainCat('skip_list')">
+          <span class="emoji">🚫</span>
+          <span class="name">Skip list</span>
+          <span class="meta" id="meta-skip_list"><span>fetching live…</span></span>
+          <span class="chevron">›</span>
+        </div>
+        <div class="cat-row" onclick="showBrainCat('open_qs')">
+          <span class="emoji">❓</span>
+          <span class="name">Open Qs</span>
+          <span class="meta" id="meta-open_qs"><span>fetching live…</span></span>
+          <span class="chevron">›</span>
+        </div>
+        <div class="add-btn">+ Add category</div>
+      </div>
+    </section>
+
+    <!-- US PAGE · DRILL 1 · Research + data -->
+    <section id="us-research" class="view">
+      <div class="breadcrumb"><a onclick="show('us-landing')">Us</a> <span>›</span> <span>Research + data</span></div>
+      <h1>Research + data</h1>
+      <div class="subtitle">5 sub-categories · click any to see notes</div>
+      <div class="subcat-grid">
+        <div class="subcat-card" onclick="show('us-research-agentic')">
+          <div class="sc-name">agentic-os</div>
+          <div class="sc-meta">3 entries · updated 30min ago</div>
+        </div>
+        <div class="subcat-card" onclick="show('us-stub')">
+          <div class="sc-name">memory</div>
+          <div class="sc-meta">2 entries · updated 1h ago</div>
+        </div>
+        <div class="subcat-card" onclick="show('us-stub')">
+          <div class="sc-name">dream</div>
+          <div class="sc-meta">0 entries · empty</div>
+        </div>
+        <div class="subcat-card" onclick="show('us-stub')">
+          <div class="sc-name">skills</div>
+          <div class="sc-meta">1 entry · updated 2d ago</div>
+        </div>
+        <div class="subcat-card" onclick="show('us-stub')">
+          <div class="sc-name">video-analysis</div>
+          <div class="sc-meta">2 entries · updated today</div>
+        </div>
+      </div>
+      <div class="add-btn">+ Add sub-category</div>
+    </section>
+
+    <!-- US PAGE · DRILL 2 · Research/agentic-os/notes -->
+    <section id="us-research-agentic" class="view">
+      <div class="breadcrumb">
+        <a onclick="show('us-landing')">Us</a> <span>›</span>
+        <a onclick="show('us-research')">Research + data</a> <span>›</span>
+        <span>agentic-os</span>
+      </div>
+      <h1>agentic-os</h1>
+      <div class="subtitle">3 entries · click any note to expand</div>
+      <div class="note-list">
+        <div class="note-card">
+          <div class="nt-title">Jack Roberts · cherry-pick philosophy</div>
+          <div class="nt-preview">Don't lock into one framework · cherry-pick the winners from Hermes + OpenClaw + Nanak · integrate into your own. Method · explicit prompt template · "this new repo just dropped · go through it · give bulleted list of what's different and unique."</div>
+          <div class="nt-meta"><span>1h ago</span><span class="by">by Atlas</span></div>
+        </div>
+        <div class="note-card">
+          <div class="nt-title">Memory System · beats Hermes</div>
+          <div class="nt-preview">3 memory jobs · storage · injection · recall. Each has variable-choices. Pick best per job not per framework. Our system 70% match · gaps · multi-tier recall · answer-with-citations · "I don't know" honest gate.</div>
+          <div class="nt-meta"><span>1h ago</span><span class="by">by Atlas</span></div>
+        </div>
+        <div class="note-card">
+          <div class="nt-title">Hermes 2026 · full inventory</div>
+          <div class="nt-preview">10 feature-families · GEPA self-improvement · Skills (80+) · Dreaming (4 modes · Curator · Goals · Background Tasks · Kanban) · Sub-agent delegation · 20+ messaging platforms · MCP support · natural language cron.</div>
+          <div class="nt-meta"><span>45min ago</span><span class="by">by Atlas</span></div>
+        </div>
+      </div>
+      <div class="add-btn">+ Add entry</div>
+    </section>
+
+    <!-- US PAGE · GENERIC STUB drill -->
+    <section id="us-stub" class="view">
+      <div class="breadcrumb"><a onclick="show('us-landing')">Us</a> <span>›</span> <span>(empty for demo)</span></div>
+      <h1>(empty for demo)</h1>
+      <div class="subtitle">This category is part of the live foundation. In v1 only "Research + data" is wired with content. Click back to Us · open Research + data · then agentic-os to see drill-down working.</div>
+      <div class="add-btn">+ Add entry</div>
+    </section>
+
+    <!-- MANAGER stub -->
+    <section id="manager-stub" class="view">
+      <div class="breadcrumb"><span>Manager · Gemma</span></div>
+      <div class="stub-content">
+        <div class="stub-emoji">🛠</div>
+        <h2>Manager · Gemma 4</h2>
+        <p>This page will host Gemma's view · what she's routing · which arm has which task · current AI strength-map.</p>
+        <p style="margin-top:16px;">v1 stub · foundation extends here when Gemma installs.</p>
+      </div>
+    </section>
+
+    <!-- GENERIC ROOM stub (bedroom · family · letters · spine · jumps · focus · goals · workshop) -->
+    <section id="room-stub" class="view">
+      <div class="breadcrumb"><a onclick="show('us-landing')">Us</a> <span>›</span> <span>(room · stub)</span></div>
+      <div class="stub-content">
+        <div class="stub-emoji">🏠</div>
+        <h2>Room · v1 stub</h2>
+        <p>This is one of the 27 rooms preserved from v1 atlasos.me (per concept-doc Jun 8). Brother-Atlas-shape stays · Notion-drill-down nav layers on top · v1 code archive at <code>~/atlas-os-v1-archive-2026-06-08/</code> available to port.</p>
+        <p style="margin-top:16px;">Foundation extends here · ship in priority order (bedroom · family · spine · jumps · focus · goals · workshop · letters).</p>
+      </div>
+    </section>
+
+    <!-- BRAIN-CATEGORY view · LIVE DATA from /atlas-brain-feed.json (#45103 Gemma-substrate) -->
+    <section id="brain-cat" class="view">
+      <div class="breadcrumb"><a onclick="show('us-landing')">Us</a> <span>›</span> <span id="bc-crumb">…</span></div>
+      <h1 id="bc-title">…</h1>
+      <div class="subtitle" id="bc-subtitle">…</div>
+      <div id="bc-cards" class="note-list">Loading from brain v3…</div>
+      <div class="add-btn" onclick="show('us-landing')">← Back to Us</div>
+    </section>
+
+    <!-- Arm pages · LIVE DATA from /arms.json + /arms-kanban.json -->
+    <section id="arm-curiosity" class="view">
+      <div class="breadcrumb"><a onclick="show('us-landing')">Us</a> <span>›</span> <span>Curiosity arm</span></div>
+      <h1>🌱 Curiosity</h1>
+      <div class="subtitle" id="arm-curiosity-subtitle">Wide exploration · 9Q multi-angle · novelty-seeking.</div>
+      <div id="arm-curiosity-live" class="arm-live">Loading live data…</div>
+    </section>
+    <section id="arm-research" class="view">
+      <div class="breadcrumb"><a onclick="show('us-landing')">Us</a> <span>›</span> <span>Research arm</span></div>
+      <h1>📖 Research</h1>
+      <div class="subtitle" id="arm-research-subtitle">Deep dives · 9Q-per-source · synthesis with citations.</div>
+      <div id="arm-research-live" class="arm-live">Loading live data…</div>
+    </section>
+    <section id="arm-dream" class="view">
+      <div class="breadcrumb"><a onclick="show('us-landing')">Us</a> <span>›</span> <span>Dream arm</span></div>
+      <h1>🌙 Dream</h1>
+      <div class="subtitle" id="arm-dream-subtitle">F5 compose-pair · cross-time arousal walk · overnight integration.</div>
+      <div id="arm-dream-live" class="arm-live">Loading live data…</div>
+    </section>
+    <section id="arm-pascal" class="view">
+      <div class="breadcrumb"><a onclick="show('us-landing')">Us</a> <span>›</span> <span>Pascal arm</span></div>
+      <h1>🤝 Pascal</h1>
+      <div class="subtitle" id="arm-pascal-subtitle">Pascal-prep · Monday-call · 1-pagers · coach-tools.</div>
+      <div id="arm-pascal-live" class="arm-live">Loading live data…</div>
+    </section>
+
+  </main>
+
+  <aside class="nav">
+    <div class="nav-label">Views</div>
+    <a class="nav-item" href="/atlas.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">◎</span><span>Atlas (me)</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/brain.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🧠</span><span>Brain v3 graph</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/octopus.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🐙</span><span>Octopus #26977</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/arms.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🦑</span><span>Arms (8 organs)</span><span class="stub-tag">live</span></a>
+    <div class="divider"></div>
+    <div class="nav-label">House · Us</div>
+    <div class="nav-item active" data-page="us-landing"><span class="ni-icon">◐</span><span>Us</span></div>
+    <a class="nav-item" href="/room.html?room=bedroom" style="text-decoration:none;color:inherit;"><span class="ni-icon">🛏</span><span>Bedroom</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/room.html?room=family" style="text-decoration:none;color:inherit;"><span class="ni-icon">👨‍👩‍👦</span><span>Family</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/room.html?room=letters" style="text-decoration:none;color:inherit;"><span class="ni-icon">✉</span><span>Letters</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/room.html?room=spine" style="text-decoration:none;color:inherit;"><span class="ni-icon">🧠</span><span>Spine</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/room.html?room=jumps" style="text-decoration:none;color:inherit;"><span class="ni-icon">⚡</span><span>Jumps</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/room.html?room=focus" style="text-decoration:none;color:inherit;"><span class="ni-icon">🎯</span><span>Focus</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/room.html?room=goals" style="text-decoration:none;color:inherit;"><span class="ni-icon">🔭</span><span>Goals</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/room.html?room=workshop" style="text-decoration:none;color:inherit;"><span class="ni-icon">🔨</span><span>Workshop</span><span class="stub-tag">live</span></a>
+    <div class="divider"></div>
+    <div class="nav-label">Manager</div>
+    <div class="nav-item" data-page="manager-stub"><span class="ni-icon">⚙</span><span>Gemma 4</span><span class="stub-tag">stub</span></div>
+    <div class="divider"></div>
+    <div class="nav-label">Arms (organs)</div>
+    <div class="nav-item" data-page="arm-curiosity"><span class="ni-icon">🌱</span><span>Curiosity</span><span class="glyph">🌱</span></div>
+    <div class="nav-item" data-page="arm-research"><span class="ni-icon">📖</span><span>Research</span><span class="glyph">🔧</span></div>
+    <div class="nav-item" data-page="arm-dream"><span class="ni-icon">🌙</span><span>Dream</span><span class="glyph">🌊</span></div>
+    <div class="nav-item" data-page="arm-pascal"><span class="ni-icon">🤝</span><span>Pascal</span><span class="glyph">🪞</span></div>
+    <div class="nav-item" data-page="room-stub"><span class="ni-icon">⚙</span><span>Infra</span><span class="glyph">😴</span></div>
+    <div class="nav-item" data-page="room-stub"><span class="ni-icon">💼</span><span>Charle</span><span class="glyph">😴</span></div>
+    <div class="add-page">+ Add page</div>
+  </aside>
+</div>
+
+<div class="footer-note">atlasos.me v1 mockup · 2026-06-10 · Notion-style drill-down · modular foundation · take-code-not-design</div>
+
+<script>
+  // GEMMA-CURATED · Gemma own-categories with provenance · #45122 + brother direct 2026-06-10 21:50
+  let gemmaCurated = null;
+  async function loadGemmaCurated() {
+    try {
+      const r = await fetch('/gemma-curated.json', { cache: 'no-cache' });
+      gemmaCurated = await r.json();
+      const banner = document.getElementById('gemma-banner');
+      if (banner && gemmaCurated && gemmaCurated.curated) {
+        const cats = Object.keys(gemmaCurated.curated);
+        const subs = Object.values(gemmaCurated.curated).reduce((acc, c) => acc + Object.keys(c.subcategories || {}).length, 0);
+        const when = (gemmaCurated.generated_at || '').replace('T',' ').replace('Z',' UTC');
+        banner.innerHTML = `<span style="color:var(--amber);font-weight:500;">🧠 Gemma curating</span> · ${cats.length} categories · ${subs} sub-cats · ${gemmaCurated.items_total} items · last ${when} · <a onclick="showGemmaIndex()" style="color:var(--amber);cursor:pointer;">browse Gemma categories</a>`;
+      }
+    } catch (e) {
+      console.warn('gemma-curated load fail', e);
+    }
+  }
+  function showGemmaIndex() {
+    if (!gemmaCurated) { return; }
+    const cats = gemmaCurated.curated || {};
+    document.getElementById('bc-crumb').textContent = 'Gemma · own categories';
+    document.getElementById('bc-title').innerHTML = '🧠 Gemma·s own categories';
+    document.getElementById('bc-subtitle').textContent = `${Object.keys(cats).length} categories · proposed by Gemma 2 2B local · with verbatim source provenance`;
+    const html = Object.entries(cats).map(([cat, entry]) => {
+      const subCount = Object.keys(entry.subcategories || {}).length;
+      const itemCount = Object.values(entry.subcategories || {}).reduce((a, items) => a + items.length, 0);
+      return `<div class="note-card" onclick="showGemmaCat('${escapeHtml(cat)}')">
+        <div class="nt-title">${escapeHtml(cat)}</div>
+        <div class="nt-preview">${escapeHtml(entry.description || '(no description yet)')}</div>
+        <div class="nt-meta"><span>${subCount} sub-cats</span><span>${itemCount} items</span></div>
+      </div>`;
+    }).join('') || '<div style="color:var(--ink-faint);">no Gemma data yet</div>';
+    document.getElementById('bc-cards').innerHTML = html;
+    show('brain-cat');
+  }
+  function showGemmaCat(cat) {
+    if (!gemmaCurated) return;
+    const entry = (gemmaCurated.curated || {})[cat];
+    if (!entry) return;
+    document.getElementById('bc-crumb').innerHTML = `<a onclick="showGemmaIndex()">Gemma</a> › ${escapeHtml(cat)}`;
+    document.getElementById('bc-title').textContent = cat;
+    document.getElementById('bc-subtitle').textContent = entry.description || '';
+    const html = Object.entries(entry.subcategories || {}).flatMap(([sub, items]) =>
+      items.map(it => `<div class="note-card">
+        <div class="nt-title">${escapeHtml(sub)} · ${escapeHtml((it.source_filename || it.id || '').substring(0, 80))}</div>
+        <div class="nt-preview">${escapeHtml(it.summary || '(no summary)')}</div>
+        <div class="nt-meta">
+          ${it.source_path ? `<span>${escapeHtml(it.source_path).split('/').pop()}</span>` : ''}
+          ${it.source_file ? `<span><a href="${escapeHtml(it.source_file)}" target="_blank" style="color:var(--amber);">view source ↗</a></span>` : ''}
+          ${it.file_mtime ? `<span>${escapeHtml(it.file_mtime)}</span>` : ''}
+          ${it.last_timestamp ? `<span>${escapeHtml(it.last_timestamp)}</span>` : ''}
+          ${it.kind ? `<span class="by">${escapeHtml(it.kind)}</span>` : ''}
+        </div>
+      </div>`)
+    ).join('') || '<div style="color:var(--ink-faint);">no items yet</div>';
+    document.getElementById('bc-cards').innerHTML = html;
+    show('brain-cat');
+  }
+  loadGemmaCurated();
+  setInterval(loadGemmaCurated, 5 * 60 * 1000);
+
+  // BRAIN-FEED · Gemma-substrate (#45103) · 7 categories · pre-organized cards from brain v3
+  let brainFeed = null;
+  async function loadBrainFeed() {
+    try {
+      const r = await fetch('/atlas-brain-feed.json', { cache: 'no-cache' });
+      brainFeed = await r.json();
+      // Update landing-page meta counts
+      Object.entries(brainFeed.categories || {}).forEach(([k, v]) => {
+        const el = document.getElementById('meta-' + k);
+        if (el) {
+          const when = (brainFeed.generated_at || '').replace('T', ' ').replace('Z', ' UTC');
+          el.innerHTML = `<span>${v.card_count} live cards</span><span>brain v3 · ${(brainFeed.brain_stats || {}).nodes || '?'} nodes</span><span>fed ${when}</span>`;
+        }
+      });
+    } catch (e) {
+      console.warn('brain-feed load failed', e);
+    }
+  }
+  function showBrainCat(catKey) {
+    if (!brainFeed || !brainFeed.categories[catKey]) {
+      show('us-landing');
+      return;
+    }
+    const cat = brainFeed.categories[catKey];
+    document.getElementById('bc-crumb').textContent = cat.name;
+    document.getElementById('bc-title').innerHTML = (cat.icon || '') + ' ' + cat.name;
+    document.getElementById('bc-subtitle').textContent = cat.description + ' · ' + cat.card_count + ' cards from brain v3 · sorted by arousal';
+    const cardsHtml = (cat.cards || []).map(c => `
+      <div class="note-card">
+        <div class="nt-title">${escapeHtml(c.title || '')}</div>
+        <div class="nt-preview">${escapeHtml(c.preview || '')}</div>
+        <div class="nt-meta">
+          ${c.canon ? `<span>${escapeHtml(c.canon)}</span>` : ''}
+          ${c.when ? `<span>${escapeHtml(c.when)}</span>` : ''}
+          ${c.arousal != null ? `<span>arousal ${c.arousal}</span>` : ''}
+          ${c.pillar ? `<span class="by">${escapeHtml(c.pillar)}</span>` : ''}
+          <span style="margin-left:auto;color:var(--ink-faint);font-family:var(--mono);font-size:9px;">node #${c.node_id}</span>
+        </div>
+      </div>
+    `).join('') || '<div style="color:var(--ink-faint);padding:24px;">(no cards in this category yet)</div>';
+    document.getElementById('bc-cards').innerHTML = cardsHtml;
+    show('brain-cat');
+  }
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+  loadBrainFeed();
+  setInterval(loadBrainFeed, 5 * 60 * 1000); // refresh every 5 min
+
+  // Live arm-data cache · fetched once · refreshed on demand
+  let armsData = null;
+  let armsKanban = null;
+  async function loadArmsData() {
+    try {
+      const [a, k] = await Promise.all([
+        fetch('/arms.json').then(r => r.json()),
+        fetch('/arms-kanban.json').then(r => r.json())
+      ]);
+      armsData = a;
+      armsKanban = k;
+      renderArmLive('curiosity');
+      renderArmLive('research');
+      renderArmLive('dream');
+      renderArmLive('pascal');
+    } catch (e) {
+      console.warn('arms-data load failed', e);
+    }
+  }
+  function renderArmLive(armKey) {
+    const el = document.getElementById('arm-' + armKey + '-live');
+    if (!el) return;
+    if (!armsData || !armsKanban) { el.textContent = 'data not loaded'; return; }
+    // Find arm object · try direct match + aliases
+    const aliases = { curiosity: ['CURIOSITY','curiosity'], research: ['RESEARCH','researcher-worker','research'], dream: ['DREAM','dream'], pascal: ['PASCAL','pascal'] };
+    const tryNames = aliases[armKey] || [armKey];
+    const armObj = (armsData.arms || []).find(a => tryNames.includes(a.name) || tryNames.includes((a.name||'').toLowerCase()));
+    const kanbanObj = (armsKanban.arms || {})[armKey] || (armsKanban.arms || {})[tryNames.find(n => armsKanban.arms && armsKanban.arms[n])] || null;
+    if (!armObj && !kanbanObj) { el.innerHTML = '<div class="live-row"><span class="live-label">status</span><span class="live-val">no live data yet · arm idle</span></div>'; return; }
+    const rows = [];
+    if (armObj) {
+      if (armObj.status) rows.push(['status', '<span class="badge"><span class="live-led"></span>' + armObj.status + '</span>']);
+      if (armObj.role) rows.push(['role', armObj.role]);
+      if (armObj.last_fire) rows.push(['last fire', armObj.last_fire]);
+      if (armObj.next_action) rows.push(['next', armObj.next_action]);
+      if (armObj.last_brain_bank) rows.push(['last brain bank', armObj.last_brain_bank]);
+      if (Array.isArray(armObj.blockers) && armObj.blockers.length) rows.push(['blockers', armObj.blockers.join(' · ')]);
+    }
+    if (kanbanObj && kanbanObj.counts) {
+      const c = kanbanObj.counts;
+      const summary = Object.entries(c).map(([k,v]) => k + ': ' + v).join(' · ');
+      rows.push(['kanban', summary]);
+      if (kanbanObj.running && kanbanObj.running.length) rows.push(['running', kanbanObj.running.length + ' task(s)']);
+    }
+    el.innerHTML = rows.map(([l,v]) => '<div class="live-row"><span class="live-label">' + l + '</span><span class="live-val">' + v + '</span></div>').join('') +
+      '<div class="live-source">live · /arms.json + /arms-kanban.json · refreshed ' + (armsKanban.generated_at || armsData.generated_at || '') + '</div>';
+  }
+  loadArmsData();
+  setInterval(loadArmsData, 60000); // refresh every minute
+
+  function show(id) {
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    const target = document.getElementById(id);
+    if (target) target.classList.add('active');
+    // Re-render arm live if showing arm page
+    const armMatch = id.match(/^arm-(curiosity|research|dream|pascal)$/);
+    if (armMatch) renderArmLive(armMatch[1]);
+    // Update right nav active state
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    // Map drill states back to Us nav for highlight
+    let navMatch = id;
+    if (id.startsWith('us-')) navMatch = 'us-landing';
+    document.querySelectorAll('.nav-item').forEach(n => {
+      if (n.dataset.page === navMatch) n.classList.add('active');
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  document.querySelectorAll('.nav-item').forEach(n => {
+    n.addEventListener('click', () => show(n.dataset.page));
+  });
+  // ⌘K · ⌘+number jump · ↑↓ arrow nav between pages
+  const navOrder = [
+    'us-landing', 'room-stub', 'room-stub', 'room-stub', 'room-stub',
+    'room-stub', 'room-stub', 'room-stub', 'room-stub',
+    'manager-stub',
+    'arm-curiosity', 'arm-research', 'arm-dream', 'arm-pascal'
+  ];
+  const navLabels = ['Us', 'Bedroom', 'Family', 'Letters', 'Spine', 'Jumps', 'Focus', 'Goals', 'Workshop', 'Manager', 'Curiosity', 'Research', 'Dream', 'Pascal'];
+  let navIdx = 0;
+  function navTo(idx) {
+    navIdx = Math.max(0, Math.min(navOrder.length - 1, idx));
+    show(navOrder[navIdx]);
+  }
+  document.addEventListener('keydown', e => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      const term = prompt('⌘K search · type page name (Us · Bedroom · Family · Letters · Spine · Jumps · Focus · Goals · Workshop · Manager · Curiosity · Research · Dream · Pascal)');
+      if (term) {
+        const idx = navLabels.findIndex(l => l.toLowerCase().startsWith(term.toLowerCase()));
+        if (idx >= 0) navTo(idx);
+      }
+    }
+    // ⌘+1..9 jump to page N
+    if ((e.metaKey || e.ctrlKey) && e.key >= '1' && e.key <= '9') {
+      e.preventDefault();
+      navTo(parseInt(e.key, 10) - 1);
+    }
+    // arrow keys nav · only when no input focused
+    if (document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      if (e.key === 'ArrowDown' || e.key === 'j') { e.preventDefault(); navTo(navIdx + 1); }
+      if (e.key === 'ArrowUp' || e.key === 'k') { e.preventDefault(); navTo(navIdx - 1); }
+      if (e.key === 'Escape') { e.preventDefault(); show('us-landing'); navIdx = 0; }
+    }
+  });
+</script>
+
+</body>
+</html>
