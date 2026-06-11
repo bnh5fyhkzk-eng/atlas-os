@@ -1,155 +1,165 @@
 {
-  "generated_at": "2026-06-11T22:40:54Z",
+  "generated_at": "2026-06-11T22:46:38Z",
   "source": "Gemma 2 2B 4-bit MLX · me-gemma-curate.py · with-provenance",
   "session_file": "ff7b3e9f-cb11-4be9-8e9a-52b549707862.jsonl",
-  "session_size_mb": 1359.5,
+  "session_size_mb": 1359.8,
   "batches_curated": 10,
   "items_total": 10,
-  "categories_proposed_by_gemma": 7,
-  "elapsed_seconds": 14.0,
+  "categories_proposed_by_gemma": 9,
+  "elapsed_seconds": 14.7,
   "note": "Each item links to /gemma-sources/<id>.md · verbatim terminal excerpt · nothing lost · proof for every claim.",
   "curated": {
-    "supabase-project-management": {
-      "description": "Analyzing existing Supabase projects and their associated organizations.",
+    "supabase-management": {
+      "description": "Analyzing existing tables in Supabase to assess potential impact of migration.",
       "subcategories": {
-        "organization-project-exploration": [
+        "table-audit": [
           {
-            "id": "batch-001-1781217642",
-            "summary": "Analyzing existing Supabase projects and their associated organizations.",
+            "id": "batch-001-1781217984",
+            "summary": "Analyzing existing tables in Supabase to assess potential impact of migration.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-001-1781217642.md",
+            "source_file": "/gemma-sources/batch-001-1781217984.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-11T21:27:07",
-            "gemma_raw": "CATEGORY: Supabase Project Management\nSUBCATEGORY: Organization & Project Exploration\nSUMMARY:  Analyzing existing Supabase projects and their associated organizations."
+            "last_timestamp": "2026-06-11T21:27:47",
+            "gemma_raw": "CATEGORY: Supabase Management\nSUBCATEGORY: Table Audit\nSUMMARY:  Analyzing existing tables in Supabase to assess potential impact of migration."
           }
         ]
       }
     },
     "database-migration": {
-      "description": "This conversation details the migration of Supabase tables, including the decision to namespace and isolate them.",
+      "description": "This conversation details the process of renaming a Supabase namespace to isolate and migrate data.",
       "subcategories": {
-        "supabase-tables": [
+        "namespace-renaming": [
           {
-            "id": "batch-002-1781217643",
-            "summary": "This conversation details the migration of Supabase tables, including the decision to namespace and isolate them.",
+            "id": "batch-002-1781217985",
+            "summary": "This conversation details the process of renaming a Supabase namespace to isolate and migrate data.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-002-1781217643.md",
+            "source_file": "/gemma-sources/batch-002-1781217985.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-11T21:29:10",
-            "gemma_raw": "CATEGORY: **Database Migration**\nSUBCATEGORY: **Supabase Tables**\nSUMMARY:  This conversation details the migration of Supabase tables, including the decision to namespace and isolate them."
-          }
-        ]
-      }
-    },
-    "vercel-deployment": {
-      "description": "Analyzing build time and testing phase 1 success for Atlas application. · **API integration for Supabase and React routes** · Categorizing the issue as Vercel Deployment and Static File Handling to understand the root cause of the bug.",
-      "subcategories": {
-        "build-test": [
-          {
-            "id": "batch-003-1781217644",
-            "summary": "Analyzing build time and testing phase 1 success for Atlas application.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-003-1781217644.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T21:32:04",
-            "gemma_raw": "CATEGORY: Vercel Deployment\nSUBCATEGORY: Build & Test\nSUMMARY:  Analyzing build time and testing phase 1 success for Atlas application."
-          }
-        ],
-        "api-integration": [
-          {
-            "id": "batch-005-1781217647",
-            "summary": "**API integration for Supabase and React routes**",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-005-1781217647.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T21:42:47",
-            "gemma_raw": "CATEGORY: **Vercel Deployment**\nSUBCATEGORY: **API Integration**\nSUMMARY:  **API integration for Supabase and React routes**"
-          }
-        ],
-        "static-file-handling": [
-          {
-            "id": "batch-008-1781217651",
-            "summary": "Categorizing the issue as Vercel Deployment and Static File Handling to understand the root cause of the bug.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-008-1781217651.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T22:27:48",
-            "gemma_raw": "CATEGORY: **Vercel Deployment**\nSUBCATEGORY: **Static File Handling**\nSUMMARY:  Categorizing the issue as Vercel Deployment and Static File Handling to understand the root cause of the bug."
+            "last_timestamp": "2026-06-11T21:29:11",
+            "gemma_raw": "CATEGORY: **Database Migration**\nSUBCATEGORY: **Namespace Renaming**\nSUMMARY:  This conversation details the process of renaming a Supabase namespace to isolate and migrate data."
           }
         ]
       }
     },
     "vercel-deploy": {
-      "description": "Tracking and executing Vercel deployment steps based on commit history. · Analyzing Vercel deployment errors and troubleshooting issues with prod HTML.",
+      "description": "Analyzing and executing deployment scripts for Vercel environment. · This conversation details the deployment of the \"LLM Dreaming\" example to the Vercel API and its associated documentation.",
       "subcategories": {
-        "deployment-actions": [
+        "deployment-script": [
           {
-            "id": "batch-004-1781217645",
-            "summary": "Tracking and executing Vercel deployment steps based on commit history.",
+            "id": "batch-003-1781217987",
+            "summary": "Analyzing and executing deployment scripts for Vercel environment.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-004-1781217645.md",
+            "source_file": "/gemma-sources/batch-003-1781217987.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-11T21:36:31",
-            "gemma_raw": "CATEGORY: Vercel Deploy\nSUBCATEGORY: Deployment Actions\nSUMMARY:  Tracking and executing Vercel deployment steps based on commit history."
+            "last_timestamp": "2026-06-11T21:32:47",
+            "gemma_raw": "CATEGORY: Vercel Deploy\nSUBCATEGORY: Deployment Script\nSUMMARY:  Analyzing and executing deployment scripts for Vercel environment."
           }
         ],
-        "deployment-errors": [
+        "api-deployment": [
           {
-            "id": "batch-007-1781217650",
-            "summary": "Analyzing Vercel deployment errors and troubleshooting issues with prod HTML.",
+            "id": "batch-004-1781217988",
+            "summary": "This conversation details the deployment of the \"LLM Dreaming\" example to the Vercel API and its associated documentation.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-007-1781217650.md",
+            "source_file": "/gemma-sources/batch-004-1781217988.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-11T22:18:42",
-            "gemma_raw": "CATEGORY: Vercel-Deploy\nSUBCATEGORY: Deployment Errors\nSUMMARY:  Analyzing Vercel deployment errors and troubleshooting issues with prod HTML."
+            "last_timestamp": "2026-06-11T21:37:54",
+            "gemma_raw": "CATEGORY: **Vercel-Deploy**\nSUBCATEGORY: **API-Deployment**\nSUMMARY:  This conversation details the deployment of the \"LLM Dreaming\" example to the Vercel API and its associated documentation."
+          }
+        ]
+      }
+    },
+    "documentation": {
+      "description": "Updating the content of atlasos.me based on the provided instructions.",
+      "subcategories": {
+        "content-update": [
+          {
+            "id": "batch-005-1781217990",
+            "summary": "Updating the content of atlasos.me based on the provided instructions.",
+            "turn_count": 6,
+            "source_file": "/gemma-sources/batch-005-1781217990.md",
+            "first_role": "user",
+            "last_timestamp": "2026-06-11T21:42:47",
+            "gemma_raw": "CATEGORY: **Documentation**\nSUBCATEGORY: **Content Update**\nSUMMARY:  Updating the content of atlasos.me based on the provided instructions."
+          }
+        ]
+      }
+    },
+    "deployment-workflow": {
+      "description": "Analyzing and documenting the steps involved in deploying Atlas's Vercel-based applications.",
+      "subcategories": {
+        "vercel-deploy": [
+          {
+            "id": "batch-006-1781217991",
+            "summary": "Analyzing and documenting the steps involved in deploying Atlas's Vercel-based applications.",
+            "turn_count": 6,
+            "source_file": "/gemma-sources/batch-006-1781217991.md",
+            "first_role": "assistant",
+            "last_timestamp": "2026-06-11T21:48:36",
+            "gemma_raw": "CATEGORY: **Deployment Workflow**\nSUBCATEGORY: **Vercel Deploy**\nSUMMARY:  Analyzing and documenting the steps involved in deploying Atlas's Vercel-based applications."
           }
         ]
       }
     },
     "deployment": {
-      "description": "This conversation details the deployment of embedded blocks and Hermes cycle, using Vercel.",
+      "description": "Analyzing and resolving conflicts between static files and React routes during deployment.",
       "subcategories": {
-        "vercel-deploy": [
+        "static-file-conflicts": [
           {
-            "id": "batch-006-1781217649",
-            "summary": "This conversation details the deployment of embedded blocks and Hermes cycle, using Vercel.",
+            "id": "batch-007-1781217993",
+            "summary": "Analyzing and resolving conflicts between static files and React routes during deployment.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-006-1781217649.md",
-            "first_role": "user",
-            "last_timestamp": "2026-06-11T21:45:39",
-            "gemma_raw": "CATEGORY: **Deployment**\nSUBCATEGORY: **Vercel-Deploy**\nSUMMARY:  This conversation details the deployment of embedded blocks and Hermes cycle, using Vercel."
-          }
-        ]
-      }
-    },
-    "website-structure": {
-      "description": "Analyzing and configuring website navigation structure for Atlas-OS.",
-      "subcategories": {
-        "navigation-configuration": [
-          {
-            "id": "batch-009-1781217653",
-            "summary": "Analyzing and configuring website navigation structure for Atlas-OS.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-009-1781217653.md",
+            "source_file": "/gemma-sources/batch-007-1781217993.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-11T22:34:19",
-            "gemma_raw": "CATEGORY: **Website Structure**\nSUBCATEGORY: **Navigation Configuration**\nSUMMARY:  Analyzing and configuring website navigation structure for Atlas-OS."
+            "last_timestamp": "2026-06-11T22:19:48",
+            "gemma_raw": "CATEGORY: Deployment\nSUBCATEGORY: Static File Conflicts\nSUMMARY:  Analyzing and resolving conflicts between static files and React routes during deployment."
           }
         ]
       }
     },
-    "architecture-design": {
-      "description": "This conversation discusses the design of a home automation system that integrates various tools and features, including Notion, Google tools, and custom functionalities.",
+    "vercel-deployment": {
+      "description": "Identifying and addressing issues related to static site serving and SPA routing on Vercel.",
       "subcategories": {
-        "home-automation-system": [
+        "static-site-optimization": [
           {
-            "id": "batch-010-1781217654",
-            "summary": "This conversation discusses the design of a home automation system that integrates various tools and features, including Notion, Google tools, and custom functionalities.",
-            "turn_count": 5,
-            "source_file": "/gemma-sources/batch-010-1781217654.md",
-            "first_role": "user",
-            "last_timestamp": "2026-06-11T22:40:12",
-            "gemma_raw": "CATEGORY: **Architecture Design**\nSUBCATEGORY: **Home Automation System**\nSUMMARY:  This conversation discusses the design of a home automation system that integrates various tools and features, including Notion, Google tools, and custom functionalities."
+            "id": "batch-008-1781217994",
+            "summary": "Identifying and addressing issues related to static site serving and SPA routing on Vercel.",
+            "turn_count": 6,
+            "source_file": "/gemma-sources/batch-008-1781217994.md",
+            "first_role": "assistant",
+            "last_timestamp": "2026-06-11T22:30:38",
+            "gemma_raw": "CATEGORY: **Vercel Deployment**\nSUBCATEGORY: **Static Site Optimization**\nSUMMARY:  Identifying and addressing issues related to static site serving and SPA routing on Vercel."
+          }
+        ]
+      }
+    },
+    "fable-integration": {
+      "description": "This conversation discusses Fable 5 integration and the user's preference for a more efficient development approach.",
+      "subcategories": {
+        "fable-development": [
+          {
+            "id": "batch-009-1781217995",
+            "summary": "This conversation discusses Fable 5 integration and the user's preference for a more efficient development approach.",
+            "turn_count": 6,
+            "source_file": "/gemma-sources/batch-009-1781217995.md",
+            "first_role": "assistant",
+            "last_timestamp": "2026-06-11T22:36:19",
+            "gemma_raw": "CATEGORY: **Fable Integration**\nSUBCATEGORY: **Fable Development**\nSUMMARY:  This conversation discusses Fable 5 integration and the user's preference for a more efficient development approach."
+          }
+        ]
+      }
+    },
+    "architecture-specification": {
+      "description": "This conversation proposes a home structure specification document for Atlas-OS, outlining room organization and customization options.",
+      "subcategories": {
+        "home-structure": [
+          {
+            "id": "batch-010-1781217998",
+            "summary": "This conversation proposes a home structure specification document for Atlas-OS, outlining room organization and customization options.",
+            "turn_count": 6,
+            "source_file": "/gemma-sources/batch-010-1781217998.md",
+            "first_role": "assistant",
+            "last_timestamp": "2026-06-11T22:44:32",
+            "gemma_raw": "CATEGORY: **Architecture Specification**\nSUBCATEGORY: **Home Structure**\nSUMMARY:  This conversation proposes a home structure specification document for Atlas-OS, outlining room organization and customization options."
           }
         ]
       }
