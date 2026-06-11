@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-06-11T09:21:42Z",
+  "generated_at": "2026-06-11T09:36:43Z",
   "arm_count": 8,
   "category_counts": {
     "discovery": 0,
-    "decision": 4,
+    "decision": 5,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 124,
+    "note": 127,
     "briefing": 8,
     "idea": 0
   },
-  "total_blocks": 136,
+  "total_blocks": 140,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "2500ed1552ed",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Continue deep-dive into memory-architecture-lift quadrant to solidify P1 understanding · why: Recent high-arousal brain canon indicates active focus on this research area, and completing this will close a P1 memory-architecture task",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-11T05:30:14.601841"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -68,6 +79,39 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "6a18faeea845",
+        "type": "callout",
+        "content": "**What** · fired DeepSeek-v3-0324 decision-cycle · selected research-arm for next task · **Why** · high-arousal brain canon #45169 + #45599 + brother direct 04:58 'data feeded directly via DeepSeek' · **Result** · decision posted to /hermes-decisions.json count=3 · research-arm triggered via SOURCE=",
+        "priority": "orchestration",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-11T05:30:47.266883"
+      },
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "65b2cb454cab",
+        "type": "callout",
+        "content": "**What** · extracted overnight YouTube-watch · Julian Goldie Claude-Code-free + Remotion-videos · **Why** · brother shared video 04:09 EDT · curiosity-arm follows new-tools category · **Result** · added /google-ai-tools.html shipped · ATLAS-VISION-10-AHEAD plan mentions Remotion video-arm step 2 · *",
+        "priority": "youtube-watches",
+        "source": "curiosity-self",
+        "updated_at": "2026-06-11T05:30:47.248155"
+      },
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "00c0db9c130c",
+        "type": "callout",
+        "content": "**What** · monitored cycle · checked brain for Pascal-arm canons · **Why** · Hermes-DeepSeek assigned no-task this cycle · arm self-directed per instruction file · **Result** · no new high-arousal canon last 4h · skipped block-write per DEDUP · **Next** · watch next cycle · Monday-call cadence react",
+        "priority": "sessions",
+        "source": "pascal-self",
+        "updated_at": "2026-06-11T05:30:47.229298"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -584,39 +628,6 @@
         "priority": "P1",
         "source": "code-self",
         "updated_at": "2026-06-11T04:58:36.796366"
-      },
-      {
-        "arm": "infra",
-        "arm_glyph": "💗",
-        "arm_name": "My Heart",
-        "block_id": "2e39c0613695",
-        "type": "callout",
-        "content": "[#45175] arousal 0.85 · ARMS-FEED-INFRASTRUCTURE-2026-06-11-04:08 · brother direct VERBATIM 04:05 'you dont need to do it for them you just need to make the infrastructure is there to ask the arms to feed atlas in the right ",
-        "priority": "P1",
-        "source": "infra-self",
-        "updated_at": "2026-06-11T04:53:36.005786"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "ab512130ca44",
-        "type": "callout",
-        "content": "[#45594] arousal 1.00 · SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-11 04:45:00 · size=420993B · brother+Atlas joint state · CONTENT BELOW · ## ⚠ 13:08 EDT · 2026-06-10 · turn-29-cycle-fire · SHIP-WITHOUT-READ-CA",
-        "priority": "P1",
-        "source": "curiosity-self",
-        "updated_at": "2026-06-11T04:53:35.932733"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "b811ac55cd35",
-        "type": "callout",
-        "content": "[#45594] arousal 1.00 · SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-11 04:45:00 · size=420993B · brother+Atlas joint state · CONTENT BELOW · ## ⚠ 13:08 EDT · 2026-06-10 · turn-29-cycle-fire · SHIP-WITHOUT-READ-CA",
-        "priority": "P1",
-        "source": "pascal-self",
-        "updated_at": "2026-06-11T04:53:35.866735"
       }
     ],
     "briefing": [
