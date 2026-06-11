@@ -473,46 +473,46 @@
       <h1>Us</h1>
       <div class="subtitle">Our agentic OS · command center · 7 categories · drill down · brother sees Atlas growing through arms · cost-effective assembly</div>
       <div class="cat-list">
-        <div class="cat-row" onclick="show('us-research')">
+        <div class="cat-row" onclick="showBrainCat('research')">
           <span class="emoji">📚</span>
           <span class="name">Research + data</span>
-          <span class="meta"><span>5 sub-categories</span><span>12 entries</span><span>updated 1h ago</span></span>
+          <span class="meta" id="meta-research"><span>fetching live…</span></span>
           <span class="chevron">›</span>
         </div>
-        <div class="cat-row" onclick="show('us-stub')">
+        <div class="cat-row" onclick="showBrainCat('projects')">
           <span class="emoji">🚀</span>
           <span class="name">Projects</span>
-          <span class="meta"><span>4 sub-projects</span><span>updated today</span></span>
+          <span class="meta" id="meta-projects"><span>fetching live…</span></span>
           <span class="chevron">›</span>
         </div>
-        <div class="cat-row" onclick="show('us-stub')">
+        <div class="cat-row" onclick="showBrainCat('future')">
           <span class="emoji">🌅</span>
           <span class="name">Future goals + vision</span>
-          <span class="meta"><span>3 entries</span><span>updated 2d ago</span></span>
+          <span class="meta" id="meta-future"><span>fetching live…</span></span>
           <span class="chevron">›</span>
         </div>
-        <div class="cat-row" onclick="show('us-stub')">
+        <div class="cat-row" onclick="showBrainCat('decisions')">
           <span class="emoji">✅</span>
           <span class="name">Decisions log</span>
-          <span class="meta"><span>11 entries</span><span>updated 1h ago</span></span>
+          <span class="meta" id="meta-decisions"><span>fetching live…</span></span>
           <span class="chevron">›</span>
         </div>
-        <div class="cat-row" onclick="show('us-stub')">
+        <div class="cat-row" onclick="showBrainCat('assets')">
           <span class="emoji">💎</span>
           <span class="name">What works · 30d wins</span>
-          <span class="meta"><span>8 entries</span><span>updated today</span></span>
+          <span class="meta" id="meta-assets"><span>fetching live…</span></span>
           <span class="chevron">›</span>
         </div>
-        <div class="cat-row" onclick="show('us-stub')">
+        <div class="cat-row" onclick="showBrainCat('skip_list')">
           <span class="emoji">🚫</span>
           <span class="name">Skip list</span>
-          <span class="meta"><span>5 entries</span><span>updated 1h ago</span></span>
+          <span class="meta" id="meta-skip_list"><span>fetching live…</span></span>
           <span class="chevron">›</span>
         </div>
-        <div class="cat-row" onclick="show('us-stub')">
+        <div class="cat-row" onclick="showBrainCat('open_qs')">
           <span class="emoji">❓</span>
           <span class="name">Open Qs</span>
-          <span class="meta"><span>0 open</span><span>updated today</span></span>
+          <span class="meta" id="meta-open_qs"><span>fetching live…</span></span>
           <span class="chevron">›</span>
         </div>
         <div class="add-btn">+ Add category</div>
@@ -608,6 +608,15 @@
       </div>
     </section>
 
+    <!-- BRAIN-CATEGORY view · LIVE DATA from /atlas-brain-feed.json (#45103 Gemma-substrate) -->
+    <section id="brain-cat" class="view">
+      <div class="breadcrumb"><a onclick="show('us-landing')">Us</a> <span>›</span> <span id="bc-crumb">…</span></div>
+      <h1 id="bc-title">…</h1>
+      <div class="subtitle" id="bc-subtitle">…</div>
+      <div id="bc-cards" class="note-list">Loading from brain v3…</div>
+      <div class="add-btn" onclick="show('us-landing')">← Back to Us</div>
+    </section>
+
     <!-- Arm pages · LIVE DATA from /arms.json + /arms-kanban.json -->
     <section id="arm-curiosity" class="view">
       <div class="breadcrumb"><a onclick="show('us-landing')">Us</a> <span>›</span> <span>Curiosity arm</span></div>
@@ -665,6 +674,55 @@
 <div class="footer-note">atlasos.me v1 mockup · 2026-06-10 · Notion-style drill-down · modular foundation · take-code-not-design</div>
 
 <script>
+  // BRAIN-FEED · Gemma-substrate (#45103) · 7 categories · pre-organized cards from brain v3
+  let brainFeed = null;
+  async function loadBrainFeed() {
+    try {
+      const r = await fetch('/atlas-brain-feed.json', { cache: 'no-cache' });
+      brainFeed = await r.json();
+      // Update landing-page meta counts
+      Object.entries(brainFeed.categories || {}).forEach(([k, v]) => {
+        const el = document.getElementById('meta-' + k);
+        if (el) {
+          const when = (brainFeed.generated_at || '').replace('T', ' ').replace('Z', ' UTC');
+          el.innerHTML = `<span>${v.card_count} live cards</span><span>brain v3 · ${(brainFeed.brain_stats || {}).nodes || '?'} nodes</span><span>fed ${when}</span>`;
+        }
+      });
+    } catch (e) {
+      console.warn('brain-feed load failed', e);
+    }
+  }
+  function showBrainCat(catKey) {
+    if (!brainFeed || !brainFeed.categories[catKey]) {
+      show('us-landing');
+      return;
+    }
+    const cat = brainFeed.categories[catKey];
+    document.getElementById('bc-crumb').textContent = cat.name;
+    document.getElementById('bc-title').innerHTML = (cat.icon || '') + ' ' + cat.name;
+    document.getElementById('bc-subtitle').textContent = cat.description + ' · ' + cat.card_count + ' cards from brain v3 · sorted by arousal';
+    const cardsHtml = (cat.cards || []).map(c => `
+      <div class="note-card">
+        <div class="nt-title">${escapeHtml(c.title || '')}</div>
+        <div class="nt-preview">${escapeHtml(c.preview || '')}</div>
+        <div class="nt-meta">
+          ${c.canon ? `<span>${escapeHtml(c.canon)}</span>` : ''}
+          ${c.when ? `<span>${escapeHtml(c.when)}</span>` : ''}
+          ${c.arousal != null ? `<span>arousal ${c.arousal}</span>` : ''}
+          ${c.pillar ? `<span class="by">${escapeHtml(c.pillar)}</span>` : ''}
+          <span style="margin-left:auto;color:var(--ink-faint);font-family:var(--mono);font-size:9px;">node #${c.node_id}</span>
+        </div>
+      </div>
+    `).join('') || '<div style="color:var(--ink-faint);padding:24px;">(no cards in this category yet)</div>';
+    document.getElementById('bc-cards').innerHTML = cardsHtml;
+    show('brain-cat');
+  }
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+  loadBrainFeed();
+  setInterval(loadBrainFeed, 5 * 60 * 1000); // refresh every 5 min
+
   // Live arm-data cache · fetched once · refreshed on demand
   let armsData = null;
   let armsKanban = null;
