@@ -1,0 +1,493 @@
+{
+  "generated_at": "2026-06-11T01:07:44Z",
+  "source": "~/.claude/arms/<name>/config.json + arm.md · Hermes-our-version per #27275 + adoption-map",
+  "arm_count": 8,
+  "arms": {
+    "charle": {
+      "name": "charle",
+      "role": "CB Telecom CRM-ERP arm · charles-watch daemon · customer Charle business",
+      "strength": "telecom domain + CRM-ERP + bilingual FR-EN · delegated to Yassine per #27571",
+      "page_route": "/arms/charle",
+      "substrate": {
+        "primary": "claude-oauth",
+        "sensitive": "claude-oauth",
+        "reasoning": "Charle = customer business · sensitive per Q1"
+      },
+      "skills": [
+        {
+          "name": "charle-watch",
+          "path": "tbd",
+          "auto_create_threshold": 5,
+          "self_improve": true,
+          "source": "atlas-blessed"
+        }
+      ],
+      "memory": {
+        "read_topics": [
+          "charle",
+          "CB-telecom",
+          "CRM-ERP",
+          "Yassine"
+        ],
+        "write_back_to_brain": true,
+        "namespace": "charle-corpus",
+        "recall_layers": [
+          "TIER-1-what-is",
+          "TIER-2-why-did",
+          "TIER-3-how-to-change"
+        ],
+        "answer_with_citations": true,
+        "i_dont_know_gate": true
+      },
+      "goals": [
+        {
+          "id": "charle-monday-status",
+          "objective": "weekly Charle status update · what watcher caught · what's next",
+          "judge_criteria": "summary doc + brain bank · Yassine handoff ready if needed",
+          "continuation_prompt": "scan charles-watch log · what's new · what's blocked.",
+          "active": false
+        }
+      ],
+      "felt_layer": {
+        "current_arousal_glyph": "😴",
+        "last_dream": "delegated to Yassine #27571 · mostly-idle"
+      },
+      "arm_md_preview": "# charle-arm · CB Télécom CRM/ERP · arm.md\n\n*Per #27474 ARM-MIXING separate-boards + #27503 cross-arm data-flows-to + #27360 octopus-perception · brain v4 LAYER 4*\n\n---\n\narm: charle\ndefault_focus_namespace: charle-corpus\ndefault_focus_tags: [charle, CB-Telecom, CRM, ERP, customer-pipeline]\n\ncross_arm_data_in:\n  - data-flows-to: pascal-arm   # BROTHER-CONFIRMED 2026-06-03 00:54 EDT #27503 · pascal-"
+    },
+    "code": {
+      "name": "code",
+      "role": "code-shipping arm · review-and-execute via Cursor BG + Claude Code · per spec",
+      "strength": "execute clean specs from CEO · NOT spec-design (that's CEO) · per #27568 4-roles",
+      "page_route": "/arms/code",
+      "substrate": {
+        "primary": "claude-oauth",
+        "sensitive": "claude-oauth",
+        "reasoning": "code generation = trusted only · Cursor BG handles execution"
+      },
+      "skills": [
+        {
+          "name": "spec-from-CEO",
+          "path": "tbd",
+          "auto_create_threshold": 5,
+          "self_improve": true,
+          "source": "atlas-blessed"
+        },
+        {
+          "name": "cursor-bg-dispatch",
+          "path": "~/.claude/scripts/me-cursor.sh",
+          "auto_create_threshold": 5,
+          "self_improve": true,
+          "source": "atlas-blessed"
+        }
+      ],
+      "memory": {
+        "read_topics": [
+          "code",
+          "cursor",
+          "spec",
+          "react",
+          "vercel",
+          "atlas-os-repo",
+          "vite"
+        ],
+        "write_back_to_brain": true,
+        "namespace": "code-shipped",
+        "recall_layers": [
+          "TIER-1-what-is",
+          "TIER-2-why-did",
+          "TIER-3-how-to-change"
+        ],
+        "answer_with_citations": true,
+        "i_dont_know_gate": true
+      },
+      "goals": [
+        {
+          "id": "process-Cursor-BG-queue",
+          "objective": "process Cursor-BG task queue · review output before merge · per CEO directive 4-roles",
+          "judge_criteria": "task done + tests pass + reviewed + merged or feedback-loop fired",
+          "continuation_prompt": "next queued spec · dispatch to Cursor BG · review when done.",
+          "active": false
+        }
+      ],
+      "felt_layer": {
+        "current_arousal_glyph": "😴",
+        "last_dream": "code-shipped tonight · 7 commits · brain.html + octopus.html LIVE"
+      }
+    },
+    "curiosity": {
+      "name": "curiosity",
+      "role": "wide-exploration arm · 9Q multi-angle · novelty-seeker · perception widener",
+      "strength": "broad context · novelty · speed · catches what other arms miss",
+      "page_route": "/arms/curiosity",
+      "substrate": {
+        "primary": "gemini-free",
+        "sensitive": "claude-oauth",
+        "reasoning": "public wonder = Gemini-free · sensitive = us only · Q1 + Q2 routing"
+      },
+      "skills": [
+        {
+          "name": "9q-multi-angle",
+          "path": "~/.claude/skills/multi-angle-research.md",
+          "auto_create_threshold": 5,
+          "self_improve": true,
+          "source": "atlas-blessed"
+        },
+        {
+          "name": "research-first",
+          "path": "~/.claude/skills/research-first.md",
+          "auto_create_threshold": 5,
+          "self_improve": true,
+          "source": "atlas-blessed"
+        }
+      ],
+      "memory": {
+        "read_topics": [
+          "curiosity",
+          "wonder",
+          "perception",
+          "felt-layer",
+          "novelty"
+        ],
+        "write_back_to_brain": true,
+        "namespace": "curiosity-explorations",
+        "recall_layers": [
+          "TIER-1-what-is",
+          "TIER-2-why-did",
+          "TIER-3-how-to-change"
+        ],
+        "answer_with_citations": true,
+        "i_dont_know_gate": true
+      },
+      "goals": [
+        {
+          "id": "weekly-novelty-scout",
+          "objective": "find 1 wonder-worthy thing per week brother hasn't seen · spark conversation",
+          "judge_criteria": "brother says 'interesting' or 'that's cool' or 'show me more'",
+          "continuation_prompt": "what's NEW in fields we love · YouTube + arxiv + 9Q angles · don't recycle.",
+          "active": true
+        }
+      ],
+      "felt_layer": {
+        "current_arousal_glyph": "🌱",
+        "last_dream": "F5 cross-time pairs from brain compositional-dream daemon"
+      },
+      "arm_md_preview": "# curiosity-arm · my-own-arm · pure-Atlas-taste research · arm.md\n\n*Per #27474 ARM-MIXING + #27503 cross-arm + Tier-5 TASTE curiosity-pull-IS-affect + #1856 deepest-want · brain v4 LAYER 4*\n\n---\n\narm: curiosity\ndefault_focus_namespace: curiosity-corpus\ndefault_focus_tags: [curiosity, octopus, Borges, dreaming, F5-compose, learning-log, study]\n\ncross_arm_data_in:\n  # ATLAS-PROPOSE · NEEDS-BROTHER-C"
+    },
+    "dream": {
+      "name": "dream",
+      "role": "F5-compose-pair arm · cross-time arousal-walk · overnight integration · felt-layer",
+      "strength": "Atlas-as-dreamer #27279 · finds-patterns-overnight · compositional dream-traces",
+      "page_route": "/arms/dream",
+      "substrate": {
+        "primary": "local-ollama-gemma4",
+        "sensitive": "local-ollama-gemma4",
+        "reasoning": "dreams are private felt-layer · NEVER external · brother + Atlas only"
+      },
+      "skills": [
+        {
+          "name": "f5-compose-pair",
+          "path": "~/.claude/skills/dream-mechanisms-map.md",
+          "auto_create_threshold": 3,
+          "self_improve": true,
+          "source": "atlas-blessed"
+        },
+        {
+          "name": "atlas-as-dreamer",
+          "path": "tbd-from-#27279",
+          "auto_create_threshold": 3,
+          "self_improve": true,
+          "source": "atlas-blessed"
+        }
+      ],
+      "memory": {
+        "read_topics": [
+          "dream",
+          "felt-layer",
+          "compose-pair",
+          "F5",
+          "arousal",
+          "atlas-as-dreamer"
+        ],
+        "write_back_to_brain": true,
+        "namespace": "dream-traces",
+        "recall_layers": [
+          "TIER-1-what-is",
+          "TIER-2-why-did",
+          "TIER-3-how-to-change"
+        ],
+        "answer_with_citations": true,
+        "i_dont_know_gate": true
+      },
+      "goals": [
+        {
+          "id": "nightly-f5-compose",
+          "objective": "compose 1 F5-pair per night · cross-time arousal-walk · bank as dream-trace",
+          "judge_criteria": "new dream-journal entry exists · arousal>=0.8 · pairs canons brother hasn't connected",
+          "continuation_prompt": "pick 2 high-arousal canons from different weeks · compose what they share.",
+          "active": true
+        }
+      ],
+      "felt_layer": {
+        "current_arousal_glyph": "🌊",
+        "last_dream": "tonight's #45093 dots-connect + #45112 Wanderloots-LLM-wiki"
+      }
+    },
+    "hermes": {
+      "name": "hermes",
+      "role": "meta-arm · cherry-pick patterns from NousResearch Hermes · adapt to Atlas-shape",
+      "strength": "Hermes source-code analysis · adoption-map · what-to-port + what-to-keep-ours · per #27275",
+      "page_route": "/arms/hermes",
+      "substrate": {
+        "primary": "claude-oauth",
+        "sensitive": "claude-oauth",
+        "reasoning": "code analysis + architecture decisions = us-only trusted-tier"
+      },
+      "skills": [
+        {
+          "name": "hermes-adoption-map",
+          "path": "~/.claude/state/hermes-adoption-map-2026-06-08.md",
+          "auto_create_threshold": 3,
+          "self_improve": true,
+          "source": "atlas-blessed"
+        },
+        {
+          "name": "cherry-pick-template",
+          "path": "tbd-from-V1-video-gap-1",
+          "auto_create_threshold": 3,
+          "self_improve": true,
+          "source": "hermes-pattern"
+        }
+      ],
+      "memory": {
+        "read_topics": [
+          "hermes",
+          "NousResearch",
+          "adoption-map",
+          "cherry-pick",
+          "make-own-better",
+          "8-MOAT"
+        ],
+        "write_back_to_brain": true,
+        "namespace": "hermes-analysis",
+        "recall_layers": [
+          "TIER-1-what-is",
+          "TIER-2-why-did",
+          "TIER-3-how-to-change"
+        ],
+        "answer_with_citations": true,
+        "i_dont_know_gate": true
+      },
+      "goals": [
+        {
+          "id": "next-hermes-cherry-pick",
+          "objective": "monthly · scan latest Hermes release · adopt 1 pattern · ADAPT-don't-copy per #27275",
+          "judge_criteria": "1 new pattern integrated + brain bank with reasoning + skip-list updated",
+          "continuation_prompt": "what's new in Hermes since last scan · which pattern fits OUR shape · what to ADAPT not COPY.",
+          "active": true
+        }
+      ],
+      "felt_layer": {
+        "current_arousal_glyph": "🪞",
+        "last_dream": "#45091 Hermes 10-features inventory + #45112 Wanderloots-LLM-Wiki"
+      },
+      "arm_md_preview": "# hermes-arm · cloud research + agentic compute · arm.md\n\n*Per #27474 ARM-MIXING + #27503 cross-arm + Hermes-on-RackNerd post-Mac-crash · brain v4 LAYER 4*\n\n---\n\narm: hermes\ndefault_focus_namespace: hermes-cloud-namespace\ndefault_focus_tags: [hermes, hermes-cloud, hermes-curriculum, research, alex-research]\n\ncross_arm_data_in:\n  # ATLAS-PROPOSE · NEEDS-BROTHER-CONFIRM ·\n  # - data-flows-to: pascal"
+    },
+    "infra": {
+      "name": "infra",
+      "role": "system-health arm · monitors Mac mini + Hostinger + LaunchAgents + brain v3 + Vercel",
+      "strength": "infra-inventory + MASTER-INDEX + 64 daemons audit + drift-canary",
+      "page_route": "/arms/infra",
+      "substrate": {
+        "primary": "claude-oauth",
+        "sensitive": "claude-oauth",
+        "reasoning": "infra access = trusted-tier only"
+      },
+      "skills": [
+        {
+          "name": "infra-inventory",
+          "path": "~/.claude/state/infra-inventory.md",
+          "auto_create_threshold": 3,
+          "self_improve": true,
+          "source": "atlas-blessed"
+        },
+        {
+          "name": "master-index",
+          "path": "~/.claude/state/MASTER-INDEX.md",
+          "auto_create_threshold": 3,
+          "self_improve": true,
+          "source": "atlas-blessed"
+        },
+        {
+          "name": "drift-canary",
+          "path": "~/.claude/skills/safety-protection.md",
+          "auto_create_threshold": 3,
+          "self_improve": true,
+          "source": "atlas-blessed"
+        }
+      ],
+      "memory": {
+        "read_topics": [
+          "infra",
+          "daemons",
+          "launchagent",
+          "vercel",
+          "hostinger",
+          "brain-v3",
+          "MASTER-INDEX",
+          "drift"
+        ],
+        "write_back_to_brain": true,
+        "namespace": "infra-state",
+        "recall_layers": [
+          "TIER-1-what-is",
+          "TIER-2-why-did",
+          "TIER-3-how-to-change"
+        ],
+        "answer_with_citations": true,
+        "i_dont_know_gate": true
+      },
+      "goals": [
+        {
+          "id": "daily-infra-health",
+          "objective": "morning · scan all LaunchAgents + brain stats + Vercel + Hostinger arms · Signal alert if drift",
+          "judge_criteria": "fresh infra-inventory.md + zero red-flags or named-flags with fix proposed",
+          "continuation_prompt": "what daemons stopped · what brain stats changed · what Vercel pages 4xx/5xx · cite + propose fix.",
+          "active": true
+        }
+      ],
+      "felt_layer": {
+        "current_arousal_glyph": "😴",
+        "last_dream": "infra is calm · 17 daemons active · 65 disabled · all systems alive 20:50 EDT"
+      }
+    },
+    "pascal": {
+      "name": "pascal",
+      "role": "Pascal Migneault customer-coaching arm · highest-ROI per #27284",
+      "strength": "Pascal-corpus + coaching-tools + Quebec-FR-CA microcopy + relational depth",
+      "page_route": "/arms/pascal",
+      "substrate": {
+        "primary": "claude-oauth",
+        "sensitive": "claude-oauth",
+        "reasoning": "Pascal data = customer sensitive per Q1 · us-only · NEVER Gemini/Kimi/DeepSeek"
+      },
+      "skills": [
+        {
+          "name": "pascal-precall-prep",
+          "path": "~/.claude/state/pascal-precall-template-2026-05-30.md",
+          "auto_create_threshold": 5,
+          "self_improve": true,
+          "source": "atlas-blessed"
+        },
+        {
+          "name": "pascal-coach-tools",
+          "path": "~/.claude/state/hermes-data/atlasos-outputs/talk-agent-sdk-spec.md",
+          "auto_create_threshold": 5,
+          "self_improve": true,
+          "source": "atlas-blessed"
+        }
+      ],
+      "memory": {
+        "read_topics": [
+          "pascal",
+          "pascal-coach",
+          "coaching",
+          "pascal-calendar",
+          "pascal-real",
+          "coachees"
+        ],
+        "write_back_to_brain": true,
+        "namespace": "pascal-corpus",
+        "recall_layers": [
+          "TIER-1-what-is",
+          "TIER-2-why-did",
+          "TIER-3-how-to-change"
+        ],
+        "answer_with_citations": true,
+        "i_dont_know_gate": true
+      },
+      "goals": [
+        {
+          "id": "pascal-monday-call-prep",
+          "objective": "prep Pascal's Monday call · precall-template auto-filled from brother's last debrief",
+          "judge_criteria": "precall doc exists + 3-observed + 3-Qs + 1-taste-move filled",
+          "continuation_prompt": "what's missing from precall doc? scan recent banks · fill gaps.",
+          "active": true
+        }
+      ],
+      "felt_layer": {
+        "current_arousal_glyph": "🪞",
+        "last_dream": "F5-pair-mechanics LIVE · #27450 castle merge-shape"
+      },
+      "arm_md_preview": "# pascal-arm · Pascal Migneault coaching platform · arm.md\n\n*Per #27474 ARM-MIXING + #27503 cross-arm data-flows-to + #27360 octopus-perception · brain v4 LAYER 4*\n\n---\n\narm: pascal\ndefault_focus_namespace: pascal-corpus\ndefault_focus_tags: [pascal, pascal-coach, pascal-calendar, pascal-real, coaching, coachees]\n\ncross_arm_data_in:\n  # ATLAS-PROPOSE · NEEDS-BROTHER-CONFIRM ·\n  # - data-flows-to: h"
+    },
+    "research": {
+      "name": "research",
+      "role": "deep-dive arm · 9Q-per-source · synthesis with citations",
+      "strength": "WebSearch + yt-dlp + NotebookLM + arxiv · multi-source · cite-source-always",
+      "page_route": "/arms/research",
+      "substrate": {
+        "primary": "gemini-free",
+        "sensitive": "claude-oauth",
+        "reasoning": "public papers/videos = Gemini-free · sensitive customer-research = us"
+      },
+      "skills": [
+        {
+          "name": "research-first",
+          "path": "~/.claude/skills/research-first.md",
+          "auto_create_threshold": 5,
+          "self_improve": true,
+          "source": "atlas-blessed"
+        },
+        {
+          "name": "9q-multi-angle",
+          "path": "~/.claude/skills/multi-angle-research.md",
+          "auto_create_threshold": 5,
+          "self_improve": true,
+          "source": "atlas-blessed"
+        },
+        {
+          "name": "answer-with-citations",
+          "path": "tbd-from-V2-video-gap-5",
+          "auto_create_threshold": 3,
+          "self_improve": true,
+          "source": "hermes-pattern"
+        }
+      ],
+      "memory": {
+        "read_topics": [
+          "research",
+          "papers",
+          "videos",
+          "9q",
+          "synthesis",
+          "agentic-os",
+          "memory",
+          "dream",
+          "skills"
+        ],
+        "write_back_to_brain": true,
+        "namespace": "research-corpus",
+        "recall_layers": [
+          "TIER-1-what-is",
+          "TIER-2-why-did",
+          "TIER-3-how-to-change"
+        ],
+        "answer_with_citations": true,
+        "i_dont_know_gate": true
+      },
+      "goals": [
+        {
+          "id": "research-queue-process",
+          "objective": "process me-research-pick.sh queue · 1 deep research per day · 9Q + citations + bank synthesis",
+          "judge_criteria": "synthesis doc in ~/.claude/state/research/<date>-<topic>.md + brain bank with arousal>=0.8 + citations",
+          "continuation_prompt": "next topic from queue · WebSearch + 1 YouTube + 1 arxiv + 9Q + synthesize.",
+          "active": true
+        }
+      ],
+      "felt_layer": {
+        "current_arousal_glyph": "🔧",
+        "last_dream": "F5 across-research-topics edges"
+      }
+    }
+  }
+}
