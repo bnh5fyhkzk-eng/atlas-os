@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){if(!document.cookie.includes("atlas_auth=ok")){location.href="/login.html?next="+encodeURIComponent(location.pathname+location.search);}})();</script>
+<title>atlasos.me · memory · brain v3 viewer</title>
+<style>
+  :root{--bg:#FAF8F4;--card:#FFFDF8;--ink:#1A2540;--ink-soft:#4A5468;--ink-faint:#8590A2;--amber:#C28A3E;--amber-soft:#E5D4B1;--hair:#E8E2D4;--serif:'Cardo',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.55;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+  .topbar{height:48px;border-bottom:1px solid var(--hair);display:flex;align-items:center;padding:0 24px;gap:14px;flex-shrink:0}
+  .brand{font-family:var(--serif);font-size:18px}.brand .dot{color:var(--amber)}
+  .crumb{color:var(--ink-faint);font-size:12px}.crumb a{color:var(--ink-soft);text-decoration:none}
+  .container{max-width:1000px;margin:0 auto;padding:32px 32px 80px;width:100%}
+  h1{font-family:var(--serif);font-size:32px;font-weight:400;margin-bottom:6px}
+  .subtitle{color:var(--ink-faint);font-size:13px;margin-bottom:20px}
+  .stats{display:flex;gap:12px;margin-bottom:24px;font-family:var(--mono);font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px}
+  .stats .stat{background:var(--card);border:1px solid var(--hair);padding:6px 12px;border-radius:5px}
+  .stats .stat strong{color:var(--ink);font-family:var(--mono);font-size:14px}
+  .filter{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+  .filter button{padding:6px 14px;background:var(--card);border:1px solid var(--hair);border-radius:5px;font-family:inherit;font-size:12px;color:var(--ink-soft);cursor:pointer}
+  .filter button.active{background:var(--amber-soft);border-color:var(--amber);color:var(--ink)}
+  .node{background:var(--card);border:1px solid var(--hair);border-radius:6px;padding:12px 14px;margin-bottom:8px;cursor:pointer;transition:border-color 120ms}
+  .node:hover{border-color:var(--amber-soft)}
+  .node .meta{font-family:var(--mono);font-size:9px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;display:flex;gap:10px}
+  .node .meta .canon{color:var(--amber);font-weight:600}
+  .node .meta .pillar{padding:1px 6px;background:var(--bg);border-radius:3px}
+  .node .content{font-size:13px;color:var(--ink);line-height:1.5}
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">.</span>me</div>
+  <div class="crumb"><a href="/us.html">Us</a> · memory · brain v3 viewer</div>
+  <svg viewBox="0 0 120 24" width="120" height="24" style="margin-left:auto;opacity:0.7;"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" style="animation:ecg-pulse 1.6s infinite"/></svg>
+</header>
+<div class="container">
+  <h1>Memory</h1>
+  <div class="subtitle">Per v1 archive 272 LOC · brain v3 RRF · 36815+ nodes browsable · top-arousal first</div>
+  <div class="stats" id="stats">Loading…</div>
+  <div class="filter" id="filter"></div>
+  <div id="nodes"></div>
+</div>
+<script>
+const escape = s => (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let allNodes = [];
+let filter = 'all';
+async function load() {
+  try {
+    const r = await fetch('/brain-graph.json', {cache:'no-cache'});
+    const d = await r.json();
+    allNodes = (d.nodes || []).map(n => ({
+      id: n.key,
+      label: n.attributes?.label || '',
+      preview: n.attributes?.preview || '',
+      pillar: n.attributes?.pillar || 'unknown',
+      arousal: n.attributes?.arousal || 0,
+      when: n.attributes?.when || '',
+    }));
+    render();
+  } catch (e) {
+    document.getElementById('nodes').innerHTML = '<div style="padding:40px;text-align:center;color:var(--ink-faint);">brain-graph.json fetch failed</div>';
+  }
+}
+function render() {
+  const filtered = filter === 'all' ? allNodes : allNodes.filter(n => n.pillar.toUpperCase() === filter.toUpperCase());
+  const top = [...filtered].sort((a,b) => b.arousal - a.arousal).slice(0, 100);
+  const pillars = [...new Set(allNodes.map(n => n.pillar))];
+  document.getElementById('stats').innerHTML = `
+    <div class="stat"><strong>${allNodes.length}</strong> nodes loaded</div>
+    <div class="stat"><strong>${filtered.length}</strong> filtered</div>
+    <div class="stat"><strong>${pillars.length}</strong> pillars</div>
+  `;
+  document.getElementById('filter').innerHTML = ['all', ...pillars].map(p => `<button class="${p === filter ? 'active' : ''}" onclick="setFilter('${escape(p)}')">${escape(p)}</button>`).join('');
+  document.getElementById('nodes').innerHTML = top.map(n => `
+    <div class="node">
+      <div class="meta">
+        <span class="canon">#${n.id}</span>
+        <span class="pillar">${escape(n.pillar)}</span>
+        <span>arousal ${(n.arousal||0).toFixed(2)}</span>
+        ${n.when ? `<span>${escape(n.when)}</span>` : ''}
+      </div>
+      <div class="content">${escape(n.label).substring(0,200)}</div>
+    </div>
+  `).join('');
+}
+function setFilter(p) { filter = p; render(); }
+load();
+</script>
+</body>
+</html>
