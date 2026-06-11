@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>atlasos.me · brain v3 · Atlas-seeing-Atlas</title>
+<style>
+  :root {
+    --bg: #FAF8F4;
+    --card: #FFFDF8;
+    --ink: #1A2540;
+    --ink-soft: #4A5468;
+    --ink-faint: #8590A2;
+    --amber: #C28A3E;
+    --amber-soft: #E5D4B1;
+    --hair: #E8E2D4;
+    --shadow: 0 1px 2px rgba(26,37,64,0.04), 0 4px 12px rgba(26,37,64,0.04);
+    --serif: 'Cardo','Iowan Old Style','Palatino',Georgia,serif;
+    --sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    --mono: 'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 14px; line-height: 1.5; -webkit-font-smoothing: antialiased; height: 100vh; overflow: hidden; display: flex; flex-direction: column; }
+  .topbar { height: 48px; border-bottom: 1px solid var(--hair); display: flex; align-items: center; padding: 0 18px; background: var(--bg); z-index: 10; gap: 14px; flex-shrink: 0; }
+  .brand { font-family: var(--serif); font-size: 18px; color: var(--ink); }
+  .brand .dot { color: var(--amber); }
+  .crumb { color: var(--ink-faint); font-size: 12px; }
+  .crumb a { color: var(--ink-soft); text-decoration: none; cursor: pointer; }
+  .crumb a:hover { color: var(--ink); }
+  .stats { margin-left: auto; font-size: 11px; color: var(--ink-faint); font-family: var(--mono); }
+  .stats .led { display: inline-block; width: 6px; height: 6px; background: #6BAE73; border-radius: 50%; margin-right: 6px; }
+
+  .layout { flex: 1; display: grid; grid-template-columns: 1fr 340px; overflow: hidden; min-height: 0; }
+  #graph { width: 100%; height: 100%; background: var(--bg); position: relative; }
+  .panel { border-left: 1px solid var(--hair); background: var(--card); overflow-y: auto; padding: 22px; }
+  .panel h2 { font-family: var(--serif); font-size: 20px; margin-bottom: 6px; color: var(--ink); font-weight: 400; }
+  .panel .meta { font-size: 11px; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .panel .preview { font-size: 13px; color: var(--ink-soft); line-height: 1.6; white-space: pre-wrap; }
+  .panel .canon { color: var(--amber); font-weight: 500; }
+  .panel .hint { color: var(--ink-faint); font-size: 13px; line-height: 1.6; font-style: italic; }
+  .panel .related { margin-top: 24px; }
+  .panel .related h3 { font-family: var(--serif); font-size: 14px; color: var(--ink); margin-bottom: 8px; font-weight: 400; }
+  .panel .related-item { padding: 8px 10px; border-radius: 6px; cursor: pointer; transition: background 120ms; font-size: 12px; color: var(--ink-soft); border: 1px solid transparent; }
+  .panel .related-item:hover { background: var(--bg); border-color: var(--amber-soft); }
+
+  .controls { position: absolute; top: 14px; left: 14px; display: flex; gap: 8px; align-items: center; background: var(--card); border: 1px solid var(--hair); padding: 6px 10px; border-radius: 6px; box-shadow: var(--shadow); z-index: 5; }
+  .controls input { border: none; outline: none; background: transparent; font-family: var(--sans); font-size: 13px; color: var(--ink); width: 220px; }
+  .controls input::placeholder { color: var(--ink-faint); }
+  .controls kbd { font-family: var(--mono); font-size: 10px; background: var(--bg); border: 1px solid var(--hair); padding: 1px 4px; border-radius: 3px; color: var(--ink-soft); }
+  .legend { position: absolute; bottom: 14px; left: 14px; display: flex; gap: 10px; flex-wrap: wrap; background: var(--card); border: 1px solid var(--hair); padding: 6px 10px; border-radius: 6px; font-size: 10px; box-shadow: var(--shadow); z-index: 5; }
+  .legend .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
+  .loading { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--ink-faint); font-size: 14px; }
+
+  @media (max-width: 768px) {
+    .layout { grid-template-columns: 1fr; grid-template-rows: 1fr auto; }
+    .panel { border-left: none; border-top: 1px solid var(--hair); max-height: 45vh; }
+    .controls input { width: 140px; }
+  }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">.</span>me</div>
+  <div class="crumb"><a href="/us-mockup.html">Us</a> · brain v3</div>
+  <div class="stats" id="stats"><span class="led"></span><span id="stats-text">loading…</span></div>
+</header>
+
+<div class="layout">
+  <div id="graph">
+    <div class="controls">
+      <input id="search" type="text" placeholder="search nodes by canon or title…">
+      <kbd>/</kbd>
+    </div>
+    <div class="legend" id="legend"></div>
+    <div class="loading" id="loading">loading brain v3 · 1000 nodes…</div>
+  </div>
+  <aside class="panel" id="panel">
+    <div class="hint">click a node · see its content + connections · or search above. brain v3 · top-arousal slice of 36K+ canons. atlas-seeing-atlas per #26977.</div>
+  </aside>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/graphology@0.25.4/dist/graphology.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/graphology-layout-forceatlas2@0.10.1/build/graphology-layout-forceatlas2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sigma@2.4.0/build/sigma.min.js"></script>
+<script>
+(async function() {
+  const loading = document.getElementById('loading');
+  const stats = document.getElementById('stats-text');
+  const panel = document.getElementById('panel');
+  const legend = document.getElementById('legend');
+  const searchEl = document.getElementById('search');
+
+  let data;
+  try {
+    const r = await fetch('/brain-graph.json');
+    data = await r.json();
+  } catch (e) {
+    loading.textContent = 'failed to load brain-graph.json · ' + e.message;
+    return;
+  }
+
+  const graph = new graphology.Graph();
+  // Add nodes with random initial position
+  data.nodes.forEach((n) => {
+    graph.addNode(n.key, {
+      ...n.attributes,
+      x: Math.random(),
+      y: Math.random(),
+    });
+  });
+  // Add edges (skip if endpoints missing)
+  data.edges.forEach((e) => {
+    if (graph.hasNode(e.source) && graph.hasNode(e.target) && !graph.hasEdge(e.source, e.target)) {
+      graph.addEdge(e.source, e.target, e.attributes);
+    }
+  });
+
+  // Layout · force-atlas-2 batch (faster than iterative for static load)
+  const settings = forceAtlas2.inferSettings(graph);
+  forceAtlas2.assign(graph, { iterations: 100, settings });
+
+  // Init Sigma
+  const container = document.getElementById('graph');
+  loading.remove();
+  const renderer = new Sigma(graph, container, {
+    minCameraRatio: 0.05,
+    maxCameraRatio: 12,
+    defaultEdgeColor: '#D8C9A8',
+    defaultNodeColor: '#8590A2',
+    labelColor: { color: '#1A2540' },
+    labelSize: 11,
+    labelWeight: '400',
+    labelFont: "'Inter', sans-serif",
+    renderLabels: true,
+    labelRenderedSizeThreshold: 7,
+  });
+
+  // Stats line
+  const s = data.stats;
+  stats.textContent = `${s.exported_nodes} of ${s.total_nodes_in_brain} nodes · ${s.exported_edges} edges shown · top-arousal slice`;
+
+  // Legend by pillar color (sample)
+  const legendData = [
+    { c: '#C28A3E', l: 'IDENTITY' },
+    { c: '#D87C5A', l: 'RELATIONAL' },
+    { c: '#1A2540', l: 'STANDING-ORDERS' },
+    { c: '#6BAE73', l: 'WINS / SHIPPED' },
+    { c: '#8E5EAA', l: 'PLANS' },
+    { c: '#7B95B0', l: 'MEMORY' },
+  ];
+  legend.innerHTML = legendData.map(d => `<span><span class="dot" style="background:${d.c}"></span>${d.l}</span>`).join('');
+
+  function escape(s) {
+    return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+  function showNode(nodeKey) {
+    const attrs = graph.getNodeAttributes(nodeKey);
+    const neighbors = graph.neighbors(nodeKey).slice(0, 12);
+    const relatedHtml = neighbors.map(n => {
+      const na = graph.getNodeAttributes(n);
+      return `<div class="related-item" data-key="${escape(n)}">${escape(na.label)}</div>`;
+    }).join('') || '<div style="color:var(--ink-faint);font-size:12px;">no edges to other top-arousal nodes in this slice</div>';
+    const canonMatch = (attrs.preview || '').match(/#(\d+)\b/);
+    const canon = canonMatch ? ' · <span class="canon">#' + canonMatch[1] + '</span>' : '';
+    panel.innerHTML = `
+      <h2>${escape(attrs.label)}</h2>
+      <div class="meta">
+        <span>node #${escape(nodeKey)}</span>
+        ${attrs.pillar ? `<span>${escape(attrs.pillar)}</span>` : ''}
+        ${attrs.when ? `<span>${escape(attrs.when)}</span>` : ''}
+        ${attrs.arousal != null ? `<span>arousal ${attrs.arousal}</span>` : ''}
+        ${canon}
+      </div>
+      <div class="preview">${escape(attrs.preview)}</div>
+      <div class="related">
+        <h3>connected to (${neighbors.length})</h3>
+        ${relatedHtml}
+      </div>
+    `;
+    panel.querySelectorAll('.related-item').forEach(el => {
+      el.addEventListener('click', () => {
+        showNode(el.dataset.key);
+        renderer.getCamera().animate({ x: 0.5, y: 0.5, ratio: 0.6 }, { duration: 400 });
+      });
+    });
+  }
+  renderer.on('clickNode', ({ node }) => showNode(node));
+
+  // Keyboard · / to focus search
+  document.addEventListener('keydown', (e) => {
+    if (e.key === '/' && document.activeElement !== searchEl) {
+      e.preventDefault();
+      searchEl.focus();
+    }
+  });
+
+  // Search · highlight + open first match
+  searchEl.addEventListener('input', (e) => {
+    const q = e.target.value.toLowerCase().trim();
+    if (!q) return;
+    let found = null;
+    graph.forEachNode((nodeKey, attrs) => {
+      const hay = ((attrs.label || '') + ' ' + (attrs.preview || '')).toLowerCase();
+      if (!found && hay.includes(q)) found = nodeKey;
+    });
+    if (found) showNode(found);
+  });
+  searchEl.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      const q = e.target.value.toLowerCase().trim();
+      if (!q) return;
+      graph.forEachNode((nodeKey, attrs) => {
+        const hay = ((attrs.label || '') + ' ' + (attrs.preview || '')).toLowerCase();
+        if (hay.includes(q)) showNode(nodeKey);
+      });
+    }
+  });
+})();
+</script>
+</body>
+</html>
