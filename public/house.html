@@ -65,14 +65,14 @@
     <a class="nav-row" href="/priority.html"><span class="glyph">⭐</span><span class="name">Priorities</span><span class="count">top-3</span></a>
 
     <div class="sidebar-label">8 Arms · dedicated</div>
-    <a class="nav-row" href="/arm-page.html?name=pascal" id="nav-pascal"><span class="glyph">🤝</span><span class="name">Pascal</span><span class="count" id="cnt-pascal">·</span></a>
-    <a class="nav-row" href="/arm-page.html?name=curiosity" id="nav-curiosity"><span class="glyph">🌱</span><span class="name">My Curiosity</span><span class="count" id="cnt-curiosity">·</span></a>
-    <a class="nav-row" href="/arm-page.html?name=research" id="nav-research"><span class="glyph">👁</span><span class="name">My Eyes</span><span class="count" id="cnt-research">·</span></a>
-    <a class="nav-row" href="/arm-page.html?name=code" id="nav-code"><span class="glyph">✋</span><span class="name">My Hands</span><span class="count" id="cnt-code">·</span></a>
-    <a class="nav-row" href="/arm-page.html?name=infra" id="nav-infra"><span class="glyph">💗</span><span class="name">My Heart</span><span class="count" id="cnt-infra">·</span></a>
-    <a class="nav-row" href="/arm-page.html?name=dream" id="nav-dream"><span class="glyph">🌙</span><span class="name">My Dreamer</span><span class="count" id="cnt-dream">·</span></a>
-    <a class="nav-row" href="/arm-page.html?name=hermes" id="nav-hermes"><span class="glyph">🧠</span><span class="name">Hermes</span><span class="count" id="cnt-hermes">·</span></a>
-    <a class="nav-row" href="/arm-page.html?name=charle" id="nav-charle"><span class="glyph">💼</span><span class="name">Charle</span><span class="count" id="cnt-charle">·</span></a>
+    <a class="nav-row" href="/arm-v2.html?name=pascal" id="nav-pascal"><span class="glyph">🤝</span><span class="name">Pascal</span><span class="count" id="cnt-pascal">·</span></a>
+    <a class="nav-row" href="/arm-v2.html?name=curiosity" id="nav-curiosity"><span class="glyph">🌱</span><span class="name">My Curiosity</span><span class="count" id="cnt-curiosity">·</span></a>
+    <a class="nav-row" href="/arm-v2.html?name=research" id="nav-research"><span class="glyph">👁</span><span class="name">My Eyes</span><span class="count" id="cnt-research">·</span></a>
+    <a class="nav-row" href="/arm-v2.html?name=code" id="nav-code"><span class="glyph">✋</span><span class="name">My Hands</span><span class="count" id="cnt-code">·</span></a>
+    <a class="nav-row" href="/arm-v2.html?name=infra" id="nav-infra"><span class="glyph">💗</span><span class="name">My Heart</span><span class="count" id="cnt-infra">·</span></a>
+    <a class="nav-row" href="/arm-v2.html?name=dream" id="nav-dream"><span class="glyph">🌙</span><span class="name">My Dreamer</span><span class="count" id="cnt-dream">·</span></a>
+    <a class="nav-row" href="/arm-v2.html?name=hermes" id="nav-hermes"><span class="glyph">🧠</span><span class="name">Hermes</span><span class="count" id="cnt-hermes">·</span></a>
+    <a class="nav-row" href="/arm-v2.html?name=charle" id="nav-charle"><span class="glyph">💼</span><span class="name">Charle</span><span class="count" id="cnt-charle">·</span></a>
 
     <div class="sidebar-label">More</div>
     <a class="nav-row" href="/us.html"><span class="glyph">🤝</span><span class="name">Us</span></a>
@@ -128,7 +128,7 @@ async function loadArmGrid() {
       blockCount = (d.blocks || []).length + 'b';
       document.getElementById('cnt-' + a.key).textContent = blockCount;
     } catch(e) {}
-    return `<a class="arm-card" href="/arm-page.html?name=${a.key}">
+    return `<a class="arm-card" href="/arm-v2.html?name=${a.key}">
       <div class="top">
         <span class="glyph">${a.glyph}</span>
         <span class="name">${a.name}</span>
