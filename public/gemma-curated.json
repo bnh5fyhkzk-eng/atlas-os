@@ -1,155 +1,26 @@
 {
-  "generated_at": "2026-06-11T23:03:54Z",
+  "generated_at": "2026-06-11T23:09:06Z",
   "source": "Gemma 2 2B 4-bit MLX · me-gemma-curate.py · with-provenance",
-  "session_file": "ff7b3e9f-cb11-4be9-8e9a-52b549707862.jsonl",
-  "session_size_mb": 1360.7,
-  "batches_curated": 10,
-  "items_total": 10,
-  "categories_proposed_by_gemma": 7,
-  "elapsed_seconds": 14.9,
+  "session_file": "412a5d96-a6e4-4cb3-ac78-faead2cbf2ac.jsonl",
+  "session_size_mb": 0.2,
+  "batches_curated": 1,
+  "items_total": 1,
+  "categories_proposed_by_gemma": 1,
+  "elapsed_seconds": 1.3,
   "note": "Each item links to /gemma-sources/<id>.md · verbatim terminal excerpt · nothing lost · proof for every claim.",
   "curated": {
-    "vercel-deployment": {
-      "description": "Analyzing Atlas's Vercel deployment process and commit history. · Identifying and resolving conflicts between Vercel deployment and React SPA behavior.",
+    "atlas-scripting": {
+      "description": "This section outlines the process of generating a detailed inventory script and its associated documentation.",
       "subcategories": {
-        "deployment-workflow": [
+        "inventory-generation": [
           {
-            "id": "batch-001-1781219020",
-            "summary": "Analyzing Atlas's Vercel deployment process and commit history.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-001-1781219020.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T21:32:32",
-            "gemma_raw": "CATEGORY: Vercel Deployment\nSUBCATEGORY: Deployment Workflow\nSUMMARY:  Analyzing Atlas's Vercel deployment process and commit history."
-          }
-        ],
-        "deployment-conflicts": [
-          {
-            "id": "batch-006-1781219027",
-            "summary": "Identifying and resolving conflicts between Vercel deployment and React SPA behavior.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-006-1781219027.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T22:29:04",
-            "gemma_raw": "CATEGORY: **Vercel Deployment**\nSUBCATEGORY: **Deployment Conflicts**\nSUMMARY:  Identifying and resolving conflicts between Vercel deployment and React SPA behavior."
-          }
-        ]
-      }
-    },
-    "deployment-workflow": {
-      "description": "Analyzing and documenting the process of Vercel deployment after foundation rebuild and commit. · This conversation details the steps involved in integrating Hermes with Supabase and deploying embed blocks.",
-      "subcategories": {
-        "vercel-deploy": [
-          {
-            "id": "batch-002-1781219021",
-            "summary": "Analyzing and documenting the process of Vercel deployment after foundation rebuild and commit.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-002-1781219021.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T21:36:50",
-            "gemma_raw": "CATEGORY: **Deployment Workflow**\nSUBCATEGORY: **Vercel Deploy**\nSUMMARY:  Analyzing and documenting the process of Vercel deployment after foundation rebuild and commit."
-          }
-        ],
-        "hermes-integration": [
-          {
-            "id": "batch-004-1781219025",
-            "summary": "This conversation details the steps involved in integrating Hermes with Supabase and deploying embed blocks.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-004-1781219025.md",
-            "first_role": "user",
-            "last_timestamp": "2026-06-11T21:47:01",
-            "gemma_raw": "CATEGORY: **Deployment Workflow**\nSUBCATEGORY: **Hermes Integration**\nSUMMARY:  This conversation details the steps involved in integrating Hermes with Supabase and deploying embed blocks."
-          }
-        ]
-      }
-    },
-    "vercel-deploy": {
-      "description": "**Atlas API integration with Supabase and React routes** · Analyzing and resolving conflicts between Vercel's static file serving and custom React routes.",
-      "subcategories": {
-        "api-integration": [
-          {
-            "id": "batch-003-1781219023",
-            "summary": "**Atlas API integration with Supabase and React routes**",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-003-1781219023.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T21:42:47",
-            "gemma_raw": "CATEGORY: **Vercel-Deploy**\nSUBCATEGORY: **API-Integration**\nSUMMARY:  **Atlas API integration with Supabase and React routes**"
-          }
-        ],
-        "static-file-conflicts": [
-          {
-            "id": "batch-005-1781219026",
-            "summary": "Analyzing and resolving conflicts between Vercel's static file serving and custom React routes.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-005-1781219026.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T22:18:59",
-            "gemma_raw": "CATEGORY: Vercel Deploy\nSUBCATEGORY: Static File Conflicts\nSUMMARY:  Analyzing and resolving conflicts between Vercel's static file serving and custom React routes."
-          }
-        ]
-      }
-    },
-    "web-application-architecture": {
-      "description": "Categorizing the routing changes and their impact on the user experience.",
-      "subcategories": {
-        "frontend-routing": [
-          {
-            "id": "batch-007-1781219029",
-            "summary": "Categorizing the routing changes and their impact on the user experience.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-007-1781219029.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T22:35:35",
-            "gemma_raw": "CATEGORY: **Web Application Architecture**\nSUBCATEGORY: **Frontend Routing**\nSUMMARY:  Categorizing the routing changes and their impact on the user experience."
-          }
-        ]
-      }
-    },
-    "architecture-specification": {
-      "description": "**Defining the home structure and room organization for Atlas-OS, including customization options.**",
-      "subcategories": {
-        "home-structure": [
-          {
-            "id": "batch-008-1781219031",
-            "summary": "**Defining the home structure and room organization for Atlas-OS, including customization options.**",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-008-1781219031.md",
-            "first_role": "user",
-            "last_timestamp": "2026-06-11T22:43:19",
-            "gemma_raw": "CATEGORY: **Architecture Specification**\nSUBCATEGORY: **Home Structure**\nSUMMARY:  **Defining the home structure and room organization for Atlas-OS, including customization options.**"
-          }
-        ]
-      }
-    },
-    "notion-like": {
-      "description": "**Organizing Atlas's home and work with modular, customizable sections and widgets.**",
-      "subcategories": {
-        "modular-structure": [
-          {
-            "id": "batch-009-1781219033",
-            "summary": "**Organizing Atlas's home and work with modular, customizable sections and widgets.**",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-009-1781219033.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T22:57:57",
-            "gemma_raw": "CATEGORY: **Notion-like**\nSUBCATEGORY: **Modular Structure**\nSUMMARY:  **Organizing Atlas's home and work with modular, customizable sections and widgets.**"
-          }
-        ]
-      }
-    },
-    "notion-shape": {
-      "description": "**Categorizing the shift from Notion-based to widget-based representation of Atlas's house.**",
-      "subcategories": {
-        "visualization": [
-          {
-            "id": "batch-010-1781219034",
-            "summary": "**Categorizing the shift from Notion-based to widget-based representation of Atlas's house.**",
+            "id": "batch-001-1781219346",
+            "summary": "This section outlines the process of generating a detailed inventory script and its associated documentation.",
             "turn_count": 1,
-            "source_file": "/gemma-sources/batch-010-1781219034.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T22:59:39",
-            "gemma_raw": "CATEGORY: **Notion-Shape**\nSUBCATEGORY: **Visualization**\nSUMMARY:  **Categorizing the shift from Notion-based to widget-based representation of Atlas's house.**"
+            "source_file": "/gemma-sources/batch-001-1781219346.md",
+            "first_role": "user",
+            "last_timestamp": "2026-06-11T23:07:20",
+            "gemma_raw": "CATEGORY: **Atlas Scripting**\nSUBCATEGORY: **Inventory Generation**\nSUMMARY:  This section outlines the process of generating a detailed inventory script and its associated documentation."
           }
         ]
       }
