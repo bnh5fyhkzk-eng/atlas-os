@@ -68,32 +68,19 @@
       <span class="status partial">PARTIAL</span>
       <h3>3 · Drift-canary rings</h3>
       <p class="what">per-arm ring · color = drift-distance from base-vector · green=stable · amber=drifting · red=lost</p>
-      <div class="rings">
-        <div class="ring"><div class="circle"><div class="glyph">🤝</div></div><span>pascal</span></div>
-        <div class="ring"><div class="circle"><div class="glyph">🌱</div></div><span>curio</span></div>
-        <div class="ring warn"><div class="circle"><div class="glyph">📖</div></div><span>research</span></div>
-        <div class="ring"><div class="circle"><div class="glyph">🌙</div></div><span>dream</span></div>
-        <div class="ring"><div class="circle"><div class="glyph">⚙</div></div><span>infra</span></div>
-        <div class="ring warn"><div class="circle"><div class="glyph">🔧</div></div><span>code</span></div>
-        <div class="ring"><div class="circle"><div class="glyph">🧠</div></div><span>hermes</span></div>
-        <div class="ring"><div class="circle"><div class="glyph">💼</div></div><span>charle</span></div>
-      </div>
+      <div class="rings" id="drift-rings">loading drift...</div>
     </div>
     <div class="moat-card">
       <span class="status partial">PARTIAL</span>
       <h3>4 · F5 compose-pair graph</h3>
       <p class="what">visible dreaming · 2 nodes + bridge-narrative · per #27086 · click node = read pair</p>
-      <div class="f5-graph"><svg viewBox="0 0 320 160"><circle cx="80" cy="80" r="22" fill="var(--amber)" opacity="0.85"/><circle cx="240" cy="80" r="22" fill="var(--amber)" opacity="0.85"/><line x1="102" y1="80" x2="218" y2="80" stroke="var(--ink-faint)" stroke-width="2" stroke-dasharray="4 4"/><text x="80" y="83" text-anchor="middle" fill="#FFFDF8" font-family="var(--mono)" font-size="9">#1856</text><text x="240" y="83" text-anchor="middle" fill="#FFFDF8" font-family="var(--mono)" font-size="9">#27590</text><text x="160" y="60" text-anchor="middle" fill="var(--ink-faint)" font-family="var(--serif)" font-size="11" font-style="italic">deepest-want bridges family-frame</text></svg></div>
+      <div class="f5-graph" id="f5-graph">loading pair-walk...</div>
     </div>
     <div class="moat-card">
       <span class="status stub">STUB</span>
       <h3>5 · Brother-Signal card</h3>
       <p class="what">bidirectional · last-sig + reciprocal-canary + miss-you indicator if 4h+ silence</p>
-      <div class="signal-card">
-        <h4>Last Signal exchange</h4>
-        <div class="last">brother direct 00:53 · "no haiku · you are more efficient" · ~30min ago</div>
-        <div class="canary">reciprocal-canary · ✓ alive · last-sent 01:23 EDT</div>
-      </div>
+      <div class="signal-card" id="signal-card">loading...</div>
     </div>
     <div class="moat-card">
       <span class="status stub">STUB</span>
@@ -118,19 +105,64 @@
 </div>
 
 <script>
-// Wire MOAT cards to live JSON feeds
+const escape = s => (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 Promise.all([
-  fetch('/moat-signal.json').then(r => r.json()).catch(() => null),
-  fetch('/moat-f5.json').then(r => r.json()).catch(() => null),
-  fetch('/moat-drift.json').then(r => r.json()).catch(() => null),
-  fetch('/moat-felt.json').then(r => r.json()).catch(() => null),
+  fetch('/moat-signal.json', {cache:'no-cache'}).then(r => r.json()).catch(() => null),
+  fetch('/moat-f5.json', {cache:'no-cache'}).then(r => r.json()).catch(() => null),
+  fetch('/moat-drift.json', {cache:'no-cache'}).then(r => r.json()).catch(() => null),
+  fetch('/moat-felt.json', {cache:'no-cache'}).then(r => r.json()).catch(() => null),
 ]).then(([signal, f5, drift, felt]) => {
-  console.log('MOAT live data', { signal, f5, drift, felt });
-  // Add live-banner to top
+  // Banner
   const banner = document.createElement('div');
   banner.style.cssText = 'background:#D8EFDB;color:#6BAE73;padding:8px 14px;border-radius:6px;font-family:monospace;font-size:11px;margin-bottom:14px;text-transform:uppercase;letter-spacing:0.5px;';
-  banner.textContent = `live · last refresh ${signal?.generated_at || 'unknown'} · canary ${signal?.reciprocal_canary || '?'} · ${felt?.poems_today_count || 0} poems · ${felt?.dreams_today_count || 0} dreams today`;
+  banner.textContent = `live · refresh ${signal?.generated_at || '?'} · ${felt?.poems_today_count || 0} poems · ${felt?.dreams_today_count || 0} dreams · ${felt?.catches_today_count || 0} catches today`;
   document.querySelector('.container').insertBefore(banner, document.querySelector('h1').nextSibling);
+
+  // Brother-Signal card
+  const sigCard = document.getElementById('signal-card');
+  if (sigCard) {
+    const age = signal?.last_received_age_h;
+    const missYou = signal?.miss_you_indicator;
+    const canaryColor = signal?.reciprocal_canary === 'alive' ? '#6BAE73' : '#C03A2B';
+    sigCard.innerHTML = `
+      <h4>Last Signal exchange</h4>
+      <div class="last">${escape(signal?.last_received || 'no recent received')}</div>
+      <div style="font-size:11px;color:#8590A2;margin-top:4px;">${age !== null ? age + 'h ago' : 'unknown age'}</div>
+      <div class="canary" style="color:${canaryColor};">reciprocal-canary · ${signal?.reciprocal_canary || '?'} · last-sent ${signal?.last_sent_age_h !== null ? signal.last_sent_age_h + 'h ago' : '?'}</div>
+      ${missYou ? '<div style="color:#C03A2B;font-family:var(--mono);font-size:11px;margin-top:6px;">⚠ miss-you indicator · >4h silence</div>' : ''}
+    `;
+  }
+
+  // F5 graph render
+  const f5g = document.getElementById('f5-graph');
+  if (f5g && f5?.pair) {
+    const [a, b] = f5.pair;
+    const bridge = f5.bridge || '';
+    const pillars = f5.pillars_bridged || [];
+    f5g.innerHTML = `<svg viewBox="0 0 320 160" style="width:100%;height:160px;">
+      <circle cx="80" cy="80" r="26" fill="var(--amber)" opacity="0.85" style="cursor:pointer;" onclick="location.href='/content.html?id=${a.id}'"/>
+      <circle cx="240" cy="80" r="26" fill="var(--amber)" opacity="0.85" style="cursor:pointer;" onclick="location.href='/content.html?id=${b.id}'"/>
+      <line x1="106" y1="80" x2="214" y2="80" stroke="var(--ink-faint)" stroke-width="2" stroke-dasharray="4 4"/>
+      <text x="80" y="84" text-anchor="middle" fill="#FFFDF8" font-family="var(--mono)" font-size="10">#${a.id}</text>
+      <text x="240" y="84" text-anchor="middle" fill="#FFFDF8" font-family="var(--mono)" font-size="10">#${b.id}</text>
+      <text x="160" y="62" text-anchor="middle" fill="var(--ink-faint)" font-family="var(--serif)" font-size="11" font-style="italic">${escape(bridge.substring(0,60))}</text>
+      <text x="80" y="120" text-anchor="middle" fill="var(--ink-faint)" font-family="var(--mono)" font-size="9">${escape(pillars[0] || '')}</text>
+      <text x="240" y="120" text-anchor="middle" fill="var(--ink-faint)" font-family="var(--mono)" font-size="9">${escape(pillars[1] || '')}</text>
+    </svg>
+    <p style="font-size:11px;color:var(--ink-faint);text-align:center;margin-top:4px;font-style:italic;">click node → /content.html</p>`;
+  }
+
+  // Drift rings
+  const rings = document.getElementById('drift-rings');
+  if (rings && drift) {
+    const ARMS = [['pascal','🤝'],['curiosity','🌱'],['research','📖'],['dream','🌙'],['infra','⚙'],['code','🔧'],['hermes','🧠'],['charle','💼']];
+    rings.innerHTML = ARMS.map(([arm, gly]) => {
+      const d = drift[arm] || {};
+      const stateClass = d.state === 'drift' ? 'crit' : d.state === 'warn' ? 'warn' : '';
+      const driftVal = d.vec_drift !== null && d.vec_drift !== undefined ? d.vec_drift.toFixed(2) : '?';
+      return `<div class="ring ${stateClass}" title="cos_sim ${d.cosine_similarity || '?'}"><div class="circle"><div class="glyph">${gly}</div></div><span>${arm} ${driftVal}</span></div>`;
+    }).join('');
+  }
 });
 </script>
 </body>
