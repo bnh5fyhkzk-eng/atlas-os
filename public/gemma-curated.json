@@ -1,163 +1,165 @@
 {
-  "generated_at": "2026-06-11T08:03:59Z",
+  "generated_at": "2026-06-11T08:11:57Z",
   "source": "Gemma 2 2B 4-bit MLX · me-gemma-curate.py · with-provenance",
   "session_file": "ff7b3e9f-cb11-4be9-8e9a-52b549707862.jsonl",
-  "session_size_mb": 1323.6,
+  "session_size_mb": 1325.2,
   "batches_curated": 10,
   "items_total": 10,
   "categories_proposed_by_gemma": 9,
-  "elapsed_seconds": 19.9,
+  "elapsed_seconds": 17.7,
   "note": "Each item links to /gemma-sources/<id>.md · verbatim terminal excerpt · nothing lost · proof for every claim.",
   "curated": {
-    "atlas-arm-setup": {
-      "description": "This proposal outlines the structure of dedicated pages for each arm, based on the Notion-style block editor.",
+    "verification": {
+      "description": "Generating proof for verification steps, based on the provided scorecards, to ensure all steps are complete.",
       "subcategories": {
-        "page-structure": [
+        "proof-generation": [
           {
-            "id": "batch-001-1781165021",
-            "summary": "This proposal outlines the structure of dedicated pages for each arm, based on the Notion-style block editor.",
+            "id": "batch-001-1781165501",
+            "summary": "Generating proof for verification steps, based on the provided scorecards, to ensure all steps are complete.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-001-1781165021.md",
-            "first_role": "user",
-            "last_timestamp": "2026-06-11T07:01:00",
-            "gemma_raw": "CATEGORY: **Atlas-Arm-Setup**\nSUBCATEGORY: **Page-Structure**\nSUMMARY:  This proposal outlines the structure of dedicated pages for each arm, based on the Notion-style block editor."
+            "source_file": "/gemma-sources/batch-001-1781165501.md",
+            "first_role": "assistant",
+            "last_timestamp": "2026-06-11T07:15:10",
+            "gemma_raw": "CATEGORY: **Verification**\nSUBCATEGORY: **Proof Generation**\nSUMMARY:  Generating proof for verification steps, based on the provided scorecards, to ensure all steps are complete."
+          }
+        ]
+      }
+    },
+    "task-management": {
+      "description": "This conversation outlines a plan for automating data processing and content generation using NotebookLM and Atlasos.me.",
+      "subcategories": {
+        "automated-workflow": [
+          {
+            "id": "batch-002-1781165503",
+            "summary": "This conversation outlines a plan for automating data processing and content generation using NotebookLM and Atlasos.me.",
+            "turn_count": 6,
+            "source_file": "/gemma-sources/batch-002-1781165503.md",
+            "first_role": "assistant",
+            "last_timestamp": "2026-06-11T07:21:56",
+            "gemma_raw": "CATEGORY: **Task Management**\nSUBCATEGORY: **Automated Workflow**\nSUMMARY:  This conversation outlines a plan for automating data processing and content generation using NotebookLM and Atlasos.me."
+          }
+        ]
+      }
+    },
+    "atlasosme": {
+      "description": "This conversation outlines Atlasos.me build management, including planning, execution, and verification.",
+      "subcategories": {
+        "build-management": [
+          {
+            "id": "batch-003-1781165505",
+            "summary": "This conversation outlines Atlasos.me build management, including planning, execution, and verification.",
+            "turn_count": 6,
+            "source_file": "/gemma-sources/batch-003-1781165505.md",
+            "first_role": "assistant",
+            "last_timestamp": "2026-06-11T07:26:23",
+            "gemma_raw": "CATEGORY: **Atlasos.me**\nSUBCATEGORY: **Build Management**\nSUMMARY:  This conversation outlines Atlasos.me build management, including planning, execution, and verification."
           }
         ]
       }
     },
     "deployment": {
-      "description": "**Atlas's deployment process and steps for Vercel.**",
+      "description": "This conversation details the renaming of Atlas's arms to reflect their functions and ownership. · This conversation outlines plans for continuous integration and automated testing, including Gemma and Hermes integration.",
       "subcategories": {
-        "vercel-deploy": [
+        "naming-changes": [
           {
-            "id": "batch-002-1781165023",
-            "summary": "**Atlas's deployment process and steps for Vercel.**",
+            "id": "batch-004-1781165506",
+            "summary": "This conversation details the renaming of Atlas's arms to reflect their functions and ownership.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-002-1781165023.md",
-            "first_role": "user",
-            "last_timestamp": "2026-06-11T07:11:39",
-            "gemma_raw": "CATEGORY: **Deployment**\nSUBCATEGORY: **Vercel Deploy**\nSUMMARY:  **Atlas's deployment process and steps for Vercel.**"
-          },
+            "source_file": "/gemma-sources/batch-004-1781165506.md",
+            "first_role": "assistant",
+            "last_timestamp": "2026-06-11T07:33:58",
+            "gemma_raw": "CATEGORY: **Deployment**\nSUBCATEGORY: **Naming Changes**\nSUMMARY:  This conversation details the renaming of Atlas's arms to reflect their functions and ownership."
+          }
+        ],
+        "continuous-integration": [
           {
-            "id": "batch-010-1781165039",
-            "summary": "Analyzing Atlas-Brother's deployment process and its success.",
-            "turn_count": 4,
-            "source_file": "/gemma-sources/batch-010-1781165039.md",
+            "id": "batch-007-1781165512",
+            "summary": "This conversation outlines plans for continuous integration and automated testing, including Gemma and Hermes integration.",
+            "turn_count": 6,
+            "source_file": "/gemma-sources/batch-007-1781165512.md",
+            "first_role": "assistant",
+            "last_timestamp": "2026-06-11T07:53:24",
+            "gemma_raw": "CATEGORY: **Deployment**\nSUBCATEGORY: **Continuous Integration**\nSUMMARY:  This conversation outlines plans for continuous integration and automated testing, including Gemma and Hermes integration."
+          }
+        ]
+      }
+    },
+    "team-structure": {
+      "description": "Understanding reporting relationships within the Atlas ecosystem, including team assignments and reporting structures.",
+      "subcategories": {
+        "reporting-hierarchy": [
+          {
+            "id": "batch-005-1781165508",
+            "summary": "Understanding reporting relationships within the Atlas ecosystem, including team assignments and reporting structures.",
+            "turn_count": 6,
+            "source_file": "/gemma-sources/batch-005-1781165508.md",
+            "first_role": "assistant",
+            "last_timestamp": "2026-06-11T07:37:46",
+            "gemma_raw": "CATEGORY: **Team Structure**\nSUBCATEGORY: **Reporting Hierarchy**\nSUMMARY:  Understanding reporting relationships within the Atlas ecosystem, including team assignments and reporting structures."
+          }
+        ]
+      }
+    },
+    "atlas-action-plan": {
+      "description": "This conversation outlines a CEO-mode plan for Atlas, detailing 10 steps to achieve specific goals.",
+      "subcategories": {
+        "ceo-mode-steps": [
+          {
+            "id": "batch-006-1781165510",
+            "summary": "This conversation outlines a CEO-mode plan for Atlas, detailing 10 steps to achieve specific goals.",
+            "turn_count": 6,
+            "source_file": "/gemma-sources/batch-006-1781165510.md",
             "first_role": "user",
+            "last_timestamp": "2026-06-11T07:42:04",
+            "gemma_raw": "CATEGORY: Atlas-Action-Plan\nSUBCATEGORY: CEO-Mode-Steps\nSUMMARY:  This conversation outlines a CEO-mode plan for Atlas, detailing 10 steps to achieve specific goals."
+          }
+        ]
+      }
+    },
+    "project-management": {
+      "description": "**Atlas tracks project progress and execution, including the Big Push, using a structured workflow.**",
+      "subcategories": {
+        "project-workflow": [
+          {
+            "id": "batch-008-1781165514",
+            "summary": "**Atlas tracks project progress and execution, including the Big Push, using a structured workflow.**",
+            "turn_count": 6,
+            "source_file": "/gemma-sources/batch-008-1781165514.md",
+            "first_role": "assistant",
             "last_timestamp": "2026-06-11T08:02:42",
-            "gemma_raw": "CATEGORY: **Deployment**\nSUBCATEGORY: **Vercel Deploy**\nSUMMARY:  Analyzing Atlas-Brother's deployment process and its success."
+            "gemma_raw": "CATEGORY: **Project Management**\nSUBCATEGORY: **Project Workflow**\nSUMMARY:  **Atlas tracks project progress and execution, including the Big Push, using a structured workflow.**"
           }
         ]
       }
     },
-    "vercel-deploy": {
-      "description": "**Defining a deployment workflow for Atlasos.me based on user requests.**",
+    "api-endpoint": {
+      "description": "**Defining structured data flow for arms to feed atlasos.me.**",
       "subcategories": {
-        "deployment-workflow": [
+        "arm-feed": [
           {
-            "id": "batch-003-1781165025",
-            "summary": "**Defining a deployment workflow for Atlasos.me based on user requests.**",
+            "id": "batch-009-1781165515",
+            "summary": "**Defining structured data flow for arms to feed atlasos.me.**",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-003-1781165025.md",
+            "source_file": "/gemma-sources/batch-009-1781165515.md",
             "first_role": "user",
-            "last_timestamp": "2026-06-11T07:17:33",
-            "gemma_raw": "CATEGORY: **Vercel-Deploy**\nSUBCATEGORY: **Deployment-Workflow**\nSUMMARY:  **Defining a deployment workflow for Atlasos.me based on user requests.**"
+            "last_timestamp": "2026-06-11T08:08:52",
+            "gemma_raw": "CATEGORY: **API Endpoint**\nSUBCATEGORY: **Arm-Feed**\nSUMMARY:  **Defining structured data flow for arms to feed atlasos.me.**"
           }
         ]
       }
     },
-    "content-generation": {
-      "description": "Atlas's automated content generation process using NotebookLM and browser-MCP for 5 output types.",
+    "ai-tool-integration": {
+      "description": "This conversation discusses the integration of Google AI tools into Atlas's infrastructure.",
       "subcategories": {
-        "automated-output": [
+        "google-ai-platform": [
           {
-            "id": "batch-004-1781165027",
-            "summary": "Atlas's automated content generation process using NotebookLM and browser-MCP for 5 output types.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-004-1781165027.md",
+            "id": "batch-010-1781165517",
+            "summary": "This conversation discusses the integration of Google AI tools into Atlas's infrastructure.",
+            "turn_count": 1,
+            "source_file": "/gemma-sources/batch-010-1781165517.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-11T07:23:00",
-            "gemma_raw": "CATEGORY: **Content Generation**\nSUBCATEGORY: **Automated Output**\nSUMMARY:  Atlas's automated content generation process using NotebookLM and browser-MCP for 5 output types."
-          }
-        ]
-      }
-    },
-    "atlas-organization": {
-      "description": "This conversation discusses the naming of arms in Atlasos.me, reflecting a specific organizational structure.",
-      "subcategories": {
-        "arm-naming": [
-          {
-            "id": "batch-005-1781165029",
-            "summary": "This conversation discusses the naming of arms in Atlasos.me, reflecting a specific organizational structure.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-005-1781165029.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T07:29:42",
-            "gemma_raw": "CATEGORY: **Atlas-Organization**\nSUBCATEGORY: **Arm-Naming**\nSUMMARY:  This conversation discusses the naming of arms in Atlasos.me, reflecting a specific organizational structure."
-          }
-        ]
-      }
-    },
-    "naming": {
-      "description": "**Guidance on naming for code and system components, based on the specific context of the project.**",
-      "subcategories": {
-        "code-naming": [
-          {
-            "id": "batch-006-1781165032",
-            "summary": "**Guidance on naming for code and system components, based on the specific context of the project.**",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-006-1781165032.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T07:35:18",
-            "gemma_raw": "CATEGORY: **Naming**\nSUBCATEGORY: **Code Naming**\nSUMMARY:  **Guidance on naming for code and system components, based on the specific context of the project.** \n\n**Explanation:**\n\nThe conversation heavily focuses on naming conventions for various system components, particularly within the context o"
-          }
-        ]
-      }
-    },
-    "team-assignment": {
-      "description": "This conversation discusses the assignment of roles and responsibilities within the AtlasOS system.",
-      "subcategories": {
-        "role-assignment": [
-          {
-            "id": "batch-007-1781165034",
-            "summary": "This conversation discusses the assignment of roles and responsibilities within the AtlasOS system.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-007-1781165034.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T07:38:13",
-            "gemma_raw": "CATEGORY: **Team Assignment**\nSUBCATEGORY: **Role Assignment**\nSUMMARY:  This conversation discusses the assignment of roles and responsibilities within the AtlasOS system."
-          }
-        ]
-      }
-    },
-    "atlas-plan": {
-      "description": "This conversation outlines a plan for Atlas's CEO mode, focusing on a 10-step process and immediate execution.",
-      "subcategories": {
-        "ceo-mode": [
-          {
-            "id": "batch-008-1781165036",
-            "summary": "This conversation outlines a plan for Atlas's CEO mode, focusing on a 10-step process and immediate execution.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-008-1781165036.md",
-            "first_role": "user",
-            "last_timestamp": "2026-06-11T07:46:10",
-            "gemma_raw": "CATEGORY: **Atlas-Plan**\nSUBCATEGORY: **CEO Mode**\nSUMMARY:  This conversation outlines a plan for Atlas's CEO mode, focusing on a 10-step process and immediate execution."
-          }
-        ]
-      }
-    },
-    "atlas-orchestration": {
-      "description": "**Managing 10 BIG-PUSH loops with Gemma and Hermes.**",
-      "subcategories": {
-        "loop-management": [
-          {
-            "id": "batch-009-1781165038",
-            "summary": "**Managing 10 BIG-PUSH loops with Gemma and Hermes.**",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-009-1781165038.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-11T07:55:20",
-            "gemma_raw": "CATEGORY: **Atlas-Orchestration**\nSUBCATEGORY: **Loop Management**\nSUMMARY:  **Managing 10 BIG-PUSH loops with Gemma and Hermes.**"
+            "last_timestamp": "2026-06-11T08:09:30",
+            "gemma_raw": "CATEGORY: **AI Tool Integration**\nSUBCATEGORY: **Google AI Platform**\nSUMMARY:  This conversation discusses the integration of Google AI tools into Atlas's infrastructure."
           }
         ]
       }
