@@ -5,8 +5,9 @@
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "rewrites": [
+    { "source": "/", "destination": "/us.html" },
+    { "source": "/api/auth", "destination": "/api/auth" },
     { "source": "/api/(.*)", "destination": "https://api.atlasos.me/api/$1" },
-    { "source": "/dashboard-plugins/(.*)", "destination": "https://api.atlasos.me/dashboard-plugins/$1" },
-    { "source": "/(.*)", "destination": "https://api.atlasos.me/$1" }
+    { "source": "/dashboard-plugins/(.*)", "destination": "https://api.atlasos.me/dashboard-plugins/$1" }
   ]
 }
