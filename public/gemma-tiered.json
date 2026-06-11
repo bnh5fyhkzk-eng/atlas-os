@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-11T09:06:50Z",
+  "generated_at": "2026-06-11T09:12:30Z",
   "source": "me-gemma-tier-into-7-cats.py (rule-based router · per brother direct #45099 1-YOU-2-ME-3-WORLD)",
-  "items_total": 13,
+  "items_total": 10,
   "tier_summary": {
     "atlas": {
       "subs": 0,
@@ -25,18 +25,18 @@
       "P2": 0
     },
     "manager": {
-      "subs": 7,
-      "items": 7,
+      "subs": 6,
+      "items": 6,
       "P0": 0,
       "P1": 0,
-      "P2": 7
+      "P2": 6
     },
     "arms": {
-      "subs": 3,
-      "items": 5,
+      "subs": 1,
+      "items": 1,
       "P0": 0,
       "P1": 0,
-      "P2": 5
+      "P2": 1
     },
     "world": {
       "subs": 0,
@@ -46,11 +46,11 @@
       "P2": 0
     },
     "future": {
-      "subs": 1,
-      "items": 1,
+      "subs": 3,
+      "items": 3,
       "P0": 0,
       "P1": 0,
-      "P2": 1
+      "P2": 3
     }
   },
   "tiers": {
@@ -86,6 +86,110 @@
     },
     "manager": {
       "subs": {
+        "atlas-solo-plan-action-list": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "batch-002-1781168834",
+                  "summary": "This plan outlines the steps to complete Atlas-solo tasks without brother involvement.",
+                  "turn_count": 6,
+                  "source_file": "/gemma-sources/batch-002-1781168834.md",
+                  "first_role": "assistant",
+                  "last_timestamp": "2026-06-11T08:14:31",
+                  "gemma_raw": "CATEGORY: **Atlas-Solo Plan**\nSUBCATEGORY: **Action List**\nSUMMARY:  This plan outlines the steps to complete Atlas-solo tasks without brother involvement.",
+                  "_original_cat": "atlas-solo-plan",
+                  "_original_sub": "action-list"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        },
+        "atlas-task-action-sequence": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "batch-003-1781168835",
+                  "summary": "**Tracking Atlas-solo steps and their execution order.**",
+                  "turn_count": 6,
+                  "source_file": "/gemma-sources/batch-003-1781168835.md",
+                  "first_role": "user",
+                  "last_timestamp": "2026-06-11T08:20:26",
+                  "gemma_raw": "CATEGORY: **Atlas-Task**\nSUBCATEGORY: **Action-Sequence**\nSUMMARY:  **Tracking Atlas-solo steps and their execution order.**",
+                  "_original_cat": "atlas-task",
+                  "_original_sub": "action-sequence"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        },
+        "atlas-task-management-api-creation": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "batch-004-1781168837",
+                  "summary": "This conversation discusses the process of creating new NotebookLM instances via the API, highlighting the challenges and potential solutions.",
+                  "turn_count": 6,
+                  "source_file": "/gemma-sources/batch-004-1781168837.md",
+                  "first_role": "assistant",
+                  "last_timestamp": "2026-06-11T08:24:22",
+                  "gemma_raw": "CATEGORY: **Atlas-Task-Management**\nSUBCATEGORY: **API-Creation**\nSUMMARY:  This conversation discusses the process of creating new NotebookLM instances via the API, highlighting the challenges and potential solutions.",
+                  "_original_cat": "atlas-task-management",
+                  "_original_sub": "api-creation"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        },
+        "plan-action-plan": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "batch-006-1781168841",
+                  "summary": "This conversation outlines a plan for Atlas's data organization and usage.",
+                  "turn_count": 6,
+                  "source_file": "/gemma-sources/batch-006-1781168841.md",
+                  "first_role": "assistant",
+                  "last_timestamp": "2026-06-11T08:34:39",
+                  "gemma_raw": "CATEGORY: **Plan**\nSUBCATEGORY: **Action Plan**\nSUMMARY:  This conversation outlines a plan for Atlas's data organization and usage.",
+                  "_original_cat": "plan",
+                  "_original_sub": "action-plan"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        },
         "deployment-vercel-deploy": {
           "subsubs": {
             "P0": {
@@ -97,13 +201,13 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-007-1781168494",
-                  "summary": "**Atlasos deployment status and success after code shipping.**",
+                  "id": "batch-007-1781168843",
+                  "summary": "This conversation details Atlas's deployment process and the successful completion of 10 steps, including Vercel-Deploy.",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-007-1781168494.md",
-                  "first_role": "assistant",
-                  "last_timestamp": "2026-06-11T08:39:09",
-                  "gemma_raw": "CATEGORY: **Deployment**\nSUBCATEGORY: **Vercel Deploy**\nSUMMARY:  **Atlasos deployment status and success after code shipping.**",
+                  "source_file": "/gemma-sources/batch-007-1781168843.md",
+                  "first_role": "user",
+                  "last_timestamp": "2026-06-11T08:40:58",
+                  "gemma_raw": "CATEGORY: **Deployment**\nSUBCATEGORY: **Vercel-Deploy**\nSUMMARY:  This conversation details Atlas's deployment process and the successful completion of 10 steps, including Vercel-Deploy.",
                   "_original_cat": "deployment",
                   "_original_sub": "vercel-deploy"
                 }
@@ -112,7 +216,7 @@
           },
           "total_items": 1
         },
-        "api-integration-notebooklm-api": {
+        "project-visualization-atlas-dashboard": {
           "subsubs": {
             "P0": {
               "items": []
@@ -123,145 +227,15 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-005-1781168491",
-                  "summary": "**Identifying the best way to integrate the NotebookLM API into Atlas's workflow.**",
+                  "id": "batch-008-1781168844",
+                  "summary": "This conversation focuses on visualizing project data and improving atlasos.me's user interface.",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-005-1781168491.md",
+                  "source_file": "/gemma-sources/batch-008-1781168844.md",
                   "first_role": "assistant",
-                  "last_timestamp": "2026-06-11T08:26:01",
-                  "gemma_raw": "CATEGORY: **API Integration**\nSUBCATEGORY: **NotebookLM API**\nSUMMARY:  **Identifying the best way to integrate the NotebookLM API into Atlas's workflow.**",
-                  "_original_cat": "api-integration",
-                  "_original_sub": "notebooklm-api"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        },
-        "atlas-solo-plan-step-execution": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "batch-003-1781168487",
-                  "summary": "This conversation details the execution of a 10-step Atlas-Solo plan.",
-                  "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-003-1781168487.md",
-                  "first_role": "assistant",
-                  "last_timestamp": "2026-06-11T08:16:03",
-                  "gemma_raw": "CATEGORY: Atlas-Solo Plan\nSUBCATEGORY: Step Execution\nSUMMARY:  This conversation details the execution of a 10-step Atlas-Solo plan.",
-                  "_original_cat": "atlas-solo-plan",
-                  "_original_sub": "step-execution"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        },
-        "api-documentation-api-status": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "batch-004-1781168489",
-                  "summary": "**Documenting API status and responses, including 200s, for user reference.**",
-                  "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-004-1781168489.md",
-                  "first_role": "assistant",
-                  "last_timestamp": "2026-06-11T08:23:52",
-                  "gemma_raw": "CATEGORY: **API Documentation**\nSUBCATEGORY: **API Status**\nSUMMARY:  **Documenting API status and responses, including 200s, for user reference.**",
-                  "_original_cat": "api-documentation",
-                  "_original_sub": "api-status"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        },
-        "project-visualization-ai-powered-design-documentation": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "batch-008-1781168496",
-                  "summary": "Generate visual representations of project data using AI tools for improved documentation clarity.",
-                  "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-008-1781168496.md",
-                  "first_role": "user",
-                  "last_timestamp": "2026-06-11T08:47:43",
-                  "gemma_raw": "CATEGORY: **Project Visualization**\nSUBCATEGORY: **AI-Powered Design Documentation**\nSUMMARY:  Generate visual representations of project data using AI tools for improved documentation clarity.",
+                  "last_timestamp": "2026-06-11T08:50:39",
+                  "gemma_raw": "CATEGORY: **Project Visualization**\nSUBCATEGORY: **Atlas Dashboard**\nSUMMARY:  This conversation focuses on visualizing project data and improving atlasos.me's user interface.",
                   "_original_cat": "project-visualization",
-                  "_original_sub": "ai-powered-design-documentation"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        },
-        "deepseek-dataflow": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "batch-009-1781168498",
-                  "summary": "This conversation discusses how to connect DeepSeek data to Atlas and prioritize actions based on that data.",
-                  "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-009-1781168498.md",
-                  "first_role": "user",
-                  "last_timestamp": "2026-06-11T08:57:34",
-                  "gemma_raw": "CATEGORY: **DeepSeek**\nSUBCATEGORY: **DataFlow**\nSUMMARY:  This conversation discusses how to connect DeepSeek data to Atlas and prioritize actions based on that data.",
-                  "_original_cat": "deepseek",
-                  "_original_sub": "dataflow"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        },
-        "atlas-deployment-vercel-deploy": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "batch-010-1781168499",
-                  "summary": "**Atlas deployment plan and code execution based on Hermes-driven priorities.**",
-                  "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-010-1781168499.md",
-                  "first_role": "assistant",
-                  "last_timestamp": "2026-06-11T08:59:43",
-                  "gemma_raw": "CATEGORY: **Atlas-Deployment**\nSUBCATEGORY: **Vercel-Deploy**\nSUMMARY:  **Atlas deployment plan and code execution based on Hermes-driven priorities.**",
-                  "_original_cat": "atlas-deployment",
-                  "_original_sub": "vercel-deploy"
+                  "_original_sub": "atlas-dashboard"
                 }
               ]
             }
@@ -269,25 +243,24 @@
           "total_items": 1
         }
       },
-      "total": 7,
+      "total": 6,
       "priority_counts": {
         "P0": 0,
         "P1": 0,
-        "P2": 7
+        "P2": 6
       },
       "original_categories": [
-        "api-documentation",
-        "api-integration",
-        "atlas-deployment",
         "atlas-solo-plan",
-        "deepseek",
+        "atlas-task",
+        "atlas-task-management",
         "deployment",
+        "plan",
         "project-visualization"
       ]
     },
     "arms": {
       "subs": {
-        "deployment-vercel-deploy": {
+        "api-endpoint-arm-feed": {
           "subsubs": {
             "P0": {
               "items": []
@@ -298,146 +271,15 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-001-1781168484",
-                  "summary": "This conversation details the deployment and updates of Atlas's arms and notebooklm pages.",
+                  "id": "batch-001-1781168832",
+                  "summary": "**Defining structured data flow for Arms to AtlasOS.**",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-001-1781168484.md",
-                  "first_role": "user",
-                  "last_timestamp": "2026-06-11T08:05:33",
-                  "gemma_raw": "CATEGORY: **Deployment**\nSUBCATEGORY: **Vercel-Deploy**\nSUMMARY:  This conversation details the deployment and updates of Atlas's arms and notebooklm pages.",
-                  "_original_cat": "deployment",
-                  "_original_sub": "vercel-deploy"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        },
-        "api-integration-arm-to-atlas-workflow": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "batch-002-1781168485",
-                  "summary": "This conversation outlines the plan for integrating arms with Atlas, ensuring a structured and automated process.",
-                  "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-002-1781168485.md",
-                  "first_role": "user",
-                  "last_timestamp": "2026-06-11T08:13:02",
-                  "gemma_raw": "CATEGORY: **API Integration**\nSUBCATEGORY: **Arm-to-Atlas Workflow**\nSUMMARY:  This conversation outlines the plan for integrating arms with Atlas, ensuring a structured and automated process.",
-                  "_original_cat": "api-integration",
-                  "_original_sub": "arm-to-atlas-workflow"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        },
-        "mac-mini-files-unsorted": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "state-b8d0aada32",
-                  "summary": "",
-                  "priority": "P2",
-                  "source_path": "/Users/collinmacneil/.claude/state/arm-outputs/research/arm-1781168790-research.md",
-                  "source_filename": "arm-1781168790-research.md",
-                  "file_mtime": "2026-06-11 05:06",
-                  "first_role": "mac-mini-file",
-                  "gemma_raw": "## File · arm-1781168790-research.md\n\n**CATEGORY:** 9q-multi-angle\n**SUBCATEGORY:** HONCHO L3 DEEP-DIVE\n**PRIORITY:** P2\n**SUMMARY:** Research findings on Honcho 3 and Deriver split.",
-                  "kind": "state-doc",
-                  "_original_cat": "mac-mini-files",
-                  "_original_sub": "unsorted"
-                },
-                {
-                  "id": "state-6a6d57a7fb",
-                  "summary": "",
-                  "priority": "P2",
-                  "source_path": "/Users/collinmacneil/.claude/state/arm-outputs/research/arm-1781168636-research.md",
-                  "source_filename": "arm-1781168636-research.md",
-                  "file_mtime": "2026-06-11 05:03",
-                  "first_role": "mac-mini-file",
-                  "gemma_raw": "## File · arm-1781168636-research.md\n\n**CATEGORY:** 9q-multi-angle\n**SUBCATEGORY:** HONCHO L3 DEEP-DIVE\n**PRIORITY:** P2\n**SUMMARY:** Research findings on Honcho 3 and Deriver split, including late-2026 complete overhaul.",
-                  "kind": "state-doc",
-                  "_original_cat": "mac-mini-files",
-                  "_original_sub": "unsorted"
-                },
-                {
-                  "id": "state-185e807235",
-                  "summary": "",
-                  "priority": "P2",
-                  "source_path": "/Users/collinmacneil/.claude/state/arm-outputs/research/arm-1781168627-research.md",
-                  "source_filename": "arm-1781168627-research.md",
-                  "file_mtime": "2026-06-11 05:03",
-                  "first_role": "mac-mini-file",
-                  "gemma_raw": "## File · arm-1781168627-research.md\n\n**CATEGORY:** 9q-multi-angle\n**SUBCATEGORY:** HONCHO L3 DEEP-DIVE\n**PRIORITY:** P2\n**SUMMARY:** Research findings on Honcho 3 and Deriver split.",
-                  "kind": "state-doc",
-                  "_original_cat": "mac-mini-files",
-                  "_original_sub": "unsorted"
-                }
-              ]
-            }
-          },
-          "total_items": 3
-        }
-      },
-      "total": 5,
-      "priority_counts": {
-        "P0": 0,
-        "P1": 0,
-        "P2": 5
-      },
-      "original_categories": [
-        "api-integration",
-        "deployment",
-        "mac-mini-files"
-      ]
-    },
-    "world": {
-      "subs": {},
-      "total": 0,
-      "priority_counts": {
-        "P0": 0,
-        "P1": 0,
-        "P2": 0
-      },
-      "original_categories": []
-    },
-    "future": {
-      "subs": {
-        "knowledge-management-data-organization": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "batch-006-1781168492",
-                  "summary": "Organizing data for Atlasos.me, including categories and dedicated pages, to facilitate future use.",
-                  "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-006-1781168492.md",
+                  "source_file": "/gemma-sources/batch-001-1781168832.md",
                   "first_role": "assistant",
-                  "last_timestamp": "2026-06-11T08:32:50",
-                  "gemma_raw": "CATEGORY: **Knowledge Management**\nSUBCATEGORY: **Data Organization**\nSUMMARY:  Organizing data for Atlasos.me, including categories and dedicated pages, to facilitate future use.",
-                  "_original_cat": "knowledge-management",
-                  "_original_sub": "data-organization"
+                  "last_timestamp": "2026-06-11T08:05:57",
+                  "gemma_raw": "CATEGORY: **API-ENDPOINT**\nSUBCATEGORY: **Arm-Feed**\nSUMMARY:  **Defining structured data flow for Arms to AtlasOS.**",
+                  "_original_cat": "api-endpoint",
+                  "_original_sub": "arm-feed"
                 }
               ]
             }
@@ -452,7 +294,110 @@
         "P2": 1
       },
       "original_categories": [
-        "knowledge-management"
+        "api-endpoint"
+      ]
+    },
+    "world": {
+      "subs": {},
+      "total": 0,
+      "priority_counts": {
+        "P0": 0,
+        "P1": 0,
+        "P2": 0
+      },
+      "original_categories": []
+    },
+    "future": {
+      "subs": {
+        "api-integration-google-workspace-integration": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "batch-005-1781168839",
+                  "summary": "**Analyzing how to integrate Google Workspace features into Atlas's workflow.**",
+                  "turn_count": 6,
+                  "source_file": "/gemma-sources/batch-005-1781168839.md",
+                  "first_role": "user",
+                  "last_timestamp": "2026-06-11T08:28:10",
+                  "gemma_raw": "CATEGORY: **API Integration**\nSUBCATEGORY: **Google Workspace Integration**\nSUMMARY:  **Analyzing how to integrate Google Workspace features into Atlas's workflow.**",
+                  "_original_cat": "api-integration",
+                  "_original_sub": "google-workspace-integration"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        },
+        "atlas-prioritization-hermes-decision-flow": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "batch-009-1781168846",
+                  "summary": "This conversation outlines a plan to prioritize tasks and decisions using Hermes and Atlas.",
+                  "turn_count": 6,
+                  "source_file": "/gemma-sources/batch-009-1781168846.md",
+                  "first_role": "assistant",
+                  "last_timestamp": "2026-06-11T08:59:06",
+                  "gemma_raw": "CATEGORY: **Atlas-Prioritization**\nSUBCATEGORY: **Hermes-Decision-Flow**\nSUMMARY:  This conversation outlines a plan to prioritize tasks and decisions using Hermes and Atlas.",
+                  "_original_cat": "atlas-prioritization",
+                  "_original_sub": "hermes-decision-flow"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        },
+        "api-routing-decision-posting": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "batch-010-1781168848",
+                  "summary": "**Defining API endpoint for Hermes decisions posting.**",
+                  "turn_count": 4,
+                  "source_file": "/gemma-sources/batch-010-1781168848.md",
+                  "first_role": "user",
+                  "last_timestamp": "2026-06-11T08:59:43",
+                  "gemma_raw": "CATEGORY: **API_ROUTING**\nSUBCATEGORY: **DECISION_POSTING**\nSUMMARY:  **Defining API endpoint for Hermes decisions posting.**",
+                  "_original_cat": "api-routing",
+                  "_original_sub": "decision-posting"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        }
+      },
+      "total": 3,
+      "priority_counts": {
+        "P0": 0,
+        "P1": 0,
+        "P2": 3
+      },
+      "original_categories": [
+        "api-integration",
+        "api-routing",
+        "atlas-prioritization"
       ]
     }
   }
