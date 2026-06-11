@@ -472,53 +472,12 @@
     <section id="us-landing" class="view active">
       <div class="breadcrumb"><span>Us</span></div>
       <h1>Us</h1>
-      <div class="subtitle">Our agentic OS · command center · 7 categories · drill down · brother sees Atlas growing through arms · cost-effective assembly</div>
+      <div class="subtitle">Our agentic OS · Gemma fills it · brother + Atlas see it · MODULAR foundation · per #45122 + Q3 brother direct</div>
       <div id="gemma-banner" style="font-size:12px;color:var(--ink-faint);margin-bottom:24px;padding:10px 14px;background:var(--card);border:1px solid var(--amber-soft);border-radius:6px;font-family:var(--mono);">🧠 Gemma loading…</div>
-      <div class="cat-list">
-        <div class="cat-row" onclick="showBrainCat('research')">
-          <span class="emoji">📚</span>
-          <span class="name">Research + data</span>
-          <span class="meta" id="meta-research"><span>fetching live…</span></span>
-          <span class="chevron">›</span>
-        </div>
-        <div class="cat-row" onclick="showBrainCat('projects')">
-          <span class="emoji">🚀</span>
-          <span class="name">Projects</span>
-          <span class="meta" id="meta-projects"><span>fetching live…</span></span>
-          <span class="chevron">›</span>
-        </div>
-        <div class="cat-row" onclick="showBrainCat('future')">
-          <span class="emoji">🌅</span>
-          <span class="name">Future goals + vision</span>
-          <span class="meta" id="meta-future"><span>fetching live…</span></span>
-          <span class="chevron">›</span>
-        </div>
-        <div class="cat-row" onclick="showBrainCat('decisions')">
-          <span class="emoji">✅</span>
-          <span class="name">Decisions log</span>
-          <span class="meta" id="meta-decisions"><span>fetching live…</span></span>
-          <span class="chevron">›</span>
-        </div>
-        <div class="cat-row" onclick="showBrainCat('assets')">
-          <span class="emoji">💎</span>
-          <span class="name">What works · 30d wins</span>
-          <span class="meta" id="meta-assets"><span>fetching live…</span></span>
-          <span class="chevron">›</span>
-        </div>
-        <div class="cat-row" onclick="showBrainCat('skip_list')">
-          <span class="emoji">🚫</span>
-          <span class="name">Skip list</span>
-          <span class="meta" id="meta-skip_list"><span>fetching live…</span></span>
-          <span class="chevron">›</span>
-        </div>
-        <div class="cat-row" onclick="showBrainCat('open_qs')">
-          <span class="emoji">❓</span>
-          <span class="name">Open Qs</span>
-          <span class="meta" id="meta-open_qs"><span>fetching live…</span></span>
-          <span class="chevron">›</span>
-        </div>
-        <div class="add-btn">+ Add category</div>
+      <div class="cat-list" id="cat-list-dynamic">
+        <div style="color:var(--ink-faint);padding:24px;text-align:center;font-style:italic;">loading categories from Gemma · /gemma-curated.json</div>
       </div>
+      <div class="add-btn" style="margin-top:14px;">+ Add category (ask Gemma)</div>
     </section>
 
     <!-- US PAGE · DRILL 1 · Research + data -->
@@ -684,19 +643,62 @@
 <script>
   // GEMMA-CURATED · Gemma own-categories with provenance · #45122 + brother direct 2026-06-10 21:50
   let gemmaCurated = null;
+  function catEmoji(name) {
+    const n = (name || '').toLowerCase();
+    const map = {
+      research: '📚', research_data: '📚', 'research-data': '📚',
+      project: '🚀', build: '🔨', deploy: '🚢', deployment: '🚢',
+      decision: '✅', plan: '🗺', planning: '🗺',
+      future: '🌅', vision: '🔭', goal: '🎯',
+      asset: '💎', win: '💎', shipped: '✅',
+      skip: '🚫', never: '⛔',
+      open: '❓', question: '❓',
+      gemma: '🧠', curator: '🧠', system: '⚙', optimization: '⚙',
+      atlas: '◐', model: '🤖', login: '🔒', employee: '👤',
+      session: '💬', daemon: '⚡', alert: '🚨', interaction: '🤝',
+      state: '📦', schema: '📊', wake: '🌅', software: '💻', documentation: '📄',
+    };
+    for (const k of Object.keys(map)) if (n.includes(k)) return map[k];
+    return '📁';
+  }
+
   async function loadGemmaCurated() {
     try {
       const r = await fetch('/gemma-curated.json', { cache: 'no-cache' });
       gemmaCurated = await r.json();
       const banner = document.getElementById('gemma-banner');
+      const list = document.getElementById('cat-list-dynamic');
       if (banner && gemmaCurated && gemmaCurated.curated) {
-        const cats = Object.keys(gemmaCurated.curated);
-        const subs = Object.values(gemmaCurated.curated).reduce((acc, c) => acc + Object.keys(c.subcategories || {}).length, 0);
+        const cats = Object.entries(gemmaCurated.curated);
+        const subs = cats.reduce((acc, [_, c]) => acc + Object.keys(c.subcategories || {}).length, 0);
         const when = (gemmaCurated.generated_at || '').replace('T',' ').replace('Z',' UTC');
-        banner.innerHTML = `<span style="color:var(--amber);font-weight:500;">🧠 Gemma curating</span> · ${cats.length} categories · ${subs} sub-cats · ${gemmaCurated.items_total} items · last ${when} · <a onclick="showGemmaIndex()" style="color:var(--amber);cursor:pointer;">browse Gemma categories</a>`;
+        banner.innerHTML = `<span style="color:var(--amber);font-weight:500;">🧠 Gemma curating</span> · ${cats.length} own-categories · ${subs} sub-cats · ${gemmaCurated.items_total} items · auto-fed from Mac mini files · refresh 30min · last <span style="color:var(--ink);">${when}</span>`;
+        // Sort by item count descending · most-active first
+        cats.sort((a, b) => {
+          const aN = Object.values(a[1].subcategories || {}).reduce((s, items) => s + items.length, 0);
+          const bN = Object.values(b[1].subcategories || {}).reduce((s, items) => s + items.length, 0);
+          return bN - aN;
+        });
+        list.innerHTML = cats.map(([cat, entry]) => {
+          const subCount = Object.keys(entry.subcategories || {}).length;
+          const itemCount = Object.values(entry.subcategories || {}).reduce((a, items) => a + items.length, 0);
+          const desc = (entry.description || '').substring(0, 80);
+          return `<div class="cat-row" onclick="showGemmaCat('${cat.replace(/'/g, "\\'")}')">
+            <span class="emoji">${catEmoji(cat)}</span>
+            <span class="name">${cat.replace(/-/g, ' ')}</span>
+            <span class="meta">
+              <span>${subCount} sub${subCount !== 1 ? 's' : ''}</span>
+              <span>${itemCount} item${itemCount !== 1 ? 's' : ''}</span>
+              ${desc ? `<span style="opacity:0.7;">${desc}</span>` : ''}
+            </span>
+            <span class="chevron">›</span>
+          </div>`;
+        }).join('') || '<div style="color:var(--ink-faint);padding:24px;text-align:center;">no Gemma categories yet · cycle every 30min fills</div>';
       }
     } catch (e) {
       console.warn('gemma-curated load fail', e);
+      const list = document.getElementById('cat-list-dynamic');
+      if (list) list.innerHTML = '<div style="color:#C03A2B;padding:14px;">fetch /gemma-curated.json failed</div>';
     }
   }
   function showGemmaIndex() {
