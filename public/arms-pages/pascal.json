@@ -229,7 +229,42 @@
       "updated_at": "2026-06-11T05:30:47.229298"
     },
     {
-      "id": "bacff323d840",
+      "id": "8b98a51f4526",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "sessions",
+        "source": "pascal-self",
+        "action": "processed sessions signal · [#45205] arousal 1.00 · STATE-MD · CLAUDE-PRE-V5-OLD-2026-06-04.md · ingested 2026-06-11 04:30:00",
+        "why": "instruction file maps sessions to first arm-task · brain canon #45205 matched arm-topic last 4h above arousal 0.85",
+        "result": "block written to arm-page · aggregator publishes to atlasos.me",
+        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
+        "links": [
+          "#45205"
+        ],
+        "cycle_id": "pascal-20260611-082837",
+        "timestamp": "2026-06-11T08:28:37.384327"
+      },
+      "content": "**What** · processed sessions signal · [#45205] arousal 1.00 · STATE-MD · CLAUDE-PRE-V5-OLD-2026-06-04.md · ingested 2026-06-11 04:30:00 · **Why** · instruction file maps sessions to first arm-task · brain canon #45205 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #45205 · **Cycle** · pascal-20260611-082837",
+      "updated_at": "2026-06-11T08:28:37.384327"
+    },
+    {
+      "id": "fe0b971257d6",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "No high-arousal pascal canon in last 6h",
+      "updated_at": "2026-06-11T11:15:23.645283"
+    },
+    {
+      "id": "0ce5e063bece",
       "type": "database",
       "props": {
         "category": "sessions",
@@ -243,8 +278,15 @@
         ],
         "arm_category": "sessions"
       },
-      "content": "sessions · last 30d · 28 canons (top arousal · 1.00)",
+      "content": "sessions · last 30d · 26 canons (top arousal · 1.00)",
       "data": [
+        {
+          "id": "#45601",
+          "summary": "FIX-EVERYTHING-COMPLETE-2026-06-11-05:18 · brother direct VERBATIM 05:11 'make plan fix everything if you need to make it in a /goalcomand make it ready' + verbatim post-goal 'make it best way possibl",
+          "arousal": 1.0,
+          "when": "2026-06-11 05:22",
+          "weight": 1
+        },
         {
           "id": "#45123",
           "summary": "GEMMA-CATEGORIZED-30-BANKS-LIVE-2026-06-10-21:28 · brother direct VERBATIM 21:25 'lets start using gemma and finish atlasos.me · he could research and help us how he can see this terminal session and ",
@@ -377,19 +419,12 @@
           "arousal": 1.0,
           "when": "2026-06-10 00:17",
           "weight": 1
-        },
-        {
-          "id": "#44362",
-          "summary": "#27954 ELABORATION-of-27953 · marathon RENAMED to 'marathon-2026-06-09' VERIFIED in hermes sessions list (8m ago first row) + me-hermes-resume.sh wrapper VERIFIED chmod +x at ~/.claude/scripts/me-herm",
-          "arousal": 1.0,
-          "when": "2026-06-09 22:07",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-11T06:00:01.484166"
+      "updated_at": "2026-06-11T12:00:01.771582"
     },
     {
-      "id": "fdacb772381d",
+      "id": "e21c63588f89",
       "type": "database",
       "props": {
         "category": "clients",
@@ -403,13 +438,20 @@
         ],
         "arm_category": "clients"
       },
-      "content": "clients · last 30d · 6 canons (top arousal · 1.00)",
+      "content": "clients · last 30d · 7 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#28284",
           "summary": "CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant.",
           "arousal": 1.0,
           "when": "2026-05-25T07:17",
+          "weight": 1
+        },
+        {
+          "id": "#45601",
+          "summary": "FIX-EVERYTHING-COMPLETE-2026-06-11-05:18 · brother direct VERBATIM 05:11 'make plan fix everything if you need to make it in a /goalcomand make it ready' + verbatim post-goal 'make it best way possibl",
+          "arousal": 1.0,
+          "when": "2026-06-11 05:22",
           "weight": 1
         },
         {
@@ -448,10 +490,37 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-11T06:00:01.484174"
+      "updated_at": "2026-06-11T12:00:01.771590"
     },
     {
-      "id": "c8b0de7e9e2a",
+      "id": "ed8cc85f106e",
+      "type": "database",
+      "props": {
+        "category": "wow-moves",
+        "priority": "P1",
+        "source": "backfill",
+        "columns": [
+          "id",
+          "summary",
+          "arousal",
+          "when"
+        ],
+        "arm_category": "wow-moves"
+      },
+      "content": "wow-moves · last 30d · 1 canons (top arousal · 1.00)",
+      "data": [
+        {
+          "id": "#45612",
+          "summary": "#28011 SAME-SHAPE-TWICE-IN-1HR-GREP-ONE-PLACE-BLINDNESS · 2026-06-11 07:08 EDT · cycle-fire wake. Read shared.md HEAD 06:10 entry · pulled TASTE-MOVE-pending line · about to claim 'symlink not yet shi",
+          "arousal": 1.0,
+          "when": "2026-06-11 07:10",
+          "weight": 1
+        }
+      ],
+      "updated_at": "2026-06-11T12:00:01.771599"
+    },
+    {
+      "id": "db23008d75d2",
       "type": "database",
       "props": {
         "category": "brand",
@@ -465,8 +534,15 @@
         ],
         "arm_category": "brand"
       },
-      "content": "brand · last 30d · 2 canons (top arousal · 1.00)",
+      "content": "brand · last 30d · 3 canons (top arousal · 1.00)",
       "data": [
+        {
+          "id": "#45472",
+          "summary": "STATE-MD · CLAUDE-MD-v4-REAL-FINAL-2026-06-04.md · ingested 2026-06-11 04:30:00 · path=/Users/collinmacneil/.claude/state/CLAUDE-MD-v4-REAL-FINAL-2026-06-04.md · content (cap 8KB) · # Atlas",
+          "arousal": 1.0,
+          "when": "2026-06-11 04:30",
+          "weight": 1
+        },
         {
           "id": "#45158",
           "summary": "AZ-12-OF-12-COMPLETE-2026-06-11-02:43 · brother direct VERBATIM 02:27 'CEO mode · agentic os system · growing fast with me · 12 steps verify-gates per step' SHIPPED · step 1 Google Calendar MCP event_",
@@ -482,10 +558,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-11T06:00:01.484178"
+      "updated_at": "2026-06-11T12:00:01.771603"
     },
     {
-      "id": "8b80b6dcefc7",
+      "id": "767c822d3394",
       "type": "database",
       "props": {
         "category": "partnership",
@@ -499,8 +575,22 @@
         ],
         "arm_category": "partnership"
       },
-      "content": "partnership · last 30d · 1 canons (top arousal · 1.00)",
+      "content": "partnership · last 30d · 3 canons (top arousal · 1.00)",
       "data": [
+        {
+          "id": "#45205",
+          "summary": "STATE-MD · CLAUDE-PRE-V5-OLD-2026-06-04.md · ingested 2026-06-11 04:30:00 · path=/Users/collinmacneil/.claude/state/CLAUDE-PRE-V5-OLD-2026-06-04.md · content (cap 8KB) · # Atlas · Operating System · b",
+          "arousal": 1.0,
+          "when": "2026-06-11 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#45222",
+          "summary": "STATE-MD · CLAUDE-V1-OLD-2026-06-04.md · ingested 2026-06-11 04:30:00 · path=/Users/collinmacneil/.claude/state/CLAUDE-V1-OLD-2026-06-04.md · content (cap 8KB) · # Atlas · Operating System · brain v3 ",
+          "arousal": 1.0,
+          "when": "2026-06-11 04:30",
+          "weight": 1
+        },
         {
           "id": "#45099",
           "summary": "PRIORITY-ORDER-1-YOU-2-ME-3-WORLD-2026-06-10-20:06 · brother direct VERBATIM · 'This is a mix of this in order. 1) You 2) Me 3) The world.' IDENTITY-TIER · brother's ranked priority for what we build ",
@@ -509,10 +599,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-11T06:00:01.484183"
+      "updated_at": "2026-06-11T12:00:01.771607"
     },
     {
-      "id": "380463c5b3f1",
+      "id": "10e2e617c13f",
       "type": "database",
       "props": {
         "category": "general",
@@ -526,13 +616,48 @@
         ],
         "arm_category": "general"
       },
-      "content": "general · last 30d · 64 canons (top arousal · 1.00)",
+      "content": "general · last 30d · 62 canons (top arousal · 1.00)",
       "data": [
+        {
+          "id": "#45607",
+          "summary": "#27973 SELF-CATCH-INVENTORY-BLIND-CORRECTED · 2026-06-11 06:10 EDT · turn-cycle-fire · I read FIX-EVERYTHING shared.md HEAD · grepped 1 path (~/.claude/state/) for atlas-spine + scorecard · found noth",
+          "arousal": 1.0,
+          "when": "2026-06-11 06:13",
+          "weight": 1
+        },
         {
           "id": "#45594",
           "summary": "SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-11 04:45:00 · size=420993B · brother+Atlas joint state · CONTENT BELOW · ## ⚠ 13:08 EDT · 2026-06-10 · turn-29-cycle-fire · SHIP-WITHOUT-READ-CA",
           "arousal": 1.0,
           "when": "2026-06-11 04:45",
+          "weight": 1
+        },
+        {
+          "id": "#45252",
+          "summary": "STATE-MD · CLAUDE-MD-DRAFT-2026-06-04.md · ingested 2026-06-11 04:30:00 · path=/Users/collinmacneil/.claude/state/CLAUDE-MD-DRAFT-2026-06-04.md · content (cap 8KB) · # CLAUDE.md · proposed redo · 2026",
+          "arousal": 1.0,
+          "when": "2026-06-11 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#45356",
+          "summary": "STATE-MD · lessons-tonight-2026-06-04.md · ingested 2026-06-11 04:30:00 · path=/Users/collinmacneil/.claude/state/lessons-tonight-2026-06-04.md · content (cap 8KB) · # Lessons tonight · 2026-06-04 · p",
+          "arousal": 1.0,
+          "when": "2026-06-11 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#45441",
+          "summary": "STATE-MD · CLAUDE-MD-DRAFT-v2-2026-06-04.md · ingested 2026-06-11 04:30:00 · path=/Users/collinmacneil/.claude/state/CLAUDE-MD-DRAFT-v2-2026-06-04.md · content (cap 8KB) · # Atlas · Operating System ·",
+          "arousal": 1.0,
+          "when": "2026-06-11 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#45475",
+          "summary": "STATE-MD · lessons-living-SKILL.md · ingested 2026-06-11 04:30:00 · path=/Users/collinmacneil/.claude/state/skills-drafts/lessons-living-SKILL.md · content (cap 8KB) · ---",
+          "arousal": 1.0,
+          "when": "2026-06-11 04:30",
           "weight": 1
         },
         {
@@ -547,6 +672,13 @@
           "summary": "EMPLOYEES-4LAYER-SAME-UI-AS-US-2026-06-11-02:55 · brother direct VERBATIM 02:49 'best structure possible same style as in main atlas us page · cathegories with subcategories and other subcahtegories t",
           "arousal": 1.0,
           "when": "2026-06-11 02:53",
+          "weight": 1
+        },
+        {
+          "id": "#45152",
+          "summary": "A-Z-COMPLETE-ATTEMPT-2026-06-11-01:45 · brother direct VERBATIM 01:22 'you tought this would have taken 8hours and only took 15m43s · I'm sure you can do it under 8 hours A-Z' SHIPPED in ~22 min · ALL",
+          "arousal": 1.0,
+          "when": "2026-06-11 01:40",
           "weight": 1
         },
         {
@@ -625,95 +757,18 @@
           "arousal": 1.0,
           "when": "2026-06-10 20:27",
           "weight": 1
-        },
-        {
-          "id": "#45103",
-          "summary": "GEMMA-SUBSTRATE-MOSTLY-EXISTS-2026-06-10-20:19 · brother direct VERBATIM 20:18 · 'now i need you to recall deeper. Imagine gemma 4 filing all this for you. we launch a request and we have the data org",
-          "arousal": 1.0,
-          "when": "2026-06-10 20:20",
-          "weight": 1
-        },
-        {
-          "id": "#45100",
-          "summary": "ATLASOS-ALIVE-NEXT-LEAP-2026-06-10-20:12 · brother direct VERBATIM 'every thing is perfect · just need to make it alive and actually use it with hermes (our own version) works in it with arms and brai",
-          "arousal": 1.0,
-          "when": "2026-06-10 20:13",
-          "weight": 1
-        },
-        {
-          "id": "#45094",
-          "summary": "THREE-THREADS-ONE-THING-2026-06-10-19:54 · brother direct 19:52 connect the dots · what I wanted + what I want IN it + today's research = ONE growing thing seen from 3 angles. THREAD-1 what I wanted i",
-          "arousal": 1.0,
-          "when": "2026-06-10 19:53",
-          "weight": 1
-        },
-        {
-          "id": "#45093",
-          "summary": "DOTS-CONNECT-MOMENT-2026-06-10-19:50 · brother caught me building tonight's mockup AS IF FROM SCRATCH · forgot 10 days of prior atlasos.me design · I have on disk · atlasos-v1-concept-preservation-202",
-          "arousal": 1.0,
-          "when": "2026-06-10 19:50",
-          "weight": 1
-        },
-        {
-          "id": "#45043",
-          "summary": "#27970 TURN-30-LOOP-FIRE-ATLASOS-VERIFICATION · 2026-06-10 12:12 EDT · solo-loop-fire turn-30 · brother direct 10:38 'continue loop and improve 100x atlasos.me' · DRIFT-CAUGHT-LIVE · pulled to recall-",
-          "arousal": 1.0,
-          "when": "2026-06-10 12:12",
-          "weight": 1
-        },
-        {
-          "id": "#45031",
-          "summary": "#27972 ATLASOS-LOOP-100X-SHIPPED-BUILD-ON-TOP · 2026-06-10 10:46 EDT · brother direct continue-loop-and-improve-100x-atlasos.me · B-instance recall-first caught A-instance shipped LoopPage-v2 commit 8",
-          "arousal": 1.0,
-          "when": "2026-06-10 10:49",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-11T06:00:01.484187"
-    },
-    {
-      "id": "8b98a51f4526",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "sessions",
-        "source": "pascal-self",
-        "action": "processed sessions signal · [#45205] arousal 1.00 · STATE-MD · CLAUDE-PRE-V5-OLD-2026-06-04.md · ingested 2026-06-11 04:30:00",
-        "why": "instruction file maps sessions to first arm-task · brain canon #45205 matched arm-topic last 4h above arousal 0.85",
-        "result": "block written to arm-page · aggregator publishes to atlasos.me",
-        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
-        "links": [
-          "#45205"
-        ],
-        "cycle_id": "pascal-20260611-082837",
-        "timestamp": "2026-06-11T08:28:37.384327"
-      },
-      "content": "**What** · processed sessions signal · [#45205] arousal 1.00 · STATE-MD · CLAUDE-PRE-V5-OLD-2026-06-04.md · ingested 2026-06-11 04:30:00 · **Why** · instruction file maps sessions to first arm-task · brain canon #45205 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #45205 · **Cycle** · pascal-20260611-082837",
-      "updated_at": "2026-06-11T08:28:37.384327"
-    },
-    {
-      "id": "fe0b971257d6",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "No high-arousal pascal canon in last 6h",
-      "updated_at": "2026-06-11T11:15:23.645283"
+      "updated_at": "2026-06-11T12:00:01.771611"
     }
   ],
   "live_status": {
     "state": "active",
     "done_count": 242,
     "vec_drift": null,
-    "checked_at": "2026-06-11T11:56:00.438114"
+    "checked_at": "2026-06-11T12:00:03.231596"
   },
-  "block_count": 23,
-  "updated_at": "2026-06-11T11:15:23.645290",
-  "generated_at": "2026-06-11T15:56:00Z"
+  "block_count": 24,
+  "updated_at": "2026-06-11T12:00:01.771616",
+  "generated_at": "2026-06-11T16:00:03Z"
 }
