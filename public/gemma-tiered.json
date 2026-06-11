@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-11T16:19:10Z",
+  "generated_at": "2026-06-11T16:24:21Z",
   "source": "me-gemma-tier-into-7-cats.py (rule-based router · per brother direct #45099 1-YOU-2-ME-3-WORLD)",
-  "items_total": 5,
+  "items_total": 3,
   "tier_summary": {
     "atlas": {
       "subs": 0,
@@ -25,11 +25,11 @@
       "P2": 0
     },
     "manager": {
-      "subs": 4,
-      "items": 5,
+      "subs": 2,
+      "items": 2,
       "P0": 0,
       "P1": 0,
-      "P2": 5
+      "P2": 2
     },
     "arms": {
       "subs": 0,
@@ -46,11 +46,11 @@
       "P2": 0
     },
     "future": {
-      "subs": 0,
-      "items": 0,
+      "subs": 1,
+      "items": 1,
       "P0": 0,
       "P1": 0,
-      "P2": 0
+      "P2": 1
     }
   },
   "tiers": {
@@ -97,10 +97,10 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-001-1781194439",
+                  "id": "batch-001-1781194754",
                   "summary": "Analyzing Atlas-Cycle inventory and recall steps, including root cause identification and fix implementation.",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-001-1781194439.md",
+                  "source_file": "/gemma-sources/batch-001-1781194754.md",
                   "first_role": "user",
                   "last_timestamp": "2026-06-11T16:10:44",
                   "gemma_raw": "CATEGORY: Atlas-Cycle\nSUBCATEGORY:  Inventory-Recall\nSUMMARY:  Analyzing Atlas-Cycle inventory and recall steps, including root cause identification and fix implementation.",
@@ -123,10 +123,10 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-002-1781194440",
+                  "id": "batch-002-1781194755",
                   "summary": "Understanding the timing of plist unload and its impact on system stability.",
                   "turn_count": 1,
-                  "source_file": "/gemma-sources/batch-002-1781194440.md",
+                  "source_file": "/gemma-sources/batch-002-1781194755.md",
                   "first_role": "assistant",
                   "last_timestamp": "2026-06-11T16:11:42",
                   "gemma_raw": "CATEGORY: Launchctl\nSUBCATEGORY:  plist Management\nSUMMARY:  Understanding the timing of plist unload and its impact on system stability.",
@@ -137,87 +137,17 @@
             }
           },
           "total_items": 1
-        },
-        "mac-mini-files-cycle-fire-context": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "state-b6a960c177",
-                  "summary": "Detailed log of the cycle-fire context, including the symlink and script issues.",
-                  "priority": "P2",
-                  "source_path": "/Users/collinmacneil/.claude/state/atlas-brother-shared.md",
-                  "source_filename": "atlas-brother-shared.md",
-                  "file_mtime": "2026-06-11 12:15",
-                  "first_role": "mac-mini-file",
-                  "gemma_raw": "## CATEGORY: atlas-brother-shared\nSUBCATEGORY: cycle-fire-context\nPRIORITY: P2\nSUMMARY:  Detailed log of the cycle-fire context, including the symlink and script issues. \n\n##",
-                  "kind": "state-doc",
-                  "_original_cat": "mac-mini-files",
-                  "_original_sub": "cycle-fire-context"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        },
-        "mac-mini-files-unsorted": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "state-25b993974c",
-                  "summary": "",
-                  "priority": "P2",
-                  "source_path": "/Users/collinmacneil/.claude/state/daemon-health-alert.md",
-                  "source_filename": "daemon-health-alert.md",
-                  "file_mtime": "2026-06-11 12:15",
-                  "first_role": "mac-mini-file",
-                  "gemma_raw": "##  Daemon Health Alert.md\n\n**CATEGORY:** daemon-health\n**SUBCATEGORY:** stale-daemons\n**PRIORITY:** P2\n**SUMMARY:**  Check stale daemons (signal-loop, atlas-20hr-primary, brain-write-canary) before new build.",
-                  "kind": "state-doc",
-                  "_original_cat": "mac-mini-files",
-                  "_original_sub": "unsorted"
-                },
-                {
-                  "id": "state-479653c3a9",
-                  "summary": "",
-                  "priority": "P2",
-                  "source_path": "/Users/collinmacneil/.claude/state/continuity-log.md",
-                  "source_filename": "continuity-log.md",
-                  "file_mtime": "2026-06-11 12:14",
-                  "first_role": "mac-mini-file",
-                  "gemma_raw": "##  continuity-log.md\n\n**CATEGORY:** atlas-loop\n**SUBCATEGORY:** atlas-cycles\n**PRIORITY:** P1\n**SUMMARY:**  Detailed log of Atlas's loop cycles, including operator research, pricing, and hygiene.",
-                  "kind": "state-doc",
-                  "_original_cat": "mac-mini-files",
-                  "_original_sub": "unsorted"
-                }
-              ]
-            }
-          },
-          "total_items": 2
         }
       },
-      "total": 5,
+      "total": 2,
       "priority_counts": {
         "P0": 0,
         "P1": 0,
-        "P2": 5
+        "P2": 2
       },
       "original_categories": [
         "atlas-cycle",
-        "launchctl",
-        "mac-mini-files"
+        "launchctl"
       ]
     },
     "arms": {
@@ -241,14 +171,45 @@
       "original_categories": []
     },
     "future": {
-      "subs": {},
-      "total": 0,
+      "subs": {
+        "dedup-check-28284": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "state-1094f3660b",
+                  "summary": "Research on Dedup_Check #28284, skip as already posted.",
+                  "priority": "P2",
+                  "source_path": "/Users/collinmacneil/.claude/state/arm-outputs/research/arm-1781194757-research.md",
+                  "source_filename": "arm-1781194757-research.md",
+                  "file_mtime": "2026-06-11 12:19",
+                  "first_role": "mac-mini-file",
+                  "gemma_raw": "CATEGORY: Dedup_Check\nSUBCATEGORY: #28284\nPRIORITY: P2\nSUMMARY:  Research on Dedup_Check #28284, skip as already posted.",
+                  "kind": "state-doc",
+                  "_original_cat": "dedup-check",
+                  "_original_sub": "28284"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        }
+      },
+      "total": 1,
       "priority_counts": {
         "P0": 0,
         "P1": 0,
-        "P2": 0
+        "P2": 1
       },
-      "original_categories": []
+      "original_categories": [
+        "dedup-check"
+      ]
     }
   }
 }
