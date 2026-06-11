@@ -91,38 +91,35 @@ function render(data) {
   document.getElementById('crumb-cat-link').textContent = cat.name;
   document.getElementById('crumb-cat-link').href = `/cat.html?cat=${currentCat}`;
   document.getElementById('crumb-sub').textContent = currentSub.replace(/-/g,' ');
-  const subData = (data.tiers?.[currentCat]?.subs?.[currentSub]) || { items: [] };
+  // 4-LAYER · this page shows sub-subs (priority groupings) · click drills to /subsub.html (items)
+  const subData = (data.tiers?.[currentCat]?.subs?.[currentSub]) || { subsubs: {}, total_items: 0 };
   document.title = `atlasos.me · ${cat.name} · ${currentSub}`;
   document.getElementById('sub-title').textContent = currentSub.replace(/-/g,' ');
-  const items = subData.items || [];
-  document.getElementById('sub-subtitle').textContent = `${items.length} item${items.length !== 1 ? 's' : ''} · sorted by priority`;
+  const subsubs = subData.subsubs || {};
+  const totalItems = subData.total_items || 0;
+  document.getElementById('sub-subtitle').textContent = `${totalItems} item${totalItems !== 1 ? 's' : ''} · grouped by priority · click priority to see items`;
 
-  // Sort · P0 first
-  const prio = {P0:0,P1:1,P2:2};
-  items.sort((a, b) => (prio[a.priority]??3) - (prio[b.priority]??3));
-  const visible = showAll ? items : items.slice(0, 10);
   const area = document.getElementById('items-area');
-  if (!items.length) {
+  if (!totalItems) {
     area.innerHTML = '<div class="empty">no items yet in this sub-category · Gemma fills overnight</div>';
     return;
   }
   const prioColor = p => p === 'P0' ? '#C03A2B' : (p === 'P1' ? 'var(--amber)' : 'var(--ink-faint)');
-  area.innerHTML = visible.map(it => {
-    const sourceLink = it.source_file || (it.source_path ? `file://${it.source_path}` : '');
-    const prio = it.priority || 'P2';
-    return `<div class="item-card ${prio.toLowerCase()}" onclick="location.href='/content.html?id=${encodeURIComponent(it.id || it.source_path || '')}&cat=${currentCat}&sub=${encodeURIComponent(currentSub)}'">
+  const prioDesc = { P0: 'brother-direct · canon-floor · safety', P1: 'active project · current focus', P2: 'research · reference · background' };
+  area.innerHTML = ['P0','P1','P2'].map(prio => {
+    const items = subsubs[prio]?.items || [];
+    if (!items.length) return '';
+    return `<div class="item-card ${prio.toLowerCase()}" onclick="location.href='/subsub.html?cat=${currentCat}&sub=${encodeURIComponent(currentSub)}&subsub=${prio}'">
       <div class="item-title">
         <span class="pill" style="color:${prioColor(prio)};background:${prio==='P0'?'#FBE5E1':(prio==='P1'?'var(--amber-soft)':'var(--hair)')};">${prio}</span>
-        ${escape((it.source_filename || it.id || '').substring(0,80))}
+        ${items.length} item${items.length !== 1 ? 's' : ''}
       </div>
-      <div class="item-summary">${escape(it.summary || '(no summary yet)')}</div>
+      <div class="item-summary">${escape(prioDesc[prio] || '')}</div>
       <div class="item-meta">
-        ${sourceLink ? `<a href="${escape(sourceLink)}" target="_blank">source ↗</a>` : ''}
-        ${it.file_mtime ? `<span>${escape(it.file_mtime)}</span>` : ''}
-        ${it.kind ? `<span>${escape(it.kind)}</span>` : ''}
+        <span>click to drill</span>
       </div>
     </div>`;
-  }).join('') + (items.length > 10 && !showAll ? `<a class="show-all" onclick="showAll=true;render(JSON.parse(window._gd))">show all ${items.length} items ›</a>` : '');
+  }).join('') || '<div class="empty">no items at any priority</div>';
   window._gd = JSON.stringify(data);
 }
 init();
