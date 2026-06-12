@@ -4,6 +4,40 @@ import { Plus, ChevronLeft, ChevronRight, FileText } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { sb, listNav, type NavItem } from "../lib/db";
 
+// IDEA FACTORY v1 · idea → free-AI shapes a plan → task in triage
+async function shapeIdea(idea: string): Promise<{ title: string; detail: string }> {
+  const res = await fetch("/api/chat", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      model: "meta-llama/llama-3.3-70b-instruct:free",
+      system: "You shape raw ideas into actionable tasks for an agentic OS. Output STRICT JSON only: {\"title\":\"<task title max 10 words>\",\"detail\":\"WHAT: ...\\nWHY: ...\\nFIRST STEPS: 1) ... 2) ... 3) ...\"}",
+      messages: [{ role: "user", content: idea }],
+    }),
+  });
+  let acc = "";
+  if (res.ok && res.body) {
+    const reader = res.body.getReader();
+    const dec = new TextDecoder();
+    for (;;) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      for (const line of dec.decode(value, { stream: true }).split("\n")) {
+        const t = line.trim();
+        if (!t.startsWith("data:") || t.includes("[DONE]")) continue;
+        try { acc += JSON.parse(t.slice(5))?.choices?.[0]?.delta?.content ?? ""; } catch { /* keepalive */ }
+      }
+    }
+  }
+  try {
+    const m = acc.match(/\{[\s\S]*\}/);
+    const j = JSON.parse(m ? m[0] : acc);
+    return { title: String(j.title || idea).slice(0, 90), detail: String(j.detail || "") };
+  } catch {
+    return { title: idea.slice(0, 90), detail: "" };
+  }
+}
+
 const LANES = ["triage", "todo", "ready", "running", "blocked", "done"] as const;
 type Lane = (typeof LANES)[number];
 
@@ -24,6 +58,24 @@ export default function KanbanPage({ item }: { item: NavItem }) {
   const [arms, setArms] = useState<NavItem[]>([]);
   const [adding, setAdding] = useState(false);
   const [title, setTitle] = useState("");
+  const [ideaMode, setIdeaMode] = useState(false);
+  const [idea, setIdea] = useState("");
+  const [shaping, setShaping] = useState(false);
+
+  const factory = async () => {
+    const v = idea.trim();
+    if (!v || shaping) return;
+    setShaping(true);
+    try {
+      const shaped = await shapeIdea(v);
+      await sb().from("atlas_tasks").insert({ title: shaped.title, detail: shaped.detail, state: "triage", created_by: "idea-factory" });
+      setIdea("");
+      setIdeaMode(false);
+      reload();
+    } finally {
+      setShaping(false);
+    }
+  };
 
   const reload = useCallback(() => {
     void sb().from("atlas_tasks").select("*").neq("state", "archived").order("order_idx")
@@ -67,6 +119,21 @@ export default function KanbanPage({ item }: { item: NavItem }) {
             triage → todo → ready (arms pick up ready) → running → done · assign an arm + move to ready = it works alone
           </div>
         </div>
+        {ideaMode ? (
+          <div className="flex items-center gap-2">
+            <input autoFocus value={idea} onChange={(e) => setIdea(e.target.value)}
+              onKeyDown={(e) => { if (e.key === "Enter") void factory(); if (e.key === "Escape") setIdeaMode(false); }}
+              placeholder={shaping ? "AI shaping the plan…" : "Drop a raw idea · AI shapes it · Enter"}
+              disabled={shaping}
+              className="w-80 rounded-lg border px-3 py-1.5 text-sm outline-none"
+              style={{ borderColor: "#0a84ff" }} />
+          </div>
+        ) : (
+          <button className="flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-sm"
+            style={{ borderColor: "#0a84ff", color: "#0a84ff" }} onClick={() => setIdeaMode(true)}>
+            💡 Idea
+          </button>
+        )}
         {adding ? (
           <input
             autoFocus value={title}
