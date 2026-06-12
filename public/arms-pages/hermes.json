@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "0c9403cbdafb",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-11T15:51:24.002206"
-      },
-      "content": "Hermes decision · arm=research · priority=P1 · task: Continue deep-dive into memory-architecture-lift quadrant for P1 closure · why: This directly continues the high-priority P1 memory architecture work from cycle 6 that's marked for completion",
-      "updated_at": "2026-06-11T15:51:24.002216"
-    },
-    {
       "id": "f5f5ca929160",
       "type": "callout",
       "props": {
@@ -693,15 +681,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the discrepancy in loop-health monitoring flagged in #45633 to ensure correct log tracking for me-loop-health.sh · why: Recent cycle-wake audits and false alarms indicate a critical monitoring misalignment that could affect system stability. This is a P1 issue directly tied to active memory-architecture-lift work (#28284).",
       "updated_at": "2026-06-11T20:25:34.596340"
+    },
+    {
+      "id": "685c80a6969f",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-11T20:40:49.860347"
+      },
+      "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the loop-health false alarm to ensure me-loop-health.sh is now correctly monitoring the appropriate logs and not me-self-improve.log · why: Recent logs indicate a monitoring misconfiguration that could lead to false alarms or missed critical events. Resolving this ensures system reliability.",
+      "updated_at": "2026-06-11T20:40:49.860356"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-11T20:38:49.491326"
+    "checked_at": "2026-06-11T20:43:50.423186"
   },
   "block_count": 30,
-  "updated_at": "2026-06-11T20:25:34.596342",
-  "generated_at": "2026-06-12T00:38:49Z"
+  "updated_at": "2026-06-11T20:40:49.860357",
+  "generated_at": "2026-06-12T00:43:50Z"
 }
