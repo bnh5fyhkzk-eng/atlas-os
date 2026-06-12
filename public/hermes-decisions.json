@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-12T03:13:24Z",
-  "count": 7,
+  "generated_at": "2026-06-12T03:28:44Z",
+  "count": 8,
   "decisions": [
     {
       "arm": "research",
@@ -64,6 +64,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-06-11T23:13:24.769566"
+    },
+    {
+      "arm": "research",
+      "task": "Investigate the loop-health false alarm issue surfaced in #45633 to prevent recurrence",
+      "why": "This is a critical infrastructure issue affecting system reliability (P1 memory-architecture quadrant) and has caused observable disruptions (auto-wake fires, wrong log monitoring). Resolving it will stabilize the core loop-health monitoring system.",
+      "priority": "P1",
+      "use_skill": "brain-rrf",
+      "est_minutes": 90,
+      "timestamp": "2026-06-11T23:28:44.369714"
     }
   ]
 }
