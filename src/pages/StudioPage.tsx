@@ -38,8 +38,19 @@ export default function StudioPage({ item }: { item: NavItem }) {
       </header>
       {err && <div className="mx-6 mt-3 rounded-lg border border-amber-200 bg-amber-50 p-2 text-sm">Studio: {err}</div>}
       <div className="min-h-0 flex-1 overflow-y-auto p-6">
-        <div className="grid gap-4 md:grid-cols-2">
-          {Object.entries(groups).sort().map(([g, models]) => (
+        {(["free", "paid"] as const).map((tier) => (
+          <div key={tier} className="mb-8">
+            <div className="mb-3 flex items-center gap-2">
+              <span className="text-lg font-semibold">{tier === "free" ? "✅ FREE · use today" : "💳 PAID · waits for billing"}</span>
+              <span className="text-xs" style={{ color: "var(--text-faint)" }}>
+                {tier === "free" ? "your key · 1,500 req/day · text, embeddings, gemma" : "image · video · music · fires the moment billing works"}
+              </span>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2">
+              {Object.entries(groups).sort()
+                .map(([g, models]) => [g, models.filter((m) => m.tier === tier)] as const)
+                .filter(([, models]) => models.length > 0)
+                .map(([g, models]) => (
             <div key={g} className="rounded-xl border p-3" style={{ borderColor: "var(--border)" }}>
               <div className="mb-2 text-sm font-semibold">{g} <span style={{ color: "var(--text-faint)" }}>· {models.length}</span></div>
               <div className="space-y-1.5">
@@ -66,8 +77,10 @@ export default function StudioPage({ item }: { item: NavItem }) {
                 })}
               </div>
             </div>
-          ))}
-        </div>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
