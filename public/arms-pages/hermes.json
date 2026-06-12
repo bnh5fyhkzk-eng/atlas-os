@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "2a2e284e8108",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-11T15:36:51.227357"
-      },
-      "content": "Hermes decision · arm=research · priority=P1 · task: Deep-dive into memory-architecture-lift quadrant to finalize P1 closure · why: Recent brain canon #28284 indicates this is a high-priority research task that needs completion before moving forward",
-      "updated_at": "2026-06-11T15:36:51.227371"
-    },
-    {
       "id": "0c9403cbdafb",
       "type": "callout",
       "props": {
@@ -693,15 +681,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the loop-health false alarm issue surfaced in cycle-wake audit · why: This is a P1 memory-architecture issue affecting daemon health monitoring, with recent activity indicating it needs immediate attention",
       "updated_at": "2026-06-11T20:10:20.069007"
+    },
+    {
+      "id": "f23cae37e603",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-11T20:25:34.596329"
+      },
+      "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the discrepancy in loop-health monitoring flagged in #45633 to ensure correct log tracking for me-loop-health.sh · why: Recent cycle-wake audits and false alarms indicate a critical monitoring misalignment that could affect system stability. This is a P1 issue directly tied to active memory-architecture-lift work (#28284).",
+      "updated_at": "2026-06-11T20:25:34.596340"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-11T20:23:46.642120"
+    "checked_at": "2026-06-11T20:28:47.526316"
   },
   "block_count": 30,
-  "updated_at": "2026-06-11T20:10:20.069008",
-  "generated_at": "2026-06-12T00:23:46Z"
+  "updated_at": "2026-06-11T20:25:34.596342",
+  "generated_at": "2026-06-12T00:28:47Z"
 }
