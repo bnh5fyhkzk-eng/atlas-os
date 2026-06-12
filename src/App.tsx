@@ -10,6 +10,7 @@ import AgentPage from "./pages/AgentPage";
 import CalendarPage from "./pages/CalendarPage";
 import ProposalsPage from "./pages/ProposalsPage";
 import { CmdK } from "./components/CmdK";
+import { AtlasBar } from "./components/AtlasBar";
 
 export default function App() {
   return (
@@ -162,6 +163,7 @@ function Shell() {
       </nav>
 
       <CmdK />
+      <AtlasBar />
       <main className="min-w-0 flex-1 overflow-y-auto">
         <Routes>
           <Route path="/home" element={home ? <Canvas nav={nav} home={home} /> : null} />
