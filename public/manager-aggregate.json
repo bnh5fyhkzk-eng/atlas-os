@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-12T04:08:08Z",
+  "generated_at": "2026-06-12T04:23:08Z",
   "arm_count": 8,
   "category_counts": {
     "discovery": 0,
-    "decision": 24,
+    "decision": 25,
     "action": 0,
     "risk": 0,
     "win": 0,
@@ -13,10 +13,21 @@
     "briefing": 26,
     "idea": 0
   },
-  "total_blocks": 195,
+  "total_blocks": 196,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "bb46fdec5311",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the recurring cycle-fire pattern noted in #45678 to determine if it's a signal or noise. · why: This is a P1 priority due to its recurrence (3rd instance in 1 day) and potential impact on memory-architecture-lift quadrant.",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-12T00:14:38.376719"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -288,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "8800f9195ce7",
+        "type": "callout",
+        "content": "**What** · Initiated deep-memory scan of quadrant #45678 to isolate cycle-fire patterns and compare against baseline noise thresholds. · **Why** · Recurring cycle-fire (3x/1d) suggests non-random artifact—potential signal interference or memory-lift instability per P1 priority. · **Result** · Scan i",
+        "priority": "signal-noise-differentiation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-12T00:14:46.703013"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -628,17 +650,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-11T18:00:03.909254"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "300dd84b6400",
-        "type": "database",
-        "content": "self-improvement · last 30d · 2 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-11T18:00:03.909250"
       },
       {
         "arm": "dream",
