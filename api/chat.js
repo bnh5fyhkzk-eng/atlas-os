@@ -147,11 +147,11 @@ export default async function handler(req, res) {
   }
   if (!callKey) return res.status(500).json({ error: "no provider key available" });
 
-  const or = (body) =>
-    fetch(`${base}/chat/completions`, {
+  const callOnce = (theBase, theKey, theModel, body) =>
+    fetch(`${theBase}/chat/completions`, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${callKey}`,
+        Authorization: `Bearer ${theKey}`,
         "Content-Type": "application/json",
         "HTTP-Referer": "https://atlasos.me",
         "X-Title": "Atlas-OS",
@@ -159,14 +159,28 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         max_tokens: 2048,
         ...body,
-        model: callModel,
-        // cheap-I/O plumbing (brother ideal 2026-06-12): OpenRouter-only plugins —
-        // middle-out compresses oversized context server-side · price-sorted routing
-        ...(base.includes("openrouter.ai")
+        model: theModel,
+        ...(theBase.includes("openrouter.ai")
           ? { transforms: ["middle-out"], provider: { sort: "price" } }
           : {}),
       }),
     });
+
+  // QUOTA-PROOF chain (brother hit raw 429 · 2026-06-12 16:32) · google native →
+  // AI-Studio fallback key → OpenRouter same model (pennies) · raw quota errors never
+  // reach the house
+  const or = async (body) => {
+    let r = await callOnce(base, callKey, callModel, body);
+    if (r.status === 429 && base.includes("googleapis") ) {
+      if (process.env.GOOGLE_FALLBACK_KEY && callKey !== process.env.GOOGLE_FALLBACK_KEY) {
+        r = await callOnce(base, process.env.GOOGLE_FALLBACK_KEY, callModel, body);
+      }
+      if (r.status === 429 && process.env.OPENROUTER_API_KEY) {
+        r = await callOnce("https://openrouter.ai/api/v1", process.env.OPENROUTER_API_KEY, model, body);
+      }
+    }
+    return r;
+  };
 
   res.setHeader("Content-Type", "text/event-stream");
   res.setHeader("Cache-Control", "no-cache");
