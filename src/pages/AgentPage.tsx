@@ -4,7 +4,7 @@
 // per-message model (Command Center = pick per send).
 import { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { ChevronRight, Plus, Send, Folder, Pause, Play, Wrench, FolderInput, MessageSquarePlus } from "lucide-react";
+import { ChevronRight, Plus, Send, Folder, Pause, Play, Wrench, FolderInput, MessageSquarePlus, Settings } from "lucide-react";
 import {
   sb,
   listNodes,
@@ -160,6 +160,67 @@ function TonightStrip() {
   );
 }
 
+// AI SETTINGS drawer · brother direct 2026-06-12 04:39 · "each ai page should have
+// a real setting where we see each ai skill, plugins, strengths, real prompt, cost
+// optimisation prompt · manage all of it in 1 place"
+function SettingsDrawer({ item, folders, nodes, onClose }: { item: NavItem; folders: Node[]; nodes: Node[]; onClose: () => void }) {
+  const navigate = useNavigate();
+  const setup = nodes.find((n) => n.title.startsWith("Setup · prompt"));
+  const setupText = (() => {
+    const c = setup?.content;
+    if (!Array.isArray(c)) return "";
+    return c.map((b) => Array.isArray((b as { content?: unknown }).content)
+      ? ((b as { content: { text?: string }[] }).content).map((s) => s.text ?? "").join("") : "").filter(Boolean).join("\n");
+  })();
+  const Section = ({ t, children }: { t: string; children: React.ReactNode }) => (
+    <div className="mb-4">
+      <div className="mb-1 text-xs font-semibold uppercase tracking-wider" style={{ color: "var(--text-faint)" }}>{t}</div>
+      <div className="text-sm" style={{ color: "var(--text-soft)" }}>{children}</div>
+    </div>
+  );
+  return (
+    <>
+      <div className="slideover-backdrop" onClick={onClose} />
+      <div className="slideover" style={{ maxWidth: 520 }}>
+        <div className="flex items-center justify-between px-5 py-3" style={{ borderBottom: "1px solid var(--border)" }}>
+          <div className="font-semibold">⚙️ {item.emoji} {item.title} · settings</div>
+          <button onClick={onClose} style={{ color: "var(--text-faint)" }}>✕</button>
+        </div>
+        <div className="overflow-y-auto p-5">
+          <Section t="Real prompt (what the cycle actually sends)">
+            <pre className="whitespace-pre-wrap rounded-lg border p-2 text-xs" style={{ borderColor: "var(--border)" }}>
+              {`You are the ${item.title} arm of Atlas-OS.\n${setupText ? `YOUR SETUP (house note · overrides): ${setupText}\n` : ""}+ folders · active goals · assigned task · 5-field output (WHAT/WHY/HOW/WHEN/RECOMMENDATION)`}
+            </pre>
+            {setup && (
+              <button className="mt-1.5 rounded-md border px-2 py-1 text-xs" style={{ borderColor: "#0a84ff", color: "#0a84ff" }}
+                onClick={() => { onClose(); navigate(`/p/${item.id}/n/${setup.id}`); }}>
+                ✏️ Edit Setup note — changes the arm next cycle
+              </button>
+            )}
+          </Section>
+          <Section t="Model + cost optimisation">
+            chat model · <b>{item.model || "deepseek/deepseek-chat-v3-0324"}</b><br />
+            cycle ladder · 1) gemma3:4b local <b>$0</b> → 2) deepseek paid (500 tok cap) → 3) :free roster (meetings)<br />
+            native keys · google/ openai/ x-ai/ prefixes route to YOUR keys (Providers page) · Gemini free tier 1,500 req/day
+          </Section>
+          <Section t="Skills + tools (live in chat)">
+            create_note (files into folders) · search_folders (checks prior work) · add_event (calendar) · ASK-mode tool approval in Proposals
+          </Section>
+          <Section t="Plugins (house organs this arm rides)">
+            arm-note API · arm-task API (kanban pickup) · goals strip steering · hermes-supabase cycle (10 min) · gemma backfill/distill
+          </Section>
+          <Section t="Strengths">
+            {setupText.split("\n").find((l) => l.startsWith("QUALITIES")) || "see Setup note"}
+          </Section>
+          <Section t="Memory">
+            {folders.length} folders · drill via {item.emoji} page columns · Copy button hands any folder to any AI
+          </Section>
+        </div>
+      </div>
+    </>
+  );
+}
+
 function systemPrompt(item: NavItem, folders: Node[]): string {
   const tree = folders.map((f) => `- ${f.emoji} ${f.title}`).join("\n");
   return (
@@ -176,6 +237,7 @@ export default function AgentPage({ item }: { item: NavItem }) {
   const navigate = useNavigate();
   const isCC = item.agent_slug === "command-center";
   const [folders, setFolders] = useState<Node[]>([]);
+  const [settingsOpen, setSettingsOpen] = useState(false);
   const [msgs, setMsgs] = useState<Msg[]>([]);
   const [chats, setChats] = useState<ChatRow[]>([]);
   const [chatId, setChatId] = useState<string | null>(null);
@@ -483,6 +545,14 @@ export default function AgentPage({ item }: { item: NavItem }) {
         <button
           className="flex items-center gap-1 rounded-md border px-2 py-1 text-xs"
           style={{ borderColor: "var(--border)", color: "var(--text-soft)" }}
+          onClick={() => setSettingsOpen(true)}
+          title="AI settings · prompt · model · skills · cost"
+        >
+          <Settings size={13} />
+        </button>
+        <button
+          className="flex items-center gap-1 rounded-md border px-2 py-1 text-xs"
+          style={{ borderColor: "var(--border)", color: "var(--text-soft)" }}
           onClick={() => void newChat()}
           title="New chat"
         >
@@ -512,6 +582,7 @@ export default function AgentPage({ item }: { item: NavItem }) {
         </select>
       </header>
 
+      {settingsOpen && <SettingsDrawer item={item} folders={rootFolders} nodes={folders} onClose={() => setSettingsOpen(false)} />}
       {isCC && <GoalsStrip />}
       {isCC && <TonightStrip />}
 
