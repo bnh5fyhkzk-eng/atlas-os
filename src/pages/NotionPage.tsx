@@ -130,6 +130,7 @@ export default function NotionPage({ item }: { item: NavItem }) {
               navId={item.id}
               parent={col.parent}
               items={col.items}
+              depth={k}
               label={col.parent ? (LEVEL_LABEL[k] ?? "Inside") : LEVEL_LABEL[0]}
               selectedId={k < folderPath.length ? folderPath[k].id : selectedNote && k === folderPath.length ? selectedNote.id : undefined}
               countIn={countIn}
@@ -153,6 +154,7 @@ function DrillColumn({
   items,
   label,
   selectedId,
+  depth = 0,
   countIn,
   onSelect,
   onChanged,
@@ -162,11 +164,13 @@ function DrillColumn({
   items: Node[];
   label: string;
   selectedId?: string;
+  depth?: number;
   countIn: (id: string) => number;
   onSelect: (n: Node) => void;
   onChanged: () => void;
 }) {
   const [adding, setAdding] = useState<"folder" | "note" | null>(null);
+  const defaultKind: "folder" | "note" = depth >= 2 ? "note" : "folder";
   const [title, setTitle] = useState("");
   const [renaming, setRenaming] = useState<string | null>(null);
   const navigate = useNavigate();
@@ -190,7 +194,13 @@ function DrillColumn({
       <div className="px-3 pb-1 pt-3 text-xs font-semibold uppercase tracking-wider" style={{ color: "var(--text-faint)" }}>
         {parent ? `${parent.emoji} ${parent.title}` : label}
       </div>
-      <div className="min-h-0 flex-1 space-y-0.5 overflow-y-auto px-2 pb-2">
+      <div
+        className="min-h-0 flex-1 space-y-0.5 overflow-y-auto px-2 pb-2"
+        onClick={(e) => {
+          // brother UX: click empty spot → inline add opens directly
+          if (e.target === e.currentTarget && !adding) setAdding(defaultKind);
+        }}
+      >
         {items.map((n) => {
           const isSel = n.id === selectedId;
           const cnt = n.kind === "folder" ? countIn(n.id) : 0;
@@ -249,6 +259,7 @@ function DrillColumn({
                 title="Archive (restorable)"
                 onClick={(e) => {
                   e.stopPropagation();
+                  if (!window.confirm(`Are you sure you want to delete "${n.title}"?\n(Restorable from archive)`)) return;
                   // self-improve signal: brother archiving an AI-filed item = correction
                   if (n.created_by !== "brother") logOverride(n.id, "archived-ai-item", { created_by: n.created_by, title: n.title });
                   void archiveNode(n.id).then(onChanged);

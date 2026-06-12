@@ -317,6 +317,7 @@ export default function Canvas({ nav }: { nav: NavItem[]; home: NavItem }) {
   };
 
   const removeWidget = (i: string) => {
+    if (!window.confirm("Are you sure you want to remove this widget?")) return;
     const { layout: l, widgets: w } = stateRef.current;
     persist(l.filter((it) => it.i !== i), w.filter((it) => it.i !== i));
   };

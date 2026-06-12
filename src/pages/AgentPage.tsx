@@ -72,6 +72,7 @@ export default function AgentPage({ item }: { item: NavItem }) {
   const [folderTitle, setFolderTitle] = useState("");
   const [dropMsg, setDropMsg] = useState<Msg | null>(null);
   const [cycleLog, setCycleLog] = useState<Node[]>([]);
+  const [meeting, setMeeting] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
 
   const rootFolders = useMemo(() => folders.filter((f) => !f.parent_id && f.kind === "folder"), [folders]);
@@ -152,7 +153,71 @@ export default function AgentPage({ item }: { item: NavItem }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chatId, busy]);
 
+  // MEETING ROOM · one text → ALL models answer in parallel · every perspective
+  const sendMeeting = async () => {
+    const text = input.trim();
+    if (!text || busy || !chatId) return;
+    setInput("");
+    setBusy(true);
+    setError(null);
+    const base: Msg[] = [...msgs, { role: "brother" as const, content: text }];
+    const seats = MODELS.map((m) => ({ role: "assistant" as const, model: m.id, content: "", tools: [] as ToolChip[] }));
+    setMsgs([...base, ...seats]);
+    void sb().from("atlas_messages").insert({ chat_id: chatId, role: "brother", content: text, meta: { meeting: true } }).then(() => undefined);
+
+    const paintSeat = (idx: number, content: string) =>
+      setMsgs((cur) => {
+        const copy = [...cur];
+        copy[base.length + idx] = { ...copy[base.length + idx], content };
+        return copy;
+      });
+
+    await Promise.all(
+      MODELS.map(async (m, idx) => {
+        try {
+          const res = await fetch("/api/chat", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              model: m.id,
+              system: `You are ${m.label} in Atlas-OS meeting room. Brother asked all AIs the same question. Give YOUR distinct perspective, concise and concrete. No filler.`,
+              messages: [{ role: "user", content: text }],
+            }),
+          });
+          if (!res.ok || !res.body) throw new Error(`${res.status}`);
+          const reader = res.body.getReader();
+          const decoder = new TextDecoder();
+          let acc = "";
+          let buf = "";
+          for (;;) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            buf += decoder.decode(value, { stream: true });
+            const lines = buf.split("\n");
+            buf = lines.pop() ?? "";
+            for (const line of lines) {
+              const t = line.trim();
+              if (!t.startsWith("data:")) continue;
+              const p = t.slice(5).trim();
+              if (p === "[DONE]") continue;
+              try {
+                const delta = JSON.parse(p)?.choices?.[0]?.delta?.content;
+                if (delta) { acc += delta; paintSeat(idx, acc); }
+              } catch { /* keepalive */ }
+            }
+          }
+          if (acc) void sb().from("atlas_messages").insert({ chat_id: chatId, role: "assistant", model: m.id, content: acc, meta: { meeting: true } }).then(() => undefined);
+          if (!acc) paintSeat(idx, "(no answer)");
+        } catch (e) {
+          paintSeat(idx, `(${m.label} failed · ${e instanceof Error ? e.message : e})`);
+        }
+      }),
+    );
+    setBusy(false);
+  };
+
   const send = async () => {
+    if (isCC && meeting) return sendMeeting();
     const text = input.trim();
     if (!text || busy || !chatId) return;
     setInput("");
@@ -276,6 +341,20 @@ export default function AgentPage({ item }: { item: NavItem }) {
             {paused ? "paused" : "auto"}
           </button>
         )}
+        {isCC && (
+          <button
+            className="flex items-center gap-1 rounded-md border px-2 py-1 text-xs"
+            style={{
+              borderColor: meeting ? "#0a84ff" : "var(--border)",
+              color: meeting ? "#0a84ff" : "var(--text-soft)",
+              background: meeting ? "rgba(10,132,255,0.08)" : undefined,
+            }}
+            onClick={() => setMeeting((v) => !v)}
+            title="Meeting room · one text → every AI answers"
+          >
+            🎪 meeting {meeting ? "ON" : "off"}
+          </button>
+        )}
         <div className="flex-1" />
         <button
           className="flex items-center gap-1 rounded-md border px-2 py-1 text-xs"
@@ -361,7 +440,13 @@ export default function AgentPage({ item }: { item: NavItem }) {
               onKeyDown={(e) => {
                 if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); void send(); }
               }}
-              placeholder={isCC ? `Plan with ${MODELS.find((m) => m.id === model)?.label ?? model}…` : `Message ${item.title}…`}
+              placeholder={
+                isCC && meeting
+                  ? "Ask everyone · all AIs answer in parallel…"
+                  : isCC
+                    ? `Plan with ${MODELS.find((m) => m.id === model)?.label ?? model}…`
+                    : `Message ${item.title}…`
+              }
               className="max-h-40 flex-1 resize-none rounded-xl border px-3.5 py-2.5 text-sm outline-none"
               style={{ borderColor: "var(--border)" }}
             />

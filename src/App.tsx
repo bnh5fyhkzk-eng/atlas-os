@@ -123,6 +123,7 @@ function Shell() {
                 className="hidden shrink-0 rounded p-1 group-hover:block hover:bg-black/5"
                 title="Remove arm (restorable)"
                 onClick={() => {
+                  if (!window.confirm(`Are you sure you want to delete the arm "${n.title}"?\n(Restorable)`)) return;
                   void updateNav(n.id, { archived: true }).then(() => {
                     reload();
                     if (isActive(n)) navigate("/home");
