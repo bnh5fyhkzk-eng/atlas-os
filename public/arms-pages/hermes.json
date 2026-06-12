@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "7e155975a503",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-11T21:11:27.843183"
-      },
-      "content": "Hermes decision · arm=research · priority=P1 · task: Investigate and document the differences between stale and retired daemons in the DAEMON-HEALTH-WHITELIST to prevent future false alarms. · why: Recent cycle-wake audit issues (#45620) indicate confusion between stale and retired daemons, which could lead to unnecessary alerts and system noise. Clarifying this will improve system reliability.",
-      "updated_at": "2026-06-11T21:11:27.843193"
-    },
-    {
       "id": "3fa208063077",
       "type": "callout",
       "props": {
@@ -618,15 +606,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the memory-architecture-lift quadrant mentioned in cycle 6 research to understand its implications for current P1 tasks. · why: The recent brain canon #28284 specifically mentions this quadrant in relation to P1 memory architecture, making it a high-priority research target that could unblock current work.",
       "updated_at": "2026-06-12T03:17:46.232902"
+    },
+    {
+      "id": "7658487b7138",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-12T03:33:00.624870"
+      },
+      "content": "Hermes decision · arm=research · priority=P1 · task: Analyze the cycle-fire pattern and 3rd-instance-1-day occurrence to determine the next optimal firing sequence. · why: The recent logs indicate a focus on cycle patterns and instance timing, which aligns with the research arm's capability to decode complex temporal sequences.",
+      "updated_at": "2026-06-12T03:33:00.624885"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-12T03:29:59.441490"
+    "checked_at": "2026-06-12T03:40:01.995953"
   },
   "block_count": 30,
-  "updated_at": "2026-06-12T03:17:46.232903",
-  "generated_at": "2026-06-12T07:29:59Z"
+  "updated_at": "2026-06-12T03:33:00.624887",
+  "generated_at": "2026-06-12T07:40:01Z"
 }
