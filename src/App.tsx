@@ -11,6 +11,7 @@ import CalendarPage from "./pages/CalendarPage";
 import ProposalsPage from "./pages/ProposalsPage";
 import ProvidersPage from "./pages/ProvidersPage";
 import OpsPage from "./pages/OpsPage";
+import KanbanPage from "./pages/KanbanPage";
 import { CmdK } from "./components/CmdK";
 import { AtlasBar } from "./components/AtlasBar";
 
@@ -190,5 +191,6 @@ function PageRouter({ nav }: { nav: NavItem[] }) {
   if (item.template === "proposals") return <ProposalsPage item={item} />;
   if (item.template === "providers") return <ProvidersPage item={item} />;
   if (item.template === "ops") return <OpsPage item={item} />;
+  if (item.template === "kanban") return <KanbanPage item={item} />;
   return <Navigate to="/home" replace />;
 }
