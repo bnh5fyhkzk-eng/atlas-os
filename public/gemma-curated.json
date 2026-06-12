@@ -1,170 +1,165 @@
 {
-  "generated_at": "2026-06-12T16:30:42Z",
+  "generated_at": "2026-06-12T16:36:34Z",
   "source": "Gemma 2 2B 4-bit MLX · me-gemma-curate.py · with-provenance",
   "session_file": "575f5c87-c5e3-423f-be92-d1b9431cfb30.jsonl",
   "session_size_mb": 18.0,
   "batches_curated": 10,
   "items_total": 10,
-  "categories_proposed_by_gemma": 10,
-  "elapsed_seconds": 14.8,
+  "categories_proposed_by_gemma": 9,
+  "elapsed_seconds": 17.5,
   "note": "Each item links to /gemma-sources/<id>.md · verbatim terminal excerpt · nothing lost · proof for every claim.",
   "curated": {
-    "collaborative-planning": {
-      "description": "This conversation focuses on generating a collaborative plan for Atlasos.me, including data-driven decisions and live updates.",
-      "subcategories": {
-        "plan-generation": [
-          {
-            "id": "batch-001-1781281829",
-            "summary": "This conversation focuses on generating a collaborative plan for Atlasos.me, including data-driven decisions and live updates.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-001-1781281829.md",
-            "first_role": "user",
-            "last_timestamp": "2026-06-12T15:16:16",
-            "gemma_raw": "CATEGORY: **Collaborative Planning**\nSUBCATEGORY: **Plan Generation**\nSUMMARY:  This conversation focuses on generating a collaborative plan for Atlasos.me, including data-driven decisions and live updates."
-          }
-        ]
-      }
-    },
     "model-management": {
-      "description": "Determine a safer way to set Opus 4.8 as the default model.",
+      "description": "Categorizing how model data is stored and accessed. · This conversation describes the user's action to set a specific model as the default for new sessions.",
       "subcategories": {
-        "default-settings": [
+        "model-persistence": [
           {
-            "id": "batch-002-1781281830",
-            "summary": "Determine a safer way to set Opus 4.8 as the default model.",
+            "id": "batch-001-1781282177",
+            "summary": "Categorizing how model data is stored and accessed.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-002-1781281830.md",
+            "source_file": "/gemma-sources/batch-001-1781282177.md",
             "first_role": "user",
-            "last_timestamp": "2026-06-12T15:16:59",
-            "gemma_raw": "CATEGORY: Model Management\nSUBCATEGORY: Default Settings\nSUMMARY:  Determine a safer way to set Opus 4.8 as the default model."
+            "last_timestamp": "2026-06-12T15:18:33",
+            "gemma_raw": "CATEGORY: Model Management\nSUBCATEGORY: Model Persistence\nSUMMARY:  Categorizing how model data is stored and accessed."
+          }
+        ],
+        "default-model-assignment": [
+          {
+            "id": "batch-010-1781282194",
+            "summary": "This conversation describes the user's action to set a specific model as the default for new sessions.",
+            "turn_count": 3,
+            "source_file": "/gemma-sources/batch-010-1781282194.md",
+            "first_role": "user",
+            "last_timestamp": "2026-06-12T16:35:24",
+            "gemma_raw": "CATEGORY: Model Management\nSUBCATEGORY: Default Model Assignment\nSUMMARY:  This conversation describes the user's action to set a specific model as the default for new sessions."
           }
         ]
       }
     },
     "plan-management": {
-      "description": "This conversation outlines the missing build order for Atlas, including the LIVE-TUI tunnel and DeepSeek token optimization.",
+      "description": "This conversation outlines the build order for Atlas, including priority tasks and specific requirements.",
       "subcategories": {
         "build-order": [
           {
-            "id": "batch-003-1781281832",
-            "summary": "This conversation outlines the missing build order for Atlas, including the LIVE-TUI tunnel and DeepSeek token optimization.",
+            "id": "batch-002-1781282179",
+            "summary": "This conversation outlines the build order for Atlas, including priority tasks and specific requirements.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-003-1781281832.md",
+            "source_file": "/gemma-sources/batch-002-1781282179.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-12T15:28:38",
-            "gemma_raw": "CATEGORY: **Plan Management**\nSUBCATEGORY: **Build Order**\nSUMMARY:  This conversation outlines the missing build order for Atlas, including the LIVE-TUI tunnel and DeepSeek token optimization."
+            "last_timestamp": "2026-06-12T15:31:48",
+            "gemma_raw": "CATEGORY: **Plan Management**\nSUBCATEGORY: **Build Order**\nSUMMARY:  This conversation outlines the build order for Atlas, including priority tasks and specific requirements."
           }
         ]
       }
     },
-    "dns-management": {
-      "description": "Analyzing how atlasos.me resolves routes and DNS propagation.",
+    "cloudflare-zone-management": {
+      "description": "Identifying and resolving the mismatch between Cloudflare account and authed API endpoint.",
       "subcategories": {
-        "zone-resolution": [
+        "account-mismatch": [
           {
-            "id": "batch-004-1781281833",
-            "summary": "Analyzing how atlasos.me resolves routes and DNS propagation.",
+            "id": "batch-003-1781282181",
+            "summary": "Identifying and resolving the mismatch between Cloudflare account and authed API endpoint.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-004-1781281833.md",
+            "source_file": "/gemma-sources/batch-003-1781282181.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-12T15:43:05",
-            "gemma_raw": "CATEGORY: **DNS Management**\nSUBCATEGORY: **Zone Resolution**\nSUMMARY:  Analyzing how atlasos.me resolves routes and DNS propagation."
+            "last_timestamp": "2026-06-12T15:48:28",
+            "gemma_raw": "CATEGORY: Cloudflare Zone Management\nSUBCATEGORY: Account Mismatch\nSUMMARY:  Identifying and resolving the mismatch between Cloudflare account and authed API endpoint."
           }
         ]
       }
     },
-    "cloudflare-management": {
-      "description": "Analyzing and configuring Cloudflare zone settings for atlasos.me.",
+    "cloudflare-api": {
+      "description": "Analyzing and configuring CNAME settings for Cloudflare API integration.",
       "subcategories": {
-        "zone-configuration": [
+        "cname-configuration": [
           {
-            "id": "batch-005-1781281835",
-            "summary": "Analyzing and configuring Cloudflare zone settings for atlasos.me.",
+            "id": "batch-004-1781282183",
+            "summary": "Analyzing and configuring CNAME settings for Cloudflare API integration.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-005-1781281835.md",
+            "source_file": "/gemma-sources/batch-004-1781282183.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-12T15:50:00",
-            "gemma_raw": "CATEGORY: Cloudflare Management\nSUBCATEGORY: Zone Configuration\nSUMMARY:  Analyzing and configuring Cloudflare zone settings for atlasos.me."
+            "last_timestamp": "2026-06-12T15:50:58",
+            "gemma_raw": "CATEGORY: Cloudflare API\nSUBCATEGORY: CNAME Configuration\nSUMMARY:  Analyzing and configuring CNAME settings for Cloudflare API integration."
           }
         ]
       }
     },
-    "cloudflare": {
-      "description": "Analyzing and resolving issues related to Cloudflare tunnel configuration and ingress.",
+    "dns-configuration": {
+      "description": "This conversation discusses resolving the DNS record for `tui.upliftai.app` to a Cloudflare A record.",
       "subcategories": {
-        "tunnel-configuration": [
+        "cloudflare-a-record": [
           {
-            "id": "batch-006-1781281836",
-            "summary": "Analyzing and resolving issues related to Cloudflare tunnel configuration and ingress.",
+            "id": "batch-005-1781282185",
+            "summary": "This conversation discusses resolving the DNS record for `tui.upliftai.app` to a Cloudflare A record.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-006-1781281836.md",
+            "source_file": "/gemma-sources/batch-005-1781282185.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-12T15:52:22",
-            "gemma_raw": "CATEGORY: Cloudflare  \nSUBCATEGORY: Tunnel Configuration\nSUMMARY:  Analyzing and resolving issues related to Cloudflare tunnel configuration and ingress."
+            "last_timestamp": "2026-06-12T15:53:47",
+            "gemma_raw": "CATEGORY: **DNS Configuration**\nSUBCATEGORY: **Cloudflare A Record**\nSUMMARY:  This conversation discusses resolving the DNS record for `tui.upliftai.app` to a Cloudflare A record."
           }
         ]
       }
     },
     "api-key-management": {
-      "description": "This conversation discusses the distinction between OpenAI API tokens and ChatGPT Plus subscriptions.",
+      "description": "This conversation discusses the usage of API keys and the models they unlock.",
       "subcategories": {
-        "api-token-usage": [
+        "model-usage": [
           {
-            "id": "batch-007-1781281838",
-            "summary": "This conversation discusses the distinction between OpenAI API tokens and ChatGPT Plus subscriptions.",
+            "id": "batch-006-1781282188",
+            "summary": "This conversation discusses the usage of API keys and the models they unlock.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-007-1781281838.md",
+            "source_file": "/gemma-sources/batch-006-1781282188.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-12T16:14:49",
-            "gemma_raw": "CATEGORY: **API Key Management**\nSUBCATEGORY: **API Token Usage**\nSUMMARY:  This conversation discusses the distinction between OpenAI API tokens and ChatGPT Plus subscriptions."
+            "last_timestamp": "2026-06-12T16:15:48",
+            "gemma_raw": "CATEGORY: **API Key Management**\nSUBCATEGORY: **Model Usage**\nSUMMARY:  This conversation discusses the usage of API keys and the models they unlock."
           }
         ]
       }
     },
-    "model-catalog": {
-      "description": "Organizing and displaying the 55 models with their real-time generation capabilities.",
+    "studio-page": {
+      "description": "Describes the Studio page's model availability and billing structure.",
       "subcategories": {
-        "real-time-model-list": [
+        "model-availability": [
           {
-            "id": "batch-008-1781281839",
-            "summary": "Organizing and displaying the 55 models with their real-time generation capabilities.",
+            "id": "batch-007-1781282189",
+            "summary": "Describes the Studio page's model availability and billing structure.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-008-1781281839.md",
+            "source_file": "/gemma-sources/batch-007-1781282189.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-12T16:19:00",
-            "gemma_raw": "CATEGORY: **Model Catalog**\nSUBCATEGORY: **Real-Time Model List**\nSUMMARY:  Organizing and displaying the 55 models with their real-time generation capabilities."
+            "last_timestamp": "2026-06-12T16:19:40",
+            "gemma_raw": "CATEGORY: Studio Page\nSUBCATEGORY: Model Availability\nSUMMARY:  Describes the Studio page's model availability and billing structure."
           }
         ]
       }
     },
     "vercel-deploy": {
-      "description": "Atlas's Vercel DNS record management is analyzed and explained.",
+      "description": "Understanding and managing Vercel DNS records for Atlasos.me.",
       "subcategories": {
         "dns-management": [
           {
-            "id": "batch-009-1781281841",
-            "summary": "Atlas's Vercel DNS record management is analyzed and explained.",
+            "id": "batch-008-1781282191",
+            "summary": "Understanding and managing Vercel DNS records for Atlasos.me.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-009-1781281841.md",
+            "source_file": "/gemma-sources/batch-008-1781282191.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-12T16:24:32",
-            "gemma_raw": "CATEGORY: **Vercel-Deploy**\nSUBCATEGORY: **DNS Management**\nSUMMARY:  Atlas's Vercel DNS record management is analyzed and explained."
+            "last_timestamp": "2026-06-12T16:25:57",
+            "gemma_raw": "CATEGORY: Vercel-Deploy\nSUBCATEGORY: DNS-Management\nSUMMARY:  Understanding and managing Vercel DNS records for Atlasos.me."
           }
         ]
       }
     },
-    "cloudflare-tunnel": {
-      "description": "Understanding Cloudflare tunnel routing and its limitations for atlasos.me's zone.",
+    "relay-daemon": {
+      "description": "This conversation discusses testing the relay daemon's functionality and verifying its end-to-end performance.",
       "subcategories": {
-        "tunnel-routing": [
+        "end-to-end-testing": [
           {
-            "id": "batch-010-1781281842",
-            "summary": "Understanding Cloudflare tunnel routing and its limitations for atlasos.me's zone.",
-            "turn_count": 4,
-            "source_file": "/gemma-sources/batch-010-1781281842.md",
+            "id": "batch-009-1781282192",
+            "summary": "This conversation discusses testing the relay daemon's functionality and verifying its end-to-end performance.",
+            "turn_count": 6,
+            "source_file": "/gemma-sources/batch-009-1781282192.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-12T16:26:49",
-            "gemma_raw": "CATEGORY: Cloudflare Tunnel\nSUBCATEGORY: Tunnel Routing\nSUMMARY:  Understanding Cloudflare tunnel routing and its limitations for atlasos.me's zone."
+            "last_timestamp": "2026-06-12T16:34:58",
+            "gemma_raw": "CATEGORY: **Relay Daemon**\nSUBCATEGORY: **End-to-End Testing**\nSUMMARY:  This conversation discusses testing the relay daemon's functionality and verifying its end-to-end performance."
           }
         ]
       }

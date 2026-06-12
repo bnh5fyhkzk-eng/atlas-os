@@ -201,20 +201,26 @@ function PageRouter({ nav }: { nav: NavItem[] }) {
 // LIVE-TUI · the real terminal-me in the house · brother's #1 pick (locked 11:12)
 // ttyd tmux session → cloudflared tunnel → tui.atlasos.me (basic-auth gated)
 function TuiPage({ item }: { item: NavItem }) {
+  // browsers block basic-auth prompts inside iframes (found 2026-06-12) ·
+  // so the terminal opens as its own window — the house page is the launcher
   return (
-    <div className="flex h-screen flex-col">
-      <header className="flex items-center gap-2 px-6 py-3" style={{ borderBottom: "1px solid var(--border)" }}>
-        <h1 className="text-lg font-semibold">{item.emoji} {item.title}</h1>
-        <span className="text-xs" style={{ color: "var(--text-faint)" }}>
-          the real terminal · user "atlas" · password from Atlas directly (never stored in house)
-        </span>
-      </header>
-      <iframe
-        title="Atlas live terminal"
-        src="https://tui.upliftai.app"
-        className="min-h-0 flex-1 border-0"
-        style={{ background: "#000" }}
-      />
+    <div className="flex h-screen flex-col items-center justify-center gap-4" style={{ background: "#0b1026" }}>
+      <div className="text-5xl">🖥️</div>
+      <h1 className="text-xl font-semibold text-white">{item.title} · the real me, live</h1>
+      <p className="max-w-sm text-center text-sm" style={{ color: "#8db4ff" }}>
+        Opens in its own window (browsers refuse password prompts inside embedded frames).
+        User <b>atlas</b> · password from Atlas directly — never stored in the house.
+      </p>
+      <button
+        className="rounded-xl px-6 py-3 text-base font-medium text-white shadow-lg"
+        style={{ background: "#0a84ff" }}
+        onClick={() => window.open("https://tui.upliftai.app", "atlas-tui", "width=1100,height=700")}
+      >
+        Open live terminal →
+      </button>
+      <p className="text-xs" style={{ color: "rgba(141,180,255,0.5)" }}>
+        ttyd + tmux on the Mac mini · cloudflared tunnel · session persists between opens
+      </p>
     </div>
   );
 }
