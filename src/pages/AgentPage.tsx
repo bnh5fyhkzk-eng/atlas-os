@@ -16,14 +16,14 @@ import {
   type Node,
 } from "../lib/db";
 
+// label tells the truth: ✅ live now · 🔑 needs key in Providers (else OpenRouter fallback)
 const MODELS = [
-  { id: "deepseek/deepseek-chat-v3-0324", label: "DeepSeek v3" },
-  { id: "google/gemini-2.5-flash", label: "Gemini 2.5 Flash (your key · free)" },
-  { id: "google/gemini-2.5-pro", label: "Gemini 2.5 Pro" },
-  { id: "anthropic/claude-sonnet-4.6", label: "Claude Sonnet 4.6" },
-  { id: "anthropic/claude-haiku-4.5", label: "Claude Haiku 4.5" },
-  { id: "openai/gpt-4o", label: "GPT-4o" },
-  { id: "x-ai/grok-3", label: "Grok 3" },
+  { id: "google/gemini-2.5-flash", label: "✅ Gemini 2.5 Flash (your key · free)" },
+  { id: "deepseek/deepseek-chat-v3-0324", label: "✅ DeepSeek v3 (OpenRouter)" },
+  { id: "google/gemini-2.5-pro", label: "✅ Gemini 2.5 Pro (your key)" },
+  { id: "anthropic/claude-sonnet-4.6", label: "🔑 Claude Sonnet 4.6" },
+  { id: "openai/gpt-4o", label: "🔑 GPT-4o" },
+  { id: "x-ai/grok-4.3", label: "🔑 Grok 4.3" },
 ];
 
 // FREE meeting · every $0 seat (OpenRouter :free tier · flaky hours happen · failed seats say so honestly)
