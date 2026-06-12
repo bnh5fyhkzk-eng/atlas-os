@@ -87,6 +87,7 @@ import ArmPage from "@/pages/ArmPage";
 import AtlasManagerPage from "@/pages/AtlasManagerPage";
 import AtlasCanvasPage from "@/pages/AtlasCanvasPage";
 import AtlasHomePage from "@/pages/AtlasHomePage";
+import { AuthGate } from "@/components/atlas/AuthGate";
 import "@/styles/atlas-theme.css";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
@@ -347,14 +348,16 @@ const ATLAS_PREFIXES = ["/home", "/arm/", "/arm", "/manager", "/atlas-canvas"];
 
 function AtlasStandaloneApp() {
   return (
-    <Routes>
-      <Route path="/home" element={<AtlasHomePage />} />
-      <Route path="/arm/:name" element={<ArmPage />} />
-      <Route path="/arm/:name/:pageId" element={<ArmPage />} />
-      <Route path="/manager" element={<AtlasManagerPage />} />
-      <Route path="/atlas-canvas" element={<AtlasCanvasPage />} />
-      <Route path="*" element={<AtlasHomePage />} />
-    </Routes>
+    <AuthGate>
+      <Routes>
+        <Route path="/home" element={<AtlasHomePage />} />
+        <Route path="/arm/:name" element={<ArmPage />} />
+        <Route path="/arm/:name/:pageId" element={<ArmPage />} />
+        <Route path="/manager" element={<AtlasManagerPage />} />
+        <Route path="/atlas-canvas" element={<AtlasCanvasPage />} />
+        <Route path="*" element={<AtlasHomePage />} />
+      </Routes>
+    </AuthGate>
   );
 }
 
