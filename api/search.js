@@ -6,7 +6,7 @@ import { nativeKeyFor } from "./providers.js";
 
 const EMBED_MODEL = "gemini-embedding-001";
 
-async function embed(key, texts) {
+async function embedOnce(key, texts) {
   const r = await fetch(
     `https://generativelanguage.googleapis.com/v1beta/models/${EMBED_MODEL}:batchEmbedContents`,
     {
@@ -36,6 +36,16 @@ export default async function handler(req, res) {
   }
   const key = await nativeKeyFor("google").catch(() => null);
   if (!key) return res.status(500).json({ error: "no google key" });
+  // two quota pools · vault key first, AI-Studio fallback on 429 (free tier daily caps)
+  const embed = async (k, texts) => {
+    try { return await embedOnce(k, texts); }
+    catch (e) {
+      if (String(e).includes("429") && process.env.GOOGLE_FALLBACK_KEY && k !== process.env.GOOGLE_FALLBACK_KEY) {
+        return embedOnce(process.env.GOOGLE_FALLBACK_KEY, texts);
+      }
+      throw e;
+    }
+  };
 
   const { q, embed: texts, match_count } = req.body || {};
   try {
