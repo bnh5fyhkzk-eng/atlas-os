@@ -63,6 +63,70 @@ interface ChatRow {
   created_at: string;
 }
 
+interface Goal {
+  id: string;
+  objective: string;
+  status: "active" | "paused" | "done";
+  turn_budget: number;
+  turns_used: number;
+}
+
+// Goals strip · Command Centre · the engine's face (V3-E UI)
+function GoalsStrip() {
+  const [goals, setGoals] = useState<Goal[]>([]);
+  const [adding, setAdding] = useState(false);
+  const [text, setText] = useState("");
+  const reload = () => {
+    void sb().from("atlas_goals").select("*").neq("status", "done").order("created_at", { ascending: false }).limit(8)
+      .then(({ data }) => setGoals((data ?? []) as Goal[]));
+  };
+  useEffect(() => { reload(); }, []);
+  const add = async () => {
+    const v = text.trim();
+    setAdding(false); setText("");
+    if (!v) return;
+    await sb().from("atlas_goals").insert({ objective: v });
+    reload();
+  };
+  const toggle = async (g: Goal) => {
+    await sb().from("atlas_goals").update({ status: g.status === "active" ? "paused" : "active" }).eq("id", g.id);
+    reload();
+  };
+  const finish = async (g: Goal) => {
+    await sb().from("atlas_goals").update({ status: "done" }).eq("id", g.id);
+    reload();
+  };
+  return (
+    <div className="border-b px-6 py-2" style={{ borderColor: "var(--border)", background: "var(--bg-side)" }}>
+      <div className="flex flex-wrap items-center gap-1.5">
+        <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: "var(--text-faint)" }}>🧭 goals steering all arms</span>
+        {goals.map((g) => (
+          <span key={g.id} className="group flex items-center gap-1 rounded-full border px-2.5 py-1 text-xs"
+            style={{ borderColor: g.status === "active" ? "#448361" : "var(--border)",
+                     background: g.status === "active" ? "rgba(68,131,97,0.08)" : undefined,
+                     opacity: g.status === "paused" ? 0.55 : 1 }}>
+            <span className="max-w-[260px] truncate">{g.objective}</span>
+            <button title={g.status === "active" ? "pause" : "resume"} onClick={() => void toggle(g)} style={{ color: "var(--text-faint)" }}>
+              {g.status === "active" ? "⏸" : "▶"}
+            </button>
+            <button title="done" onClick={() => void finish(g)} style={{ color: "var(--text-faint)" }}>✓</button>
+          </span>
+        ))}
+        {adding ? (
+          <input autoFocus value={text} onChange={(e) => setText(e.target.value)}
+            onKeyDown={(e) => { if (e.key === "Enter") void add(); if (e.key === "Escape") setAdding(false); }}
+            onBlur={() => void add()}
+            placeholder="New goal · steers every arm · Enter"
+            className="w-72 rounded-full border px-3 py-1 text-xs outline-none" style={{ borderColor: "var(--border)" }} />
+        ) : (
+          <button className="rounded-full border border-dashed px-2.5 py-1 text-xs"
+            style={{ borderColor: "var(--border)", color: "var(--text-faint)" }} onClick={() => setAdding(true)}>+ goal</button>
+        )}
+      </div>
+    </div>
+  );
+}
+
 function systemPrompt(item: NavItem, folders: Node[]): string {
   const tree = folders.map((f) => `- ${f.emoji} ${f.title}`).join("\n");
   return (
@@ -414,6 +478,8 @@ export default function AgentPage({ item }: { item: NavItem }) {
           {MODELS.map((m) => <option key={m.id} value={m.id}>{m.label}</option>)}
         </select>
       </header>
+
+      {isCC && <GoalsStrip />}
 
       <div className="flex min-h-0 flex-1">
         <div className="flex min-w-0 flex-1 flex-col">
