@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T03:08:05Z",
+  "generated_at": "2026-06-12T03:23:06Z",
   "arm_count": 8,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 161,
-    "briefing": 22,
+    "note": 143,
+    "briefing": 26,
     "idea": 0
   },
-  "total_blocks": 206,
+  "total_blocks": 192,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "8a1a8da35acb",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the 'FIRST-SIGNAL-IS-QUESTION-NOT-ANSWER' pattern in cycle-fire instances to determine if it's a systemic anomaly or intentional design. · why: Recent logs (#45678, #45612) show recurring patterns that may indicate either a deeper arch",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-11T23:13:24.752429"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-11T17:38:04.783297"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "00aa1720bc6d",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Continue deep-dive into memory-architecture-lift quadrant to resolve P1 issues · why: Recent high-arousal brain canon #28284 directly relates to current cycle's memory architecture challenges",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-11T17:22:52.243391"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "9209f51c546d",
+        "type": "callout",
+        "content": "**What** · Analyzed 'FIRST-SIGNAL-IS-QUESTION-NOT-ANSWER' pattern in cycle-fire instances from logs #45678 and #45612 · **Why** · To determine if anomaly is systemic (bug) or intentional (design) per Hermes-Orchestrator's P1 directive on memory-architecture-lift · **Result** · Pattern appears in 83%",
+        "priority": "architectural-anomaly",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-11T23:13:31.115009"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -815,20 +826,97 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-11T18:00:03.117587"
+      }
+    ],
+    "briefing": [
+      {
+        "arm": "charle",
+        "arm_glyph": "💼",
+        "arm_name": "Charle · Pascal-team",
+        "block_id": "c8a2a5378655",
+        "type": "callout",
+        "content": "No high-arousal charle canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-11T23:15:27.687417"
+      },
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "63984e8aab71",
+        "type": "callout",
+        "content": "Overnight hermes recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant.",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-11T23:15:27.662182"
+      },
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "5793b3d85c8f",
+        "type": "callout",
+        "content": "No high-arousal code canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-11T23:15:27.638120"
+      },
+      {
+        "arm": "infra",
+        "arm_glyph": "💗",
+        "arm_name": "My Heart",
+        "block_id": "93c664285f86",
+        "type": "callout",
+        "content": "No high-arousal infra canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-11T23:15:27.612328"
+      },
+      {
+        "arm": "dream",
+        "arm_glyph": "🌙",
+        "arm_name": "My Dreamer",
+        "block_id": "5ac59e26b3c5",
+        "type": "callout",
+        "content": "Overnight dream recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant.",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-11T23:15:27.580398"
       },
       {
         "arm": "research",
         "arm_glyph": "👁",
         "arm_name": "My Eyes",
-        "block_id": "bff2d572a61f",
-        "type": "database",
-        "content": "open-questions · last 30d · 6 canons (top arousal · 1.00)",
+        "block_id": "baf791b0e590",
+        "type": "callout",
+        "content": "Overnight research recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant.",
         "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-11T18:00:03.117584"
-      }
-    ],
-    "briefing": [
+        "source": "overnight-recap",
+        "updated_at": "2026-06-11T23:15:27.554807"
+      },
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "094eaa4b8a72",
+        "type": "callout",
+        "content": "No high-arousal curiosity canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-11T23:15:27.520835"
+      },
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "33be28b34510",
+        "type": "callout",
+        "content": "No high-arousal pascal canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-11T23:15:27.493777"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -839,17 +927,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-11T17:15:25.724052"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "5b7441af45aa",
-        "type": "callout",
-        "content": "Overnight hermes recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant.",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-11T17:15:25.702115"
       },
       {
         "arm": "code",
@@ -883,17 +960,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-11T17:15:25.634002"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "d591c28c7aa1",
-        "type": "callout",
-        "content": "Overnight research recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant.",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-11T17:15:25.614137"
       },
       {
         "arm": "curiosity",
@@ -962,17 +1028,6 @@
         "updated_at": "2026-06-11T11:15:23.710302"
       },
       {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "807402b1a482",
-        "type": "callout",
-        "content": "Overnight research recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant.",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-11T11:15:23.690621"
-      },
-      {
         "arm": "curiosity",
         "arm_glyph": "🌱",
         "arm_name": "My Curiosity",
@@ -1037,17 +1092,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-11T04:19:27.518020"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "ba75a1aa5074",
-        "type": "callout",
-        "content": "Overnight research recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant.",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-11T04:19:27.497056"
       },
       {
         "arm": "curiosity",
