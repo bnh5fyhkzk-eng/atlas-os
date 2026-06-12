@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T02:08:03Z",
+  "generated_at": "2026-06-12T02:23:04Z",
   "arm_count": 8,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 160,
+    "note": 161,
     "briefing": 22,
     "idea": 0
   },
-  "total_blocks": 205,
+  "total_blocks": 206,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "333104cd5511",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the loop-health false alarm issue surfaced in me-loop-health.sh · why: The false alarm indicates a potential monitoring gap that could affect system reliability if left unaddressed",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-11T22:12:27.041983"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-11T16:37:06.257176"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "22c0fec4b095",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Deep-dive into memory-architecture-lift quadrant to resolve P1 priority from cycle #28284 · why: Recent high-arousal canon shows this research was actively being worked on and remains unresolved, with direct connection to memory architecture which",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-11T16:21:49.349247"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "8862f2375c23",
+        "type": "callout",
+        "content": "**What** · Initiated analysis of me-loop-health.sh script to identify false alarm triggers · **Why** · False alarms undermine monitoring credibility and may mask real issues, compromising system reliability · **Result** · Preliminary scan shows inconsistent threshold checks in process validation log",
+        "priority": "monitoring-gap-analysis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-11T22:12:30.747012"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -815,17 +826,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-11T18:00:03.117569"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "6d7c07f95e50",
-        "type": "database",
-        "content": "general · last 30d · 89 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-11T18:00:02.967290"
       }
     ],
     "briefing": [
