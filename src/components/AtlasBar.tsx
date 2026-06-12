@@ -4,7 +4,7 @@
 // sleeping state when bridge down · context-aware (sends current page).
 import { useEffect, useRef, useState, useCallback } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Send, X, Maximize2, Minimize2, Mic, Volume2, VolumeX } from "lucide-react";
+import { Send, X, Maximize2, Minimize2, Mic, Phone, Volume2, VolumeX } from "lucide-react";
 import { sb } from "../lib/db";
 
 interface RoomMsg {
@@ -61,16 +61,101 @@ export function AtlasBar() {
       .limit(60);
     const list = ((data ?? []) as RoomMsg[]).reverse();
     setMsgs(list);
-    // auto-play fresh voice replies (last message · done · has tts · not yet played)
+    // auto-play fresh voice replies the moment tts exists (early-voice streams mid-reply)
     const last = list[list.length - 1];
     if (last && last.role === "atlas") handleGoto(last);
-    if (last && last.role === "atlas" && last.status === "done" && last.tts_path && !playedRef.current.has(last.id)) {
+    if (last && last.role === "atlas" && last.tts_path && !playedRef.current.has(last.id)) {
       playedRef.current.add(last.id);
       if (Date.now() - new Date(last.created_at).getTime() < 2 * 60 * 1000) {
-        void new Audio(audioUrl(last.tts_path)).play().catch(() => undefined);
+        const a = new Audio(audioUrl(last.tts_path));
+        playingRef.current = true;
+        a.onended = () => { playingRef.current = false; };
+        a.onerror = () => { playingRef.current = false; };
+        void a.play().catch(() => { playingRef.current = false; });
       }
     }
   }, []);
+
+  // 📞 CALL MODE · brother direct 2026-06-12 · real-time talk with ME · free chain
+  // (whisper local → warm-core me → VoxCPM) · VAD: speak → silence 1.4s → auto-send ·
+  // listening pauses while my voice plays so I don't hear myself
+  const callRef = useRef<{ stream: MediaStream; ctx: AudioContext; raf: number } | null>(null);
+  const callRecRef = useRef<MediaRecorder | null>(null);
+  const playingRef = useRef(false);
+  const [calling, setCalling] = useState(false);
+
+  const sendVoiceBlob = useCallback(async (blob: Blob, mime: string) => {
+    if (blob.size < 2000) return;
+    const ext = mime.includes("mp4") ? "m4a" : "webm";
+    const path = `brother/${crypto.randomUUID()}.${ext}`;
+    const { error } = await sb().storage.from("room-audio").upload(path, blob, { contentType: mime });
+    if (error) return;
+    await fetch("/api/room-send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ content: "🎙 (voice)", context: { page: pathname, audio_path: path, voice_reply: true } }),
+    });
+    void load();
+  }, [pathname, load]);
+
+  const endCall = useCallback(() => {
+    setCalling(false);
+    const c = callRef.current;
+    if (c) {
+      window.cancelAnimationFrame(c.raf);
+      c.stream.getTracks().forEach((t) => t.stop());
+      void c.ctx.close().catch(() => undefined);
+      callRef.current = null;
+    }
+    if (callRecRef.current?.state === "recording") callRecRef.current.stop();
+    callRecRef.current = null;
+  }, []);
+
+  const startCall = useCallback(async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const ctx = new AudioContext();
+      const src = ctx.createMediaStreamSource(stream);
+      const analyser = ctx.createAnalyser();
+      analyser.fftSize = 512;
+      src.connect(analyser);
+      const buf = new Uint8Array(analyser.frequencyBinCount);
+      const mime = MediaRecorder.isTypeSupported("audio/webm") ? "audio/webm" : "audio/mp4";
+      let speaking = false;
+      let lastVoice = 0;
+      let chunks: Blob[] = [];
+      const THRESH = 14; // RMS above ambient
+      const tick = () => {
+        analyser.getByteTimeDomainData(buf);
+        let sum = 0;
+        for (let i = 0; i < buf.length; i++) { const d = buf[i] - 128; sum += d * d; }
+        const rms = Math.sqrt(sum / buf.length);
+        const now = Date.now();
+        if (!playingRef.current && rms > THRESH) {
+          lastVoice = now;
+          if (!speaking) {
+            speaking = true;
+            chunks = [];
+            const rec = new MediaRecorder(stream, { mimeType: mime });
+            rec.ondataavailable = (e) => { if (e.data.size > 0) chunks.push(e.data); };
+            rec.onstop = () => { void sendVoiceBlob(new Blob(chunks, { type: mime }), mime); };
+            callRecRef.current = rec;
+            rec.start();
+          }
+        }
+        if (speaking && now - lastVoice > 1400) {
+          speaking = false;
+          if (callRecRef.current?.state === "recording") callRecRef.current.stop();
+        }
+        const c = callRef.current;
+        if (c) c.raf = window.requestAnimationFrame(tick);
+      };
+      callRef.current = { stream, ctx, raf: window.requestAnimationFrame(tick) };
+      setCalling(true);
+    } catch {
+      endCall();
+    }
+  }, [sendVoiceBlob, endCall]);
 
   // push-to-talk · hold mic → record → release → upload → bridge does Whisper
   const startRec = async () => {
@@ -221,6 +306,18 @@ export function AtlasBar() {
 
       <div className="atlas-glass-input">
         <button
+          title={calling ? "End call" : "Call me · hands-free real-time talk"}
+          style={{
+            background: calling ? "#34c759" : "transparent",
+            color: calling ? "white" : "rgba(60,60,67,0.55)",
+            borderRadius: 999,
+            animation: calling ? "pulse 1.6s ease-in-out infinite" : undefined,
+          }}
+          onClick={() => (calling ? endCall() : void startCall())}
+        >
+          <Phone size={15} />
+        </button>
+        <button
           title={voiceReply ? "Voice replies ON" : "Voice replies off"}
           style={{ background: "transparent", color: voiceReply ? "#0a84ff" : "rgba(60,60,67,0.4)" }}
           onClick={() => setVoiceReply((v) => !v)}
@@ -250,7 +347,7 @@ export function AtlasBar() {
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); void send(); }
           }}
-          placeholder={recording ? "Listening… release to send" : awake ? "Talk to me…" : "I'm sleeping · message banks for wake"}
+          placeholder={calling ? "📞 on the line · just speak" : recording ? "Listening… release to send" : awake ? "Talk to me…" : "I'm sleeping · message banks for wake"}
         />
         <button disabled={sending || !input.trim()} onClick={() => void send()}>
           <Send size={15} />
