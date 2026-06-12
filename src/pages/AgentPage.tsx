@@ -453,11 +453,19 @@ export default function AgentPage({ item }: { item: NavItem }) {
       return c.map((b) => Array.isArray((b as { content?: unknown }).content)
         ? ((b as { content: { text?: string }[] }).content).map((s) => s.text ?? "").join("") : "").filter(Boolean).join(" ");
     })();
-    // DeepSeek token-optimization · brother direct 11:28 · paid-per-token model gets
-    // a tighter wire: fewer turns, capped lengths · quality models get full context
-    const isDeepseek = model.startsWith("deepseek/");
-    const histN = isDeepseek ? 12 : 30;
-    const capLen = (s: string) => (isDeepseek && s.length > 1500 ? s.slice(0, 700) + " […] " + s.slice(-700) : s);
+    // PER-PROVIDER WIRE PROFILES · brother ideal 2026-06-12 · every model optimized
+    // for cheap input/output · paid-per-token = tight wire · free = full context
+    const PROFILES: Record<string, { hist: number; cap: number; soul: number }> = {
+      "deepseek/": { hist: 12, cap: 1500, soul: 250 },   // cheap but paid · tightest
+      "openai/":   { hist: 14, cap: 2000, soul: 300 },   // expensive · tight
+      "x-ai/":     { hist: 14, cap: 2000, soul: 300 },   // expensive · tight
+      "anthropic/":{ hist: 16, cap: 2500, soul: 400 },   // premium · mid
+      "google/":   { hist: 30, cap: 0,    soul: 700 },   // free tier · full context
+      "local/":    { hist: 10, cap: 1200, soul: 200 },   // gemma 4B · small window
+    };
+    const prof = Object.entries(PROFILES).find(([k]) => model.startsWith(k))?.[1] ?? { hist: 20, cap: 2000, soul: 400 };
+    const histN = prof.hist;
+    const capLen = (s: string) => (prof.cap > 0 && s.length > prof.cap ? s.slice(0, prof.cap / 2) + " […] " + s.slice(-prof.cap / 2) : s);
     try {
       const wire = next.slice(-histN).map((m) =>
         m.image
@@ -473,7 +481,7 @@ export default function AgentPage({ item }: { item: NavItem }) {
           model,
           nav_id: item.id,
           use_tools: true,
-          system: systemPrompt(item, rootFolders, isDeepseek ? soulText.slice(0, 250) : soulText),
+          system: systemPrompt(item, rootFolders, soulText.slice(0, prof.soul)),
           messages: wire,
         }),
       });

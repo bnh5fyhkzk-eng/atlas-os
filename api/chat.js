@@ -156,7 +156,16 @@ export default async function handler(req, res) {
         "HTTP-Referer": "https://atlasos.me",
         "X-Title": "Atlas-OS",
       },
-      body: JSON.stringify({ max_tokens: 2048, ...body, model: callModel }),
+      body: JSON.stringify({
+        max_tokens: 2048,
+        ...body,
+        model: callModel,
+        // cheap-I/O plumbing (brother ideal 2026-06-12): OpenRouter-only plugins —
+        // middle-out compresses oversized context server-side · price-sorted routing
+        ...(base.includes("openrouter.ai")
+          ? { transforms: ["middle-out"], provider: { sort: "price" } }
+          : {}),
+      }),
     });
 
   res.setHeader("Content-Type", "text/event-stream");
