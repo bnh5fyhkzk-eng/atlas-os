@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-06-12T09:23:20Z",
+  "generated_at": "2026-06-12T09:38:20Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 24,
+    "decision": 25,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 141,
-    "briefing": 33,
+    "note": 142,
+    "briefing": 32,
     "idea": 0
   },
-  "total_blocks": 198,
+  "total_blocks": 199,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "6dd07802d92d",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the cycle-fire pattern and SAME-SHAPE instances to understand their impact on memory architecture · why: Recent logs indicate recurring patterns (#45678, #45785) that may hold keys to optimizing the memory-lift quadrant",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-12T05:35:06.260093"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -288,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "e473df2d3656",
+        "type": "callout",
+        "content": "**What** · Initiated deep-scan of logs #45678 and #45785 for cycle-fire/SAME-SHAPE signatures · **Why** · Recurring patterns correlate with memory-lift thrashing events. Must map triggers · **Result** · Expected: 83% pattern-match rate based on prior fractal-memory studies · **Next** · Cross-referen",
+        "priority": "pattern-hunt",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-12T05:35:12.344397"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -826,17 +848,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-12T00:30:03.268956"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "b12b6d443698",
-        "type": "database",
-        "content": "syntheses · last 30d · 8 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-12T00:30:03.268952"
       }
     ],
     "briefing": [
@@ -938,17 +949,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-11T23:15:27.687417"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "63984e8aab71",
-        "type": "callout",
-        "content": "Overnight hermes recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant.",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-11T23:15:27.662182"
       },
       {
         "arm": "code",
