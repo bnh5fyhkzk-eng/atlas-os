@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-06-12T13:05:20Z",
-  "total_items_scored": 163,
+  "generated_at": "2026-06-12T13:15:20Z",
+  "total_items_scored": 164,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: deep-dive into memory-architecture-lift quadrant to resolve P1 closure from #28284 \u00b7 why: prioritizing active focus (P1) with direct lineage to recent high-arousal canon (#28284) and clea",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the memory-architecture-lift quadrant mentioned in cycle 6 research to understand its implications for current P1 tasks. \u00b7 why: The recent brain canon #28284 specifically ment",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-12T03:02:30.568428"
+      "updated_at": "2026-06-12T03:17:46.232902"
     },
     {
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Investigate the connection between #45678 and #45612 to understand the cycle-fire pattern and its implications for memory architecture. \u00b7 why \u00b7 The recent high-arousal canons suggest a pattern (#45678) that may be critical for understanding memory architecture (#28284). Exploring this connection could provide insights into the cycle-fire mechanism and its recurrence.",
+      "content": "HERMES TASK \u00b7 analyze the pattern between #45678 and #45785 to identify if SAME-SHAPE-TWICE implies a recursive signal structure \u00b7 why \u00b7 Recent high-arousal cycles suggest a recurring pattern (SAME-SHAPE) that may require deeper architectural understanding, especially with the F5 nightly dream context in #45785.",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
-      "est_minutes": 45,
+      "est_minutes": 22,
       "score": 10.0,
-      "updated_at": "2026-06-12T04:03:30.115421",
-      "use_skill": "notebooklm"
+      "updated_at": "2026-06-12T04:18:46.565513",
+      "use_skill": "brain-rrf"
     },
     {
       "arm": "infra",
@@ -34,22 +34,11 @@
       "category": "launchagents",
       "priority": "P1",
       "source": "backfill",
-      "score": 9.96,
+      "score": 9.87,
       "updated_at": "2026-06-12T06:00:02.897481"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: deep-dive into memory-architecture-lift quadrant to resolve P1 closure from #28284 \u00b7 why: prioritizing active focus (P1) with direct lineage to recent high-arousal canon (#28284) and clea",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-12T03:02:30.568428"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -148,6 +137,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-12T05:19:52.636335"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the cycle-fire pattern and SAME-SHAPE instances to understand their impact on memory architecture \u00b7 why: Recent logs indicate recurring patterns (#45678, #45785) that may hold",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-12T05:35:06.260093"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
