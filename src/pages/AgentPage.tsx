@@ -152,6 +152,7 @@ export default function AgentPage({ item }: { item: NavItem }) {
     void sb().from("atlas_messages").insert({ chat_id: chatId, role: "brother", content: text }).then(() => undefined);
 
     const tools: ToolChip[] = [];
+    const usageRef = { total: 0 };
     try {
       const res = await fetch("/api/chat", {
         method: "POST",
@@ -197,6 +198,7 @@ export default function AgentPage({ item }: { item: NavItem }) {
               if (last && j.atlas_tool_result.result?.note_title) last.detail = `→ ${j.atlas_tool_result.result.note_title}`;
               paint();
             } else {
+              if (j.usage) usageRef.total = j.usage.total_tokens ?? 0;
               const delta = j?.choices?.[0]?.delta?.content;
               if (delta) {
                 acc += delta;
@@ -209,7 +211,7 @@ export default function AgentPage({ item }: { item: NavItem }) {
         }
       }
       if (acc || tools.length) {
-        void sb().from("atlas_messages").insert({ chat_id: chatId, role: "assistant", model, content: acc, meta: { tools } }).then(() => undefined);
+        void sb().from("atlas_messages").insert({ chat_id: chatId, role: "assistant", model, content: acc, meta: { tools, usage: usageRef.total } }).then(() => undefined);
       }
       reloadNodes();
     } catch (e: unknown) {

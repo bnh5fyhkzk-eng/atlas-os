@@ -6,6 +6,7 @@ import { ResponsiveGridLayout, useContainerWidth, type LayoutItem } from "react-
 import "react-grid-layout/css/styles.css";
 import { GripVertical, Plus, X } from "lucide-react";
 import {
+  sb as sbClient,
   recentNodes,
   listNodes,
   getCanvas,
@@ -21,7 +22,91 @@ const KEY = "home-v3";
 const DEFAULT_LAYOUT: Layout = [
   { i: "arms", x: 0, y: 0, w: 7, h: 5 },
   { i: "recent", x: 7, y: 0, w: 5, h: 5 },
+  { i: "drop", x: 0, y: 5, w: 7, h: 2 },
+  { i: "cost", x: 7, y: 5, w: 5, h: 2 },
 ];
+
+function DropWidget() {
+  const [text, setText] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [result, setResult] = useState<string | null>(null);
+  const dropIt = async () => {
+    const t = text.trim();
+    if (!t || busy) return;
+    setBusy(true);
+    setResult(null);
+    try {
+      const r = await fetch("/api/inbox", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ text: t }) });
+      const j = await r.json();
+      if (!r.ok) throw new Error(j.error ?? r.status);
+      setResult(j.filed ? `filed → ${j.where} (${j.confidence}%)` : `→ Inbox · ${j.confidence}% unsure`);
+      setText("");
+    } catch (e) {
+      setResult(`error: ${e instanceof Error ? e.message : String(e)}`);
+    } finally {
+      setBusy(false);
+    }
+  };
+  return (
+    <div className="flex h-full flex-col gap-1.5">
+      <textarea
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        onKeyDown={(e) => { if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) void dropIt(); }}
+        placeholder="Paste anything · AI files it in the right folder · ⌘Enter"
+        className="min-h-0 flex-1 resize-none rounded-lg border px-2.5 py-2 text-sm outline-none"
+        style={{ borderColor: "var(--border)" }}
+      />
+      <div className="flex items-center justify-between">
+        <span className="truncate text-xs" style={{ color: "var(--text-faint)" }}>{busy ? "Categorizing…" : result ?? ""}</span>
+        <button
+          disabled={busy || !text.trim()}
+          className="rounded-md px-3 py-1 text-xs text-white disabled:opacity-30"
+          style={{ background: "var(--text)" }}
+          onClick={() => void dropIt()}
+        >
+          Drop
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function CostWidget() {
+  const [rows, setRows] = useState<Array<{ model: string; tokens: number; msgs: number }>>([]);
+  useEffect(() => {
+    (async () => {
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const { data } = await sbClient()
+        .from("atlas_messages")
+        .select("model, meta")
+        .gte("created_at", today.toISOString())
+        .not("model", "is", null)
+        .limit(500);
+      const m = new Map<string, { tokens: number; msgs: number }>();
+      (data ?? []).forEach((r) => {
+        const key = (r.model as string).split("/")[1] ?? r.model;
+        const cur = m.get(key) ?? { tokens: 0, msgs: 0 };
+        cur.msgs += 1;
+        cur.tokens += Number((r.meta as { usage?: number })?.usage ?? 0);
+        m.set(key, cur);
+      });
+      setRows([...m.entries()].map(([model, v]) => ({ model, ...v })).sort((a, b) => b.tokens - a.tokens));
+    })().catch(() => setRows([]));
+  }, []);
+  return (
+    <div className="space-y-0.5 text-sm">
+      {rows.length === 0 && <div className="text-xs" style={{ color: "var(--text-faint)" }}>No AI calls today yet</div>}
+      {rows.map((r) => (
+        <div key={r.model} className="flex items-center justify-between">
+          <span className="truncate">{r.model}</span>
+          <span className="text-xs" style={{ color: "var(--text-faint)" }}>{r.msgs} msgs · {r.tokens > 0 ? `${(r.tokens / 1000).toFixed(1)}k tok` : "tok n/a"}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 function timeAgo(iso: string): string {
   const s = Math.floor((Date.now() - new Date(iso).getTime()) / 1000);
@@ -227,6 +312,16 @@ export default function Canvas({ nav }: { nav: NavItem[]; home: NavItem }) {
                     );
                   })}
                 </div>
+              </Widget>
+            </div>
+            <div key="drop">
+              <Widget title="Drop · AI files it" emoji="📥">
+                <DropWidget />
+              </Widget>
+            </div>
+            <div key="cost">
+              <Widget title="AI usage today" emoji="💸">
+                <CostWidget />
               </Widget>
             </div>
             {widgets.map((w) => {
