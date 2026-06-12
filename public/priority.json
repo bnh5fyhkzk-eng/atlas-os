@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-12T08:35:05Z",
+  "generated_at": "2026-06-12T08:45:06Z",
   "total_items_scored": 166,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the loop-health false alarm issue surfaced in me-loop-health.sh \u00b7 why: The false alarm indicates a potential monitoring gap that could affect system reliability if left unaddr",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the loop-health false alarm issue surfaced in me-loop-health.sh \u00b7 why: This is a critical system health issue that could affect core functionality, as indicated by the P1 prio",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-11T22:12:27.041983"
+      "updated_at": "2026-06-11T22:27:39.382151"
     },
     {
       "arm": "research",
@@ -34,22 +34,11 @@
       "category": "launchagents",
       "priority": "P1",
       "source": "backfill",
-      "score": 9.46,
+      "score": 9.37,
       "updated_at": "2026-06-12T00:30:03.699384"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the loop-health false alarm issue surfaced in me-loop-health.sh \u00b7 why: The false alarm indicates a potential monitoring gap that could affect system reliability if left unaddr",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-11T22:12:27.041983"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -148,6 +137,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-12T00:29:58.638865"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the cycle-fire pattern identified in #45678 to determine if it correlates with memory-architecture-lift quadrant closures. \u00b7 why: The recent brain canons indicate a recurring ",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-12T00:45:12.251942"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
