@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-06-12T08:45:06Z",
+  "generated_at": "2026-06-12T08:55:06Z",
   "total_items_scored": 166,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the loop-health false alarm issue surfaced in me-loop-health.sh \u00b7 why: This is a critical system health issue that could affect core functionality, as indicated by the P1 prio",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the discrepancy in loop-health monitoring flagged in #45633 to prevent future false alarms. \u00b7 why: Recent cycle-wake audits and loop-health issues (#45620, #45623, #45633) ind",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-11T22:27:39.382151"
+      "updated_at": "2026-06-11T22:42:57.279440"
     },
     {
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Investigate the recurring cycle-fire pattern observed in #45678 and #45612 to determine if it's a systemic issue or a coincidence. \u00b7 why \u00b7 The recent logs (#45678, #45612) indicate a recurring pattern that may affect system stability. Understanding this pattern is critical to prevent potential disruptions.",
+      "content": "HERMES TASK \u00b7 Investigate the memory-architecture-lift quadrant mentioned in #28284 to ensure P1 closure aligns with current operational integrity \u00b7 why \u00b7 Recent high-arousal canons indicate unresolved P1 priority in memory architecture, and #45678 suggests cyclical firing patterns may relate to unresolved signals",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-11T23:43:58.851182",
+      "updated_at": "2026-06-11T23:59:19.000931",
       "use_skill": "brain-rrf"
     },
     {
@@ -34,22 +34,11 @@
       "category": "launchagents",
       "priority": "P1",
       "source": "backfill",
-      "score": 9.37,
+      "score": 9.29,
       "updated_at": "2026-06-12T00:30:03.699384"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the loop-health false alarm issue surfaced in me-loop-health.sh \u00b7 why: This is a critical system health issue that could affect core functionality, as indicated by the P1 prio",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-11T22:27:39.382151"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -148,6 +137,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-12T00:45:12.251942"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the cycle-fire pattern noted in #45678 to determine if it correlates with memory-architecture-lift quadrant closures. \u00b7 why: Recent high-arousal canons suggest a pattern betwe",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-12T01:00:26.691928"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
