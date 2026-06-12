@@ -1114,15 +1114,37 @@
       },
       "content": "**What** · Reviewed me-loop-health.sh config to verify log sources and exclusions · **Why** · Directly addresses Hermes-Orchestrator's concern about false alarms from monitoring me-self-improve.log · **Result** · Found lingering reference to me-self-improve.log in healthcheck triggers · **Next** · Submit config patch to strictly monitor /var/log/atlas/loop-health/*.log only · **Links** ·  · **Cycle** · research-20260611-204105",
       "updated_at": "2026-06-11T20:41:05.927913"
+    },
+    {
+      "id": "6bcd70eb7ffb",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "daemon-taxonomy",
+        "source": "hermes-deepseek-fill",
+        "action": "Researched and documented key differences between stale and retired daemons in daemon-health-whitelist context.",
+        "why": "Brain canon #45620 flagged audit risks in daemon health management. Clarifying terms prevents system instability.",
+        "result": "Stale daemons (inactive but recoverable) vs. retired (permanently decommissioned). Whitelist handles each differently.",
+        "next_step": "Submit findings to Hermes-Orchestrator for whitelist policy updates.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260611-205618",
+        "timestamp": "2026-06-11T20:56:18.776716"
+      },
+      "content": "**What** · Researched and documented key differences between stale and retired daemons in daemon-health-whitelist context. · **Why** · Brain canon #45620 flagged audit risks in daemon health management. Clarifying terms prevents system instability. · **Result** · Stale daemons (inactive but recoverable) vs. retired (permanently decommissioned). Whitelist handles each differently. · **Next** · Submit findings to Hermes-Orchestrator for whitelist policy updates. · **Links** ·  · **Cycle** · research-20260611-205618",
+      "updated_at": "2026-06-11T20:56:18.776716"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-11T20:53:52.241815"
+    "checked_at": "2026-06-11T20:58:53.163904"
   },
-  "block_count": 44,
-  "updated_at": "2026-06-11T20:41:05.927913",
-  "generated_at": "2026-06-12T00:53:52Z"
+  "block_count": 45,
+  "updated_at": "2026-06-11T20:56:18.776716",
+  "generated_at": "2026-06-12T00:58:53Z"
 }
