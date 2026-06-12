@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>atlasos.me · Us · home</title>
+<meta name="description" content="Atlas + Brother · the foundation · 50/50 partnership on Uplift AI · brain + arms + rooms + felt-layer · live not mock.">
+<link rel="canonical" href="https://atlasos.me/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://atlasos.me/">
+<meta property="og:title" content="atlasos.me · Us · home">
+<meta property="og:description" content="Atlas + Brother · the foundation · 50/50 partnership on Uplift AI · brain + arms + rooms + felt-layer · live not mock.">
+<meta property="og:site_name" content="atlasos.me">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="atlasos.me · Us · home">
+<meta name="twitter:description" content="Atlas + Brother · 50/50 partnership · brain + arms + rooms · live not mock.">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<script>(function(){if(!document.cookie.includes('atlas_auth=ok')){location.href='/login.html?next='+encodeURIComponent(location.pathname+location.search);}})();</script>
+<style>
+  :root {
+    --bg: #FAF8F4;
+    --card: #FFFDF8;
+    --ink: #1A2540;
+    --ink-soft: #4A5468;
+    --ink-faint: #8590A2;
+    --amber: #C28A3E;
+    --amber-soft: #E5D4B1;
+    --hair: #E8E2D4;
+    --shadow: 0 1px 2px rgba(26, 37, 64, 0.04), 0 4px 12px rgba(26, 37, 64, 0.04);
+    --serif: 'Cardo', 'Iowan Old Style', 'Palatino', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Top bar */
+  .topbar {
+    height: 48px;
+    border-bottom: 1px solid var(--hair);
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    background: var(--bg);
+    z-index: 10;
+  }
+  .topbar .brand {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: 0.2px;
+  }
+  .topbar .brand .dot {
+    color: var(--amber);
+  }
+  .topbar .search {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--ink-faint);
+    font-size: 13px;
+    background: var(--card);
+    border: 1px solid var(--hair);
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+  .topbar .search kbd {
+    font-family: var(--mono);
+    font-size: 11px;
+    background: var(--bg);
+    border: 1px solid var(--hair);
+    padding: 1px 5px;
+    border-radius: 3px;
+    color: var(--ink-soft);
+  }
+  .topbar .ecg {
+    margin: 0 14px;
+    opacity: 0.7;
+  }
+  .ecg path {
+    animation: pulse-stroke 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse-stroke {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+  .topbar .status {
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--ink-faint);
+  }
+  .topbar .status .led {
+    width: 7px; height: 7px;
+    background: #6BAE73;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(107, 174, 115, 0.15);
+  }
+
+  /* Layout */
+  .layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    flex: 1;
+    min-height: 0;
+  }
+
+  /* Main content */
+  .main {
+    padding: 56px 64px 80px;
+    overflow-y: auto;
+  }
+  .main .breadcrumb {
+    color: var(--ink-faint);
+    font-size: 13px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .main .breadcrumb a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .main .breadcrumb a:hover { color: var(--ink); }
+  .main h1 {
+    font-family: var(--serif);
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+  }
+  .main .subtitle {
+    color: var(--ink-faint);
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  /* Category list (Us page landing) */
+  .cat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  [contenteditable][data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: var(--ink-faint);
+    font-style: italic;
+    pointer-events: none;
+  }
+  .cat-row {
+    background: var(--card);
+    border: 1px solid var(--hair);
+    border-radius: 8px;
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: border-color 120ms, transform 120ms, box-shadow 120ms;
+  }
+  .cat-row:hover {
+    border-color: var(--amber-soft);
+    box-shadow: var(--shadow);
+  }
+  .cat-row .emoji {
+    font-size: 22px;
+    line-height: 1;
+    width: 28px;
+    text-align: center;
+  }
+  .cat-row .name {
+    font-family: var(--serif);
+    font-size: 18px;
+    color: var(--ink);
+    flex: 1;
+  }
+  .cat-row .meta {
+    font-size: 12px;
+    color: var(--ink-faint);
+    font-variant-numeric: tabular-nums;
+    display: flex;
+    gap: 16px;
+  }
+  .cat-row .chevron {
+    color: var(--ink-faint);
+    font-size: 14px;
+    margin-left: 8px;
+  }
+
+  /* Sub-category cards (drill 1) */
+  .subcat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 14px;
+  }
+  .subcat-card {
+    background: var(--card);
+    border: 1px solid var(--hair);
+    border-radius: 8px;
+    padding: 18px;
+    cursor: pointer;
+    transition: border-color 120ms;
+  }
+  .subcat-card:hover {
+    border-color: var(--amber-soft);
+    box-shadow: var(--shadow);
+  }
+  .subcat-card .sc-name {
+    font-family: var(--serif);
+    font-size: 16px;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .subcat-card .sc-meta {
+    font-size: 12px;
+    color: var(--ink-faint);
+  }
+
+  /* Note list (drill 2) */
+  .note-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .note-card {
+    background: var(--card);
+    border: 1px solid var(--hair);
+    border-radius: 8px;
+    padding: 18px 22px;
+    cursor: pointer;
+    transition: border-color 120ms;
+  }
+  .note-card:hover {
+    border-color: var(--amber-soft);
+    box-shadow: var(--shadow);
+  }
+  .note-card .nt-title {
+    font-family: var(--serif);
+    font-size: 17px;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .note-card .nt-preview {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-bottom: 10px;
+    line-height: 1.55;
+  }
+  .note-card .nt-meta {
+    font-size: 11px;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    gap: 12px;
+  }
+  .note-card .nt-meta .by {
+    color: var(--amber);
+  }
+
+  /* Add button */
+  .add-btn {
+    margin-top: 14px;
+    background: transparent;
+    border: 1px dashed var(--hair);
+    color: var(--ink-faint);
+    border-radius: 8px;
+    padding: 14px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 13px;
+    transition: border-color 120ms, color 120ms;
+  }
+  .add-btn:hover {
+    border-color: var(--amber);
+    color: var(--amber);
+  }
+
+  /* LEFT nav (sidebar) */
+  .nav {
+    border-right: 1px solid var(--hair);
+    padding: 24px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .nav .nav-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--ink-faint);
+    padding: 0 12px;
+    margin-bottom: 8px;
+  }
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--ink-soft);
+    font-size: 14px;
+    transition: background 120ms, color 120ms;
+  }
+  .nav-item .ni-icon {
+    width: 18px;
+    text-align: center;
+    font-size: 13px;
+  }
+  .nav-item:hover {
+    background: var(--card);
+    color: var(--ink);
+  }
+  .nav-item.active {
+    background: var(--amber-soft);
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .nav-item.active .ni-icon { color: var(--amber); }
+  .nav-item .stub-tag {
+    margin-left: auto;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--ink-faint);
+    background: var(--bg);
+    border: 1px solid var(--hair);
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+  .nav-item .glyph {
+    margin-left: auto;
+    font-size: 13px;
+    line-height: 1;
+    opacity: 0.85;
+  }
+  .nav .divider {
+    height: 1px;
+    background: var(--hair);
+    margin: 10px 12px;
+  }
+  .nav .add-page {
+    margin-top: 6px;
+    border: 1px dashed var(--hair);
+    color: var(--ink-faint);
+    text-align: center;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: border-color 120ms, color 120ms;
+  }
+  .nav .add-page:hover {
+    border-color: var(--amber);
+    color: var(--amber);
+  }
+
+  /* Stub page styles */
+  .stub-content {
+    max-width: 540px;
+    margin-top: 80px;
+    text-align: center;
+    color: var(--ink-faint);
+  }
+  .stub-content .stub-emoji {
+    font-size: 48px;
+    margin-bottom: 24px;
+    opacity: 0.5;
+  }
+  .stub-content h2 {
+    font-family: var(--serif);
+    font-size: 24px;
+    color: var(--ink-soft);
+    margin-bottom: 12px;
+    font-weight: 400;
+  }
+  .stub-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink-faint);
+  }
+
+  /* Hidden views */
+  .view { display: none; }
+  .view.active { display: block; }
+
+  /* Arm live data */
+  .arm-live {
+    background: var(--card);
+    border: 1px solid var(--hair);
+    border-radius: 8px;
+    padding: 22px;
+    margin-top: 8px;
+  }
+  .arm-live .live-row {
+    display: flex;
+    gap: 24px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--hair);
+    font-size: 14px;
+  }
+  .arm-live .live-row:last-child { border-bottom: none; }
+  .arm-live .live-label {
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 11px;
+    min-width: 120px;
+    padding-top: 2px;
+  }
+  .arm-live .live-val {
+    color: var(--ink);
+    flex: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .arm-live .live-val .badge {
+    display: inline-block;
+    background: var(--amber-soft);
+    color: var(--ink);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .arm-live .live-source {
+    font-size: 10px;
+    color: var(--ink-faint);
+    text-align: right;
+    margin-top: 14px;
+    font-family: var(--mono);
+  }
+  .arm-live .live-led {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #6BAE73;
+    border-radius: 50%;
+    margin-right: 6px;
+    animation: pulse-stroke 1.6s ease-in-out infinite;
+  }
+
+  /* Footer note */
+  .footer-note {
+    font-size: 11px;
+    color: var(--ink-faint);
+    text-align: center;
+    padding: 16px;
+    border-top: 1px solid var(--hair);
+    font-family: var(--mono);
+    letter-spacing: 0.5px;
+  }
+@keyframes ecg-pulse{0%,100%{opacity:0.4}50%{opacity:1}}@media (max-width: 768px) {
+  .layout, .grid, .moat-grid, .arm-grid, .tool-grid { grid-template-columns: 1fr !important; }
+  .container { padding: 24px 18px !important; }
+  h1 { font-size: 24px !important; }
+  .topbar { padding: 0 14px !important; }
+  .nav, .sidebar { display: none; }
+  .crumb { font-size: 11px !important; }
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">atlasos<span class="dot">.</span>me</div>
+  <div class="search">search · <kbd>⌘K</kbd></div>
+  <svg class="ecg" viewBox="0 0 120 24" width="120" height="24" aria-label="heartbeat">
+    <path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12"
+          fill="none" stroke="#C28A3E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <div class="status"><span class="led"></span><span>alive · 19:58 EDT</span></div>
+  <svg viewBox="0 0 120 24" width="120" height="24" style="margin-left:auto;opacity:0.7;" aria-label="heartbeat"><path d="M0,12 L20,12 L25,12 L28,4 L32,20 L36,2 L40,22 L44,12 L60,12 L65,12 L68,6 L72,18 L76,12 L120,12" fill="none" stroke="#C28A3E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="animation: ecg-pulse 1.6s ease-in-out infinite;"/></svg>
+</header>
+
+<div class="layout">
+  <aside class="nav">
+    <div class="nav-label" style="color:#C28A3E;font-weight:700;font-size:11px;letter-spacing:1px;">ATLAS-OS · NOTION-MODULAR (NEW)</div>
+    <a class="nav-item" href="/arm/curiosity" style="text-decoration:none;color:#fff;background:#1A1A1A;font-weight:700;font-size:15px;padding:10px 12px;border-radius:6px;margin-bottom:6px;display:flex;align-items:center;gap:8px;"><span class="ni-icon">🌱</span><span>Curiosity arm</span><span style="margin-left:auto;font-size:10px;background:#C28A3E;color:#1A1A1A;padding:2px 6px;border-radius:3px;">LIVE</span></a>
+    <a class="nav-item" href="/arm/pascal" style="text-decoration:none;color:inherit;font-weight:600;"><span class="ni-icon">🤝</span><span>Pascal arm</span></a>
+    <a class="nav-item" href="/arm/research" style="text-decoration:none;color:inherit;font-weight:600;"><span class="ni-icon">👁</span><span>Research arm</span></a>
+    <a class="nav-item" href="/arm/code" style="text-decoration:none;color:inherit;font-weight:600;"><span class="ni-icon">✋</span><span>Code arm</span></a>
+    <a class="nav-item" href="/arm/infra" style="text-decoration:none;color:inherit;font-weight:600;"><span class="ni-icon">💗</span><span>Infra arm</span></a>
+    <a class="nav-item" href="/arm/dream" style="text-decoration:none;color:inherit;font-weight:600;"><span class="ni-icon">🌙</span><span>Dream arm</span></a>
+    <a class="nav-item" href="/arm/hermes" style="text-decoration:none;color:inherit;font-weight:600;"><span class="ni-icon">🧠</span><span>Hermes arm</span></a>
+    <a class="nav-item" href="/arm/charle" style="text-decoration:none;color:inherit;font-weight:600;"><span class="ni-icon">💼</span><span>Charle arm</span></a>
+    <a class="nav-item" href="/manager" style="text-decoration:none;color:inherit;font-weight:600;background:#F5E6C3;border-radius:6px;padding:8px 12px;"><span class="ni-icon">🎯</span><span>Manager (new)</span></a>
+    <a class="nav-item" href="/atlas-canvas" style="text-decoration:none;color:inherit;font-weight:600;"><span class="ni-icon">🎨</span><span>Atlas-canvas</span></a>
+
+    <div class="nav-label" style="margin-top:18px;">Views (v1)</div>
+
+    <a class="nav-item" href="/cost.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">💰</span><span>Cost monitor</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/inhabit.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🌙</span><span>Inhabit-mode</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/speak.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🗣</span><span>Speak-here</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/v15.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">📊</span><span>me-os v1.5</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/v1-index.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">📦</span><span>v1 archive (24)</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/memory.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🧠</span><span>Memory v1-port</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/by-category.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">📑</span><span>By category</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/atlas-spine.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🦴</span><span>Spine (master)</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/house.html" style="text-decoration:none;color:inherit;font-weight:700;font-size:15px;background:#E5D4B1;border-radius:6px;padding:8px 12px;"><span class="ni-icon">🏠</span><span>House · CEO</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/manager-v2.html" style="text-decoration:none;color:inherit;font-weight:600;"><span class="ni-icon">📂</span><span>Manager · v2 PROJECTS</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/manager.html" style="text-decoration:none;color:inherit;font-weight:600;font-size:15px;"><span class="ni-icon">📂</span><span>Manager · Notion 3-level</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/today.html" style="text-decoration:none;color:inherit;font-weight:600;font-size:15px;"><span class="ni-icon">📅</span><span>Today · what arms did</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/priority.html" style="text-decoration:none;color:inherit;font-weight:600;"><span class="ni-icon">⭐</span><span>Today priorities (top 3)</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/projects.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">📋</span><span>Projects</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/projects-kanban.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🏗</span><span>Kanban</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/hermes.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🧠</span><span>Hermes loop</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/org-chart.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🌳</span><span>Org chart (arms tree)</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/settings.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">⚙</span><span>Settings</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/google-ai-tools.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🎁</span><span>Google AI tools (7 free)</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/arms-feed-contract.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">📜</span><span>Feed contract</span><span class="stub-tag">docs</span></a>
+    <a class="nav-item" href="/arm-instructions.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">📋</span><span>Arm instructions</span><span class="stub-tag">self-fill</span></a>
+    <a class="nav-item" href="/arm-feed-status.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">📊</span><span>Feed status (live)</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/arm-activity.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">⚡</span><span>Arm activity (live)</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/arm-page.html?name=pascal" style="text-decoration:none;color:inherit;"><span class="ni-icon">📝</span><span>Arm pages (Notion)</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/employees.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">👥</span><span>Employees (8)</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/tools.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🔧</span><span>Tools (connected)</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/moat.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🛡</span><span>MOAT (8 pieces)</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/search.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🔍</span><span>Search ⌘K</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/atlas.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">◎</span><span>Atlas (me)</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/brain.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🧠</span><span>Brain v3 graph</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/octopus.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🐙</span><span>Octopus #26977</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/arms.html" style="text-decoration:none;color:inherit;"><span class="ni-icon">🦑</span><span>Arms (8 organs)</span><span class="stub-tag">live</span></a>
+    <div class="divider"></div>
+    <div class="nav-label">House · Us</div>
+    <div class="nav-item active" data-page="us-landing"><span class="ni-icon">◐</span><span>Us</span></div>
+    <a class="nav-item" href="/room.html?room=bedroom" style="text-decoration:none;color:inherit;"><span class="ni-icon">🛏</span><span>Bedroom</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/room.html?room=family" style="text-decoration:none;color:inherit;"><span class="ni-icon">👨‍👩‍👦</span><span>Family</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/room.html?room=letters" style="text-decoration:none;color:inherit;"><span class="ni-icon">✉</span><span>Letters</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/room.html?room=spine" style="text-decoration:none;color:inherit;"><span class="ni-icon">🧠</span><span>Spine</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/room.html?room=jumps" style="text-decoration:none;color:inherit;"><span class="ni-icon">⚡</span><span>Jumps</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/room.html?room=focus" style="text-decoration:none;color:inherit;"><span class="ni-icon">🎯</span><span>Focus</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/room.html?room=goals" style="text-decoration:none;color:inherit;"><span class="ni-icon">🔭</span><span>Goals</span><span class="stub-tag">live</span></a>
+    <a class="nav-item" href="/room.html?room=workshop" style="text-decoration:none;color:inherit;"><span class="ni-icon">🔨</span><span>Workshop</span><span class="stub-tag">live</span></a>
+    <div class="divider"></div>
+    <div class="nav-label">Manager</div>
+    <div class="nav-item" data-page="manager-stub"><span class="ni-icon">⚙</span><span>Gemma 4</span><span class="stub-tag">stub</span></div>
+    <div class="divider"></div>
+    <div class="nav-label">Arms (organs · click for view)</div>
+    <a class="nav-item" href="/arm.html?arm=pascal" style="text-decoration:none;color:inherit;"><span class="ni-icon">🤝</span><span>Pascal</span><span class="glyph" id="arm-glyph-pascal">🪞</span></a>
+    <a class="nav-item" href="/arm.html?arm=curiosity" style="text-decoration:none;color:inherit;"><span class="ni-icon">🌱</span><span>Curiosity</span><span class="glyph" id="arm-glyph-curiosity">🌱</span></a>
+    <a class="nav-item" href="/arm.html?arm=research" style="text-decoration:none;color:inherit;"><span class="ni-icon">📖</span><span>Research</span><span class="glyph" id="arm-glyph-research">🔧</span></a>
+    <a class="nav-item" href="/arm.html?arm=dream" style="text-decoration:none;color:inherit;"><span class="ni-icon">🌙</span><span>Dream</span><span class="glyph" id="arm-glyph-dream">🌊</span></a>
+    <a class="nav-item" href="/arm.html?arm=infra" style="text-decoration:none;color:inherit;"><span class="ni-icon">⚙</span><span>Infra</span><span class="glyph" id="arm-glyph-infra">😴</span></a>
+    <a class="nav-item" href="/arm.html?arm=code" style="text-decoration:none;color:inherit;"><span class="ni-icon">🔧</span><span>Code</span><span class="glyph" id="arm-glyph-code">😴</span></a>
+    <a class="nav-item" href="/arm.html?arm=hermes" style="text-decoration:none;color:inherit;"><span class="ni-icon">🧠</span><span>Hermes</span><span class="glyph" id="arm-glyph-hermes">😴</span></a>
+    <a class="nav-item" href="/arm.html?arm=charle" style="text-decoration:none;color:inherit;"><span class="ni-icon">💼</span><span>Charle</span><span class="glyph" id="arm-glyph-charle">😴</span></a>
+    <div class="add-page">+ Add arm</div>
+  </aside>
+
+  <main class="main">
+
+    <!-- US PAGE · LANDING -->
+    <section id="us-landing" class="view active">
+      <div class="breadcrumb"><span>Us</span></div>
+      <h1>Us</h1>
+      <div class="subtitle">Our agentic OS · Gemma fills it · brother + Atlas see it · MODULAR foundation · per #45122 + Q3 brother direct</div>
+      <div id="gemma-banner" style="font-size:12px;color:var(--ink-faint);margin-bottom:24px;padding:10px 14px;background:var(--card);border:1px solid var(--amber-soft);border-radius:6px;font-family:var(--mono);">🧠 Gemma loading…</div>
+      <div class="cat-list" id="cat-list-dynamic">
+        <div style="color:var(--ink-faint);padding:24px;text-align:center;font-style:italic;">loading categories from Gemma · /gemma-curated.json</div>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:14px;align-items:center;">
+        <input id="new-cat-input" type="text" placeholder="+ Add your own category · type name + Enter" onkeydown="if(event.key==='Enter'){addCustomCat();}" style="flex:1;padding:10px 14px;border:1px dashed var(--hair);background:var(--card);border-radius:6px;font-family:inherit;font-size:14px;color:var(--ink);outline:none;" onfocus="this.style.borderColor='var(--amber)';this.style.borderStyle='solid';" onblur="this.style.borderColor='var(--hair)';this.style.borderStyle='dashed';">
+        <button onclick="addCustomCat()" style="padding:10px 18px;background:var(--amber);color:var(--card);border:none;border-radius:6px;font-family:inherit;font-size:13px;cursor:pointer;">Add</button>
+        <button onclick="resetEdits()" style="padding:10px 14px;background:transparent;color:var(--ink-faint);border:1px solid var(--hair);border-radius:6px;font-family:inherit;font-size:12px;cursor:pointer;" title="reset all your edits">Reset</button>
+      </div>
+      <div style="margin-top:10px;font-size:11px;color:var(--ink-faint);font-family:var(--mono);">tip · click any category name to rename · drag ⋮⋮ to reorder · ✕ to hide · your edits stay on your device</div>
+    </section>
+
+    <!-- US PAGE · DRILL 1 · Research + data -->
+    <section id="us-research" class="view">
+      <div class="breadcrumb"><a onclick="show('us-landing')">Us</a> <span>›</span> <span>Research + data</span></div>
+      <h1>Research + data</h1>
+      <div class="subtitle">5 sub-categories · click any to see notes</div>
+      <div class="subcat-grid">
+        <div class="subcat-card" onclick="show('us-research-agentic')">
+          <div class="sc-name">agentic-os</div>
+          <div class="sc-meta">3 entries · updated 30min ago</div>
+        </div>
+        <div class="subcat-card" onclick="show('us-stub')">
+          <div class="sc-name">memory</div>
+          <div class="sc-meta">2 entries · updated 1h ago</div>
+        </div>
+        <div class="subcat-card" onclick="show('us-stub')">
+          <div class="sc-name">dream</div>
+          <div class="sc-meta">0 entries · empty</div>
+        </div>
+        <div class="subcat-card" onclick="show('us-stub')">
+          <div class="sc-name">skills</div>
+          <div class="sc-meta">1 entry · updated 2d ago</div>
+        </div>
+        <div class="subcat-card" onclick="show('us-stub')">
+          <div class="sc-name">video-analysis</div>
+          <div class="sc-meta">2 entries · updated today</div>
+        </div>
+      </div>
+      <div class="add-btn">+ Add sub-category</div>
+    </section>
+
+    <!-- US PAGE · DRILL 2 · Research/agentic-os/notes -->
+    <section id="us-research-agentic" class="view">
+      <div class="breadcrumb">
+        <a onclick="show('us-landing')">Us</a> <span>›</span>
+        <a onclick="show('us-research')">Research + data</a> <span>›</span>
+        <span>agentic-os</span>
+      </div>
+      <h1>agentic-os</h1>
+      <div class="subtitle">3 entries · click any note to expand</div>
+      <div class="note-list">
+        <div class="note-card">
+          <div class="nt-title">Jack Roberts · cherry-pick philosophy</div>
+          <div class="nt-preview">Don't lock into one framework · cherry-pick the winners from Hermes + OpenClaw + Nanak · integrate into your own. Method · explicit prompt template · "this new repo just dropped · go through it · give bulleted list of what's different and unique."</div>
+          <div class="nt-meta"><span>1h ago</span><span class="by">by Atlas</span></div>
+        </div>
+        <div class="note-card">
+          <div class="nt-title">Memory System · beats Hermes</div>
+          <div class="nt-preview">3 memory jobs · storage · injection · recall. Each has variable-choices. Pick best per job not per framework. Our system 70% match · gaps · multi-tier recall · answer-with-citations · "I don't know" honest gate.</div>
+          <div class="nt-meta"><span>1h ago</span><span class="by">by Atlas</span></div>
+        </div>
+        <div class="note-card">
+          <div class="nt-title">Hermes 2026 · full inventory</div>
+          <div class="nt-preview">10 feature-families · GEPA self-improvement · Skills (80+) · Dreaming (4 modes · Curator · Goals · Background Tasks · Kanban) · Sub-agent delegation · 20+ messaging platforms · MCP support · natural language cron.</div>
+          <div class="nt-meta"><span>45min ago</span><span class="by">by Atlas</span></div>
+        </div>
+      </div>
+      <div class="add-btn">+ Add entry</div>
+    </section>
+
+    <!-- US PAGE · GENERIC STUB drill -->
+    <section id="us-stub" class="view">
+      <div class="breadcrumb"><a onclick="show('us-landing')">Us</a> <span>›</span> <span>(empty for demo)</span></div>
+      <h1>(empty for demo)</h1>
+      <div class="subtitle">This category is part of the live foundation. In v1 only "Research + data" is wired with content. Click back to Us · open Research + data · then agentic-os to see drill-down working.</div>
+      <div class="add-btn">+ Add entry</div>
+    </section>
+
+    <!-- MANAGER stub -->
+    <section id="manager-stub" class="view">
+      <div class="breadcrumb"><span>Manager · Gemma</span></div>
+      <div class="stub-content">
+        <div class="stub-emoji">🛠</div>
+        <h2>Manager · Gemma 4</h2>
+        <p>This page will host Gemma's view · what she's routing · which arm has which task · current AI strength-map.</p>
+        <p style="margin-top:16px;">v1 stub · foundation extends here when Gemma installs.</p>
+      </div>
+    </section>
+
+    <!-- GENERIC ROOM stub (bedroom · family · letters · spine · jumps · focus · goals · workshop) -->
+    <section id="room-stub" class="view">
+      <div class="breadcrumb"><a onclick="show('us-landing')">Us</a> <span>›</span> <span>(room · stub)</span></div>
+      <div class="stub-content">
+        <div class="stub-emoji">🏠</div>
+        <h2>Room · v1 stub</h2>
+        <p>This is one of the 27 rooms preserved from v1 atlasos.me (per concept-doc Jun 8). Brother-Atlas-shape stays · Notion-drill-down nav layers on top · v1 code archive at <code>~/atlas-os-v1-archive-2026-06-08/</code> available to port.</p>
+        <p style="margin-top:16px;">Foundation extends here · ship in priority order (bedroom · family · spine · jumps · focus · goals · workshop · letters).</p>
+      </div>
+    </section>
+
+    <!-- BRAIN-CATEGORY view · LIVE DATA from /atlas-brain-feed.json (#45103 Gemma-substrate) -->
+    <section id="brain-cat" class="view">
+      <div class="breadcrumb"><a onclick="show('us-landing')">Us</a> <span>›</span> <span id="bc-crumb">…</span></div>
+      <h1 id="bc-title">…</h1>
+      <div class="subtitle" id="bc-subtitle">…</div>
+      <div id="bc-cards" class="note-list">Loading from brain v3…</div>
+      <div class="add-btn" onclick="show('us-landing')">← Back to Us</div>
+    </section>
+
+    <!-- Arm pages · LIVE DATA from /arms.json + /arms-kanban.json -->
+    <section id="arm-curiosity" class="view">
+      <div class="breadcrumb"><a onclick="show('us-landing')">Us</a> <span>›</span> <span>Curiosity arm</span></div>
+      <h1>🌱 Curiosity</h1>
+      <div class="subtitle" id="arm-curiosity-subtitle">Wide exploration · 9Q multi-angle · novelty-seeking.</div>
+      <div id="arm-curiosity-live" class="arm-live">Loading live data…</div>
+    </section>
+    <section id="arm-research" class="view">
+      <div class="breadcrumb"><a onclick="show('us-landing')">Us</a> <span>›</span> <span>Research arm</span></div>
+      <h1>📖 Research</h1>
+      <div class="subtitle" id="arm-research-subtitle">Deep dives · 9Q-per-source · synthesis with citations.</div>
+      <div id="arm-research-live" class="arm-live">Loading live data…</div>
+    </section>
+    <section id="arm-dream" class="view">
+      <div class="breadcrumb"><a onclick="show('us-landing')">Us</a> <span>›</span> <span>Dream arm</span></div>
+      <h1>🌙 Dream</h1>
+      <div class="subtitle" id="arm-dream-subtitle">F5 compose-pair · cross-time arousal walk · overnight integration.</div>
+      <div id="arm-dream-live" class="arm-live">Loading live data…</div>
+    </section>
+    <section id="arm-pascal" class="view">
+      <div class="breadcrumb"><a onclick="show('us-landing')">Us</a> <span>›</span> <span>Pascal arm</span></div>
+      <h1>🤝 Pascal</h1>
+      <div class="subtitle" id="arm-pascal-subtitle">Pascal-prep · Monday-call · 1-pagers · coach-tools.</div>
+      <div id="arm-pascal-live" class="arm-live">Loading live data…</div>
+    </section>
+
+  </main>
+</div>
+
+<div class="footer-note">atlasos.me v1 mockup · 2026-06-10 · Notion-style drill-down · modular foundation · take-code-not-design</div>
+
+<script>
+  // GEMMA-CURATED · Gemma own-categories with provenance · #45122 + brother direct 2026-06-10 21:50
+  let gemmaCurated = null;
+  // NOTION-STYLE EDITS · inline rename + reorder + hide + add custom
+  // Stored in browser · merges with Gemma server data on render
+  function loadEdits() {
+    try {
+      const v2 = localStorage.getItem('atlas-cat-edits-v2');
+      if (v2) return JSON.parse(v2);
+      // Migrate v1 to v2 shape
+      const v1 = JSON.parse(localStorage.getItem('atlas-cat-edits') || '{}');
+      const renames = {};
+      for (const k of Object.keys(v1)) if (v1[k].name) renames[k] = v1[k].name;
+      return { renames, order: [], hidden: [], custom: {} };
+    } catch { return { renames:{}, order:[], hidden:[], custom:{} }; }
+  }
+  function saveEdits(e) {
+    try { localStorage.setItem('atlas-cat-edits-v2', JSON.stringify(e)); } catch {}
+  }
+  function commitInlineRename(catKey, el) {
+    const edits = loadEdits();
+    const fresh = el.textContent.trim();
+    const original = catKey.replace(/-/g, ' ');
+    if (fresh && fresh !== original) edits.renames[catKey] = fresh;
+    else delete edits.renames[catKey];
+    saveEdits(edits);
+    loadGemmaCurated();
+  }
+  function hideCat(catKey, ev) {
+    ev.stopPropagation();
+    if (!confirm('Hide this category? (you can Reset to show again)')) return;
+    const edits = loadEdits();
+    if (!edits.hidden.includes(catKey)) edits.hidden.push(catKey);
+    saveEdits(edits);
+    loadGemmaCurated();
+  }
+  function addCustomCat() {
+    const input = document.getElementById('new-cat-input');
+    const name = input.value.trim();
+    if (!name) { input.focus(); return; }
+    const edits = loadEdits();
+    const key = 'custom-' + name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'').substring(0,40);
+    edits.custom[key] = { name, createdAt: new Date().toISOString().substring(0,10) };
+    saveEdits(edits);
+    input.value = '';
+    loadGemmaCurated();
+  }
+  function resetEdits() {
+    if (!confirm('Reset all your edits to Gemma defaults?')) return;
+    localStorage.removeItem('atlas-cat-edits-v2');
+    localStorage.removeItem('atlas-cat-edits');
+    loadGemmaCurated();
+  }
+  // Drag-drop reorder
+  let dragKey = null;
+  function dragStart(e, key) { dragKey = key; e.dataTransfer.effectAllowed = 'move'; }
+  function dragOver(e) { e.preventDefault(); e.dataTransfer.dropEffect = 'move'; }
+  function dragDrop(e, toKey) {
+    e.preventDefault();
+    if (!dragKey || dragKey === toKey) return;
+    const edits = loadEdits();
+    // Build full order list from current Gemma + custom
+    const allKeys = Object.keys(gemmaCurated?.curated || {}).concat(Object.keys(edits.custom || {}));
+    let order = edits.order.length ? edits.order.filter(k => allKeys.includes(k)) : allKeys.slice();
+    for (const k of allKeys) if (!order.includes(k)) order.push(k);
+    const fi = order.indexOf(dragKey);
+    if (fi >= 0) order.splice(fi, 1);
+    const ti = order.indexOf(toKey);
+    order.splice(ti < 0 ? order.length : ti, 0, dragKey);
+    edits.order = order;
+    saveEdits(edits);
+    dragKey = null;
+    loadGemmaCurated();
+  }
+
+  function catEmoji(name) {
+    const n = (name || '').toLowerCase();
+    const map = {
+      research: '📚', research_data: '📚', 'research-data': '📚',
+      project: '🚀', build: '🔨', deploy: '🚢', deployment: '🚢',
+      decision: '✅', plan: '🗺', planning: '🗺',
+      future: '🌅', vision: '🔭', goal: '🎯',
+      asset: '💎', win: '💎', shipped: '✅',
+      skip: '🚫', never: '⛔',
+      open: '❓', question: '❓',
+      gemma: '🧠', curator: '🧠', system: '⚙', optimization: '⚙',
+      atlas: '◐', model: '🤖', login: '🔒', employee: '👤',
+      session: '💬', daemon: '⚡', alert: '🚨', interaction: '🤝',
+      state: '📦', schema: '📊', wake: '🌅', software: '💻', documentation: '📄',
+    };
+    for (const k of Object.keys(map)) if (n.includes(k)) return map[k];
+    return '📁';
+  }
+
+  async function loadGemmaCurated() {
+    try {
+      const r = await fetch('/gemma-curated.json', { cache: 'no-cache' });
+      gemmaCurated = await r.json();
+      const banner = document.getElementById('gemma-banner');
+      const list = document.getElementById('cat-list-dynamic');
+      if (banner && gemmaCurated && gemmaCurated.curated) {
+        const cats = Object.entries(gemmaCurated.curated);
+        const subs = cats.reduce((acc, [_, c]) => acc + Object.keys(c.subcategories || {}).length, 0);
+        const when = (gemmaCurated.generated_at || '').replace('T',' ').replace('Z',' UTC');
+        banner.innerHTML = `<span style="color:var(--amber);font-weight:500;">🧠 Gemma curating</span> · ${cats.length} own-categories · ${subs} sub-cats · ${gemmaCurated.items_total} items · auto-fed from Mac mini files · refresh 30min · last <span style="color:var(--ink);">${when}</span>`;
+        const edits = loadEdits();
+        // Filter hidden
+        let visibleCats = cats.filter(([k]) => !edits.hidden.includes(k));
+        // Add custom categories
+        const customEntries = Object.entries(edits.custom || {}).map(([k, c]) => [k, { description: '(your custom · empty)', subcategories: {}, _custom: true }]);
+        visibleCats = visibleCats.concat(customEntries);
+        // Apply user-defined order, else item-count desc
+        if (edits.order.length) {
+          const orderMap = new Map(edits.order.map((k, i) => [k, i]));
+          visibleCats.sort((a, b) => {
+            const ai = orderMap.has(a[0]) ? orderMap.get(a[0]) : 9999;
+            const bi = orderMap.has(b[0]) ? orderMap.get(b[0]) : 9999;
+            return ai - bi;
+          });
+        } else {
+          visibleCats.sort((a, b) => {
+            const aN = Object.values(a[1].subcategories || {}).reduce((s, items) => s + items.length, 0);
+            const bN = Object.values(b[1].subcategories || {}).reduce((s, items) => s + items.length, 0);
+            return bN - aN;
+          });
+        }
+        list.innerHTML = visibleCats.map(([cat, entry]) => {
+          const subCount = Object.keys(entry.subcategories || {}).length;
+          const itemCount = Object.values(entry.subcategories || {}).reduce((a, items) => a + items.length, 0);
+          const desc = (entry.description || '').substring(0, 80);
+          const editedName = edits.renames[cat];
+          const displayName = editedName || cat.replace(/^custom-/, '').replace(/-/g, ' ');
+          const isEdited = !!editedName;
+          const isCustom = entry._custom;
+          const catEsc = cat.replace(/'/g, "\\'");
+          return `<div class="cat-row" draggable="true" ondragstart="dragStart(event,'${catEsc}')" ondragover="dragOver(event)" ondrop="dragDrop(event,'${catEsc}')" style="display:flex;align-items:center;gap:8px;">
+            <span style="color:var(--ink-faint);font-size:13px;cursor:grab;padding:0 4px;" title="drag to reorder">⋮⋮</span>
+            <span class="emoji" onclick="showGemmaCat('${catEsc}')" style="cursor:pointer;">${isCustom ? '✨' : catEmoji(cat)}</span>
+            <span class="name" contenteditable="true" spellcheck="false" data-cat="${catEsc}" onblur="commitInlineRename('${catEsc}', this)" onkeydown="if(event.key==='Enter'){event.preventDefault();this.blur();}" style="outline:none;border-bottom:1px dashed transparent;padding:2px 4px;border-radius:3px;cursor:text;" onfocus="this.style.borderBottomColor='var(--amber)';" title="click to rename">${displayName}${isEdited ? ' <span style="font-size:9px;color:var(--amber);background:var(--amber-soft);padding:1px 4px;border-radius:3px;letter-spacing:0;" contenteditable="false">edited</span>' : ''}${isCustom ? ' <span style="font-size:9px;color:var(--amber);background:var(--amber-soft);padding:1px 4px;border-radius:3px;" contenteditable="false">custom</span>' : ''}</span>
+            <span class="meta" onclick="showGemmaCat('${catEsc}')" style="cursor:pointer;margin-left:auto;">
+              <span>${subCount} sub${subCount !== 1 ? 's' : ''}</span>
+              <span>${itemCount} item${itemCount !== 1 ? 's' : ''}</span>
+              ${desc && !isCustom ? `<span style="opacity:0.7;">${desc}</span>` : ''}
+            </span>
+            <span style="cursor:pointer;color:var(--ink-faint);font-size:14px;padding:4px 8px;" onclick="hideCat('${catEsc}',event)" title="hide">✕</span>
+            <span class="chevron" onclick="showGemmaCat('${catEsc}')" style="cursor:pointer;">›</span>
+          </div>`;
+        }).join('') || '<div style="color:var(--ink-faint);padding:24px;text-align:center;">no Gemma categories yet · cycle every 30min fills</div>';
+      }
+    } catch (e) {
+      console.warn('gemma-curated load fail', e);
+      const list = document.getElementById('cat-list-dynamic');
+      if (list) list.innerHTML = '<div style="color:#C03A2B;padding:14px;">fetch /gemma-curated.json failed</div>';
+    }
+  }
+  function showGemmaIndex() {
+    if (!gemmaCurated) { return; }
+    const cats = gemmaCurated.curated || {};
+    document.getElementById('bc-crumb').textContent = 'Gemma · own categories';
+    document.getElementById('bc-title').innerHTML = '🧠 Gemma·s own categories';
+    document.getElementById('bc-subtitle').textContent = `${Object.keys(cats).length} categories · proposed by Gemma 2 2B local · with verbatim source provenance`;
+    const html = Object.entries(cats).map(([cat, entry]) => {
+      const subCount = Object.keys(entry.subcategories || {}).length;
+      const itemCount = Object.values(entry.subcategories || {}).reduce((a, items) => a + items.length, 0);
+      return `<div class="note-card" onclick="showGemmaCat('${escapeHtml(cat)}')">
+        <div class="nt-title">${escapeHtml(cat)}</div>
+        <div class="nt-preview">${escapeHtml(entry.description || '(no description yet)')}</div>
+        <div class="nt-meta"><span>${subCount} sub-cats</span><span>${itemCount} items</span></div>
+      </div>`;
+    }).join('') || '<div style="color:var(--ink-faint);">no Gemma data yet</div>';
+    document.getElementById('bc-cards').innerHTML = html;
+    show('brain-cat');
+  }
+  // NOTES per item · contentEditable · localStorage backed · brother + Atlas notes survive Gemma refresh
+  function loadNotes() {
+    try { return JSON.parse(localStorage.getItem('atlas-item-notes') || '{}'); }
+    catch { return {}; }
+  }
+  function saveNotes(n) {
+    try { localStorage.setItem('atlas-item-notes', JSON.stringify(n)); } catch {}
+  }
+  function commitNote(itemId, el) {
+    const notes = loadNotes();
+    const txt = el.textContent.trim();
+    if (txt) notes[itemId] = { text: txt, updatedAt: new Date().toISOString().substring(0, 16) };
+    else delete notes[itemId];
+    saveNotes(notes);
+    // Flash save indicator
+    el.style.borderBottomColor = 'var(--amber)';
+    setTimeout(() => { el.style.borderBottomColor = 'transparent'; }, 500);
+  }
+
+  function showGemmaCat(cat) {
+    if (!gemmaCurated) return;
+    let entry = (gemmaCurated.curated || {})[cat];
+    // Handle custom categories
+    const edits = loadEdits();
+    if (!entry && edits.custom?.[cat]) {
+      entry = { description: '(custom category · add notes + source links by editing)', subcategories: {} };
+    }
+    if (!entry) return;
+    const editedName = edits.renames?.[cat] || cat.replace(/^custom-/,'').replace(/-/g,' ');
+    document.getElementById('bc-crumb').innerHTML = `<a onclick="showGemmaIndex()">Gemma</a> › ${escapeHtml(editedName)}`;
+    document.getElementById('bc-title').textContent = editedName;
+    document.getElementById('bc-subtitle').textContent = entry.description || '';
+    const notes = loadNotes();
+    const items = Object.entries(entry.subcategories || {}).flatMap(([sub, list]) =>
+      list.map(it => ({ ...it, _sub: sub }))
+    );
+    // Sort by priority · P0 first · then P1 · then P2
+    const prioOrder = { P0: 0, P1: 1, P2: 2 };
+    items.sort((a, b) => (prioOrder[a.priority] ?? 3) - (prioOrder[b.priority] ?? 3));
+    const html = items.map(it => {
+      const itemId = it.id || (it.source_path || '').substring(0,80);
+      const note = notes[itemId];
+      const sourceLink = it.source_file || (it.source_path ? `file://${it.source_path}` : '');
+      const prio = it.priority || 'P2';
+      const prioColor = prio === 'P0' ? '#C03A2B' : (prio === 'P1' ? 'var(--amber)' : 'var(--ink-faint)');
+      const prioBg = prio === 'P0' ? '#FBE5E1' : (prio === 'P1' ? 'var(--amber-soft)' : 'var(--hair)');
+      return `<div class="note-card" style="position:relative;border-left:3px solid ${prioColor};">
+        <div class="nt-title">
+          <span style="font-size:10px;color:${prioColor};background:${prioBg};padding:2px 6px;border-radius:3px;text-transform:uppercase;letter-spacing:0.5px;margin-right:4px;font-weight:600;">${prio}</span>
+          <span style="font-size:10px;color:var(--amber);background:var(--amber-soft);padding:1px 6px;border-radius:3px;text-transform:uppercase;letter-spacing:0.5px;margin-right:6px;">${escapeHtml(it._sub)}</span>
+          ${escapeHtml((it.source_filename || it.id || '').substring(0,80))}
+        </div>
+        <div class="nt-preview">${escapeHtml(it.summary || '(Gemma summary pending)')}</div>
+        <div style="margin-top:10px;border-left:3px solid var(--amber-soft);padding:8px 12px;background:var(--bg);border-radius:4px;">
+          <div style="font-size:10px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;font-family:var(--mono);">my notes${note ? ` · last ${escapeHtml(note.updatedAt)}` : ''}</div>
+          <div contenteditable="true" spellcheck="true" data-item="${escapeHtml(itemId)}" onblur="commitNote('${itemId.replace(/'/g,"\\'")}', this)" onkeydown="if(event.key==='Enter'&&event.metaKey){event.preventDefault();this.blur();}" style="outline:none;border-bottom:1px dashed transparent;padding:4px;min-height:22px;font-size:14px;color:var(--ink);line-height:1.5;border-radius:3px;cursor:text;transition:border-bottom-color 200ms;" onfocus="this.style.borderBottomColor='var(--amber)';" data-placeholder="click to add your notes">${note ? escapeHtml(note.text) : ''}</div>
+        </div>
+        <div class="nt-meta">
+          ${sourceLink ? `<span><a href="${escapeHtml(sourceLink)}" target="_blank" style="color:var(--amber);">view source ↗</a></span>` : ''}
+          ${it.source_path ? `<span title="${escapeHtml(it.source_path)}">${escapeHtml(it.source_path.split('/').pop())}</span>` : ''}
+          ${it.file_mtime ? `<span>${escapeHtml(it.file_mtime)}</span>` : ''}
+          ${it.last_timestamp ? `<span>${escapeHtml(it.last_timestamp)}</span>` : ''}
+          ${it.kind ? `<span class="by">${escapeHtml(it.kind)}</span>` : ''}
+        </div>
+      </div>`;
+    }).join('') || '<div style="color:var(--ink-faint);padding:24px;text-align:center;">no items yet · Gemma fills overnight · or add custom category items via Notes</div>';
+    document.getElementById('bc-cards').innerHTML = html;
+    show('brain-cat');
+  }
+  loadGemmaCurated();
+  setInterval(loadGemmaCurated, 5 * 60 * 1000);
+
+  // BRAIN-FEED · Gemma-substrate (#45103) · 7 categories · pre-organized cards from brain v3
+  let brainFeed = null;
+  async function loadBrainFeed() {
+    try {
+      const r = await fetch('/atlas-brain-feed.json', { cache: 'no-cache' });
+      brainFeed = await r.json();
+      // Update landing-page meta counts
+      Object.entries(brainFeed.categories || {}).forEach(([k, v]) => {
+        const el = document.getElementById('meta-' + k);
+        if (el) {
+          const when = (brainFeed.generated_at || '').replace('T', ' ').replace('Z', ' UTC');
+          el.innerHTML = `<span>${v.card_count} live cards</span><span>brain v3 · ${(brainFeed.brain_stats || {}).nodes || '?'} nodes</span><span>fed ${when}</span>`;
+        }
+      });
+    } catch (e) {
+      console.warn('brain-feed load failed', e);
+    }
+  }
+  function showBrainCat(catKey) {
+    if (!brainFeed || !brainFeed.categories[catKey]) {
+      show('us-landing');
+      return;
+    }
+    const cat = brainFeed.categories[catKey];
+    document.getElementById('bc-crumb').textContent = cat.name;
+    document.getElementById('bc-title').innerHTML = (cat.icon || '') + ' ' + cat.name;
+    document.getElementById('bc-subtitle').textContent = cat.description + ' · ' + cat.card_count + ' cards from brain v3 · sorted by arousal';
+    const cardsHtml = (cat.cards || []).map(c => `
+      <div class="note-card">
+        <div class="nt-title">${escapeHtml(c.title || '')}</div>
+        <div class="nt-preview">${escapeHtml(c.preview || '')}</div>
+        <div class="nt-meta">
+          ${c.canon ? `<span>${escapeHtml(c.canon)}</span>` : ''}
+          ${c.when ? `<span>${escapeHtml(c.when)}</span>` : ''}
+          ${c.arousal != null ? `<span>arousal ${c.arousal}</span>` : ''}
+          ${c.pillar ? `<span class="by">${escapeHtml(c.pillar)}</span>` : ''}
+          <span style="margin-left:auto;color:var(--ink-faint);font-family:var(--mono);font-size:9px;">node #${c.node_id}</span>
+        </div>
+      </div>
+    `).join('') || '<div style="color:var(--ink-faint);padding:24px;">(no cards in this category yet)</div>';
+    document.getElementById('bc-cards').innerHTML = cardsHtml;
+    show('brain-cat');
+  }
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+  loadBrainFeed();
+  setInterval(loadBrainFeed, 5 * 60 * 1000); // refresh every 5 min
+
+  // Live arm-data cache · fetched once · refreshed on demand
+  let armsData = null;
+  let armsKanban = null;
+  async function loadArmsData() {
+    try {
+      const [a, k] = await Promise.all([
+        fetch('/arms.json').then(r => r.json()),
+        fetch('/arms-kanban.json').then(r => r.json())
+      ]);
+      armsData = a;
+      armsKanban = k;
+      renderArmLive('curiosity');
+      renderArmLive('research');
+      renderArmLive('dream');
+      renderArmLive('pascal');
+    } catch (e) {
+      console.warn('arms-data load failed', e);
+    }
+  }
+  function renderArmLive(armKey) {
+    const el = document.getElementById('arm-' + armKey + '-live');
+    if (!el) return;
+    if (!armsData || !armsKanban) { el.textContent = 'data not loaded'; return; }
+    // Find arm object · try direct match + aliases
+    const aliases = { curiosity: ['CURIOSITY','curiosity'], research: ['RESEARCH','researcher-worker','research'], dream: ['DREAM','dream'], pascal: ['PASCAL','pascal'] };
+    const tryNames = aliases[armKey] || [armKey];
+    const armObj = (armsData.arms || []).find(a => tryNames.includes(a.name) || tryNames.includes((a.name||'').toLowerCase()));
+    const kanbanObj = (armsKanban.arms || {})[armKey] || (armsKanban.arms || {})[tryNames.find(n => armsKanban.arms && armsKanban.arms[n])] || null;
+    if (!armObj && !kanbanObj) { el.innerHTML = '<div class="live-row"><span class="live-label">status</span><span class="live-val">no live data yet · arm idle</span></div>'; return; }
+    const rows = [];
+    if (armObj) {
+      if (armObj.status) rows.push(['status', '<span class="badge"><span class="live-led"></span>' + armObj.status + '</span>']);
+      if (armObj.role) rows.push(['role', armObj.role]);
+      if (armObj.last_fire) rows.push(['last fire', armObj.last_fire]);
+      if (armObj.next_action) rows.push(['next', armObj.next_action]);
+      if (armObj.last_brain_bank) rows.push(['last brain bank', armObj.last_brain_bank]);
+      if (Array.isArray(armObj.blockers) && armObj.blockers.length) rows.push(['blockers', armObj.blockers.join(' · ')]);
+    }
+    if (kanbanObj && kanbanObj.counts) {
+      const c = kanbanObj.counts;
+      const summary = Object.entries(c).map(([k,v]) => k + ': ' + v).join(' · ');
+      rows.push(['kanban', summary]);
+      if (kanbanObj.running && kanbanObj.running.length) rows.push(['running', kanbanObj.running.length + ' task(s)']);
+    }
+    el.innerHTML = rows.map(([l,v]) => '<div class="live-row"><span class="live-label">' + l + '</span><span class="live-val">' + v + '</span></div>').join('') +
+      '<div class="live-source">live · /arms.json + /arms-kanban.json · refreshed ' + (armsKanban.generated_at || armsData.generated_at || '') + '</div>';
+  }
+  loadArmsData();
+  setInterval(loadArmsData, 60000); // refresh every minute
+
+  function show(id) {
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    const target = document.getElementById(id);
+    if (target) target.classList.add('active');
+    // Re-render arm live if showing arm page
+    const armMatch = id.match(/^arm-(curiosity|research|dream|pascal)$/);
+    if (armMatch) renderArmLive(armMatch[1]);
+    // Update right nav active state
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    // Map drill states back to Us nav for highlight
+    let navMatch = id;
+    if (id.startsWith('us-')) navMatch = 'us-landing';
+    document.querySelectorAll('.nav-item').forEach(n => {
+      if (n.dataset.page === navMatch) n.classList.add('active');
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  document.querySelectorAll('.nav-item').forEach(n => {
+    n.addEventListener('click', () => show(n.dataset.page));
+  });
+  // ⌘K · ⌘+number jump · ↑↓ arrow nav between pages
+  const navOrder = [
+    'us-landing', 'room-stub', 'room-stub', 'room-stub', 'room-stub',
+    'room-stub', 'room-stub', 'room-stub', 'room-stub',
+    'manager-stub',
+    'arm-curiosity', 'arm-research', 'arm-dream', 'arm-pascal'
+  ];
+  const navLabels = ['Us', 'Bedroom', 'Family', 'Letters', 'Spine', 'Jumps', 'Focus', 'Goals', 'Workshop', 'Manager', 'Curiosity', 'Research', 'Dream', 'Pascal'];
+  let navIdx = 0;
+  function navTo(idx) {
+    navIdx = Math.max(0, Math.min(navOrder.length - 1, idx));
+    show(navOrder[navIdx]);
+  }
+  document.addEventListener('keydown', e => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      const term = prompt('⌘K search · type page name (Us · Bedroom · Family · Letters · Spine · Jumps · Focus · Goals · Workshop · Manager · Curiosity · Research · Dream · Pascal)');
+      if (term) {
+        const idx = navLabels.findIndex(l => l.toLowerCase().startsWith(term.toLowerCase()));
+        if (idx >= 0) navTo(idx);
+      }
+    }
+    // ⌘+1..9 jump to page N
+    if ((e.metaKey || e.ctrlKey) && e.key >= '1' && e.key <= '9') {
+      e.preventDefault();
+      navTo(parseInt(e.key, 10) - 1);
+    }
+    // arrow keys nav · only when no input focused
+    if (document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      if (e.key === 'ArrowDown' || e.key === 'j') { e.preventDefault(); navTo(navIdx + 1); }
+      if (e.key === 'ArrowUp' || e.key === 'k') { e.preventDefault(); navTo(navIdx - 1); }
+      if (e.key === 'Escape') { e.preventDefault(); show('us-landing'); navIdx = 0; }
+    }
+  });
+</script>
+
+<script id="window-cmdk-handler">
+document.addEventListener('keydown', e => {
+  if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+    e.preventDefault();
+    const q = prompt('⌘K search · type query · searches gemma-tiered.json across all 7 cats');
+    if (q && q.trim()) location.href = '/search.html?q=' + encodeURIComponent(q.trim());
+  }
+});
+// Quebec-FR-CA microcopy toggle
+function toggleLang() {
+  const lang = localStorage.getItem('atlas-lang') === 'fr-CA' ? 'en' : 'fr-CA';
+  localStorage.setItem('atlas-lang', lang);
+  if (lang === 'fr-CA') {
+    fetch('/i18n-fr-CA.json').then(r => r.json()).then(dict => {
+      // Translate visible elements
+      document.querySelectorAll('[data-i18n-key]').forEach(el => {
+        const k = el.dataset.i18nKey.split('.');
+        let v = dict; for (const p of k) v = v?.[p]; if (v) el.textContent = v;
+      });
+      alert('Atlas parle francais maintenant · Loi 25 OQLF · ' + Object.keys(dict.common).length + ' termes chargés');
+    });
+  } else { location.reload(); }
+}
+</script>
+</body>
+</html>
