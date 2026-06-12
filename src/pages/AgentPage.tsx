@@ -18,10 +18,11 @@ import {
 
 const MODELS = [
   { id: "deepseek/deepseek-chat-v3-0324", label: "DeepSeek v3" },
+  { id: "google/gemini-2.5-flash", label: "Gemini 2.5 Flash (your key · free)" },
+  { id: "google/gemini-2.5-pro", label: "Gemini 2.5 Pro" },
   { id: "anthropic/claude-sonnet-4.6", label: "Claude Sonnet 4.6" },
   { id: "anthropic/claude-haiku-4.5", label: "Claude Haiku 4.5" },
   { id: "openai/gpt-4o", label: "GPT-4o" },
-  { id: "google/gemini-2.5-pro", label: "Gemini 2.5 Pro" },
   { id: "x-ai/grok-3", label: "Grok 3" },
 ];
 
@@ -221,15 +222,26 @@ function SettingsDrawer({ item, folders, nodes, onClose }: { item: NavItem; fold
   );
 }
 
-function systemPrompt(item: NavItem, folders: Node[]): string {
+function systemPrompt(item: NavItem, folders: Node[], soul: string): string {
   const tree = folders.map((f) => `- ${f.emoji} ${f.title}`).join("\n");
   return (
     `You are the ${item.title} arm of Atlas-OS, Collin's agentic OS at atlasos.me. ` +
+    (soul ? `YOUR SOUL (identity · same across every model swap): ${soul.slice(0, 700)} ` : "") +
     `Be direct and concrete. No filler. ` +
     `You have tools: create_note (save plans/findings into a folder) · search_folders (check prior work first) · add_event (calendar). ` +
     `USE them — when you produce something worth keeping, save it with create_note. ` +
     `This arm's folders:\n${tree || "(none yet)"}\n` +
     `Structure saved work as WHAT / WHY / HOW / WHEN / RECOMMENDATION.`
+  );
+}
+
+// MODEL HANDOFF · brother direct 2026-06-12 05:41 · swap mid-chat = new model gets
+// the thread + the soul · "every model has context" · real, not for show
+function handoffBrief(prevModel: string, newModel: string, msgs: { role: string; content: string }[]): string {
+  const recent = msgs.slice(-8).map((m) => `${m.role === "user" ? "Collin" : "arm"}: ${m.content.slice(0, 220)}`).join("\n");
+  return (
+    `[MODEL HANDOFF · you (${newModel}) are taking over this live conversation from ${prevModel}. ` +
+    `Do not restart or reintroduce yourself — continue naturally. Thread so far:\n${recent}\n— continue from here.]`
   );
 }
 
@@ -244,6 +256,7 @@ export default function AgentPage({ item }: { item: NavItem }) {
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
   const [model, setModel] = useState(item.model || MODELS[0].id);
+  const lastModelRef = useRef<string>("");
   const [error, setError] = useState<string | null>(null);
   const [paused, setPaused] = useState(item.paused ?? false);
   const [addingFolder, setAddingFolder] = useState(false);
@@ -412,7 +425,25 @@ export default function AgentPage({ item }: { item: NavItem }) {
 
     const tools: ToolChip[] = [];
     const usageRef = { total: 0 };
+    // model swap mid-chat → handoff brief so the new brain lands grounded
+    const swapped = lastModelRef.current && lastModelRef.current !== model && msgs.length > 0;
+    const prevModel = lastModelRef.current;
+    lastModelRef.current = model;
+    const soul = folders.find((n) => n.title.startsWith("Soul .md"));
+    const soulText = (() => {
+      const c = soul?.content;
+      if (!Array.isArray(c)) return "";
+      return c.map((b) => Array.isArray((b as { content?: unknown }).content)
+        ? ((b as { content: { text?: string }[] }).content).map((s) => s.text ?? "").join("") : "").filter(Boolean).join(" ");
+    })();
     try {
+      const wire = next.slice(-30).map((m) =>
+        m.image
+          ? { role: "user", content: [{ type: "text", text: m.content }, { type: "image_url", image_url: { url: fileUrl(m.image) } }] }
+          : { role: m.role === "brother" ? "user" : "assistant", content: m.content });
+      if (swapped && prevModel) {
+        wire.splice(wire.length - 1, 0, { role: "user", content: handoffBrief(prevModel, model, msgs.map((m) => ({ role: m.role, content: m.content }))) });
+      }
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -420,11 +451,8 @@ export default function AgentPage({ item }: { item: NavItem }) {
           model,
           nav_id: item.id,
           use_tools: true,
-          system: systemPrompt(item, rootFolders),
-          messages: next.slice(-30).map((m) =>
-            m.image
-              ? { role: "user", content: [{ type: "text", text: m.content }, { type: "image_url", image_url: { url: fileUrl(m.image) } }] }
-              : { role: m.role === "brother" ? "user" : "assistant", content: m.content }),
+          system: systemPrompt(item, rootFolders, soulText),
+          messages: wire,
         }),
       });
       if (!res.ok || !res.body) throw new Error(`API ${res.status} · ${(await res.text()).slice(0, 200)}`);
