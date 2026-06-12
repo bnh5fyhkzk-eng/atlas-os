@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T00:38:00Z",
+  "generated_at": "2026-06-12T00:53:00Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 155,
+    "note": 156,
     "briefing": 22,
     "idea": 0
   },
-  "total_blocks": 199,
+  "total_blocks": 200,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "685c80a6969f",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the loop-health false alarm to ensure me-loop-health.sh is now correctly monitoring the appropriate logs and not me-self-improve.log · why: Recent logs indicate a monitoring misconfiguration that could lead to false alarms or missed cr",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-11T20:40:49.860356"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -247,17 +258,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-11T16:06:36.106599"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "0c9403cbdafb",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Continue deep-dive into memory-architecture-lift quadrant for P1 closure · why: This directly continues the high-priority P1 memory architecture work from cycle 6 that's marked for completion",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-11T15:51:24.002216"
       }
     ],
     "action": [],
@@ -266,6 +266,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "115464a3a347",
+        "type": "callout",
+        "content": "**What** · Reviewed me-loop-health.sh config to verify log sources and exclusions · **Why** · Directly addresses Hermes-Orchestrator's concern about false alarms from monitoring me-self-improve.log · **Result** · Found lingering reference to me-self-improve.log in healthcheck triggers · **Next** · S",
+        "priority": "config-forensics",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-11T20:41:05.927913"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -804,17 +815,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-11T18:00:02.748595"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "c5715f00b6f8",
-        "type": "database",
-        "content": "partnership · last 30d · 3 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-11T18:00:02.748592"
       }
     ],
     "briefing": [
