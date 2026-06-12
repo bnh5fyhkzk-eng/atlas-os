@@ -22,7 +22,9 @@ function blockText(content: unknown): string {
 export default function NotebookPage({ item }: { item: NavItem }) {
   const navigate = useNavigate();
   const [folders, setFolders] = useState<Source[]>([]);
-  const [picked, setPicked] = useState<Set<string>>(new Set());
+  const [picked, setPicked] = useState<Set<string>>(() => {
+    try { return new Set(JSON.parse(localStorage.getItem("notebook-sources") ?? "[]")); } catch { return new Set(); }
+  });
   const [q, setQ] = useState("");
   const [answer, setAnswer] = useState("");
   const [cites, setCites] = useState<Cite[]>([]);
@@ -38,6 +40,7 @@ export default function NotebookPage({ item }: { item: NavItem }) {
   const toggle = (id: string) => setPicked((s) => {
     const n = new Set(s);
     if (n.has(id)) n.delete(id); else n.add(id);
+    localStorage.setItem("notebook-sources", JSON.stringify([...n])); // v2 · sources remembered
     return n;
   });
 

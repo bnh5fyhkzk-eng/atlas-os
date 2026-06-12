@@ -1,170 +1,165 @@
 {
-  "generated_at": "2026-06-12T19:31:05Z",
+  "generated_at": "2026-06-12T19:42:16Z",
   "source": "Gemma 2 2B 4-bit MLX · me-gemma-curate.py · with-provenance",
   "session_file": "575f5c87-c5e3-423f-be92-d1b9431cfb30.jsonl",
-  "session_size_mb": 20.3,
+  "session_size_mb": 20.6,
   "batches_curated": 10,
   "items_total": 10,
-  "categories_proposed_by_gemma": 10,
-  "elapsed_seconds": 16.4,
+  "categories_proposed_by_gemma": 9,
+  "elapsed_seconds": 15.2,
   "note": "Each item links to /gemma-sources/<id>.md · verbatim terminal excerpt · nothing lost · proof for every claim.",
   "curated": {
-    "voice-loop": {
-      "description": "This conversation discusses the technical aspects of a voice loop, focusing on audio recording, playback, and the challenges of achieving real-time interaction.",
+    "atlas-deployment": {
+      "description": "This conversation details the management of tunnel daemons and their impact on system performance. · This conversation outlines tasks related to Atlas deployment and API integration, including voice core development.",
       "subcategories": {
-        "audio-recording-playback": [
+        "tunnel-management": [
           {
-            "id": "batch-001-1781292651",
-            "summary": "This conversation discusses the technical aspects of a voice loop, focusing on audio recording, playback, and the challenges of achieving real-time interaction.",
+            "id": "batch-001-1781293322",
+            "summary": "This conversation details the management of tunnel daemons and their impact on system performance.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-001-1781292651.md",
+            "source_file": "/gemma-sources/batch-001-1781293322.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-12T17:07:41",
-            "gemma_raw": "CATEGORY: **Voice Loop**\nSUBCATEGORY: **Audio Recording & Playback**\nSUMMARY:  This conversation discusses the technical aspects of a voice loop, focusing on audio recording, playback, and the challenges of achieving real-time interaction."
+            "last_timestamp": "2026-06-12T18:07:36",
+            "gemma_raw": "CATEGORY: **Atlas-Deployment**\nSUBCATEGORY: **Tunnel-Management**\nSUMMARY:  This conversation details the management of tunnel daemons and their impact on system performance."
+          }
+        ],
+        "api-integration": [
+          {
+            "id": "batch-007-1781293330",
+            "summary": "This conversation outlines tasks related to Atlas deployment and API integration, including voice core development.",
+            "turn_count": 6,
+            "source_file": "/gemma-sources/batch-007-1781293330.md",
+            "first_role": "assistant",
+            "last_timestamp": "2026-06-12T19:20:43",
+            "gemma_raw": "CATEGORY: **Atlas Deployment**\nSUBCATEGORY: **API Integration**\nSUMMARY:  This conversation outlines tasks related to Atlas deployment and API integration, including voice core development."
           }
         ]
       }
     },
-    "vercel-deploy": {
-      "description": "Optimizing Vercel deployment for faster response times and real-time interaction.",
+    "notebook-pipeline": {
+      "description": "This conversation focuses on testing the end-to-end functionality of the Notebook pipeline.",
       "subcategories": {
-        "deployment-optimization": [
+        "e2e-testing": [
           {
-            "id": "batch-002-1781292652",
-            "summary": "Optimizing Vercel deployment for faster response times and real-time interaction.",
+            "id": "batch-002-1781293323",
+            "summary": "This conversation focuses on testing the end-to-end functionality of the Notebook pipeline.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-002-1781292652.md",
+            "source_file": "/gemma-sources/batch-002-1781293323.md",
+            "first_role": "assistant",
+            "last_timestamp": "2026-06-12T18:22:48",
+            "gemma_raw": "CATEGORY: **Notebook Pipeline**\nSUBCATEGORY: **E2E Testing**\nSUMMARY:  This conversation focuses on testing the end-to-end functionality of the Notebook pipeline."
+          }
+        ]
+      }
+    },
+    "api-deployment": {
+      "description": "This conversation discusses configuration issues with the Atlas API server and its associated launchd daemon.",
+      "subcategories": {
+        "server-configuration": [
+          {
+            "id": "batch-003-1781293325",
+            "summary": "This conversation discusses configuration issues with the Atlas API server and its associated launchd daemon.",
+            "turn_count": 6,
+            "source_file": "/gemma-sources/batch-003-1781293325.md",
+            "first_role": "assistant",
+            "last_timestamp": "2026-06-12T18:28:00",
+            "gemma_raw": "CATEGORY: **API Deployment**\nSUBCATEGORY: **Server Configuration**\nSUMMARY:  This conversation discusses configuration issues with the Atlas API server and its associated launchd daemon."
+          }
+        ]
+      }
+    },
+    "loop-schedule": {
+      "description": "Scheduling a recurring or self-paced prompt based on user input.",
+      "subcategories": {
+        "prompt-scheduling": [
+          {
+            "id": "batch-004-1781293326",
+            "summary": "Scheduling a recurring or self-paced prompt based on user input.",
+            "turn_count": 6,
+            "source_file": "/gemma-sources/batch-004-1781293326.md",
             "first_role": "user",
-            "last_timestamp": "2026-06-12T18:04:56",
-            "gemma_raw": "CATEGORY: **Vercel-Deploy**\nSUBCATEGORY: **Deployment Optimization**\nSUMMARY:  Optimizing Vercel deployment for faster response times and real-time interaction."
+            "last_timestamp": "2026-06-12T18:57:30",
+            "gemma_raw": "CATEGORY: **Loop Schedule**\nSUBCATEGORY: **Prompt Scheduling**\nSUMMARY:  Scheduling a recurring or self-paced prompt based on user input."
           }
         ]
       }
     },
-    "atlas-plan": {
-      "description": "This conversation details the verification process of items in the Atlas-Plan, including live receipts and item-by-item status.",
+    "atlas-build": {
+      "description": "Scheduling a loop of Atlas-build tasks based on user instructions.",
       "subcategories": {
-        "item-verification": [
+        "build-loop": [
           {
-            "id": "batch-003-1781292654",
-            "summary": "This conversation details the verification process of items in the Atlas-Plan, including live receipts and item-by-item status.",
+            "id": "batch-005-1781293328",
+            "summary": "Scheduling a loop of Atlas-build tasks based on user instructions.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-003-1781292654.md",
+            "source_file": "/gemma-sources/batch-005-1781293328.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-12T18:17:30",
-            "gemma_raw": "CATEGORY: **Atlas-Plan**\nSUBCATEGORY: **Item-Verification**\nSUMMARY:  This conversation details the verification process of items in the Atlas-Plan, including live receipts and item-by-item status."
+            "last_timestamp": "2026-06-12T19:14:00",
+            "gemma_raw": "CATEGORY: **Atlas-Build**\nSUBCATEGORY: **Build-Loop**\nSUMMARY:  Scheduling a loop of Atlas-build tasks based on user instructions."
           }
         ]
       }
     },
-    "deployment-workflow": {
-      "description": "This conversation details the steps and tools used for Supabase migration, including index management and redeployment.",
+    "prompt-scheduling": {
+      "description": "Schedule recurring prompts based on user input.",
       "subcategories": {
-        "supabase-migration": [
+        "recurring-tasks": [
           {
-            "id": "batch-004-1781292656",
-            "summary": "This conversation details the steps and tools used for Supabase migration, including index management and redeployment.",
+            "id": "batch-006-1781293329",
+            "summary": "Schedule recurring prompts based on user input.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-004-1781292656.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-12T18:24:27",
-            "gemma_raw": "CATEGORY: **Deployment Workflow**\nSUBCATEGORY: **Supabase Migration**\nSUMMARY:  This conversation details the steps and tools used for Supabase migration, including index management and redeployment."
-          }
-        ]
-      }
-    },
-    "infrastructure": {
-      "description": "Atlas's API server is experiencing issues, requiring diagnosis and fix.",
-      "subcategories": {
-        "api-server": [
-          {
-            "id": "batch-005-1781292658",
-            "summary": "Atlas's API server is experiencing issues, requiring diagnosis and fix.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-005-1781292658.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-12T18:28:12",
-            "gemma_raw": "CATEGORY: infrastructure\nSUBCATEGORY: api-server\nSUMMARY:  Atlas's API server is experiencing issues, requiring diagnosis and fix."
-          }
-        ]
-      }
-    },
-    "atlas-build-loop": {
-      "description": "This conversation outlines the steps for a full Atlas build loop, including voice turn testing and verification.",
-      "subcategories": {
-        "voice-turn-verification": [
-          {
-            "id": "batch-006-1781292659",
-            "summary": "This conversation outlines the steps for a full Atlas build loop, including voice turn testing and verification.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-006-1781292659.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-12T19:04:00",
-            "gemma_raw": "CATEGORY: **Atlas Build Loop**\nSUBCATEGORY: **Voice Turn & Verification**\nSUMMARY:  This conversation outlines the steps for a full Atlas build loop, including voice turn testing and verification."
-          }
-        ]
-      }
-    },
-    "task-schedule": {
-      "description": "Schedule a recurring prompt based on user input.",
-      "subcategories": {
-        "recurring-prompts": [
-          {
-            "id": "batch-007-1781292661",
-            "summary": "Schedule a recurring prompt based on user input.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-007-1781292661.md",
+            "source_file": "/gemma-sources/batch-006-1781293329.md",
             "first_role": "user",
-            "last_timestamp": "2026-06-12T19:14:39",
-            "gemma_raw": "CATEGORY: **Task Schedule**\nSUBCATEGORY: **Recurring Prompts**\nSUMMARY:  Schedule a recurring prompt based on user input."
+            "last_timestamp": "2026-06-12T19:16:12",
+            "gemma_raw": "CATEGORY: **Prompt Scheduling**\nSUBCATEGORY: **Recurring Tasks**\nSUMMARY:  Schedule recurring prompts based on user input."
           }
         ]
       }
     },
-    "plugin-management": {
-      "description": "Categorizing and analyzing interactions with Chrome extensions.",
+    "claims": {
+      "description": "This conversation discusses verifying the status of work-claims, specifically using the \"VERIFY-GATE\" command.",
       "subcategories": {
-        "chrome-extension-usage": [
+        "verification": [
           {
-            "id": "batch-008-1781292662",
-            "summary": "Categorizing and analyzing interactions with Chrome extensions.",
+            "id": "batch-008-1781293332",
+            "summary": "This conversation discusses verifying the status of work-claims, specifically using the \"VERIFY-GATE\" command.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-008-1781292662.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-12T19:16:41",
-            "gemma_raw": "CATEGORY: **Plugin Management**\nSUBCATEGORY: **Chrome Extension Usage**\nSUMMARY:  Categorizing and analyzing interactions with Chrome extensions."
+            "source_file": "/gemma-sources/batch-008-1781293332.md",
+            "first_role": "user",
+            "last_timestamp": "2026-06-12T19:26:08",
+            "gemma_raw": "CATEGORY: **CLAIMS**\nSUBCATEGORY: **Verification**\nSUMMARY:  This conversation discusses verifying the status of work-claims, specifically using the \"VERIFY-GATE\" command."
           }
         ]
       }
     },
-    "api-integration": {
-      "description": "This conversation outlines the implementation and testing of the API-direct voice core for Atlas.",
+    "deployment": {
+      "description": "This conversation discusses the configuration of OpenRouter, including its ability to dynamically route requests based on model cost and compression.",
       "subcategories": {
-        "voice-core-implementation": [
+        "openrouter-configuration": [
           {
-            "id": "batch-009-1781292664",
-            "summary": "This conversation outlines the implementation and testing of the API-direct voice core for Atlas.",
+            "id": "batch-009-1781293334",
+            "summary": "This conversation discusses the configuration of OpenRouter, including its ability to dynamically route requests based on model cost and compression.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-009-1781292664.md",
+            "source_file": "/gemma-sources/batch-009-1781293334.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-12T19:20:56",
-            "gemma_raw": "CATEGORY: **API-Integration**\nSUBCATEGORY: **Voice Core Implementation**\nSUMMARY:  This conversation outlines the implementation and testing of the API-direct voice core for Atlas."
+            "last_timestamp": "2026-06-12T19:37:27",
+            "gemma_raw": "CATEGORY: **Deployment**\nSUBCATEGORY: **OpenRouter Configuration**\nSUMMARY:  This conversation discusses the configuration of OpenRouter, including its ability to dynamically route requests based on model cost and compression."
           }
         ]
       }
     },
-    "studio-deployment": {
-      "description": "This conversation details the launch and functionality of Studio v3, a production-ready platform for generating text-based outputs.",
+    "home-widget": {
+      "description": "This conversation discusses the creation of a home widget that visually represents the user's current activities and progress.",
       "subcategories": {
-        "studio-v3-launch": [
+        "visualization": [
           {
-            "id": "batch-010-1781292665",
-            "summary": "This conversation details the launch and functionality of Studio v3, a production-ready platform for generating text-based outputs.",
-            "turn_count": 3,
-            "source_file": "/gemma-sources/batch-010-1781292665.md",
+            "id": "batch-010-1781293336",
+            "summary": "This conversation discusses the creation of a home widget that visually represents the user's current activities and progress.",
+            "turn_count": 6,
+            "source_file": "/gemma-sources/batch-010-1781293336.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-12T19:25:48",
-            "gemma_raw": "CATEGORY: **Studio Deployment**\nSUBCATEGORY: **Studio v3 Launch**\nSUMMARY:  This conversation details the launch and functionality of Studio v3, a production-ready platform for generating text-based outputs."
+            "last_timestamp": "2026-06-12T19:41:38",
+            "gemma_raw": "CATEGORY: **Home Widget**\nSUBCATEGORY: **Visualization**\nSUMMARY:  This conversation discusses the creation of a home widget that visually represents the user's current activities and progress."
           }
         ]
       }

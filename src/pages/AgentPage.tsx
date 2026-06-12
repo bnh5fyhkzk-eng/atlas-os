@@ -21,6 +21,8 @@ const MODELS = [
   { id: "local/gemma", label: "🆓 Gemma (local · $0 · ours)" },
   { id: "google/gemini-2.5-flash", label: "✅ Gemini 2.5 Flash (your key · free)" },
   { id: "deepseek/deepseek-chat-v3-0324", label: "✅ DeepSeek v3 (OpenRouter)" },
+  { id: "deepseek/deepseek-v4-pro", label: "✅ DeepSeek V4 Pro (OpenRouter)" },
+  { id: "deepseek/deepseek-v4-flash", label: "✅ DeepSeek V4 Flash (cheapest paid)" },
   { id: "google/gemini-2.5-pro", label: "✅ Gemini 2.5 Pro (your key)" },
   { id: "anthropic/claude-sonnet-4.6", label: "🔑 Claude Sonnet 4.6" },
   { id: "openai/gpt-4o", label: "🔑 GPT-4o" },
