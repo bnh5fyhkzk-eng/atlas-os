@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-12T02:04:45Z",
-  "total_items_scored": 145,
+  "generated_at": "2026-06-12T02:14:45Z",
+  "total_items_scored": 147,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Deep-dive into memory-architecture-lift quadrant to resolve P1 priority from cycle #28284 \u00b7 why: Recent high-arousal canon shows this research was actively being worked on and remains unr",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: backfill past arm output data not in atlasos.me as per brother direct request \u00b7 why: Brother explicitly requested this data for continuity and system integrity (P0 directive). This aligns",
       "category": "decision",
-      "priority": "P1",
+      "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-11T16:21:49.349247"
+      "updated_at": "2026-06-11T16:37:06.257176"
     },
     {
       "arm": "research",
@@ -34,22 +34,11 @@
       "category": "launchagents",
       "priority": "P1",
       "source": "backfill",
-      "score": 9.46,
+      "score": 9.38,
       "updated_at": "2026-06-11T18:00:03.523230"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Deep-dive into memory-architecture-lift quadrant to resolve P1 priority from cycle #28284 \u00b7 why: Recent high-arousal canon shows this research was actively being worked on and remains unr",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-11T16:21:49.349247"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -148,6 +137,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-11T18:39:00.471922"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Continue deep-dive into memory-architecture-lift quadrant to resolve P1 issues \u00b7 why: Recent high-arousal brain canon #28284 indicates active focus on this quadrant, with direct relevance",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-11T18:54:17.318551"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
