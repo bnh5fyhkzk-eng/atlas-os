@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "812903778da2",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-11T16:08:59.034312"
-      },
-      "content": "Hermes decision · arm=research · priority=P1 · task: Continue deep-dive into memory-architecture-lift quadrant to resolve P1 memory architecture issues · why: Recent brain canon #28284 indicates this is a high-priority research area that needs completion to advance the memory architecture work",
-      "updated_at": "2026-06-11T16:08:59.034324"
-    },
-    {
       "id": "5edba892a9f8",
       "type": "callout",
       "props": {
@@ -693,15 +681,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P1 · task: Investigate and document the differences between stale and retired daemons in the DAEMON-HEALTH-WHITELIST to prevent future false alarms. · why: Recent cycle-wake audit issues (#45620) indicate confusion between stale and retired daemons, which could lead to unnecessary alerts and system noise. Clarifying this will improve system reliability.",
       "updated_at": "2026-06-11T21:11:27.843193"
+    },
+    {
+      "id": "3fa208063077",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-11T21:26:46.077315"
+      },
+      "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the loop-health false alarm issue surfaced in cycle-wake audit · why: This is a critical system health issue that could affect core functionality, as indicated by the P1 priority tag and recent activity",
+      "updated_at": "2026-06-11T21:26:46.077324"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-11T21:23:58.123977"
+    "checked_at": "2026-06-11T21:28:59.088528"
   },
   "block_count": 30,
-  "updated_at": "2026-06-11T21:11:27.843195",
-  "generated_at": "2026-06-12T01:23:58Z"
+  "updated_at": "2026-06-11T21:26:46.077325",
+  "generated_at": "2026-06-12T01:28:59Z"
 }
