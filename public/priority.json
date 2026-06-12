@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-12T13:25:21Z",
-  "total_items_scored": 164,
+  "generated_at": "2026-06-12T13:35:22Z",
+  "total_items_scored": 165,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the memory-architecture-lift quadrant mentioned in cycle 6 research to understand its implications for current P1 tasks. \u00b7 why: The recent brain canon #28284 specifically ment",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Analyze the cycle-fire pattern and 3rd-instance-1-day occurrence to determine the next optimal firing sequence. \u00b7 why: The recent logs indicate a focus on cycle patterns and instance timi",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-12T03:17:46.232902"
+      "updated_at": "2026-06-12T03:33:00.624885"
     },
     {
       "arm": "research",
@@ -34,22 +34,11 @@
       "category": "launchagents",
       "priority": "P1",
       "source": "backfill",
-      "score": 9.79,
+      "score": 9.71,
       "updated_at": "2026-06-12T06:00:02.897481"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the memory-architecture-lift quadrant mentioned in cycle 6 research to understand its implications for current P1 tasks. \u00b7 why: The recent brain canon #28284 specifically ment",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-12T03:17:46.232902"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -148,6 +137,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-12T05:35:06.260093"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the cycle-fire pattern and SAME-SHAPE instances to understand their impact on memory architecture \u00b7 why: Recent logs indicate recurring patterns (#45678, #45785) that may hold",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-12T05:50:21.047947"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
