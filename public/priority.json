@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-06-12T07:45:03Z",
-  "total_items_scored": 164,
+  "generated_at": "2026-06-12T07:55:03Z",
+  "total_items_scored": 165,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the loop-health false alarm issue surfaced in cycle-wake audit \u00b7 why: This is a critical system health issue that could affect core functionality, as indicated by the P1 prior",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the loop-health false alarm fix to ensure correct log monitoring is restored \u00b7 why: Recent cycle-wake audits and loop-health issues indicate a critical need to stabilize monit",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-11T21:26:46.077324"
+      "updated_at": "2026-06-11T21:42:00.108838"
     },
     {
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Investigate the discrepancy in loop-health monitoring flagged in #45633 to prevent future false alarms. \u00b7 why \u00b7 Recent cycle-wake audits and loop-health issues (#45620, #45623, #45633) indicate a critical monitoring gap that could cascade into system instability if unresolved.",
+      "content": "HERMES TASK \u00b7 Investigate the loop-health false alarm fix to ensure correct log monitoring and prevent future misalignments. \u00b7 why \u00b7 Recent cycle-wake audits and loop-health issues indicate a critical need to stabilize monitoring systems to avoid false alarms and ensure accurate daemon health tracking.",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-11T22:42:57.300082",
+      "updated_at": "2026-06-11T22:58:10.677819",
       "use_skill": "brain-rrf"
     },
     {
@@ -34,22 +34,11 @@
       "category": "launchagents",
       "priority": "P1",
       "source": "backfill",
-      "score": 9.88,
+      "score": 9.79,
       "updated_at": "2026-06-12T00:30:03.699384"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the loop-health false alarm issue surfaced in cycle-wake audit \u00b7 why: This is a critical system health issue that could affect core functionality, as indicated by the P1 prior",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-11T21:26:46.077324"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -148,6 +137,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-11T23:43:58.834025"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the memory-architecture-lift quadrant mentioned in #28284 to ensure P1 closure aligns with current operational integrity \u00b7 why: Recent high-arousal canons indicate unresolved ",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-11T23:59:18.982008"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
