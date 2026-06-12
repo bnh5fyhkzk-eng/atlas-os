@@ -86,6 +86,8 @@ import ChatPage from "@/pages/ChatPage";
 import ArmPage from "@/pages/ArmPage";
 import AtlasManagerPage from "@/pages/AtlasManagerPage";
 import AtlasCanvasPage from "@/pages/AtlasCanvasPage";
+import AtlasHomePage from "@/pages/AtlasHomePage";
+import "@/styles/atlas-theme.css";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import { useI18n } from "@/i18n";
@@ -734,6 +736,7 @@ export default function App() {
                   <Route path="/arm/:name/:pageId" element={<ArmPage />} />
                   <Route path="/manager" element={<AtlasManagerPage />} />
                   <Route path="/atlas-canvas" element={<AtlasCanvasPage />} />
+                  <Route path="/home" element={<AtlasHomePage />} />
                   <Route
                     path="*"
                     element={

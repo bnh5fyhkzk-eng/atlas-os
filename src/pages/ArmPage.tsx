@@ -5,6 +5,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import { ArmSidebar } from "@/components/atlas/ArmSidebar";
 import { BlockEditor } from "@/components/atlas/BlockEditor";
 import { EmbedBlockRenderer, EMBED_TYPES } from "@/components/atlas/EmbedBlockRenderer";
+import { AuthGate } from "@/components/atlas/AuthGate";
+import { NoteSlideOver } from "@/components/atlas/NoteSlideOver";
 import {
   getPage,
   listBlocks,
@@ -17,10 +19,12 @@ import {
   subscribeToPageBlocks,
   copyBlockToProject,
   listProjects,
+  fiveFieldScaffold,
   type Page,
   type Block,
   type Project,
 } from "@/lib/atlas-supabase";
+import "@/styles/atlas-theme.css";
 import { LayoutGrid, Rows, KanbanSquare, Calendar, Image as ImageIcon, FileText, Plus, Copy, Trash2 } from "lucide-react";
 
 const VIEW_TYPES: Array<{ value: Page["view_type"]; label: string; icon: typeof FileText }> = [
@@ -33,6 +37,14 @@ const VIEW_TYPES: Array<{ value: Page["view_type"]; label: string; icon: typeof 
 ];
 
 export default function ArmPage() {
+  return (
+    <AuthGate>
+      <ArmPageInner />
+    </AuthGate>
+  );
+}
+
+function ArmPageInner() {
   const params = useParams<{ name: string; pageId?: string }>();
   const armSlug = params.name ?? "curiosity";
   const pageId = params.pageId;
@@ -48,6 +60,23 @@ export default function ArmPage() {
   const [showEmbedPicker, setShowEmbedPicker] = useState(false);
   const [showCopyDialog, setShowCopyDialog] = useState<Block | null>(null);
   const [projects, setProjects] = useState<Project[]>([]);
+  const [forceFull, setForceFull] = useState(false);
+
+  // depth in tree · 0=category · 1=subcategory · 2+=note (opens as slide-over · taste-move)
+  const pageDepth = useMemo(() => {
+    if (!pageId) return -1;
+    const byId = new Map(armPages.map((p) => [p.id, p]));
+    let depth = 0;
+    let cur = byId.get(pageId);
+    while (cur?.parent_id && byId.has(cur.parent_id) && depth < 10) {
+      cur = byId.get(cur.parent_id);
+      depth++;
+    }
+    return depth;
+  }, [pageId, armPages]);
+  const isNoteLevel = pageDepth >= 2 && !forceFull;
+
+  useEffect(() => { setForceFull(false); }, [pageId]);
 
   const loadPage = useCallback(async () => {
     if (!pageId) {
@@ -194,20 +223,20 @@ export default function ArmPage() {
   }, [armSlug]);
 
   return (
-    <div className="flex min-h-screen bg-white text-stone-900">
+    <div className="atlas-surface flex min-h-screen">
       <ArmSidebar />
       <main className="flex-1 overflow-y-auto">
-        <header className="border-b border-black/10 px-8 py-6 flex items-center justify-between sticky top-0 bg-white/95 backdrop-blur z-10">
+        <header className="border-b px-8 py-5 flex items-center justify-between sticky top-0 bg-white/95 backdrop-blur z-10" style={{ borderColor: "var(--atlas-border)" }}>
           <div className="flex-1">
             {page ? (
               <input
-                className="text-3xl font-semibold bg-transparent border-0 outline-none w-full focus:bg-black/[0.02] rounded px-1 -mx-1"
+                className="text-2xl font-semibold bg-transparent border-0 outline-none w-full focus:bg-black/[0.02] rounded px-1 -mx-1"
                 value={page.title}
                 onChange={(e) => setPage({ ...page, title: e.target.value })}
                 onBlur={(e) => handleTitleChange(e.target.value)}
               />
             ) : (
-              <h1 className="text-3xl font-semibold">{armTitle}</h1>
+              <h1 className="text-2xl font-semibold">{armTitle}</h1>
             )}
             <div className="text-xs opacity-50 mt-1">
               {page ? `${armSlug} · ${page.view_type}` : `${armSlug} · pick a page or create one`}
@@ -294,11 +323,11 @@ export default function ArmPage() {
             </div>
           )}
 
-          {!loading && page && (
+          {!loading && page && !isNoteLevel && (
             <>
               <BlockEditor
                 key={page.id}
-                initialDoc={doc}
+                initialDoc={doc ?? (page.parent_id ? fiveFieldScaffold() : null)}
                 onChange={handleSave}
                 placeholder={`Type / for slash commands · or write in ${page.title}`}
               />
@@ -351,6 +380,14 @@ export default function ArmPage() {
             </>
           )}
         </div>
+
+        {!loading && page && isNoteLevel && (
+          <NoteSlideOver
+            pageId={page.id}
+            onClose={() => navigate(page.parent_id ? `/arm/${armSlug}/${page.parent_id}` : `/arm/${armSlug}`)}
+            onOpenFull={() => setForceFull(true)}
+          />
+        )}
 
         {showCopyDialog && (
           <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50" onClick={() => setShowCopyDialog(null)}>

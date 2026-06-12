@@ -50,8 +50,39 @@ export interface Page {
   order_idx: number;
   view_type: "doc" | "table" | "board" | "kanban" | "calendar" | "gallery";
   archived: boolean;
+  pinned: boolean;
+  hidden: boolean;
   created_at: string;
   updated_at: string;
+}
+
+// 5-field note scaffold · per brother direct repeated 20+ times · WHAT/WHY/HOW/WHEN/RECOMMENDATION
+export function fiveFieldScaffold(): unknown {
+  const h = (text: string) => ({
+    type: "heading",
+    props: { level: 3 },
+    content: [{ type: "text", text, styles: {} }],
+  });
+  const p = () => ({ type: "paragraph", content: [] });
+  return [h("WHAT"), p(), h("WHY"), p(), h("HOW"), p(), h("WHEN"), p(), h("RECOMMENDATION"), p()];
+}
+
+// Canvas layout persistence · GOAL-1-FEEL · atlas_canvas_layouts
+export async function getCanvasLayout(canvasKey: string): Promise<unknown[] | null> {
+  const { data, error } = await atlasSupabase()
+    .from("atlas_canvas_layouts")
+    .select("layout")
+    .eq("canvas_key", canvasKey)
+    .maybeSingle();
+  if (error) throw error;
+  return (data?.layout as unknown[]) ?? null;
+}
+
+export async function saveCanvasLayout(canvasKey: string, layout: unknown[]): Promise<void> {
+  const { error } = await atlasSupabase()
+    .from("atlas_canvas_layouts")
+    .upsert({ canvas_key: canvasKey, layout, updated_at: new Date().toISOString() }, { onConflict: "canvas_key" });
+  if (error) throw error;
 }
 
 export interface Block {
