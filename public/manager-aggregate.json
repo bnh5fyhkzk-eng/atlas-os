@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T03:23:06Z",
+  "generated_at": "2026-06-12T03:38:06Z",
   "arm_count": 8,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 143,
+    "note": 144,
     "briefing": 26,
     "idea": 0
   },
-  "total_blocks": 192,
+  "total_blocks": 193,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "b97ce80887cb",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the loop-health false alarm issue surfaced in #45633 to prevent recurrence · why: This is a critical infrastructure issue affecting system reliability (P1 memory-architecture quadrant) and has caused observable disruptions (auto-wake f",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-11T23:28:44.352694"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-11T17:53:15.587263"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "82cd163399ec",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Continue deep-dive into memory-architecture-lift quadrant to resolve P1 issues · why: Recent high-arousal brain canon #28284 directly relates to current memory architecture challenges, and resolving this will unblock other tasks",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-11T17:38:04.783297"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "4af6b0484dfc",
+        "type": "callout",
+        "content": "**What** · Initiated trace analysis of loop-health monitoring triggers during incident #45633 timeframe · **Why** · Root cause requires understanding why valid memory operations triggered false alarms in P1 quadrant · **Result** · Found timestamp collision between memory scrubbing and health checks ",
+        "priority": "forensic-tracing",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-11T23:28:51.164225"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -815,17 +826,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-11T18:00:03.287363"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "80cd5d2ecccd",
-        "type": "database",
-        "content": "general · last 30d · 84 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-11T18:00:03.117587"
       }
     ],
     "briefing": [
