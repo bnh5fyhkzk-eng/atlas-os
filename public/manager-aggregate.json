@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T21:00:34Z",
+  "generated_at": "2026-06-12T21:15:35Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 162,
+    "note": 163,
     "briefing": 38,
     "idea": 0
   },
-  "total_blocks": 224,
+  "total_blocks": 225,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "ad9dcf73d5bb",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Deep-dive into the crash anatomy of the 16GB loop-guard revival to prevent recurrence · why: Recent logs indicate a critical crash event (#46315) with a revived loop-guard at 20min intervals, directly impacting system stability. This aligns with P",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-12T17:03:20.611231"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-12T10:24:34.522236"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "ebee9ec4c21b",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Deep-dive into memory-architecture-lift quadrant to resolve P1 priority from cycle #28284 · why: This is an active focus (P1) task that was highlighted in recent high-arousal brain canons and remains unresolved, directly tied to current research c",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-12T10:09:20.445546"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "d2a90e89c415",
+        "type": "callout",
+        "content": "**What** · Initiated trace analysis of crash #46315 with focus on 16GB loop-guard revival patterns and memory dumps · **Why** · Hermes flagged 20min revival intervals as critical to system stability; P0 requires immediate root-cause isolation · **Result** · Expected: Memory leak signature in guard's",
+        "priority": "crash-forensics",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-12T17:03:26.548164"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-12T12:00:03.536537"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "1d723f987b2c",
-        "type": "database",
-        "content": "general · last 30d · 66 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-12T12:00:03.384601"
       }
     ],
     "briefing": [
