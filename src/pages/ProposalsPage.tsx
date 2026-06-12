@@ -1,12 +1,27 @@
 // Proposals · eval-gate · WE-50/50 #27601 · 1-click approve/reject
 import { useEffect, useState } from "react";
 import { Check, X } from "lucide-react";
-import { listProposals, decideProposal, type Proposal, type NavItem } from "../lib/db";
+import { sb, listProposals, decideProposal, updateNode, archiveNode, type Proposal, type NavItem, type Node } from "../lib/db";
 
 export default function ProposalsPage({ item }: { item: NavItem }) {
   const [rows, setRows] = useState<Proposal[]>([]);
-  const reload = () => listProposals().then(setRows).catch(() => setRows([]));
+  const [pendingNotes, setPendingNotes] = useState<Node[]>([]);
+  const reload = () => {
+    listProposals().then(setRows).catch(() => setRows([]));
+    void sb().from("atlas_nodes").select("*").like("created_by", "tool:PENDING%").eq("archived", false)
+      .order("created_at", { ascending: false }).limit(30)
+      .then(({ data }) => setPendingNotes((data ?? []) as Node[]));
+  };
   useEffect(() => { reload(); }, []);
+
+  const approveNote = async (n: Node) => {
+    await updateNode(n.id, { created_by: n.created_by.replace("tool:PENDING:", "tool:") } as Partial<Node>);
+    reload();
+  };
+  const rejectNote = async (n: Node) => {
+    await archiveNode(n.id);
+    reload();
+  };
 
   const decide = async (id: string, status: "approved" | "rejected") => {
     await decideProposal(id, status);
@@ -39,7 +54,24 @@ export default function ProposalsPage({ item }: { item: NavItem }) {
             </button>
           </div>
         ))}
-        {pending.length === 0 && <div className="py-8 text-center text-sm" style={{ color: "var(--text-faint)" }}>Nothing waiting · all decided</div>}
+        {pendingNotes.length > 0 && (
+          <div className="pt-2">
+            <div className="mb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: "var(--text-faint)" }}>
+              Arm actions waiting (ASK-mode)
+            </div>
+            {pendingNotes.map((n) => (
+              <div key={n.id} className="mb-2 flex items-center gap-3 rounded-lg border p-3" style={{ borderColor: "#f5c66f", background: "rgba(245,198,111,0.07)" }}>
+                <div className="min-w-0 flex-1">
+                  <div className="truncate text-sm font-medium">{n.emoji} {n.title}</div>
+                  <div className="mt-0.5 text-xs" style={{ color: "var(--text-soft)" }}>{n.created_by.replace("tool:PENDING:", "by ")}</div>
+                </div>
+                <button className="rounded-lg p-2 text-white" style={{ background: "#448361" }} onClick={() => void approveNote(n)}><Check size={15} /></button>
+                <button className="rounded-lg border p-2" style={{ borderColor: "var(--border)", color: "#c4554d" }} onClick={() => void rejectNote(n)}><X size={15} /></button>
+              </div>
+            ))}
+          </div>
+        )}
+        {pending.length === 0 && pendingNotes.length === 0 && <div className="py-8 text-center text-sm" style={{ color: "var(--text-faint)" }}>Nothing waiting · all decided</div>}
         {decided.length > 0 && (
           <div className="pt-6">
             <div className="mb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: "var(--text-faint)" }}>Decided</div>

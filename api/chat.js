@@ -73,6 +73,10 @@ function mdToBlocks(md) {
 async function runTool(name, args, navId, model) {
   const db = sb();
   if (name === "create_note") {
+    // V4-APPROVALS · ASK-mode arms write as PENDING · brother approves in Proposals page
+    const { data: cap } = await db.from("atlas_arm_capabilities").select("config").eq("nav_id", navId).eq("capability", "autonomy").maybeSingle();
+    const ask = cap?.config?.mode === "ask";
+    const byPrefix = ask ? `tool:PENDING:${model}` : `tool:${model}`;
     const { data: folders } = await db.from("atlas_nodes").select("id,title").eq("nav_id", navId).eq("kind", "folder").eq("archived", false);
     const q = String(args.folder_title || "").toLowerCase();
     const folder = (folders ?? []).find((f) => f.title.toLowerCase() === q) ??
@@ -80,7 +84,7 @@ async function runTool(name, args, navId, model) {
     let parentId = folder?.id ?? null;
     if (!parentId) {
       const { data: created } = await db.from("atlas_nodes")
-        .insert({ nav_id: navId, kind: "folder", title: args.folder_title || "Notes", emoji: "📁", created_by: `tool:${model}` })
+        .insert({ nav_id: navId, kind: "folder", title: args.folder_title || "Notes", emoji: "📁", created_by: byPrefix })
         .select("id").single();
       parentId = created?.id ?? null;
     }
@@ -90,11 +94,11 @@ async function runTool(name, args, navId, model) {
         title: args.title, emoji: "📝",
         content: mdToBlocks(args.markdown),
         proofs: [{ label: `written by ${model}`, kind: "ai" }],
-        created_by: `tool:${model}`,
+        created_by: byPrefix,
       })
       .select("id,title").single();
     if (error) return { error: error.message };
-    return { ok: true, note_id: note.id, note_title: note.title, folder_id: parentId };
+    return { ok: true, note_id: note.id, note_title: note.title, folder_id: parentId, pending_approval: ask };
   }
   if (name === "search_folders") {
     const { data } = await db.from("atlas_nodes").select("id,title,kind,parent_id").eq("nav_id", navId).eq("archived", false).ilike("title", `%${args.query}%`).limit(10);
