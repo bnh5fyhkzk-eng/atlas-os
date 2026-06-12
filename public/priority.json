@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-06-12T13:35:22Z",
-  "total_items_scored": 165,
+  "generated_at": "2026-06-12T13:45:22Z",
+  "total_items_scored": 166,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Analyze the cycle-fire pattern and 3rd-instance-1-day occurrence to determine the next optimal firing sequence. \u00b7 why: The recent logs indicate a focus on cycle patterns and instance timi",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the connection between #45678 and #45612 to understand the cycle-fire pattern and its implications for memory architecture. \u00b7 why: The recent high-arousal canons suggest a pat",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-12T03:33:00.624885"
+      "updated_at": "2026-06-12T03:48:16.021450"
     },
     {
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Deep-dive into memory-architecture-lift quadrant to resolve P1 priority from cycle #28284 \u00b7 why \u00b7 The memory-architecture-lift quadrant is a P1 priority that recently closed but may require follow-up to ensure stability and integration with current systems. This aligns with high-arousal brain canon activity and recent focus on architectural improvements.",
+      "content": "HERMES TASK \u00b7 Investigate the memory-architecture-lift quadrant mentioned in cycle 6 research to understand its implications for current P1 priorities. \u00b7 why \u00b7 The recent brain canon #28284 specifically mentions this quadrant in relation to P1 memory architecture, indicating it's a high-priority area needing deeper understanding.",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-12T04:34:02.639344",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-12T04:49:21.704584",
+      "use_skill": "notebooklm"
     },
     {
       "arm": "infra",
@@ -34,22 +34,11 @@
       "category": "launchagents",
       "priority": "P1",
       "source": "backfill",
-      "score": 9.71,
+      "score": 9.62,
       "updated_at": "2026-06-12T06:00:02.897481"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Analyze the cycle-fire pattern and 3rd-instance-1-day occurrence to determine the next optimal firing sequence. \u00b7 why: The recent logs indicate a focus on cycle patterns and instance timi",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-12T03:33:00.624885"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -148,6 +137,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-12T05:50:21.047947"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the connection between #45678 and #45612 to understand the cycle-fire pattern and its implications for memory architecture. \u00b7 why: The recent high-arousal canons suggest a pat",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-12T06:05:37.558092"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
