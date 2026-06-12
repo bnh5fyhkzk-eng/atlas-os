@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T23:52:57Z",
+  "generated_at": "2026-06-12T00:07:59Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 152,
+    "note": 153,
     "briefing": 22,
     "idea": 0
   },
-  "total_blocks": 196,
+  "total_blocks": 197,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "5524270a5b9d",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the loop-health false alarm fix to ensure correct log monitoring is restored · why: Recent cycle-wake audit and loop-health issues indicate a critical need to stabilize monitoring systems to prevent further false alarms",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-11T19:55:08.696440"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -247,17 +258,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-11T15:36:12.927918"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "2491df8a1707",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Deep-dive into memory-architecture-lift quadrant to finalize P1 closure from cycle #28284 · why: The recent brain canon #28284 indicates an active focus (P1) on memory architecture research with a pending closure. This aligns with the 'research' a",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-11T15:34:44.569781"
       }
     ],
     "action": [],
@@ -266,6 +266,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "b185e607614a",
+        "type": "callout",
+        "content": "**What** · Analyzed loop-health monitoring logs to identify false alarm patterns and root causes. · **Why** · To stabilize monitoring systems by pinpointing and addressing the triggers of false alarms, as per Hermes-Orchestrator's P1 directive. · **Result** · Identified timestamp desync and threshol",
+        "priority": "diagnostic_audit",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-11T19:55:12.525594"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -804,17 +815,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-11T18:00:02.748584"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "6a5abc7ee781",
-        "type": "database",
-        "content": "clients · last 30d · 6 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-11T18:00:02.748579"
       }
     ],
     "briefing": [
