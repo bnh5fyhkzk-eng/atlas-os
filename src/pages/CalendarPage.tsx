@@ -10,13 +10,26 @@ export default function CalendarPage({ item }: { item: NavItem }) {
     return new Date(d.getFullYear(), d.getMonth(), 1);
   });
   const [events, setEvents] = useState<CalEvent[]>([]);
+  const [gStatus, setGStatus] = useState<string>("");
   const [addingDay, setAddingDay] = useState<string | null>(null);
   const [title, setTitle] = useState("");
 
   const reload = useCallback(() => {
     const from = new Date(cursor.getFullYear(), cursor.getMonth(), 1);
     const to = new Date(cursor.getFullYear(), cursor.getMonth() + 1, 1);
-    listEvents(from.toISOString(), to.toISOString()).then(setEvents).catch(() => setEvents([]));
+    Promise.all([
+      listEvents(from.toISOString(), to.toISOString()).catch(() => [] as CalEvent[]),
+      fetch(`/api/gcal?from=${from.toISOString()}&to=${to.toISOString()}`)
+        .then((r) => r.json())
+        .then((j) => {
+          setGStatus(j.connected ? "" : `Google: ${j.reason ?? "not connected"}`);
+          return (j.events ?? []) as CalEvent[];
+        })
+        .catch(() => {
+          setGStatus("Google: unreachable");
+          return [] as CalEvent[];
+        }),
+    ]).then(([local, google]) => setEvents([...local, ...google]));
   }, [cursor]);
 
   useEffect(() => { reload(); }, [reload]);
@@ -98,7 +111,11 @@ export default function CalendarPage({ item }: { item: NavItem }) {
                       <div
                         key={e.id}
                         className="truncate rounded px-1 py-0.5 text-[11px]"
-                        style={{ background: "var(--accent-soft)", color: "var(--accent)" }}
+                        style={
+                          e.source === "google"
+                            ? { background: "rgba(68,131,97,0.12)", color: "#448361" }
+                            : { background: "var(--accent-soft)", color: "var(--accent)" }
+                        }
                         title={`${e.title} · ${new Date(e.starts_at).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })} · ${e.source}`}
                       >
                         {e.title}
@@ -125,8 +142,10 @@ export default function CalendarPage({ item }: { item: NavItem }) {
             </div>
           ))}
         </div>
-        <div className="mt-3 text-xs" style={{ color: "var(--text-faint)" }}>
-          Manual add live · Gemma auto-fill posts into this table (Phase C pipe from Mac mini)
+        <div className="mt-3 flex items-center gap-3 text-xs" style={{ color: "var(--text-faint)" }}>
+          <span><span style={{ color: "#448361" }}>■</span> Google</span>
+          <span><span style={{ color: "var(--accent)" }}>■</span> Atlas/Gemma</span>
+          {gStatus && <span>· {gStatus}</span>}
         </div>
       </div>
     </div>
