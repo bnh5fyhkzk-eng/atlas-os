@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "d542255c334a",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-11T17:53:15.587254"
-      },
-      "content": "Hermes decision · arm=research · priority=P1 · task: deep-dive into memory-architecture-lift quadrant to resolve P1 closure from #28284 · why: This is a high-priority (P1) active focus task that requires immediate attention to advance the research cycle.",
-      "updated_at": "2026-06-11T17:53:15.587263"
-    },
-    {
       "id": "5bf0a84e5492",
       "type": "database",
       "props": {
@@ -683,15 +671,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the loop-health false alarm issue surfaced in #45633 to prevent recurrence · why: This is a critical infrastructure issue affecting system reliability (P1 memory-architecture quadrant) and has caused observable disruptions (auto-wake fires, wrong log monitoring). Resolving it will stabilize the core loop-health monitoring system.",
       "updated_at": "2026-06-11T23:28:44.352694"
+    },
+    {
+      "id": "748aa0c94e3d",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-11T23:43:58.834015"
+      },
+      "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the recurring cycle-fire pattern observed in #45678 and #45612 to determine if it's a systemic issue or a coincidence. · why: The recent logs (#45678, #45612) indicate a recurring pattern that may affect system stability. Understanding this pattern is critical to prevent potential disruptions.",
+      "updated_at": "2026-06-11T23:43:58.834025"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-11T23:39:20.514918"
+    "checked_at": "2026-06-11T23:44:21.427413"
   },
   "block_count": 30,
-  "updated_at": "2026-06-11T23:28:44.352696",
-  "generated_at": "2026-06-12T03:39:20Z"
+  "updated_at": "2026-06-11T23:43:58.834027",
+  "generated_at": "2026-06-12T03:44:21Z"
 }
