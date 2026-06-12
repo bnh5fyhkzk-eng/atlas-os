@@ -1,6 +1,6 @@
 // BlockNote editor wrapper · Notion-style blocks
 // Per FOUNDATION-REBUILD Phase 2 · /arm/curiosity canary
-import { useEffect, useMemo, useRef } from "react";
+import { Component, useEffect, useMemo, useRef, type ReactNode } from "react";
 import {
   BlockNoteSchema,
   defaultBlockSpecs,
@@ -24,7 +24,47 @@ const schema = BlockNoteSchema.create({
   },
 });
 
-export function BlockEditor({
+// A malformed block (e.g. invalid table from an AI writer) must never blank the
+// whole app — caught live 2026-06-12 when a bad table white-screened the house.
+class EditorBoundary extends Component<{ raw: unknown; children: ReactNode }, { failed: boolean }> {
+  state = { failed: false };
+  static getDerivedStateFromError() { return { failed: true }; }
+  render() {
+    if (!this.state.failed) return this.props.children;
+    const text = (() => {
+      try {
+        const blocks = this.props.raw;
+        if (Array.isArray(blocks)) {
+          return blocks.map((b) => {
+            const c = (b as { content?: unknown }).content;
+            return Array.isArray(c)
+              ? c.map((s) => (s as { text?: string }).text ?? "").join("")
+              : JSON.stringify(c).slice(0, 200);
+          }).join("\n");
+        }
+        return String(blocks).slice(0, 2000);
+      } catch { return "(unreadable content)"; }
+    })();
+    return (
+      <div className="p-4 text-sm">
+        <div className="mb-2 rounded border px-2 py-1 text-xs" style={{ borderColor: "#d9730d", color: "#d9730d" }}>
+          ⚠️ note has a block the editor can't render · showing raw text
+        </div>
+        <pre className="whitespace-pre-wrap text-sm" style={{ fontFamily: "inherit" }}>{text}</pre>
+      </div>
+    );
+  }
+}
+
+export function BlockEditor(props: BlockEditorProps) {
+  return (
+    <EditorBoundary raw={props.initialDoc}>
+      <BlockEditorInner {...props} />
+    </EditorBoundary>
+  );
+}
+
+function BlockEditorInner({
   initialDoc,
   onChange,
   editable = true,
