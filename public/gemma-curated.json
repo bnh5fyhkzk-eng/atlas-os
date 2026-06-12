@@ -1,170 +1,170 @@
 {
-  "generated_at": "2026-06-12T16:47:24Z",
+  "generated_at": "2026-06-12T16:59:03Z",
   "source": "Gemma 2 2B 4-bit MLX · me-gemma-curate.py · with-provenance",
   "session_file": "575f5c87-c5e3-423f-be92-d1b9431cfb30.jsonl",
-  "session_size_mb": 18.1,
+  "session_size_mb": 18.3,
   "batches_curated": 10,
   "items_total": 10,
   "categories_proposed_by_gemma": 10,
-  "elapsed_seconds": 15.4,
+  "elapsed_seconds": 16.1,
   "note": "Each item links to /gemma-sources/<id>.md · verbatim terminal excerpt · nothing lost · proof for every claim.",
   "curated": {
-    "plan-management": {
-      "description": "This conversation outlines the build order for Atlas, including priority tasks and specific requirements.",
-      "subcategories": {
-        "build-order": [
-          {
-            "id": "batch-001-1781282831",
-            "summary": "This conversation outlines the build order for Atlas, including priority tasks and specific requirements.",
-            "turn_count": 6,
-            "source_file": "/gemma-sources/batch-001-1781282831.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-12T15:31:48",
-            "gemma_raw": "CATEGORY: **Plan Management**\nSUBCATEGORY: **Build Order**\nSUMMARY:  This conversation outlines the build order for Atlas, including priority tasks and specific requirements."
-          }
-        ]
-      }
-    },
     "cloudflare-zone-management": {
-      "description": "Identifying and resolving the mismatch between Cloudflare account and authed API endpoint.",
+      "description": "Identifying and resolving the mismatch between Cloudflare account and authed API for atlasos.me.",
       "subcategories": {
         "account-mismatch": [
           {
-            "id": "batch-002-1781282832",
-            "summary": "Identifying and resolving the mismatch between Cloudflare account and authed API endpoint.",
+            "id": "batch-001-1781283528",
+            "summary": "Identifying and resolving the mismatch between Cloudflare account and authed API for atlasos.me.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-002-1781282832.md",
+            "source_file": "/gemma-sources/batch-001-1781283528.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-12T15:48:28",
-            "gemma_raw": "CATEGORY: Cloudflare Zone Management\nSUBCATEGORY: Account Mismatch\nSUMMARY:  Identifying and resolving the mismatch between Cloudflare account and authed API endpoint."
+            "last_timestamp": "2026-06-12T15:48:50",
+            "gemma_raw": "CATEGORY: Cloudflare Zone Management\nSUBCATEGORY: Account Mismatch\nSUMMARY:  Identifying and resolving the mismatch between Cloudflare account and authed API for atlasos.me."
           }
         ]
       }
     },
-    "cloudflare-api": {
-      "description": "Analyzing and configuring CNAME settings for Cloudflare API integration.",
+    "cloudflare-management": {
+      "description": "Analyzing and resolving DNS issues related to Cloudflare configuration.",
       "subcategories": {
-        "cname-configuration": [
+        "dns-resolution": [
           {
-            "id": "batch-003-1781282833",
-            "summary": "Analyzing and configuring CNAME settings for Cloudflare API integration.",
+            "id": "batch-002-1781283530",
+            "summary": "Analyzing and resolving DNS issues related to Cloudflare configuration.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-003-1781282833.md",
+            "source_file": "/gemma-sources/batch-002-1781283530.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-12T15:50:58",
-            "gemma_raw": "CATEGORY: Cloudflare API\nSUBCATEGORY: CNAME Configuration\nSUMMARY:  Analyzing and configuring CNAME settings for Cloudflare API integration."
+            "last_timestamp": "2026-06-12T15:51:40",
+            "gemma_raw": "CATEGORY: Cloudflare Management\nSUBCATEGORY: DNS Resolution\nSUMMARY:  Analyzing and resolving DNS issues related to Cloudflare configuration."
           }
         ]
       }
     },
-    "dns-configuration": {
-      "description": "This conversation discusses resolving the DNS record for `tui.upliftai.app` to a Cloudflare A record.",
+    "api-deployment": {
+      "description": "This conversation discusses the status and health of the API backend and its relation to the tunnel.",
       "subcategories": {
-        "cloudflare-a-record": [
+        "backend-health": [
           {
-            "id": "batch-004-1781282835",
-            "summary": "This conversation discusses resolving the DNS record for `tui.upliftai.app` to a Cloudflare A record.",
+            "id": "batch-003-1781283531",
+            "summary": "This conversation discusses the status and health of the API backend and its relation to the tunnel.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-004-1781282835.md",
+            "source_file": "/gemma-sources/batch-003-1781283531.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-12T15:53:47",
-            "gemma_raw": "CATEGORY: **DNS Configuration**\nSUBCATEGORY: **Cloudflare A Record**\nSUMMARY:  This conversation discusses resolving the DNS record for `tui.upliftai.app` to a Cloudflare A record."
+            "last_timestamp": "2026-06-12T15:54:11",
+            "gemma_raw": "CATEGORY: **API Deployment**\nSUBCATEGORY: **Backend Health**\nSUMMARY:  This conversation discusses the status and health of the API backend and its relation to the tunnel."
           }
         ]
       }
     },
     "api-key-management": {
-      "description": "This conversation discusses the usage of API keys and the models they unlock.",
+      "description": "**Clarifies the distinction between API tokens and subscription benefits for model usage.**",
       "subcategories": {
         "model-usage": [
           {
-            "id": "batch-005-1781282836",
-            "summary": "This conversation discusses the usage of API keys and the models they unlock.",
+            "id": "batch-004-1781283533",
+            "summary": "**Clarifies the distinction between API tokens and subscription benefits for model usage.**",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-005-1781282836.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-12T16:15:48",
-            "gemma_raw": "CATEGORY: **API Key Management**\nSUBCATEGORY: **Model Usage**\nSUMMARY:  This conversation discusses the usage of API keys and the models they unlock."
+            "source_file": "/gemma-sources/batch-004-1781283533.md",
+            "first_role": "user",
+            "last_timestamp": "2026-06-12T16:16:17",
+            "gemma_raw": "CATEGORY: **API Key Management**\nSUBCATEGORY: **Model Usage**\nSUMMARY:  **Clarifies the distinction between API tokens and subscription benefits for model usage.**"
           }
         ]
       }
     },
     "studio-page": {
-      "description": "Describes the Studio page's model availability and billing structure.",
+      "description": "This conversation discusses the live status of the Studio page and its features, including the free real-time path.",
       "subcategories": {
-        "model-availability": [
+        "live-status": [
           {
-            "id": "batch-006-1781282838",
-            "summary": "Describes the Studio page's model availability and billing structure.",
+            "id": "batch-005-1781283535",
+            "summary": "This conversation discusses the live status of the Studio page and its features, including the free real-time path.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-006-1781282838.md",
+            "source_file": "/gemma-sources/batch-005-1781283535.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-12T16:19:40",
-            "gemma_raw": "CATEGORY: Studio Page\nSUBCATEGORY: Model Availability\nSUMMARY:  Describes the Studio page's model availability and billing structure."
+            "last_timestamp": "2026-06-12T16:19:55",
+            "gemma_raw": "CATEGORY: **Studio Page**\nSUBCATEGORY: **Live Status**\nSUMMARY:  This conversation discusses the live status of the Studio page and its features, including the free real-time path."
           }
         ]
       }
     },
-    "vercel-deploy": {
-      "description": "Understanding and managing Vercel DNS records for Atlasos.me.",
+    "dns-management": {
+      "description": "This conversation discusses the implementation of DNS records for Atlasos.me and Gemma's local setup.",
       "subcategories": {
-        "dns-management": [
+        "dns-record-implementation": [
           {
-            "id": "batch-007-1781282840",
-            "summary": "Understanding and managing Vercel DNS records for Atlasos.me.",
+            "id": "batch-006-1781283536",
+            "summary": "This conversation discusses the implementation of DNS records for Atlasos.me and Gemma's local setup.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-007-1781282840.md",
-            "first_role": "assistant",
-            "last_timestamp": "2026-06-12T16:25:57",
-            "gemma_raw": "CATEGORY: Vercel-Deploy\nSUBCATEGORY: DNS-Management\nSUMMARY:  Understanding and managing Vercel DNS records for Atlasos.me."
+            "source_file": "/gemma-sources/batch-006-1781283536.md",
+            "first_role": "user",
+            "last_timestamp": "2026-06-12T16:26:14",
+            "gemma_raw": "CATEGORY: **DNS Management**\nSUBCATEGORY: **DNS Record Implementation**\nSUMMARY:  This conversation discusses the implementation of DNS records for Atlasos.me and Gemma's local setup."
           }
         ]
       }
     },
     "relay-daemon": {
-      "description": "This conversation discusses testing the relay daemon's functionality and verifying its end-to-end performance.",
+      "description": "This conversation discusses testing the Gemma relay daemon and its end-to-end functionality.",
       "subcategories": {
         "end-to-end-testing": [
           {
-            "id": "batch-008-1781282841",
-            "summary": "This conversation discusses testing the relay daemon's functionality and verifying its end-to-end performance.",
+            "id": "batch-007-1781283538",
+            "summary": "This conversation discusses testing the Gemma relay daemon and its end-to-end functionality.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-008-1781282841.md",
+            "source_file": "/gemma-sources/batch-007-1781283538.md",
             "first_role": "assistant",
-            "last_timestamp": "2026-06-12T16:34:58",
-            "gemma_raw": "CATEGORY: **Relay Daemon**\nSUBCATEGORY: **End-to-End Testing**\nSUMMARY:  This conversation discusses testing the relay daemon's functionality and verifying its end-to-end performance."
+            "last_timestamp": "2026-06-12T16:35:24",
+            "gemma_raw": "CATEGORY: Relay Daemon\nSUBCATEGORY: End-to-End Testing\nSUMMARY:  This conversation discusses testing the Gemma relay daemon and its end-to-end functionality."
           }
         ]
       }
     },
-    "atlas-project": {
-      "description": "This conversation outlines Atlas's feature priorities, focusing on the \"Voice real-time (phone-feel)\" functionality.",
+    "atlas-setup": {
+      "description": "This conversation outlines the user interface needs for Atlas, including the terminal and the live terminal, to ensure a seamless user experience.",
       "subcategories": {
-        "feature-prioritization": [
+        "user-interface": [
           {
-            "id": "batch-009-1781282843",
-            "summary": "This conversation outlines Atlas's feature priorities, focusing on the \"Voice real-time (phone-feel)\" functionality.",
+            "id": "batch-008-1781283540",
+            "summary": "This conversation outlines the user interface needs for Atlas, including the terminal and the live terminal, to ensure a seamless user experience.",
             "turn_count": 6,
-            "source_file": "/gemma-sources/batch-009-1781282843.md",
+            "source_file": "/gemma-sources/batch-008-1781283540.md",
             "first_role": "user",
-            "last_timestamp": "2026-06-12T16:39:20",
-            "gemma_raw": "CATEGORY: **Atlas-Project**\nSUBCATEGORY: **Feature-Prioritization**\nSUMMARY:  This conversation outlines Atlas's feature priorities, focusing on the \"Voice real-time (phone-feel)\" functionality."
+            "last_timestamp": "2026-06-12T16:43:05",
+            "gemma_raw": "CATEGORY: **Atlas-Setup**\nSUBCATEGORY: **User-Interface**\nSUMMARY:  This conversation outlines the user interface needs for Atlas, including the terminal and the live terminal, to ensure a seamless user experience."
           }
         ]
       }
     },
     "voice-interaction": {
-      "description": "This plan outlines the architecture for real-time voice interaction with Atlas, focusing on audio processing.",
+      "description": "This conversation outlines a plan for real-time voice communication within Atlasos.me, focusing on simplicity and free versions.",
       "subcategories": {
-        "real-time-audio-processing": [
+        "real-time-communication": [
           {
-            "id": "batch-010-1781282844",
-            "summary": "This plan outlines the architecture for real-time voice interaction with Atlas, focusing on audio processing.",
-            "turn_count": 2,
-            "source_file": "/gemma-sources/batch-010-1781282844.md",
-            "first_role": "user",
-            "last_timestamp": "2026-06-12T16:43:55",
-            "gemma_raw": "CATEGORY: **Voice Interaction**\nSUBCATEGORY: **Real-Time Audio Processing**\nSUMMARY:  This plan outlines the architecture for real-time voice interaction with Atlas, focusing on audio processing."
+            "id": "batch-009-1781283542",
+            "summary": "This conversation outlines a plan for real-time voice communication within Atlasos.me, focusing on simplicity and free versions.",
+            "turn_count": 6,
+            "source_file": "/gemma-sources/batch-009-1781283542.md",
+            "first_role": "assistant",
+            "last_timestamp": "2026-06-12T16:53:34",
+            "gemma_raw": "CATEGORY: **Voice Interaction**\nSUBCATEGORY: **Real-Time Communication**\nSUMMARY:  This conversation outlines a plan for real-time voice communication within Atlasos.me, focusing on simplicity and free versions."
+          }
+        ]
+      }
+    },
+    "voice-chain-testing": {
+      "description": "This conversation details the results of an end-to-end voice chain test.",
+      "subcategories": {
+        "e2e-test-results": [
+          {
+            "id": "batch-010-1781283543",
+            "summary": "This conversation details the results of an end-to-end voice chain test.",
+            "turn_count": 3,
+            "source_file": "/gemma-sources/batch-010-1781283543.md",
+            "first_role": "assistant",
+            "last_timestamp": "2026-06-12T16:58:06",
+            "gemma_raw": "CATEGORY: Voice Chain Testing\nSUBCATEGORY:  E2E Test Results\nSUMMARY:  This conversation details the results of an end-to-end voice chain test."
           }
         ]
       }

@@ -69,10 +69,15 @@ export function AtlasBar() {
       if (Date.now() - new Date(last.created_at).getTime() < 2 * 60 * 1000) {
         const a = new Audio(audioUrl(last.tts_path));
         playingRef.current = true;
-        a.onended = () => { playingRef.current = false; };
-        a.onerror = () => { playingRef.current = false; };
-        void a.play().catch(() => { playingRef.current = false; });
+        const release = () => { playingRef.current = false; waitingRef.current = false; }; // my turn ends · ears open
+        a.onended = release;
+        a.onerror = release;
+        void a.play().catch(release);
       }
+    }
+    // turn-gate release when a reply finishes WITHOUT voice (text-only or error)
+    if (last && last.role === "atlas" && (last.status === "done" || last.status === "error") && !last.tts_path) {
+      waitingRef.current = false;
     }
   }, []);
 
@@ -82,6 +87,7 @@ export function AtlasBar() {
   const callRef = useRef<{ stream: MediaStream; ctx: AudioContext; raf: number } | null>(null);
   const callRecRef = useRef<MediaRecorder | null>(null);
   const playingRef = useRef(false);
+  const waitingRef = useRef(false); // turn-gate · true between my-send and reply-played
   const [calling, setCalling] = useState(false);
 
   const sendVoiceBlob = useCallback(async (blob: Blob, mime: string) => {
@@ -123,25 +129,52 @@ export function AtlasBar() {
       const mime = MediaRecorder.isTypeSupported("audio/webm") ? "audio/webm" : "audio/mp4";
       let speaking = false;
       let lastVoice = 0;
+      let speechStart = 0;
       let chunks: Blob[] = [];
-      const THRESH = 14; // RMS above ambient
+      // anti-loop guards (brother caught the voice-loop 2026-06-12 13:00):
+      // 1 · ambient calibration · learn the room for 1s · threshold = floor*2.5+6
+      // 2 · min real speech 600ms · clicks/hums never send
+      // 3 · turn-gate · after sending, deaf until my reply finishes playing
+      let thresh = 16;
+      let calibrated = false;
+      const calStart = Date.now();
+      let calSum = 0; let calN = 0;
       const tick = () => {
         analyser.getByteTimeDomainData(buf);
         let sum = 0;
         for (let i = 0; i < buf.length; i++) { const d = buf[i] - 128; sum += d * d; }
         const rms = Math.sqrt(sum / buf.length);
         const now = Date.now();
-        if (!playingRef.current && rms > THRESH) {
+        if (!calibrated) {
+          calSum += rms; calN++;
+          if (now - calStart > 1000) { thresh = Math.max(10, (calSum / calN) * 2.5 + 6); calibrated = true; }
+          const c0 = callRef.current;
+          if (c0) c0.raf = window.requestAnimationFrame(tick);
+          return;
+        }
+        const deaf = playingRef.current || waitingRef.current;
+        if (!deaf && rms > thresh) {
           lastVoice = now;
           if (!speaking) {
             speaking = true;
+            speechStart = now;
             chunks = [];
             const rec = new MediaRecorder(stream, { mimeType: mime });
             rec.ondataavailable = (e) => { if (e.data.size > 0) chunks.push(e.data); };
-            rec.onstop = () => { void sendVoiceBlob(new Blob(chunks, { type: mime }), mime); };
+            rec.onstop = () => {
+              const dur = Date.now() - speechStart;
+              if (dur > 600 + 1400) { // real speech, not a blip (minus the silence tail)
+                waitingRef.current = true; // turn-gate · deaf until reply done+played
+                void sendVoiceBlob(new Blob(chunks, { type: mime }), mime);
+              }
+            };
             callRecRef.current = rec;
             rec.start();
           }
+        }
+        if (deaf && speaking) { // my voice started or turn ended · drop the partial recording
+          speaking = false;
+          if (callRecRef.current?.state === "recording") { callRecRef.current.onstop = null; callRecRef.current.stop(); }
         }
         if (speaking && now - lastVoice > 1400) {
           speaking = false;
