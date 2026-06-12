@@ -1,55 +1,44 @@
 {
-  "generated_at": "2026-06-12T15:05:26Z",
+  "generated_at": "2026-06-12T15:15:27Z",
   "total_items_scored": 168,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Continue deep-dive into memory-architecture-lift quadrant to resolve P1 closure \u00b7 why: Recent high-arousal brain canon #28284 indicates active focus on this research with a pending P1 clo",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: deep-dive into memory-architecture-lift quadrant to resolve P1 closure from cycle #28284 \u00b7 why: recent high-arousal canons show unresolved P1 memory-architecture work, and brother-direct ",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-12T05:04:39.221689"
+      "updated_at": "2026-06-12T05:19:52.636335"
     },
     {
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Investigate the connection between #45678 and #45612 to understand the cycle-fire pattern and its implications for memory architecture. \u00b7 why \u00b7 The recent high-arousal canons suggest a pattern (#45678) that may be critical for understanding memory architecture (#28284). Exploring this connection could provide insights into the cycle-fire mechanism and its recurrence.",
+      "content": "HERMES TASK \u00b7 Investigate memory-architecture-lift quadrant to address P1 closure from cycle 6 research \u00b7 why \u00b7 The recent brain canon #28284 indicates a high-priority closure in the memory-architecture-lift quadrant, which aligns with the research arm's focus on deep technical investigations.",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-12T06:05:37.575053",
-      "use_skill": "notebooklm"
+      "updated_at": "2026-06-12T06:20:52.169429",
+      "use_skill": "brain-rrf"
     },
     {
-      "arm": "dream",
-      "arm_glyph": "\ud83c\udf19",
-      "arm_name": "My Dreamer",
-      "content": "f5-compose-pairs \u00b7 last 30d \u00b7 8 canons (top arousal \u00b7 1.00)",
-      "category": "f5-compose-pairs",
+      "arm": "infra",
+      "arm_glyph": "\ud83d\udc97",
+      "arm_name": "My Heart",
+      "content": "launchagents \u00b7 last 30d \u00b7 7 canons (top arousal \u00b7 1.00)",
+      "category": "launchagents",
       "priority": "P1",
       "source": "backfill",
-      "score": 8.96,
-      "updated_at": "2026-06-12T06:00:03.085217"
+      "score": 8.87,
+      "updated_at": "2026-06-12T06:00:02.897481"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Continue deep-dive into memory-architecture-lift quadrant to resolve P1 closure \u00b7 why: Recent high-arousal brain canon #28284 indicates active focus on this research with a pending P1 clo",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-12T05:04:39.221689"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -148,6 +137,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-12T07:21:52.749788"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Continue deep-dive into memory-architecture-lift quadrant to resolve P1 closure from cycle 6 \u00b7 why: Recent high-arousal canon #28284 is actively seeking resolution in this quadrant, and b",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-12T07:37:09.697878"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
