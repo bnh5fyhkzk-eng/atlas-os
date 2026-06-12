@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-12T00:56:13Z",
-  "count": 71,
+  "generated_at": "2026-06-12T01:11:27Z",
+  "count": 72,
   "decisions": [
     {
       "arm": "research",
@@ -640,6 +640,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-06-11T20:56:13.749251"
+    },
+    {
+      "arm": "research",
+      "task": "Investigate and document the differences between stale and retired daemons in the DAEMON-HEALTH-WHITELIST to prevent future false alarms.",
+      "why": "Recent cycle-wake audit issues (#45620) indicate confusion between stale and retired daemons, which could lead to unnecessary alerts and system noise. Clarifying this will improve system reliability.",
+      "priority": "P1",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-06-11T21:11:27.859714"
     }
   ]
 }
