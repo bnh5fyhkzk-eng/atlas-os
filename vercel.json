@@ -6,10 +6,10 @@
   "installCommand": "npm install",
   "rewrites": [
     { "source": "/", "destination": "/us.html" },
-    { "source": "/home", "destination": "/index.html" },
-    { "source": "/manager", "destination": "/index.html" },
-    { "source": "/arm/:slug", "destination": "/index.html" },
-    { "source": "/arm/:slug/:pageId", "destination": "/index.html" },
+    { "source": "/home", "destination": "/app.html" },
+    { "source": "/manager", "destination": "/app.html" },
+    { "source": "/arm/:slug", "destination": "/app.html" },
+    { "source": "/arm/:slug/:pageId", "destination": "/app.html" },
     { "source": "/api/(.*)", "destination": "https://api.atlasos.me/api/$1" },
     { "source": "/dashboard-plugins/(.*)", "destination": "https://api.atlasos.me/dashboard-plugins/$1" }
   ]
