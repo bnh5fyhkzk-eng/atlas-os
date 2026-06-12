@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-12T00:10:20Z",
-  "count": 68,
+  "generated_at": "2026-06-12T00:25:34Z",
+  "count": 69,
   "decisions": [
     {
       "arm": "research",
@@ -613,6 +613,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-06-11T20:10:20.087814"
+    },
+    {
+      "arm": "research",
+      "task": "Investigate the discrepancy in loop-health monitoring flagged in #45633 to ensure correct log tracking for me-loop-health.sh",
+      "why": "Recent cycle-wake audits and false alarms indicate a critical monitoring misalignment that could affect system stability. This is a P1 issue directly tied to active memory-architecture-lift work (#28284).",
+      "priority": "P1",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-06-11T20:25:34.613249"
     }
   ]
 }

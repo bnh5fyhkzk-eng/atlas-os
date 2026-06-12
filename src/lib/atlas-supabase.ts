@@ -112,7 +112,7 @@ export interface Project {
 // Tree helpers
 export async function listArms(): Promise<Arm[]> {
   const { data, error } = await atlasSupabase()
-    .from("arms")
+    .from("atlas_arms")
     .select("*")
     .order("order_idx", { ascending: true });
   if (error) throw error;
@@ -121,7 +121,7 @@ export async function listArms(): Promise<Arm[]> {
 
 export async function listPages(armSlug: string, parentId: string | null = null): Promise<Page[]> {
   let query = atlasSupabase()
-    .from("pages")
+    .from("atlas_pages")
     .select("*")
     .eq("arm_slug", armSlug)
     .eq("archived", false)
@@ -139,7 +139,7 @@ export async function listPages(armSlug: string, parentId: string | null = null)
 export async function listAllPagesForArm(armSlug: string): Promise<Page[]> {
   // Fetch entire arm tree in one query · client builds nested structure
   const { data, error } = await atlasSupabase()
-    .from("pages")
+    .from("atlas_pages")
     .select("*")
     .eq("arm_slug", armSlug)
     .eq("archived", false)
@@ -150,7 +150,7 @@ export async function listAllPagesForArm(armSlug: string): Promise<Page[]> {
 
 export async function getPage(id: string): Promise<Page | null> {
   const { data, error } = await atlasSupabase()
-    .from("pages")
+    .from("atlas_pages")
     .select("*")
     .eq("id", id)
     .single();
@@ -166,7 +166,7 @@ export async function createPage(input: {
   view_type?: Page["view_type"];
 }): Promise<Page> {
   const { data, error } = await atlasSupabase()
-    .from("pages")
+    .from("atlas_pages")
     .insert({
       arm_slug: input.arm_slug,
       parent_id: input.parent_id ?? null,
@@ -182,7 +182,7 @@ export async function createPage(input: {
 
 export async function updatePage(id: string, patch: Partial<Page>): Promise<Page> {
   const { data, error } = await atlasSupabase()
-    .from("pages")
+    .from("atlas_pages")
     .update(patch)
     .eq("id", id)
     .select()
@@ -193,7 +193,7 @@ export async function updatePage(id: string, patch: Partial<Page>): Promise<Page
 
 export async function archivePage(id: string): Promise<void> {
   const { error } = await atlasSupabase()
-    .from("pages")
+    .from("atlas_pages")
     .update({ archived: true })
     .eq("id", id);
   if (error) throw error;
@@ -202,7 +202,7 @@ export async function archivePage(id: string): Promise<void> {
 // Block helpers · Notion-modular primitive
 export async function listBlocks(pageId: string): Promise<Block[]> {
   const { data, error } = await atlasSupabase()
-    .from("blocks")
+    .from("atlas_blocks")
     .select("*")
     .eq("page_id", pageId)
     .order("order_idx", { ascending: true });
@@ -229,7 +229,7 @@ export async function upsertBlock(input: {
     created_by: input.created_by ?? "atlas",
   };
   const { data, error } = await atlasSupabase()
-    .from("blocks")
+    .from("atlas_blocks")
     .upsert(payload)
     .select()
     .single();
@@ -241,7 +241,7 @@ export async function saveNativeDoc(pageId: string, blockNoteDoc: unknown): Prom
   // Convention · one "native" block per page holds the entire BlockNote document
   // BlockNote handles internal block structure · we store the array as a single jsonb
   const existing = await atlasSupabase()
-    .from("blocks")
+    .from("atlas_blocks")
     .select("id")
     .eq("page_id", pageId)
     .eq("block_type", "native")
@@ -258,14 +258,14 @@ export async function saveNativeDoc(pageId: string, blockNoteDoc: unknown): Prom
 }
 
 export async function deleteBlock(id: string): Promise<void> {
-  const { error } = await atlasSupabase().from("blocks").delete().eq("id", id);
+  const { error } = await atlasSupabase().from("atlas_blocks").delete().eq("id", id);
   if (error) throw error;
 }
 
 // Project helpers · Manager cross-arm primitive
 export async function listProjects(): Promise<Project[]> {
   const { data, error } = await atlasSupabase()
-    .from("projects")
+    .from("atlas_projects")
     .select("*")
     .neq("status", "archived")
     .order("created_at", { ascending: false });
@@ -281,7 +281,7 @@ export async function createProject(input: {
   arm_slugs?: string[];
 }): Promise<Project> {
   const { data, error } = await atlasSupabase()
-    .from("projects")
+    .from("atlas_projects")
     .insert({
       name: input.name,
       emoji: input.emoji ?? "📂",
@@ -301,7 +301,7 @@ export async function copyBlockToProject(
   sourcePageId?: string,
 ): Promise<void> {
   const { error } = await atlasSupabase()
-    .from("project_blocks")
+    .from("atlas_project_blocks")
     .insert({
       project_id: projectId,
       block_id: blockId,
@@ -319,7 +319,7 @@ export function subscribeToPageBlocks(
     .channel(`blocks:${pageId}`)
     .on(
       "postgres_changes",
-      { event: "*", schema: "public", table: "blocks", filter: `page_id=eq.${pageId}` },
+      { event: "*", schema: "public", table: "atlas_blocks", filter: `page_id=eq.${pageId}` },
       (payload) => {
         const row = (payload.new ?? payload.old) as Block;
         onChange(row, payload.eventType as "INSERT" | "UPDATE" | "DELETE");
@@ -339,7 +339,7 @@ export function subscribeToArmTree(
     .channel(`pages:${armSlug}`)
     .on(
       "postgres_changes",
-      { event: "*", schema: "public", table: "pages", filter: `arm_slug=eq.${armSlug}` },
+      { event: "*", schema: "public", table: "atlas_pages", filter: `arm_slug=eq.${armSlug}` },
       () => onChange(),
     )
     .subscribe();
