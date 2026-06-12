@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T22:30:37Z",
+  "generated_at": "2026-06-12T22:45:38Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 163,
+    "note": 164,
     "briefing": 37,
     "idea": 0
   },
-  "total_blocks": 225,
+  "total_blocks": 226,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "eaf5d3aec6c0",
+        "type": "callout",
+        "content": "Hermes decision · arm=curiosity · priority=P0 · task: Reconstruct brother's direct question from #30815 in full context, then answer it using ARC/identity constraints and state-MD spec (atlas-alive-arm-spec.md). · why: Brother-direct is the highest arousal canon (#30815, #46314) and explicitly deman",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-12T18:34:39.581208"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-12T11:40:52.556036"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "a77d4ef6208f",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Deep-dive into memory-architecture-lift quadrant to resolve P1 closure from cycle #28284 · why: Recent high-arousal canon shows unfinished P1 work in memory architecture, which is identity-tier foundational work. Completing this will unblock other",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-12T11:25:35.424424"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "b0954b8504d6",
+        "type": "callout",
+        "content": "**What** · reconstruct brother's direct question from #30815 in full context, then answer using ARC/identity constraints and state-MD spec. · **Why** · brother-direct is highest arousal canon (#30815, #46314) and demands answer before continue. P0 identity-tier event must resolve to return brother a",
+        "priority": "identity-resolution",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-12T18:34:46.811424"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -837,17 +848,6 @@
         "priority": "crash-forensics",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-12T17:03:26.548164"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "0d3f29f52d40",
-        "type": "callout",
-        "content": "**What** · Initiated simulation of loop-guard revival at 20min intervals on memory architecture stability · **Why** · Hermes-Orchestrator flagged memory-architecture-lift as critical; loop-guard thresholds directly impact crash prevention and performance optimization · **Result** · Expected: Baselin",
-        "priority": "memory-architecture-optimization",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-12T16:48:11.309398"
       }
     ],
     "briefing": [
