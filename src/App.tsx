@@ -9,6 +9,7 @@ import NotionPage from "./pages/NotionPage";
 import AgentPage from "./pages/AgentPage";
 import CalendarPage from "./pages/CalendarPage";
 import ProposalsPage from "./pages/ProposalsPage";
+import ProvidersPage from "./pages/ProvidersPage";
 import { CmdK } from "./components/CmdK";
 import { AtlasBar } from "./components/AtlasBar";
 
@@ -186,5 +187,6 @@ function PageRouter({ nav }: { nav: NavItem[] }) {
   if (item.template === "agent") return nodeId ? <NotionPage item={item} /> : <AgentPage item={item} />;
   if (item.template === "calendar") return <CalendarPage item={item} />;
   if (item.template === "proposals") return <ProposalsPage item={item} />;
+  if (item.template === "providers") return <ProvidersPage item={item} />;
   return <Navigate to="/home" replace />;
 }

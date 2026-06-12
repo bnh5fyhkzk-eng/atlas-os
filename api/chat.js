@@ -115,22 +115,44 @@ export default async function handler(req, res) {
   const authed = cookie.includes("atlas_auth=ok") || (process.env.ATLAS_ARM_TOKEN && bearer === process.env.ATLAS_ARM_TOKEN);
   if (!authed) return res.status(401).json({ error: "auth required" });
 
-  const key = process.env.OPENROUTER_API_KEY;
-  if (!key) return res.status(500).json({ error: "OPENROUTER_API_KEY not set" });
-
   const { model, messages, system, nav_id, use_tools } = req.body || {};
   if (!model || !Array.isArray(messages)) return res.status(400).json({ error: "model + messages required" });
 
+  // native-key-first routing (V5-A) · brother's own keys are cheaper · OpenRouter fallback
+  const NATIVE = {
+    "openai/": { provider: "openai", base: "https://api.openai.com/v1" },
+    "google/": { provider: "google", base: "https://generativelanguage.googleapis.com/v1beta/openai" },
+    "x-ai/": { provider: "xai", base: "https://api.x.ai/v1" },
+  };
+  let base = "https://openrouter.ai/api/v1";
+  let callKey = process.env.OPENROUTER_API_KEY;
+  let callModel = model;
+  const pfx = Object.keys(NATIVE).find((p) => model.startsWith(p));
+  if (pfx) {
+    const { nativeKeyFor } = await import("./providers.js");
+    const nk = await nativeKeyFor(NATIVE[pfx].provider).catch(() => null);
+    if (nk) {
+      base = NATIVE[pfx].base;
+      callKey = nk;
+      callModel = model.slice(pfx.length);
+    }
+  } else {
+    const { nativeKeyFor } = await import("./providers.js");
+    const ork = await nativeKeyFor("openrouter").catch(() => null);
+    if (ork) callKey = ork;
+  }
+  if (!callKey) return res.status(500).json({ error: "no provider key available" });
+
   const or = (body) =>
-    fetch("https://openrouter.ai/api/v1/chat/completions", {
+    fetch(`${base}/chat/completions`, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${key}`,
+        Authorization: `Bearer ${callKey}`,
         "Content-Type": "application/json",
         "HTTP-Referer": "https://atlasos.me",
         "X-Title": "Atlas-OS",
       },
-      body: JSON.stringify(body),
+      body: JSON.stringify({ ...body, model: callModel }),
     });
 
   res.setHeader("Content-Type", "text/event-stream");
