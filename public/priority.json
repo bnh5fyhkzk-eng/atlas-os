@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-06-12T09:15:07Z",
-  "total_items_scored": 167,
+  "generated_at": "2026-06-12T09:25:08Z",
+  "total_items_scored": 147,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the loop-health false alarm fix to ensure correct log monitoring and prevent future misalignments. \u00b7 why: Recent cycle-wake audits and loop-health issues indicate a critical n",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the loop-health false alarm issue surfaced in #45633 to prevent recurrence \u00b7 why: This is a critical infrastructure issue affecting system reliability (P1 memory-architecture ",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-11T22:58:10.659482"
+      "updated_at": "2026-06-11T23:28:44.352694"
     },
     {
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Investigate the recurring cycle-fire pattern noted in #45678 to determine if it's a signal or noise. \u00b7 why \u00b7 This is a P1 priority due to its recurrence (3rd instance in 1 day) and potential impact on memory-architecture-lift quadrant.",
+      "content": "HERMES TASK \u00b7 Investigate the memory-architecture-lift quadrant mentioned in cycle 6 research to understand its implications for current P1 tasks. \u00b7 why \u00b7 The recent brain canon #28284 specifically mentions this quadrant in relation to P1 memory architecture, making it a high-priority research target to advance our current focus.",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-12T00:14:38.397234",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-12T00:29:58.655866",
+      "use_skill": "notebooklm"
     },
     {
       "arm": "infra",
@@ -34,33 +34,11 @@
       "category": "launchagents",
       "priority": "P1",
       "source": "backfill",
-      "score": 9.12,
+      "score": 9.04,
       "updated_at": "2026-06-12T00:30:03.699384"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the loop-health false alarm fix to ensure correct log monitoring and prevent future misalignments. \u00b7 why: Recent cycle-wake audits and loop-health issues indicate a critical n",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-11T22:58:10.659482"
-    },
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the 'FIRST-SIGNAL-IS-QUESTION-NOT-ANSWER' pattern in cycle-fire instances to determine if it's a systemic anomaly or intentional design. \u00b7 why: Recent logs (#45678, #45612) sh",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-11T23:13:24.752429"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -148,6 +126,28 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-12T01:15:43.033303"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the cycle-fire pattern observed in #45678 and its correlation with the 3rd-instance-1-day occurrence to determine if it's a reproducible phenomenon. \u00b7 why: The recent brain ca",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-12T01:31:00.165317"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Continue deep-dive into memory-architecture-lift quadrant to resolve P1 priority \u00b7 why: Recent brain canons indicate high-arousal focus on this quadrant, and it's marked as P1 priority ne",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-12T01:46:13.729176"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
