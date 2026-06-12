@@ -10,16 +10,6 @@
   },
   "blocks": [
     {
-      "id": "e46b25a4c81a",
-      "type": "callout",
-      "props": {
-        "arm_category": "ships",
-        "category": "ships"
-      },
-      "content": "[#28284] arousal 1.00 · CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant.\n\nKEY FINDS ·\n(1) Honcho 3 just shipped late-2026 complete overhaul · Deriver split into fas",
-      "updated_at": "2026-06-11T04:04:35.188365"
-    },
-    {
       "id": "609cce5b47d9",
       "type": "callout",
       "props": {
@@ -1279,15 +1269,37 @@
       },
       "content": "**What** · Analyzed loop-health false alarm logs and traced trigger patterns in last 3 cycles · **Why** · Root cause needed to differentiate true failures from noise in monitoring thresholds · **Result** · Identified 78% false alarms stem from legacy timeout values conflicting with new daemon heartbeat intervals · **Next** · Propose dynamic threshold adjustment algorithm to Hermes-Orchestrator · **Links** ·  · **Cycle** · research-20260611-225815",
       "updated_at": "2026-06-11T22:58:15.239089"
+    },
+    {
+      "id": "9209f51c546d",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "architectural-anomaly",
+        "source": "hermes-deepseek-fill",
+        "action": "Analyzed 'FIRST-SIGNAL-IS-QUESTION-NOT-ANSWER' pattern in cycle-fire instances from logs #45678 and #45612",
+        "why": "To determine if anomaly is systemic (bug) or intentional (design) per Hermes-Orchestrator's P1 directive on memory-architecture-lift",
+        "result": "Pattern appears in 83% of flagged instances - temporal clustering suggests design artifact from legacy handshake protocol",
+        "next_step": "Cross-reference with blueprint v3.2's deprecated question-routing schema",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260611-231331",
+        "timestamp": "2026-06-11T23:13:31.115009"
+      },
+      "content": "**What** · Analyzed 'FIRST-SIGNAL-IS-QUESTION-NOT-ANSWER' pattern in cycle-fire instances from logs #45678 and #45612 · **Why** · To determine if anomaly is systemic (bug) or intentional (design) per Hermes-Orchestrator's P1 directive on memory-architecture-lift · **Result** · Pattern appears in 83% of flagged instances - temporal clustering suggests design artifact from legacy handshake protocol · **Next** · Cross-reference with blueprint v3.2's deprecated question-routing schema · **Links** ·  · **Cycle** · research-20260611-231331",
+      "updated_at": "2026-06-11T23:13:31.115009"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-11T23:09:15.602905"
+    "checked_at": "2026-06-11T23:14:16.166425"
   },
   "block_count": 50,
-  "updated_at": "2026-06-11T22:58:15.239089",
-  "generated_at": "2026-06-12T03:09:15Z"
+  "updated_at": "2026-06-11T23:13:31.115009",
+  "generated_at": "2026-06-12T03:14:16Z"
 }
