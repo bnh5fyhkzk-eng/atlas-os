@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-12T08:05:04Z",
-  "total_items_scored": 165,
+  "generated_at": "2026-06-12T08:15:04Z",
+  "total_items_scored": 166,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the loop-health false alarm fix to ensure correct log monitoring is restored \u00b7 why: Recent cycle-wake audits and loop-health issues indicate a critical need to stabilize monit",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the discrepancy in loop-health monitoring flagged in #45633 to ensure correct log tracking for me-loop-health.sh \u00b7 why: Recent cycle-wake audits and false alarms indicate a cr",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-11T21:42:00.108838"
+      "updated_at": "2026-06-11T21:57:13.767417"
     },
     {
       "arm": "research",
@@ -34,22 +34,11 @@
       "category": "launchagents",
       "priority": "P1",
       "source": "backfill",
-      "score": 9.71,
+      "score": 9.62,
       "updated_at": "2026-06-12T00:30:03.699384"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the loop-health false alarm fix to ensure correct log monitoring is restored \u00b7 why: Recent cycle-wake audits and loop-health issues indicate a critical need to stabilize monit",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-11T21:42:00.108838"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -148,6 +137,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-11T23:59:18.982008"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the recurring cycle-fire pattern noted in #45678 to determine if it's a signal or noise. \u00b7 why: This is a P1 priority due to its recurrence (3rd instance in 1 day) and potenti",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-12T00:14:38.376719"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
