@@ -209,7 +209,7 @@ function TuiPage({ item }: { item: NavItem }) {
       </header>
       <iframe
         title="Atlas live terminal"
-        src="https://tui.atlasos.me"
+        src="https://tui.upliftai.app"
         className="min-h-0 flex-1 border-0"
         style={{ background: "#000" }}
       />

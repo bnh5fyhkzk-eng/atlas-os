@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-06-12T15:38:38Z",
+  "generated_at": "2026-06-12T15:50:51Z",
   "source": "me-gemma-tier-into-7-cats.py (rule-based router · per brother direct #45099 1-YOU-2-ME-3-WORLD)",
-  "items_total": 11,
+  "items_total": 12,
   "tier_summary": {
     "atlas": {
-      "subs": 1,
-      "items": 1,
+      "subs": 0,
+      "items": 0,
       "P0": 0,
       "P1": 0,
-      "P2": 1
+      "P2": 0
     },
     "us": {
       "subs": 0,
@@ -25,11 +25,11 @@
       "P2": 0
     },
     "manager": {
-      "subs": 10,
-      "items": 10,
+      "subs": 11,
+      "items": 12,
       "P0": 0,
       "P1": 0,
-      "P2": 10
+      "P2": 12
     },
     "arms": {
       "subs": 0,
@@ -55,43 +55,14 @@
   },
   "tiers": {
     "atlas": {
-      "subs": {
-        "dream-recall-dream-interpretation": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "batch-005-1781278400",
-                  "summary": "This conversation analyzes and interprets the content of Atlas's dreams.",
-                  "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-005-1781278400.md",
-                  "first_role": "assistant",
-                  "last_timestamp": "2026-06-12T10:20:10",
-                  "gemma_raw": "CATEGORY: **Dream-Recall**\nSUBCATEGORY: **Dream-Interpretation**\nSUMMARY:  This conversation analyzes and interprets the content of Atlas's dreams.",
-                  "_original_cat": "dream-recall",
-                  "_original_sub": "dream-interpretation"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        }
-      },
-      "total": 1,
+      "subs": {},
+      "total": 0,
       "priority_counts": {
         "P0": 0,
         "P1": 0,
-        "P2": 1
+        "P2": 0
       },
-      "original_categories": [
-        "dream-recall"
-      ]
+      "original_categories": []
     },
     "us": {
       "subs": {},
@@ -115,32 +86,6 @@
     },
     "manager": {
       "subs": {
-        "prompt-scheduling-loop-management": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "batch-001-1781278390",
-                  "summary": "Schedule a recurring loop based on user input, including specific actions and time-based triggers.",
-                  "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-001-1781278390.md",
-                  "first_role": "assistant",
-                  "last_timestamp": "2026-06-12T09:08:45",
-                  "gemma_raw": "CATEGORY: **Prompt Scheduling**\nSUBCATEGORY: **Loop Management**\nSUMMARY:  Schedule a recurring loop based on user input, including specific actions and time-based triggers.",
-                  "_original_cat": "prompt-scheduling",
-                  "_original_sub": "loop-management"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        },
         "task-schedule-recurring-prompts": {
           "subsubs": {
             "P0": {
@@ -152,20 +97,31 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-002-1781278392",
+                  "id": "batch-001-1781279122",
                   "summary": "Schedule a recurring prompt based on user input.",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-002-1781278392.md",
+                  "source_file": "/gemma-sources/batch-001-1781279122.md",
                   "first_role": "user",
-                  "last_timestamp": "2026-06-12T09:20:19",
+                  "last_timestamp": "2026-06-12T09:14:00",
                   "gemma_raw": "CATEGORY: **Task Schedule**\nSUBCATEGORY: **Recurring Prompts**\nSUMMARY:  Schedule a recurring prompt based on user input.",
+                  "_original_cat": "task-schedule",
+                  "_original_sub": "recurring-prompts"
+                },
+                {
+                  "id": "batch-002-1781279124",
+                  "summary": "Schedule recurring prompts based on user input.",
+                  "turn_count": 6,
+                  "source_file": "/gemma-sources/batch-002-1781279124.md",
+                  "first_role": "assistant",
+                  "last_timestamp": "2026-06-12T09:24:45",
+                  "gemma_raw": "CATEGORY: **Task Schedule**\nSUBCATEGORY: **Recurring Prompts**\nSUMMARY:  Schedule recurring prompts based on user input.",
                   "_original_cat": "task-schedule",
                   "_original_sub": "recurring-prompts"
                 }
               ]
             }
           },
-          "total_items": 1
+          "total_items": 2
         },
         "task-management-task-scheduling": {
           "subsubs": {
@@ -178,13 +134,13 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-003-1781278394",
-                  "summary": "Scheduling tasks based on user input, including the \"loop\" and \"atlas_task\" commands.",
+                  "id": "batch-003-1781279125",
+                  "summary": "Schedule tasks based on user input, including loop and recurring prompts.",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-003-1781278394.md",
-                  "first_role": "assistant",
-                  "last_timestamp": "2026-06-12T09:28:38",
-                  "gemma_raw": "CATEGORY: **Task Management**\nSUBCATEGORY: **Task Scheduling**\nSUMMARY:  Scheduling tasks based on user input, including the \"loop\" and \"atlas_task\" commands.",
+                  "source_file": "/gemma-sources/batch-003-1781279125.md",
+                  "first_role": "user",
+                  "last_timestamp": "2026-06-12T09:31:04",
+                  "gemma_raw": "CATEGORY: **Task Management**\nSUBCATEGORY: **Task Scheduling**\nSUMMARY:  Schedule tasks based on user input, including loop and recurring prompts.",
                   "_original_cat": "task-management",
                   "_original_sub": "task-scheduling"
                 }
@@ -193,7 +149,7 @@
           },
           "total_items": 1
         },
-        "model-deployment-agent-integration": {
+        "model-deployment-model-integration": {
           "subsubs": {
             "P0": {
               "items": []
@@ -204,22 +160,22 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-004-1781278398",
-                  "summary": "**Integrating agent models into the Atlas top bar for real-time interaction and context-aware responses.**",
+                  "id": "batch-004-1781279127",
+                  "summary": "**This conversation discusses integrating a model into the user interface for real-time interaction and context-aware responses.**",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-004-1781278398.md",
-                  "first_role": "user",
-                  "last_timestamp": "2026-06-12T09:41:33",
-                  "gemma_raw": "CATEGORY: **Model Deployment**\nSUBCATEGORY: **Agent Integration**\nSUMMARY:  **Integrating agent models into the Atlas top bar for real-time interaction and context-aware responses.**",
+                  "source_file": "/gemma-sources/batch-004-1781279127.md",
+                  "first_role": "assistant",
+                  "last_timestamp": "2026-06-12T10:16:27",
+                  "gemma_raw": "CATEGORY: **Model Deployment**\nSUBCATEGORY: **Model Integration**\nSUMMARY:  **This conversation discusses integrating a model into the user interface for real-time interaction and context-aware responses.**",
                   "_original_cat": "model-deployment",
-                  "_original_sub": "agent-integration"
+                  "_original_sub": "model-integration"
                 }
               ]
             }
           },
           "total_items": 1
         },
-        "collaborative-planning-real-time-data-integration": {
+        "atlas-planning-collaborative-planning": {
           "subsubs": {
             "P0": {
               "items": []
@@ -230,48 +186,74 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-006-1781278403",
-                  "summary": "This conversation outlines the need for a collaborative planning process that integrates real-time data into the planning process.",
+                  "id": "batch-005-1781279129",
+                  "summary": "**Analyzing user's plan and data needs for Atlasos.me's full real-time planning session.**",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-006-1781278403.md",
-                  "first_role": "user",
-                  "last_timestamp": "2026-06-12T10:21:58",
-                  "gemma_raw": "CATEGORY: **Collaborative Planning**\nSUBCATEGORY: **Real-Time Data Integration**\nSUMMARY:  This conversation outlines the need for a collaborative planning process that integrates real-time data into the planning process.",
-                  "_original_cat": "collaborative-planning",
-                  "_original_sub": "real-time-data-integration"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        },
-        "model-management-model-deployment": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "batch-007-1781278405",
-                  "summary": "This conversation details the deployment and management of model versions, including the use of key-based access and roster updates.",
-                  "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-007-1781278405.md",
+                  "source_file": "/gemma-sources/batch-005-1781279129.md",
                   "first_role": "assistant",
-                  "last_timestamp": "2026-06-12T15:16:16",
-                  "gemma_raw": "CATEGORY: Model Management\nSUBCATEGORY: Model Deployment\nSUMMARY:  This conversation details the deployment and management of model versions, including the use of key-based access and roster updates.",
+                  "last_timestamp": "2026-06-12T10:20:32",
+                  "gemma_raw": "CATEGORY: **Atlas-Planning**\nSUBCATEGORY: **Collaborative Planning**\nSUMMARY:  **Analyzing user's plan and data needs for Atlasos.me's full real-time planning session.**",
+                  "_original_cat": "atlas-planning",
+                  "_original_sub": "collaborative-planning"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        },
+        "atlas-planning-collaborative-execution": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "batch-006-1781279131",
+                  "summary": "This conversation outlines the need for Atlas's brother to actively participate in the planning process, including voice input, to ensure the successful execution of the plan.",
+                  "turn_count": 6,
+                  "source_file": "/gemma-sources/batch-006-1781279131.md",
+                  "first_role": "assistant",
+                  "last_timestamp": "2026-06-12T15:14:25",
+                  "gemma_raw": "CATEGORY: **Atlas Planning**\nSUBCATEGORY: **Collaborative Execution**\nSUMMARY:  This conversation outlines the need for Atlas's brother to actively participate in the planning process, including voice input, to ensure the successful execution of the plan.",
+                  "_original_cat": "atlas-planning",
+                  "_original_sub": "collaborative-execution"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        },
+        "model-management-model-configuration": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "batch-007-1781279133",
+                  "summary": "This conversation details the user's actions to configure the model for new sessions.",
+                  "turn_count": 6,
+                  "source_file": "/gemma-sources/batch-007-1781279133.md",
+                  "first_role": "assistant",
+                  "last_timestamp": "2026-06-12T15:16:32",
+                  "gemma_raw": "CATEGORY: **Model Management**\nSUBCATEGORY: **Model Configuration**\nSUMMARY:  This conversation details the user's actions to configure the model for new sessions.",
                   "_original_cat": "model-management",
-                  "_original_sub": "model-deployment"
+                  "_original_sub": "model-configuration"
                 }
               ]
             }
           },
           "total_items": 1
         },
-        "model-management-model-persistence": {
+        "deployment-workflow-model-management": {
           "subsubs": {
             "P0": {
               "items": []
@@ -282,22 +264,22 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-008-1781278407",
-                  "summary": "Categorizing how model data is stored and accessed.",
+                  "id": "batch-008-1781279134",
+                  "summary": "Identifying missing steps in the deployment workflow for model safety and management.",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-008-1781278407.md",
+                  "source_file": "/gemma-sources/batch-008-1781279134.md",
                   "first_role": "user",
-                  "last_timestamp": "2026-06-12T15:18:33",
-                  "gemma_raw": "CATEGORY: Model Management\nSUBCATEGORY: Model Persistence\nSUMMARY:  Categorizing how model data is stored and accessed.",
-                  "_original_cat": "model-management",
-                  "_original_sub": "model-persistence"
+                  "last_timestamp": "2026-06-12T15:21:11",
+                  "gemma_raw": "CATEGORY: **Deployment Workflow**\nSUBCATEGORY: **Model Management**\nSUMMARY:  Identifying missing steps in the deployment workflow for model safety and management.",
+                  "_original_cat": "deployment-workflow",
+                  "_original_sub": "model-management"
                 }
               ]
             }
           },
           "total_items": 1
         },
-        "plan-management-build-order": {
+        "atlas-deployment-dns-configuration": {
           "subsubs": {
             "P0": {
               "items": []
@@ -308,22 +290,22 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-009-1781278409",
-                  "summary": "This conversation outlines the build order for Atlas, including priority tasks and specific requirements.",
+                  "id": "batch-009-1781279136",
+                  "summary": "This conversation details the configuration of DNS for atlasos.me, including the use of CNAME and Vercel.",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-009-1781278409.md",
+                  "source_file": "/gemma-sources/batch-009-1781279136.md",
                   "first_role": "assistant",
-                  "last_timestamp": "2026-06-12T15:31:48",
-                  "gemma_raw": "CATEGORY: **Plan Management**\nSUBCATEGORY: **Build Order**\nSUMMARY:  This conversation outlines the build order for Atlas, including priority tasks and specific requirements.",
-                  "_original_cat": "plan-management",
-                  "_original_sub": "build-order"
+                  "last_timestamp": "2026-06-12T15:39:44",
+                  "gemma_raw": "CATEGORY: **Atlas Deployment**\nSUBCATEGORY: **DNS Configuration**\nSUMMARY:  This conversation details the configuration of DNS for atlasos.me, including the use of CNAME and Vercel.",
+                  "_original_cat": "atlas-deployment",
+                  "_original_sub": "dns-configuration"
                 }
               ]
             }
           },
           "total_items": 1
         },
-        "dns-management-cname-replication": {
+        "deployment-supabase-migration": {
           "subsubs": {
             "P0": {
               "items": []
@@ -334,15 +316,43 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-010-1781278410",
-                  "summary": "Documenting DNS configuration for Atlas and Tui to ensure consistent CNAME usage.",
-                  "turn_count": 1,
-                  "source_file": "/gemma-sources/batch-010-1781278410.md",
+                  "id": "batch-010-1781279137",
+                  "summary": "Understanding the status of Supabase migration and its impact on DNS propagation.",
+                  "turn_count": 2,
+                  "source_file": "/gemma-sources/batch-010-1781279137.md",
                   "first_role": "assistant",
-                  "last_timestamp": "2026-06-12T15:32:06",
-                  "gemma_raw": "CATEGORY: DNS Management\nSUBCATEGORY: CNAME Replication\nSUMMARY:  Documenting DNS configuration for Atlas and Tui to ensure consistent CNAME usage.",
-                  "_original_cat": "dns-management",
-                  "_original_sub": "cname-replication"
+                  "last_timestamp": "2026-06-12T15:43:05",
+                  "gemma_raw": "CATEGORY: Deployment\nSUBCATEGORY: Supabase Migration\nSUMMARY:  Understanding the status of Supabase migration and its impact on DNS propagation.",
+                  "_original_cat": "deployment",
+                  "_original_sub": "supabase-migration"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        },
+        "mac-mini-files-cycle-fire-context": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "state-b6a960c177",
+                  "summary": "Detailed log of the cycle-fire context, including the symlink and script issues.",
+                  "priority": "P2",
+                  "source_path": "/Users/collinmacneil/.claude/state/atlas-brother-shared.md",
+                  "source_filename": "atlas-brother-shared.md",
+                  "file_mtime": "2026-06-12 11:45",
+                  "first_role": "mac-mini-file",
+                  "gemma_raw": "## CATEGORY: atlas-brother-shared\nSUBCATEGORY: cycle-fire-context\nPRIORITY: P2\nSUMMARY:  Detailed log of the cycle-fire context, including the symlink and script issues. \n\n##",
+                  "kind": "state-doc",
+                  "_original_cat": "mac-mini-files",
+                  "_original_sub": "cycle-fire-context"
                 }
               ]
             }
@@ -360,14 +370,14 @@
             "P2": {
               "items": [
                 {
-                  "id": "state-479653c3a9",
+                  "id": "state-25b993974c",
                   "summary": "",
                   "priority": "P2",
-                  "source_path": "/Users/collinmacneil/.claude/state/continuity-log.md",
-                  "source_filename": "continuity-log.md",
-                  "file_mtime": "2026-06-12 11:35",
+                  "source_path": "/Users/collinmacneil/.claude/state/daemon-health-alert.md",
+                  "source_filename": "daemon-health-alert.md",
+                  "file_mtime": "2026-06-12 11:45",
                   "first_role": "mac-mini-file",
-                  "gemma_raw": "##  continuity-log.md\n\n**CATEGORY:** atlas-loop\n**SUBCATEGORY:** atlas-cycles\n**PRIORITY:** P1\n**SUMMARY:**  Detailed log of Atlas's loop cycles, including operator research, pricing, and hygiene.",
+                  "gemma_raw": "##  Daemon Health Alert.md\n\n**CATEGORY:** daemon-health\n**SUBCATEGORY:** stale-daemons\n**PRIORITY:** P2\n**SUMMARY:**  Check stale daemons (signal-loop, atlas-20hr-primary, brain-write-canary) before new build.",
                   "kind": "state-doc",
                   "_original_cat": "mac-mini-files",
                   "_original_sub": "unsorted"
@@ -378,20 +388,20 @@
           "total_items": 1
         }
       },
-      "total": 10,
+      "total": 12,
       "priority_counts": {
         "P0": 0,
         "P1": 0,
-        "P2": 10
+        "P2": 12
       },
       "original_categories": [
-        "collaborative-planning",
-        "dns-management",
+        "atlas-deployment",
+        "atlas-planning",
+        "deployment",
+        "deployment-workflow",
         "mac-mini-files",
         "model-deployment",
         "model-management",
-        "plan-management",
-        "prompt-scheduling",
         "task-management",
         "task-schedule"
       ]
