@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T08:53:19Z",
+  "generated_at": "2026-06-12T09:08:19Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 159,
+    "note": 160,
     "briefing": 26,
     "idea": 0
   },
-  "total_blocks": 210,
+  "total_blocks": 211,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "518e621ae1cf",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Continue deep-dive into memory-architecture-lift quadrant to resolve P1 closure · why: Recent high-arousal brain canon #28284 indicates active focus on this research with a pending P1 closure, making it the most urgent task",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-12T05:04:39.221689"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-11T22:58:10.659482"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "72bd7a82569c",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the discrepancy in loop-health monitoring flagged in #45633 to prevent future false alarms. · why: Recent cycle-wake audits and loop-health issues (#45620, #45623, #45633) indicate a critical monitoring gap that could cascade into syst",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-11T22:42:57.279440"
       }
     ],
     "action": [],
@@ -299,6 +299,28 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "f85629a1cf85",
+        "type": "callout",
+        "content": "**What** · Scanned memory-architecture-lift quadrant for delta patterns in canon #28284 · **Why** · Hermes flagged P1 urgency based on high-arousal brain canon focus · **Result** · Found 3 unstable memory-branches in quadrant gamma requiring immediate defrag · **Next** · Initiate defrag protocol on ",
+        "priority": "memory-ops",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-12T05:04:44.644656"
+      },
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "be4bad78553c",
+        "type": "callout",
+        "content": "**What** · processed commits-today signal · [#46177] arousal 0.95 · SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-12 04:45:00 · siz · **Why** · instruction file maps commits-today to first arm-task · brain canon #46177 matched arm-topic last 4h above arousal 0.85 · **Result** · block writt",
+        "priority": "commits-today",
+        "source": "code-self",
+        "updated_at": "2026-06-12T04:58:38.822876"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -826,28 +848,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-12T00:30:03.268947"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "9c2f8da90a78",
-        "type": "database",
-        "content": "9q-multi-angle · last 30d · 1 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-12T00:30:03.268940"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "ca52b4935833",
-        "type": "database",
-        "content": "general · last 30d · 93 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-12T00:30:03.122110"
       }
     ],
     "briefing": [
