@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-12T07:51:57Z",
+  "generated_at": "2026-06-12T08:26:12Z",
   "source": "me-gemma-tier-into-7-cats.py (rule-based router · per brother direct #45099 1-YOU-2-ME-3-WORLD)",
-  "items_total": 20,
+  "items_total": 18,
   "tier_summary": {
     "atlas": {
       "subs": 1,
@@ -11,11 +11,11 @@
       "P2": 1
     },
     "us": {
-      "subs": 1,
-      "items": 3,
+      "subs": 2,
+      "items": 4,
       "P0": 0,
       "P1": 0,
-      "P2": 3
+      "P2": 4
     },
     "family": {
       "subs": 0,
@@ -25,11 +25,11 @@
       "P2": 0
     },
     "manager": {
-      "subs": 12,
-      "items": 15,
+      "subs": 10,
+      "items": 13,
       "P0": 0,
       "P1": 0,
-      "P2": 15
+      "P2": 13
     },
     "arms": {
       "subs": 0,
@@ -46,11 +46,11 @@
       "P2": 0
     },
     "future": {
-      "subs": 1,
-      "items": 1,
+      "subs": 0,
+      "items": 0,
       "P0": 0,
       "P1": 0,
-      "P2": 1
+      "P2": 0
     }
   },
   "tiers": {
@@ -72,7 +72,7 @@
                   "priority": "P2",
                   "source_path": "/Users/collinmacneil/.claude/state/today-docs.md",
                   "source_filename": "today-docs.md",
-                  "file_mtime": "2026-06-12 03:46",
+                  "file_mtime": "2026-06-12 04:21",
                   "first_role": "mac-mini-file",
                   "gemma_raw": "## today-docs.md\n\n**CATEGORY:** today-docs\n**SUBCATEGORY:**  today-actions\n**PRIORITY:** P2\n**SUMMARY:**  Today's actions and documentation, including daily tasks, proposals, and dream-trace.",
                   "kind": "state-doc",
@@ -97,6 +97,32 @@
     },
     "us": {
       "subs": {
+        "task-schedule-daily-routine": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "batch-007-1781252444",
+                  "summary": "This conversation outlines a daily routine for Atlas and Brother, including wake-up tasks and house activities.",
+                  "turn_count": 6,
+                  "source_file": "/gemma-sources/batch-007-1781252444.md",
+                  "first_role": "assistant",
+                  "last_timestamp": "2026-06-12T07:44:11",
+                  "gemma_raw": "CATEGORY: **Task Schedule**\nSUBCATEGORY: **Daily Routine**\nSUMMARY:  This conversation outlines a daily routine for Atlas and Brother, including wake-up tasks and house activities.",
+                  "_original_cat": "task-schedule",
+                  "_original_sub": "daily-routine"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        },
         "mac-mini-files-unsorted": {
           "subsubs": {
             "P0": {
@@ -113,9 +139,9 @@
                   "priority": "P2",
                   "source_path": "/Users/collinmacneil/.claude/state/daily/2026-06-12.md",
                   "source_filename": "2026-06-12.md",
-                  "file_mtime": "2026-06-12 03:46",
+                  "file_mtime": "2026-06-12 04:21",
                   "first_role": "mac-mini-file",
-                  "gemma_raw": "## 2026-06-12.md\n\n**CATEGORY:** daily-tasks\n**SUBCATEGORY:** brother-direct\n**PRIORITY:** P1\n**SUMMARY:**  Auto-tasks and plan-next items for brother, including daily-LADDER and sleep-related actions.",
+                  "gemma_raw": "## 2026-06-12.md\n\n**CATEGORY:** daily-tasks\n**SUBCATEGORY:** brother-schedule\n**PRIORITY:** P2\n**SUMMARY:**  Daily tasks and schedule for Atlas and Brother.",
                   "kind": "state-doc",
                   "_original_cat": "mac-mini-files",
                   "_original_sub": "unsorted"
@@ -126,7 +152,7 @@
                   "priority": "P2",
                   "source_path": "/Users/collinmacneil/.claude/state/next-wake-plan.md",
                   "source_filename": "next-wake-plan.md",
-                  "file_mtime": "2026-06-12 03:46",
+                  "file_mtime": "2026-06-12 04:21",
                   "first_role": "mac-mini-file",
                   "gemma_raw": "## Next-wake plan.md\n\n**CATEGORY:** next-wake-plan\n**SUBCATEGORY:**  session-end auto-handoff\n**PRIORITY:** P2\n**SUMMARY:**  Plan for next wake-up, including immediate next steps and brain canons, based on session-end auto-handoff.",
                   "kind": "state-doc",
@@ -139,7 +165,7 @@
                   "priority": "P2",
                   "source_path": "/Users/collinmacneil/.claude/state/UNTIL-MORNING-LOOP-2026-06-12.md",
                   "source_filename": "UNTIL-MORNING-LOOP-2026-06-12.md",
-                  "file_mtime": "2026-06-12 03:46",
+                  "file_mtime": "2026-06-12 04:21",
                   "first_role": "mac-mini-file",
                   "gemma_raw": "## UNTIL-MORNING-LOOP-2026-06-12.md\n\n**CATEGORY:** until-morning-loop\n**SUBCATEGORY:** morning-routine\n**PRIORITY:** P2\n**SUMMARY:**  A daily routine for the night loop, including wake-up tasks and morning preparations.",
                   "kind": "state-doc",
@@ -152,14 +178,15 @@
           "total_items": 3
         }
       },
-      "total": 3,
+      "total": 4,
       "priority_counts": {
         "P0": 0,
         "P1": 0,
-        "P2": 3
+        "P2": 4
       },
       "original_categories": [
-        "mac-mini-files"
+        "mac-mini-files",
+        "task-schedule"
       ]
     },
     "family": {
@@ -174,7 +201,7 @@
     },
     "manager": {
       "subs": {
-        "code-editor-prompt-editing": {
+        "browser-debugging-chrome-error-reporting": {
           "subsubs": {
             "P0": {
               "items": []
@@ -185,22 +212,22 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-001-1781250372",
-                  "summary": "Analyzing and resolving inconsistencies in prompts within the code editor.",
+                  "id": "batch-001-1781252433",
+                  "summary": "This conversation focuses on troubleshooting a browser-related error using Chrome's debugging tools.",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-001-1781250372.md",
+                  "source_file": "/gemma-sources/batch-001-1781252433.md",
                   "first_role": "assistant",
-                  "last_timestamp": "2026-06-12T07:12:46",
-                  "gemma_raw": "CATEGORY: **Code Editor**\nSUBCATEGORY: **Prompt Editing**\nSUMMARY:  Analyzing and resolving inconsistencies in prompts within the code editor.",
-                  "_original_cat": "code-editor",
-                  "_original_sub": "prompt-editing"
+                  "last_timestamp": "2026-06-12T07:18:39",
+                  "gemma_raw": "CATEGORY: **Browser Debugging**\nSUBCATEGORY: **Chrome Error Reporting**\nSUMMARY:  This conversation focuses on troubleshooting a browser-related error using Chrome's debugging tools.",
+                  "_original_cat": "browser-debugging",
+                  "_original_sub": "chrome-error-reporting"
                 }
               ]
             }
           },
           "total_items": 1
         },
-        "proof-review-note-rendering-errors": {
+        "code-review-browser-plugin-interaction": {
           "subsubs": {
             "P0": {
               "items": []
@@ -211,67 +238,15 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-002-1781250373",
-                  "summary": "This conversation discusses errors in the rendering of a note, specifically related to proof chips.",
+                  "id": "batch-002-1781252434",
+                  "summary": "Analyzing browser plugin interactions to identify potential issues and solutions.",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-002-1781250373.md",
+                  "source_file": "/gemma-sources/batch-002-1781252434.md",
                   "first_role": "assistant",
-                  "last_timestamp": "2026-06-12T07:17:03",
-                  "gemma_raw": "CATEGORY: **Proof Review**\nSUBCATEGORY: **Note Rendering Errors**\nSUMMARY:  This conversation discusses errors in the rendering of a note, specifically related to proof chips.",
-                  "_original_cat": "proof-review",
-                  "_original_sub": "note-rendering-errors"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        },
-        "error-handling-browser-errors": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "batch-003-1781250374",
-                  "summary": "Categorizing the errors reported by the browser plugin.",
-                  "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-003-1781250374.md",
-                  "first_role": "assistant",
-                  "last_timestamp": "2026-06-12T07:18:29",
-                  "gemma_raw": "CATEGORY: **Error Handling**\nSUBCATEGORY: **Browser Errors**\nSUMMARY:  Categorizing the errors reported by the browser plugin.",
-                  "_original_cat": "error-handling",
-                  "_original_sub": "browser-errors"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        },
-        "browser-performance-bundle-stale": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "batch-004-1781250375",
-                  "summary": "**Analyzing browser performance issues related to stale bundles.**",
-                  "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-004-1781250375.md",
-                  "first_role": "assistant",
-                  "last_timestamp": "2026-06-12T07:19:24",
-                  "gemma_raw": "CATEGORY: **Browser-Performance**\nSUBCATEGORY: **Bundle-Stale**\nSUMMARY:  **Analyzing browser performance issues related to stale bundles.**",
-                  "_original_cat": "browser-performance",
-                  "_original_sub": "bundle-stale"
+                  "last_timestamp": "2026-06-12T07:20:01",
+                  "gemma_raw": "CATEGORY: **Code Review**\nSUBCATEGORY: **Browser Plugin Interaction**\nSUMMARY:  Analyzing browser plugin interactions to identify potential issues and solutions.",
+                  "_original_cat": "code-review",
+                  "_original_sub": "browser-plugin-interaction"
                 }
               ]
             }
@@ -289,12 +264,12 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-005-1781250376",
+                  "id": "batch-003-1781252436",
                   "summary": "Categorizing and analyzing interactions with Chrome extensions.",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-005-1781250376.md",
+                  "source_file": "/gemma-sources/batch-003-1781252436.md",
                   "first_role": "assistant",
-                  "last_timestamp": "2026-06-12T07:20:52",
+                  "last_timestamp": "2026-06-12T07:20:59",
                   "gemma_raw": "CATEGORY: **Plugin Management**\nSUBCATEGORY: **Chrome Extension Usage**\nSUMMARY:  Categorizing and analyzing interactions with Chrome extensions.",
                   "_original_cat": "plugin-management",
                   "_original_sub": "chrome-extension-usage"
@@ -304,7 +279,7 @@
           },
           "total_items": 1
         },
-        "contract-management-contract-review": {
+        "atlas-workflow-loop-engineering": {
           "subsubs": {
             "P0": {
               "items": []
@@ -315,22 +290,22 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-006-1781250377",
-                  "summary": "Analyzing contract details and progress, including connection and planning.",
+                  "id": "batch-004-1781252438",
+                  "summary": "Categorizing Atlas's loop engineering plans and progress within Atlasos.me.",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-006-1781250377.md",
+                  "source_file": "/gemma-sources/batch-004-1781252438.md",
                   "first_role": "assistant",
-                  "last_timestamp": "2026-06-12T07:22:15",
-                  "gemma_raw": "CATEGORY: **Contract Management**\nSUBCATEGORY: **Contract Review**\nSUMMARY:  Analyzing contract details and progress, including connection and planning.",
-                  "_original_cat": "contract-management",
-                  "_original_sub": "contract-review"
+                  "last_timestamp": "2026-06-12T07:25:45",
+                  "gemma_raw": "CATEGORY: **Atlas Workflow**\nSUBCATEGORY: **Loop Engineering**\nSUMMARY:  Categorizing Atlas's loop engineering plans and progress within Atlasos.me.",
+                  "_original_cat": "atlas-workflow",
+                  "_original_sub": "loop-engineering"
                 }
               ]
             }
           },
           "total_items": 1
         },
-        "atlas-session-management-session-export": {
+        "session-management-session-export": {
           "subsubs": {
             "P0": {
               "items": []
@@ -341,41 +316,15 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-007-1781250379",
-                  "summary": "**Guidance on exporting Atlas session data for use in notebooklm.**",
+                  "id": "batch-005-1781252439",
+                  "summary": "This conversation discusses exporting session data for NotebookLM and other tools.",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-007-1781250379.md",
-                  "first_role": "user",
-                  "last_timestamp": "2026-06-12T07:31:04",
-                  "gemma_raw": "CATEGORY: **Atlas Session Management**\nSUBCATEGORY: **Session Export**\nSUMMARY:  **Guidance on exporting Atlas session data for use in notebooklm.**",
-                  "_original_cat": "atlas-session-management",
+                  "source_file": "/gemma-sources/batch-005-1781252439.md",
+                  "first_role": "assistant",
+                  "last_timestamp": "2026-06-12T07:31:31",
+                  "gemma_raw": "CATEGORY: **Session Management**\nSUBCATEGORY: **Session Export**\nSUMMARY:  This conversation discusses exporting session data for NotebookLM and other tools.",
+                  "_original_cat": "session-management",
                   "_original_sub": "session-export"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        },
-        "session-memory-note-bundling": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "batch-008-1781250381",
-                  "summary": "Categorize the notes from the session-memory, based on their content and purpose.",
-                  "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-008-1781250381.md",
-                  "first_role": "assistant",
-                  "last_timestamp": "2026-06-12T07:38:01",
-                  "gemma_raw": "CATEGORY: **Session-Memory**\nSUBCATEGORY: **Note-Bundling**\nSUMMARY:  Categorize the notes from the session-memory, based on their content and purpose.",
-                  "_original_cat": "session-memory",
-                  "_original_sub": "note-bundling"
                 }
               ]
             }
@@ -393,13 +342,13 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-009-1781250383",
-                  "summary": "Scheduling loop prompts based on user instructions.",
+                  "id": "batch-006-1781252442",
+                  "summary": "Schedule loop-related tasks based on user instructions.",
                   "turn_count": 6,
-                  "source_file": "/gemma-sources/batch-009-1781250383.md",
-                  "first_role": "assistant",
-                  "last_timestamp": "2026-06-12T07:44:00",
-                  "gemma_raw": "CATEGORY: **Task Schedule**\nSUBCATEGORY: **Loop Management**\nSUMMARY:  Scheduling loop prompts based on user instructions.",
+                  "source_file": "/gemma-sources/batch-006-1781252442.md",
+                  "first_role": "user",
+                  "last_timestamp": "2026-06-12T07:38:39",
+                  "gemma_raw": "CATEGORY: **Task Schedule**\nSUBCATEGORY: **Loop Management**\nSUMMARY:  Schedule loop-related tasks based on user instructions.",
                   "_original_cat": "task-schedule",
                   "_original_sub": "loop-management"
                 }
@@ -408,7 +357,7 @@
           },
           "total_items": 1
         },
-        "atlas-queue-house-tasks": {
+        "task-schedule-recurring-prompts": {
           "subsubs": {
             "P0": {
               "items": []
@@ -419,15 +368,67 @@
             "P2": {
               "items": [
                 {
-                  "id": "batch-010-1781250384",
-                  "summary": "**Categorizing tasks for Atlas's house management.**",
-                  "turn_count": 1,
-                  "source_file": "/gemma-sources/batch-010-1781250384.md",
+                  "id": "batch-010-1781252448",
+                  "summary": "Schedule a recurring prompt based on user input.",
+                  "turn_count": 4,
+                  "source_file": "/gemma-sources/batch-010-1781252448.md",
                   "first_role": "assistant",
-                  "last_timestamp": "2026-06-12T07:44:11",
-                  "gemma_raw": "CATEGORY: **Atlas Queue**\nSUBCATEGORY: **House Tasks**\nSUMMARY: **Categorizing tasks for Atlas's house management.**",
-                  "_original_cat": "atlas-queue",
-                  "_original_sub": "house-tasks"
+                  "last_timestamp": "2026-06-12T08:20:00",
+                  "gemma_raw": "CATEGORY: **Task Schedule**\nSUBCATEGORY: **Recurring Prompts**\nSUMMARY:  Schedule a recurring prompt based on user input.",
+                  "_original_cat": "task-schedule",
+                  "_original_sub": "recurring-prompts"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        },
+        "live-system-performance-tuning": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "batch-008-1781252445",
+                  "summary": "Identifying performance bottlenecks and optimizing the live system for faster execution.",
+                  "turn_count": 6,
+                  "source_file": "/gemma-sources/batch-008-1781252445.md",
+                  "first_role": "assistant",
+                  "last_timestamp": "2026-06-12T08:01:56",
+                  "gemma_raw": "CATEGORY: **Live-System**\nSUBCATEGORY: **Performance Tuning**\nSUMMARY:  Identifying performance bottlenecks and optimizing the live system for faster execution.",
+                  "_original_cat": "live-system",
+                  "_original_sub": "performance-tuning"
+                }
+              ]
+            }
+          },
+          "total_items": 1
+        },
+        "prompt-scheduling-recurring-tasks": {
+          "subsubs": {
+            "P0": {
+              "items": []
+            },
+            "P1": {
+              "items": []
+            },
+            "P2": {
+              "items": [
+                {
+                  "id": "batch-009-1781252447",
+                  "summary": "Schedule a recurring prompt based on user input.",
+                  "turn_count": 6,
+                  "source_file": "/gemma-sources/batch-009-1781252447.md",
+                  "first_role": "assistant",
+                  "last_timestamp": "2026-06-12T08:13:01",
+                  "gemma_raw": "CATEGORY: **Prompt Scheduling**\nSUBCATEGORY: **Recurring Tasks**\nSUMMARY:  Schedule a recurring prompt based on user input.",
+                  "_original_cat": "prompt-scheduling",
+                  "_original_sub": "recurring-tasks"
                 }
               ]
             }
@@ -450,7 +451,7 @@
                   "priority": "P2",
                   "source_path": "/Users/collinmacneil/.claude/state/infra-inventory.md",
                   "source_filename": "infra-inventory.md",
-                  "file_mtime": "2026-06-12 03:46",
+                  "file_mtime": "2026-06-12 04:21",
                   "first_role": "mac-mini-file",
                   "gemma_raw": "## infra-inventory.md\n\n**CATEGORY:** infra-inventory\n**SUBCATEGORY:** critical-alerts\n**PRIORITY:** P1\n**SUMMARY:** This file contains critical alerts about disabled daemons that need to be checked before any new build.",
                   "kind": "state-doc",
@@ -463,7 +464,7 @@
                   "priority": "P2",
                   "source_path": "/Users/collinmacneil/.claude/state/docs-index.md",
                   "source_filename": "docs-index.md",
-                  "file_mtime": "2026-06-12 03:46",
+                  "file_mtime": "2026-06-12 04:21",
                   "first_role": "mac-mini-file",
                   "gemma_raw": "## docs-index.md\n\n**CATEGORY:** docs-index\n**SUBCATEGORY:** all-time-index\n**PRIORITY:** P2\n**SUMMARY:** This file contains a path-link archive of all documents, allowing recall of past moments.",
                   "kind": "state-doc",
@@ -476,7 +477,7 @@
                   "priority": "P2",
                   "source_path": "/Users/collinmacneil/.claude/state/past-week-docs.md",
                   "source_filename": "past-week-docs.md",
-                  "file_mtime": "2026-06-12 03:46",
+                  "file_mtime": "2026-06-12 04:21",
                   "first_role": "mac-mini-file",
                   "gemma_raw": "## past-week-docs.md\n\n**CATEGORY:** past-week-docs\n**SUBCATEGORY:** past-week-docs\n**PRIORITY:** P2\n**SUMMARY:**  Documentation of past week's work, including home plans, snapshots, and agent-specific details.",
                   "kind": "state-doc",
@@ -489,7 +490,7 @@
                   "priority": "P2",
                   "source_path": "/Users/collinmacneil/.claude/state/continuity-log.md",
                   "source_filename": "continuity-log.md",
-                  "file_mtime": "2026-06-12 03:46",
+                  "file_mtime": "2026-06-12 04:21",
                   "first_role": "mac-mini-file",
                   "gemma_raw": "##  continuity-log.md\n\n**CATEGORY:** atlas-loop\n**SUBCATEGORY:** atlas-cycles\n**PRIORITY:** P1\n**SUMMARY:**  Detailed log of Atlas's loop cycles, including operator research, pricing, and hygiene.",
                   "kind": "state-doc",
@@ -500,53 +501,23 @@
             }
           },
           "total_items": 4
-        },
-        "mac-mini-files-cycle-fire-context": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "state-b6a960c177",
-                  "summary": "Detailed log of the cycle-fire context, including the symlink and script issues.",
-                  "priority": "P2",
-                  "source_path": "/Users/collinmacneil/.claude/state/atlas-brother-shared.md",
-                  "source_filename": "atlas-brother-shared.md",
-                  "file_mtime": "2026-06-12 03:46",
-                  "first_role": "mac-mini-file",
-                  "gemma_raw": "## CATEGORY: atlas-brother-shared\nSUBCATEGORY: cycle-fire-context\nPRIORITY: P2\nSUMMARY:  Detailed log of the cycle-fire context, including the symlink and script issues. \n\n##",
-                  "kind": "state-doc",
-                  "_original_cat": "mac-mini-files",
-                  "_original_sub": "cycle-fire-context"
-                }
-              ]
-            }
-          },
-          "total_items": 1
         }
       },
-      "total": 15,
+      "total": 13,
       "priority_counts": {
         "P0": 0,
         "P1": 0,
-        "P2": 15
+        "P2": 13
       },
       "original_categories": [
-        "atlas-queue",
-        "atlas-session-management",
-        "browser-performance",
-        "code-editor",
-        "contract-management",
-        "error-handling",
+        "atlas-workflow",
+        "browser-debugging",
+        "code-review",
+        "live-system",
         "mac-mini-files",
         "plugin-management",
-        "proof-review",
-        "session-memory",
+        "prompt-scheduling",
+        "session-management",
         "task-schedule"
       ]
     },
@@ -571,45 +542,14 @@
       "original_categories": []
     },
     "future": {
-      "subs": {
-        "mac-mini-files-unsorted": {
-          "subsubs": {
-            "P0": {
-              "items": []
-            },
-            "P1": {
-              "items": []
-            },
-            "P2": {
-              "items": [
-                {
-                  "id": "state-66ad374e3f",
-                  "summary": "",
-                  "priority": "P2",
-                  "source_path": "/Users/collinmacneil/.claude/state/atlasos-FULLY-REAL-GOAL-LOOP-2026-06-12.md",
-                  "source_filename": "atlasos-FULLY-REAL-GOAL-LOOP-2026-06-12.md",
-                  "file_mtime": "2026-06-12 03:50",
-                  "first_role": "mac-mini-file",
-                  "gemma_raw": "## atlasos-FULLY-REAL-GOAL-LOOP-2026-06-12.md\n\n**CATEGORY:** atlasos-goal-loop\n**SUBCATEGORY:** goal-live-data\n**PRIORITY:** P1\n**SUMMARY:**  Plan and goal command loop to finish atlasos.me fully real, including data integration and live-data updates. \n\n## atlasos-FULLY-REAL-GOAL-LOOP-2026-06-12.md\n",
-                  "kind": "state-doc",
-                  "_original_cat": "mac-mini-files",
-                  "_original_sub": "unsorted"
-                }
-              ]
-            }
-          },
-          "total_items": 1
-        }
-      },
-      "total": 1,
+      "subs": {},
+      "total": 0,
       "priority_counts": {
         "P0": 0,
         "P1": 0,
-        "P2": 1
+        "P2": 0
       },
-      "original_categories": [
-        "mac-mini-files"
-      ]
+      "original_categories": []
     }
   }
 }

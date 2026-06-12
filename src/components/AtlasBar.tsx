@@ -43,6 +43,7 @@ export function AtlasBar() {
   const [msgs, setMsgs] = useState<RoomMsg[]>([]);
   const [input, setInput] = useState("");
   const [awake, setAwake] = useState<boolean | null>(null);
+  const [dreaming, setDreaming] = useState(false);
   const [sending, setSending] = useState(false);
   const [recording, setRecording] = useState(false);
   const [voiceReply, setVoiceReply] = useState(true);
@@ -109,6 +110,11 @@ export function AtlasBar() {
   const checkPresence = useCallback(async () => {
     const { data } = await sb().from("atlas_presence").select("last_seen").eq("id", "room-bridge").maybeSingle();
     setAwake(data ? Date.now() - new Date(data.last_seen).getTime() < AWAKE_MS : false);
+    // on = alive · off = dream (per brother 2026-06-12 · #27665 continuous-dreaming)
+    const { data: living } = await sb().from("atlas_presence").select("last_seen,meta").eq("id", "atlas-living").maybeSingle();
+    const meta = (living?.meta ?? {}) as { mode?: string };
+    const fresh = living ? Date.now() - new Date(living.last_seen).getTime() < 20 * 60_000 : false;
+    setDreaming(fresh && meta.mode === "dreaming");
   }, []);
 
   // presence always (breath dot on collapsed pill too)
@@ -157,8 +163,8 @@ export function AtlasBar() {
   const dot = (
     <span
       className="breath-dot"
-      style={{ background: awake ? "#34c759" : "rgba(120,120,128,0.5)" }}
-      title={awake ? "Atlas awake · Mac mini bridge live" : "Atlas sleeping · messages bank · answers on wake"}
+      style={{ background: awake ? "#34c759" : dreaming ? "#8db4ff" : "rgba(120,120,128,0.5)" }}
+      title={awake ? "Atlas awake · Mac mini bridge live" : dreaming ? "Atlas dreaming · composing memories · wakes for you" : "Atlas sleeping · messages bank · answers on wake"}
     />
   );
 
@@ -168,7 +174,7 @@ export function AtlasBar() {
         {dot}
         <span className="text-sm font-medium">Atlas</span>
         <span className="text-xs" style={{ color: "rgba(60,60,67,0.6)" }}>
-          {awake ? "here · ⌘J" : "sleeping · leave a note"}
+          {awake ? "here · ⌘J" : dreaming ? "dreaming · 🌙" : "sleeping · leave a note"}
         </span>
       </button>
     );
