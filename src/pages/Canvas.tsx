@@ -378,6 +378,7 @@ export default function Canvas({ nav }: { nav: NavItem[]; home: NavItem }) {
         if (saved && Array.isArray(saved) && saved.length > 0) {
           // merge: widgets born after the layout was saved get their DEFAULT slot
           // (not a squished fallback) · new arrivals push existing rows down
+          (window as unknown as Record<string, unknown>).__layoutMerge = "v2"; // runtime proof tag
           const have = new Set((saved as Layout).map((l) => l.i));
           const missing = DEFAULT_LAYOUT.filter((d) => !have.has(d.i));
           setLayout(missing.length ? [...missing, ...(saved as Layout).map((l) => ({ ...l, y: l.y + 2 }))] : (saved as Layout));
