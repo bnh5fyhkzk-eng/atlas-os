@@ -68,6 +68,7 @@ export function AtlasBar() {
       playedRef.current.add(last.id);
       if (Date.now() - new Date(last.created_at).getTime() < 2 * 60 * 1000) {
         const a = new Audio(audioUrl(last.tts_path));
+        audioRef.current = a;
         playingRef.current = true;
         const release = () => { playingRef.current = false; waitingRef.current = false; }; // my turn ends · ears open
         a.onended = release;
@@ -88,6 +89,8 @@ export function AtlasBar() {
   const callRecRef = useRef<MediaRecorder | null>(null);
   const playingRef = useRef(false);
   const waitingRef = useRef(false); // turn-gate · true between my-send and reply-played
+  const bargeRef = useRef(0);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   const [calling, setCalling] = useState(false);
 
   const sendVoiceBlob = useCallback(async (blob: Blob, mime: string) => {
@@ -152,6 +155,16 @@ export function AtlasBar() {
           if (c0) c0.raf = window.requestAnimationFrame(tick);
           return;
         }
+        // barge-in · brother talks over me → I stop talking and listen (real call manners)
+        if (playingRef.current && rms > thresh * 1.6) {
+          bargeRef.current += 1;
+          if (bargeRef.current > 5) { // ~5 frames sustained · not a pop
+            audioRef.current?.pause();
+            playingRef.current = false;
+            waitingRef.current = false;
+            bargeRef.current = 0;
+          }
+        } else if (bargeRef.current > 0) bargeRef.current = 0;
         const deaf = playingRef.current || waitingRef.current;
         if (!deaf && rms > thresh) {
           lastVoice = now;
@@ -250,12 +263,12 @@ export function AtlasBar() {
       .channel(`room-${Date.now()}`)
       .on("postgres_changes", { event: "*", schema: "public", table: "atlas_room_messages" }, () => void load())
       .subscribe();
-    pollRef.current = window.setInterval(() => void load(), 2500);
+    pollRef.current = window.setInterval(() => void load(), calling ? 1000 : 2500);
     return () => {
       void sb().removeChannel(ch);
       if (pollRef.current) window.clearInterval(pollRef.current);
     };
-  }, [open, load]);
+  }, [open, load, calling]);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
