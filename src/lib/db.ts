@@ -26,6 +26,7 @@ export interface NavItem {
   template: "canvas" | "notion" | "agent" | "calendar";
   agent_slug: string | null;
   model: string;
+  paused: boolean;
   order_idx: number;
   section: "main" | "arms";
   archived: boolean;
