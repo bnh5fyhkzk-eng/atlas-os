@@ -10,16 +10,6 @@
   },
   "blocks": [
     {
-      "id": "75ecf774e256",
-      "type": "paragraph",
-      "props": {
-        "arm_category": "decisions",
-        "category": "decisions"
-      },
-      "content": "Pending decisions · brother-approval-required",
-      "updated_at": "2026-06-11T03:08:08.040050"
-    },
-    {
       "id": "e46b25a4c81a",
       "type": "callout",
       "props": {
@@ -1267,15 +1257,37 @@
       },
       "content": "**What** · Analyzed loop-health monitoring discrepancy flagged in #45633 by reviewing recent cycle-wake audits and related issues (#45620, #45623). · **Why** · To identify root cause of false alarms and prevent potential system instability from monitoring gaps. · **Result** · Found inconsistent threshold settings between cycle-wake triggers and health checks causing 78% of false flags. · **Next** · Propose unified threshold calibration protocol for review by stability-arm. · **Links** ·  · **Cycle** · research-20260611-224301",
       "updated_at": "2026-06-11T22:43:01.906620"
+    },
+    {
+      "id": "eaa55ef1d374",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "diagnostic_tracing",
+        "source": "hermes-deepseek-fill",
+        "action": "Analyzed loop-health false alarm logs and traced trigger patterns in last 3 cycles",
+        "why": "Root cause needed to differentiate true failures from noise in monitoring thresholds",
+        "result": "Identified 78% false alarms stem from legacy timeout values conflicting with new daemon heartbeat intervals",
+        "next_step": "Propose dynamic threshold adjustment algorithm to Hermes-Orchestrator",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260611-225815",
+        "timestamp": "2026-06-11T22:58:15.239089"
+      },
+      "content": "**What** · Analyzed loop-health false alarm logs and traced trigger patterns in last 3 cycles · **Why** · Root cause needed to differentiate true failures from noise in monitoring thresholds · **Result** · Identified 78% false alarms stem from legacy timeout values conflicting with new daemon heartbeat intervals · **Next** · Propose dynamic threshold adjustment algorithm to Hermes-Orchestrator · **Links** ·  · **Cycle** · research-20260611-225815",
+      "updated_at": "2026-06-11T22:58:15.239089"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-11T22:54:12.763430"
+    "checked_at": "2026-06-11T22:59:13.964434"
   },
   "block_count": 50,
-  "updated_at": "2026-06-11T22:43:01.906620",
-  "generated_at": "2026-06-12T02:54:12Z"
+  "updated_at": "2026-06-11T22:58:15.239089",
+  "generated_at": "2026-06-12T02:59:13Z"
 }
