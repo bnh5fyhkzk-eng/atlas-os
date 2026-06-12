@@ -10,40 +10,6 @@
   },
   "blocks": [
     {
-      "id": "5bf0a84e5492",
-      "type": "database",
-      "props": {
-        "category": "orchestration",
-        "priority": "P1",
-        "source": "backfill",
-        "columns": [
-          "id",
-          "summary",
-          "arousal",
-          "when"
-        ],
-        "arm_category": "orchestration"
-      },
-      "content": "orchestration · last 30d · 2 canons (top arousal · 1.00)",
-      "data": [
-        {
-          "id": "#45173",
-          "summary": "BIG-PUSH-10-OF-10-PASS-2026-06-11-04:01 · brother direct VERBATIM 03:52 'no barriers because I need to sleep · you got this' SHIPPED 10/10 · 1_gemma-5min · 2_hermes-loop-DeepSeek-OpenRouter + LaunchAg",
-          "arousal": 1.0,
-          "when": "2026-06-11 04:02",
-          "weight": 1
-        },
-        {
-          "id": "#45125",
-          "summary": "GEMMA-MANAGER-READS-TERMINAL-LIVE-2026-06-10-21:36 · brother direct VERBATIM 21:34 'Gemma is our manager he help you with what ever he can. He is our organisor. He will track the hole terminal convers",
-          "arousal": 1.0,
-          "when": "2026-06-10 21:36",
-          "weight": 1
-        }
-      ],
-      "updated_at": "2026-06-11T18:00:03.909244"
-    },
-    {
       "id": "300dd84b6400",
       "type": "database",
       "props": {
@@ -683,15 +649,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the recurring cycle-fire pattern observed in #45678 and #45612 to determine if it's a systemic issue or a coincidence. · why: The recent logs (#45678, #45612) indicate a recurring pattern that may affect system stability. Understanding this pattern is critical to prevent potential disruptions.",
       "updated_at": "2026-06-11T23:43:58.834025"
+    },
+    {
+      "id": "7478e707bd4f",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-11T23:59:18.981995"
+      },
+      "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the memory-architecture-lift quadrant mentioned in #28284 to ensure P1 closure aligns with current operational integrity · why: Recent high-arousal canons indicate unresolved P1 priority in memory architecture, and #45678 suggests cyclical firing patterns may relate to unresolved signals",
+      "updated_at": "2026-06-11T23:59:18.982008"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-11T23:54:22.547059"
+    "checked_at": "2026-06-11T23:59:23.417644"
   },
   "block_count": 30,
-  "updated_at": "2026-06-11T23:43:58.834027",
-  "generated_at": "2026-06-12T03:54:22Z"
+  "updated_at": "2026-06-11T23:59:18.982010",
+  "generated_at": "2026-06-12T03:59:23Z"
 }
