@@ -354,14 +354,18 @@ function NoteOver({ node, navTitle, onClose, onChanged }: { node: Node; navTitle
           </div>
           <div className="mt-2 flex flex-wrap items-center gap-1.5">
             {node.proofs.map((p, i) => (
-              <span
+              <button
                 key={i}
-                className="flex items-center gap-1 rounded-full border px-2 py-0.5 text-xs"
-                style={{ borderColor: "var(--border)", color: "var(--text-soft)" }}
-                title={p.path ?? p.url ?? ""}
+                className="flex items-center gap-1 rounded-full border px-2 py-0.5 text-xs hover:shadow-sm"
+                style={{ borderColor: "var(--border)", color: p.url ? "#0a84ff" : "var(--text-soft)" }}
+                title={p.url ? "open" : p.path ? "click to copy path" : ""}
+                onClick={() => {
+                  if (p.url) window.open(p.url, "_blank");
+                  else if (p.path) void navigator.clipboard.writeText(p.path);
+                }}
               >
                 <FileText size={10} /> {p.label}
-              </span>
+              </button>
             ))}
             {addingProof ? (
               <input
