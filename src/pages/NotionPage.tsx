@@ -14,6 +14,7 @@ import {
   archiveNode,
   subscribeNodes,
   fiveFieldScaffold,
+  logOverride,
   type NavItem,
   type Node,
 } from "../lib/db";
@@ -246,7 +247,12 @@ function DrillColumn({
                 className="absolute right-1 top-1/2 hidden -translate-y-1/2 rounded p-0.5 group-hover:block hover:bg-black/10"
                 style={{ background: "var(--bg)" }}
                 title="Archive (restorable)"
-                onClick={(e) => { e.stopPropagation(); void archiveNode(n.id).then(onChanged); }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  // self-improve signal: brother archiving an AI-filed item = correction
+                  if (n.created_by !== "brother") logOverride(n.id, "archived-ai-item", { created_by: n.created_by, title: n.title });
+                  void archiveNode(n.id).then(onChanged);
+                }}
               >
                 <X size={11} style={{ color: "var(--text-faint)" }} />
               </button>

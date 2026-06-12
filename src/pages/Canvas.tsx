@@ -11,10 +11,54 @@ import {
   listNodes,
   getCanvas,
   saveCanvas,
+  activitySince,
   type NavItem,
   type Node,
   type CanvasWidget,
 } from "../lib/db";
+
+// while-you-were-gone · localStorage last-visit · >1h away → strip
+function GoneStrip({ navById, onJump }: { navById: Map<string, NavItem>; onJump: (n: Node) => void }) {
+  const [items, setItems] = useState<Node[] | null>(null);
+  const [away, setAway] = useState(0);
+  useEffect(() => {
+    const KEY = "atlas-last-visit";
+    const last = Number(localStorage.getItem(KEY) ?? 0);
+    const now = Date.now();
+    localStorage.setItem(KEY, String(now));
+    const interval = window.setInterval(() => localStorage.setItem(KEY, String(Date.now())), 60_000);
+    if (last && now - last > 60 * 60 * 1000) {
+      setAway(Math.round((now - last) / 3600e3 * 10) / 10);
+      activitySince(new Date(last).toISOString()).then(setItems).catch(() => setItems(null));
+    }
+    return () => window.clearInterval(interval);
+  }, []);
+  if (!items || items.length === 0) return null;
+  return (
+    <div className="mb-3 rounded-xl border p-3" style={{ borderColor: "var(--border)", background: "var(--bg-side)" }}>
+      <div className="flex items-center justify-between">
+        <span className="text-xs font-semibold" style={{ color: "var(--text-soft)" }}>
+          While you were gone ({away}h) · {items.length} new
+        </span>
+        <button className="text-xs underline" style={{ color: "var(--text-faint)" }} onClick={() => setItems(null)}>
+          got it
+        </button>
+      </div>
+      <div className="mt-1.5 flex flex-wrap gap-1.5">
+        {items.slice(0, 8).map((n) => (
+          <button
+            key={n.id}
+            className="rounded-full border px-2.5 py-1 text-xs"
+            style={{ borderColor: "var(--border)" }}
+            onClick={() => onJump(n)}
+          >
+            {n.emoji} {n.title.slice(0, 30)} <span style={{ color: "var(--text-faint)" }}>· {navById.get(n.nav_id)?.title ?? ""}</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 type Layout = LayoutItem[];
 const KEY = "home-v3";
@@ -140,6 +184,58 @@ function Widget({ title, emoji, onRemove, children }: { title: string; emoji: st
   );
 }
 
+// calendar preview · next 3 events (google + atlas merged)
+function CalendarPreview({ item }: { item: NavItem }) {
+  const navigate = useNavigate();
+  const [events, setEvents] = useState<Array<{ id: string; title: string; starts_at: string; source: string }>>([]);
+  useEffect(() => {
+    const from = new Date().toISOString();
+    const to = new Date(Date.now() + 14 * 86400e3).toISOString();
+    fetch(`/api/gcal?from=${from}&to=${to}`)
+      .then((r) => r.json())
+      .then((j) => setEvents(((j.events ?? []) as typeof events).slice(0, 3)))
+      .catch(() => setEvents([]));
+  }, []);
+  return (
+    <div className="space-y-1">
+      {events.length === 0 && <div className="text-xs" style={{ color: "var(--text-faint)" }}>No upcoming events</div>}
+      {events.map((e) => (
+        <button key={e.id} className="flex w-full items-center gap-2 rounded-md px-2 py-1 text-left text-sm hover:bg-black/5" onClick={() => navigate(`/p/${item.id}`)}>
+          <span className="text-xs" style={{ color: "#448361" }}>●</span>
+          <span className="flex-1 truncate">{e.title}</span>
+          <span className="text-xs" style={{ color: "var(--text-faint)" }}>
+            {new Date(e.starts_at).toLocaleDateString([], { month: "short", day: "numeric" })}
+          </span>
+        </button>
+      ))}
+    </div>
+  );
+}
+
+// agent preview · last message + folders
+function AgentPreview({ item }: { item: NavItem }) {
+  const navigate = useNavigate();
+  const [last, setLast] = useState<string | null>(null);
+  useEffect(() => {
+    (async () => {
+      const { data: chats } = await sbClient().from("atlas_chats").select("id").eq("nav_id", item.id).order("created_at", { ascending: false }).limit(1);
+      if (!chats?.[0]) return;
+      const { data: m } = await sbClient().from("atlas_messages").select("content,role").eq("chat_id", chats[0].id).order("created_at", { ascending: false }).limit(1);
+      if (m?.[0]) setLast(`${m[0].role === "brother" ? "you" : "arm"}: ${m[0].content.slice(0, 90)}`);
+    })().catch(() => undefined);
+  }, [item.id]);
+  return (
+    <div className="space-y-1.5">
+      {last && (
+        <button className="w-full rounded-md px-2 py-1 text-left text-xs hover:bg-black/5" style={{ color: "var(--text-soft)" }} onClick={() => navigate(`/p/${item.id}`)}>
+          💬 {last}
+        </button>
+      )}
+      <PageWidget item={item} />
+    </div>
+  );
+}
+
 // live window into any page · root folders + counts · click-through
 function PageWidget({ item }: { item: NavItem }) {
   const navigate = useNavigate();
@@ -258,6 +354,7 @@ export default function Canvas({ nav }: { nav: NavItem[]; home: NavItem }) {
       </header>
 
       <div className="mx-auto max-w-6xl px-4 py-4" ref={containerRef}>
+        <GoneStrip navById={navById} onJump={(n) => navigate(`/p/${n.nav_id}/n/${n.id}`)} />
         {ready && mounted && (
           <ResponsiveGridLayout
             width={width}
@@ -330,7 +427,13 @@ export default function Canvas({ nav }: { nav: NavItem[]; home: NavItem }) {
               return (
                 <div key={w.i}>
                   <Widget title={item.title} emoji={item.emoji} onRemove={() => removeWidget(w.i)}>
-                    <PageWidget item={item} />
+                    {item.template === "calendar" ? (
+                      <CalendarPreview item={item} />
+                    ) : item.template === "agent" ? (
+                      <AgentPreview item={item} />
+                    ) : (
+                      <PageWidget item={item} />
+                    )}
                   </Widget>
                 </div>
               );

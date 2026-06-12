@@ -23,7 +23,7 @@ export interface NavItem {
   id: string;
   title: string;
   emoji: string;
-  template: "canvas" | "notion" | "agent" | "calendar";
+  template: "canvas" | "notion" | "agent" | "calendar" | "proposals";
   agent_slug: string | null;
   model: string;
   paused: boolean;
@@ -152,6 +152,58 @@ export async function listEvents(fromIso: string, toIso: string): Promise<CalEve
 export async function createEvent(input: { title: string; starts_at: string; ends_at?: string }): Promise<void> {
   const { error } = await sb().from("atlas_events").insert(input);
   if (error) err(error);
+}
+
+// ── proposals (eval-gate · WE-50/50) ─────────────────────────
+export interface Proposal {
+  id: string;
+  name: string;
+  summary: string;
+  status: "pending" | "approved" | "rejected";
+  created_at: string;
+}
+
+export async function listProposals(): Promise<Proposal[]> {
+  const { data, error } = await sb().from("atlas_proposals").select("*").order("created_at");
+  if (error) err(error);
+  return (data ?? []) as Proposal[];
+}
+
+export async function decideProposal(id: string, status: "approved" | "rejected"): Promise<void> {
+  const { error } = await sb().from("atlas_proposals").update({ status, decided_at: new Date().toISOString() }).eq("id", id);
+  if (error) err(error);
+}
+
+// override log (self-improve signal · brother corrects AI filing)
+export function logOverride(nodeId: string, action: string, detail: Record<string, unknown> = {}): void {
+  void sb().from("atlas_overrides").insert({ node_id: nodeId, action, detail }).then(() => undefined);
+}
+
+// realtime chat messages (cross-device <3s)
+export function subscribeChat(chatId: string, cb: () => void): () => void {
+  const ch = sb()
+    .channel(`chat-${chatId}-${++seq}`)
+    .on("postgres_changes", { event: "INSERT", schema: "public", table: "atlas_messages", filter: `chat_id=eq.${chatId}` }, cb)
+    .subscribe();
+  return () => { void sb().removeChannel(ch); };
+}
+
+// ⌘K search · everything
+export async function searchAll(q: string): Promise<Array<{ kind: string; id: string; nav_id: string | null; title: string; emoji: string }>> {
+  const [navs, nodes] = await Promise.all([
+    sb().from("atlas_nav").select("id,title,emoji").eq("archived", false).ilike("title", `%${q}%`).limit(5),
+    sb().from("atlas_nodes").select("id,nav_id,title,emoji,kind").eq("archived", false).ilike("title", `%${q}%`).limit(12),
+  ]);
+  return [
+    ...((navs.data ?? []).map((n) => ({ kind: "page", id: n.id, nav_id: null as string | null, title: n.title, emoji: n.emoji }))),
+    ...((nodes.data ?? []).map((n) => ({ kind: n.kind, id: n.id, nav_id: n.nav_id as string | null, title: n.title, emoji: n.emoji }))),
+  ];
+}
+
+export async function activitySince(iso: string): Promise<Node[]> {
+  const { data, error } = await sb().from("atlas_nodes").select("*").gt("created_at", iso).eq("archived", false).order("created_at", { ascending: false }).limit(20);
+  if (error) err(error);
+  return (data ?? []) as Node[];
 }
 
 // 5-field scaffold · WHAT/WHY/HOW/WHEN/RECOMMENDATION

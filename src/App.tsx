@@ -8,6 +8,8 @@ import Canvas from "./pages/Canvas";
 import NotionPage from "./pages/NotionPage";
 import AgentPage from "./pages/AgentPage";
 import CalendarPage from "./pages/CalendarPage";
+import ProposalsPage from "./pages/ProposalsPage";
+import { CmdK } from "./components/CmdK";
 
 export default function App() {
   return (
@@ -159,6 +161,7 @@ function Shell() {
         </div>
       </nav>
 
+      <CmdK />
       <main className="min-w-0 flex-1 overflow-y-auto">
         <Routes>
           <Route path="/home" element={home ? <Canvas nav={nav} home={home} /> : null} />
@@ -179,5 +182,6 @@ function PageRouter({ nav }: { nav: NavItem[] }) {
   // agent page · chat at root · drilling a folder opens the notion engine on its tree
   if (item.template === "agent") return nodeId ? <NotionPage item={item} /> : <AgentPage item={item} />;
   if (item.template === "calendar") return <CalendarPage item={item} />;
+  if (item.template === "proposals") return <ProposalsPage item={item} />;
   return <Navigate to="/home" replace />;
 }

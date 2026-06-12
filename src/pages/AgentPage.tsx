@@ -10,6 +10,7 @@ import {
   listNodes,
   createNode,
   subscribeNodes,
+  subscribeChat,
   updateNav,
   type NavItem,
   type Node,
@@ -140,6 +141,16 @@ export default function AgentPage({ item }: { item: NavItem }) {
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [msgs]);
+
+  // realtime · messages from other devices/bridge appear <3s
+  useEffect(() => {
+    if (!chatId) return;
+    const unsub = subscribeChat(chatId, () => {
+      if (!busy) void loadChat(chatId);
+    });
+    return () => unsub();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [chatId, busy]);
 
   const send = async () => {
     const text = input.trim();
