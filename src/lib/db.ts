@@ -85,10 +85,31 @@ export async function updateNav(id: string, patch: Partial<NavItem>): Promise<vo
 }
 
 // ── nodes (unified tree) ─────────────────────────────────────
+// AI writers sometimes store jsonb columns as serialized strings — normalize on
+// read so a bad row can never crash the UI (caught live 2026-06-12 · proofs.map).
+function normalizeNode(n: Node): Node {
+  const fix = (v: unknown): unknown => {
+    if (typeof v !== "string") return v;
+    try { const p = JSON.parse(v); return Array.isArray(p) ? p : v; } catch { return v; }
+  };
+  const proofs = fix(n.proofs);
+  let content = fix(n.content);
+  if (typeof content === "string") {
+    // unparseable raw text · keep it readable as paragraphs instead of vanishing
+    content = content.split("\n").filter((l) => l.trim()).slice(0, 100)
+      .map((l) => ({ type: "paragraph", content: [{ type: "text", text: l, styles: {} }] }));
+  }
+  return {
+    ...n,
+    proofs: (Array.isArray(proofs) ? proofs : []) as Node["proofs"],
+    content,
+  };
+}
+
 export async function listNodes(navId: string): Promise<Node[]> {
   const { data, error } = await sb().from("atlas_nodes").select("*").eq("nav_id", navId).eq("archived", false).order("order_idx");
   if (error) err(error);
-  return (data ?? []) as Node[];
+  return ((data ?? []) as Node[]).map(normalizeNode);
 }
 
 export async function createNode(input: { nav_id: string; parent_id?: string | null; kind?: Node["kind"]; title: string; emoji?: string; content?: unknown }): Promise<Node> {
@@ -109,7 +130,7 @@ export async function archiveNode(id: string): Promise<void> {
 export async function recentNodes(limit = 12): Promise<Node[]> {
   const { data, error } = await sb().from("atlas_nodes").select("*").eq("archived", false).order("updated_at", { ascending: false }).limit(limit);
   if (error) err(error);
-  return (data ?? []) as Node[];
+  return ((data ?? []) as Node[]).map(normalizeNode);
 }
 
 // ── realtime · unique channel + cleanup (v2 lesson baked) ────
@@ -224,7 +245,7 @@ export async function searchAll(q: string): Promise<SearchHit[]> {
 export async function activitySince(iso: string): Promise<Node[]> {
   const { data, error } = await sb().from("atlas_nodes").select("*").gt("created_at", iso).eq("archived", false).order("created_at", { ascending: false }).limit(20);
   if (error) err(error);
-  return (data ?? []) as Node[];
+  return ((data ?? []) as Node[]).map(normalizeNode);
 }
 
 // 5-field scaffold · WHAT/WHY/HOW/WHEN/RECOMMENDATION
