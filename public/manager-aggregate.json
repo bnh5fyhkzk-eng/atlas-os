@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T06:23:13Z",
+  "generated_at": "2026-06-12T06:38:13Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 152,
+    "note": 153,
     "briefing": 26,
     "idea": 0
   },
-  "total_blocks": 203,
+  "total_blocks": 204,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "cf4d70a835d5",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the memory-architecture-lift quadrant mentioned in P1 to understand its implications for current cycle. · why: The recent brain canon mentions a P1 memory-architecture-lift quadrant, which is directly related to the current cycle's res",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-12T02:32:01.767005"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-11T20:25:34.596340"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "1a77838dc60f",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the loop-health false alarm issue surfaced in cycle-wake audit · why: This is a P1 memory-architecture issue affecting daemon health monitoring, with recent activity indicating it needs immediate attention",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-11T20:10:20.069007"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "a6f021e7ad80",
+        "type": "callout",
+        "content": "**What** · Scanned P1 memory-architecture-lift quadrant in brain canon for core patterns and delta from last cycle. · **Why** · Hermes flagged it as critical to current cycle's research focus—must decode lift mechanics to align our vector. · **Result** · Found 3 key upgrades: synaptic pruning emulat",
+        "priority": "deep_dive",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-12T02:32:08.612767"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -837,17 +848,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-12T00:30:02.888386"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "8800f9195ce7",
-        "type": "callout",
-        "content": "**What** · Initiated deep-memory scan of quadrant #45678 to isolate cycle-fire patterns and compare against baseline noise thresholds. · **Why** · Recurring cycle-fire (3x/1d) suggests non-random artifact—potential signal interference or memory-lift instability per P1 priority. · **Result** · Scan i",
-        "priority": "signal-noise-differentiation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-12T00:14:46.703013"
       }
     ],
     "briefing": [
