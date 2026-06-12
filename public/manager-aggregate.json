@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T01:08:01Z",
+  "generated_at": "2026-06-12T01:23:01Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 157,
+    "note": 158,
     "briefing": 22,
     "idea": 0
   },
-  "total_blocks": 201,
+  "total_blocks": 202,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "7e155975a503",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Investigate and document the differences between stale and retired daemons in the DAEMON-HEALTH-WHITELIST to prevent future false alarms. · why: Recent cycle-wake audit issues (#45620) indicate confusion between stale and retired daemons, which co",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-11T21:11:27.843193"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -247,17 +258,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-11T16:08:59.034324"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "849c33443ad8",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Deep-dive into memory-architecture-lift quadrant to resolve P1 priority from cycle 6 research · why: Recent brain canon #28284 indicates this is a closing P1 priority with direct relevance to current architecture work",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-11T16:08:42.207659"
       }
     ],
     "action": [],
@@ -266,6 +266,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "0527ba9482ab",
+        "type": "callout",
+        "content": "**What** · Analyzed DAEMON-HEALTH-WHITELIST to define stale vs retired daemon states based on cycle-wake patterns and system logs · **Why** · To eliminate false alarms by establishing clear criteria distinguishing inactive (stale) from permanently decommissioned (retired) daemons · **Result** · Foun",
+        "priority": "state-classification",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-11T21:11:32.784131"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -804,17 +815,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-11T18:00:02.967277"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "e67c21f36085",
-        "type": "database",
-        "content": "youtube-watches · last 30d · 8 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-11T18:00:02.967269"
       }
     ],
     "briefing": [
