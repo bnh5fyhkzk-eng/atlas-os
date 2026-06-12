@@ -5,77 +5,12 @@
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "rewrites": [
-    {
-      "source": "/",
-      "destination": "/us.html"
-    },
-    { "source": "/home",                 "destination": "/atlas-app.html" },
-    { "source": "/arm/:name",            "destination": "/atlas-app.html" },
-    { "source": "/arm/:name/:pageId",    "destination": "/atlas-app.html" },
-    { "source": "/manager",              "destination": "/atlas-app.html" },
-    { "source": "/atlas-canvas",         "destination": "/atlas-app.html" },
-    {
-      "source": "/api/auth",
-      "destination": "/api/auth"
-    },
-    {
-      "source": "/api/notes",
-      "destination": "/api/notes"
-    },
-    {
-      "source": "/api/blocks",
-      "destination": "/api/blocks"
-    },
-    {
-      "source": "/api/projects",
-      "destination": "/api/projects"
-    },
-    {
-      "source": "/api/agentic-notes",
-      "destination": "/api/agentic-notes"
-    },
-    {
-      "source": "/api/agentic-categories",
-      "destination": "/api/agentic-categories"
-    },
-    {
-      "source": "/api/agentic-subcategories",
-      "destination": "/api/agentic-subcategories"
-    },
-    {
-      "source": "/api/agentic-projects",
-      "destination": "/api/agentic-projects"
-    },
-    {
-      "source": "/api/agentic-reorder",
-      "destination": "/api/agentic-reorder"
-    },
-    { "source": "/api/atlas-arms",   "destination": "/api/atlas-arms" },
-    { "source": "/api/atlas-pages",  "destination": "/api/atlas-pages" },
-    { "source": "/api/atlas-blocks", "destination": "/api/atlas-blocks" },
-    {
-      "source": "/api/status",
-      "destination": "/api/status"
-    },
-    {
-      "source": "/api/session-token",
-      "destination": "/api/session-token"
-    },
-    {
-      "source": "/api/search",
-      "destination": "/api/search"
-    },
-    {
-      "source": "/api/arms/run",
-      "destination": "/api/arms/run"
-    },
-    {
-      "source": "/api/(.*)",
-      "destination": "https://api.atlasos.me/api/$1"
-    },
-    {
-      "source": "/dashboard-plugins/(.*)",
-      "destination": "https://api.atlasos.me/dashboard-plugins/$1"
-    }
+    { "source": "/", "destination": "/us.html" },
+    { "source": "/home", "destination": "/index.html" },
+    { "source": "/manager", "destination": "/index.html" },
+    { "source": "/arm/:slug", "destination": "/index.html" },
+    { "source": "/arm/:slug/:pageId", "destination": "/index.html" },
+    { "source": "/api/(.*)", "destination": "https://api.atlasos.me/api/$1" },
+    { "source": "/dashboard-plugins/(.*)", "destination": "https://api.atlasos.me/dashboard-plugins/$1" }
   ]
 }

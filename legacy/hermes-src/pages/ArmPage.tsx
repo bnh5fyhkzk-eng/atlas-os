@@ -1,40 +1,48 @@
-// /arm/:name and /arm/:name/:pageId · Notion-modular arm page
-// Per FOUNDATION-REBUILD Phase 2 + 3
+// /arm/:name and /arm/:name/:pageId · Notion-drill arm page
+// GOAL-1.5 rebuild per brother direct 2026-06-11 20:40 ·
+// "most of this is noise · kanban style · click category opens subcategories
+//  and the list goes on (notion style) · build the foundation the right way"
+// Main pane IS the drill · category cards → subcategory cards → notes → editor.
+// Dead controls removed: view-switcher (views didn't exist) · embed-picker (APIs 502 until Goal 2).
 import { useEffect, useMemo, useState, useCallback } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { ChevronRight, Plus, FileText } from "lucide-react";
 import { ArmSidebar } from "@/components/atlas/ArmSidebar";
 import { BlockEditor } from "@/components/atlas/BlockEditor";
-import { EmbedBlockRenderer, EMBED_TYPES } from "@/components/atlas/EmbedBlockRenderer";
 import { AuthGate } from "@/components/atlas/AuthGate";
 import { NoteSlideOver } from "@/components/atlas/NoteSlideOver";
 import {
   getPage,
   listBlocks,
   saveNativeDoc,
-  upsertBlock,
-  deleteBlock,
   updatePage,
   listAllPagesForArm,
   createPage,
-  subscribeToPageBlocks,
-  copyBlockToProject,
-  listProjects,
+  subscribeToArmTree,
   fiveFieldScaffold,
   type Page,
-  type Block,
-  type Project,
 } from "@/lib/atlas-supabase";
 import "@/styles/atlas-theme.css";
-import { LayoutGrid, Rows, KanbanSquare, Calendar, Image as ImageIcon, FileText, Plus, Copy, Trash2 } from "lucide-react";
 
-const VIEW_TYPES: Array<{ value: Page["view_type"]; label: string; icon: typeof FileText }> = [
-  { value: "doc",      label: "Doc",      icon: FileText },
-  { value: "table",    label: "Table",    icon: Rows },
-  { value: "board",    label: "Board",    icon: LayoutGrid },
-  { value: "kanban",   label: "Kanban",   icon: KanbanSquare },
-  { value: "calendar", label: "Calendar", icon: Calendar },
-  { value: "gallery",  label: "Gallery",  icon: ImageIcon },
-];
+const ARM_TITLES: Record<string, string> = {
+  curiosity: "🌱 Curiosity",
+  pascal: "🤝 Pascal",
+  research: "👁 Research",
+  code: "✋ Code",
+  infra: "💗 Infra",
+  dream: "🌙 Dream",
+  hermes: "🧠 Hermes",
+  charle: "💼 Charle",
+  manager: "🎯 Manager",
+};
+
+function timeAgo(iso: string): string {
+  const s = Math.floor((Date.now() - new Date(iso).getTime()) / 1000);
+  if (s < 60) return "now";
+  if (s < 3600) return `${Math.floor(s / 60)}m`;
+  if (s < 86400) return `${Math.floor(s / 3600)}h`;
+  return `${Math.floor(s / 86400)}d`;
+}
 
 export default function ArmPage() {
   return (
@@ -50,74 +58,102 @@ function ArmPageInner() {
   const pageId = params.pageId;
   const navigate = useNavigate();
 
+  const [armPages, setArmPages] = useState<Page[]>([]);
   const [page, setPage] = useState<Page | null>(null);
   const [doc, setDoc] = useState<unknown | null>(null);
-  const [embedBlocks, setEmbedBlocks] = useState<Block[]>([]);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState<"idle" | "saving" | "saved">("idle");
   const [error, setError] = useState<string | null>(null);
-  const [armPages, setArmPages] = useState<Page[]>([]);
-  const [showEmbedPicker, setShowEmbedPicker] = useState(false);
-  const [showCopyDialog, setShowCopyDialog] = useState<Block | null>(null);
-  const [projects, setProjects] = useState<Project[]>([]);
+  const [adding, setAdding] = useState(false);
+  const [addTitle, setAddTitle] = useState("");
   const [forceFull, setForceFull] = useState(false);
 
-  // depth in tree · 0=category · 1=subcategory · 2+=note (opens as slide-over · taste-move)
-  const pageDepth = useMemo(() => {
-    if (!pageId) return -1;
-    const byId = new Map(armPages.map((p) => [p.id, p]));
-    let depth = 0;
-    let cur = byId.get(pageId);
-    while (cur?.parent_id && byId.has(cur.parent_id) && depth < 10) {
-      cur = byId.get(cur.parent_id);
-      depth++;
+  // ── tree facts ──────────────────────────────────────────────
+  const byId = useMemo(() => new Map(armPages.map((p) => [p.id, p])), [armPages]);
+  const childrenOf = useMemo(() => {
+    const m = new Map<string | null, Page[]>();
+    for (const p of armPages) {
+      const k = p.parent_id ?? null;
+      if (!m.has(k)) m.set(k, []);
+      m.get(k)!.push(p);
     }
-    return depth;
-  }, [pageId, armPages]);
-  const isNoteLevel = pageDepth >= 2 && !forceFull;
+    for (const arr of m.values()) arr.sort((a, b) => a.order_idx - b.order_idx);
+    return m;
+  }, [armPages]);
 
-  useEffect(() => { setForceFull(false); }, [pageId]);
+  const descendantCount = useCallback(
+    (id: string): number => {
+      const kids = childrenOf.get(id) ?? [];
+      return kids.length + kids.reduce((acc, k) => acc + descendantCount(k.id), 0);
+    },
+    [childrenOf],
+  );
 
-  const loadPage = useCallback(async () => {
+  const depthOf = useCallback(
+    (id: string): number => {
+      let d = 0;
+      let cur = byId.get(id);
+      while (cur?.parent_id && byId.has(cur.parent_id) && d < 10) {
+        cur = byId.get(cur.parent_id);
+        d++;
+      }
+      return d;
+    },
+    [byId],
+  );
+
+  const breadcrumb = useMemo(() => {
+    if (!pageId) return [];
+    const path: Page[] = [];
+    let cur = byId.get(pageId);
+    while (cur) {
+      path.unshift(cur);
+      cur = cur.parent_id ? byId.get(cur.parent_id) : undefined;
+    }
+    return path;
+  }, [pageId, byId]);
+
+  const pageDepth = pageId ? depthOf(pageId) : -1;
+  const isNoteLevel = pageId != null && pageDepth >= 2 && !forceFull;
+
+  // ── data loading ────────────────────────────────────────────
+  const reloadTree = useCallback(async () => {
+    try {
+      const p = await listAllPagesForArm(armSlug);
+      setArmPages(p);
+      setError(null);
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : JSON.stringify(e));
+    }
+  }, [armSlug]);
+
+  useEffect(() => {
+    setLoading(true);
+    void reloadTree().finally(() => setLoading(false));
+    const unsub = subscribeToArmTree(armSlug, () => void reloadTree());
+    return () => unsub();
+  }, [armSlug, reloadTree]);
+
+  useEffect(() => {
+    setForceFull(false);
     if (!pageId) {
       setPage(null);
       setDoc(null);
-      setLoading(false);
       return;
     }
-    setLoading(true);
-    try {
+    let cancel = false;
+    (async () => {
       const p = await getPage(pageId);
+      if (cancel) return;
       setPage(p);
       if (p) {
         const blocks = await listBlocks(p.id);
         const native = blocks.find((b) => b.block_type === "native");
-        setDoc(native?.content ?? null);
-        setEmbedBlocks(blocks.filter((b) => b.block_type !== "native"));
+        if (!cancel) setDoc(native?.content ?? null);
       }
-      setError(null);
-    } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : String(e));
-    } finally {
-      setLoading(false);
-    }
+    })().catch((e: unknown) => setError(e instanceof Error ? e.message : JSON.stringify(e)));
+    return () => { cancel = true; };
   }, [pageId]);
-
-  useEffect(() => { void loadPage(); }, [loadPage]);
-
-  // Realtime · Hermes-DeepSeek writes appear live
-  useEffect(() => {
-    if (!page) return;
-    const unsub = subscribeToPageBlocks(page.id, () => { void loadPage(); });
-    return () => unsub();
-  }, [page, loadPage]);
-
-  // Load arm-level page list for empty-state shortcuts
-  useEffect(() => {
-    listAllPagesForArm(armSlug)
-      .then(setArmPages)
-      .catch(() => setArmPages([]));
-  }, [armSlug, page]);
 
   const handleSave = useCallback(async (newDoc: unknown) => {
     if (!page) return;
@@ -125,259 +161,152 @@ function ArmPageInner() {
     try {
       await saveNativeDoc(page.id, newDoc);
       setSaving("saved");
-      setTimeout(() => setSaving("idle"), 1500);
+      setTimeout(() => setSaving("idle"), 1200);
     } catch (e: unknown) {
-      console.error("[ArmPage] save failed", e);
       setSaving("idle");
-      setError(e instanceof Error ? e.message : String(e));
+      setError(e instanceof Error ? e.message : JSON.stringify(e));
     }
   }, [page]);
 
-  const handleTitleChange = async (title: string) => {
-    if (!page) return;
+  const handleAdd = async () => {
+    const title = addTitle.trim();
+    if (!title) { setAdding(false); return; }
+    setAddTitle("");
+    setAdding(false);
     try {
-      const next = await updatePage(page.id, { title });
-      setPage(next);
+      const p = await createPage({ arm_slug: armSlug, parent_id: pageId ?? undefined, title });
+      void reloadTree();
+      navigate(`/arm/${armSlug}/${p.id}`);
     } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : String(e));
+      setError(e instanceof Error ? e.message : JSON.stringify(e));
     }
   };
 
-  const handleViewChange = async (view_type: Page["view_type"]) => {
-    if (!page) return;
-    try {
-      const next = await updatePage(page.id, { view_type });
-      setPage(next);
-    } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : String(e));
-    }
-  };
+  // ── render pieces ───────────────────────────────────────────
+  const currentChildren = childrenOf.get(pageId ?? null) ?? [];
+  const childLabel = pageDepth < 0 ? "Categories" : pageDepth === 0 ? "Sub-categories" : "Notes";
+  const addLabel = pageDepth < 0 ? "category" : pageDepth === 0 ? "sub-category" : "note";
 
-  const handleCreateRootPage = async () => {
-    const title = prompt("First page title (e.g. \"LLM Dreaming\"):");
-    if (!title) return;
-    const p = await createPage({ arm_slug: armSlug, title });
-    navigate(`/arm/${armSlug}/${p.id}`);
-  };
-
-  const handleInsertEmbed = async (embedType: typeof EMBED_TYPES[number]) => {
-    if (!page) return;
-    try {
-      const b = await upsertBlock({
-        page_id: page.id,
-        block_type: embedType.value as Block["block_type"],
-        content: [],
-        props: embedType.defaultProps,
-        order_idx: embedBlocks.length + 1,
-      });
-      setEmbedBlocks((prev) => [...prev, b]);
-      setShowEmbedPicker(false);
-    } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : String(e));
-    }
-  };
-
-  const handleRemoveEmbed = async (id: string) => {
-    if (!confirm("Remove this embed?")) return;
-    try {
-      await deleteBlock(id);
-      setEmbedBlocks((prev) => prev.filter((b) => b.id !== id));
-    } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : String(e));
-    }
-  };
-
-  const openCopyDialog = async (block: Block) => {
-    setShowCopyDialog(block);
-    try {
-      const list = await listProjects();
-      setProjects(list);
-    } catch {
-      setProjects([]);
-    }
-  };
-
-  const handleCopyToProject = async (projectId: string) => {
-    if (!showCopyDialog) return;
-    try {
-      await copyBlockToProject(projectId, showCopyDialog.id, showCopyDialog.page_id);
-      setShowCopyDialog(null);
-    } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : String(e));
-    }
-  };
-
-  const armTitle = useMemo(() => {
-    const map: Record<string, string> = {
-      curiosity: "🌱 Curiosity",
-      pascal:    "🤝 Pascal",
-      research:  "👁 Research",
-      code:      "✋ Code",
-      infra:     "💗 Infra",
-      dream:     "🌙 Dream",
-      hermes:    "🧠 Hermes",
-      charle:    "💼 Charle",
-      manager:   "🎯 Manager",
-    };
-    return map[armSlug] ?? armSlug;
-  }, [armSlug]);
+  const drillCards = (
+    <div>
+      <div className="mb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: "var(--atlas-text-faint)" }}>
+        {childLabel}
+      </div>
+      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+        {currentChildren.map((c) => {
+          const n = descendantCount(c.id);
+          return (
+            <button
+              key={c.id}
+              className="rounded-lg border p-3 text-left transition-shadow hover:shadow-sm"
+              style={{ borderColor: "var(--atlas-border)" }}
+              onClick={() => navigate(`/arm/${armSlug}/${c.id}`)}
+            >
+              <div className="flex items-center gap-2">
+                <span className="text-lg">{c.emoji}</span>
+                <span className="flex-1 truncate text-sm font-medium">{c.title}</span>
+                <ChevronRight size={14} style={{ color: "var(--atlas-text-faint)" }} />
+              </div>
+              <div className="mt-1.5 flex items-center gap-2 text-xs" style={{ color: "var(--atlas-text-faint)" }}>
+                {n > 0 ? <span>{n} inside</span> : <span>empty</span>}
+                <span>·</span>
+                <span>{timeAgo(c.updated_at)}</span>
+              </div>
+            </button>
+          );
+        })}
+        {adding ? (
+          <input
+            autoFocus
+            value={addTitle}
+            onChange={(e) => setAddTitle(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") void handleAdd();
+              if (e.key === "Escape") { setAdding(false); setAddTitle(""); }
+            }}
+            onBlur={() => void handleAdd()}
+            placeholder={`New ${addLabel} · Enter`}
+            className="rounded-lg border border-dashed p-3 text-sm outline-none"
+            style={{ borderColor: "var(--atlas-border)", background: "var(--atlas-hover)" }}
+          />
+        ) : (
+          <button
+            className="flex items-center justify-center gap-1.5 rounded-lg border border-dashed p-3 text-sm"
+            style={{ borderColor: "var(--atlas-border)", color: "var(--atlas-text-faint)" }}
+            onClick={() => setAdding(true)}
+          >
+            <Plus size={14} /> Add {addLabel}
+          </button>
+        )}
+      </div>
+    </div>
+  );
 
   return (
     <div className="atlas-surface flex min-h-screen">
       <ArmSidebar />
       <main className="flex-1 overflow-y-auto">
-        <header className="border-b px-8 py-5 flex items-center justify-between sticky top-0 bg-white/95 backdrop-blur z-10" style={{ borderColor: "var(--atlas-border)" }}>
-          <div className="flex-1">
-            {page ? (
+        <header
+          className="sticky top-0 z-10 px-8 py-4 backdrop-blur"
+          style={{ background: "rgba(255,255,255,0.94)", borderBottom: "1px solid var(--atlas-border)" }}
+        >
+          <div className="flex items-center gap-1 text-xs" style={{ color: "var(--atlas-text-faint)" }}>
+            <button onClick={() => navigate(`/arm/${armSlug}`)} className="hover:underline">
+              {ARM_TITLES[armSlug] ?? armSlug}
+            </button>
+            {breadcrumb.slice(0, -1).map((b) => (
+              <span key={b.id} className="flex items-center gap-1">
+                <ChevronRight size={11} />
+                <button onClick={() => navigate(`/arm/${armSlug}/${b.id}`)} className="hover:underline">
+                  {b.emoji} {b.title}
+                </button>
+              </span>
+            ))}
+          </div>
+          <div className="mt-1 flex items-center justify-between">
+            {page && !isNoteLevel ? (
               <input
-                className="text-2xl font-semibold bg-transparent border-0 outline-none w-full focus:bg-black/[0.02] rounded px-1 -mx-1"
+                className="w-full bg-transparent text-2xl font-semibold outline-none"
                 value={page.title}
                 onChange={(e) => setPage({ ...page, title: e.target.value })}
-                onBlur={(e) => handleTitleChange(e.target.value)}
+                onBlur={(e) => { void updatePage(page.id, { title: e.target.value }).then(() => reloadTree()); }}
               />
             ) : (
-              <h1 className="text-2xl font-semibold">{armTitle}</h1>
+              <h1 className="text-2xl font-semibold">
+                {!pageId ? (ARM_TITLES[armSlug] ?? armSlug) : `${page?.emoji ?? ""} ${page?.title ?? ""}`}
+              </h1>
             )}
-            <div className="text-xs opacity-50 mt-1">
-              {page ? `${armSlug} · ${page.view_type}` : `${armSlug} · pick a page or create one`}
-            </div>
+            <span className="shrink-0 text-xs" style={{ color: "var(--atlas-text-faint)" }}>
+              {saving === "saving" ? "Saving…" : saving === "saved" ? "Saved ✓" : ""}
+            </span>
           </div>
-          {page && (
-            <div className="flex items-center gap-2">
-              {VIEW_TYPES.map((v) => (
-                <button
-                  key={v.value}
-                  className={
-                    "px-2 py-1 rounded text-xs flex items-center gap-1 " +
-                    (page.view_type === v.value
-                      ? "bg-black text-white"
-                      : "bg-black/5 hover:bg-black/10")
-                  }
-                  onClick={() => handleViewChange(v.value)}
-                >
-                  <v.icon size={12} />
-                  {v.label}
-                </button>
-              ))}
-              <span className="text-xs opacity-60 ml-2">
-                {saving === "saving" ? "Saving…" : saving === "saved" ? "Saved ✓" : ""}
-              </span>
-            </div>
-          )}
         </header>
 
-        <div className="px-8 py-8 max-w-4xl mx-auto">
+        <div className="mx-auto max-w-4xl px-8 py-6 space-y-8">
           {error && (
-            <div className="mb-4 p-3 bg-amber-50 border border-amber-200 text-sm rounded">
-              <div className="font-medium">Heads up</div>
-              <div className="opacity-70 mt-1">{error}</div>
-              {error.includes("VITE_SUPABASE") && (
-                <div className="mt-2 text-xs">
-                  Phase 1 not live yet · drop Supabase env keys to wake it up.
-                  See <code>~/.claude/state/atlasos-FOUNDATION-REBUILD-MASTER-2026-06-11.md</code>
-                </div>
-              )}
-            </div>
+            <div className="rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm">{error}</div>
           )}
 
-          {loading && <div className="opacity-50">Loading…</div>}
+          {loading && <div className="text-sm" style={{ color: "var(--atlas-text-faint)" }}>Loading…</div>}
 
-          {!loading && !pageId && (
-            <div className="space-y-6">
-              <div className="border border-dashed border-black/20 rounded-lg p-8 text-center">
-                <div className="text-lg font-medium">No page selected</div>
-                <div className="text-sm opacity-60 mt-2">
-                  Pick a page from the sidebar · or start one
-                </div>
-                <button
-                  className="mt-4 px-4 py-2 rounded bg-black text-white text-sm"
-                  onClick={handleCreateRootPage}
-                >
-                  + New page
-                </button>
-              </div>
+          {/* drill cards · the main content at every level */}
+          {!loading && !isNoteLevel && drillCards}
 
-              {armPages.length > 0 && (
-                <div>
-                  <h3 className="text-xs uppercase tracking-wider opacity-60 mb-2">
-                    Existing pages
-                  </h3>
-                  <div className="grid grid-cols-2 gap-2">
-                    {armPages.slice(0, 12).map((p) => (
-                      <button
-                        key={p.id}
-                        className="text-left p-3 rounded border border-black/10 hover:bg-black/5"
-                        onClick={() => navigate(`/arm/${armSlug}/${p.id}`)}
-                      >
-                        <div className="text-sm font-medium">
-                          {p.emoji} {p.title}
-                        </div>
-                        <div className="text-xs opacity-50 mt-1">
-                          {p.view_type} · {new Date(p.updated_at).toLocaleDateString()}
-                        </div>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
-
+          {/* page's own blocks · below the drill · Notion-shape (page = content + sub-pages) */}
           {!loading && page && !isNoteLevel && (
-            <>
+            <div>
+              {currentChildren.length > 0 && (
+                <div className="mb-2 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider" style={{ color: "var(--atlas-text-faint)" }}>
+                  <FileText size={11} /> Page content
+                </div>
+              )}
               <BlockEditor
                 key={page.id}
                 initialDoc={doc ?? (page.parent_id ? fiveFieldScaffold() : null)}
                 onChange={handleSave}
-                placeholder={`Type / for slash commands · or write in ${page.title}`}
+                placeholder="Type / for commands · write anything"
               />
-
-              <div className="mt-6 space-y-2">
-                {embedBlocks.map((b) => (
-                  <div key={b.id} className="relative group">
-                    <EmbedBlockRenderer block={b} />
-                    <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 flex gap-1">
-                      <button
-                        className="p-1 rounded bg-white border border-black/10 hover:bg-black/5"
-                        onClick={() => openCopyDialog(b)}
-                        title="Copy block to a project"
-                      >
-                        <Copy size={12} />
-                      </button>
-                      <button
-                        className="p-1 rounded bg-white border border-black/10 hover:bg-red-50 text-red-600"
-                        onClick={() => handleRemoveEmbed(b.id)}
-                        title="Remove"
-                      >
-                        <Trash2 size={12} />
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-4 relative">
-                <button
-                  className="text-xs px-2 py-1 rounded bg-black/5 hover:bg-black/10 flex items-center gap-1"
-                  onClick={() => setShowEmbedPicker((v) => !v)}
-                >
-                  <Plus size={12} /> Insert tool block (Calendar · Gmail · Brain · MCP · NotebookLM)
-                </button>
-                {showEmbedPicker && (
-                  <div className="absolute z-20 mt-1 bg-white border border-black/10 rounded shadow-lg p-1 w-56">
-                    {EMBED_TYPES.map((t) => (
-                      <button
-                        key={t.value}
-                        className="w-full text-left px-2 py-1.5 text-sm hover:bg-black/5 rounded"
-                        onClick={() => handleInsertEmbed(t)}
-                      >
-                        {t.label}
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </>
+            </div>
           )}
         </div>
 
@@ -387,34 +316,6 @@ function ArmPageInner() {
             onClose={() => navigate(page.parent_id ? `/arm/${armSlug}/${page.parent_id}` : `/arm/${armSlug}`)}
             onOpenFull={() => setForceFull(true)}
           />
-        )}
-
-        {showCopyDialog && (
-          <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50" onClick={() => setShowCopyDialog(null)}>
-            <div className="bg-white rounded-lg p-6 w-full max-w-md" onClick={(e) => e.stopPropagation()}>
-              <h2 className="text-lg font-semibold mb-3">Copy block to a project</h2>
-              {projects.length === 0 ? (
-                <div className="text-sm opacity-60">No projects yet. Open /manager to create one.</div>
-              ) : (
-                <div className="space-y-1 max-h-72 overflow-y-auto">
-                  {projects.map((p) => (
-                    <button
-                      key={p.id}
-                      className="w-full text-left p-2 rounded hover:bg-black/5"
-                      onClick={() => handleCopyToProject(p.id)}
-                    >
-                      <span className="mr-2">{p.emoji}</span>
-                      <span className="font-medium">{p.name}</span>
-                      <span className="text-xs opacity-50 ml-2">{p.priority}</span>
-                    </button>
-                  ))}
-                </div>
-              )}
-              <div className="flex justify-end mt-4">
-                <button className="px-3 py-1.5 rounded text-sm" onClick={() => setShowCopyDialog(null)}>Cancel</button>
-              </div>
-            </div>
-          </div>
         )}
       </main>
     </div>
