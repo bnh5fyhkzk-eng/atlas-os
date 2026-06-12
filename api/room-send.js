@@ -12,7 +12,13 @@ export default async function handler(req, res) {
 
   const db = createClient(process.env.VITE_SUPABASE_URL, process.env.VITE_SUPABASE_ANON_KEY, { auth: { persistSession: false } });
   const { data, error } = await db.from("atlas_room_messages")
-    .insert({ role: "brother", content: content.slice(0, 8000), status: "pending", context: context ?? {} })
+    .insert({
+      role: "brother",
+      content: content.slice(0, 8000),
+      status: "pending",
+      context: context ?? {},
+      audio_path: context?.audio_path ?? null,
+    })
     .select("id").single();
   if (error) return res.status(500).json({ error: error.message });
   return res.status(200).json({ ok: true, id: data.id });

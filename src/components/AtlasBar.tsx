@@ -4,7 +4,7 @@
 // sleeping state when bridge down · context-aware (sends current page).
 import { useEffect, useRef, useState, useCallback } from "react";
 import { useLocation } from "react-router-dom";
-import { Send, X, Maximize2, Minimize2 } from "lucide-react";
+import { Send, X, Maximize2, Minimize2, Mic, Volume2, VolumeX } from "lucide-react";
 import { sb } from "../lib/db";
 
 interface RoomMsg {
@@ -12,7 +12,13 @@ interface RoomMsg {
   role: "brother" | "atlas";
   content: string;
   status: string;
+  audio_path?: string | null;
+  tts_path?: string | null;
   created_at: string;
+}
+
+function audioUrl(path: string): string {
+  return `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/room-audio/${path}`;
 }
 
 const AWAKE_MS = 90_000; // heartbeat every 30s · stale after 90s
@@ -25,17 +31,66 @@ export function AtlasBar() {
   const [input, setInput] = useState("");
   const [awake, setAwake] = useState<boolean | null>(null);
   const [sending, setSending] = useState(false);
+  const [recording, setRecording] = useState(false);
+  const [voiceReply, setVoiceReply] = useState(true);
   const bottomRef = useRef<HTMLDivElement>(null);
   const pollRef = useRef<number | null>(null);
+  const recRef = useRef<MediaRecorder | null>(null);
+  const chunksRef = useRef<Blob[]>([]);
+  const playedRef = useRef<Set<string>>(new Set());
 
   const load = useCallback(async () => {
     const { data } = await sb()
       .from("atlas_room_messages")
-      .select("id,role,content,status,created_at")
+      .select("id,role,content,status,audio_path,tts_path,created_at")
       .order("created_at", { ascending: false })
       .limit(60);
-    setMsgs(((data ?? []) as RoomMsg[]).reverse());
+    const list = ((data ?? []) as RoomMsg[]).reverse();
+    setMsgs(list);
+    // auto-play fresh voice replies (last message · done · has tts · not yet played)
+    const last = list[list.length - 1];
+    if (last && last.role === "atlas" && last.status === "done" && last.tts_path && !playedRef.current.has(last.id)) {
+      playedRef.current.add(last.id);
+      if (Date.now() - new Date(last.created_at).getTime() < 2 * 60 * 1000) {
+        void new Audio(audioUrl(last.tts_path)).play().catch(() => undefined);
+      }
+    }
   }, []);
+
+  // push-to-talk · hold mic → record → release → upload → bridge does Whisper
+  const startRec = async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const rec = new MediaRecorder(stream, { mimeType: MediaRecorder.isTypeSupported("audio/webm") ? "audio/webm" : "audio/mp4" });
+      chunksRef.current = [];
+      rec.ondataavailable = (e) => { if (e.data.size > 0) chunksRef.current.push(e.data); };
+      rec.onstop = async () => {
+        stream.getTracks().forEach((t) => t.stop());
+        const blob = new Blob(chunksRef.current, { type: rec.mimeType });
+        if (blob.size < 1500) return; // accidental tap
+        const ext = rec.mimeType.includes("mp4") ? "m4a" : "webm";
+        const path = `brother/${crypto.randomUUID()}.${ext}`;
+        const { error } = await sb().storage.from("room-audio").upload(path, blob, { contentType: rec.mimeType });
+        if (error) return;
+        await fetch("/api/room-send", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ content: "🎙 (voice)", context: { page: pathname, audio_path: path, voice_reply: voiceReply } }),
+        });
+        void load();
+      };
+      recRef.current = rec;
+      rec.start();
+      setRecording(true);
+    } catch {
+      setRecording(false);
+    }
+  };
+
+  const stopRec = () => {
+    setRecording(false);
+    recRef.current?.stop();
+  };
 
   const checkPresence = useCallback(async () => {
     const { data } = await sb().from("atlas_presence").select("last_seen").eq("id", "room-bridge").maybeSingle();
@@ -132,6 +187,12 @@ export function AtlasBar() {
             <div className={"atlas-bubble " + (m.role === "brother" ? "mine" : "his")}>
               {m.content || (m.status === "pending" || m.status === "processing" ? "…" : "")}
               {m.status === "streaming" && <span className="atlas-cursor">▍</span>}
+              {m.audio_path && (
+                <audio controls preload="none" src={audioUrl(m.audio_path)} style={{ height: 30, marginTop: 4, width: "100%" }} />
+              )}
+              {m.tts_path && (
+                <audio controls preload="none" src={audioUrl(m.tts_path)} style={{ height: 30, marginTop: 4, width: "100%" }} />
+              )}
             </div>
           </div>
         ))}
@@ -139,6 +200,29 @@ export function AtlasBar() {
       </div>
 
       <div className="atlas-glass-input">
+        <button
+          title={voiceReply ? "Voice replies ON" : "Voice replies off"}
+          style={{ background: "transparent", color: voiceReply ? "#0a84ff" : "rgba(60,60,67,0.4)" }}
+          onClick={() => setVoiceReply((v) => !v)}
+        >
+          {voiceReply ? <Volume2 size={16} /> : <VolumeX size={16} />}
+        </button>
+        <button
+          title="Hold to talk"
+          style={{
+            background: recording ? "#ff3b30" : "rgba(60,60,67,0.12)",
+            color: recording ? "white" : "rgba(60,60,67,0.7)",
+            transform: recording ? "scale(1.15)" : undefined,
+            transition: "all 120ms ease",
+          }}
+          onMouseDown={() => void startRec()}
+          onMouseUp={stopRec}
+          onMouseLeave={() => recording && stopRec()}
+          onTouchStart={(e) => { e.preventDefault(); void startRec(); }}
+          onTouchEnd={(e) => { e.preventDefault(); stopRec(); }}
+        >
+          <Mic size={15} />
+        </button>
         <textarea
           rows={1}
           value={input}
@@ -146,7 +230,7 @@ export function AtlasBar() {
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); void send(); }
           }}
-          placeholder={awake ? "Talk to me…" : "I'm sleeping · message banks for wake"}
+          placeholder={recording ? "Listening… release to send" : awake ? "Talk to me…" : "I'm sleeping · message banks for wake"}
         />
         <button disabled={sending || !input.trim()} onClick={() => void send()}>
           <Send size={15} />
