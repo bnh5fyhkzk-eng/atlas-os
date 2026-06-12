@@ -29,6 +29,24 @@ function Shell() {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const [nav, setNav] = useState<NavItem[]>([]);
+  // glanceable badges · proposals waiting + room unanswered (best-house pass 2026-06-12)
+  const [badges, setBadges] = useState<Record<string, number>>({});
+  useEffect(() => {
+    const tick = async () => {
+      try {
+        const { sb } = await import("./lib/db");
+        const head = { count: "exact" as const, head: true as const };
+        const [props, room] = await Promise.all([
+          sb().from("atlas_proposals").select("id", head).eq("status", "pending"),
+          sb().from("atlas_room_messages").select("id", head).in("status", ["pending", "processing"]).eq("role", "brother"),
+        ]);
+        setBadges({ proposals: props.count ?? 0, room: room.count ?? 0 });
+      } catch { /* offline ok */ }
+    };
+    void tick();
+    const t = window.setInterval(() => void tick(), 60_000);
+    return () => window.clearInterval(t);
+  }, []);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [addingArm, setAddingArm] = useState(false);
   const [armTitle, setArmTitle] = useState("");
@@ -101,6 +119,9 @@ function Shell() {
             >
               <span>{n.emoji}</span>
               <span className="flex-1 truncate">{n.title}</span>
+              {n.template === "proposals" && (badges.proposals ?? 0) > 0 && (
+                <span className="rounded-full px-1.5 text-[10px] font-semibold text-white" style={{ background: "#d9730d" }}>{badges.proposals}</span>
+              )}
             </button>
           ))}
         </div>
