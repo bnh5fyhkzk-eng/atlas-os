@@ -1,9 +1,11 @@
-// NOTION-PAGE primitive · the drill engine · Atlas-OS v3
-// folders → folders → notes · click/add/rename/delete at EVERY level ·
-// proof-chips first-class · notes open as slide-over · breadcrumb
-import { useEffect, useMemo, useState, useCallback } from "react";
+// NOTION-PAGE · miller-columns drill · GOAL-V3-DRILL
+// Per brother design 2026-06-11 22:09: category column LEFT (selection visible) →
+// click → sub-categories column to its RIGHT → click → notes+links column RIGHT.
+// Path always on screen · add/rename/archive in every column · notes = slide-over.
+// Mobile: columns swipe horizontally.
+import { useEffect, useMemo, useState, useCallback, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { ChevronRight, Plus, X, Archive, Paperclip, FileText, StickyNote } from "lucide-react";
+import { ChevronRight, Plus, X, Paperclip, FileText, Folder, StickyNote } from "lucide-react";
 import { BlockEditor } from "../components/BlockEditor";
 import {
   listNodes,
@@ -16,13 +18,7 @@ import {
   type Node,
 } from "../lib/db";
 
-function timeAgo(iso: string): string {
-  const s = Math.floor((Date.now() - new Date(iso).getTime()) / 1000);
-  if (s < 60) return "now";
-  if (s < 3600) return `${Math.floor(s / 60)}m`;
-  if (s < 86400) return `${Math.floor(s / 3600)}h`;
-  return `${Math.floor(s / 86400)}d`;
-}
+const LEVEL_LABEL = ["Categories", "Sub-categories", "Notes"];
 
 export default function NotionPage({ item }: { item: NavItem }) {
   const { nodeId } = useParams<{ nodeId?: string }>();
@@ -30,9 +26,7 @@ export default function NotionPage({ item }: { item: NavItem }) {
   const [nodes, setNodes] = useState<Node[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [adding, setAdding] = useState<"folder" | "note" | null>(null);
-  const [addTitle, setAddTitle] = useState("");
-  const [renaming, setRenaming] = useState<string | null>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   const byId = useMemo(() => new Map(nodes.map((n) => [n.id, n])), [nodes]);
   const kidsOf = useMemo(() => {
@@ -43,7 +37,11 @@ export default function NotionPage({ item }: { item: NavItem }) {
       m.get(k)!.push(n);
     }
     for (const arr of m.values())
-      arr.sort((a, b) => (a.pinned === b.pinned ? a.order_idx - b.order_idx : a.pinned ? -1 : 1));
+      arr.sort((a, b) => {
+        if (a.kind !== b.kind) return a.kind === "folder" ? -1 : 1; // folders first
+        if (a.pinned !== b.pinned) return a.pinned ? -1 : 1;
+        return a.order_idx - b.order_idx;
+      });
     return m;
   }, [nodes, byId]);
 
@@ -55,21 +53,31 @@ export default function NotionPage({ item }: { item: NavItem }) {
     [kidsOf],
   );
 
-  const crumb = useMemo(() => {
-    const path: Node[] = [];
+  // selected path · root → ... → selected node
+  const path = useMemo(() => {
+    const p: Node[] = [];
     let cur = nodeId ? byId.get(nodeId) : undefined;
     while (cur) {
-      path.unshift(cur);
+      p.unshift(cur);
       cur = cur.parent_id ? byId.get(cur.parent_id) : undefined;
     }
-    return path;
+    return p;
   }, [nodeId, byId]);
 
-  const current = nodeId ? byId.get(nodeId) ?? null : null;
-  const isNote = current?.kind === "note";
-  const children = (kidsOf.get(nodeId ?? null) ?? []).filter((n) => !n.hidden);
-  const folders = children.filter((n) => n.kind === "folder");
-  const notes = children.filter((n) => n.kind === "note");
+  const selectedNote = path.length > 0 && path[path.length - 1].kind === "note" ? path[path.length - 1] : null;
+  // folder path drives the columns (note selection doesn't open a new column)
+  const folderPath = selectedNote ? path.slice(0, -1) : path;
+
+  // columns: col 0 = roots · col k = children of folderPath[k-1]
+  const columns: Array<{ parent: Node | null; items: Node[] }> = useMemo(() => {
+    const cols: Array<{ parent: Node | null; items: Node[] }> = [
+      { parent: null, items: (kidsOf.get(null) ?? []).filter((n) => !n.hidden) },
+    ];
+    for (const f of folderPath) {
+      cols.push({ parent: f, items: (kidsOf.get(f.id) ?? []).filter((n) => !n.hidden) });
+    }
+    return cols;
+  }, [kidsOf, folderPath]);
 
   const reload = useCallback(async () => {
     try {
@@ -87,186 +95,202 @@ export default function NotionPage({ item }: { item: NavItem }) {
     return () => unsub();
   }, [item.id, reload]);
 
-  const handleAdd = async () => {
-    const title = addTitle.trim();
-    const kind = adding ?? "folder";
-    setAdding(null);
-    setAddTitle("");
-    if (!title) return;
-    try {
-      const n = await createNode({ nav_id: item.id, parent_id: nodeId ?? null, kind, title });
-      await reload();
-      navigate(`/p/${item.id}/n/${n.id}`);
-    } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : JSON.stringify(e));
-    }
-  };
+  // keep newest column in view
+  useEffect(() => {
+    scrollRef.current?.scrollTo({ left: scrollRef.current.scrollWidth, behavior: "smooth" });
+  }, [folderPath.length]);
 
-  const card = (n: Node) => {
-    const count = countIn(n.id);
-    return (
-      <div key={n.id} className="group relative">
-        <button
-          className="w-full rounded-lg border p-3 text-left transition-shadow hover:shadow-sm"
-          style={{ borderColor: "var(--border)" }}
-          onClick={() => navigate(`/p/${item.id}/n/${n.id}`)}
-        >
-          <div className="flex items-center gap-2">
-            <span className="text-lg">{n.emoji}</span>
-            {renaming === n.id ? (
-              <input
-                autoFocus
-                defaultValue={n.title}
-                className="flex-1 bg-transparent text-sm font-medium outline-none"
-                onClick={(e) => e.stopPropagation()}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") (e.target as HTMLInputElement).blur();
-                  if (e.key === "Escape") setRenaming(null);
-                }}
-                onBlur={(e) => {
-                  setRenaming(null);
-                  if (e.target.value.trim() && e.target.value !== n.title)
-                    void updateNode(n.id, { title: e.target.value.trim() }).then(reload);
-                }}
-              />
-            ) : (
-              <span
-                className="flex-1 truncate text-sm font-medium"
-                onDoubleClick={(e) => { e.stopPropagation(); setRenaming(n.id); }}
-              >
-                {n.title}
-              </span>
-            )}
-            {n.kind === "folder" && <ChevronRight size={14} style={{ color: "var(--text-faint)" }} />}
-          </div>
-          <div className="mt-1.5 flex items-center gap-1.5 text-xs" style={{ color: "var(--text-faint)" }}>
-            {n.kind === "folder" ? <span>{count > 0 ? `${count} inside` : "empty"}</span> : <span>note</span>}
-            <span>·</span>
-            <span>{timeAgo(n.updated_at)}</span>
-            {n.created_by !== "brother" && (<><span>·</span><span>{n.created_by}</span></>)}
-            {n.proofs.length > 0 && (
-              <span className="flex items-center gap-0.5"><Paperclip size={10} />{n.proofs.length}</span>
-            )}
-          </div>
-        </button>
-        <button
-          className="absolute right-2 top-2 hidden rounded p-1 group-hover:block hover:bg-black/5"
-          title="Archive (restorable)"
-          onClick={() => void archiveNode(n.id).then(reload)}
-        >
-          <Archive size={12} style={{ color: "var(--text-faint)" }} />
-        </button>
-      </div>
-    );
+  const select = (n: Node) => navigate(`/p/${item.id}/n/${n.id}`);
+  const closeNote = () => {
+    const parent = selectedNote?.parent_id;
+    navigate(parent ? `/p/${item.id}/n/${parent}` : `/p/${item.id}`);
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="flex h-screen flex-col">
       <header
-        className="sticky top-0 z-10 px-6 py-4 backdrop-blur md:px-10"
-        style={{ background: "rgba(255,255,255,0.94)", borderBottom: "1px solid var(--border)" }}
+        className="flex items-center gap-2 px-6 py-3"
+        style={{ borderBottom: "1px solid var(--border)" }}
       >
-        <div className="flex flex-wrap items-center gap-1 text-xs" style={{ color: "var(--text-faint)" }}>
-          <button onClick={() => navigate(`/p/${item.id}`)} className="hover:underline">
-            {item.emoji} {item.title}
-          </button>
-          {crumb.map((b, i) => (
-            <span key={b.id} className="flex items-center gap-1">
-              <ChevronRight size={11} />
-              {i < crumb.length - 1 ? (
-                <button onClick={() => navigate(`/p/${item.id}/n/${b.id}`)} className="hover:underline">
-                  {b.emoji} {b.title}
-                </button>
-              ) : (
-                <span style={{ color: "var(--text-soft)" }}>{b.emoji} {b.title}</span>
-              )}
-            </span>
-          ))}
-        </div>
-        <h1 className="mt-1 truncate text-2xl font-semibold">
-          {current && !isNote ? `${current.emoji} ${current.title}` : !current ? `${item.emoji} ${item.title}` : `${item.emoji} ${item.title}`}
-        </h1>
+        <h1 className="truncate text-lg font-semibold">{item.emoji} {item.title}</h1>
+        <span className="truncate text-xs" style={{ color: "var(--text-faint)" }}>
+          {folderPath.map((p) => `${p.emoji} ${p.title}`).join("  ›  ")}
+        </span>
       </header>
 
-      <div className="mx-auto max-w-4xl space-y-8 px-6 py-6 md:px-10">
-        {error && <div className="rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm">{error}</div>}
-        {loading && <div className="text-sm" style={{ color: "var(--text-faint)" }}>Loading…</div>}
+      {error && <div className="mx-6 mt-3 rounded-lg border border-amber-200 bg-amber-50 p-2 text-sm">{error}</div>}
+      {loading && <div className="px-6 py-4 text-sm" style={{ color: "var(--text-faint)" }}>Loading…</div>}
 
-        {!loading && !isNote && (
-          <>
-            {/* folders */}
-            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
-              {folders.map(card)}
-              {adding === "folder" ? (
-                <input
-                  autoFocus
-                  value={addTitle}
-                  onChange={(e) => setAddTitle(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter") void handleAdd();
-                    if (e.key === "Escape") { setAdding(null); setAddTitle(""); }
-                  }}
-                  onBlur={() => void handleAdd()}
-                  placeholder="New folder · Enter"
-                  className="rounded-lg border border-dashed p-3 text-sm outline-none"
-                  style={{ borderColor: "var(--border)", background: "var(--hover)" }}
-                />
-              ) : (
-                <button
-                  className="flex items-center justify-center gap-1.5 rounded-lg border border-dashed p-3 text-sm"
-                  style={{ borderColor: "var(--border)", color: "var(--text-faint)" }}
-                  onClick={() => setAdding("folder")}
-                >
-                  <Plus size={14} /> Add folder
-                </button>
-              )}
-            </div>
+      {!loading && (
+        <div ref={scrollRef} className="flex min-h-0 flex-1 overflow-x-auto">
+          {columns.map((col, k) => (
+            <DrillColumn
+              key={col.parent?.id ?? "root"}
+              navId={item.id}
+              parent={col.parent}
+              items={col.items}
+              label={col.parent ? (LEVEL_LABEL[k] ?? "Inside") : LEVEL_LABEL[0]}
+              selectedId={k < folderPath.length ? folderPath[k].id : selectedNote && k === folderPath.length ? selectedNote.id : undefined}
+              countIn={countIn}
+              onSelect={select}
+              onChanged={reload}
+            />
+          ))}
+        </div>
+      )}
 
-            {/* notes in this folder */}
-            <div>
-              <div className="mb-2 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider" style={{ color: "var(--text-faint)" }}>
-                <StickyNote size={11} /> Notes
-              </div>
-              <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-                {notes.map(card)}
-                {adding === "note" ? (
+      {selectedNote && (
+        <NoteOver node={selectedNote} navTitle={`${item.emoji} ${item.title}`} onClose={closeNote} onChanged={reload} />
+      )}
+    </div>
+  );
+}
+
+function DrillColumn({
+  navId,
+  parent,
+  items,
+  label,
+  selectedId,
+  countIn,
+  onSelect,
+  onChanged,
+}: {
+  navId: string;
+  parent: Node | null;
+  items: Node[];
+  label: string;
+  selectedId?: string;
+  countIn: (id: string) => number;
+  onSelect: (n: Node) => void;
+  onChanged: () => void;
+}) {
+  const [adding, setAdding] = useState<"folder" | "note" | null>(null);
+  const [title, setTitle] = useState("");
+  const [renaming, setRenaming] = useState<string | null>(null);
+  const navigate = useNavigate();
+
+  const add = async () => {
+    const t = title.trim();
+    const kind = adding ?? "folder";
+    setAdding(null);
+    setTitle("");
+    if (!t) return;
+    const n = await createNode({ nav_id: navId, parent_id: parent?.id ?? null, kind, title: t });
+    onChanged();
+    navigate(`/p/${navId}/n/${n.id}`);
+  };
+
+  return (
+    <div
+      className="flex h-full w-[270px] shrink-0 flex-col border-r"
+      style={{ borderColor: "var(--border)" }}
+    >
+      <div className="px-3 pb-1 pt-3 text-xs font-semibold uppercase tracking-wider" style={{ color: "var(--text-faint)" }}>
+        {parent ? `${parent.emoji} ${parent.title}` : label}
+      </div>
+      <div className="min-h-0 flex-1 space-y-0.5 overflow-y-auto px-2 pb-2">
+        {items.map((n) => {
+          const isSel = n.id === selectedId;
+          const cnt = n.kind === "folder" ? countIn(n.id) : 0;
+          return (
+            <div key={n.id} className="group relative">
+              <button
+                className={"flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-left text-sm " + (isSel ? "font-medium" : "")}
+                style={{ background: isSel ? "var(--active)" : undefined }}
+                onMouseEnter={(e) => { if (!isSel) (e.currentTarget as HTMLElement).style.background = "var(--hover)"; }}
+                onMouseLeave={(e) => { if (!isSel) (e.currentTarget as HTMLElement).style.background = ""; }}
+                onClick={() => onSelect(n)}
+              >
+                {n.kind === "folder"
+                  ? <Folder size={13} style={{ color: "var(--text-faint)" }} />
+                  : <StickyNote size={13} style={{ color: "var(--text-faint)" }} />}
+                <span>{n.emoji}</span>
+                {renaming === n.id ? (
                   <input
                     autoFocus
-                    value={addTitle}
-                    onChange={(e) => setAddTitle(e.target.value)}
+                    defaultValue={n.title}
+                    className="min-w-0 flex-1 bg-transparent text-sm outline-none"
+                    onClick={(e) => e.stopPropagation()}
                     onKeyDown={(e) => {
-                      if (e.key === "Enter") void handleAdd();
-                      if (e.key === "Escape") { setAdding(null); setAddTitle(""); }
+                      if (e.key === "Enter") (e.target as HTMLInputElement).blur();
+                      if (e.key === "Escape") setRenaming(null);
                     }}
-                    onBlur={() => void handleAdd()}
-                    placeholder="New note · Enter"
-                    className="rounded-lg border border-dashed p-3 text-sm outline-none"
-                    style={{ borderColor: "var(--border)", background: "var(--hover)" }}
+                    onBlur={(e) => {
+                      setRenaming(null);
+                      const v = e.target.value.trim();
+                      if (v && v !== n.title) void updateNode(n.id, { title: v }).then(onChanged);
+                    }}
                   />
                 ) : (
-                  <button
-                    className="flex items-center justify-center gap-1.5 rounded-lg border border-dashed p-3 text-sm"
-                    style={{ borderColor: "var(--border)", color: "var(--text-faint)" }}
-                    onClick={() => setAdding("note")}
+                  <span
+                    className="min-w-0 flex-1 truncate"
+                    onDoubleClick={(e) => { e.stopPropagation(); setRenaming(n.id); }}
                   >
-                    <Plus size={14} /> Add note
-                  </button>
+                    {n.title}
+                  </span>
                 )}
-              </div>
+                {n.proofs.length > 0 && (
+                  <span className="flex items-center gap-0.5 text-[10px]" style={{ color: "var(--text-faint)" }}>
+                    <Paperclip size={9} />{n.proofs.length}
+                  </span>
+                )}
+                {n.kind === "folder" && (
+                  <>
+                    {cnt > 0 && <span className="text-[10px]" style={{ color: "var(--text-faint)" }}>{cnt}</span>}
+                    <ChevronRight size={13} style={{ color: "var(--text-faint)" }} />
+                  </>
+                )}
+              </button>
+              <button
+                className="absolute right-1 top-1/2 hidden -translate-y-1/2 rounded p-0.5 group-hover:block hover:bg-black/10"
+                style={{ background: "var(--bg)" }}
+                title="Archive (restorable)"
+                onClick={(e) => { e.stopPropagation(); void archiveNode(n.id).then(onChanged); }}
+              >
+                <X size={11} style={{ color: "var(--text-faint)" }} />
+              </button>
             </div>
-          </>
+          );
+        })}
+        {items.length === 0 && !adding && (
+          <div className="px-2 py-1 text-xs italic" style={{ color: "var(--text-faint)" }}>empty</div>
         )}
       </div>
-
-      {/* note slide-over */}
-      {!loading && current && isNote && (
-        <NoteOver
-          node={current}
-          navTitle={`${item.emoji} ${item.title}`}
-          onClose={() => navigate(current.parent_id ? `/p/${item.id}/n/${current.parent_id}` : `/p/${item.id}`)}
-          onChanged={reload}
-        />
-      )}
+      <div className="space-y-1 border-t p-2" style={{ borderColor: "var(--border)" }}>
+        {adding ? (
+          <input
+            autoFocus
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") void add();
+              if (e.key === "Escape") { setAdding(null); setTitle(""); }
+            }}
+            onBlur={() => void add()}
+            placeholder={`New ${adding} · Enter`}
+            className="w-full rounded-md px-2 py-1.5 text-sm outline-none"
+            style={{ background: "var(--hover)" }}
+          />
+        ) : (
+          <div className="flex gap-1">
+            <button
+              className="flex flex-1 items-center justify-center gap-1 rounded-md border border-dashed px-2 py-1 text-xs"
+              style={{ borderColor: "var(--border)", color: "var(--text-faint)" }}
+              onClick={() => setAdding("folder")}
+            >
+              <Plus size={11} /> folder
+            </button>
+            <button
+              className="flex flex-1 items-center justify-center gap-1 rounded-md border border-dashed px-2 py-1 text-xs"
+              style={{ borderColor: "var(--border)", color: "var(--text-faint)" }}
+              onClick={() => setAdding("note")}
+            >
+              <Plus size={11} /> note
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
@@ -311,7 +335,6 @@ function NoteOver({ node, navTitle, onClose, onChanged }: { node: Node; navTitle
             </span>
             <button onClick={onClose} style={{ color: "var(--text-soft)" }}><X size={17} /></button>
           </div>
-          {/* proof chips · first-class */}
           <div className="mt-2 flex flex-wrap items-center gap-1.5">
             {node.proofs.map((p, i) => (
               <span
