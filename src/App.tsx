@@ -3,7 +3,7 @@ import { useEffect, useState, useCallback } from "react";
 import { Routes, Route, Navigate, useNavigate, useParams, useLocation } from "react-router-dom";
 import { Plus, Menu, X } from "lucide-react";
 import { AuthGate } from "./components/AuthGate";
-import { listNav, createNav, type NavItem } from "./lib/db";
+import { listNav, createNav, updateNav, type NavItem } from "./lib/db";
 import Canvas from "./pages/Canvas";
 import NotionPage from "./pages/NotionPage";
 import AgentPage from "./pages/AgentPage";
@@ -107,15 +107,28 @@ function Shell() {
             </button>
           </div>
           {arms.map((n) => (
-            <button
-              key={n.id}
-              className={"flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-left text-sm " + (isActive(n) ? "font-medium" : "")}
-              style={{ background: isActive(n) ? "var(--active)" : undefined }}
-              onClick={() => go(n)}
-            >
-              <span>{n.emoji}</span>
-              <span className="flex-1 truncate">{n.title}</span>
-            </button>
+            <div key={n.id} className="group flex items-center">
+              <button
+                className={"flex min-w-0 flex-1 items-center gap-2 rounded-md px-2 py-1.5 text-left text-sm " + (isActive(n) ? "font-medium" : "")}
+                style={{ background: isActive(n) ? "var(--active)" : undefined }}
+                onClick={() => go(n)}
+              >
+                <span>{n.emoji}</span>
+                <span className="flex-1 truncate">{n.title}</span>
+              </button>
+              <button
+                className="hidden shrink-0 rounded p-1 group-hover:block hover:bg-black/5"
+                title="Remove arm (restorable)"
+                onClick={() => {
+                  void updateNav(n.id, { archived: true }).then(() => {
+                    reload();
+                    if (isActive(n)) navigate("/home");
+                  }).catch((e) => setNavError(e instanceof Error ? e.message : String(e)));
+                }}
+              >
+                <X size={12} style={{ color: "var(--text-faint)" }} />
+              </button>
+            </div>
           ))}
           {addingArm ? (
             <input
