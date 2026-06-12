@@ -23,7 +23,7 @@ export interface NavItem {
   id: string;
   title: string;
   emoji: string;
-  template: "canvas" | "notion" | "agent" | "calendar" | "proposals" | "providers" | "ops" | "kanban";
+  template: "canvas" | "notion" | "agent" | "calendar" | "proposals" | "providers" | "ops" | "kanban" | "tui";
   agent_slug: string | null;
   model: string;
   paused: boolean;

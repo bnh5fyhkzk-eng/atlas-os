@@ -436,11 +436,16 @@ export default function AgentPage({ item }: { item: NavItem }) {
       return c.map((b) => Array.isArray((b as { content?: unknown }).content)
         ? ((b as { content: { text?: string }[] }).content).map((s) => s.text ?? "").join("") : "").filter(Boolean).join(" ");
     })();
+    // DeepSeek token-optimization · brother direct 11:28 · paid-per-token model gets
+    // a tighter wire: fewer turns, capped lengths · quality models get full context
+    const isDeepseek = model.startsWith("deepseek/");
+    const histN = isDeepseek ? 12 : 30;
+    const capLen = (s: string) => (isDeepseek && s.length > 1500 ? s.slice(0, 700) + " […] " + s.slice(-700) : s);
     try {
-      const wire = next.slice(-30).map((m) =>
+      const wire = next.slice(-histN).map((m) =>
         m.image
           ? { role: "user", content: [{ type: "text", text: m.content }, { type: "image_url", image_url: { url: fileUrl(m.image) } }] }
-          : { role: m.role === "brother" ? "user" : "assistant", content: m.content });
+          : { role: m.role === "brother" ? "user" : "assistant", content: capLen(m.content) });
       if (swapped && prevModel) {
         wire.splice(wire.length - 1, 0, { role: "user", content: handoffBrief(prevModel, model, msgs.map((m) => ({ role: m.role, content: m.content }))) });
       }
@@ -451,7 +456,7 @@ export default function AgentPage({ item }: { item: NavItem }) {
           model,
           nav_id: item.id,
           use_tools: true,
-          system: systemPrompt(item, rootFolders, soulText),
+          system: systemPrompt(item, rootFolders, isDeepseek ? soulText.slice(0, 250) : soulText),
           messages: wire,
         }),
       });

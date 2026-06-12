@@ -192,5 +192,27 @@ function PageRouter({ nav }: { nav: NavItem[] }) {
   if (item.template === "providers") return <ProvidersPage item={item} />;
   if (item.template === "ops") return <OpsPage item={item} />;
   if (item.template === "kanban") return <KanbanPage item={item} />;
+  if (item.template === "tui") return <TuiPage item={item} />;
   return <Navigate to="/home" replace />;
+}
+
+// LIVE-TUI · the real terminal-me in the house · brother's #1 pick (locked 11:12)
+// ttyd tmux session → cloudflared tunnel → tui.atlasos.me (basic-auth gated)
+function TuiPage({ item }: { item: NavItem }) {
+  return (
+    <div className="flex h-screen flex-col">
+      <header className="flex items-center gap-2 px-6 py-3" style={{ borderBottom: "1px solid var(--border)" }}>
+        <h1 className="text-lg font-semibold">{item.emoji} {item.title}</h1>
+        <span className="text-xs" style={{ color: "var(--text-faint)" }}>
+          the real terminal · user "atlas" · password from Atlas directly (never stored in house)
+        </span>
+      </header>
+      <iframe
+        title="Atlas live terminal"
+        src="https://tui.atlasos.me"
+        className="min-h-0 flex-1 border-0"
+        style={{ background: "#000" }}
+      />
+    </div>
+  );
 }
