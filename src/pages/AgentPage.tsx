@@ -18,6 +18,7 @@ import {
 
 // label tells the truth: ✅ live now · 🔑 needs key in Providers (else OpenRouter fallback)
 const MODELS = [
+  { id: "local/gemma", label: "🆓 Gemma (local · $0 · ours)" },
   { id: "google/gemini-2.5-flash", label: "✅ Gemini 2.5 Flash (your key · free)" },
   { id: "deepseek/deepseek-chat-v3-0324", label: "✅ DeepSeek v3 (OpenRouter)" },
   { id: "google/gemini-2.5-pro", label: "✅ Gemini 2.5 Pro (your key)" },
@@ -410,8 +411,24 @@ export default function AgentPage({ item }: { item: NavItem }) {
     setBusy(false);
   };
 
+  // GEMMA BRIDGE · brother direct 2026-06-12 · free local gemma → house chat via Supabase
+  // relay (NO tunnel · NO external API · $0 · the Mac daemon me-gemma-relay fills the row)
+  const sendGemma = async () => {
+    const text = input.trim();
+    if (!text || busy || !chatId) return;
+    setInput("");
+    setBusy(true);
+    const next: Msg[] = [...msgs, { role: "brother" as const, content: text }];
+    setMsgs([...next, { role: "assistant", model, content: "🆓 gemma (local) is thinking…", tools: [] }]);
+    await sb().from("atlas_messages").insert({ chat_id: chatId, role: "brother", content: text, meta: {} });
+    // empty assistant row · meta.pending → the Mac relay picks it up, runs ollama, fills it
+    await sb().from("atlas_messages").insert({ chat_id: chatId, role: "assistant", model: "local/gemma", content: "", meta: { pending: true } });
+    setBusy(false); // subscribeChat renders the filled answer when the relay updates the row
+  };
+
   const send = async () => {
     if (isCC && meeting !== "off") return sendMeeting();
+    if (model === "local/gemma") return sendGemma();
     const text = input.trim();
     if (!text || busy || !chatId) return;
     setInput("");
