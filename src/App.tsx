@@ -12,6 +12,7 @@ import ProposalsPage from "./pages/ProposalsPage";
 import ProvidersPage from "./pages/ProvidersPage";
 import OpsPage from "./pages/OpsPage";
 import KanbanPage from "./pages/KanbanPage";
+import StudioPage from "./pages/StudioPage";
 import { CmdK } from "./components/CmdK";
 import { AtlasBar } from "./components/AtlasBar";
 
@@ -193,6 +194,7 @@ function PageRouter({ nav }: { nav: NavItem[] }) {
   if (item.template === "ops") return <OpsPage item={item} />;
   if (item.template === "kanban") return <KanbanPage item={item} />;
   if (item.template === "tui") return <TuiPage item={item} />;
+  if (item.template === "studio") return <StudioPage item={item} />;
   return <Navigate to="/home" replace />;
 }
 
