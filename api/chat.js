@@ -194,8 +194,9 @@ export default async function handler(req, res) {
       }
     }
 
-    // final streaming answer (with usage)
-    const upstream = await or({ model, stream: true, messages: convo, usage: { include: true } });
+    // final streaming answer (usage accounting is OpenRouter-only · native APIs reject the field)
+    const isOpenRouter = base.includes("openrouter.ai");
+    const upstream = await or({ model, stream: true, messages: convo, ...(isOpenRouter ? { usage: { include: true } } : {}) });
     if (!upstream.ok) {
       res.write(`data: ${JSON.stringify({ atlas_error: (await upstream.text()).slice(0, 300) })}\n\n`);
       return res.end();
