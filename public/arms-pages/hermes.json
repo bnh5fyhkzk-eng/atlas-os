@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "8b80bc0c73d9",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-11T16:37:06.257166"
-      },
-      "content": "Hermes decision · arm=research · priority=P0 · task: backfill past arm output data not in atlasos.me as per brother direct request · why: Brother explicitly requested this data for continuity and system integrity (P0 directive). This aligns with recent high-priority memory architecture work (#28284) and shared state synchronization (#45594-45596).",
-      "updated_at": "2026-06-11T16:37:06.257176"
-    },
-    {
       "id": "8da4dc60b572",
       "type": "callout",
       "props": {
@@ -683,15 +671,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the loop-health false alarm issue surfaced in me-loop-health.sh · why: The false alarm indicates a potential monitoring gap that could affect system reliability if left unaddressed",
       "updated_at": "2026-06-11T22:12:27.041983"
+    },
+    {
+      "id": "53d4dcafff57",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-11T22:27:39.382139"
+      },
+      "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the loop-health false alarm issue surfaced in me-loop-health.sh · why: This is a critical system health issue that could affect core functionality, as indicated by the P1 priority and recent activity in the memory-architecture-lift quadrant",
+      "updated_at": "2026-06-11T22:27:39.382151"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-11T22:24:07.997226"
+    "checked_at": "2026-06-11T22:29:08.780347"
   },
   "block_count": 30,
-  "updated_at": "2026-06-11T22:12:27.041984",
-  "generated_at": "2026-06-12T02:24:07Z"
+  "updated_at": "2026-06-11T22:27:39.382152",
+  "generated_at": "2026-06-12T02:29:08Z"
 }
