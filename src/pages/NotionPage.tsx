@@ -5,7 +5,7 @@
 // Mobile: columns swipe horizontally.
 import { useEffect, useMemo, useState, useCallback, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { ChevronRight, Plus, X, Paperclip, FileText, Folder, StickyNote } from "lucide-react";
+import { Check, ChevronRight, Copy, Plus, X, Paperclip, FileText, Folder, StickyNote } from "lucide-react";
 import { BlockEditor } from "../components/BlockEditor";
 import {
   listNodes,
@@ -101,6 +101,25 @@ export default function NotionPage({ item }: { item: NavItem }) {
     scrollRef.current?.scrollTo({ left: scrollRef.current.scrollWidth, behavior: "smooth" });
   }, [folderPath.length]);
 
+  // GOAL-FOLDER-COPY · brother direct 2026-06-12 03:49 · "give them the folder"
+  // copies folder + subfolders + notes as markdown → paste into any AI as context
+  const blockText = (content: unknown): string => {
+    if (!Array.isArray(content)) return "";
+    return content.map((b) => {
+      const c = (b as { content?: unknown }).content;
+      return Array.isArray(c) ? c.map((s) => (s as { text?: string }).text ?? "").join("") : "";
+    }).filter(Boolean).join("\n");
+  };
+  const buildCopy = useCallback((n: Node, depth = 0): string => {
+    const h = "#".repeat(Math.min(depth + 1, 6));
+    if (n.kind === "note") return `${h} ${n.title}\n${blockText(n.content)}\n`;
+    const kids = nodes.filter((k) => k.parent_id === n.id && !k.archived);
+    return `${h} ${n.emoji} ${n.title}\n\n` + kids.map((k) => buildCopy(k, depth + 1)).join("\n");
+  }, [nodes]);
+  const copyNode = useCallback(async (n: Node) => {
+    await navigator.clipboard.writeText(buildCopy(n));
+  }, [buildCopy]);
+
   const select = (n: Node) => navigate(`/p/${item.id}/n/${n.id}`);
   const closeNote = () => {
     const parent = selectedNote?.parent_id;
@@ -136,6 +155,7 @@ export default function NotionPage({ item }: { item: NavItem }) {
               countIn={countIn}
               onSelect={select}
               onChanged={reload}
+              onCopy={copyNode}
             />
           ))}
         </div>
@@ -158,6 +178,7 @@ function DrillColumn({
   countIn,
   onSelect,
   onChanged,
+  onCopy,
 }: {
   navId: string;
   parent: Node | null;
@@ -168,11 +189,13 @@ function DrillColumn({
   countIn: (id: string) => number;
   onSelect: (n: Node) => void;
   onChanged: () => void;
+  onCopy: (n: Node) => Promise<void>;
 }) {
   const [adding, setAdding] = useState<"folder" | "note" | null>(null);
   const defaultKind: "folder" | "note" = depth >= 2 ? "note" : "folder";
   const [title, setTitle] = useState("");
   const [renaming, setRenaming] = useState<string | null>(null);
+  const [copiedId, setCopiedId] = useState<string | null>(null);
   const navigate = useNavigate();
 
   const add = async () => {
@@ -253,20 +276,38 @@ function DrillColumn({
                   </>
                 )}
               </button>
-              <button
-                className="absolute right-1 top-1/2 hidden -translate-y-1/2 rounded p-0.5 group-hover:block hover:bg-black/10"
-                style={{ background: "var(--bg)" }}
-                title="Archive (restorable)"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  if (!window.confirm(`Are you sure you want to delete "${n.title}"?\n(Restorable from archive)`)) return;
-                  // self-improve signal: brother archiving an AI-filed item = correction
-                  if (n.created_by !== "brother") logOverride(n.id, "archived-ai-item", { created_by: n.created_by, title: n.title });
-                  void archiveNode(n.id).then(onChanged);
-                }}
-              >
-                <X size={11} style={{ color: "var(--text-faint)" }} />
-              </button>
+              <div className="absolute right-1 top-1/2 hidden -translate-y-1/2 items-center gap-0.5 group-hover:flex">
+                <button
+                  className="rounded p-0.5 hover:bg-black/10"
+                  style={{ background: "var(--bg)" }}
+                  title={n.kind === "folder" ? "Copy folder + notes as markdown · paste into any AI" : "Copy note text"}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    void onCopy(n).then(() => {
+                      setCopiedId(n.id);
+                      window.setTimeout(() => setCopiedId((c) => (c === n.id ? null : c)), 1500);
+                    });
+                  }}
+                >
+                  {copiedId === n.id
+                    ? <Check size={11} style={{ color: "#448361" }} />
+                    : <Copy size={11} style={{ color: "var(--text-faint)" }} />}
+                </button>
+                <button
+                  className="rounded p-0.5 hover:bg-black/10"
+                  style={{ background: "var(--bg)" }}
+                  title="Archive (restorable)"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if (!window.confirm(`Are you sure you want to delete "${n.title}"?\n(Restorable from archive)`)) return;
+                    // self-improve signal: brother archiving an AI-filed item = correction
+                    if (n.created_by !== "brother") logOverride(n.id, "archived-ai-item", { created_by: n.created_by, title: n.title });
+                    void archiveNode(n.id).then(onChanged);
+                  }}
+                >
+                  <X size={11} style={{ color: "var(--text-faint)" }} />
+                </button>
+              </div>
             </div>
           );
         })}
