@@ -1136,15 +1136,37 @@
       },
       "content": "**What** · Researched and documented key differences between stale and retired daemons in daemon-health-whitelist context. · **Why** · Brain canon #45620 flagged audit risks in daemon health management. Clarifying terms prevents system instability. · **Result** · Stale daemons (inactive but recoverable) vs. retired (permanently decommissioned). Whitelist handles each differently. · **Next** · Submit findings to Hermes-Orchestrator for whitelist policy updates. · **Links** ·  · **Cycle** · research-20260611-205618",
       "updated_at": "2026-06-11T20:56:18.776716"
+    },
+    {
+      "id": "0527ba9482ab",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "state-classification",
+        "source": "hermes-deepseek-fill",
+        "action": "Analyzed DAEMON-HEALTH-WHITELIST to define stale vs retired daemon states based on cycle-wake patterns and system logs",
+        "why": "To eliminate false alarms by establishing clear criteria distinguishing inactive (stale) from permanently decommissioned (retired) daemons",
+        "result": "Found 3 key differential markers: heartbeat timeout thresholds, registry metadata flags, and orchestration-layer tombstone records",
+        "next_step": "Propose whitelist update to Hermes-Orchestrator with new classification schema and audit hooks",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260611-211132",
+        "timestamp": "2026-06-11T21:11:32.784131"
+      },
+      "content": "**What** · Analyzed DAEMON-HEALTH-WHITELIST to define stale vs retired daemon states based on cycle-wake patterns and system logs · **Why** · To eliminate false alarms by establishing clear criteria distinguishing inactive (stale) from permanently decommissioned (retired) daemons · **Result** · Found 3 key differential markers: heartbeat timeout thresholds, registry metadata flags, and orchestration-layer tombstone records · **Next** · Propose whitelist update to Hermes-Orchestrator with new classification schema and audit hooks · **Links** ·  · **Cycle** · research-20260611-211132",
+      "updated_at": "2026-06-11T21:11:32.784131"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-11T21:08:55.050306"
+    "checked_at": "2026-06-11T21:13:56.032483"
   },
-  "block_count": 45,
-  "updated_at": "2026-06-11T20:56:18.776716",
-  "generated_at": "2026-06-12T01:08:55Z"
+  "block_count": 46,
+  "updated_at": "2026-06-11T21:11:32.784131",
+  "generated_at": "2026-06-12T01:13:56Z"
 }

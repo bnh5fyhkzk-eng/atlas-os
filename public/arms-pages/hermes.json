@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "849c33443ad8",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-11T16:08:42.207649"
-      },
-      "content": "Hermes decision · arm=research · priority=P1 · task: Deep-dive into memory-architecture-lift quadrant to resolve P1 priority from cycle 6 research · why: Recent brain canon #28284 indicates this is a closing P1 priority with direct relevance to current architecture work",
-      "updated_at": "2026-06-11T16:08:42.207659"
-    },
-    {
       "id": "812903778da2",
       "type": "callout",
       "props": {
@@ -693,15 +681,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P1 · task: Investigate and document the differences between stale and retired daemons in the context of daemon-health-whitelist · why: Recent brain canon #45620 highlights an audit finding related to daemon health, which is critical for system stability and performance. Addressing this will prevent potential issues with daemon management.",
       "updated_at": "2026-06-11T20:56:13.732771"
+    },
+    {
+      "id": "7e155975a503",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-11T21:11:27.843183"
+      },
+      "content": "Hermes decision · arm=research · priority=P1 · task: Investigate and document the differences between stale and retired daemons in the DAEMON-HEALTH-WHITELIST to prevent future false alarms. · why: Recent cycle-wake audit issues (#45620) indicate confusion between stale and retired daemons, which could lead to unnecessary alerts and system noise. Clarifying this will improve system reliability.",
+      "updated_at": "2026-06-11T21:11:27.843193"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-11T21:08:55.215933"
+    "checked_at": "2026-06-11T21:13:56.196728"
   },
   "block_count": 30,
-  "updated_at": "2026-06-11T20:56:13.732773",
-  "generated_at": "2026-06-12T01:08:55Z"
+  "updated_at": "2026-06-11T21:11:27.843195",
+  "generated_at": "2026-06-12T01:13:56Z"
 }
