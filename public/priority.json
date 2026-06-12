@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-12T14:55:26Z",
+  "generated_at": "2026-06-12T15:05:26Z",
   "total_items_scored": 168,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the memory-architecture-lift quadrant mentioned in cycle 6 research to understand its implications for current P1 priorities. \u00b7 why: The recent brain canon #28284 specifically",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Continue deep-dive into memory-architecture-lift quadrant to resolve P1 closure \u00b7 why: Recent high-arousal brain canon #28284 indicates active focus on this research with a pending P1 clo",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-12T04:49:21.681693"
+      "updated_at": "2026-06-12T05:04:39.221689"
     },
     {
       "arm": "research",
@@ -27,29 +27,18 @@
       "use_skill": "notebooklm"
     },
     {
-      "arm": "infra",
-      "arm_glyph": "\ud83d\udc97",
-      "arm_name": "My Heart",
-      "content": "launchagents \u00b7 last 30d \u00b7 7 canons (top arousal \u00b7 1.00)",
-      "category": "launchagents",
+      "arm": "dream",
+      "arm_glyph": "\ud83c\udf19",
+      "arm_name": "My Dreamer",
+      "content": "f5-compose-pairs \u00b7 last 30d \u00b7 8 canons (top arousal \u00b7 1.00)",
+      "category": "f5-compose-pairs",
       "priority": "P1",
       "source": "backfill",
-      "score": 9.04,
-      "updated_at": "2026-06-12T06:00:02.897481"
+      "score": 8.96,
+      "updated_at": "2026-06-12T06:00:03.085217"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the memory-architecture-lift quadrant mentioned in cycle 6 research to understand its implications for current P1 priorities. \u00b7 why: The recent brain canon #28284 specifically",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-12T04:49:21.681693"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -148,6 +137,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-12T07:06:40.675388"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Continue deep-dive into memory-architecture-lift quadrant to resolve P1 memory issues \u00b7 why: Recent high-arousal brain canon #28284 directly relates to ongoing memory architecture work, a",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-12T07:21:52.749788"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
