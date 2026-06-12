@@ -375,7 +375,13 @@ export default function Canvas({ nav }: { nav: NavItem[]; home: NavItem }) {
     recentNodes(12).then(setRecent).catch(() => setRecent([]));
     getCanvas(KEY)
       .then(({ layout: saved, widgets: w }) => {
-        if (saved && Array.isArray(saved) && saved.length > 0) setLayout(saved as Layout);
+        if (saved && Array.isArray(saved) && saved.length > 0) {
+          // merge: widgets born after the layout was saved get their DEFAULT slot
+          // (not a squished fallback) · new arrivals push existing rows down
+          const have = new Set((saved as Layout).map((l) => l.i));
+          const missing = DEFAULT_LAYOUT.filter((d) => !have.has(d.i));
+          setLayout(missing.length ? [...missing, ...(saved as Layout).map((l) => ({ ...l, y: l.y + 2 }))] : (saved as Layout));
+        }
         setWidgets(w);
       })
       .catch(() => undefined)
