@@ -340,7 +340,34 @@ function buildRoutes(
 
 const SIDEBAR_COLLAPSED_KEY = "hermes-sidebar-collapsed";
 
+// Atlas-OS standalone routes · per brother direct 2026-06-11 20:15 "delete hermes agent
+// part of the website we are making our own improve version in this build"
+// Hermes-dashboard code preserved (LADDER #27089) · just unmounted from atlas surface.
+const ATLAS_PREFIXES = ["/home", "/arm/", "/arm", "/manager", "/atlas-canvas"];
+
+function AtlasStandaloneApp() {
+  return (
+    <Routes>
+      <Route path="/home" element={<AtlasHomePage />} />
+      <Route path="/arm/:name" element={<ArmPage />} />
+      <Route path="/arm/:name/:pageId" element={<ArmPage />} />
+      <Route path="/manager" element={<AtlasManagerPage />} />
+      <Route path="/atlas-canvas" element={<AtlasCanvasPage />} />
+      <Route path="*" element={<AtlasHomePage />} />
+    </Routes>
+  );
+}
+
 export default function App() {
+  const { pathname } = useLocation();
+  const isAtlasRoute = ATLAS_PREFIXES.some(
+    (p) => pathname === p || pathname.startsWith(p === "/arm" ? "/arm/" : p),
+  );
+  // Branch between two components so each keeps its own stable hook order
+  return isAtlasRoute ? <AtlasStandaloneApp /> : <HermesApp />;
+}
+
+function HermesApp() {
   const { t } = useI18n();
   const { pathname } = useLocation();
   const { manifests, loading: pluginsLoading } = usePlugins();
