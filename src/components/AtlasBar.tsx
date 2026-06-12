@@ -3,7 +3,7 @@
 // panel (page stays visible) · breath dot = bridge daemon heartbeat · honest
 // sleeping state when bridge down · context-aware (sends current page).
 import { useEffect, useRef, useState, useCallback } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Send, X, Maximize2, Minimize2, Mic, Volume2, VolumeX } from "lucide-react";
 import { sb } from "../lib/db";
 
@@ -25,6 +25,19 @@ const AWAKE_MS = 90_000; // heartbeat every 30s · stale after 90s
 
 export function AtlasBar() {
   const { pathname } = useLocation();
+  const navigate = useNavigate();
+  const navigatedRef = useRef<Set<string>>(new Set());
+
+  // Atlas opens windows · [[goto:/p/...]] tokens in my replies navigate the house
+  const renderContent = (m: RoomMsg): string => m.content.replace(/\[\[goto:[^\]]+\]\]/g, "").trim();
+  const handleGoto = useCallback((m: RoomMsg) => {
+    if (m.role !== "atlas" || navigatedRef.current.has(m.id)) return;
+    const match = m.content.match(/\[\[goto:([^\]]+)\]\]/);
+    if (match && Date.now() - new Date(m.created_at).getTime() < 2 * 60 * 1000) {
+      navigatedRef.current.add(m.id);
+      navigate(match[1]);
+    }
+  }, [navigate]);
   const [open, setOpen] = useState(false);
   const [full, setFull] = useState(false);
   const [msgs, setMsgs] = useState<RoomMsg[]>([]);
@@ -49,6 +62,7 @@ export function AtlasBar() {
     setMsgs(list);
     // auto-play fresh voice replies (last message · done · has tts · not yet played)
     const last = list[list.length - 1];
+    if (last && last.role === "atlas") handleGoto(last);
     if (last && last.role === "atlas" && last.status === "done" && last.tts_path && !playedRef.current.has(last.id)) {
       playedRef.current.add(last.id);
       if (Date.now() - new Date(last.created_at).getTime() < 2 * 60 * 1000) {
@@ -185,7 +199,7 @@ export function AtlasBar() {
         {msgs.map((m) => (
           <div key={m.id} className={"flex " + (m.role === "brother" ? "justify-end" : "justify-start")}>
             <div className={"atlas-bubble " + (m.role === "brother" ? "mine" : "his")}>
-              {m.content || (m.status === "pending" || m.status === "processing" ? "…" : "")}
+              {renderContent(m) || (m.status === "pending" || m.status === "processing" ? "…" : "")}
               {m.status === "streaming" && <span className="atlas-cursor">▍</span>}
               {m.audio_path && (
                 <audio controls preload="none" src={audioUrl(m.audio_path)} style={{ height: 30, marginTop: 4, width: "100%" }} />
