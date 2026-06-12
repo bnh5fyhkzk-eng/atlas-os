@@ -28,14 +28,33 @@ export default async function handler(req, res) {
   const authed = cookie.includes("atlas_auth=ok") || (process.env.ATLAS_ARM_TOKEN && bearer === process.env.ATLAS_ARM_TOKEN);
   if (!authed) return res.status(401).json({ error: "auth required" });
 
+  const { from, to } = req.query;
+
+  // Primary path: uplift-app mirror (its env holds the working OAuth client ·
+  // sensitive-locked there · server-to-server Bearer)
+  if (process.env.ATLAS_ARM_TOKEN) {
+    try {
+      const mu = new URL("https://upliftai.app/api/atlas/calendar-mirror");
+      if (from) mu.searchParams.set("from", from);
+      if (to) mu.searchParams.set("to", to);
+      const mr = await fetch(mu.toString(), {
+        headers: { Authorization: `Bearer ${process.env.ATLAS_ARM_TOKEN}` },
+        signal: AbortSignal.timeout(15000),
+      });
+      if (mr.ok) {
+        const mj = await mr.json();
+        if (mj.ok) return res.status(200).json(mj);
+      }
+    } catch { /* fall through to direct path */ }
+  }
+
+  // Fallback: direct creds in this project's env (if ever set)
   if (!process.env.GOOGLE_OAUTH_CLIENT_ID || !process.env.GOOGLE_OAUTH_CLIENT_SECRET || !process.env.GOOGLE_REFRESH_TOKEN) {
-    return res.status(200).json({ ok: false, connected: false, reason: "Google creds not set in env yet", events: [] });
+    return res.status(200).json({ ok: false, connected: false, reason: "mirror unreachable · no direct creds", events: [] });
   }
 
   const token = await accessToken();
   if (!token) return res.status(200).json({ ok: false, connected: false, reason: "token refresh failed", events: [] });
-
-  const { from, to } = req.query;
   const timeMin = from || new Date().toISOString();
   const timeMax = to || new Date(Date.now() + 31 * 86400e3).toISOString();
   const u = new URL("https://www.googleapis.com/calendar/v3/calendars/primary/events");
