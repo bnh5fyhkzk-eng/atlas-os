@@ -127,6 +127,39 @@ function GoalsStrip() {
   );
 }
 
+// Tonight strip · what Atlas built while brother slept · 1 line each + goto
+function TonightStrip() {
+  const navigate = useNavigate();
+  const [rows, setRows] = useState<{ id: string; nav_id: string; title: string; created_by: string }[]>([]);
+  useEffect(() => {
+    const since = new Date();
+    if (since.getHours() < 12) since.setDate(since.getDate() - 1);
+    since.setHours(22, 0, 0, 0);
+    void sb().from("atlas_nodes").select("id,nav_id,title,created_by")
+      .eq("kind", "note").eq("archived", false)
+      .neq("created_by", "brother")
+      .gte("created_at", since.toISOString())
+      .order("created_at", { ascending: false }).limit(12)
+      .then(({ data }) => setRows((data ?? []) as typeof rows));
+  }, []);
+  if (!rows.length) return null;
+  return (
+    <div className="border-b px-6 py-2" style={{ borderColor: "var(--border)" }}>
+      <div className="flex flex-wrap items-center gap-1.5">
+        <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: "var(--text-faint)" }}>🌙 while you slept</span>
+        {rows.map((r) => (
+          <button key={r.id} className="rounded-full border px-2.5 py-1 text-xs hover:opacity-70"
+            style={{ borderColor: "var(--border)", color: "var(--text-soft)" }}
+            title={r.created_by}
+            onClick={() => navigate(`/p/${r.nav_id}/n/${r.id}`)}>
+            <span className="max-w-[240px] truncate inline-block align-bottom">{r.title}</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function systemPrompt(item: NavItem, folders: Node[]): string {
   const tree = folders.map((f) => `- ${f.emoji} ${f.title}`).join("\n");
   return (
@@ -480,6 +513,7 @@ export default function AgentPage({ item }: { item: NavItem }) {
       </header>
 
       {isCC && <GoalsStrip />}
+      {isCC && <TonightStrip />}
 
       <div className="flex min-h-0 flex-1">
         <div className="flex min-w-0 flex-1 flex-col">
