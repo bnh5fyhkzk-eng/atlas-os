@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-12T03:34:49Z",
-  "total_items_scored": 137,
+  "generated_at": "2026-06-12T03:44:50Z",
+  "total_items_scored": 139,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: deep-dive into memory-architecture-lift quadrant to resolve P1 closure from #28284 \u00b7 why: This is a high-priority (P1) active focus task that requires immediate attention to advance the r",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Deep-dive into memory-architecture-lift quadrant to resolve P1 closure from cycle #28284 \u00b7 why: This is a high-priority (P1) research task left open from recent high-arousal cycles, direc",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-11T17:53:15.587263"
+      "updated_at": "2026-06-11T18:08:29.151798"
     },
     {
       "arm": "research",
@@ -34,22 +34,11 @@
       "category": "launchagents",
       "priority": "P1",
       "source": "backfill",
-      "score": 8.71,
+      "score": 8.63,
       "updated_at": "2026-06-11T18:00:03.523230"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: deep-dive into memory-architecture-lift quadrant to resolve P1 closure from #28284 \u00b7 why: This is a high-priority (P1) active focus task that requires immediate attention to advance the r",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-11T17:53:15.587263"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -148,6 +137,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-11T20:10:20.069007"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the discrepancy in loop-health monitoring flagged in #45633 to ensure correct log tracking for me-loop-health.sh \u00b7 why: Recent cycle-wake audits and false alarms indicate a cr",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-11T20:25:34.596340"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
