@@ -1,11 +1,19 @@
-// Home · widget canvas · Atlas-OS v3
-// Widgets = live windows into pages · click-through opens page · drag/resize persists
-import { useEffect, useMemo, useState, useCallback } from "react";
+// Home · personalizable widget canvas · Atlas-OS v3
+// + Add widget (any page) · remove · drag · resize · all persisted (layout + widgets jsonb)
+import { useEffect, useMemo, useState, useCallback, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { ResponsiveGridLayout, useContainerWidth, type LayoutItem } from "react-grid-layout";
 import "react-grid-layout/css/styles.css";
-import { GripVertical } from "lucide-react";
-import { recentNodes, getLayout, saveLayout, type NavItem, type Node } from "../lib/db";
+import { GripVertical, Plus, X } from "lucide-react";
+import {
+  recentNodes,
+  listNodes,
+  getCanvas,
+  saveCanvas,
+  type NavItem,
+  type Node,
+  type CanvasWidget,
+} from "../lib/db";
 
 type Layout = LayoutItem[];
 const KEY = "home-v3";
@@ -13,7 +21,6 @@ const KEY = "home-v3";
 const DEFAULT_LAYOUT: Layout = [
   { i: "arms", x: 0, y: 0, w: 7, h: 5 },
   { i: "recent", x: 7, y: 0, w: 5, h: 5 },
-  { i: "pages", x: 0, y: 5, w: 12, h: 2 },
 ];
 
 function timeAgo(iso: string): string {
@@ -24,15 +31,60 @@ function timeAgo(iso: string): string {
   return `${Math.floor(s / 86400)}d`;
 }
 
-function Widget({ title, emoji, children }: { title: string; emoji: string; children: React.ReactNode }) {
+function Widget({ title, emoji, onRemove, children }: { title: string; emoji: string; onRemove?: () => void; children: React.ReactNode }) {
   return (
-    <div className="widget">
+    <div className="widget group">
       <div className="widget-head">
         <GripVertical size={12} style={{ color: "var(--text-faint)" }} />
         <span>{emoji}</span>
-        <span>{title}</span>
+        <span className="flex-1">{title}</span>
+        {onRemove && (
+          <button
+            className="hidden group-hover:block"
+            style={{ color: "var(--text-faint)" }}
+            title="Remove widget"
+            onMouseDown={(e) => e.stopPropagation()}
+            onClick={onRemove}
+          >
+            <X size={13} />
+          </button>
+        )}
       </div>
       <div className="widget-body">{children}</div>
+    </div>
+  );
+}
+
+// live window into any page · root folders + counts · click-through
+function PageWidget({ item }: { item: NavItem }) {
+  const navigate = useNavigate();
+  const [nodes, setNodes] = useState<Node[]>([]);
+  useEffect(() => {
+    listNodes(item.id).then(setNodes).catch(() => setNodes([]));
+  }, [item.id]);
+  const roots = nodes.filter((n) => !n.parent_id && !n.hidden);
+  const countIn = (id: string): number => {
+    const kids = nodes.filter((n) => n.parent_id === id);
+    return kids.length + kids.reduce((a, k) => a + countIn(k.id), 0);
+  };
+  return (
+    <div className="space-y-1">
+      {roots.length === 0 && (
+        <button className="text-xs underline" style={{ color: "var(--text-faint)" }} onClick={() => navigate(`/p/${item.id}`)}>
+          Open {item.title} →
+        </button>
+      )}
+      {roots.slice(0, 8).map((n) => (
+        <button
+          key={n.id}
+          className="flex w-full items-center gap-2 rounded-md px-2 py-1 text-left text-sm hover:bg-black/5"
+          onClick={() => navigate(`/p/${item.id}/n/${n.id}`)}
+        >
+          <span>{n.emoji}</span>
+          <span className="flex-1 truncate">{n.title}</span>
+          <span className="text-xs" style={{ color: "var(--text-faint)" }}>{countIn(n.id) || ""}</span>
+        </button>
+      ))}
     </div>
   );
 }
@@ -41,27 +93,46 @@ export default function Canvas({ nav }: { nav: NavItem[]; home: NavItem }) {
   const navigate = useNavigate();
   const [recent, setRecent] = useState<Node[]>([]);
   const [layout, setLayout] = useState<Layout>(DEFAULT_LAYOUT);
+  const [widgets, setWidgets] = useState<CanvasWidget[]>([]);
   const [ready, setReady] = useState(false);
+  const [picking, setPicking] = useState(false);
   const { width, containerRef, mounted } = useContainerWidth();
+  const stateRef = useRef({ layout, widgets });
+  stateRef.current = { layout, widgets };
 
   const arms = nav.filter((n) => n.section === "arms");
-  const mains = nav.filter((n) => n.section === "main" && n.template !== "canvas");
   const navById = useMemo(() => new Map(nav.map((n) => [n.id, n])), [nav]);
+  const addable = nav.filter((n) => n.template !== "canvas");
 
   useEffect(() => {
     recentNodes(12).then(setRecent).catch(() => setRecent([]));
-    getLayout(KEY)
-      .then((saved) => {
+    getCanvas(KEY)
+      .then(({ layout: saved, widgets: w }) => {
         if (saved && Array.isArray(saved) && saved.length > 0) setLayout(saved as Layout);
+        setWidgets(w);
       })
       .catch(() => undefined)
       .finally(() => setReady(true));
   }, []);
 
-  const persist = useCallback((next: Layout) => {
-    setLayout(next);
-    void saveLayout(KEY, next as unknown as unknown[]).catch(() => undefined);
+  const persist = useCallback((nextLayout: Layout, nextWidgets: CanvasWidget[]) => {
+    setLayout(nextLayout);
+    setWidgets(nextWidgets);
+    void saveCanvas(KEY, nextLayout as unknown as unknown[], nextWidgets).catch(() => undefined);
   }, []);
+
+  const addWidget = (navId: string) => {
+    setPicking(false);
+    const { layout: l, widgets: w } = stateRef.current;
+    const i = `w-${navId.slice(0, 8)}-${Date.now().toString(36)}`;
+    const maxY = l.reduce((m, it) => Math.max(m, it.y + it.h), 0);
+    persist([...l, { i, x: 0, y: maxY, w: 5, h: 4 }], [...w, { i, navId }]);
+  };
+
+  const removeWidget = (i: string) => {
+    const { layout: l, widgets: w } = stateRef.current;
+    persist(l.filter((it) => it.i !== i), w.filter((it) => it.i !== i));
+  };
 
   const layouts = useMemo(
     () => ({ lg: layout, sm: layout.map((l) => ({ ...l, x: 0, w: 1 })) }),
@@ -71,11 +142,30 @@ export default function Canvas({ nav }: { nav: NavItem[]; home: NavItem }) {
   return (
     <div className="min-h-screen">
       <header
-        className="sticky top-0 z-10 px-6 py-3 backdrop-blur"
+        className="sticky top-0 z-10 flex items-center justify-between px-6 py-3 backdrop-blur"
         style={{ background: "rgba(255,255,255,0.92)", borderBottom: "1px solid var(--border)" }}
       >
         <h1 className="text-sm font-semibold">🏠 Home</h1>
+        <div className="relative">
+          <button
+            className="flex items-center gap-1.5 rounded-md border px-2.5 py-1 text-xs"
+            style={{ borderColor: "var(--border)", color: "var(--text-soft)" }}
+            onClick={() => setPicking((v) => !v)}
+          >
+            <Plus size={13} /> Add widget
+          </button>
+          {picking && (
+            <div className="ctx-menu" style={{ position: "absolute", right: 0, top: "110%" }}>
+              {addable.map((n) => (
+                <button key={n.id} onClick={() => addWidget(n.id)}>
+                  {n.emoji} {n.title}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
       </header>
+
       <div className="mx-auto max-w-6xl px-4 py-4" ref={containerRef}>
         {ready && mounted && (
           <ResponsiveGridLayout
@@ -86,7 +176,7 @@ export default function Canvas({ nav }: { nav: NavItem[]; home: NavItem }) {
             rowHeight={72}
             margin={[12, 12]}
             dragConfig={{ handle: ".widget-head" }}
-            onLayoutChange={(l) => persist([...l])}
+            onLayoutChange={(l) => persist([...l], stateRef.current.widgets)}
           >
             <div key="arms">
               <Widget title="Arms" emoji="🐙">
@@ -133,22 +223,17 @@ export default function Canvas({ nav }: { nav: NavItem[]; home: NavItem }) {
                 </div>
               </Widget>
             </div>
-            <div key="pages">
-              <Widget title="Pages" emoji="🧭">
-                <div className="flex flex-wrap gap-1.5">
-                  {mains.map((m) => (
-                    <button
-                      key={m.id}
-                      className="rounded-lg border px-3 py-1.5 text-sm hover:shadow-sm"
-                      style={{ borderColor: "var(--border)" }}
-                      onClick={() => navigate(`/p/${m.id}`)}
-                    >
-                      {m.emoji} {m.title}
-                    </button>
-                  ))}
+            {widgets.map((w) => {
+              const item = navById.get(w.navId);
+              if (!item) return <div key={w.i} />;
+              return (
+                <div key={w.i}>
+                  <Widget title={item.title} emoji={item.emoji} onRemove={() => removeWidget(w.i)}>
+                    <PageWidget item={item} />
+                  </Widget>
                 </div>
-              </Widget>
-            </div>
+              );
+            })}
           </ResponsiveGridLayout>
         )}
       </div>

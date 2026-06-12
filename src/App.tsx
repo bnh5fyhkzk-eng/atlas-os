@@ -24,9 +24,10 @@ function Shell() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [addingArm, setAddingArm] = useState(false);
   const [armTitle, setArmTitle] = useState("");
+  const [navError, setNavError] = useState<string | null>(null);
 
   const reload = useCallback(() => {
-    listNav().then(setNav).catch((e) => console.error("[nav]", e));
+    listNav().then(setNav).catch((e) => setNavError(e instanceof Error ? e.message : String(e)));
   }, []);
 
   useEffect(() => { reload(); }, [reload]);
@@ -48,15 +49,19 @@ function Shell() {
     setAddingArm(false);
     setArmTitle("");
     if (!title) return;
-    const item = await createNav({
-      title,
-      emoji: "🦾",
-      template: "agent",
-      section: "arms",
-      agent_slug: title.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
-    });
-    reload();
-    navigate(`/p/${item.id}`);
+    try {
+      const item = await createNav({
+        title,
+        emoji: "🦾",
+        template: "agent",
+        section: "arms",
+        agent_slug: title.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
+      });
+      reload();
+      navigate(`/p/${item.id}`);
+    } catch (e: unknown) {
+      setNavError(e instanceof Error ? e.message : String(e));
+    }
   };
 
   return (
@@ -112,7 +117,7 @@ function Shell() {
               <span className="flex-1 truncate">{n.title}</span>
             </button>
           ))}
-          {addingArm && (
+          {addingArm ? (
             <input
               autoFocus
               value={armTitle}
@@ -122,10 +127,21 @@ function Shell() {
                 if (e.key === "Escape") { setAddingArm(false); setArmTitle(""); }
               }}
               onBlur={() => void addArm()}
-              placeholder="New arm · Enter"
+              placeholder="Arm name · Enter to create"
               className="mt-0.5 w-full rounded-md px-2 py-1.5 text-sm outline-none"
               style={{ background: "var(--hover)" }}
             />
+          ) : (
+            <button
+              className="mt-0.5 flex w-full items-center gap-2 rounded-md border border-dashed px-2 py-1.5 text-left text-sm"
+              style={{ borderColor: "var(--border)", color: "var(--text-faint)" }}
+              onClick={() => setAddingArm(true)}
+            >
+              <Plus size={13} /> Add arm
+            </button>
+          )}
+          {navError && (
+            <div className="mt-2 rounded-md bg-red-50 p-2 text-xs text-red-600">{navError}</div>
           )}
         </div>
       </nav>

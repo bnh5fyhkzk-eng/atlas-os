@@ -121,15 +121,23 @@ export function subscribeNodes(navId: string, cb: () => void): () => void {
   return () => { void sb().removeChannel(ch); };
 }
 
-// ── layouts ──────────────────────────────────────────────────
-export async function getLayout(key: string): Promise<unknown[] | null> {
-  const { data, error } = await sb().from("atlas_layouts").select("layout").eq("key", key).maybeSingle();
-  if (error) err(error);
-  return (data?.layout as unknown[]) ?? null;
+// ── layouts + widgets (personalizable canvas) ────────────────
+export interface CanvasWidget {
+  i: string;
+  navId: string;
 }
 
-export async function saveLayout(key: string, layout: unknown[]): Promise<void> {
-  const { error } = await sb().from("atlas_layouts").upsert({ key, layout, updated_at: new Date().toISOString() });
+export async function getCanvas(key: string): Promise<{ layout: unknown[] | null; widgets: CanvasWidget[] }> {
+  const { data, error } = await sb().from("atlas_layouts").select("layout, widgets").eq("key", key).maybeSingle();
+  if (error) err(error);
+  return {
+    layout: (data?.layout as unknown[]) ?? null,
+    widgets: (data?.widgets as CanvasWidget[]) ?? [],
+  };
+}
+
+export async function saveCanvas(key: string, layout: unknown[], widgets: CanvasWidget[]): Promise<void> {
+  const { error } = await sb().from("atlas_layouts").upsert({ key, layout, widgets, updated_at: new Date().toISOString() });
   if (error) err(error);
 }
 
