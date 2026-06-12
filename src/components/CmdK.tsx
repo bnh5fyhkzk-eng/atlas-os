@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Search } from "lucide-react";
 import { searchAll } from "../lib/db";
 
-interface Hit { kind: string; id: string; nav_id: string | null; title: string; emoji: string }
+interface Hit { kind: string; id: string; nav_id: string | null; title: string; emoji: string; snippet?: string }
 
 export function CmdK() {
   const [open, setOpen] = useState(false);
@@ -72,7 +72,10 @@ export function CmdK() {
               onClick={() => go(h)}
             >
               <span>{h.emoji}</span>
-              <span className="flex-1 truncate">{h.title}</span>
+              <span className="min-w-0 flex-1">
+                <span className="block truncate">{h.title}</span>
+                {h.snippet && <span className="block truncate text-[11px]" style={{ color: "var(--text-faint)" }}>{h.snippet}</span>}
+              </span>
               <span className="text-[10px] uppercase" style={{ color: "var(--text-faint)" }}>{h.kind}</span>
             </button>
           ))}

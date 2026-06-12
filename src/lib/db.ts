@@ -23,7 +23,7 @@ export interface NavItem {
   id: string;
   title: string;
   emoji: string;
-  template: "canvas" | "notion" | "agent" | "calendar" | "proposals" | "providers";
+  template: "canvas" | "notion" | "agent" | "calendar" | "proposals" | "providers" | "ops";
   agent_slug: string | null;
   model: string;
   paused: boolean;
@@ -188,16 +188,37 @@ export function subscribeChat(chatId: string, cb: () => void): () => void {
   return () => { void sb().removeChannel(ch); };
 }
 
-// ⌘K search · everything
-export async function searchAll(q: string): Promise<Array<{ kind: string; id: string; nav_id: string | null; title: string; emoji: string }>> {
-  const [navs, nodes] = await Promise.all([
+// ⌘K search · titles + CONTENT (V4-OPS gap-B · full-text with snippets)
+export interface SearchHit { kind: string; id: string; nav_id: string | null; title: string; emoji: string; snippet?: string }
+
+function snip(text: string, q: string): string {
+  const i = text.toLowerCase().indexOf(q.toLowerCase());
+  if (i < 0) return "";
+  return (i > 20 ? "…" : "") + text.slice(Math.max(0, i - 20), i + q.length + 50).replace(/\s+/g, " ") + "…";
+}
+
+export async function searchAll(q: string): Promise<SearchHit[]> {
+  const [navs, nodes, content] = await Promise.all([
     sb().from("atlas_nav").select("id,title,emoji").eq("archived", false).ilike("title", `%${q}%`).limit(5),
-    sb().from("atlas_nodes").select("id,nav_id,title,emoji,kind").eq("archived", false).ilike("title", `%${q}%`).limit(12),
+    sb().from("atlas_nodes").select("id,nav_id,title,emoji,kind").eq("archived", false).ilike("title", `%${q}%`).limit(8),
+    sb().from("atlas_nodes").select("id,nav_id,title,emoji,kind,content").eq("archived", false).filter("content::text", "ilike", `%${q}%`).limit(8),
   ]);
-  return [
+  const titleIds = new Set((nodes.data ?? []).map((n) => n.id));
+  const hits: SearchHit[] = [
     ...((navs.data ?? []).map((n) => ({ kind: "page", id: n.id, nav_id: null as string | null, title: n.title, emoji: n.emoji }))),
     ...((nodes.data ?? []).map((n) => ({ kind: n.kind, id: n.id, nav_id: n.nav_id as string | null, title: n.title, emoji: n.emoji }))),
+    ...((content.data ?? [])
+      .filter((n) => !titleIds.has(n.id))
+      .map((n) => ({
+        kind: n.kind,
+        id: n.id,
+        nav_id: n.nav_id as string | null,
+        title: n.title,
+        emoji: n.emoji,
+        snippet: snip(JSON.stringify(n.content ?? ""), q),
+      }))),
   ];
+  return hits.slice(0, 16);
 }
 
 export async function activitySince(iso: string): Promise<Node[]> {
