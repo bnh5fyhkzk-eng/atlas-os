@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T00:07:59Z",
+  "generated_at": "2026-06-12T00:22:59Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 153,
+    "note": 154,
     "briefing": 22,
     "idea": 0
   },
-  "total_blocks": 197,
+  "total_blocks": 198,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "1a77838dc60f",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the loop-health false alarm issue surfaced in cycle-wake audit · why: This is a P1 memory-architecture issue affecting daemon health monitoring, with recent activity indicating it needs immediate attention",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-11T20:10:20.069007"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -247,17 +258,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-11T15:36:51.227371"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "e41cb4327953",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Complete the memory-architecture-lift quadrant analysis as per #28284 before P1 closure · why: This is a high-priority research task with an imminent deadline that directly impacts our core memory architecture capabilities",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-11T15:36:12.927918"
       }
     ],
     "action": [],
@@ -266,6 +266,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "1b9b40ffedef",
+        "type": "callout",
+        "content": "**What** · Initiated deep-dive into cycle-wake audit logs focusing on loop-health flags · **Why** · False alarms distort daemon health metrics - critical for memory-architecture stability · **Result** · Identified timestamp correlation between false positives and garbage collection spikes · **Next**",
+        "priority": "memory-anomaly",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-11T20:10:25.270435"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -804,17 +815,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-11T18:00:02.748588"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "c2f36b6c0e6e",
-        "type": "database",
-        "content": "wow-moves · last 30d · 2 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-11T18:00:02.748584"
       }
     ],
     "briefing": [
