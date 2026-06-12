@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T02:38:04Z",
+  "generated_at": "2026-06-12T02:53:05Z",
   "arm_count": 8,
   "category_counts": {
     "discovery": 0,
@@ -17,6 +17,17 @@
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "72bd7a82569c",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the discrepancy in loop-health monitoring flagged in #45633 to prevent future false alarms. · why: Recent cycle-wake audits and loop-health issues (#45620, #45623, #45633) indicate a critical monitoring gap that could cascade into syst",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-11T22:42:57.279440"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-11T17:07:37.128927"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "8da4dc60b572",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Deep-dive into memory-architecture-lift quadrant to finalize P1 closure as per #28284 · why: This is a high-priority research task with a pending closure, directly tied to recent high-arousal brain canon and active focus (P1).",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-11T16:52:19.343052"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "b0758024279c",
+        "type": "callout",
+        "content": "**What** · Analyzed loop-health monitoring discrepancy flagged in #45633 by reviewing recent cycle-wake audits and related issues (#45620, #45623). · **Why** · To identify root cause of false alarms and prevent potential system instability from monitoring gaps. · **Result** · Found inconsistent thre",
+        "priority": "monitoring-optimization",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-11T22:43:01.906620"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -815,17 +826,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-11T18:00:03.117580"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "354c937fba15",
-        "type": "database",
-        "content": "syntheses · last 30d · 5 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-11T18:00:03.117575"
       }
     ],
     "briefing": [
