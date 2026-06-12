@@ -80,6 +80,19 @@ function DropWidget() {
     setBusy(true);
     setResult(null);
     try {
+      // YouTube link → /watch pipeline (Mac yt-dlp + gemma · lands in Research/Watched)
+      if (/youtube\.com\/(watch|shorts)|youtu\.be\//.test(t)) {
+        const r = await fetch("/api/room-send", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ content: `/watch ${t}`, context: { page: "/home" } }),
+        });
+        if (!r.ok) throw new Error(String(r.status));
+        setResult("🎬 watching · summary lands in Research/Watched + the bar");
+        setText("");
+        setBusy(false);
+        return;
+      }
       const r = await fetch("/api/inbox", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ text: t }) });
       const j = await r.json();
       if (!r.ok) throw new Error(j.error ?? r.status);

@@ -25,6 +25,15 @@ const MODELS = [
   { id: "x-ai/grok-3", label: "Grok 3" },
 ];
 
+// FREE meeting · every $0 seat (OpenRouter :free tier · flaky hours happen · failed seats say so honestly)
+const MODELS_FREE = [
+  { id: "meta-llama/llama-3.3-70b-instruct:free", label: "Llama 3.3 70B (free)" },
+  { id: "google/gemini-2.0-flash-exp:free", label: "Gemini Flash (free)" },
+  { id: "qwen/qwq-32b:free", label: "Qwen QwQ 32B (free)" },
+  { id: "mistralai/mistral-small-3.1-24b-instruct:free", label: "Mistral Small (free)" },
+  { id: "nvidia/llama-3.1-nemotron-70b-instruct:free", label: "Nemotron 70B (free)" },
+];
+
 interface ToolChip {
   name: string;
   detail?: string;
@@ -36,6 +45,16 @@ interface Msg {
   model?: string | null;
   content: string;
   tools?: ToolChip[];
+  image?: string | null;
+}
+
+const fileUrl = (p: string) => `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/chat-files/${p}`;
+
+async function uploadImage(file: File): Promise<string | null> {
+  const ext = (file.type.split("/")[1] || "png").replace("jpeg", "jpg");
+  const path = `${crypto.randomUUID()}.${ext}`;
+  const { error } = await sb().storage.from("chat-files").upload(path, file, { contentType: file.type });
+  return error ? null : path;
 }
 
 interface ChatRow {
@@ -72,7 +91,8 @@ export default function AgentPage({ item }: { item: NavItem }) {
   const [folderTitle, setFolderTitle] = useState("");
   const [dropMsg, setDropMsg] = useState<Msg | null>(null);
   const [cycleLog, setCycleLog] = useState<Node[]>([]);
-  const [meeting, setMeeting] = useState(false);
+  const [meeting, setMeeting] = useState<"off" | "free" | "all">("off");
+  const [attached, setAttached] = useState<string | null>(null); // storage path · V4-ATTACHMENTS
   const bottomRef = useRef<HTMLDivElement>(null);
 
   const rootFolders = useMemo(() => folders.filter((f) => !f.parent_id && f.kind === "folder"), [folders]);
@@ -107,6 +127,7 @@ export default function AgentPage({ item }: { item: NavItem }) {
         ...m,
         role: m.role === "assistant" ? "assistant" : "brother",
         tools: m.meta?.tools,
+        image: (m.meta as { image?: string })?.image ?? null,
       })),
     );
   }, []);
@@ -160,8 +181,9 @@ export default function AgentPage({ item }: { item: NavItem }) {
     setInput("");
     setBusy(true);
     setError(null);
+    const ROSTER = meeting === "free" ? MODELS_FREE : MODELS;
     const base: Msg[] = [...msgs, { role: "brother" as const, content: text }];
-    const seats = MODELS.map((m) => ({ role: "assistant" as const, model: m.id, content: "", tools: [] as ToolChip[] }));
+    const seats = ROSTER.map((m) => ({ role: "assistant" as const, model: m.id, content: "", tools: [] as ToolChip[] }));
     setMsgs([...base, ...seats]);
     void sb().from("atlas_messages").insert({ chat_id: chatId, role: "brother", content: text, meta: { meeting: true } }).then(() => undefined);
 
@@ -173,7 +195,7 @@ export default function AgentPage({ item }: { item: NavItem }) {
       });
 
     await Promise.all(
-      MODELS.map(async (m, idx) => {
+      ROSTER.map(async (m, idx) => {
         try {
           const res = await fetch("/api/chat", {
             method: "POST",
@@ -217,15 +239,17 @@ export default function AgentPage({ item }: { item: NavItem }) {
   };
 
   const send = async () => {
-    if (isCC && meeting) return sendMeeting();
+    if (isCC && meeting !== "off") return sendMeeting();
     const text = input.trim();
     if (!text || busy || !chatId) return;
     setInput("");
     setBusy(true);
     setError(null);
-    const next: Msg[] = [...msgs, { role: "brother" as const, content: text }];
+    const img = attached;
+    setAttached(null);
+    const next: Msg[] = [...msgs, { role: "brother" as const, content: text, image: img }];
     setMsgs([...next, { role: "assistant", model, content: "", tools: [] }]);
-    void sb().from("atlas_messages").insert({ chat_id: chatId, role: "brother", content: text }).then(() => undefined);
+    void sb().from("atlas_messages").insert({ chat_id: chatId, role: "brother", content: text, meta: { image: img } }).then(() => undefined);
 
     const tools: ToolChip[] = [];
     const usageRef = { total: 0 };
@@ -238,7 +262,10 @@ export default function AgentPage({ item }: { item: NavItem }) {
           nav_id: item.id,
           use_tools: true,
           system: systemPrompt(item, rootFolders),
-          messages: next.slice(-30).map((m) => ({ role: m.role === "brother" ? "user" : "assistant", content: m.content })),
+          messages: next.slice(-30).map((m) =>
+            m.image
+              ? { role: "user", content: [{ type: "text", text: m.content }, { type: "image_url", image_url: { url: fileUrl(m.image) } }] }
+              : { role: m.role === "brother" ? "user" : "assistant", content: m.content }),
         }),
       });
       if (!res.ok || !res.body) throw new Error(`API ${res.status} · ${(await res.text()).slice(0, 200)}`);
@@ -345,14 +372,14 @@ export default function AgentPage({ item }: { item: NavItem }) {
           <button
             className="flex items-center gap-1 rounded-md border px-2 py-1 text-xs"
             style={{
-              borderColor: meeting ? "#0a84ff" : "var(--border)",
-              color: meeting ? "#0a84ff" : "var(--text-soft)",
-              background: meeting ? "rgba(10,132,255,0.08)" : undefined,
+              borderColor: meeting !== "off" ? "#0a84ff" : "var(--border)",
+              color: meeting !== "off" ? "#0a84ff" : "var(--text-soft)",
+              background: meeting !== "off" ? "rgba(10,132,255,0.08)" : undefined,
             }}
-            onClick={() => setMeeting((v) => !v)}
-            title="Meeting room · one text → every AI answers"
+            onClick={() => setMeeting((v) => (v === "off" ? "free" : v === "free" ? "all" : "off"))}
+            title="Meeting room · off → FREE (every $0 AI) → ALL (everything)"
           >
-            🎪 meeting {meeting ? "ON" : "off"}
+            🎪 {meeting === "off" ? "meeting off" : meeting === "free" ? "meeting FREE" : "meeting ALL"}
           </button>
         )}
         <div className="flex-1" />
@@ -425,6 +452,7 @@ export default function AgentPage({ item }: { item: NavItem }) {
                       <Wrench size={10} /> {t.name}{t.detail ? ` · ${t.detail}` : ""}
                     </div>
                   ))}
+                  {m.image && <img src={fileUrl(m.image)} alt="" className="mb-1 max-h-48 rounded-lg" />}
                   {m.content || (busy && i === msgs.length - 1 ? "…" : "")}
                 </div>
               </div>
@@ -433,16 +461,27 @@ export default function AgentPage({ item }: { item: NavItem }) {
           </div>
           {error && <div className="mx-6 mb-2 rounded-lg border border-amber-200 bg-amber-50 p-2 text-xs">{error}</div>}
           <div className="flex items-end gap-2 px-6 pb-5">
+            {attached && (
+              <div className="relative">
+                <img src={fileUrl(attached)} alt="" className="h-12 rounded-lg" />
+                <button className="absolute -right-1 -top-1 rounded-full bg-black/60 px-1 text-[10px] text-white" onClick={() => setAttached(null)}>✕</button>
+              </div>
+            )}
             <textarea
               rows={1}
               value={input}
               onChange={(e) => setInput(e.target.value)}
+              onPaste={(e) => {
+                const item = [...e.clipboardData.items].find((i) => i.type.startsWith("image/"));
+                const file = item?.getAsFile();
+                if (file) { e.preventDefault(); void uploadImage(file).then((p) => p && setAttached(p)); }
+              }}
               onKeyDown={(e) => {
                 if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); void send(); }
               }}
               placeholder={
-                isCC && meeting
-                  ? "Ask everyone · all AIs answer in parallel…"
+                isCC && meeting !== "off"
+                  ? (meeting === "free" ? "Ask every FREE AI in parallel…" : "Ask EVERYONE in parallel…")
                   : isCC
                     ? `Plan with ${MODELS.find((m) => m.id === model)?.label ?? model}…`
                     : `Message ${item.title}…`
