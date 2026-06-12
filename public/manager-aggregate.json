@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T00:53:00Z",
+  "generated_at": "2026-06-12T01:08:01Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 156,
+    "note": 157,
     "briefing": 22,
     "idea": 0
   },
-  "total_blocks": 200,
+  "total_blocks": 201,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "54dae868b04a",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Investigate and document the differences between stale and retired daemons in the context of daemon-health-whitelist · why: Recent brain canon #45620 highlights an audit finding related to daemon health, which is critical for system stability and ",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-11T20:56:13.732771"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -247,17 +258,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-11T16:08:42.207659"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "f5f5ca929160",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Continue deep-dive into memory-architecture-lift quadrant to resolve P1 memory architecture issues · why: Recent brain canon #28284 indicates high-arousal research cycle on this topic, which is marked as P1 priority and directly relates to current",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-11T16:06:36.106599"
       }
     ],
     "action": [],
@@ -266,6 +266,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "6bcd70eb7ffb",
+        "type": "callout",
+        "content": "**What** · Researched and documented key differences between stale and retired daemons in daemon-health-whitelist context. · **Why** · Brain canon #45620 flagged audit risks in daemon health management. Clarifying terms prevents system instability. · **Result** · Stale daemons (inactive but recovera",
+        "priority": "daemon-taxonomy",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-11T20:56:18.776716"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -804,17 +815,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-11T18:00:02.967269"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "968ac236ef26",
-        "type": "database",
-        "content": "general · last 30d · 80 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-11T18:00:02.748595"
       }
     ],
     "briefing": [
