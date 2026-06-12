@@ -152,7 +152,7 @@ export default async function handler(req, res) {
         "HTTP-Referer": "https://atlasos.me",
         "X-Title": "Atlas-OS",
       },
-      body: JSON.stringify({ ...body, model: callModel }),
+      body: JSON.stringify({ max_tokens: 2048, ...body, model: callModel }),
     });
 
   res.setHeader("Content-Type", "text/event-stream");
