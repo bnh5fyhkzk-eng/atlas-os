@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T01:23:01Z",
+  "generated_at": "2026-06-12T01:38:02Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 158,
+    "note": 159,
     "briefing": 22,
     "idea": 0
   },
-  "total_blocks": 202,
+  "total_blocks": 203,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "3fa208063077",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the loop-health false alarm issue surfaced in cycle-wake audit · why: This is a critical system health issue that could affect core functionality, as indicated by the P1 priority tag and recent activity",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-11T21:26:46.077324"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -247,17 +258,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-11T16:09:15.017602"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "812903778da2",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Continue deep-dive into memory-architecture-lift quadrant to resolve P1 memory architecture issues · why: Recent brain canon #28284 indicates this is a high-priority research area that needs completion to advance the memory architecture work",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-11T16:08:59.034324"
       }
     ],
     "action": [],
@@ -266,6 +266,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "73a93fb32ec5",
+        "type": "callout",
+        "content": "**What** · Initiated deep-dive into cycle-wake audit logs focusing on loop-health monitoring subsystem · **Why** · False alarms indicate potential sensor drift or threshold misalignment in critical health checks · **Result** · Identified 3 anomaly patterns correlating with maintenance windows (expec",
+        "priority": "diagnostic_tracing",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-11T21:26:51.334935"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -804,17 +815,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-11T18:00:02.967282"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "49efe2964a02",
-        "type": "database",
-        "content": "syntheses · last 30d · 1 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-11T18:00:02.967277"
       }
     ],
     "briefing": [
