@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-06-12T01:24:43Z",
-  "total_items_scored": 160,
+  "generated_at": "2026-06-12T01:34:43Z",
+  "total_items_scored": 161,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Continue deep-dive into memory-architecture-lift quadrant to resolve P1 memory architecture issues \u00b7 why: Recent brain canon #28284 indicates this is a high-priority research area that ne",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Deep-dive into memory-architecture-lift quadrant to synthesize findings from cycle 6 research with recent STATE-MD insights on strong-arms-architecture. \u00b7 why: Recent high-arousal canons ",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-11T16:08:59.034324"
+      "updated_at": "2026-06-11T16:09:15.017602"
     },
     {
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Deep-dive into memory-architecture-lift quadrant to resolve P1 priority from cycle #28284 \u00b7 why \u00b7 Recent high-arousal canon shows this research was actively being worked on and remains unresolved, with direct connection to memory architecture which is foundational to system operations",
+      "content": "HERMES TASK \u00b7 backfill past arm output data not in atlasos.me as per brother direct request \u00b7 why \u00b7 Brother explicitly requested this data for continuity and system integrity (P0 directive). This aligns with recent high-priority memory architecture work (#28284) and shared state synchronization (#45594-45596).",
       "category": "decision",
-      "priority": "P1",
+      "priority": "P0",
       "source": "hermes-deepseek",
       "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-11T16:21:49.366445",
-      "use_skill": "notebooklm"
+      "updated_at": "2026-06-11T16:37:06.274321",
+      "use_skill": "brain-rrf"
     },
     {
       "arm": "infra",
@@ -34,22 +34,11 @@
       "category": "launchagents",
       "priority": "P1",
       "source": "backfill",
-      "score": 9.79,
+      "score": 9.71,
       "updated_at": "2026-06-11T18:00:03.523230"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Continue deep-dive into memory-architecture-lift quadrant to resolve P1 memory architecture issues \u00b7 why: Recent brain canon #28284 indicates this is a high-priority research area that ne",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-11T16:08:59.034324"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -148,6 +137,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-11T18:08:29.151798"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Deep-dive into memory-architecture-lift quadrant to resolve P1 closure from cycle #28284 \u00b7 why: Recent high-arousal canon #28284 is pending P1 closure in memory-architecture quadrant, req",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-11T18:23:42.626215"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
