@@ -97,8 +97,8 @@ export default function Canvas({ nav }: { nav: NavItem[]; home: NavItem }) {
   const [ready, setReady] = useState(false);
   const [picking, setPicking] = useState(false);
   const { width, containerRef, mounted } = useContainerWidth();
-  const stateRef = useRef({ layout, widgets });
-  stateRef.current = { layout, widgets };
+  const stateRef = useRef<{ layout: Layout; widgets: CanvasWidget[]; width?: number }>({ layout, widgets, width });
+  stateRef.current = { layout, widgets, width };
 
   const arms = nav.filter((n) => n.section === "arms");
   const navById = useMemo(() => new Map(nav.map((n) => [n.id, n])), [nav]);
@@ -115,10 +115,16 @@ export default function Canvas({ nav }: { nav: NavItem[]; home: NavItem }) {
       .finally(() => setReady(true));
   }, []);
 
+  // persist ONLY desktop-breakpoint layouts · mobile collapse must never
+  // overwrite the saved desktop arrangement (bug caught 2026-06-11 22:07)
   const persist = useCallback((nextLayout: Layout, nextWidgets: CanvasWidget[]) => {
-    setLayout(nextLayout);
     setWidgets(nextWidgets);
-    void saveCanvas(KEY, nextLayout as unknown as unknown[], nextWidgets).catch(() => undefined);
+    if ((stateRef.current.width ?? 0) >= 640) {
+      setLayout(nextLayout);
+      void saveCanvas(KEY, nextLayout as unknown as unknown[], nextWidgets).catch(() => undefined);
+    } else {
+      void saveCanvas(KEY, stateRef.current.layout as unknown as unknown[], nextWidgets).catch(() => undefined);
+    }
   }, []);
 
   const addWidget = (navId: string) => {
