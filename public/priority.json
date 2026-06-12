@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-12T09:05:07Z",
+  "generated_at": "2026-06-12T09:15:07Z",
   "total_items_scored": 167,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the discrepancy in loop-health monitoring flagged in #45633 to prevent future false alarms. \u00b7 why: Recent cycle-wake audits and loop-health issues (#45620, #45623, #45633) ind",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the loop-health false alarm fix to ensure correct log monitoring and prevent future misalignments. \u00b7 why: Recent cycle-wake audits and loop-health issues indicate a critical n",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-11T22:42:57.279440"
+      "updated_at": "2026-06-11T22:58:10.659482"
     },
     {
       "arm": "research",
@@ -34,22 +34,11 @@
       "category": "launchagents",
       "priority": "P1",
       "source": "backfill",
-      "score": 9.21,
+      "score": 9.12,
       "updated_at": "2026-06-12T00:30:03.699384"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the discrepancy in loop-health monitoring flagged in #45633 to prevent future false alarms. \u00b7 why: Recent cycle-wake audits and loop-health issues (#45620, #45623, #45633) ind",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-11T22:42:57.279440"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -148,6 +137,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-12T01:00:26.691928"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the cycle-fire pattern observed in #45678 and its correlation with the 3rd-instance-1-day occurrence to determine if it's a recurring signal or anomaly. \u00b7 why: The recent brai",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-12T01:15:43.033303"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
