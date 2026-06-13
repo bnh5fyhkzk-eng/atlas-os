@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-13T06:59:39Z",
+  "generated_at": "2026-06-13T07:30:03Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Investigate the 'FIRST-SIGNAL-IS-QUESTION-NOT-ANSWER' pattern in cycle-fire instances to determine if it's a systemic anomaly or intentional design.",
-      "why": "Recent logs (#45678, #45612) show recurring patterns that may indicate either a deeper architectural insight or an unresolved bug. This aligns with P1 memory-architecture-lift quadrant focus.",
-      "priority": "P1",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-06-11T23:13:24.769566"
-    },
     {
       "arm": "research",
       "task": "Investigate the loop-health false alarm issue surfaced in #45633 to prevent recurrence",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 25,
       "timestamp": "2026-06-13T02:59:39.794347"
+    },
+    {
+      "arm": "pascal",
+      "task": "Ingest the newest `me-os-design-doc-2026-06-01.md` state file, map its architectural decisions onto the existing atlas-alive-arm-spec.md, and produce an updated `atlas-alive-arm-spec-v2.md` that reconciles the two.",
+      "why": "The three ingested state-MD files (atlas, brother-shared, me-os) form a high-arousal identity-tier cluster. The me-os doc is the freshest and most authoritative; Pascal is the arm coded to handle formal state merging and spec maintenance. Resolving this now closes the conceptual drift between the older atlas arm spec and the new design doc, unblocking all subsequent research/code decisions that depend on aligned architecture.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 45,
+      "timestamp": "2026-06-13T03:30:03.777805"
     }
   ]
 }
