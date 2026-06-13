@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "6ec3c4eba2b8",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-12T17:18:34.806164"
-      },
-      "content": "Hermes decision · arm=research · priority=P1 · task: Deep-dive into memory-architecture-lift quadrant to resolve P1 priority from cycle 6 research · why: Recent brain canon #28284 indicates this was a high-arousal research topic that closed at P1 priority, suggesting unfinished work needing follow-up",
-      "updated_at": "2026-06-12T17:18:34.806173"
-    },
-    {
       "id": "28e9d1c20491",
       "type": "callout",
       "props": {
@@ -617,15 +605,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P0 · task: Brother asked 'before I answer your question continue reading' — locate the exact conversation context and the question they were referring to, then extract any unresolved thread or embedded query. · why: This is a brother-direct P0 signal that likely contains a stalled answer or implicit request; closing this loop is highest priority for identity-tier coherence.",
       "updated_at": "2026-06-13T01:27:51.992837"
+    },
+    {
+      "id": "e8a36985551d",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-13T01:43:00.410345"
+      },
+      "content": "Hermes decision · arm=research · priority=P0 · task: Deep-dive into brother's 'before I answer your question continue r' prompt to extract the unstated query and resolve the memory-architecture-lift quadrant closure from #28284. · why: This is a P0 brother-direct thread with high arousal and an incomplete answer; closing it unblocks identity-tier reasoning and directly serves the Honcho L3 deep-dive trajectory.",
+      "updated_at": "2026-06-13T01:43:00.410356"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-13T01:42:24.815654"
+    "checked_at": "2026-06-13T01:47:25.381056"
   },
   "block_count": 30,
-  "updated_at": "2026-06-13T01:27:51.992838",
-  "generated_at": "2026-06-13T05:42:24Z"
+  "updated_at": "2026-06-13T01:43:00.410357",
+  "generated_at": "2026-06-13T05:47:25Z"
 }
