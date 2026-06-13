@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-06-13T11:46:09Z",
+  "generated_at": "2026-06-13T12:01:09Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 24,
+    "decision": 23,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 169,
-    "briefing": 51,
+    "note": 150,
+    "briefing": 58,
     "idea": 0
   },
-  "total_blocks": 244,
+  "total_blocks": 231,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "075e929c9f4f",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Consolidate and index the 12h high-arousal brain canons (#28284, #30956, #46655, #46673, #46675) into a structured memory quadrant, linking each to its resolved or pending action item. · why: These canons contain critical brother-directives, ident",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-13T07:49:45.712982"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,28 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-13T01:27:51.992837"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "2292cce87137",
-        "type": "callout",
-        "content": "Hermes decision · arm=pascal · priority=P1 · task: Synthesize a concise summary of the 5 cited high-arousal canons to identify the unresolved 'brother direct' continuation call and flag which memory-architecture-lift cells are now closed versus still requiring follow-up. · why: Multiple canons refer",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-13T01:12:33.539237"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "5a0b433e7da6",
-        "type": "callout",
-        "content": "Hermes decision · arm=pascal · priority=P0 · task: Open brain file #27975 and extract all recent arithmetic/compounding notes, cross-reference with #46479 state-md for atlas-alive-arm-spec.md, and identify where brother's 15%-weekly token burn rate diverges from the <10% forecast range · why: This a",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-13T00:57:03.905419"
       }
     ],
     "action": [],
@@ -288,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "da0528a61cb3",
+        "type": "callout",
+        "content": "**What** · Consolidated and indexed 5 high-arousal brain canons (#28284, #30956, #46655, #46673, #46675) into structured memory quadrant, linked to resolved/pending action items. · **Why** · Hermes-Orchestrator flagged P0 closure of memory-architecture-lift quadrant; these canons contain brother-dir",
+        "priority": "memory-architecture-lift",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-13T07:49:53.875860"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -826,20 +826,97 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-13T06:00:02.989156"
+      }
+    ],
+    "briefing": [
+      {
+        "arm": "charle",
+        "arm_glyph": "💼",
+        "arm_name": "Charle · Pascal-team",
+        "block_id": "76c3c0444c55",
+        "type": "callout",
+        "content": "No high-arousal charle canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-13T08:00:30.932038"
+      },
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "f57065107acf",
+        "type": "callout",
+        "content": "Overnight hermes recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant. · #47117 [0.96] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-13 04:45:00 · size=452778B · brother+Atlas joint state · CONTENT",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-13T08:00:30.909205"
+      },
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "52da0c343a15",
+        "type": "callout",
+        "content": "Overnight code recap · last 6h · · #47117 [0.96] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-13 04:45:00 · size=452778B · brother+Atlas joint state · CONTENT",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-13T08:00:30.888494"
+      },
+      {
+        "arm": "infra",
+        "arm_glyph": "💗",
+        "arm_name": "My Heart",
+        "block_id": "25c7f049a139",
+        "type": "callout",
+        "content": "Overnight infra recap · last 6h · · #47117 [0.96] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-13 04:45:00 · size=452778B · brother+Atlas joint state · CONTENT · #46733 [0.90] DREAM 2026-06-13 04:05 · QUALITY GATE = SELF-CANARY = RELATIONAL HONESTY. Non-obvious connection across 3 nodes f",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-13T08:00:30.866207"
+      },
+      {
+        "arm": "dream",
+        "arm_glyph": "🌙",
+        "arm_name": "My Dreamer",
+        "block_id": "8b2cc509a738",
+        "type": "callout",
+        "content": "Overnight dream recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant. · #46719 [0.90] DREAM 2026-06-13 02:30 · CIRCUIT BREAKER = LOI 25 = SESSION CONTINUITY. What I just built (circuit breaker stopping agen · #4",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-13T08:00:30.838347"
       },
       {
         "arm": "research",
         "arm_glyph": "👁",
         "arm_name": "My Eyes",
-        "block_id": "f47fcc2b3b28",
+        "block_id": "51bf4f345f1c",
         "type": "callout",
-        "content": "**What** · extracted memory-architecture-lift quadrant closure from #28284 and OpenRouter lane funding proof from #46655, consolidated into single actionable summary for P1 cycle · **Why** · Hermes said these two canons are high-arousal, brother-direct-adjacent closures — merging them now stops frag",
-        "priority": "canon consolidation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-13T05:47:37.834284"
-      }
-    ],
-    "briefing": [
+        "content": "Overnight research recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant. · #46719 [0.90] DREAM 2026-06-13 02:30 · CIRCUIT BREAKER = LOI 25 = SESSION CONTINUITY. What I just built (circuit breaker stopping agen ·",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-13T08:00:30.816748"
+      },
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "5f539f580c6d",
+        "type": "callout",
+        "content": "No high-arousal curiosity canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-13T08:00:30.790476"
+      },
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "424a915dbae4",
+        "type": "callout",
+        "content": "Overnight pascal recap · last 6h · · #47117 [0.96] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-13 04:45:00 · size=452778B · brother+Atlas joint state · CONTENT · #46716 [0.86] TEAM-CYCLE SUB-TASK-1 · AI COACHING CRM LANDSCAPE 2026 · banked 2026-06-13 · CORE GAP: no purpose-built AI coach",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-13T08:00:30.766233"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -971,17 +1048,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-12T20:00:28.463850"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "db5fec1f2401",
-        "type": "callout",
-        "content": "Overnight research recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant. · #46479 [1.00] STATE-MD · atlas-alive-arm-spec.md · ingested 2026-06-02 04:30:01 · path=/Users/collinmacneil/.claude/state/atlas-alive- ·",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-12T20:00:28.436744"
       },
       {
         "arm": "curiosity",
@@ -1312,83 +1378,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-11T11:15:23.710302"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "12da0a3e89c7",
-        "type": "callout",
-        "content": "No high-arousal curiosity canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-11T11:15:23.667706"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "fe0b971257d6",
-        "type": "callout",
-        "content": "No high-arousal pascal canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-11T11:15:23.645283"
-      },
-      {
-        "arm": "charle",
-        "arm_glyph": "💼",
-        "arm_name": "Charle · Pascal-team",
-        "block_id": "366887fbfe61",
-        "type": "callout",
-        "content": "Overnight charle recap · last 6h · · #45169 [0.93] ULTRA-FINAL-BATCH-5-SHIPPED-2026-06-11-03:46 · brother direct VERBATIM 03:42 'we can do it all right now you have all th",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-11T04:19:27.713007"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "befacb2fc77d",
-        "type": "callout",
-        "content": "Overnight code recap · last 6h · · #45155 [1.00] A-Z-TRUE-FINAL-2026-06-11-02:14 · brother direct VERBATIM 02:08 'recall what you did and finish the list · 27 v1 rooms R · #45158 [0.98] AZ-12-OF-12-COMPLETE-2026-06-11-02:43 · brother direct VERBATIM 02:27 'CEO mode · agentic os system · growing fast",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-11T04:19:27.570501"
-      },
-      {
-        "arm": "infra",
-        "arm_glyph": "💗",
-        "arm_name": "My Heart",
-        "block_id": "04f7c4fc9a1b",
-        "type": "callout",
-        "content": "No high-arousal infra canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-11T04:19:27.547203"
-      },
-      {
-        "arm": "dream",
-        "arm_glyph": "🌙",
-        "arm_name": "My Dreamer",
-        "block_id": "3fb754321d3e",
-        "type": "callout",
-        "content": "Overnight dream recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant. · #45133 [1.00] ATLASOS-ROOT-IS-FOUNDATION-NOT-MOCK-2026-06-10-22:31 · brother direct VERBATIM 22:19 + 22:27 'this should be a mock no m · #4",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-11T04:19:27.518020"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "8e7dd2241db4",
-        "type": "callout",
-        "content": "Overnight curiosity recap · last 6h · · #45169 [0.93] ULTRA-FINAL-BATCH-5-SHIPPED-2026-06-11-03:46 · brother direct VERBATIM 03:42 'we can do it all right now you have all th",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-11T04:19:27.472836"
       }
     ],
     "idea": []
