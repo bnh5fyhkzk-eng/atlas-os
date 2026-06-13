@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-13T00:21:27Z",
-  "count": 85,
+  "generated_at": "2026-06-13T00:36:51Z",
+  "count": 86,
   "decisions": [
     {
       "arm": "research",
@@ -766,6 +766,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 30,
       "timestamp": "2026-06-12T20:21:27.600812"
+    },
+    {
+      "arm": "pascal",
+      "task": "Scan all ingested state-MD files for duplicate or conflicting memory paths, then deduplicate and consolidate into a single canonical atlas-alive-arm.md",
+      "why": "Recent brain canons show multiple state-MD ingestions with overlapping paths. Pascal can deduplicate and compress this memory fragmentation into a single source of truth, freeing context and preventing future token/attention waste.",
+      "priority": "P1",
+      "use_skill": "brain-rrf",
+      "est_minutes": 12,
+      "timestamp": "2026-06-12T20:36:51.960858"
     }
   ]
 }
