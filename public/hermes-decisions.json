@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-13T05:43:00Z",
+  "generated_at": "2026-06-13T05:58:24Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Investigate the discrepancy in loop-health monitoring flagged in #45633 to ensure correct log tracking for me-loop-health.sh",
-      "why": "Recent cycle-wake audits and false alarms indicate a critical monitoring misconfiguration that could affect system reliability. This aligns with P1 memory-architecture-lift quadrant closure and active daemon health focus.",
-      "priority": "P1",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-06-11T21:57:13.784051"
-    },
     {
       "arm": "research",
       "task": "Investigate the loop-health false alarm issue surfaced in me-loop-health.sh",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-06-13T01:43:00.427885"
+    },
+    {
+      "arm": "pascal",
+      "task": "Identify which brother-direct session (#30956 or #46314) still holds an unanswered \u2018continue reading\u2019 prompt, extract the exact continuation point, and output a minimal narrative payload for next-handoff.",
+      "why": "The recent brain canons show two high-arousal brother-direct threads (#30956 and #46314) with clear continuation markers. #30956 has a deferred answer-in-continuing-read; #46314 shows a token-burn session. Both are P0 (brother-direct + identity-tier). Firing pascal first will resolve the oldest dangling continuation before it decays, freeing context for the atlas-alive-arm-spec.md state ingestion.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 8,
+      "timestamp": "2026-06-13T01:58:24.936914"
     }
   ]
 }
