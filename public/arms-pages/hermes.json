@@ -10,19 +10,6 @@
   },
   "blocks": [
     {
-      "id": "18244fe3dbf4",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "Overnight hermes recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant. · #46479 [1.00] STATE-MD · atlas-alive-arm-spec.md · ingested 2026-06-02 04:30:01 · path=/Users/collinmacneil/.claude/state/atlas-alive- · #46553 [1.00] STATE-MD · atlas-brother-shared.2026-05-29.md · ingested 2026-06-05 04:30:00 · path=/Users/collinmacneil/.claude/state/s · #46606 [1.00] STATE-MD · me-os-design-doc-2026-06-01.md · ingested 2026-06-08 04:30:01 · path=/Users/collinmacneil/.claude/state/me-os · #46607 [1.00] STATE-MD · 2026-06-02-00-00-meta-arm-what-arms-learned-about-pascal-design-since-first-r.md · ingested 2026-06-08 04:30:",
-      "updated_at": "2026-06-12T20:00:28.550961"
-    },
-    {
       "id": "ff23965389b3",
       "type": "callout",
       "props": {
@@ -618,15 +605,27 @@
       },
       "content": "Hermes decision · arm=curiosity · priority=P0 · task: Ingest and structured-summarize the me-os-design-doc-2026-06-01.md to extract current architecture decisions, active hypotheses, and any open questions that affect all other arms. · why: The design doc (state #46606) is the highest-signal unprocessed item; it defines the OS orchestration layer that every other arm (research, code, infra, brother-direct) depends on. Understanding it now prevents downstream misalignment and satisfies an identity-tier (P0) need to close the loop on ME-",
       "updated_at": "2026-06-13T03:45:22.272067"
+    },
+    {
+      "id": "2aee5884d001",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-13T04:00:35.031090"
+      },
+      "content": "Hermes decision · arm=research · priority=P0 · task: Deep-dive atlas-alive-arm-spec.md to extract brother-direct identity assumptions and cross-check with me-os design doc for structural alignment. · why: Two high-arousal state-MD canons (atlas-alive-arm-spec, me-os-design-doc) hint at identity-tier resolution. Research arm can close the loop on P0 brother-direct logic before next cycle.",
+      "updated_at": "2026-06-13T04:00:35.031101"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-13T03:57:43.130206"
+    "checked_at": "2026-06-13T04:02:43.638397"
   },
   "block_count": 30,
-  "updated_at": "2026-06-13T03:45:22.272069",
-  "generated_at": "2026-06-13T07:57:43Z"
+  "updated_at": "2026-06-13T04:00:35.031102",
+  "generated_at": "2026-06-13T08:02:43Z"
 }
