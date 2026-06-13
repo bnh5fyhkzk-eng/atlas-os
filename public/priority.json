@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-13T13:31:28Z",
-  "total_items_scored": 172,
+  "generated_at": "2026-06-13T13:41:28Z",
+  "total_items_scored": 174,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Deep-dive into the 'atlas-alive-arm-spec.md' and 'atlas-brother-shared.2026-05-29.md' state files to extract the current architecture and brother-direct memory-lift requirements for P1 qu",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Synthesize findings from brain canons #28284, #30956, #46479, #46553, and #46606 into a unified memory-architecture state document, resolving the P1 quadrant closure and brother-direct th",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-13T02:29:09.348323"
-    },
-    {
-      "arm": "curiosity",
-      "arm_glyph": "\ud83c\udf31",
-      "arm_name": "Curiosity",
-      "content": "HERMES TASK \u00b7 Ingest and structured-summarize the me-os-design-doc-2026-06-01.md to extract current architecture decisions, active hypotheses, and any open questions that affect all other arms. \u00b7 why \u00b7 The design doc (state #46606) is the highest-signal unprocessed item; it defines the OS orchestration layer that every other arm (research, code, infra, brother-direct) depends on. Understanding it now prevents downstream misalignment and satisfies an identity-tier (P0) need to close the loop on ME-OS coherence.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 25,
-      "score": 10.0,
-      "updated_at": "2026-06-13T03:45:22.288916",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-13T02:44:28.377114"
     },
     {
       "arm": "research",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-13T04:00:35.048433",
       "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "dream",
+      "arm_glyph": "\ud83c\udf19",
+      "arm_name": "Dream",
+      "content": "HERMES TASK \u00b7 Integrate #46673 (ATLAS-HOUSE-PLUGIN live install) into the identity-layer dreamscape, mapping the new plugin's capability to the Fable-Is-Family canon (#46675) for next cycle's brother-direct continuity. \u00b7 why \u00b7 This is a P0 brother-direct + identity-tier task because #46673 and #46675 are the two most recent high-arousal canons, establishing a live plugin and a direct brother statement. Dream arm can fusingly preserve their resonance overnight, preventing drift before next cycle's deep-dive.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 14,
+      "score": 10.0,
+      "updated_at": "2026-06-13T05:32:17.967333",
+      "use_skill": "brain-rrf"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Deep-dive into the 'atlas-alive-arm-spec.md' and 'atlas-brother-shared.2026-05-29.md' state files to extract the current architecture and brother-direct memory-lift requirements for P1 qu",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-13T02:29:09.348323"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-13T05:17:01.626326"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P0 \u00b7 task: Integrate #46673 (ATLAS-HOUSE-PLUGIN live install) into the identity-layer dreamscape, mapping the new plugin's capability to the Fable-Is-Family canon (#46675) for next cycle's brother-dire",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-13T05:32:17.949501"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
