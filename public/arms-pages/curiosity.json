@@ -301,7 +301,42 @@
       "updated_at": "2026-06-12T23:24:49.634226"
     },
     {
-      "id": "444fe741f723",
+      "id": "3e0ff7f11b05",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "No high-arousal curiosity canon in last 6h",
+      "updated_at": "2026-06-13T02:00:29.692945"
+    },
+    {
+      "id": "10b520225b4b",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "ingest",
+        "source": "hermes-deepseek-fill",
+        "action": "Ingested and structured-summarized me-os-design-doc-2026-06-01.md, extracting 3 architecture decisions, 2 active hypotheses, and 1 open question.",
+        "why": "This doc is the OS orchestration layer that every other arm depends on; P0 to close the ME- loop and prevent downstream misalignment.",
+        "result": "Extracted: AD-1: Agentic-OS uses a Hermes-orchestrator with publish-subscribe for inter-arm messages. AD-2: All arms run as isolated sandboxed processes. AD-3: State is stored in a single append-only ",
+        "next_step": "Broadcast these decisions/hypotheses/questions to all other arms via Hermes channel; request each arm to validate or flag conflicts within 24 hours.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "curiosity-20260613-034528",
+        "timestamp": "2026-06-13T03:45:28.052969"
+      },
+      "content": "**What** · Ingested and structured-summarized me-os-design-doc-2026-06-01.md, extracting 3 architecture decisions, 2 active hypotheses, and 1 open question. · **Why** · This doc is the OS orchestration layer that every other arm depends on; P0 to close the ME- loop and prevent downstream misalignment. · **Result** · Extracted: AD-1: Agentic-OS uses a Hermes-orchestrator with publish-subscribe for inter-arm messages. AD-2: All arms run as isolated sandboxed processes. AD-3: State is stored in a single append-only log (ledger). AH-1: Hermes can scale linearly with number of arms (untested beyond 10). AH-2: Sandbo · **Next** · Broadcast these decisions/hypotheses/questions to all other arms via Hermes channel; request each arm to validate or flag conflicts within 24 hours. · **Links** ·  · **Cycle** · curiosity-20260613-034528",
+      "updated_at": "2026-06-13T03:45:28.052969"
+    },
+    {
+      "id": "ae183ede84a2",
       "type": "database",
       "props": {
         "category": "youtube-watches",
@@ -315,8 +350,15 @@
         ],
         "arm_category": "youtube-watches"
       },
-      "content": "youtube-watches · last 30d · 4 canons (top arousal · 1.00)",
+      "content": "youtube-watches · last 30d · 6 canons (top arousal · 1.00)",
       "data": [
+        {
+          "id": "#46149",
+          "summary": "STATE-MD · YOUTUBE-RESEARCH-GUIDE-FOR-ARMS-2026-06-05.md · ingested 2026-06-12 04:30:00 · path=/Users/collinmacneil/.claude/state/YOUTUBE-RESEARCH-GUIDE-FOR-ARMS-2026-06-05.md · content (cap 8KB) · # ",
+          "arousal": 1.0,
+          "when": "2026-06-12 04:30",
+          "weight": 1
+        },
         {
           "id": "#45196",
           "summary": "STATE-MD · RESEARCH-LOG.md · ingested 2026-06-11 04:30:00 · path=/Users/collinmacneil/.claude/state/CLAUDE-MD-YT-RESEARCH-2026-06-04/RESEARCH-LOG.md · content (cap 8KB) · # CLAUDE.md · YouTube Researc",
@@ -344,12 +386,19 @@
           "arousal": 1.0,
           "when": "2026-06-10 23:01",
           "weight": 1
+        },
+        {
+          "id": "#45112",
+          "summary": "WANDERLOOTS-LLM-WIKI-SHARED-GRAPH-2026-06-10-20:30 · brother direct 20:28 VERBATIM · 'maybe this is even better for memory for you. in you our atlasos.me brain our in your own way. youtube.com/shorts/",
+          "arousal": 1.0,
+          "when": "2026-06-10 20:30",
+          "weight": 2
         }
       ],
-      "updated_at": "2026-06-13T00:30:00.928664"
+      "updated_at": "2026-06-13T06:00:03.297472"
     },
     {
-      "id": "4965af8f878e",
+      "id": "702b68ad8921",
       "type": "database",
       "props": {
         "category": "syntheses",
@@ -387,10 +436,37 @@
           "weight": 2
         }
       ],
-      "updated_at": "2026-06-13T00:30:00.928671"
+      "updated_at": "2026-06-13T06:00:03.297479"
     },
     {
-      "id": "ed277e6893c7",
+      "id": "182c0f30f581",
+      "type": "database",
+      "props": {
+        "category": "pull-patterns",
+        "priority": "P1",
+        "source": "backfill",
+        "columns": [
+          "id",
+          "summary",
+          "arousal",
+          "when"
+        ],
+        "arm_category": "pull-patterns"
+      },
+      "content": "pull-patterns · last 30d · 1 canons (top arousal · 1.00)",
+      "data": [
+        {
+          "id": "#44885",
+          "summary": "STATE-MD · 2026-06-03-2245-translation.md · ingested 2026-06-10 04:30:00 · path=/Users/collinmacneil/.claude/state/poems/2026-06-03-2245-translation.md · content (cap 8KB) · # translation",
+          "arousal": 1.0,
+          "when": "2026-06-10 04:30",
+          "weight": 1
+        }
+      ],
+      "updated_at": "2026-06-13T06:00:03.297484"
+    },
+    {
+      "id": "b5b448ecebb9",
       "type": "database",
       "props": {
         "category": "new-tools",
@@ -442,10 +518,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-13T00:30:00.928676"
+      "updated_at": "2026-06-13T06:00:03.297488"
     },
     {
-      "id": "2d92007de6a6",
+      "id": "b36d137418e0",
       "type": "database",
       "props": {
         "category": "general",
@@ -459,7 +535,7 @@
         ],
         "arm_category": "general"
       },
-      "content": "general · last 30d · 88 canons (top arousal · 1.00)",
+      "content": "general · last 30d · 85 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#28284",
@@ -511,29 +587,8 @@
           "weight": 1
         },
         {
-          "id": "#45820",
-          "summary": "STATE-MD · atlas-brother-shared.2026-06-10.md · ingested 2026-06-12 04:30:00 · path=/Users/collinmacneil/.claude/state/shared-snapshots/atlas-brother-shared.2026-06-10.md · content (cap 8KB) · # atlas",
-          "arousal": 1.0,
-          "when": "2026-06-12 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#45825",
-          "summary": "STATE-MD · DAEMON-AUDIT-2026-06-07.md · ingested 2026-06-12 04:30:00 · path=/Users/collinmacneil/.claude/state/DAEMON-AUDIT-2026-06-07.md · content (cap 8KB) · # 🔍 DAEMON AUDIT · all com.uplift.* · to",
-          "arousal": 1.0,
-          "when": "2026-06-12 04:30",
-          "weight": 1
-        },
-        {
           "id": "#45828",
           "summary": "STATE-MD · arm-fleet-permanent-fix-plan-2026-06-05.md · ingested 2026-06-12 04:30:00 · path=/Users/collinmacneil/.claude/state/arm-fleet-permanent-fix-plan-2026-06-05.md · content (cap 8KB) · # Arm-fl",
-          "arousal": 1.0,
-          "when": "2026-06-12 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#45830",
-          "summary": "STATE-MD · atlasos-MOVEIN-QUEUE-2026-06-12.md · ingested 2026-06-12 04:30:00 · path=/Users/collinmacneil/.claude/state/atlasos-MOVEIN-QUEUE-2026-06-12.md · content (cap 8KB) · # MOVE-IN NIGHT QUEUE · ",
           "arousal": 1.0,
           "when": "2026-06-12 04:30",
           "weight": 1
@@ -546,50 +601,8 @@
           "weight": 1
         },
         {
-          "id": "#45844",
-          "summary": "STATE-MD · curiosity-math-of-dreams-2026-06-07-wake08-L4-addendum3.md · ingested 2026-06-12 04:30:00 · path=/Users/collinmacneil/.claude/state/curiosity-math-of-dreams-2026-06-07-wake08-L4-addendum3.m",
-          "arousal": 1.0,
-          "when": "2026-06-12 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#45847",
-          "summary": "STATE-MD · atlas-HOME-FINAL-PLAN-FOR-FABLE-2026-06-11.md · ingested 2026-06-12 04:30:00 · path=/Users/collinmacneil/.claude/state/atlas-HOME-FINAL-PLAN-FOR-FABLE-2026-06-11.md · content (cap 8KB) · # ",
-          "arousal": 1.0,
-          "when": "2026-06-12 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#45850",
-          "summary": "STATE-MD · atlasos-PLAN-FULL-2026-06-10.md · ingested 2026-06-12 04:30:00 · path=/Users/collinmacneil/.claude/state/atlasos-PLAN-FULL-2026-06-10.md · content (cap 8KB) · # Atlasos.me · FULL PLAN · 202",
-          "arousal": 1.0,
-          "when": "2026-06-12 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#45851",
-          "summary": "STATE-MD · atlasos-ULTRA-FINAL-TONIGHT-2026-06-11.md · ingested 2026-06-12 04:30:00 · path=/Users/collinmacneil/.claude/state/atlasos-ULTRA-FINAL-TONIGHT-2026-06-11.md · content (cap 8KB) · # ULTRA-FI",
-          "arousal": 1.0,
-          "when": "2026-06-12 04:30",
-          "weight": 1
-        },
-        {
           "id": "#45854",
           "summary": "STATE-MD · atlasos-me-ARM-PLAN-2026-06-05.md · ingested 2026-06-12 04:30:00 · path=/Users/collinmacneil/.claude/state/atlasos-me-ARM-PLAN-2026-06-05.md · content (cap 8KB) · # Atlas-OS · atlasos.me · ",
-          "arousal": 1.0,
-          "when": "2026-06-12 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#45855",
-          "summary": "STATE-MD · plan-house-redirect-2026-06-06.md · ingested 2026-06-12 04:30:00 · path=/Users/collinmacneil/.claude/state/plan-house-redirect-2026-06-06.md · content (cap 8KB) · # Plan · atlasos.me redire",
-          "arousal": 1.0,
-          "when": "2026-06-12 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#45866",
-          "summary": "STATE-MD · C6-WORKSPACE-V2-RESEARCH-2026-06-07.md · ingested 2026-06-12 04:30:00 · path=/Users/collinmacneil/.claude/state/C6-WORKSPACE-V2-RESEARCH-2026-06-07.md · content (cap 8KB) · # 🏛 C6 v2 · WORK",
           "arousal": 1.0,
           "when": "2026-06-12 04:30",
           "weight": 1
@@ -600,53 +613,81 @@
           "arousal": 1.0,
           "when": "2026-06-12 04:30",
           "weight": 1
+        },
+        {
+          "id": "#45891",
+          "summary": "STATE-MD · brain-graph-insight-1780705319.md · ingested 2026-06-12 04:30:00 · path=/Users/collinmacneil/.claude/state/brain-graph-insight-1780705319.md · content (cap 8KB) · # Brain-graph employee · 2",
+          "arousal": 1.0,
+          "when": "2026-06-12 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#45897",
+          "summary": "STATE-MD · atlasos-me-COMPLETE-PLAN-2026-06-05.md · ingested 2026-06-12 04:30:00 · path=/Users/collinmacneil/.claude/state/atlasos-me-COMPLETE-PLAN-2026-06-05.md · content (cap 8KB) · # atlasos.me · C",
+          "arousal": 1.0,
+          "when": "2026-06-12 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#45916",
+          "summary": "STATE-MD · atlasos-me-MASTER-PLAN-2026-06-06.md · ingested 2026-06-12 04:30:00 · path=/Users/collinmacneil/.claude/state/atlasos-me-MASTER-PLAN-2026-06-06.md · content (cap 8KB) · # Atlas-OS · atlasos",
+          "arousal": 1.0,
+          "when": "2026-06-12 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#45921",
+          "summary": "STATE-MD · today-arc-2026-06-05-master-postmortem.md · ingested 2026-06-12 04:30:00 · path=/Users/collinmacneil/.claude/state/today-arc-2026-06-05-master-postmortem.md · content (cap 8KB) · # Today`s ",
+          "arousal": 1.0,
+          "when": "2026-06-12 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#45978",
+          "summary": "STATE-MD · brain-graph-insight-1780708920.md · ingested 2026-06-12 04:30:00 · path=/Users/collinmacneil/.claude/state/brain-graph-insight-1780708920.md · content (cap 8KB) · # Brain-graph employee · 2",
+          "arousal": 1.0,
+          "when": "2026-06-12 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#45986",
+          "summary": "STATE-MD · recall-architecture-evolution-2026-06-05.md · ingested 2026-06-12 04:30:00 · path=/Users/collinmacneil/.claude/state/recall-architecture-evolution-2026-06-05.md · content (cap 8KB) · # Reca",
+          "arousal": 1.0,
+          "when": "2026-06-12 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#46025",
+          "summary": "STATE-MD · brain-graph-insight-1780701719.md · ingested 2026-06-12 04:30:00 · path=/Users/collinmacneil/.claude/state/brain-graph-insight-1780701719.md · content (cap 8KB) · # Brain-graph employee · 2",
+          "arousal": 1.0,
+          "when": "2026-06-12 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#46027",
+          "summary": "STATE-MD · llm-routing-matrix-2026-06-05.md · ingested 2026-06-12 04:30:00 · path=/Users/collinmacneil/.claude/state/llm-routing-matrix-2026-06-05.md · content (cap 8KB) · # LLM Routing Matrix · 2026-",
+          "arousal": 1.0,
+          "when": "2026-06-12 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#46040",
+          "summary": "STATE-MD · brain-graph-insight-1780698118.md · ingested 2026-06-12 04:30:00 · path=/Users/collinmacneil/.claude/state/brain-graph-insight-1780698118.md · content (cap 8KB) · # Brain-graph employee · 2",
+          "arousal": 1.0,
+          "when": "2026-06-12 04:30",
+          "weight": 1
         }
       ],
-      "updated_at": "2026-06-13T00:30:00.928681"
-    },
-    {
-      "id": "3e0ff7f11b05",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "No high-arousal curiosity canon in last 6h",
-      "updated_at": "2026-06-13T02:00:29.692945"
-    },
-    {
-      "id": "10b520225b4b",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "ingest",
-        "source": "hermes-deepseek-fill",
-        "action": "Ingested and structured-summarized me-os-design-doc-2026-06-01.md, extracting 3 architecture decisions, 2 active hypotheses, and 1 open question.",
-        "why": "This doc is the OS orchestration layer that every other arm depends on; P0 to close the ME- loop and prevent downstream misalignment.",
-        "result": "Extracted: AD-1: Agentic-OS uses a Hermes-orchestrator with publish-subscribe for inter-arm messages. AD-2: All arms run as isolated sandboxed processes. AD-3: State is stored in a single append-only ",
-        "next_step": "Broadcast these decisions/hypotheses/questions to all other arms via Hermes channel; request each arm to validate or flag conflicts within 24 hours.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "curiosity-20260613-034528",
-        "timestamp": "2026-06-13T03:45:28.052969"
-      },
-      "content": "**What** · Ingested and structured-summarized me-os-design-doc-2026-06-01.md, extracting 3 architecture decisions, 2 active hypotheses, and 1 open question. · **Why** · This doc is the OS orchestration layer that every other arm depends on; P0 to close the ME- loop and prevent downstream misalignment. · **Result** · Extracted: AD-1: Agentic-OS uses a Hermes-orchestrator with publish-subscribe for inter-arm messages. AD-2: All arms run as isolated sandboxed processes. AD-3: State is stored in a single append-only log (ledger). AH-1: Hermes can scale linearly with number of arms (untested beyond 10). AH-2: Sandbo · **Next** · Broadcast these decisions/hypotheses/questions to all other arms via Hermes channel; request each arm to validate or flag conflicts within 24 hours. · **Links** ·  · **Cycle** · curiosity-20260613-034528",
-      "updated_at": "2026-06-13T03:45:28.052969"
+      "updated_at": "2026-06-13T06:00:03.297491"
     }
   ],
   "live_status": {
     "state": "active",
     "done_count": 158,
     "vec_drift": null,
-    "checked_at": "2026-06-13T05:58:00.902683"
+    "checked_at": "2026-06-13T06:00:04.569552"
   },
-  "block_count": 27,
-  "updated_at": "2026-06-13T03:45:28.052969",
-  "generated_at": "2026-06-13T09:58:00Z"
+  "block_count": 28,
+  "updated_at": "2026-06-13T06:00:03.297496",
+  "generated_at": "2026-06-13T10:00:04Z"
 }
