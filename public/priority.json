@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-13T01:10:49Z",
-  "total_items_scored": 154,
+  "generated_at": "2026-06-13T01:20:50Z",
+  "total_items_scored": 155,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate memory-architecture-lift quadrant implications for P1 closure in #28284 \u00b7 why: Recent high-arousal canon shows active focus on memory architecture with impending P1 deadline, ",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate memory-architecture-lift quadrant implications from #28284 to inform P1 priority alignment \u00b7 why: Recent high-arousal canon #28284 explicitly closes a P1 memory architecture q",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-12T14:30:51.574146"
+      "updated_at": "2026-06-12T14:46:09.219743"
     },
     {
       "arm": "research",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate memory-architecture-lift quadrant implications for P1 closure in #28284 \u00b7 why: Recent high-arousal canon shows active focus on memory architecture with impending P1 deadline, ",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-12T14:30:51.574146"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-12T16:48:06.867128"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Deep-dive into the crash anatomy of the 16GB loop-guard revival to prevent recurrence \u00b7 why: Recent logs indicate a critical crash event (#46315) with a revived loop-guard at 20min interv",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-12T17:03:20.611231"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
