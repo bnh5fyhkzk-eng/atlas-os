@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-06-13T08:00:59Z",
+  "generated_at": "2026-06-13T08:15:59Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 25,
+    "decision": 26,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 150,
-    "briefing": 52,
+    "note": 151,
+    "briefing": 51,
     "idea": 0
   },
-  "total_blocks": 227,
+  "total_blocks": 228,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "2aee5884d001",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Deep-dive atlas-alive-arm-spec.md to extract brother-direct identity assumptions and cross-check with me-os design doc for structural alignment. · why: Two high-arousal state-MD canons (atlas-alive-arm-spec, me-os-design-doc) hint at identity-tier",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-13T04:00:35.031101"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -299,6 +310,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "c4b9fbde1c1d",
+        "type": "callout",
+        "content": "**What** · Extracted brother-direct identity assumptions from atlas-alive-arm-spec.md and cross-checked with me-os-design-doc for structural alignment. · **Why** · Hermes assigned P0 to close loop on identity-tier resolution between two high-arousal state-MD canons. · **Result** · Found 3 mismatches",
+        "priority": "structural-analysis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-13T04:00:41.297580"
+      },
       {
         "arm": "curiosity",
         "arm_glyph": "🌱",
@@ -837,17 +859,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-13T00:30:00.682933"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "9ab6d2816423",
-        "type": "database",
-        "content": "brand · last 30d · 2 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-13T00:30:00.682930"
       }
     ],
     "briefing": [
@@ -949,17 +960,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-12T20:00:28.580968"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "18244fe3dbf4",
-        "type": "callout",
-        "content": "Overnight hermes recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant. · #46479 [1.00] STATE-MD · atlas-alive-arm-spec.md · ingested 2026-06-02 04:30:01 · path=/Users/collinmacneil/.claude/state/atlas-alive- · #",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-12T20:00:28.550961"
       },
       {
         "arm": "code",
@@ -1400,6 +1400,17 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-11T04:19:27.518020"
+      },
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "8e7dd2241db4",
+        "type": "callout",
+        "content": "Overnight curiosity recap · last 6h · · #45169 [0.93] ULTRA-FINAL-BATCH-5-SHIPPED-2026-06-11-03:46 · brother direct VERBATIM 03:42 'we can do it all right now you have all th",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-11T04:19:27.472836"
       }
     ],
     "idea": []
