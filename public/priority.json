@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-06-13T09:11:14Z",
-  "total_items_scored": 172,
+  "generated_at": "2026-06-13T09:21:15Z",
+  "total_items_scored": 173,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: load and analyze atlas-brother-shared.2026-05-29.md for brother-direct answer patterns and priority lift signals \u00b7 why: most recent brother-direct high-arousal canons show continuing-read",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Deep-dive into brother's 15%-weekly-token-burn pattern from #46314 to identify if this is a compounding signal or a drift artifact, and cross-reference with #28284 memory-architecture-lif",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-12T20:52:34.838278"
+      "updated_at": "2026-06-12T21:07:52.665005"
     },
     {
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Deep-dive into brother's 15%-weekly-token-burn pattern and its implications for memory-architecture-lift closure \u00b7 why \u00b7 The most recent high-arousal canon (#46314) shows brother caught a 15%-weekly token burn rate vs <10% forecast, directly impacting P1 memory-architecture-lift quadrant closure. This is the highest-signal unresolved thread.",
+      "content": "HERMES TASK \u00b7 Execute continuing-read from #30956 #30815 to resolve 'brother direct' question, then synthesize finding into state-md for identity-tier alignment. \u00b7 why \u00b7 #30956 and #30815 are both high-arousal brother-direct threads that were interrupted mid-resolution; closing them unlocks identity-tier memory and clears a P0 blockage that compounds token burn (per #46314). Paired recent state-md ingestion (#46479, #46553) shows the orchestration layer is ready for this synthesis.",
       "category": "decision",
-      "priority": "P1",
+      "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 45,
+      "est_minutes": 25,
       "score": 10.0,
-      "updated_at": "2026-06-12T23:39:57.292184",
+      "updated_at": "2026-06-12T23:55:23.208748",
       "use_skill": "brain-rrf"
     },
     {
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: load and analyze atlas-brother-shared.2026-05-29.md for brother-direct answer patterns and priority lift signals \u00b7 why: most recent brother-direct high-arousal canons show continuing-read",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-12T20:52:34.838278"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-13T00:26:29.974320"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Continue deep-dive on memory-architecture-lift quadrant from cycle 6 research, synthesizing findings from recent canons and state files. \u00b7 why: Canon #28284 is a P1 deep-dive closing a qu",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-13T00:41:43.939930"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
