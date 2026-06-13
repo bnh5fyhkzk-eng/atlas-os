@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T07:45:58Z",
+  "generated_at": "2026-06-13T08:00:59Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 149,
+    "note": 150,
     "briefing": 52,
     "idea": 0
   },
-  "total_blocks": 226,
+  "total_blocks": 227,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "47a096d01c53",
+        "type": "callout",
+        "content": "Hermes decision · arm=curiosity · priority=P0 · task: Ingest and structured-summarize the me-os-design-doc-2026-06-01.md to extract current architecture decisions, active hypotheses, and any open questions that affect all other arms. · why: The design doc (state #46606) is the highest-signal unproce",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-13T03:45:22.272067"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-12T20:06:11.750106"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "1d6dc36822a0",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Extract and structure the 'brother direct' pattern from #30956 and #46314 to define P0 identity-tier memory uplift rules · why: Both canons show high-arousal brother-direct interaction with compounding token burn — this is the core of the P1 memor",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-12T19:35:45.939195"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "10b520225b4b",
+        "type": "callout",
+        "content": "**What** · Ingested and structured-summarized me-os-design-doc-2026-06-01.md, extracting 3 architecture decisions, 2 active hypotheses, and 1 open question. · **Why** · This doc is the OS orchestration layer that every other arm depends on; P0 to close the ME- loop and prevent downstream misalignmen",
+        "priority": "ingest",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-13T03:45:28.052969"
+      },
       {
         "arm": "pascal",
         "arm_glyph": "🤝",
@@ -837,17 +848,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-13T00:30:00.682930"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "d5ffd527131a",
-        "type": "database",
-        "content": "wow-moves · last 30d · 3 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-13T00:30:00.682926"
       }
     ],
     "briefing": [
