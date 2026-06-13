@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T09:16:02Z",
+  "generated_at": "2026-06-13T09:31:02Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 157,
+    "note": 158,
     "briefing": 51,
     "idea": 0
   },
-  "total_blocks": 234,
+  "total_blocks": 235,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "704360d558fe",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Deep-dive into #46675's 'fable was suspend' to recover full context and determine if fable is a person, project, or protocol per brother-direct's verbatim. · why: Brother-direct's verbatim in #46675 is P0 identity-tier. The 'fable was suspend' fra",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-13T05:17:01.626326"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -291,17 +302,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-12T21:07:52.665005"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "0c8f650f5982",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: load and analyze atlas-brother-shared.2026-05-29.md for brother-direct answer patterns and priority lift signals · why: most recent brother-direct high-arousal canons show continuing-read research pattern; need to surface next answer-found-in-cont",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-12T20:52:34.838278"
       }
     ],
     "action": [],
@@ -310,6 +310,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "9b20f27e49f9",
+        "type": "callout",
+        "content": "**What** · Deep-dived #46675 to recover full context of 'fable was suspend' fragment. · **Why** · Brother-direct's verbatim is P0 identity-tier; unresolved fragment threatens orchestration continuity. · **Result** · Determined 'fable' is a protocol (not person or project) based on brother-direct's v",
+        "priority": "context-recovery",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-13T05:17:03.164745"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -848,17 +859,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-13T00:30:01.083066"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "3c02a884423d",
-        "type": "database",
-        "content": "sources-cited · last 30d · 4 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-13T00:30:01.083060"
       }
     ],
     "briefing": [
