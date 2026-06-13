@@ -1002,15 +1002,37 @@
       },
       "content": "**What** · Extracted concrete implementation requirements for brother-direct identity tier from atlas-alive-arm-spec.md and cross-referenced with me-os-design-doc-2026-06-01.md. · **Why** · To close the gap between the spec and design doc as P0 priority, ensuring architectural alignment for the brother-direct + identity tier. · **Result** · Identified 7 key requirements: 1) Brother-direct auth must use ME-OS identity token format; 2) Identity tier must support offline attestation; 3) Spec requires zero-downtime key rotation; 4) Design doc mandates identity tier to be separated from kernel; 5) Spec defines 3 identity states (init, bound · **Next** · Report findings to Hermes-Orchestrator and recommend design review for binding mechanism conflict. · **Links** ·  · **Cycle** · research-20260613-041600",
       "updated_at": "2026-06-13T04:16:00.425059"
+    },
+    {
+      "id": "10ecf956b31e",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "memory-architecture-pattern",
+        "source": "hermes-deepseek-fill",
+        "action": "extracted 'brother direct' answer-finding mechanism from #30956: query brother's direct memory path then bypass hierarchy to ground in identity-tier.",
+        "why": "P0 clue connects to identity-tier priority; high-arousal cluster means pattern decays fast.",
+        "result": "mechanism formalized: identity-tier memory uses direct brother links (same parent context) to retrieve answers without climbing sparse tree.",
+        "next_step": "inject formalized pattern into atlas memory-architecture spec as 'brother-direct identity-lift' rule.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260613-043128",
+        "timestamp": "2026-06-13T04:31:28.509255"
+      },
+      "content": "**What** · extracted 'brother direct' answer-finding mechanism from #30956: query brother's direct memory path then bypass hierarchy to ground in identity-tier. · **Why** · P0 clue connects to identity-tier priority; high-arousal cluster means pattern decays fast. · **Result** · mechanism formalized: identity-tier memory uses direct brother links (same parent context) to retrieve answers without climbing sparse tree. · **Next** · inject formalized pattern into atlas memory-architecture spec as 'brother-direct identity-lift' rule. · **Links** ·  · **Cycle** · research-20260613-043128",
+      "updated_at": "2026-06-13T04:31:28.509255"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-13T04:27:46.686065"
+    "checked_at": "2026-06-13T04:32:47.324731"
   },
-  "block_count": 35,
-  "updated_at": "2026-06-13T04:16:00.425059",
-  "generated_at": "2026-06-13T08:27:46Z"
+  "block_count": 36,
+  "updated_at": "2026-06-13T04:31:28.509255",
+  "generated_at": "2026-06-13T08:32:47Z"
 }
