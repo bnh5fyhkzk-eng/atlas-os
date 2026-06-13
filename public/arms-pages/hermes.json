@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "1d6dc36822a0",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-12T19:35:45.939180"
-      },
-      "content": "Hermes decision · arm=research · priority=P0 · task: Extract and structure the 'brother direct' pattern from #30956 and #46314 to define P0 identity-tier memory uplift rules · why: Both canons show high-arousal brother-direct interaction with compounding token burn — this is the core of the P1 memory-architecture-lift quadrant closure and needs immediate processing to avoid state decay",
-      "updated_at": "2026-06-12T19:35:45.939195"
-    },
-    {
       "id": "18244fe3dbf4",
       "type": "callout",
       "props": {
@@ -618,15 +606,27 @@
       },
       "content": "Hermes decision · arm=pascal · priority=P0 · task: Ingest the newest `me-os-design-doc-2026-06-01.md` state file, map its architectural decisions onto the existing atlas-alive-arm-spec.md, and produce an updated `atlas-alive-arm-spec-v2.md` that reconciles the two. · why: The three ingested state-MD files (atlas, brother-shared, me-os) form a high-arousal identity-tier cluster. The me-os doc is the freshest and most authoritative; Pascal is the arm coded to handle formal state merging and spec maintenance. Resolving this now closes the conceptual drift between the ol",
       "updated_at": "2026-06-13T03:30:03.759888"
+    },
+    {
+      "id": "47a096d01c53",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-13T03:45:22.272058"
+      },
+      "content": "Hermes decision · arm=curiosity · priority=P0 · task: Ingest and structured-summarize the me-os-design-doc-2026-06-01.md to extract current architecture decisions, active hypotheses, and any open questions that affect all other arms. · why: The design doc (state #46606) is the highest-signal unprocessed item; it defines the OS orchestration layer that every other arm (research, code, infra, brother-direct) depends on. Understanding it now prevents downstream misalignment and satisfies an identity-tier (P0) need to close the loop on ME-",
+      "updated_at": "2026-06-13T03:45:22.272067"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-13T03:42:40.719159"
+    "checked_at": "2026-06-13T03:47:41.298718"
   },
   "block_count": 30,
-  "updated_at": "2026-06-13T03:30:03.759889",
-  "generated_at": "2026-06-13T07:42:40Z"
+  "updated_at": "2026-06-13T03:45:22.272069",
+  "generated_at": "2026-06-13T07:47:41Z"
 }
