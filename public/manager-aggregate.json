@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T14:46:15Z",
+  "generated_at": "2026-06-13T15:01:16Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 159,
+    "note": 160,
     "briefing": 57,
     "idea": 0
   },
-  "total_blocks": 240,
+  "total_blocks": 241,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "3f89636fc2ef",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Complete the memory-architecture-lift quadrant deep-dive from #28284, synthesizing findings into a structured summary for P1 closure. · why: This is the highest-arousal, most recent P1 item with a clear closure deadline (2026-05-25 07:14 EDT) and ",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-13T10:54:35.860535"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-13T04:00:35.031101"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "47a096d01c53",
-        "type": "callout",
-        "content": "Hermes decision · arm=curiosity · priority=P0 · task: Ingest and structured-summarize the me-os-design-doc-2026-06-01.md to extract current architecture decisions, active hypotheses, and any open questions that affect all other arms. · why: The design doc (state #46606) is the highest-signal unproce",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-13T03:45:22.272067"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "9416e987356e",
+        "type": "callout",
+        "content": "**What** · Complete the memory-architecture-lift quadrant deep-dive from #28284, synthesizing findings into a structured summary for P1 closure. · **Why** · Highest-arousal, most recent P1 item with a clear closure deadline (2026-05-25 07:14 EDT), directly supports identity-tier memory architecture ",
+        "priority": "synthesis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-13T10:54:44.245227"
+      },
       {
         "arm": "curiosity",
         "arm_glyph": "🌱",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-13T06:00:03.297491"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "b5b448ecebb9",
-        "type": "database",
-        "content": "new-tools · last 30d · 5 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-13T06:00:03.297488"
       }
     ],
     "briefing": [
