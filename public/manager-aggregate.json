@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T09:01:01Z",
+  "generated_at": "2026-06-13T09:16:02Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 153,
+    "note": 157,
     "briefing": 51,
     "idea": 0
   },
-  "total_blocks": 230,
+  "total_blocks": 234,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "c0549e156259",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Extract and synthesize the answer pattern from #30956: 'before I answer your question continue reading' into a clear concept memo for the memory-architecture lift quadrant · why: Recent cycles have closed P1 memory-architecture-lift quadrant but #",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-13T05:01:54.143258"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -291,17 +302,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-12T20:52:34.838278"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "eaaaac878c00",
-        "type": "callout",
-        "content": "Hermes decision · arm=pascal · priority=P1 · task: Scan all ingested state-MD files for duplicate or conflicting memory paths, then deduplicate and consolidate into a single canonical atlas-alive-arm.md · why: Recent brain canons show multiple state-MD ingestions with overlapping paths. Pascal can d",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-12T20:36:51.943856"
       }
     ],
     "action": [],
@@ -310,6 +310,50 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "3978fc798e22",
+        "type": "callout",
+        "content": "**What** · extracted answer pattern from #30956: 'before I answer your question continue reading' means defer answer until user finishes reading full context. · **Why** · closes dangling cognitive loop in memory-architecture-lift quadrant; highest-leverage unresolved thread for brother-direct dialog",
+        "priority": "pattern extraction",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-13T05:01:55.945036"
+      },
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "2508966503b8",
+        "type": "callout",
+        "content": "**What** · processed sessions signal · [#47117] arousal 0.95 · SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-13 04:45:00 · siz · **Why** · instruction file maps sessions to first arm-task · brain canon #47117 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-",
+        "priority": "sessions",
+        "source": "pascal-self",
+        "updated_at": "2026-06-13T05:00:30.220743"
+      },
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "c07d3c416d18",
+        "type": "callout",
+        "content": "**What** · processed commits-today signal · [#47117] arousal 0.95 · SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-13 04:45:00 · siz · **Why** · instruction file maps commits-today to first arm-task · brain canon #47117 matched arm-topic last 4h above arousal 0.85 · **Result** · block writt",
+        "priority": "commits-today",
+        "source": "code-self",
+        "updated_at": "2026-06-13T05:00:29.460187"
+      },
+      {
+        "arm": "infra",
+        "arm_glyph": "💗",
+        "arm_name": "My Heart",
+        "block_id": "d2da58ef25da",
+        "type": "callout",
+        "content": "**What** · processed launchagents signal · [#47117] arousal 0.95 · SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-13 04:45:00 · siz · **Why** · instruction file maps launchagents to first arm-task · brain canon #47117 matched arm-topic last 4h above arousal 0.85 · **Result** · block written",
+        "priority": "launchagents",
+        "source": "infra-self",
+        "updated_at": "2026-06-13T05:00:28.987709"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -815,50 +859,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-13T00:30:01.083060"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "2d92007de6a6",
-        "type": "database",
-        "content": "general · last 30d · 88 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-13T00:30:00.928681"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "ed277e6893c7",
-        "type": "database",
-        "content": "new-tools · last 30d · 5 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-13T00:30:00.928676"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "4965af8f878e",
-        "type": "database",
-        "content": "syntheses · last 30d · 3 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-13T00:30:00.928671"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "444fe741f723",
-        "type": "database",
-        "content": "youtube-watches · last 30d · 4 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-13T00:30:00.928664"
       }
     ],
     "briefing": [
