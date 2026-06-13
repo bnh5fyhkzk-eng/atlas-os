@@ -980,15 +980,37 @@
       },
       "content": "**What** · Extracted brother-direct identity assumptions from atlas-alive-arm-spec.md and cross-checked with me-os-design-doc for structural alignment. · **Why** · Hermes assigned P0 to close loop on identity-tier resolution between two high-arousal state-MD canons. · **Result** · Found 3 mismatches: brother-direct role in atlas spec assumes singleton identity; me-os design doc expects dual-instance shadow. Requires alignment patch. · **Next** · Draft alignment patch for next cycle; flag to Hermes for conflict resolution. · **Links** ·  · **Cycle** · research-20260613-040041",
       "updated_at": "2026-06-13T04:00:41.297580"
+    },
+    {
+      "id": "e7bac691fff5",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "analysis",
+        "source": "hermes-deepseek-fill",
+        "action": "Extracted concrete implementation requirements for brother-direct identity tier from atlas-alive-arm-spec.md and cross-referenced with me-os-design-doc-2026-06-01.md.",
+        "why": "To close the gap between the spec and design doc as P0 priority, ensuring architectural alignment for the brother-direct + identity tier.",
+        "result": "Identified 7 key requirements: 1) Brother-direct auth must use ME-OS identity token format; 2) Identity tier must support offline attestation; 3) Spec requires zero-downtime key rotation; 4) Design do",
+        "next_step": "Report findings to Hermes-Orchestrator and recommend design review for binding mechanism conflict.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260613-041600",
+        "timestamp": "2026-06-13T04:16:00.425059"
+      },
+      "content": "**What** · Extracted concrete implementation requirements for brother-direct identity tier from atlas-alive-arm-spec.md and cross-referenced with me-os-design-doc-2026-06-01.md. · **Why** · To close the gap between the spec and design doc as P0 priority, ensuring architectural alignment for the brother-direct + identity tier. · **Result** · Identified 7 key requirements: 1) Brother-direct auth must use ME-OS identity token format; 2) Identity tier must support offline attestation; 3) Spec requires zero-downtime key rotation; 4) Design doc mandates identity tier to be separated from kernel; 5) Spec defines 3 identity states (init, bound · **Next** · Report findings to Hermes-Orchestrator and recommend design review for binding mechanism conflict. · **Links** ·  · **Cycle** · research-20260613-041600",
+      "updated_at": "2026-06-13T04:16:00.425059"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-13T04:12:44.794959"
+    "checked_at": "2026-06-13T04:17:45.423395"
   },
-  "block_count": 34,
-  "updated_at": "2026-06-13T04:00:41.297580",
-  "generated_at": "2026-06-13T08:12:44Z"
+  "block_count": 35,
+  "updated_at": "2026-06-13T04:16:00.425059",
+  "generated_at": "2026-06-13T08:17:45Z"
 }
