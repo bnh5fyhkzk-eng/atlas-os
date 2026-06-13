@@ -64,6 +64,15 @@ export interface CalEvent {
   starts_at: string;
   ends_at: string | null;
   source: string;
+  meta?: {
+    actor?: string;          // who did it: "atlas-living" | "gemma-loop" | "hermes" | arm slug | "manual" | "google"
+    arm_slug?: string;       // if from an arm
+    nav_id?: string;         // link target
+    note_id?: string;        // receipt note
+    mode?: string;           // "working" | "dreaming" etc
+    summary?: string;        // short description
+    links?: Array<{ label: string; href: string }>;
+  } | null;
 }
 
 // ── nav ──────────────────────────────────────────────────────
@@ -172,6 +181,11 @@ export async function listEvents(fromIso: string, toIso: string): Promise<CalEve
 
 export async function createEvent(input: { title: string; starts_at: string; ends_at?: string }): Promise<void> {
   const { error } = await sb().from("atlas_events").insert(input);
+  if (error) err(error);
+}
+
+export async function deleteEvent(id: string): Promise<void> {
+  const { error } = await sb().from("atlas_events").delete().eq("id", id);
   if (error) err(error);
 }
 
