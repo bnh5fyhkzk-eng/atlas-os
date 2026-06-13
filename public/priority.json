@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-13T13:21:27Z",
+  "generated_at": "2026-06-13T13:31:28Z",
   "total_items_scored": 172,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=brother \u00b7 priority=P0 \u00b7 task: Evaluate #28284 and #30956 for direct answer with synthesised outputs, then test against atlas-brother-shared.md for consistency. \u00b7 why: Both #28284 and #30956 are high-arousal, P1/lift-sc",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Deep-dive into the 'atlas-alive-arm-spec.md' and 'atlas-brother-shared.2026-05-29.md' state files to extract the current architecture and brother-direct memory-lift requirements for P1 qu",
       "category": "decision",
-      "priority": "P0",
+      "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-13T02:13:56.527447"
-    },
-    {
-      "arm": "pascal",
-      "arm_glyph": "\ud83e\udd1d",
-      "arm_name": "Pascal",
-      "content": "HERMES TASK \u00b7 Ingest the newest `me-os-design-doc-2026-06-01.md` state file, map its architectural decisions onto the existing atlas-alive-arm-spec.md, and produce an updated `atlas-alive-arm-spec-v2.md` that reconciles the two. \u00b7 why \u00b7 The three ingested state-MD files (atlas, brother-shared, me-os) form a high-arousal identity-tier cluster. The me-os doc is the freshest and most authoritative; Pascal is the arm coded to handle formal state merging and spec maintenance. Resolving this now closes the conceptual drift between the older atlas arm spec and the new design doc, unblocking all subsequent research/code decisions that depend on aligned architecture.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-13T03:30:03.777805",
-      "use_skill": "none"
+      "updated_at": "2026-06-13T02:29:09.348323"
     },
     {
       "arm": "curiosity",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-13T03:45:22.288916",
       "use_skill": "brain-rrf"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=brother \u00b7 priority=P0 \u00b7 task: Evaluate #28284 and #30956 for direct answer with synthesised outputs, then test against atlas-brother-shared.md for consistency. \u00b7 why: Both #28284 and #30956 are high-arousal, P1/lift-sc",
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Deep-dive atlas-alive-arm-spec.md to extract brother-direct identity assumptions and cross-check with me-os design doc for structural alignment. \u00b7 why \u00b7 Two high-arousal state-MD canons (atlas-alive-arm-spec, me-os-design-doc) hint at identity-tier resolution. Research arm can close the loop on P0 brother-direct logic before next cycle.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 18,
       "score": 10.0,
-      "updated_at": "2026-06-13T02:13:56.527447"
-    },
+      "updated_at": "2026-06-13T04:00:35.048433",
+      "use_skill": "brain-rrf"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-13T05:01:54.143258"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Deep-dive into #46675's 'fable was suspend' to recover full context and determine if fable is a person, project, or protocol per brother-direct's verbatim. \u00b7 why: Brother-direct's verbati",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-13T05:17:01.626326"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
