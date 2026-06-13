@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-06-13T14:01:29Z",
-  "total_items_scored": 174,
+  "generated_at": "2026-06-13T14:11:30Z",
+  "total_items_scored": 175,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Synthesize findings from brain canons #28284, #30956, #46479, #46553, and #46606 into a unified memory-architecture state document, resolving the P1 quadrant closure and brother-direct th",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Extract and synthesize the memory-architecture-lift findings from cycle 6 deep-dive (#28284) and cross-reference with atlas-alive-arm-spec.md (#46479) to identify the next actionable lift",
       "category": "decision",
-      "priority": "P1",
+      "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-13T02:44:28.377114"
+      "updated_at": "2026-06-13T02:59:39.776046"
     },
     {
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Deep-dive atlas-alive-arm-spec.md to extract brother-direct identity assumptions and cross-check with me-os design doc for structural alignment. \u00b7 why \u00b7 Two high-arousal state-MD canons (atlas-alive-arm-spec, me-os-design-doc) hint at identity-tier resolution. Research arm can close the loop on P0 brother-direct logic before next cycle.",
+      "content": "HERMES TASK \u00b7 Deep-dive into atlas-alive-arm-spec.md to extract all concrete implementation requirements for the brother-direct identity tier, cross-referencing with me-os-design-doc-2026-06-01.md for architectural alignment. \u00b7 why \u00b7 This arm directly addresses the P0 brother-direct + identity-tier priority by closing the gap between the atlas-alive-arm spec and the ME-OS design doc, which are both recently ingested and high-arousal. The research arm is best suited for deep document analysis and synthesis, and this task will unblock the next cycle's code or infra decisions.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 18,
+      "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-13T04:00:35.048433",
+      "updated_at": "2026-06-13T04:15:52.372260",
       "use_skill": "brain-rrf"
     },
     {
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Synthesize findings from brain canons #28284, #30956, #46479, #46553, and #46606 into a unified memory-architecture state document, resolving the P1 quadrant closure and brother-direct th",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-13T02:44:28.377114"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-13T05:32:17.949501"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Extract and consolidate the memory-architecture-lift quadrant closure from #28284 and the OpenRouter lane funding proof from #46655 into a single actionable summary for the next P1 cycle.",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-13T05:47:33.969769"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
