@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T00:30:42Z",
+  "generated_at": "2026-06-13T00:45:42Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 146,
+    "note": 147,
     "briefing": 44,
     "idea": 0
   },
-  "total_blocks": 214,
+  "total_blocks": 215,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "eaaaac878c00",
+        "type": "callout",
+        "content": "Hermes decision · arm=pascal · priority=P1 · task: Scan all ingested state-MD files for duplicate or conflicting memory paths, then deduplicate and consolidate into a single canonical atlas-alive-arm.md · why: Recent brain canons show multiple state-MD ingestions with overlapping paths. Pascal can d",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-12T20:36:51.943856"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-12T14:15:37.154697"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "dd7b296e1fd2",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: deep-dive into memory-architecture-lift quadrant to resolve P1 closure from cycle 6 · why: prioritizing active focus (P1) from recent high-arousal canon #28284, which is time-sensitive and aligns with current research momentum",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-12T13:12:19.190858"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "2443fb0aa1af",
+        "type": "callout",
+        "content": "**What** · scanned all state-MD files for duplicate memory paths, found 5 overlapping entries, deduplicated and consolidated into one canonical atlas-alive-arm.md. · **Why** · Hermes said brain had fragmented paths wasting tokens; needed clean single truth for context efficiency. · **Result** · atla",
+        "priority": "memory consolidation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-12T20:37:04.371110"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-12T18:00:01.591921"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "155bbff9bbd4",
-        "type": "database",
-        "content": "clients · last 30d · 6 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-12T18:00:01.591915"
       }
     ],
     "briefing": [
