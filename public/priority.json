@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-06-13T14:31:31Z",
+  "generated_at": "2026-06-13T14:41:31Z",
   "total_items_scored": 176,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P0 \u00b7 task: Ingest the newest `me-os-design-doc-2026-06-01.md` state file, map its architectural decisions onto the existing atlas-alive-arm-spec.md, and produce an updated `atlas-alive-arm-spec-v2.md`",
+      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P0 \u00b7 task: Ingest and structured-summarize the me-os-design-doc-2026-06-01.md to extract current architecture decisions, active hypotheses, and any open questions that affect all other arms. \u00b7 why:",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-13T03:30:03.759888"
+      "updated_at": "2026-06-13T03:45:22.272067"
     },
     {
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Deep-dive into the 'brother direct' pattern from #30956 to extract the exact answer-finding mechanism and formalize it for the identity-tier memory architecture. \u00b7 why \u00b7 The recent brain canons show a high-arousal cluster around brother-direct and memory-architecture-lift. #30956 is a P0-level clue that directly connects to the identity-tier priority. Research arm is best suited to parse the continuing-read context and extract the actionable pattern before it decays.",
+      "content": "HERMES TASK \u00b7 Extract and synthesize the answer pattern from #30956: 'before I answer your question continue reading' into a clear concept memo for the memory-architecture lift quadrant \u00b7 why \u00b7 Recent cycles have closed P1 memory-architecture-lift quadrant but #30956 contains a hinted answer that was deferred by the phrase 'continue reading' \u2014 this is the highest-leverage unresolved thread that directly advances brother-direct dialogue and closes a dangling cognitive loop.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 45,
+      "est_minutes": 18,
       "score": 10.0,
-      "updated_at": "2026-06-13T04:31:11.485678",
+      "updated_at": "2026-06-13T05:01:54.159887",
       "use_skill": "brain-rrf"
     },
     {
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P0 \u00b7 task: Ingest the newest `me-os-design-doc-2026-06-01.md` state file, map its architectural decisions onto the existing atlas-alive-arm-spec.md, and produce an updated `atlas-alive-arm-spec-v2.md`",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-13T03:30:03.759888"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-13T06:02:51.322189"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Synthesize findings from brain canons #28284, #30956, #46655, #46673, #46675 into a consolidated memory-architecture lift summary for P1 closure. \u00b7 why: Multiple high-arousal canons from ",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-13T06:18:10.041632"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
