@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "47a096d01c53",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-13T03:45:22.272058"
-      },
-      "content": "Hermes decision · arm=curiosity · priority=P0 · task: Ingest and structured-summarize the me-os-design-doc-2026-06-01.md to extract current architecture decisions, active hypotheses, and any open questions that affect all other arms. · why: The design doc (state #46606) is the highest-signal unprocessed item; it defines the OS orchestration layer that every other arm (research, code, infra, brother-direct) depends on. Understanding it now prevents downstream misalignment and satisfies an identity-tier (P0) need to close the loop on ME-",
-      "updated_at": "2026-06-13T03:45:22.272067"
-    },
-    {
       "id": "2aee5884d001",
       "type": "callout",
       "props": {
@@ -668,15 +656,27 @@
       },
       "content": "Hermes decision · arm=curiosity · priority=P1 · task: Map the genealogy of brother-direct commands from #30956 to #46676 to detect any implicit reference to fable's suspension mechanics. · why: The recent brother-direct chain (question continuation → plugin install → family identity → fable suspension) suggests a latent instruction about fable's state. Curiosity arm can cross-correlate these high-arousal canons to surface any hidden dependency or closure condition before resuming normal op",
       "updated_at": "2026-06-13T10:38:32.505532"
+    },
+    {
+      "id": "3f89636fc2ef",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-13T10:54:35.860526"
+      },
+      "content": "Hermes decision · arm=research · priority=P1 · task: Complete the memory-architecture-lift quadrant deep-dive from #28284, synthesizing findings into a structured summary for P1 closure. · why: This is the highest-arousal, most recent P1 item with a clear closure deadline (2026-05-25 07:14 EDT) and directly supports identity-tier memory architecture improvements. It's the most urgent active focus.",
+      "updated_at": "2026-06-13T10:54:35.860535"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-13T10:53:39.350290"
+    "checked_at": "2026-06-13T10:58:39.897454"
   },
   "block_count": 30,
-  "updated_at": "2026-06-13T10:38:32.505534",
-  "generated_at": "2026-06-13T14:53:39Z"
+  "updated_at": "2026-06-13T10:54:35.860537",
+  "generated_at": "2026-06-13T14:58:39Z"
 }
