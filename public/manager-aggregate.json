@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T13:16:12Z",
+  "generated_at": "2026-06-13T13:31:12Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -17,6 +17,17 @@
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "a023dd6be729",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the 'answer found in continuing read' mechanism from #30956 and confirm whether it implicitly resolves the memory-architecture-lift quadrant from #28284, synthesizing with the live OpenRouter lane and Atlas plugin install in #46655/#46",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-13T09:21:56.525270"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-13T02:29:09.348323"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "c0ad4a6e54c3",
-        "type": "callout",
-        "content": "Hermes decision · arm=brother · priority=P0 · task: Evaluate #28284 and #30956 for direct answer with synthesised outputs, then test against atlas-brother-shared.md for consistency. · why: Both #28284 and #30956 are high-arousal, P1/lift-scope relevant, and now a derived answer candidate exists; bro",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-13T02:13:56.527447"
       }
     ],
     "action": [],
