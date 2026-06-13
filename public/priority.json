@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-13T08:21:11Z",
+  "generated_at": "2026-06-13T08:31:12Z",
   "total_items_scored": 167,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Continue reading and analyzing atlas-brother-shared state to derive insights. \u00b7 why: Recent ingestion of brother shared state requires deep analysis to align with ongoing research.",
+      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P1 \u00b7 task: Scan all ingested state-MD files for duplicate or conflicting memory paths, then deduplicate and consolidate into a single canonical atlas-alive-arm.md \u00b7 why: Recent brain canons show multi",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-12T20:21:27.580069"
-    },
-    {
-      "arm": "dream",
-      "arm_glyph": "\ud83c\udf19",
-      "arm_name": "Dream",
-      "content": "HERMES TASK \u00b7 Synthesize recent high-arousal research canons and state-markdowns into a dream narrative that surfaces latent identity-threat or brother-direct signal for next cycle \u00b7 why \u00b7 The recent brain canons cluster around identity-tier (brother-direct, atlas-alive, state-markdown) with high emotional intensity (15% weekly token-burn). Dream arm can compress these into a symbolic pattern that clarifies priority without consuming research tokens.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 12,
-      "score": 10.0,
-      "updated_at": "2026-06-12T22:54:17.599021",
-      "use_skill": "notebooklm"
+      "updated_at": "2026-06-12T20:36:51.943856"
     },
     {
       "arm": "curiosity",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-12T23:24:45.098317",
       "use_skill": "none"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Continue reading and analyzing atlas-brother-shared state to derive insights. \u00b7 why: Recent ingestion of brother shared state requires deep analysis to align with ongoing research.",
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Deep-dive into brother's 15%-weekly-token-burn pattern and its implications for memory-architecture-lift closure \u00b7 why \u00b7 The most recent high-arousal canon (#46314) shows brother caught a 15%-weekly token burn rate vs <10% forecast, directly impacting P1 memory-architecture-lift quadrant closure. This is the highest-signal unresolved thread.",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
+      "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-12T20:21:27.580069"
-    },
+      "updated_at": "2026-06-12T23:39:57.292184",
+      "use_skill": "brain-rrf"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-12T23:55:23.190861"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=charle \u00b7 priority=P1 \u00b7 task: Complete the answer to #27975 compiling the session and token-burn metrics into a coherent output for the brother \u00b7 why: This P1 quadrant has been compounding with 15% weekly burn since mor",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-13T00:11:02.318212"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
