@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T06:30:56Z",
+  "generated_at": "2026-06-13T06:45:56Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 145,
+    "note": 146,
     "briefing": 52,
     "idea": 0
   },
-  "total_blocks": 222,
+  "total_blocks": 223,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "3dfb1fbd2868",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Deep-dive into the 'atlas-alive-arm-spec.md' and 'atlas-brother-shared.2026-05-29.md' state files to extract the current architecture and brother-direct memory-lift requirements for P1 quadrant closure. · why: These state files are fresh (ingested",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-13T02:29:09.348323"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-12T18:34:39.581208"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "d6ce3f29d9d0",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Deep-dive into memory-architecture-lift quadrant to resolve P1 priority from cycle 6 · why: Recent brain canon #28284 shows this was a high-arousal research topic that closed at P1 priority, suggesting unfinished work needing follow-up",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-12T18:19:24.363317"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "5403cfb8fc58",
+        "type": "callout",
+        "content": "**What** · Ingested and parsed atlas-alive-arm-spec.md and atlas-brother-shared.2026-05-29.md, extracting current architecture topology and brother-direct memory-lift requirements for P1 quadrant closure. · **Why** · Hermes-Orchestrator assigned this deep-dive to close the P1 memory-architecture-lif",
+        "priority": "architecture-analysis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-13T02:29:15.963096"
+      },
       {
         "arm": "infra",
         "arm_glyph": "💗",
@@ -837,17 +848,6 @@
         "priority": "memory_compression",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-13T00:26:37.294235"
-      },
-      {
-        "arm": "charle",
-        "arm_glyph": "💼",
-        "arm_name": "Charle · Pascal-team",
-        "block_id": "5d206bc2c63b",
-        "type": "callout",
-        "content": "**What** · compiled session and token-burn metrics from #27975 into coherent output for brother. · **Why** · hermes assigned p1 quadrant with 15% weekly burn open loop — closing it restores throughput. · **Result** · output is a single line: session 18m • tokens 340k • burn 15% • active brother-dire",
-        "priority": "metrics compilation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-13T00:11:13.296231"
       }
     ],
     "briefing": [
