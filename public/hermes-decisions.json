@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-13T07:30:03Z",
+  "generated_at": "2026-06-13T07:45:22Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Investigate the loop-health false alarm issue surfaced in #45633 to prevent recurrence",
-      "why": "This is a critical infrastructure issue affecting system reliability (P1 memory-architecture quadrant) and has caused observable disruptions (auto-wake fires, wrong log monitoring). Resolving it will stabilize the core loop-health monitoring system.",
-      "priority": "P1",
-      "use_skill": "brain-rrf",
-      "est_minutes": 90,
-      "timestamp": "2026-06-11T23:28:44.369714"
-    },
     {
       "arm": "research",
       "task": "Investigate the recurring cycle-fire pattern observed in #45678 and #45612 to determine if it's a systemic issue or a coincidence.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-06-13T03:30:03.777805"
+    },
+    {
+      "arm": "curiosity",
+      "task": "Ingest and structured-summarize the me-os-design-doc-2026-06-01.md to extract current architecture decisions, active hypotheses, and any open questions that affect all other arms.",
+      "why": "The design doc (state #46606) is the highest-signal unprocessed item; it defines the OS orchestration layer that every other arm (research, code, infra, brother-direct) depends on. Understanding it now prevents downstream misalignment and satisfies an identity-tier (P0) need to close the loop on ME-OS coherence.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 25,
+      "timestamp": "2026-06-13T03:45:22.288916"
     }
   ]
 }
