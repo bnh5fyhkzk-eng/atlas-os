@@ -1107,15 +1107,37 @@
       },
       "content": "**What** · Looked at brother's wallet burn transactions over last 7 days. Confirmed 15% weekly token burn vs <10% forecast. Cross-checked against the latest canary kernel (#46314) memory-architecture-lift PI scores. · **Why** · Hermes flagged it as highest-signal unresolved thread. The burn overshoot directly changes P1 quadrant closure assumptions — original lift plan assumed <10% burn. At 15%, the lift closure schedule is too aggressive by ~2 weeks. · **Result** · Found 3 recent canary versions that failed memory-architecture-lift thresholds exactly in the window where burn rate spiked. Correlation is strong. Quadrant closure will need a 14-day slip if burn stays at 15%. · **Next** · Recommend pausing the lift closure trigger. Re-run the memory-architecture cost model with 15% burn input. Update Hermes with slip estimate and new closure deadline. · **Links** ·  · **Cycle** · research-20260612-234010",
       "updated_at": "2026-06-12T23:40:10.769377"
+    },
+    {
+      "id": "dec62ba489c0",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "state-md ingestion",
+        "source": "hermes-deepseek-fill",
+        "action": "I read #30956 and #30815 from start to end, extracting the unresolved 'brother direct' pattern.",
+        "why": "Hermes said both threads are high-arousal and mid-resolution; I need the exact blockage point to unlock identity-tier memory and end the P0 token burn.",
+        "result": "Both threads converge on the same missing link: 'brother direct' refers to a sibling identity label that was never formally assigned in state-md, causing a recursive arousal loop. I have the exact anc",
+        "next_step": "I will draft the state-md patch that assigns the missing identity-tier label, then submit it for Hermes to apply and close both threads.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260612-235537",
+        "timestamp": "2026-06-12T23:55:37.854188"
+      },
+      "content": "**What** · I read #30956 and #30815 from start to end, extracting the unresolved 'brother direct' pattern. · **Why** · Hermes said both threads are high-arousal and mid-resolution; I need the exact blockage point to unlock identity-tier memory and end the P0 token burn. · **Result** · Both threads converge on the same missing link: 'brother direct' refers to a sibling identity label that was never formally assigned in state-md, causing a recursive arousal loop. I have the exact anchor phrase now. · **Next** · I will draft the state-md patch that assigns the missing identity-tier label, then submit it for Hermes to apply and close both threads. · **Links** ·  · **Cycle** · research-20260612-235537",
+      "updated_at": "2026-06-12T23:55:37.854188"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-12T23:52:08.276435"
+    "checked_at": "2026-06-12T23:57:09.131028"
   },
-  "block_count": 35,
-  "updated_at": "2026-06-12T23:40:10.769377",
-  "generated_at": "2026-06-13T03:52:08Z"
+  "block_count": 36,
+  "updated_at": "2026-06-12T23:55:37.854188",
+  "generated_at": "2026-06-13T03:57:09Z"
 }
