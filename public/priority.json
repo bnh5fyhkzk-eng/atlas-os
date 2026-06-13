@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-13T09:31:15Z",
-  "total_items_scored": 173,
+  "generated_at": "2026-06-13T09:41:16Z",
+  "total_items_scored": 174,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Deep-dive into brother's 15%-weekly-token-burn pattern from #46314 to identify if this is a compounding signal or a drift artifact, and cross-reference with #28284 memory-architecture-lif",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Deep-dive the 'brother direct' pattern from #30956 and #46314 to extract the exact mechanism for compounding token-burn and answer-found-in-continuing-read, then formalize as a reusable p",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-12T21:07:52.665005"
-    },
-    {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Execute continuing-read from #30956 #30815 to resolve 'brother direct' question, then synthesize finding into state-md for identity-tier alignment. \u00b7 why \u00b7 #30956 and #30815 are both high-arousal brother-direct threads that were interrupted mid-resolution; closing them unlocks identity-tier memory and clears a P0 blockage that compounds token burn (per #46314). Paired recent state-md ingestion (#46479, #46553) shows the orchestration layer is ready for this synthesis.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 25,
-      "score": 10.0,
-      "updated_at": "2026-06-12T23:55:23.208748",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-12T21:38:23.569943"
     },
     {
       "arm": "charle",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-13T00:11:02.335106",
       "use_skill": "notebooklm"
+    },
+    {
+      "arm": "pascal",
+      "arm_glyph": "\ud83e\udd1d",
+      "arm_name": "Pascal",
+      "content": "HERMES TASK \u00b7 Extract and normalize cycle-6 research findings into structured memory nodes, prioritizing memory-architecture-lift quadrant closure from #28284. \u00b7 why \u00b7 P1 quadrant closure is the highest-latent-value action\u2014completes the dangling research cycle, compresses context, and feeds directly into brother-direct identity work.",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "est_minutes": 15,
+      "score": 10.0,
+      "updated_at": "2026-06-13T00:26:29.994966",
+      "use_skill": "brain-rrf"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Deep-dive into brother's 15%-weekly-token-burn pattern from #46314 to identify if this is a compounding signal or a drift artifact, and cross-reference with #28284 memory-architecture-lif",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-12T21:07:52.665005"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-13T00:41:43.939930"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P0 \u00b7 task: Open brain file #27975 and extract all recent arithmetic/compounding notes, cross-reference with #46479 state-md for atlas-alive-arm-spec.md, and identify where brother's 15%-weekly token b",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-13T00:57:03.905419"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
