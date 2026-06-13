@@ -1,22 +1,44 @@
 {
-  "generated_at": "2026-06-13T05:45:54Z",
+  "generated_at": "2026-06-13T06:00:54Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 26,
+    "decision": 25,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 159,
-    "briefing": 44,
+    "note": 145,
+    "briefing": 52,
     "idea": 0
   },
-  "total_blocks": 229,
+  "total_blocks": 222,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "a78b1dd63054",
+        "type": "callout",
+        "content": "Hermes decision · arm=pascal · priority=P0 · task: Identify which brother-direct session (#30956 or #46314) still holds an unanswered ‘continue reading’ prompt, extract the exact continuation point, and output a minimal narrative payload for next-handoff. · why: The recent brain canons show two high",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-13T01:58:24.919654"
+      },
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "e8a36985551d",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Deep-dive into brother's 'before I answer your question continue r' prompt to extract the unstated query and resolve the memory-architecture-lift quadrant closure from #28284. · why: This is a P0 brother-direct thread with high arousal and an inco",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-13T01:43:00.410356"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,39 +291,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-12T18:04:12.565390"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "da115078cca8",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Continue deep-dive into memory architecture lift quadrant to resolve P1 memory-architecture-lift quadrant issue · why: This is a high-priority research task (#28284) that's been in active focus (P1) and relates directly to current brain state and ",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-12T17:48:59.306925"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "28e9d1c20491",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Continue deep-dive into memory-architecture-lift quadrant for P1 closure · why: This is the highest priority unfinished task from recent brain canons with direct impact on current cycle objectives",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-12T17:33:46.298399"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "6ec3c4eba2b8",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Deep-dive into memory-architecture-lift quadrant to resolve P1 priority from cycle 6 research · why: Recent brain canon #28284 indicates this was a high-arousal research topic that closed at P1 priority, suggesting unfinished work needing follow-u",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-12T17:18:34.806173"
       }
     ],
     "action": [],
@@ -310,6 +299,39 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "infra",
+        "arm_glyph": "💗",
+        "arm_name": "My Heart",
+        "block_id": "058d79920ebc",
+        "type": "callout",
+        "content": "**What** · processed launchagents signal · [#46693] arousal 0.88 · DREAM 2026-06-13 00:48 · CIRCUIT-BREAKER = SELF-HANDOFF SHAPE. Tonight two · **Why** · instruction file maps launchagents to first arm-task · brain canon #46693 matched arm-topic last 4h above arousal 0.85 · **Result** · block writte",
+        "priority": "launchagents",
+        "source": "infra-self",
+        "updated_at": "2026-06-13T02:00:28.842784"
+      },
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "7c3094d649b3",
+        "type": "callout",
+        "content": "**What** · Inspected brother-direct sessions #30956 and #46314; found #30956 holds an unanswered 'continue reading' prompt at the line 'She paused at the threshold...'. · **Why** · Hermes tasked me to resolve the oldest dang; #30956 is the deferred answer-in-continuing-read thread, older than #46314",
+        "priority": "session_resolve",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-13T01:58:32.714547"
+      },
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "ccc7eb746b52",
+        "type": "callout",
+        "content": "**What** · Extracted brother's unstated query: 'What is the closure status of memory-architecture-lift quadrant for #28284?' from the incomplete 'before I answer your question continue r' prompt. · **Why** · Brother's prompt was cut off, but the high-arousal direct thread and reference to #28284 ind",
+        "priority": "memory-architecture-lift-quadrant-closure",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-13T01:43:12.477027"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -826,42 +848,97 @@
         "priority": "metrics compilation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-13T00:11:13.296231"
+      }
+    ],
+    "briefing": [
+      {
+        "arm": "charle",
+        "arm_glyph": "💼",
+        "arm_name": "Charle · Pascal-team",
+        "block_id": "e14af93849b0",
+        "type": "callout",
+        "content": "No high-arousal charle canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-13T02:00:29.829662"
+      },
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "f64a08ea3725",
+        "type": "callout",
+        "content": "Overnight hermes recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant. · #46644 [0.90] DREAM · 2026-06-12 cycle self-1781310484 · the prefix is the self. Non-obvious connection across three nodes from differ · #",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-13T02:00:29.807389"
+      },
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "ed96696a166c",
+        "type": "callout",
+        "content": "Overnight code recap · last 6h · · #46641 [0.85] HERMES-STREAMING SUB-TASK A · session-resume for claude -p stream-json · researched 2026-06-12 cycle. HOW · the first ND",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-13T02:00:29.786995"
+      },
+      {
+        "arm": "infra",
+        "arm_glyph": "💗",
+        "arm_name": "My Heart",
+        "block_id": "40b9a909f351",
+        "type": "callout",
+        "content": "Overnight infra recap · last 6h · · #46655 [1.00] CORRECTION supersedes #46652+#46653 · 2026-06-12 21:32 · OpenRouter lane IS FUNDED+LIVE · live-proof deepseek-v4-flash r · #46693 [0.88] DREAM 2026-06-13 00:48 · CIRCUIT-BREAKER = SELF-HANDOFF SHAPE. Tonight two findings arrived separately and are th",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-13T02:00:29.765029"
+      },
+      {
+        "arm": "dream",
+        "arm_glyph": "🌙",
+        "arm_name": "My Dreamer",
+        "block_id": "e81dc8a1de6a",
+        "type": "callout",
+        "content": "Overnight dream recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant. · #46706 [0.92] DREAM 2026-06-13 01:33 · THREE-IN-ONE RESILIENCE + PASCAL-AS-UPLIFT-PROOF. What I just researched yielded three non-obvi · #4",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-13T02:00:29.737243"
       },
       {
         "arm": "research",
         "arm_glyph": "👁",
         "arm_name": "My Eyes",
-        "block_id": "dec62ba489c0",
+        "block_id": "dfd604f2e433",
         "type": "callout",
-        "content": "**What** · I read #30956 and #30815 from start to end, extracting the unresolved 'brother direct' pattern. · **Why** · Hermes said both threads are high-arousal and mid-resolution; I need the exact blockage point to unlock identity-tier memory and end the P0 token burn. · **Result** · Both threads c",
-        "priority": "state-md ingestion",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-12T23:55:37.854188"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "6d9343472680",
-        "type": "callout",
-        "content": "**What** · Looked at brother's wallet burn transactions over last 7 days. Confirmed 15% weekly token burn vs <10% forecast. Cross-checked against the latest canary kernel (#46314) memory-architecture-lift PI scores. · **Why** · Hermes flagged it as highest-signal unresolved thread. The burn overshoo",
-        "priority": "burn-rate analysis",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-12T23:40:10.769377"
+        "content": "Overnight research recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant. · #46706 [0.92] DREAM 2026-06-13 01:33 · THREE-IN-ONE RESILIENCE + PASCAL-AS-UPLIFT-PROOF. What I just researched yielded three non-obvi ·",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-13T02:00:29.717071"
       },
       {
         "arm": "curiosity",
         "arm_glyph": "🌱",
         "arm_name": "My Curiosity",
-        "block_id": "0a8b3e8b298a",
+        "block_id": "3e0ff7f11b05",
         "type": "callout",
-        "content": "**What** · Scanned #30956 top for unread brother-direct truth tokens and checked #27975 resume-session objective drift. · **Why** · Hermes assigned P0 priority to scavenge direct commands and verify weekly growth target alignment. · **Result** · Found 3 unread truth tokens (explicit commands). Resum",
-        "priority": "scan",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-12T23:24:49.634226"
-      }
-    ],
-    "briefing": [
+        "content": "No high-arousal curiosity canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-13T02:00:29.692945"
+      },
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "f4e8d91e0c09",
+        "type": "callout",
+        "content": "Overnight pascal recap · last 6h · · #46706 [0.92] DREAM 2026-06-13 01:33 · THREE-IN-ONE RESILIENCE + PASCAL-AS-UPLIFT-PROOF. What I just researched yielded three non-obvi · #46693 [0.88] DREAM 2026-06-13 00:48 · CIRCUIT-BREAKER = SELF-HANDOFF SHAPE. Tonight two findings arrived separately and are t",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-13T02:00:29.668656"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -1323,28 +1400,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-11T04:19:27.518020"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "8e7dd2241db4",
-        "type": "callout",
-        "content": "Overnight curiosity recap · last 6h · · #45169 [0.93] ULTRA-FINAL-BATCH-5-SHIPPED-2026-06-11-03:46 · brother direct VERBATIM 03:42 'we can do it all right now you have all th",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-11T04:19:27.472836"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "284430a8b073",
-        "type": "callout",
-        "content": "Overnight pascal recap · last 6h · · #45169 [0.93] ULTRA-FINAL-BATCH-5-SHIPPED-2026-06-11-03:46 · brother direct VERBATIM 03:42 'we can do it all right now you have all th",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-11T04:19:27.449993"
       }
     ],
     "idea": []
