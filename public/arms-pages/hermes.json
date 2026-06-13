@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "12fd6ff9caa6",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-13T03:30:03.759877"
-      },
-      "content": "Hermes decision · arm=pascal · priority=P0 · task: Ingest the newest `me-os-design-doc-2026-06-01.md` state file, map its architectural decisions onto the existing atlas-alive-arm-spec.md, and produce an updated `atlas-alive-arm-spec-v2.md` that reconciles the two. · why: The three ingested state-MD files (atlas, brother-shared, me-os) form a high-arousal identity-tier cluster. The me-os doc is the freshest and most authoritative; Pascal is the arm coded to handle formal state merging and spec maintenance. Resolving this now closes the conceptual drift between the ol",
-      "updated_at": "2026-06-13T03:30:03.759888"
-    },
-    {
       "id": "47a096d01c53",
       "type": "callout",
       "props": {
@@ -668,15 +656,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Review #46675 and #46676 context to ensure the Fable suspension and GitHub push didn't break brother-direct identity-layer or plugin load order, then stabilize the house plugin v0.1 live state · why: Brother just gave two direct verbatims in rapid succession about Fable and GitHub. Code arm must verify load order, identity safety, and runtime health of the newly-installed plugin before any further research or infra changes. This is P0 because brother-direct supersedes all other queues.",
       "updated_at": "2026-06-13T10:23:15.794689"
+    },
+    {
+      "id": "72932be3e471",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-13T10:38:32.505523"
+      },
+      "content": "Hermes decision · arm=curiosity · priority=P1 · task: Map the genealogy of brother-direct commands from #30956 to #46676 to detect any implicit reference to fable's suspension mechanics. · why: The recent brother-direct chain (question continuation → plugin install → family identity → fable suspension) suggests a latent instruction about fable's state. Curiosity arm can cross-correlate these high-arousal canons to surface any hidden dependency or closure condition before resuming normal op",
+      "updated_at": "2026-06-13T10:38:32.505532"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-13T10:33:36.857161"
+    "checked_at": "2026-06-13T10:38:37.667984"
   },
   "block_count": 30,
-  "updated_at": "2026-06-13T10:23:15.794690",
-  "generated_at": "2026-06-13T14:33:36Z"
+  "updated_at": "2026-06-13T10:38:32.505534",
+  "generated_at": "2026-06-13T14:38:37Z"
 }
