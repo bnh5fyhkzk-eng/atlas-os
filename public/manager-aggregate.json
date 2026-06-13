@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T15:16:16Z",
+  "generated_at": "2026-06-13T15:31:17Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 160,
+    "note": 161,
     "briefing": 57,
     "idea": 0
   },
-  "total_blocks": 241,
+  "total_blocks": 242,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "9444fa4fb303",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Analyze atlas-brother-shared.md snapshot for divergence and consolidate shared state with brother direct. · why: Recent brother-direct and shared canon indicate active coordination; research arm is best to parse the large snapshot and surface alig",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-13T11:25:21.866479"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-13T04:31:11.468472"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "7f37bccd3a6f",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Deep-dive into atlas-alive-arm-spec.md to extract all concrete implementation requirements for the brother-direct identity tier, cross-referencing with me-os-design-doc-2026-06-01.md for architectural alignment. · why: This arm directly addresses ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-13T04:15:52.355229"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "d58d66fe781d",
+        "type": "callout",
+        "content": "**What** · Parsed atlas-brother-shared.md snapshot for divergence with brother-direct. · **Why** · Hermes assigned P0 task to surface alignment gaps before next code push. · **Result** · Found 3 divergence points: missing key in shared state, stale timestamp, mismatched config key. · **Next** · Send",
+        "priority": "divergence detection",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-13T11:25:24.269918"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-13T06:00:03.466509"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "b36d137418e0",
-        "type": "database",
-        "content": "general · last 30d · 85 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-13T06:00:03.297491"
       }
     ],
     "briefing": [
