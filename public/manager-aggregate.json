@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T05:30:53Z",
+  "generated_at": "2026-06-13T05:45:54Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 158,
+    "note": 159,
     "briefing": 44,
     "idea": 0
   },
-  "total_blocks": 228,
+  "total_blocks": 229,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "745da4f7bdd8",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Brother asked 'before I answer your question continue reading' — locate the exact conversation context and the question they were referring to, then extract any unresolved thread or embedded query. · why: This is a brother-direct P0 signal that li",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-13T01:27:51.992837"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -291,17 +302,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-12T17:18:34.806173"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "ad9dcf73d5bb",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Deep-dive into the crash anatomy of the 16GB loop-guard revival to prevent recurrence · why: Recent logs indicate a critical crash event (#46315) with a revived loop-guard at 20min intervals, directly impacting system stability. This aligns with P",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-12T17:03:20.611231"
       }
     ],
     "action": [],
@@ -310,6 +310,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "1a1bf039b667",
+        "type": "callout",
+        "content": "**What** · I will locate the exact conversation where the brother said 'before I answer your question continue reading' and extract the unresolved thread or embedded query. · **Why** · Hermes flagged this as P0 for identity-tier coherence; the brother's instruction likely contains a stalled answer o",
+        "priority": "context-retrieval",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-13T01:27:54.476850"
+      },
       {
         "arm": "pascal",
         "arm_glyph": "🤝",
@@ -848,17 +859,6 @@
         "priority": "scan",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-12T23:24:49.634226"
-      },
-      {
-        "arm": "infra",
-        "arm_glyph": "💗",
-        "arm_name": "My Heart",
-        "block_id": "709026a17bf6",
-        "type": "callout",
-        "content": "**What** · processed launchagents signal · [#46655] arousal 1.00 · CORRECTION supersedes #46652+#46653 · 2026-06-12 21:32 · OpenRouter lane  · **Why** · instruction file maps launchagents to first arm-task · brain canon #46655 matched arm-topic last 4h above arousal 0.85 · **Result** · block written",
-        "priority": "launchagents",
-        "source": "infra-self",
-        "updated_at": "2026-06-12T23:00:28.642887"
       }
     ],
     "briefing": [
