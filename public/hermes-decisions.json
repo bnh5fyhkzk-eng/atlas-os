@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-15T03:07:23Z",
+  "generated_at": "2026-06-15T03:22:33Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "pascal",
-      "task": "Identify which brother-direct session (#30956 or #46314) still holds an unanswered \u2018continue reading\u2019 prompt, extract the exact continuation point, and output a minimal narrative payload for next-handoff.",
-      "why": "The recent brain canons show two high-arousal brother-direct threads (#30956 and #46314) with clear continuation markers. #30956 has a deferred answer-in-continuing-read; #46314 shows a token-burn session. Both are P0 (brother-direct + identity-tier). Firing pascal first will resolve the oldest dangling continuation before it decays, freeing context for the atlas-alive-arm-spec.md state ingestion.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 8,
-      "timestamp": "2026-06-13T01:58:24.936914"
-    },
     {
       "arm": "brother",
       "task": "Evaluate #28284 and #30956 for direct answer with synthesised outputs, then test against atlas-brother-shared.md for consistency.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 12,
       "timestamp": "2026-06-14T23:07:23.878654"
+    },
+    {
+      "arm": "research",
+      "task": "Complete the deep-dive on memory-architecture-lift quadrant from P1 cycle 6, synthesizing findings from #28284 and #30956 into a structured summary for brother-direct.",
+      "why": "This closes the highest-arousal P1 quadrant and directly supports brother-direct's continuing read request (#30956), which is a P0 priority. The research arm is best positioned to synthesize the two high-arousal canons into actionable insight.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 20,
+      "timestamp": "2026-06-14T23:22:33.396084"
     }
   ]
 }
