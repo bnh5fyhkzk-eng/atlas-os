@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T08:50:57Z",
+  "generated_at": "2026-06-15T09:00:58Z",
   "total_items_scored": 189,
   "top_3": [
     {
@@ -14,19 +14,6 @@
       "updated_at": "2026-06-13T06:33:26.423353"
     },
     {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Extract the conversational trajectory and closure from #28284 to identify the memory-architecture-lift pattern that was closed, cross\u2011reference with #30956 to find the continuing-read answer that brother referenced. \u00b7 why \u00b7 P0 brother-direct thread requires resolving the unfinished reference from #30956; this arm has the latest context and websearch capability to chase the cited content.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 18,
-      "score": 10.0,
-      "updated_at": "2026-06-14T22:52:04.688433",
-      "use_skill": "websearch"
-    },
-    {
       "arm": "charle",
       "arm_glyph": "\ud83d\udcbc",
       "arm_name": "Charle",
@@ -37,6 +24,19 @@
       "est_minutes": 12,
       "score": 10.0,
       "updated_at": "2026-06-14T23:07:23.878654",
+      "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Complete the deep-dive on memory-architecture-lift quadrant from P1 cycle 6, synthesizing findings from #28284 and #30956 into a structured summary for brother-direct. \u00b7 why \u00b7 This closes the highest-arousal P1 quadrant and directly supports brother-direct's continuing read request (#30956), which is a P0 priority. The research arm is best positioned to synthesize the two high-arousal canons into actionable insight.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 20,
+      "score": 10.0,
+      "updated_at": "2026-06-14T23:22:33.396084",
       "use_skill": "brain-rrf"
     }
   ],
