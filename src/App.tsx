@@ -14,6 +14,7 @@ import OpsPage from "./pages/OpsPage";
 import KanbanPage from "./pages/KanbanPage";
 import StudioPage from "./pages/StudioPage";
 import NotebookPage from "./pages/NotebookPage";
+import { TodayPage } from "./pages/TodayPage";
 import { CmdK } from "./components/CmdK";
 import { AtlasBar } from "./components/AtlasBar";
 
@@ -218,6 +219,7 @@ function PageRouter({ nav }: { nav: NavItem[] }) {
   if (item.template === "tui") return <TuiPage item={item} />;
   if (item.template === "studio") return <StudioPage item={item} />;
   if (item.template === "notebook") return <NotebookPage item={item} />;
+  if (item.template === "today") return <TodayPage item={item} />;
   return <Navigate to="/home" replace />;
 }
 
