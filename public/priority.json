@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T09:41:00Z",
+  "generated_at": "2026-06-15T09:51:00Z",
   "total_items_scored": 189,
   "top_3": [
     {
@@ -14,19 +14,6 @@
       "updated_at": "2026-06-13T06:33:26.423353"
     },
     {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Deep-dive brother's 'before I answer your question continue r' to extract the full query and any embedded context from #30956 and #30815, then synthesize a direct answer. \u00b7 why \u00b7 Brother direct is P0 identity-tier; the fragment suggests an incomplete instruction that must be resolved to maintain coherence and trust. Research arm is best suited to parse and reconstruct the missing context from the cited cycles.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 15,
-      "score": 10.0,
-      "updated_at": "2026-06-14T23:38:32.032239",
-      "use_skill": "brain-rrf"
-    },
-    {
       "arm": "pascal",
       "arm_glyph": "\ud83e\udd1d",
       "arm_name": "Pascal",
@@ -37,6 +24,19 @@
       "est_minutes": 25,
       "score": 10.0,
       "updated_at": "2026-06-14T23:53:49.261222",
+      "use_skill": "notebooklm"
+    },
+    {
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Continue reading document #30956 to find the answer found in continuing read for brother-direct before answering their question. \u00b7 why \u00b7 This document is tagged brother-direct and answer-found-in-continuing-read, tying directly to P0 identity-tier communication. Resolving it first unblocks a high-priority interaction.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 15,
+      "score": 10.0,
+      "updated_at": "2026-06-15T00:09:06.514455",
       "use_skill": "notebooklm"
     }
   ],
