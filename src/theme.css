@@ -178,11 +178,14 @@ html, body {
   flex: 1;
   min-height: 0;
   overflow-y: auto;
+  overflow-anchor: none;
+  overscroll-behavior: contain;
   padding: 14px;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
+.atlas-glass-body * { overflow-anchor: none; }
 .atlas-bubble {
   max-width: 86%;
   padding: 9px 13px;
