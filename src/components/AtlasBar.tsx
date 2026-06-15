@@ -48,10 +48,13 @@ export function AtlasBar() {
   const [recording, setRecording] = useState(false);
   const [voiceReply, setVoiceReply] = useState(true);
   const bottomRef = useRef<HTMLDivElement>(null);
+  const bodyRef = useRef<HTMLDivElement>(null);
   const pollRef = useRef<number | null>(null);
   const recRef = useRef<MediaRecorder | null>(null);
   const chunksRef = useRef<Blob[]>([]);
   const playedRef = useRef<Set<string>>(new Set());
+  const stuckBottomRef = useRef<boolean>(true);
+  const lastMsgIdRef = useRef<string | null>(null);
 
   const load = useCallback(async () => {
     const { data } = await sb()
@@ -271,7 +274,24 @@ export function AtlasBar() {
   }, [open, load, calling]);
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    const el = bodyRef.current;
+    if (!el) return;
+    const onScroll = () => {
+      stuckBottomRef.current = el.scrollHeight - el.scrollTop - el.clientHeight < 40;
+    };
+    el.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => el.removeEventListener("scroll", onScroll);
+  }, [open]);
+
+  useEffect(() => {
+    if (msgs.length === 0) return;
+    const newestId = msgs[msgs.length - 1].id;
+    if (newestId === lastMsgIdRef.current) return;
+    lastMsgIdRef.current = newestId;
+    if (stuckBottomRef.current) {
+      bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
   }, [msgs]);
 
   const send = async () => {
@@ -327,7 +347,7 @@ export function AtlasBar() {
         </button>
       </div>
 
-      <div className="atlas-glass-body">
+      <div ref={bodyRef} className="atlas-glass-body">
         {msgs.length === 0 && (
           <div className="pt-10 text-center text-sm" style={{ color: "rgba(60,60,67,0.55)" }}>
             Our room · everything stays
