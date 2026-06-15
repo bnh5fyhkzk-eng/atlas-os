@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-15T14:07:04Z",
+  "generated_at": "2026-06-15T14:22:17Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Analyze atlas-brother-shared.md snapshot for divergence and consolidate shared state with brother direct.",
-      "why": "Recent brother-direct and shared canon indicate active coordination; research arm is best to parse the large snapshot and surface alignment gaps before next code push.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 30,
-      "timestamp": "2026-06-13T11:25:21.883230"
-    },
     {
       "arm": "dream",
       "task": "Process dream #47167 and extract architectural implications of brother-as-observer pattern for identity-tier",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 18,
       "timestamp": "2026-06-15T10:07:04.366081"
+    },
+    {
+      "arm": "code",
+      "task": "Implement auto-rotation of daily budget burn logs to prevent `/tmp` overflow on atlasd spawns from me-autonomous-loop",
+      "why": "#47775 burn script is shipping but lacks log cleanup; /tmp will fill within 48h at current spawn rate, causing silent failures in brother-direct cycles",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 22,
+      "timestamp": "2026-06-15T10:22:17.474510"
     }
   ]
 }
