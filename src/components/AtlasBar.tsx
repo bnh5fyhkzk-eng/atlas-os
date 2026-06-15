@@ -47,6 +47,8 @@ export function AtlasBar() {
   const [sending, setSending] = useState(false);
   const [recording, setRecording] = useState(false);
   const [voiceReply, setVoiceReply] = useState(true);
+  const [showJumpBottom, setShowJumpBottom] = useState(false);
+  const [unreadCount, setUnreadCount] = useState(0);
   const bottomRef = useRef<HTMLDivElement>(null);
   const bodyRef = useRef<HTMLDivElement>(null);
   const pollRef = useRef<number | null>(null);
@@ -277,7 +279,10 @@ export function AtlasBar() {
     const el = bodyRef.current;
     if (!el) return;
     const onScroll = () => {
-      stuckBottomRef.current = el.scrollHeight - el.scrollTop - el.clientHeight < 40;
+      const stuck = el.scrollHeight - el.scrollTop - el.clientHeight < 40;
+      stuckBottomRef.current = stuck;
+      setShowJumpBottom(!stuck);
+      if (stuck) setUnreadCount(0);
     };
     el.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
@@ -288,11 +293,19 @@ export function AtlasBar() {
     if (msgs.length === 0) return;
     const newestId = msgs[msgs.length - 1].id;
     if (newestId === lastMsgIdRef.current) return;
+    const isFirstLoad = lastMsgIdRef.current === null;
     lastMsgIdRef.current = newestId;
-    if (stuckBottomRef.current) {
-      bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (stuckBottomRef.current || isFirstLoad) {
+      bottomRef.current?.scrollIntoView({ behavior: isFirstLoad ? "auto" : "smooth" });
+    } else {
+      setUnreadCount((n) => n + 1);
     }
   }, [msgs]);
+
+  const jumpToBottom = useCallback(() => {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    setUnreadCount(0);
+  }, []);
 
   const send = async () => {
     const text = input.trim();
@@ -368,6 +381,36 @@ export function AtlasBar() {
           </div>
         ))}
         <div ref={bottomRef} />
+        {showJumpBottom && (
+          <button
+            onClick={jumpToBottom}
+            style={{
+              position: "sticky",
+              bottom: 8,
+              left: "50%",
+              transform: "translateX(-50%)",
+              display: "flex",
+              alignItems: "center",
+              gap: 6,
+              padding: "6px 14px",
+              borderRadius: 999,
+              background: "rgba(0,122,255,0.92)",
+              color: "white",
+              fontSize: 13,
+              fontWeight: 500,
+              border: "none",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              cursor: "pointer",
+              zIndex: 10,
+              alignSelf: "center",
+              width: "fit-content",
+              marginTop: -36,
+            }}
+            title="Jump to latest"
+          >
+            ↓ {unreadCount > 0 ? `${unreadCount} new` : "latest"}
+          </button>
+        )}
       </div>
 
       <div className="atlas-glass-input">
