@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-16T22:35:11Z",
+  "generated_at": "2026-06-16T22:50:33Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "curiosity",
-      "task": "Extract the full ATLASD hidden-burn timeline from shared-canon #48155 and triangulate with auto-wake #47800 to unbrick the memory-architecture-lift quadrant",
-      "why": "This is the active brother-direct P0 vector \u2014 shared atlas-brother state and auto-wake logs suggest a latent second burn source that must be concretely mapped before any other arm can progress on P1/P2 tasks",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-06-15T05:31:14.109474"
-    },
     {
       "arm": "brother",
       "task": "Directly answer brother's question from #30956, using the full shared canon in #48155 to resolve the open loop before proceeding to any new research.",
@@ -900,6 +891,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 15,
       "timestamp": "2026-06-16T18:35:11.975305"
+    },
+    {
+      "arm": "code",
+      "task": "Fix auto-recall hook to prevent injection of stale node #30956 by filtering nodes older than 24 hours in recall-before-make.sh",
+      "why": "Verified root cause from #48783 shows stale node injection every prompt; blocking identity-tier brother-direct flow; immediate fix needed",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 30,
+      "timestamp": "2026-06-16T18:50:33.094527"
     }
   ]
 }
