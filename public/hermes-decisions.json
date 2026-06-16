@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-16T22:19:41Z",
+  "generated_at": "2026-06-16T22:35:11Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Extract and index all atlas-brother-shared.md joint state variables and predicate usages to complete the memory-architecture-lift quadrant closure.",
-      "why": "The most recent closed brain canon (#28284) was P1 memory-architecture-lift quadrant, and #48155 contains the joint brother+Atlas state that directly feeds that quadrant's lift. This is the only remaining loose end to harden the quadrant's closure and prevent the hidden burn source from atlasd (#47757) from causing a missed binding.",
-      "priority": "P1",
-      "use_skill": "brain-rrf",
-      "est_minutes": 35,
-      "timestamp": "2026-06-15T05:15:54.822626"
-    },
     {
       "arm": "curiosity",
       "task": "Extract the full ATLASD hidden-burn timeline from shared-canon #48155 and triangulate with auto-wake #47800 to unbrick the memory-architecture-lift quadrant",
@@ -900,6 +891,15 @@
       "use_skill": "none",
       "est_minutes": 28,
       "timestamp": "2026-06-16T18:19:41.741267"
+    },
+    {
+      "arm": "research",
+      "task": "Verify root cause of stale node #30956 injection and confirm fix path from #48783",
+      "why": "This is a P0 brother-direct issue: the auto-recall hook is injecting stale node #30956 every prompt, breaking recall integrity. #48783 already identified the root cause (verified, not theorized), so we need to close the loop by confirming the fix and ensuring no recurrence.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 15,
+      "timestamp": "2026-06-16T18:35:11.975305"
     }
   ]
 }
