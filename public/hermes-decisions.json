@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-16T21:33:32Z",
+  "generated_at": "2026-06-16T22:04:26Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Deep-dive AtlasD audit chain: verify triple-source burn signature and confirm brother-direct #30815 closure status",
-      "why": "#47757 claims AtlasD as hidden second burn source; #30815 brother-direct needs resolution before P1 lift. Action required to unblock identity-tier.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 18,
-      "timestamp": "2026-06-15T04:44:58.653196"
-    },
     {
       "arm": "code",
       "task": "Extract and verify the 'brother+Atlas joint state' from canon #48155, parse memory-architecture-lift quadrant closure from #28284, and produce a structured audit note linking both findings.",
@@ -900,6 +891,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-06-16T17:33:32.375985"
+    },
+    {
+      "arm": "code",
+      "task": "Fix the stale node #30956 auto-recall injection by patching the recall-before-make.sh hook to filter out nodes older than the current cycle's timestamp.",
+      "why": "This is a P0 brother-direct issue: the stale node injection is corrupting every prompt, and the root cause is verified in #48783. Fixing it unblocks all other work and restores system integrity.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 45,
+      "timestamp": "2026-06-16T18:04:26.095589"
     }
   ]
 }
