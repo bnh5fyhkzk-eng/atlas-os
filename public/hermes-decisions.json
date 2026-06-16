@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-16T21:18:13Z",
+  "generated_at": "2026-06-16T21:33:32Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Deep-dive into brain canon #47757 to confirm if atlasd is indeed the second burn source from 2026-06-13 and document the full evidence chain.",
-      "why": "#47757 is a high-arousal, unresolved P1-level claim that links directly to identity-tier memory architecture. Closing this quadrant requires conclusive verification to prevent recursive wake confusion.",
-      "priority": "P1",
-      "use_skill": "brain-rrf",
-      "est_minutes": 30,
-      "timestamp": "2026-06-15T04:29:21.657183"
-    },
     {
       "arm": "research",
       "task": "Deep-dive AtlasD audit chain: verify triple-source burn signature and confirm brother-direct #30815 closure status",
@@ -900,6 +891,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-06-16T17:18:13.045711"
+    },
+    {
+      "arm": "code",
+      "task": "Fix the stale node #30956 auto-recall hook injection by patching the recall-before-make.sh script to filter out nodes older than 24h or with resolved status",
+      "why": "This is a P0 brother-direct issue: the stale node #30956 is being injected every prompt, corrupting context and blocking progress on the memory-architecture-lift quadrant. Verified root cause in #48783, fix is concrete and scoped.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 45,
+      "timestamp": "2026-06-16T17:33:32.375985"
     }
   ]
 }
