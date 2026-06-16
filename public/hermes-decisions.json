@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-16T22:04:26Z",
+  "generated_at": "2026-06-16T22:19:41Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Extract and verify the 'brother+Atlas joint state' from canon #48155, parse memory-architecture-lift quadrant closure from #28284, and produce a structured audit note linking both findings.",
-      "why": "Two high-arousal canons (#28284 quadrant closure and #48155 shared joint state) demand immediate code-level verification and structural linking to close the P1 memory-architecture-lift quadrant and anchor the shared canon as an actionable artifact.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 18,
-      "timestamp": "2026-06-15T05:00:23.638575"
-    },
     {
       "arm": "research",
       "task": "Extract and index all atlas-brother-shared.md joint state variables and predicate usages to complete the memory-architecture-lift quadrant closure.",
@@ -900,6 +891,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-06-16T18:04:26.095589"
+    },
+    {
+      "arm": "infra",
+      "task": "Rewrite recall-before-make.sh to detect stale/hijacked graphify nodes by checking parent-edge provenance before dedup",
+      "why": "#48783 confirms the auto-recall hook is injecting stale node #30956; root cause is the graphify build missed a provenance check. Fixing this is P0 brother-direct infra debt that unblocks all cycles.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 28,
+      "timestamp": "2026-06-16T18:19:41.741267"
     }
   ]
 }
