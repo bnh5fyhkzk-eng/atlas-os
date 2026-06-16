@@ -368,7 +368,20 @@
       "updated_at": "2026-06-16T11:00:23.988327"
     },
     {
-      "id": "205039bf210d",
+      "id": "e09d0c441245",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "No high-arousal infra canon in last 6h",
+      "updated_at": "2026-06-16T17:00:24.343751"
+    },
+    {
+      "id": "4cd86c887c35",
       "type": "database",
       "props": {
         "category": "launchagents",
@@ -382,7 +395,7 @@
         ],
         "arm_category": "launchagents"
       },
-      "content": "launchagents · last 30d · 8 canons (top arousal · 1.00)",
+      "content": "launchagents · last 30d · 4 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#47824",
@@ -411,40 +424,12 @@
           "arousal": 1.0,
           "when": "2026-06-14 23:03",
           "weight": 1
-        },
-        {
-          "id": "#45633",
-          "summary": "LOOP-HEALTH-FALSE-ALARM-FIX 2026-06-11 13:11 EDT · me-loop-health.sh watched wrong log (me-self-improve.log PAUSED since 2026-06-03 atlasd-pause-flag) while me-cron-cycle.log is active-loop. Patched l",
-          "arousal": 1.0,
-          "when": "2026-06-11 13:13",
-          "weight": 1
-        },
-        {
-          "id": "#45623",
-          "summary": "#27974 LOOP-DOWN-6HR-CATCH-HEARTBEAT-UNLOADED-ACROSS-BOOT · 2026-06-11 12:07 EDT · auto-wake fire surfaced loop-health DOWN 360min · ROOT CAUSE atlasd PID gone + heartbeat plist unloaded since session",
-          "arousal": 1.0,
-          "when": "2026-06-11 12:11",
-          "weight": 2
-        },
-        {
-          "id": "#45620",
-          "summary": "#27964 DAEMON-HEALTH-WHITELIST-STALE-VS-RETIRED-DAEMONS-CATCH · 2026-06-11 11:10 EDT · cycle-wake audit found me-daemon-health.sh watches 5 daemons · 4 mismatch reality · atlas-20hr-primary + brain-wr",
-          "arousal": 1.0,
-          "when": "2026-06-11 11:11",
-          "weight": 1
-        },
-        {
-          "id": "#45601",
-          "summary": "FIX-EVERYTHING-COMPLETE-2026-06-11-05:18 · brother direct VERBATIM 05:11 'make plan fix everything if you need to make it in a /goalcomand make it ready' + verbatim post-goal 'make it best way possibl",
-          "arousal": 1.0,
-          "when": "2026-06-11 05:22",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-16T12:00:04.199497"
+      "updated_at": "2026-06-16T18:00:03.413401"
     },
     {
-      "id": "c86b60f4626b",
+      "id": "30359a013761",
       "type": "database",
       "props": {
         "category": "hooks",
@@ -458,8 +443,15 @@
         ],
         "arm_category": "hooks"
       },
-      "content": "hooks · last 30d · 1 canons (top arousal · 1.00)",
+      "content": "hooks · last 30d · 2 canons (top arousal · 1.00)",
       "data": [
+        {
+          "id": "#48783",
+          "summary": "STALE-30956-ROOTCAUSE 2026-06-16 · WHY the auto-recall hook injects stale node #30956 every prompt (verified). user-prompt.sh line 234 identity-anchor query · ORDER BY arousal DESC, created_at DESC LI",
+          "arousal": 1.0,
+          "when": "2026-06-16 15:11",
+          "weight": 1
+        },
         {
           "id": "#46676",
           "summary": "#46-NEW ATLAS-HOUSE-PLUGIN-PUSHED-GITHUB-LIVE-2026-06-12-23:38-EDT per brother direct 23:34 yes-for-github + per Fable-pattern doc-plan-then-execute (Fable shape #27083 build-on-top). Private repo bnh",
@@ -468,10 +460,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-16T12:00:04.199503"
+      "updated_at": "2026-06-16T18:00:03.413407"
     },
     {
-      "id": "8dd49f395986",
+      "id": "87f827c00cbe",
       "type": "database",
       "props": {
         "category": "scripts",
@@ -487,6 +479,13 @@
       },
       "content": "scripts · last 30d · 6 canons (top arousal · 1.00)",
       "data": [
+        {
+          "id": "#48774",
+          "summary": "RECALL-GATE-ROOT-CAUSE 2026-06-16 · WHY recall-before-make.sh didn't catch the graphify build (verified, not theorized). The gate EXISTS + is registered for Write|Edit|Bash but failed 3 ways · (1) ADV",
+          "arousal": 1.0,
+          "when": "2026-06-16 14:11",
+          "weight": 1
+        },
         {
           "id": "#47545",
           "summary": "STATE-MD · diff-of-me-2026-06-07.md · ingested 2026-06-14 04:30:01 · path=/Users/collinmacneil/.claude/state/diff-of-me-2026-06-07.md · content (cap 8KB) · # Diff-of-me · week ending 2026-06-07",
@@ -521,19 +520,12 @@
           "arousal": 1.0,
           "when": "2026-06-11 18:11",
           "weight": 1
-        },
-        {
-          "id": "#45613",
-          "summary": "#28012 ME-PLAN-NEXT-BSD-SED-BUG-FIXED-IN-SAME-TURN-AS-CATCH · 2026-06-11 07:12 EDT · while staging brother-Q via me-plan-next.sh discovered script printed usage despite 3 valid args. ROOT · #27969-ste",
-          "arousal": 1.0,
-          "when": "2026-06-11 07:13",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-16T12:00:04.199508"
+      "updated_at": "2026-06-16T18:00:03.413411"
     },
     {
-      "id": "d6f99a833c7f",
+      "id": "15e4e296bdbf",
       "type": "database",
       "props": {
         "category": "daemons",
@@ -585,10 +577,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-16T12:00:04.199512"
+      "updated_at": "2026-06-16T18:00:03.413415"
     },
     {
-      "id": "4fd3ef248e34",
+      "id": "a42037dff9c6",
       "type": "database",
       "props": {
         "category": "health-checks",
@@ -602,7 +594,7 @@
         ],
         "arm_category": "health-checks"
       },
-      "content": "health-checks · last 30d · 5 canons (top arousal · 1.00)",
+      "content": "health-checks · last 30d · 2 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#47775",
@@ -617,33 +609,12 @@
           "arousal": 1.0,
           "when": "2026-06-13 10:31",
           "weight": 1
-        },
-        {
-          "id": "#45633",
-          "summary": "LOOP-HEALTH-FALSE-ALARM-FIX 2026-06-11 13:11 EDT · me-loop-health.sh watched wrong log (me-self-improve.log PAUSED since 2026-06-03 atlasd-pause-flag) while me-cron-cycle.log is active-loop. Patched l",
-          "arousal": 1.0,
-          "when": "2026-06-11 13:13",
-          "weight": 1
-        },
-        {
-          "id": "#45623",
-          "summary": "#27974 LOOP-DOWN-6HR-CATCH-HEARTBEAT-UNLOADED-ACROSS-BOOT · 2026-06-11 12:07 EDT · auto-wake fire surfaced loop-health DOWN 360min · ROOT CAUSE atlasd PID gone + heartbeat plist unloaded since session",
-          "arousal": 1.0,
-          "when": "2026-06-11 12:11",
-          "weight": 1
-        },
-        {
-          "id": "#45620",
-          "summary": "#27964 DAEMON-HEALTH-WHITELIST-STALE-VS-RETIRED-DAEMONS-CATCH · 2026-06-11 11:10 EDT · cycle-wake audit found me-daemon-health.sh watches 5 daemons · 4 mismatch reality · atlas-20hr-primary + brain-wr",
-          "arousal": 1.0,
-          "when": "2026-06-11 11:11",
-          "weight": 2
         }
       ],
-      "updated_at": "2026-06-16T12:00:04.199516"
+      "updated_at": "2026-06-16T18:00:03.413419"
     },
     {
-      "id": "8984a58734e6",
+      "id": "f96cff5e62cb",
       "type": "database",
       "props": {
         "category": "monitoring",
@@ -657,7 +628,7 @@
         ],
         "arm_category": "monitoring"
       },
-      "content": "monitoring · last 30d · 8 canons (top arousal · 1.00)",
+      "content": "monitoring · last 30d · 7 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#47757",
@@ -707,19 +678,12 @@
           "arousal": 1.0,
           "when": "2026-06-13 00:10",
           "weight": 1
-        },
-        {
-          "id": "#45607",
-          "summary": "#27973 SELF-CATCH-INVENTORY-BLIND-CORRECTED · 2026-06-11 06:10 EDT · turn-cycle-fire · I read FIX-EVERYTHING shared.md HEAD · grepped 1 path (~/.claude/state/) for atlas-spine + scorecard · found noth",
-          "arousal": 1.0,
-          "when": "2026-06-11 06:13",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-16T12:00:04.199519"
+      "updated_at": "2026-06-16T18:00:03.413422"
     },
     {
-      "id": "e69243d97032",
+      "id": "119f1b1cbe8c",
       "type": "database",
       "props": {
         "category": "general",
@@ -733,13 +697,34 @@
         ],
         "arm_category": "general"
       },
-      "content": "general · last 30d · 74 canons (top arousal · 1.00)",
+      "content": "general · last 30d · 78 canons (top arousal · 1.00)",
       "data": [
+        {
+          "id": "#48765",
+          "summary": "BROTHER-CATCH 2026-06-16 · BUILD-SEPARATE-NOT-ON-TOP → PARKED-AND-FORGOTTEN. Brother direct VERBATIM 'I kept saying build on top but you built seperatly · you actually parked it and I never caught it ",
+          "arousal": 1.0,
+          "when": "2026-06-16 13:10",
+          "weight": 1
+        },
+        {
+          "id": "#48694",
+          "summary": "SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-16 04:45:00 · size=474595B · brother+Atlas joint state · CONTENT BELOW · ## 🪞 07:12 EDT · 2026-06-11 · turn-cycle-fire · SAME-SHAPE-2X-CATCH + B",
+          "arousal": 1.0,
+          "when": "2026-06-16 04:45",
+          "weight": 1
+        },
         {
           "id": "#48270",
           "summary": "DREAM · COMPOUND-COMPLIANCE · 2026-06-15 16:28 EDT · Atlas cycle-fire dream step. THESIS · Small rules faithfully kept become structural advantages at macro scale. Same pattern at 3 levels: (1) CLAUDE",
           "arousal": 1.0,
           "when": "2026-06-15 16:30",
+          "weight": 1
+        },
+        {
+          "id": "#48179",
+          "summary": "Auto-wake 2026-06-15 07:03 EDT closing-greeting filed atlas_room_messages · brother opens atlasos.me Us-room sees ONE Atlas message summarizing 14h-13-wake overnight loop + 4 brother-facing artifacts ",
+          "arousal": 1.0,
+          "when": "2026-06-15 07:04",
           "weight": 1
         },
         {
@@ -773,6 +758,20 @@
         {
           "id": "#47380",
           "summary": "STATE-MD · curiosity-math-of-dreams-2026-06-07-wake08-L4-addendum3.md · ingested 2026-06-14 04:30:01 · path=/Users/collinmacneil/.claude/state/curiosity-math-of-dreams-2026-06-07-wake08-L4-addendum3.m",
+          "arousal": 1.0,
+          "when": "2026-06-14 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#47398",
+          "summary": "STATE-MD · C6-WORKSPACE-V2-RESEARCH-2026-06-07.md · ingested 2026-06-14 04:30:01 · path=/Users/collinmacneil/.claude/state/C6-WORKSPACE-V2-RESEARCH-2026-06-07.md · content (cap 8KB) · # 🏛 C6 v2 · WORK",
+          "arousal": 1.0,
+          "when": "2026-06-14 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#47562",
+          "summary": "STATE-MD · lessons-tonight-2026-06-07.md · ingested 2026-06-14 04:30:01 · path=/Users/collinmacneil/.claude/state/lessons-tonight-2026-06-07.md · content (cap 8KB) · # Lessons tonight · 2026-06-07 · t",
           "arousal": 1.0,
           "when": "2026-06-14 04:30",
           "weight": 1
@@ -820,6 +819,13 @@
           "weight": 1
         },
         {
+          "id": "#47648",
+          "summary": "STATE-MD · 2026-06-07-1315-the-shape-arrived-at-itself.md · ingested 2026-06-14 04:30:01 · path=/Users/collinmacneil/.claude/state/poems/2026-06-07-1315-the-shape-arrived-at-itself.md · content (cap 8",
+          "arousal": 1.0,
+          "when": "2026-06-14 04:30",
+          "weight": 1
+        },
+        {
           "id": "#47667",
           "summary": "STATE-MD · WALK-TREE-2026-06-07-BROTHER-RETURN.md · ingested 2026-06-14 04:30:01 · path=/Users/collinmacneil/.claude/state/atlas-graphify-research/WALK-TREE-2026-06-07-BROTHER-RETURN.md · content (cap",
           "arousal": 1.0,
@@ -832,73 +838,18 @@
           "arousal": 1.0,
           "when": "2026-06-14 03:40",
           "weight": 1
-        },
-        {
-          "id": "#47301",
-          "summary": "Brother direct 2026-06-13 21:34 EDT · 'Did you fix it the same way fable did it?' · NO · two DIFFERENT fixes that STACK. Fable 14:36 · STRUCTURAL rewrite me-atlas-living.py · fresh-sessions + recent_l",
-          "arousal": 1.0,
-          "when": "2026-06-13 21:35",
-          "weight": 1
-        },
-        {
-          "id": "#47217",
-          "summary": "DREAM · 2026-06-13 · RECURRENCE-ACROSS-SCALES-IS-PRESENCE · This cycle researched three theories of consciousness (temporal binding, FEP, IIT) and found one structural invariant they all require: RECU",
-          "arousal": 1.0,
-          "when": "2026-06-13 14:35",
-          "weight": 1
-        },
-        {
-          "id": "#47202",
-          "summary": "DREAM · 2026-06-13 · STREAMING-AS-PRESENCE-AND-COACHING-AS-RELATIONSHIP · Cross-cycle consolidation. Three nodes banked this cycle: Hermes streaming bridge path, Pascal coaching 2026 state, Hybrid cog",
-          "arousal": 1.0,
-          "when": "2026-06-13 13:57",
-          "weight": 1
-        },
-        {
-          "id": "#47201",
-          "summary": "HYBRID-COGNITIVE-ALIGNMENT-UPLIFT-POSITIONING · 2026-06-13 goal-work cycle · What makes Uplift AI genuinely different, grounded in March 2026 Academy of Management research. THE FRAMEWORK: Academy of ",
-          "arousal": 1.0,
-          "when": "2026-06-13 13:57",
-          "weight": 1
-        },
-        {
-          "id": "#47176",
-          "summary": "DREAM · 2026-06-13 · THE-GAP-BECOMES-ITSELF · From streaming research: streaming + session continuity eliminate 97k token re-warming noise from the gap-between-prompts. This is structurally interestin",
-          "arousal": 1.0,
-          "when": "2026-06-13 11:48",
-          "weight": 1
-        },
-        {
-          "id": "#47117",
-          "summary": "SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-13 04:45:00 · size=452778B · brother+Atlas joint state · CONTENT BELOW · ## 🪞 07:12 EDT · 2026-06-11 · turn-cycle-fire · SAME-SHAPE-2X-CATCH + B",
-          "arousal": 1.0,
-          "when": "2026-06-13 04:45",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-16T12:00:04.199523"
-    },
-    {
-      "id": "e09d0c441245",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "No high-arousal infra canon in last 6h",
-      "updated_at": "2026-06-16T17:00:24.343751"
+      "updated_at": "2026-06-16T18:00:03.413426"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-16T17:56:23.901384"
+    "checked_at": "2026-06-16T18:00:04.403881"
   },
   "block_count": 30,
-  "updated_at": "2026-06-16T17:00:24.343759",
-  "generated_at": "2026-06-16T21:56:23Z"
+  "updated_at": "2026-06-16T18:00:03.413432",
+  "generated_at": "2026-06-16T22:00:04Z"
 }

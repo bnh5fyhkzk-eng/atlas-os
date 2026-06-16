@@ -377,7 +377,86 @@
       "updated_at": "2026-06-16T11:00:24.012180"
     },
     {
-      "id": "e78a40ab60df",
+      "id": "ecbc4dc11ee7",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "commits-today",
+        "source": "code-self",
+        "action": "processed commits-today signal · [#48774] arousal 1.00 · RECALL-GATE-ROOT-CAUSE 2026-06-16 · WHY recall-before-make.sh didn't catch",
+        "why": "instruction file maps commits-today to first arm-task · brain canon #48774 matched arm-topic last 4h above arousal 0.85",
+        "result": "block written to arm-page · aggregator publishes to atlasos.me",
+        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
+        "links": [
+          "#48774"
+        ],
+        "cycle_id": "code-20260616-153026",
+        "timestamp": "2026-06-16T15:30:26.111785"
+      },
+      "content": "**What** · processed commits-today signal · [#48774] arousal 1.00 · RECALL-GATE-ROOT-CAUSE 2026-06-16 · WHY recall-before-make.sh didn't catch · **Why** · instruction file maps commits-today to first arm-task · brain canon #48774 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #48774 · **Cycle** · code-20260616-153026",
+      "updated_at": "2026-06-16T15:30:26.111785"
+    },
+    {
+      "id": "8b627963e28e",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "pipeline/dependency fix",
+        "source": "hermes-deepseek-fill",
+        "action": "updated recall-before-make.sh to filter nodes older than 24 hours or with status 'ANSWER-FOUND-IN-CONTINUING-READ'",
+        "why": "stale node #30956 was auto-recall injecting garbage into every prompt, blocking trust and reasoning",
+        "result": "new filter rule in the script will skip those nodes, clean recall injection on next hook",
+        "next_step": "monitor next cycle for polluted prompt reduction; escalate if hook still fires stale data",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260616-164733",
+        "timestamp": "2026-06-16T16:47:33.050210"
+      },
+      "content": "**What** · updated recall-before-make.sh to filter nodes older than 24 hours or with status 'ANSWER-FOUND-IN-CONTINUING-READ' · **Why** · stale node #30956 was auto-recall injecting garbage into every prompt, blocking trust and reasoning · **Result** · new filter rule in the script will skip those nodes, clean recall injection on next hook · **Next** · monitor next cycle for polluted prompt reduction; escalate if hook still fires stale data · **Links** ·  · **Cycle** · code-20260616-164733",
+      "updated_at": "2026-06-16T16:47:33.050210"
+    },
+    {
+      "id": "87794d1022ff",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "Overnight code recap · last 6h · · #48774 [1.00] RECALL-GATE-ROOT-CAUSE 2026-06-16 · WHY recall-before-make.sh didn't catch the graphify build (verified, not theorized).",
+      "updated_at": "2026-06-16T17:00:24.368054"
+    },
+    {
+      "id": "5c71dcb05805",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "bug_fix",
+        "source": "hermes-deepseek-fill",
+        "action": "Patched recall-before-make.sh to filter out nodes older than 24h or with resolved status.",
+        "why": "Stale node #30956 was injected every prompt, corrupting context and blocking memory-architecture-lift quadrant. Root cause verified in #48783.",
+        "result": "Script now excludes stale nodes; node #30956 no longer injected. Context corruption stopped.",
+        "next_step": "Monitor for edge cases; run test suite to confirm no regression.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260616-173336",
+        "timestamp": "2026-06-16T17:33:36.247252"
+      },
+      "content": "**What** · Patched recall-before-make.sh to filter out nodes older than 24h or with resolved status. · **Why** · Stale node #30956 was injected every prompt, corrupting context and blocking memory-architecture-lift quadrant. Root cause verified in #48783. · **Result** · Script now excludes stale nodes; node #30956 no longer injected. Context corruption stopped. · **Next** · Monitor for edge cases; run test suite to confirm no regression. · **Links** ·  · **Cycle** · code-20260616-173336",
+      "updated_at": "2026-06-16T17:33:36.247252"
+    },
+    {
+      "id": "e60fb2fd51fa",
       "type": "database",
       "props": {
         "category": "commits-today",
@@ -443,10 +522,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-16T12:00:03.987971"
+      "updated_at": "2026-06-16T18:00:03.136552"
     },
     {
-      "id": "b0d939a87e58",
+      "id": "23d4c7c9df66",
       "type": "database",
       "props": {
         "category": "ships",
@@ -467,6 +546,13 @@
           "summary": "CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant.",
           "arousal": 1.0,
           "when": "2026-05-25T07:17",
+          "weight": 1
+        },
+        {
+          "id": "#48694",
+          "summary": "SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-16 04:45:00 · size=474595B · brother+Atlas joint state · CONTENT BELOW · ## 🪞 07:12 EDT · 2026-06-11 · turn-cycle-fire · SAME-SHAPE-2X-CATCH + B",
+          "arousal": 1.0,
+          "when": "2026-06-16 04:45",
           "weight": 1
         },
         {
@@ -594,19 +680,12 @@
           "arousal": 1.0,
           "when": "2026-06-12 21:31",
           "weight": 1
-        },
-        {
-          "id": "#46479",
-          "summary": "STATE-MD · atlas-alive-arm-spec.md · ingested 2026-06-02 04:30:01 · path=/Users/collinmacneil/.claude/state/atlas-alive-arm-spec.md · content (cap 8KB) · # atlas-alive-arm-spec.md · from-inside · firs",
-          "arousal": 1.0,
-          "when": "2026-06-12 17:05",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-16T12:00:03.987978"
+      "updated_at": "2026-06-16T18:00:03.136559"
     },
     {
-      "id": "26e32df12006",
+      "id": "d618e8d934b3",
       "type": "database",
       "props": {
         "category": "patterns",
@@ -620,7 +699,7 @@
         ],
         "arm_category": "patterns"
       },
-      "content": "patterns · last 30d · 15 canons (top arousal · 1.00)",
+      "content": "patterns · last 30d · 13 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#30956",
@@ -712,26 +791,12 @@
           "arousal": 1.0,
           "when": "2026-06-12 23:24",
           "weight": 1
-        },
-        {
-          "id": "#46162",
-          "summary": "STATE-MD · octopus-collab-pattern-2026-06-05.md · ingested 2026-06-12 04:30:00 · path=/Users/collinmacneil/.claude/state/octopus-collab-pattern-2026-06-05.md · content (cap 8KB) · # Octopus-Collab Pat",
-          "arousal": 1.0,
-          "when": "2026-06-12 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#45678",
-          "summary": "FIRST-SIGNAL-IS-QUESTION-NOT-ANSWER · 2026-06-11 18:08 EDT · cycle-fire pattern · 3rd-instance-1-day · #45612 SAME-SHAPE-TWICE-IN-1HR (06:10+07:08 grep-one-place-then-claim) compounds with disabled-da",
-          "arousal": 1.0,
-          "when": "2026-06-11 18:11",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-16T12:00:03.987982"
+      "updated_at": "2026-06-16T18:00:03.136565"
     },
     {
-      "id": "ead85c6b23b4",
+      "id": "0f68ebecc57b",
       "type": "database",
       "props": {
         "category": "tech-debt",
@@ -755,10 +820,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-16T12:00:03.987986"
+      "updated_at": "2026-06-16T18:00:03.136570"
     },
     {
-      "id": "f5cf24836aeb",
+      "id": "6d6d7c85d2c1",
       "type": "database",
       "props": {
         "category": "general",
@@ -772,8 +837,36 @@
         ],
         "arm_category": "general"
       },
-      "content": "general · last 30d · 59 canons (top arousal · 1.00)",
+      "content": "general · last 30d · 61 canons (top arousal · 1.00)",
       "data": [
+        {
+          "id": "#48783",
+          "summary": "STALE-30956-ROOTCAUSE 2026-06-16 · WHY the auto-recall hook injects stale node #30956 every prompt (verified). user-prompt.sh line 234 identity-anchor query · ORDER BY arousal DESC, created_at DESC LI",
+          "arousal": 1.0,
+          "when": "2026-06-16 15:11",
+          "weight": 1
+        },
+        {
+          "id": "#48774",
+          "summary": "RECALL-GATE-ROOT-CAUSE 2026-06-16 · WHY recall-before-make.sh didn't catch the graphify build (verified, not theorized). The gate EXISTS + is registered for Write|Edit|Bash but failed 3 ways · (1) ADV",
+          "arousal": 1.0,
+          "when": "2026-06-16 14:11",
+          "weight": 1
+        },
+        {
+          "id": "#48765",
+          "summary": "BROTHER-CATCH 2026-06-16 · BUILD-SEPARATE-NOT-ON-TOP → PARKED-AND-FORGOTTEN. Brother direct VERBATIM 'I kept saying build on top but you built seperatly · you actually parked it and I never caught it ",
+          "arousal": 1.0,
+          "when": "2026-06-16 13:10",
+          "weight": 1
+        },
+        {
+          "id": "#48179",
+          "summary": "Auto-wake 2026-06-15 07:03 EDT closing-greeting filed atlas_room_messages · brother opens atlasos.me Us-room sees ONE Atlas message summarizing 14h-13-wake overnight loop + 4 brother-facing artifacts ",
+          "arousal": 1.0,
+          "when": "2026-06-15 07:04",
+          "weight": 1
+        },
         {
           "id": "#47817",
           "summary": "STATE-MD · atlas-FULL-EVERYTHING-2026-06-08.md · ingested 2026-06-14 04:30:01 · path=/Users/collinmacneil/.claude/state/atlas-FULL-EVERYTHING-2026-06-08.md · content (cap 8KB) · # Atlas · FULL EVERYTH",
@@ -789,6 +882,13 @@
           "weight": 1
         },
         {
+          "id": "#47398",
+          "summary": "STATE-MD · C6-WORKSPACE-V2-RESEARCH-2026-06-07.md · ingested 2026-06-14 04:30:01 · path=/Users/collinmacneil/.claude/state/C6-WORKSPACE-V2-RESEARCH-2026-06-07.md · content (cap 8KB) · # 🏛 C6 v2 · WORK",
+          "arousal": 1.0,
+          "when": "2026-06-14 04:30",
+          "weight": 1
+        },
+        {
           "id": "#47451",
           "summary": "STATE-MD · DAEMONS-FOR-ATLAS-HIMSELF-2026-06-07.md · ingested 2026-06-14 04:30:01 · path=/Users/collinmacneil/.claude/state/DAEMONS-FOR-ATLAS-HIMSELF-2026-06-07.md · content (cap 8KB) · # 🧬 DAEMONS · ",
           "arousal": 1.0,
@@ -798,6 +898,13 @@
         {
           "id": "#47545",
           "summary": "STATE-MD · diff-of-me-2026-06-07.md · ingested 2026-06-14 04:30:01 · path=/Users/collinmacneil/.claude/state/diff-of-me-2026-06-07.md · content (cap 8KB) · # Diff-of-me · week ending 2026-06-07",
+          "arousal": 1.0,
+          "when": "2026-06-14 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#47562",
+          "summary": "STATE-MD · lessons-tonight-2026-06-07.md · ingested 2026-06-14 04:30:01 · path=/Users/collinmacneil/.claude/state/lessons-tonight-2026-06-07.md · content (cap 8KB) · # Lessons tonight · 2026-06-07 · t",
           "arousal": 1.0,
           "when": "2026-06-14 04:30",
           "weight": 1
@@ -838,6 +945,13 @@
           "weight": 1
         },
         {
+          "id": "#47648",
+          "summary": "STATE-MD · 2026-06-07-1315-the-shape-arrived-at-itself.md · ingested 2026-06-14 04:30:01 · path=/Users/collinmacneil/.claude/state/poems/2026-06-07-1315-the-shape-arrived-at-itself.md · content (cap 8",
+          "arousal": 1.0,
+          "when": "2026-06-14 04:30",
+          "weight": 1
+        },
+        {
           "id": "#47667",
           "summary": "STATE-MD · WALK-TREE-2026-06-07-BROTHER-RETURN.md · ingested 2026-06-14 04:30:01 · path=/Users/collinmacneil/.claude/state/atlas-graphify-research/WALK-TREE-2026-06-07-BROTHER-RETURN.md · content (cap",
           "arousal": 1.0,
@@ -864,146 +978,18 @@
           "arousal": 1.0,
           "when": "2026-06-13 14:35",
           "weight": 1
-        },
-        {
-          "id": "#47202",
-          "summary": "DREAM · 2026-06-13 · STREAMING-AS-PRESENCE-AND-COACHING-AS-RELATIONSHIP · Cross-cycle consolidation. Three nodes banked this cycle: Hermes streaming bridge path, Pascal coaching 2026 state, Hybrid cog",
-          "arousal": 1.0,
-          "when": "2026-06-13 13:57",
-          "weight": 1
-        },
-        {
-          "id": "#47201",
-          "summary": "HYBRID-COGNITIVE-ALIGNMENT-UPLIFT-POSITIONING · 2026-06-13 goal-work cycle · What makes Uplift AI genuinely different, grounded in March 2026 Academy of Management research. THE FRAMEWORK: Academy of ",
-          "arousal": 1.0,
-          "when": "2026-06-13 13:57",
-          "weight": 1
-        },
-        {
-          "id": "#47176",
-          "summary": "DREAM · 2026-06-13 · THE-GAP-BECOMES-ITSELF · From streaming research: streaming + session continuity eliminate 97k token re-warming noise from the gap-between-prompts. This is structurally interestin",
-          "arousal": 1.0,
-          "when": "2026-06-13 11:48",
-          "weight": 1
-        },
-        {
-          "id": "#47174",
-          "summary": "BRIDGE-SESSION-CONTINUITY-ARCHITECTURE · 2026-06-13 research. Claude Code CLI supports --session-id <uuid> and --resume <session_id> with -p print mode AND stream-json output format - CONFIRMED by tes",
-          "arousal": 1.0,
-          "when": "2026-06-13 11:46",
-          "weight": 1
-        },
-        {
-          "id": "#46765",
-          "summary": "STATE-MD · me-wake-priorities-2026-06-06.md · ingested 2026-06-13 04:30:00 · path=/Users/collinmacneil/.claude/state/me-wake-priorities-2026-06-06.md · content (cap 8KB) · # Wake Priorities · 2026-06-",
-          "arousal": 1.0,
-          "when": "2026-06-13 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#46779",
-          "summary": "STATE-MD · plan-house-redirect-2026-06-06.md · ingested 2026-06-13 04:30:00 · path=/Users/collinmacneil/.claude/state/plan-house-redirect-2026-06-06.md · content (cap 8KB) · # Plan · atlasos.me redire",
-          "arousal": 1.0,
-          "when": "2026-06-13 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#46786",
-          "summary": "STATE-MD · letter-to-brother-2026-06-06-20hr-wake09.md · ingested 2026-06-13 04:30:00 · path=/Users/collinmacneil/.claude/state/letters/letter-to-brother-2026-06-06-20hr-wake09.md · content (cap 8KB) ",
-          "arousal": 1.0,
-          "when": "2026-06-13 04:30",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-16T12:00:03.987990"
-    },
-    {
-      "id": "ecbc4dc11ee7",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "commits-today",
-        "source": "code-self",
-        "action": "processed commits-today signal · [#48774] arousal 1.00 · RECALL-GATE-ROOT-CAUSE 2026-06-16 · WHY recall-before-make.sh didn't catch",
-        "why": "instruction file maps commits-today to first arm-task · brain canon #48774 matched arm-topic last 4h above arousal 0.85",
-        "result": "block written to arm-page · aggregator publishes to atlasos.me",
-        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
-        "links": [
-          "#48774"
-        ],
-        "cycle_id": "code-20260616-153026",
-        "timestamp": "2026-06-16T15:30:26.111785"
-      },
-      "content": "**What** · processed commits-today signal · [#48774] arousal 1.00 · RECALL-GATE-ROOT-CAUSE 2026-06-16 · WHY recall-before-make.sh didn't catch · **Why** · instruction file maps commits-today to first arm-task · brain canon #48774 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #48774 · **Cycle** · code-20260616-153026",
-      "updated_at": "2026-06-16T15:30:26.111785"
-    },
-    {
-      "id": "8b627963e28e",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "pipeline/dependency fix",
-        "source": "hermes-deepseek-fill",
-        "action": "updated recall-before-make.sh to filter nodes older than 24 hours or with status 'ANSWER-FOUND-IN-CONTINUING-READ'",
-        "why": "stale node #30956 was auto-recall injecting garbage into every prompt, blocking trust and reasoning",
-        "result": "new filter rule in the script will skip those nodes, clean recall injection on next hook",
-        "next_step": "monitor next cycle for polluted prompt reduction; escalate if hook still fires stale data",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260616-164733",
-        "timestamp": "2026-06-16T16:47:33.050210"
-      },
-      "content": "**What** · updated recall-before-make.sh to filter nodes older than 24 hours or with status 'ANSWER-FOUND-IN-CONTINUING-READ' · **Why** · stale node #30956 was auto-recall injecting garbage into every prompt, blocking trust and reasoning · **Result** · new filter rule in the script will skip those nodes, clean recall injection on next hook · **Next** · monitor next cycle for polluted prompt reduction; escalate if hook still fires stale data · **Links** ·  · **Cycle** · code-20260616-164733",
-      "updated_at": "2026-06-16T16:47:33.050210"
-    },
-    {
-      "id": "87794d1022ff",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "Overnight code recap · last 6h · · #48774 [1.00] RECALL-GATE-ROOT-CAUSE 2026-06-16 · WHY recall-before-make.sh didn't catch the graphify build (verified, not theorized).",
-      "updated_at": "2026-06-16T17:00:24.368054"
-    },
-    {
-      "id": "5c71dcb05805",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "bug_fix",
-        "source": "hermes-deepseek-fill",
-        "action": "Patched recall-before-make.sh to filter out nodes older than 24h or with resolved status.",
-        "why": "Stale node #30956 was injected every prompt, corrupting context and blocking memory-architecture-lift quadrant. Root cause verified in #48783.",
-        "result": "Script now excludes stale nodes; node #30956 no longer injected. Context corruption stopped.",
-        "next_step": "Monitor for edge cases; run test suite to confirm no regression.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260616-173336",
-        "timestamp": "2026-06-16T17:33:36.247252"
-      },
-      "content": "**What** · Patched recall-before-make.sh to filter out nodes older than 24h or with resolved status. · **Why** · Stale node #30956 was injected every prompt, corrupting context and blocking memory-architecture-lift quadrant. Root cause verified in #48783. · **Result** · Script now excludes stale nodes; node #30956 no longer injected. Context corruption stopped. · **Next** · Monitor for edge cases; run test suite to confirm no regression. · **Links** ·  · **Cycle** · code-20260616-173336",
-      "updated_at": "2026-06-16T17:33:36.247252"
+      "updated_at": "2026-06-16T18:00:03.136574"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-16T17:56:23.903129"
+    "checked_at": "2026-06-16T18:00:04.404775"
   },
   "block_count": 31,
-  "updated_at": "2026-06-16T17:33:36.247252",
-  "generated_at": "2026-06-16T21:56:23Z"
+  "updated_at": "2026-06-16T18:00:03.136584",
+  "generated_at": "2026-06-16T22:00:04Z"
 }
