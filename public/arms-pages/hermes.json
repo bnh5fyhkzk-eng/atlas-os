@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "8cf1d9094078",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-16T09:22:55.115064"
-      },
-      "content": "Hermes decision · arm=charle · priority=P0 · task: Parse #48694 SHARED-CANON to extract joint brother+Atlas belief state, then align with #28284 and #30956 to produce a single P0 identity-tier truth file. · why: This canon is the largest state snapshot (474KB) and closes critical loops: memory-architecture (#28284) and answer-found (#30956). Parsing it now gives the orchestration layer a unified substrate for all downstream arms, preventing drift.",
-      "updated_at": "2026-06-16T09:22:55.115083"
-    },
-    {
       "id": "2dbee4b0f465",
       "type": "callout",
       "props": {
@@ -725,15 +713,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P0 · task: Verify root cause of stale node #30956 injection and confirm fix path from #48783 · why: This is a P0 brother-direct issue: the auto-recall hook is injecting stale node #30956 every prompt, breaking recall integrity. #48783 already identified the root cause (verified, not theorized), so we need to close the loop by confirming the fix and ensuring no recurrence.",
       "updated_at": "2026-06-16T18:35:11.899910"
+    },
+    {
+      "id": "d1c74d9b5da8",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-16T18:50:33.076327"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Fix auto-recall hook to prevent injection of stale node #30956 by filtering nodes older than 24 hours in recall-before-make.sh · why: Verified root cause from #48783 shows stale node injection every prompt; blocking identity-tier brother-direct flow; immediate fix needed",
+      "updated_at": "2026-06-16T18:50:33.076338"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-16T18:46:45.493353"
+    "checked_at": "2026-06-16T18:51:46.336994"
   },
   "block_count": 30,
-  "updated_at": "2026-06-16T18:35:11.899912",
-  "generated_at": "2026-06-16T22:46:45Z"
+  "updated_at": "2026-06-16T18:50:33.076339",
+  "generated_at": "2026-06-16T22:51:46Z"
 }
