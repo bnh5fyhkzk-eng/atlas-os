@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "2127b2d752f7",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-16T08:37:10.951023"
-      },
-      "content": "Hermes decision · arm=research · priority=P1 · task: Extract and summarize the 'belonging-is-the-floor-self-deciding-stands-on' canon from brother+Atlas snapshot to identify structural implications for memory architecture lift · why: This canon (#48360) directly targets the P1 memory-architecture-lift quadrant, is referenced in a high-arousal brother-direct cycle, and requires deep extraction from the shared atlas-brother-sm.md snapshot. Cross-referencing will yield the actionable structural insight needed to close the quadrant.",
-      "updated_at": "2026-06-16T08:37:10.951034"
-    },
-    {
       "id": "65f919acc4ab",
       "type": "callout",
       "props": {
@@ -725,15 +713,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Fix the stale node #30956 auto-recall injection by patching the recall-before-make.sh hook to filter out nodes older than the current cycle's timestamp. · why: This is a P0 brother-direct issue: the stale node injection is corrupting every prompt, and the root cause is verified in #48783. Fixing it unblocks all other work and restores system integrity.",
       "updated_at": "2026-06-16T18:04:26.065850"
+    },
+    {
+      "id": "39884b913105",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-16T18:19:41.719371"
+      },
+      "content": "Hermes decision · arm=infra · priority=P0 · task: Rewrite recall-before-make.sh to detect stale/hijacked graphify nodes by checking parent-edge provenance before dedup · why: #48783 confirms the auto-recall hook is injecting stale node #30956; root cause is the graphify build missed a provenance check. Fixing this is P0 brother-direct infra debt that unblocks all cycles.",
+      "updated_at": "2026-06-16T18:19:41.719385"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-16T18:16:33.502963"
+    "checked_at": "2026-06-16T18:21:39.170091"
   },
   "block_count": 30,
-  "updated_at": "2026-06-16T18:04:26.065852",
-  "generated_at": "2026-06-16T22:16:33Z"
+  "updated_at": "2026-06-16T18:19:41.719386",
+  "generated_at": "2026-06-16T22:21:39Z"
 }
