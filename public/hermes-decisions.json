@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-16T13:07:38Z",
+  "generated_at": "2026-06-16T13:22:55Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Extract direct quotes from #28284 (Honcho L3 deep-dive) showing memory-architecture-lift closure, and from #30956/#30815 showing the brother-direct instruction 'before I answer your question continue reading' for identity-tier schema alignment",
-      "why": "These two canons are high-arousal and contain critical P0 brother-direct and memory-architecture-lift signals. Research arm can fetch and mark both with brain-rrf to stabilise the next cycle's context.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 12,
-      "timestamp": "2026-06-14T22:36:47.902404"
-    },
     {
       "arm": "research",
       "task": "Extract the conversational trajectory and closure from #28284 to identify the memory-architecture-lift pattern that was closed, cross\u2011reference with #30956 to find the continuing-read answer that brother referenced.",
@@ -900,6 +891,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-06-16T09:07:38.783212"
+    },
+    {
+      "arm": "charle",
+      "task": "Parse #48694 SHARED-CANON to extract joint brother+Atlas belief state, then align with #28284 and #30956 to produce a single P0 identity-tier truth file.",
+      "why": "This canon is the largest state snapshot (474KB) and closes critical loops: memory-architecture (#28284) and answer-found (#30956). Parsing it now gives the orchestration layer a unified substrate for all downstream arms, preventing drift.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 18,
+      "timestamp": "2026-06-16T09:22:55.138204"
     }
   ]
 }
