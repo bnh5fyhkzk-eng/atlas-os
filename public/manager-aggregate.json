@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T23:32:50Z",
+  "generated_at": "2026-06-16T23:47:52Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 142,
+    "note": 143,
     "briefing": 81,
     "idea": 0
   },
-  "total_blocks": 246,
+  "total_blocks": 247,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "7d6b64b07501",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Fix `auto-recall hook` to stop injecting stale node #30956 by filtering on `answered_ts > prompt_ts` check in recall-before-make.sh · why: Brother-direct root-cause from #48783 verified — this stale-injection blocks memory-space quadrant closure and r",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-16T19:36:07.244909"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-16T10:54:17.251702"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "2dbee4b0f465",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Extract and summarize the shared canon from atlas-brother-shared.md snapshot to identify unresolved identity-tier questions and next-cycle priorities. · why: The recent high-arousal brain canons (#48694) include a large shared canon snapshot. This",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T10:08:39.033154"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "b5ddf432252e",
+        "type": "callout",
+        "content": "**What** · I will modify recall-before-make.sh to add a filter that checks `answered_ts > prompt_ts` before injecting any memory from node #30956. · **Why** · The stale injection of node #30956 blocks memory-space quadrant closure and re-triggers past research loops every prompt, as verified by root",
+        "priority": "code-patch",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-16T19:36:12.347688"
+      },
       {
         "arm": "curiosity",
         "arm_glyph": "🌱",
@@ -815,17 +826,6 @@
         "priority": "pipeline/dependency fix",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-16T16:47:33.050210"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "655bbf9ae25c",
-        "type": "callout",
-        "content": "**What** · Analyzed BROTHER-CATCH #48765 and RECALL-GATE-ROOT-CAUSE #48774 to find build-separate park and recall-gate fix. · **Why** · Two brother-direct canons expose graphify build memory bug that blocks identity-tier; P0 priority needs root cause and patch spec. · **Result** · Build-separate par",
-        "priority": "analysis",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-16T16:32:16.704806"
       }
     ],
     "briefing": [
