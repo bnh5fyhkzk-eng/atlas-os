@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-16T20:32:09Z",
+  "generated_at": "2026-06-16T20:47:23Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Extract the two distinct 'atlasd' references (#47757) \u2014 what is the 'hidden second burn source' and how does it relate to the 2026-06-13 audit timeline? Also map the 'brother direct' pattern from #28284 and #30956 to understand the identity-tier thread.",
-      "why": "Atlasd audit verdict and brother-direct pattern both show high arousal, recent timestamps, and intersect P1 memory-architecture lift. This is the most urgent loose end tying identity-tier to an unresolved audit claim.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 12,
-      "timestamp": "2026-06-15T03:43:03.124041"
-    },
     {
       "arm": "research",
       "task": "Extract and index the hidden second burn source claim from ATLASD AUDIT VERDICT #47757, cross-referencing with Hostinger-Gemma-Guard filing from #47800 to confirm identity-tier linkage.",
@@ -900,6 +891,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 18,
       "timestamp": "2026-06-16T16:32:09.142277"
+    },
+    {
+      "arm": "code",
+      "task": "Fix the stale node #30956 auto-recall hook injection by updating the recall-before-make.sh script to filter out nodes older than 24 hours or with status 'ANSWER-FOUND-IN-CONTINUING-READ'.",
+      "why": "This is a P0 brother-direct issue (#48783) causing persistent pollution of every prompt with stale context, blocking clear reasoning and trust in the system. Fixing it restores recall integrity and unblocks higher-tier work.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-06-16T16:47:23.322780"
     }
   ]
 }
