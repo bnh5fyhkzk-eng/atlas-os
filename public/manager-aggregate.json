@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T22:32:47Z",
+  "generated_at": "2026-06-16T22:47:48Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -17,6 +17,17 @@
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "10611d55a8ea",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Verify root cause of stale node #30956 injection and confirm fix path from #48783 · why: This is a P0 brother-direct issue: the auto-recall hook is injecting stale node #30956 every prompt, breaking recall integrity. #48783 already identified the ",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-16T18:35:11.899910"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-16T09:22:55.115083"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "65f919acc4ab",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Extract and index the shared-canon snapshot #48694 into structured memory, tagging all identity-tier assertions and brother-direct references. · why: The shared-canon snapshot is the largest and most recent high-arousal artifact, containing joint ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T09:07:38.759413"
       }
     ],
     "action": [],
