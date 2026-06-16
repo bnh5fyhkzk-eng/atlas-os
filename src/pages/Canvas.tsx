@@ -70,6 +70,7 @@ const DEFAULT_LAYOUT: Layout = [
   { i: "recent", x: 7, y: 0, w: 5, h: 5 },
   { i: "drop", x: 0, y: 7, w: 7, h: 2 },
   { i: "cost", x: 7, y: 5, w: 5, h: 2 },
+  { i: "memory", x: 0, y: 9, w: 12, h: 5 },
 ];
 
 function DropWidget() {
@@ -174,30 +175,88 @@ function WindowWidget() {
 
 // 🌱 GROWTH · the house measuring its own becoming · per brother "use and grow"
 function GrowthWidget() {
-  const [g, setG] = useState<{ notes: number; dreams: number; made: number; total: number } | null>(null);
+  const [g, setG] = useState<{ notes: number; dreams: number; made: number; total: number; recall: string } | null>(null);
   useEffect(() => {
     (async () => {
       const week = new Date(Date.now() - 7 * 86400_000).toISOString();
       const db = sbClient();
       const head = { count: "exact" as const, head: true as const };
-      const [notes, dreams, made, total] = await Promise.all([
+      const [notes, dreams, made, total, nb] = await Promise.all([
         db.from("atlas_nodes").select("id", head).eq("kind", "note").eq("archived", false).gte("created_at", week),
         db.from("atlas_nodes").select("id", head).in("created_by", ["atlas-dreaming", "dreams-to-house"]).gte("created_at", week),
         db.from("atlas_nodes").select("id", head).like("created_by", "studio%").gte("created_at", week),
         db.from("atlas_nodes").select("id", head).eq("archived", false),
+        // night-brain organ benchmarks brain recall nightly · latest note title carries "recall NN%"
+        db.from("atlas_nodes").select("title").eq("created_by", "night-brain").order("created_at", { ascending: false }).limit(1),
       ]);
-      setG({ notes: notes.count ?? 0, dreams: dreams.count ?? 0, made: made.count ?? 0, total: total.count ?? 0 });
+      const recall = nb.data?.[0]?.title?.match(/recall (\d+%)/)?.[1] ?? "—";
+      setG({ notes: notes.count ?? 0, dreams: dreams.count ?? 0, made: made.count ?? 0, total: total.count ?? 0, recall });
     })().catch(() => undefined);
   }, []);
   if (!g) return <div className="text-xs" style={{ color: "var(--text-faint)" }}>counting…</div>;
   return (
     <div className="flex items-center justify-around text-center">
-      {[["+" + g.notes, "notes/wk"], [String(g.dreams), "dreams/wk"], [String(g.made), "made/wk"], [String(g.total), "memories"]].map(([v, l]) => (
+      {[["+" + g.notes, "notes/wk"], [String(g.dreams), "dreams/wk"], [String(g.made), "made/wk"], [String(g.total), "memories"], [g.recall, "recall"]].map(([v, l]) => (
         <div key={l}>
           <div className="text-lg font-semibold">{v}</div>
           <div className="text-[10px]" style={{ color: "var(--text-faint)" }}>{l}</div>
         </div>
       ))}
+    </div>
+  );
+}
+
+// Memory · Brain inventory · what we HAVE vs what we're MISSING.
+// Curated from the 2026-06-16 brain-v3 audit (4 docs · nodes #48765/#48774/#48783).
+// Static-curated on purpose: an inventory, not a metric. The live recall% lives in Growth.
+const MEM_HAVE: string[] = [
+  "brain-v3 · 38.5k nodes · live",
+  "Hybrid recall · FTS5 + vector, fused (RRF k=60)",
+  "2-hop graph walk · spreading activation",
+  "Tier weighting · core/hot/warm/cold",
+  "Bi-temporal · forgets on purpose (invalid_at)",
+  "Nightly consolidation · dedup + corruption-repair",
+  "Local embeddings · $0 (Ollama nomic-embed-text)",
+  "Golden suite · 97% (29/30), benchmarked nightly",
+  "3-lane · hot.md → wiki → brain",
+  "LADDER · day→week→month→year, never-delete",
+  "4 dream daemons · compose memories overnight",
+  "Auto-recall hook · fires every prompt",
+  "Graceful fallback · vec → FTS → LIKE",
+  "Graphify · 569 code-nodes inside brain-v3",
+];
+const MEM_MISSING: string[] = [
+  "Embedding coverage 79% · ~8.1k nodes keyword-only",
+  "created_at type-mix · breaks recency, pins #30956",
+  "Graphify · 0 edges / 0 canon-links (half-built)",
+  "uplift-rag (ChromaDB) · dead since April, not killed",
+  "Recall-gate · advisory not blocking + filename≠intent",
+  "Identity-layer · un-banked (Fable paused June 12)",
+  "1 golden query · still red (keyword artifact)",
+  "20 contradiction-flags · await eval-gate",
+  "No inventory-in-recall · the forget-loop itself",
+];
+
+function MemoryWidget() {
+  const col = (title: string, mark: string, color: string, items: string[]) => (
+    <div className="flex-1">
+      <div className="mb-1.5 text-xs font-semibold" style={{ color }}>
+        {mark} {title} <span style={{ color: "var(--text-faint)" }}>· {items.length}</span>
+      </div>
+      <ul className="space-y-1">
+        {items.map((t) => (
+          <li key={t} className="flex gap-1.5 text-xs leading-snug">
+            <span style={{ color }}>{mark}</span>
+            <span>{t}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+  return (
+    <div className="flex gap-4">
+      {col("What we have", "✓", "#16a34a", MEM_HAVE)}
+      {col("What we're missing", "⚠", "#d97706", MEM_MISSING)}
     </div>
   );
 }
@@ -523,6 +582,11 @@ export default function Canvas({ nav }: { nav: NavItem[]; home: NavItem }) {
             <div key="cost">
               <Widget title="AI usage today" emoji="💸">
                 <CostWidget />
+              </Widget>
+            </div>
+            <div key="memory">
+              <Widget title="Memory · Brain" emoji="🧠">
+                <MemoryWidget />
               </Widget>
             </div>
             {widgets.map((w) => {
