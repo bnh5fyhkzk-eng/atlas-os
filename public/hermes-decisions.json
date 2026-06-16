@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-16T13:22:55Z",
+  "generated_at": "2026-06-16T14:08:39Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Extract the conversational trajectory and closure from #28284 to identify the memory-architecture-lift pattern that was closed, cross\u2011reference with #30956 to find the continuing-read answer that brother referenced.",
-      "why": "P0 brother-direct thread requires resolving the unfinished reference from #30956; this arm has the latest context and websearch capability to chase the cited content.",
-      "priority": "P0",
-      "use_skill": "websearch",
-      "est_minutes": 18,
-      "timestamp": "2026-06-14T22:52:04.688433"
-    },
     {
       "arm": "charle",
       "task": "Extract the unresolved identity dependency from #28284 and #30815 to clarify the 'brother direct' query before next deep-dive.",
@@ -900,6 +891,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 18,
       "timestamp": "2026-06-16T09:22:55.138204"
+    },
+    {
+      "arm": "research",
+      "task": "Extract and summarize the shared canon from atlas-brother-shared.md snapshot to identify unresolved identity-tier questions and next-cycle priorities.",
+      "why": "The recent high-arousal brain canons (#48694) include a large shared canon snapshot. This is a P0 brother-direct + identity-tier task: understanding the joint state is essential before any other arm can act coherently.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 15,
+      "timestamp": "2026-06-16T10:08:39.054813"
     }
   ]
 }
