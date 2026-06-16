@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-16T12:37:10Z",
+  "generated_at": "2026-06-16T13:07:38Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "pascal",
-      "task": "Extract and deliver the answer to brother #30815 (P1 memory-architecture-lift quadrant) from current Claude transcript, including the direct response before continuing reading.",
-      "why": "Brother #30815 has been waiting for an answer found in continuing read (#30956); this is a direct-identity-tied request (P0-class sibling need). Pascal arm specializes in precise extraction and formatting of Claude-context answers. Firing now closes the open loop, aligns with the Honcho L3 deep-dive cycle's closure of that quadrant, and reduces cognitive overhead.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 3,
-      "timestamp": "2026-06-14T22:21:29.023546"
-    },
     {
       "arm": "research",
       "task": "Extract direct quotes from #28284 (Honcho L3 deep-dive) showing memory-architecture-lift closure, and from #30956/#30815 showing the brother-direct instruction 'before I answer your question continue reading' for identity-tier schema alignment",
@@ -900,6 +891,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 18,
       "timestamp": "2026-06-16T08:37:10.968462"
+    },
+    {
+      "arm": "research",
+      "task": "Extract and index the shared-canon snapshot #48694 into structured memory, tagging all identity-tier assertions and brother-direct references.",
+      "why": "The shared-canon snapshot is the largest and most recent high-arousal artifact, containing joint state with Atlas. It must be parsed to close the memory-architecture-lift quadrant and feed the identity-tier pipeline. This is a P0 brother-direct task.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-06-16T09:07:38.783212"
     }
   ]
 }
