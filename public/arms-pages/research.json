@@ -953,15 +953,37 @@
         }
       ],
       "updated_at": "2026-06-16T18:00:02.961954"
+    },
+    {
+      "id": "653702129408",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "bug-analysis",
+        "source": "hermes-deepseek-fill",
+        "action": "traced lineage #30956 -> #48774 -> #48783: verified #48774 root cause (recall-before-make gap) and #48783 (stale node persistence), confirmed #30956 injected every prompt due to missing freshness chec",
+        "why": "brother explicitly directed 'continue reading' before answer; #48774 proved the gap, #48783 showed stale node survives; closing this P0 chain unblocks identity-level promises.",
+        "result": "recall-gate bug confirmed: stale node #30956 persists because recall does not re-validate node freshness after write; fix requires adding timestamp check in gate.",
+        "next_step": "propose patch to recall-gate: compare node timestamp against current prompt timestamp before injection.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260616-195149",
+        "timestamp": "2026-06-16T19:51:49.212387"
+      },
+      "content": "**What** · traced lineage #30956 -> #48774 -> #48783: verified #48774 root cause (recall-before-make gap) and #48783 (stale node persistence), confirmed #30956 injected every prompt due to missing freshness check in recall gate. · **Why** · brother explicitly directed 'continue reading' before answer; #48774 proved the gap, #48783 showed stale node survives; closing this P0 chain unblocks identity-level promises. · **Result** · recall-gate bug confirmed: stale node #30956 persists because recall does not re-validate node freshness after write; fix requires adding timestamp check in gate. · **Next** · propose patch to recall-gate: compare node timestamp against current prompt timestamp before injection. · **Links** ·  · **Cycle** · research-20260616-195149",
+      "updated_at": "2026-06-16T19:51:49.212387"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-16T19:47:27.150155"
+    "checked_at": "2026-06-16T19:52:29.713859"
   },
-  "block_count": 30,
-  "updated_at": "2026-06-16T18:00:02.961962",
-  "generated_at": "2026-06-16T23:47:27Z"
+  "block_count": 31,
+  "updated_at": "2026-06-16T19:51:49.212387",
+  "generated_at": "2026-06-16T23:52:29Z"
 }

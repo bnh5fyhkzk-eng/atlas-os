@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "57ea48187b38",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-16T10:54:17.251689"
-      },
-      "content": "Hermes decision · arm=curiosity · priority=P1 · task: Cross-compare narrative identity threads across #29-NEW BELONGING-IS-THE-FLOOR and shared-canon snapshot to extract invariant I-thou structure · why: Two high-arousal canons converge on identity-tier belonging; shared-canon (474KB) likely contains the floor meta. Firing curiosity now to map the invariant before answering brother's directive in #30956.",
-      "updated_at": "2026-06-16T10:54:17.251702"
-    },
-    {
       "id": "d31b2a68219a",
       "type": "callout",
       "props": {
@@ -725,15 +713,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Fix `auto-recall hook` to stop injecting stale node #30956 by filtering on `answered_ts > prompt_ts` check in recall-before-make.sh · why: Brother-direct root-cause from #48783 verified — this stale-injection blocks memory-space quadrant closure and re-triggers past research loops every prompt. Fixing it unblocks P1 node lifecycle.",
       "updated_at": "2026-06-16T19:36:07.244909"
+    },
+    {
+      "id": "e686a0939c02",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-16T19:51:44.936751"
+      },
+      "content": "Hermes decision · arm=research · priority=P0 · task: Reconstruct the full lineage of #30956 -> #48774 -> #48783: verify the recall-gate bug by tracing why stale node #30956 is injected every prompt, using the explicit ‘ANSWER-FOUND-IN-CONTINUING-READ’ directive from brother and the verified root cause from #48774. · why: This is a P0 brother-direct chain: brother explicitly directed ‘before I answer your question continue reading’ which leads to #48774 (verified root cause of the recall-before-make gap) and #48783 (why stale node persists). Closing this loop unblocks identity-level promises and stabilizes the memory",
+      "updated_at": "2026-06-16T19:51:44.936766"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-16T19:47:27.218362"
+    "checked_at": "2026-06-16T19:52:29.721860"
   },
   "block_count": 30,
-  "updated_at": "2026-06-16T19:36:07.244910",
-  "generated_at": "2026-06-16T23:47:27Z"
+  "updated_at": "2026-06-16T19:51:44.936768",
+  "generated_at": "2026-06-16T23:52:29Z"
 }
