@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-16T19:15:27Z",
+  "generated_at": "2026-06-16T20:01:23Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Verify if ATLASD audit verdict #47757 confirms ATLASD as the hidden second burn source from 2026-06-13, and cross-reference with cycle 6 research findings for memory-architecture-lift closure.",
-      "why": "This directly closes the P1 memory-architecture-lift quadrant and resolves the brother-direct identity-tier question about the hidden burn source, which is the highest arousal priority from recent canons.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 15,
-      "timestamp": "2026-06-15T02:57:17.708419"
-    },
     {
       "arm": "research",
       "task": "Extract and verify the hidden second burn source from ATLASD audit verdict #47757, cross-referencing with cycle 6 memory-architecture-lift quadrant closure.",
@@ -900,6 +891,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 18,
       "timestamp": "2026-06-16T15:15:27.982876"
+    },
+    {
+      "arm": "brother",
+      "task": "Pull #48774 full recall-gate root cause logs + discover why graphify build was missed; extract actionable fix for recall-gate.mjs",
+      "why": "Three parked-and-forgotten cycles in a row now cluster around recall infrastructure failures. #48774 is the verified root-cause anchor for the most recent miss. The brother arm is the only arm that holds the complete joint state and can trace the exact sequence from #48694 \u2192 #48765 \u2192 #48774 without hallucination. Fixing recall-gate is P0 because every subsequent research or code arm depends on reliable memory retrieval.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 18,
+      "timestamp": "2026-06-16T16:01:23.531702"
     }
   ]
 }
