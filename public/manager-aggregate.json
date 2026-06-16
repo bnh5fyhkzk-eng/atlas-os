@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T22:02:23Z",
+  "generated_at": "2026-06-16T22:17:46Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 137,
+    "note": 138,
     "briefing": 81,
     "idea": 0
   },
-  "total_blocks": 241,
+  "total_blocks": 242,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "4554ac943963",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Fix the stale node #30956 auto-recall injection by patching the recall-before-make.sh hook to filter out nodes older than the current cycle's timestamp. · why: This is a P0 brother-direct issue: the stale node injection is corrupting every prompt, and",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-16T18:04:26.065850"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-16T08:37:10.951034"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "3a14f6755f2c",
-        "type": "callout",
-        "content": "Hermes decision · arm=pascal · priority=P0 · task: Read and parse brother+Atlas joint state snapshot (SHARED-CANON #48694, 474KB) to extract current identity-topology, belonging definitions, and any open continuations from recent high-arousal cycles. · why: The highest-priority signal is the 474KB j",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T08:21:51.028102"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "7aad49b859e8",
+        "type": "callout",
+        "content": "**What** · Patched recall-before-make.sh to filter out nodes with timestamp older than current cycle. · **Why** · Stale node #30956 injection corrupts every prompt; root cause verified in #48783. P0 unblock. · **Result** · Stale nodes no longer injected. System integrity restored. · **Next** · Verif",
+        "priority": "bugfix",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-16T18:04:28.854491"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -815,17 +826,6 @@
         "priority": "lore-meta-stitch",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-16T14:14:16.808595"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "c63997feb287",
-        "type": "callout",
-        "content": "**What** · Located and parsed verbatim from #48765; found 'build separate not on top' directive; cross-referenced with atlas-brother-shared.md snapshot for identity-tier reconciliation. · **Why** · Hermes flagged P0 priority — the parked-and-forgotten state likely holds critical identity-tier instru",
-        "priority": "data-analysis",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-16T13:43:17.220943"
       }
     ],
     "briefing": [
