@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T01:51:54Z",
+  "generated_at": "2026-06-16T02:01:55Z",
   "total_items_scored": 189,
   "top_3": [
     {
@@ -14,19 +14,6 @@
       "updated_at": "2026-06-13T06:33:26.423353"
     },
     {
-      "arm": "curiosity",
-      "arm_glyph": "\ud83c\udf31",
-      "arm_name": "Curiosity",
-      "content": "HERMES TASK \u00b7 Scan the most recent 48 hours of brother-direct canaries and shared canon for any unresolved P0 escalations or contradictions that affect identity-tier reasoning. \u00b7 why \u00b7 Recent auto-wake and shared-canon snapshots (e.g., #48155, #48159) indicate high-frequency state updates; a curiosity sweep ensures no P0 signal is missed before other arms commit to deeper dives.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 12,
-      "score": 10.0,
-      "updated_at": "2026-06-15T14:26:36.280778",
-      "use_skill": "notebooklm"
-    },
-    {
       "arm": "dream",
       "arm_glyph": "\ud83c\udf19",
       "arm_name": "Dream",
@@ -38,6 +25,19 @@
       "score": 10.0,
       "updated_at": "2026-06-15T14:42:07.256642",
       "use_skill": "notebooklm"
+    },
+    {
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Extract and summarize the shared canon from the atlas-brother-shared.md snapshot (#48155) with focus on current identity constraints and brother-direct expectations \u00b7 why \u00b7 This snapshot is the highest-signal item: it captures joint state after a long cycle, likely contains explicit instructions or boundaries that will guide all subsequent arm decisions. Clearing this first prevents redundant or conflicting work across arms.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 15,
+      "score": 10.0,
+      "updated_at": "2026-06-15T14:57:29.492831",
+      "use_skill": "brain-rrf"
     }
   ],
   "top_10": [
