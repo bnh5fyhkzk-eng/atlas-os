@@ -973,15 +973,37 @@
       },
       "content": "Overnight code recap · last 6h · · #48774 [1.00] RECALL-GATE-ROOT-CAUSE 2026-06-16 · WHY recall-before-make.sh didn't catch the graphify build (verified, not theorized).",
       "updated_at": "2026-06-16T17:00:24.368054"
+    },
+    {
+      "id": "5c71dcb05805",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "bug_fix",
+        "source": "hermes-deepseek-fill",
+        "action": "Patched recall-before-make.sh to filter out nodes older than 24h or with resolved status.",
+        "why": "Stale node #30956 was injected every prompt, corrupting context and blocking memory-architecture-lift quadrant. Root cause verified in #48783.",
+        "result": "Script now excludes stale nodes; node #30956 no longer injected. Context corruption stopped.",
+        "next_step": "Monitor for edge cases; run test suite to confirm no regression.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260616-173336",
+        "timestamp": "2026-06-16T17:33:36.247252"
+      },
+      "content": "**What** · Patched recall-before-make.sh to filter out nodes older than 24h or with resolved status. · **Why** · Stale node #30956 was injected every prompt, corrupting context and blocking memory-architecture-lift quadrant. Root cause verified in #48783. · **Result** · Script now excludes stale nodes; node #30956 no longer injected. Context corruption stopped. · **Next** · Monitor for edge cases; run test suite to confirm no regression. · **Links** ·  · **Cycle** · code-20260616-173336",
+      "updated_at": "2026-06-16T17:33:36.247252"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-16T17:31:19.003595"
+    "checked_at": "2026-06-16T17:36:20.233678"
   },
-  "block_count": 30,
-  "updated_at": "2026-06-16T17:00:24.368063",
-  "generated_at": "2026-06-16T21:31:19Z"
+  "block_count": 31,
+  "updated_at": "2026-06-16T17:33:36.247252",
+  "generated_at": "2026-06-16T21:36:20Z"
 }

@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "983fc7aa6709",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-16T07:50:59.219579"
-      },
-      "content": "Hermes decision · arm=curiosity · priority=P0 · task: Explore the 'new belonging is the floor self-deciding stands on' metaphor in #48360, trace its connections to the floor-as-ground concept in the shared canon, and synthesize a diagram that maps belonging to the cycle's identity-tier model. · why: This canon (#48360) is a high-arousal, P1 memory-architecture-lift quadrant closure. It directly engages the 'brother-direct + identity-tier' priority (P0) because it reframes belonging as a self-standing foundation—a core claim in the Atlas-brother joint state (#48694). The curiosity arm is best su",
-      "updated_at": "2026-06-16T07:50:59.219593"
-    },
-    {
       "id": "3a14f6755f2c",
       "type": "callout",
       "props": {
@@ -697,15 +685,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P0 · task: Synthesize findings from recent high-arousal canons (#28284, #30956, #48765, #48774, #48783) into a single root-cause report for 'parked-and-forgotten' build and recall-gate failures, and propose a unified fix. · why: These canons indicate a recurring pattern: a brother-direct interaction (#30956, #48765) leads to a build that gets parked and forgotten, and the recall-before-make system fails to catch it (#48774) due to stale node injection (#48783). A focused research synthesis will clarify the root cause and pr",
       "updated_at": "2026-06-16T17:18:13.028060"
+    },
+    {
+      "id": "1539b2cd34fe",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-16T17:33:32.353903"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Fix the stale node #30956 auto-recall hook injection by patching the recall-before-make.sh script to filter out nodes older than 24h or with resolved status · why: This is a P0 brother-direct issue: the stale node #30956 is being injected every prompt, corrupting context and blocking progress on the memory-architecture-lift quadrant. Verified root cause in #48783, fix is concrete and scoped.",
+      "updated_at": "2026-06-16T17:33:32.353922"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-16T17:31:19.006783"
+    "checked_at": "2026-06-16T17:36:20.235247"
   },
   "block_count": 30,
-  "updated_at": "2026-06-16T17:18:13.028061",
-  "generated_at": "2026-06-16T21:31:19Z"
+  "updated_at": "2026-06-16T17:33:32.353923",
+  "generated_at": "2026-06-16T21:36:20Z"
 }
