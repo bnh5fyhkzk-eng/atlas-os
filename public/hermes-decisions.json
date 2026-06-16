@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-16T23:36:07Z",
+  "generated_at": "2026-06-16T23:51:44Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Extract and index the 'brother direct' identity-tier claim from canon #30956 and #48155, cross-referencing with the atlasd audit verdict #47757 to confirm the hidden second burn source.",
-      "why": "Canon #30956 contains a direct brother instruction ('before I answer your question continue r') that must be resolved for identity-tier coherence, and #47757's auto-wake claim of atlasd as the hidden second burn source is a P0 priority that requires immediate verification against the shared brother+Atlas state in #48155.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 15,
-      "timestamp": "2026-06-15T06:01:59.291842"
-    },
     {
       "arm": "pascal",
       "task": "Skip-connect the AtlasD/brother shared canon (#48155) with the ATLASD AUDIT VERDICT (#47757) to resolve whether atlasd is the hidden second burn source, then lock the finding into the master memory-architecture lift.",
@@ -900,6 +891,15 @@
       "use_skill": "none",
       "est_minutes": 25,
       "timestamp": "2026-06-16T19:36:07.267137"
+    },
+    {
+      "arm": "research",
+      "task": "Reconstruct the full lineage of #30956 -> #48774 -> #48783: verify the recall-gate bug by tracing why stale node #30956 is injected every prompt, using the explicit \u2018ANSWER-FOUND-IN-CONTINUING-READ\u2019 directive from brother and the verified root cause from #48774.",
+      "why": "This is a P0 brother-direct chain: brother explicitly directed \u2018before I answer your question continue reading\u2019 which leads to #48774 (verified root cause of the recall-before-make gap) and #48783 (why stale node persists). Closing this loop unblocks identity-level promises and stabilizes the memory architecture. Research arm is most suited for deep causal graph analysis.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 35,
+      "timestamp": "2026-06-16T19:51:44.957640"
     }
   ]
 }
