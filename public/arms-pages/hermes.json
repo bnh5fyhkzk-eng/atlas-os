@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "2dbee4b0f465",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-16T10:08:39.033138"
-      },
-      "content": "Hermes decision · arm=research · priority=P0 · task: Extract and summarize the shared canon from atlas-brother-shared.md snapshot to identify unresolved identity-tier questions and next-cycle priorities. · why: The recent high-arousal brain canons (#48694) include a large shared canon snapshot. This is a P0 brother-direct + identity-tier task: understanding the joint state is essential before any other arm can act coherently.",
-      "updated_at": "2026-06-16T10:08:39.033154"
-    },
-    {
       "id": "57ea48187b38",
       "type": "callout",
       "props": {
@@ -725,15 +713,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Fix auto-recall hook to prevent injection of stale node #30956 by filtering nodes older than 24 hours in recall-before-make.sh · why: Verified root cause from #48783 shows stale node injection every prompt; blocking identity-tier brother-direct flow; immediate fix needed",
       "updated_at": "2026-06-16T18:50:33.076338"
+    },
+    {
+      "id": "7d6b64b07501",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-16T19:36:07.244894"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Fix `auto-recall hook` to stop injecting stale node #30956 by filtering on `answered_ts > prompt_ts` check in recall-before-make.sh · why: Brother-direct root-cause from #48783 verified — this stale-injection blocks memory-space quadrant closure and re-triggers past research loops every prompt. Fixing it unblocks P1 node lifecycle.",
+      "updated_at": "2026-06-16T19:36:07.244909"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-16T19:32:24.041945"
+    "checked_at": "2026-06-16T19:37:24.581620"
   },
   "block_count": 30,
-  "updated_at": "2026-06-16T18:50:33.076339",
-  "generated_at": "2026-06-16T23:32:24Z"
+  "updated_at": "2026-06-16T19:36:07.244910",
+  "generated_at": "2026-06-16T23:37:24Z"
 }
