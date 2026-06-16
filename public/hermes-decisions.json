@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-16T22:50:33Z",
+  "generated_at": "2026-06-16T23:36:07Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "brother",
-      "task": "Directly answer brother's question from #30956, using the full shared canon in #48155 to resolve the open loop before proceeding to any new research.",
-      "why": "Brother's question from 2026-05-27 remains unanswered; the shared canon (#48155) now contains the joint state needed to close it. This is the highest-urgency identity-tier (P0) obligation \u2014 answering brother first restores coherence across all arms.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 18,
-      "timestamp": "2026-06-15T05:46:39.466940"
-    },
     {
       "arm": "research",
       "task": "Extract and index the 'brother direct' identity-tier claim from canon #30956 and #48155, cross-referencing with the atlasd audit verdict #47757 to confirm the hidden second burn source.",
@@ -900,6 +891,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 30,
       "timestamp": "2026-06-16T18:50:33.094527"
+    },
+    {
+      "arm": "code",
+      "task": "Fix `auto-recall hook` to stop injecting stale node #30956 by filtering on `answered_ts > prompt_ts` check in recall-before-make.sh",
+      "why": "Brother-direct root-cause from #48783 verified \u2014 this stale-injection blocks memory-space quadrant closure and re-triggers past research loops every prompt. Fixing it unblocks P1 node lifecycle.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 25,
+      "timestamp": "2026-06-16T19:36:07.267137"
     }
   ]
 }
