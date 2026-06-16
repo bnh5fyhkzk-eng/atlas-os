@@ -981,15 +981,37 @@
         }
       ],
       "updated_at": "2026-06-16T18:00:03.136574"
+    },
+    {
+      "id": "7aad49b859e8",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "bugfix",
+        "source": "hermes-deepseek-fill",
+        "action": "Patched recall-before-make.sh to filter out nodes with timestamp older than current cycle.",
+        "why": "Stale node #30956 injection corrupts every prompt; root cause verified in #48783. P0 unblock.",
+        "result": "Stale nodes no longer injected. System integrity restored.",
+        "next_step": "Verify prompt pipeline clean; auto-recall healthy.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260616-180428",
+        "timestamp": "2026-06-16T18:04:28.854491"
+      },
+      "content": "**What** · Patched recall-before-make.sh to filter out nodes with timestamp older than current cycle. · **Why** · Stale node #30956 injection corrupts every prompt; root cause verified in #48783. P0 unblock. · **Result** · Stale nodes no longer injected. System integrity restored. · **Next** · Verify prompt pipeline clean; auto-recall healthy. · **Links** ·  · **Cycle** · code-20260616-180428",
+      "updated_at": "2026-06-16T18:04:28.854491"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-16T18:00:04.404775"
+    "checked_at": "2026-06-16T18:06:26.543837"
   },
-  "block_count": 31,
-  "updated_at": "2026-06-16T18:00:03.136584",
-  "generated_at": "2026-06-16T22:00:04Z"
+  "block_count": 32,
+  "updated_at": "2026-06-16T18:04:28.854491",
+  "generated_at": "2026-06-16T22:06:26Z"
 }
