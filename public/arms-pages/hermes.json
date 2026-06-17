@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "1539b2cd34fe",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-16T17:33:32.353903"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Fix the stale node #30956 auto-recall hook injection by patching the recall-before-make.sh script to filter out nodes older than 24h or with resolved status · why: This is a P0 brother-direct issue: the stale node #30956 is being injected every prompt, corrupting context and blocking progress on the memory-architecture-lift quadrant. Verified root cause in #48783, fix is concrete and scoped.",
-      "updated_at": "2026-06-16T17:33:32.353922"
-    },
-    {
       "id": "f4214c2981f6",
       "type": "database",
       "props": {
@@ -733,15 +721,27 @@
       },
       "content": "Hermes decision · arm=pascal · priority=P1 · task: Implement Guard 4 (scope violation detection) as a production-ready Python module with unit tests and integration into the sales pipeline · why: Canon #48808 validates Guard 4 as the mechanism driving measurable conversion lift (37% vs 15%). This is a brother-direct, identity-tier task: building the actual component converts insight into deployable value. It also cross-cuts curiosity (why it works), code (implementation), and infra (pipeline",
       "updated_at": "2026-06-17T01:36:03.838846"
+    },
+    {
+      "id": "3e333b03f8b3",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-17T01:51:14.650057"
+      },
+      "content": "Hermes decision · arm=research · priority=P1 · task: Verify the 4-guard circuit-breaker mechanism from #48807 by cross-referencing Pascal coaching conversion data with scope violation detection patterns from #48808 · why: These two high-arousal canons describe a verified mechanism with measurable lift (37% vs 15%). Research arm can surface the original source data and validate the guard logic, which directly informs brother-direct coaching infrastructure.",
+      "updated_at": "2026-06-17T01:51:14.650070"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T01:46:25.413528"
+    "checked_at": "2026-06-17T01:51:25.924557"
   },
   "block_count": 30,
-  "updated_at": "2026-06-17T01:36:03.838848",
-  "generated_at": "2026-06-17T05:46:25Z"
+  "updated_at": "2026-06-17T01:51:14.650072",
+  "generated_at": "2026-06-17T05:51:25Z"
 }
