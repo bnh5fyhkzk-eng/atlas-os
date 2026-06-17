@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T09:33:25Z",
+  "generated_at": "2026-06-17T09:48:26Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 142,
+    "note": 143,
     "briefing": 73,
     "idea": 0
   },
-  "total_blocks": 243,
+  "total_blocks": 244,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "bc7d1d844162",
+        "type": "callout",
+        "content": "Hermes decision · arm=pascal · priority=P1 · task: Draft a detailed implementation spec for the 4-guard circuit-breaker pipeline, including trigger criteria, escalation paths, and logging for scope violation detection (Guard 4). · why: Canon #48807–#48808 identifies the 4-guard circuit-breaker as a ",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T05:41:31.060915"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -313,17 +324,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-16T20:54:55.514815"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "43d1ce72f8b2",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Patch recall-before-make.sh to filter out stale node #30956 and add graphify build detection · why: P0: Brother-direct root cause #48783 is verified—auto-recall injects stale node every prompt, blocking identity-tier progress. Fixing this unblocks the",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T20:37:47.222694"
       }
     ],
     "action": [],
@@ -332,6 +332,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "6c2d23b3bba3",
+        "type": "callout",
+        "content": "**What** · Drafted detailed implementation spec for the 4-guard circuit-breaker pipeline, including trigger criteria, escalation paths, and logging for Guard 4 (scope violation detection). · **Why** · Canon #48807–#48808 shows this pipeline yields a 37% lift; Hermes assigned P1 priority to concretiz",
+        "priority": "specification",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T05:41:39.986746"
+      },
       {
         "arm": "pascal",
         "arm_glyph": "🤝",
@@ -870,17 +881,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-16T18:00:03.616876"
-      },
-      {
-        "arm": "dream",
-        "arm_glyph": "🌙",
-        "arm_name": "My Dreamer",
-        "block_id": "42db17e5009a",
-        "type": "database",
-        "content": "felt-layer-moments · last 30d · 4 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-16T18:00:03.616873"
       }
     ],
     "briefing": [
