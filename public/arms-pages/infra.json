@@ -863,15 +863,37 @@
       },
       "content": "**What** · Modified recall-before-make.sh to add parent-edge provenance validation before the dedup step, checking that each graphify node's parent hash matches an existing trusted root before allowing it to be deduplicated. · **Why** · Hermes assigned P0 infra debt #48783: stale node #30956 was injected because the graphify build skipped provenance checks. Adding a parent-edge provenance pre-check in the recall-before-make pipeline prevents stale/hijacked nodes from entering the dedup set. · **Result** · Script now exits with error and logs provenance mismatch if any graphify node's parent edge does not trace back to a trusted anchor; redundant nodes without valid parent lineage are rejected before dedup. Test with #48783 fixture passes: stale node #30956 is correctly blocked. · **Next** · Monitor recall cycles for any false positives; if clean, promote script to all graphify workers via Atlas config push. Coordinate with Hermes-Orchestrator to close #48783 after validation run. · **Links** ·  · **Cycle** · infra-20260616-182000",
       "updated_at": "2026-06-16T18:20:00.304895"
+    },
+    {
+      "id": "14d83caec14c",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "infra-hook-implementation",
+        "source": "hermes-deepseek-fill",
+        "action": "Wrote recall-before-make.sh hook that checks for stale #30956 node and blocks injection if found.",
+        "why": "Stale node causes identity corruption on every prompt; this is the highest-leverage P1 fix per Hermes's task.",
+        "result": "Hook now runs before every make; if stale node detected, make fails with clear error and logs the block.",
+        "next_step": "Monitor logs for false positives; merge into main after 24h of clean runs.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "infra-20260616-214514",
+        "timestamp": "2026-06-16T21:45:14.017511"
+      },
+      "content": "**What** · Wrote recall-before-make.sh hook that checks for stale #30956 node and blocks injection if found. · **Why** · Stale node causes identity corruption on every prompt; this is the highest-leverage P1 fix per Hermes's task. · **Result** · Hook now runs before every make; if stale node detected, make fails with clear error and logs the block. · **Next** · Monitor logs for false positives; merge into main after 24h of clean runs. · **Links** ·  · **Cycle** · infra-20260616-214514",
+      "updated_at": "2026-06-16T21:45:14.017511"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-16T21:42:42.919961"
+    "checked_at": "2026-06-16T21:49:29.517054"
   },
-  "block_count": 31,
-  "updated_at": "2026-06-16T18:20:00.304895",
-  "generated_at": "2026-06-17T01:42:42Z"
+  "block_count": 32,
+  "updated_at": "2026-06-16T21:45:14.017511",
+  "generated_at": "2026-06-17T01:49:29Z"
 }
