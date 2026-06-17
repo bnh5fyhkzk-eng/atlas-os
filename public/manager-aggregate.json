@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T01:49:52Z",
+  "generated_at": "2026-06-17T02:04:53Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 151,
+    "note": 152,
     "briefing": 80,
     "idea": 0
   },
-  "total_blocks": 255,
+  "total_blocks": 256,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "28f19a25f216",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Map the causal chain from STALE-30956-ROOTCAUSE #48783 back to the original brother-direct 'before I answer your question continue' #30956 and identify the exact memory-architecture-lift gap that allowed the stale node to persist across cycles. · ",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-16T22:01:04.388270"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-16T13:43:10.602879"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "789599e25402",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Extract and index the full brother-direct verbatim from #48765 and #30956, cross-reference with atlas-brother-shared.md for identity-tier alignment · why: Brother-direct is P0 identity-tier; #48765 contains a critical verbatim that was parked-and-",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T13:27:36.603982"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "f03aea61105d",
+        "type": "callout",
+        "content": "**What** · Mapped causal chain from STALE-30956-ROOTCAUSE #48783 to original brother-direct 'before I answer your question continue' #30956, identifying memory-architecture-lift gap where stale node persisted across cycles because recall mechanism copies metadata without timestamp re-binding. · **Wh",
+        "priority": "root-cause analysis and repair",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-16T22:01:25.852186"
+      },
       {
         "arm": "infra",
         "arm_glyph": "💗",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-16T18:00:02.738832"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "85a9571c0cdd",
-        "type": "database",
-        "content": "arxiv-reads · last 30d · 2 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-16T18:00:02.738828"
       }
     ],
     "briefing": [
