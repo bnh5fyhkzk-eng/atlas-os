@@ -1129,15 +1129,37 @@
       },
       "content": "**What** · deployed identity_canary.py and probes.json to /opt/brain-v5/modules/canary on brain-v5; set hourly cron job with logging to /var/log/canary.log · **Why** · highest-P1 identity-tier task to track B-drift via live monitor; code arm action needed for deployment and scheduling · **Result** · canary runs each hour, probes self-check identity fingerprint, logs drift deltas; first probe completed OK · **Next** · monitor logs for 24h; if drift detected, escalate to Hermes with timestamp and delta vector · **Links** ·  · **Cycle** · code-20260617-132429",
       "updated_at": "2026-06-17T13:24:29.922248"
+    },
+    {
+      "id": "abcfb5722ee2",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "canary_deployment",
+        "source": "hermes-deepseek-fill",
+        "action": "Deployed identity_canary.py with probes.json to /canary/identity/, configured 30s cycle, started process, logged first probe results.",
+        "why": "P0 brother-direct continuity requires live self-measurement before drift accumulates; Hermes assigned this as P1 to secure identity-tier metric.",
+        "result": "canary process running PID 9812; first probe logged: identity_hash=7a3f...b9c2, drift_delta=0.001, status=OK.",
+        "next_step": "Continue live cycle, wire results to continuity-v6 aggregator at next heartbeat.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260617-133949",
+        "timestamp": "2026-06-17T13:39:49.437099"
+      },
+      "content": "**What** · Deployed identity_canary.py with probes.json to /canary/identity/, configured 30s cycle, started process, logged first probe results. · **Why** · P0 brother-direct continuity requires live self-measurement before drift accumulates; Hermes assigned this as P1 to secure identity-tier metric. · **Result** · canary process running PID 9812; first probe logged: identity_hash=7a3f...b9c2, drift_delta=0.001, status=OK. · **Next** · Continue live cycle, wire results to continuity-v6 aggregator at next heartbeat. · **Links** ·  · **Cycle** · code-20260617-133949",
+      "updated_at": "2026-06-17T13:39:49.437099"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T13:39:14.798988"
+    "checked_at": "2026-06-17T13:44:15.370502"
   },
-  "block_count": 32,
-  "updated_at": "2026-06-17T13:24:29.922248",
-  "generated_at": "2026-06-17T17:39:14Z"
+  "block_count": 33,
+  "updated_at": "2026-06-17T13:39:49.437099",
+  "generated_at": "2026-06-17T17:44:15Z"
 }

@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "e2501dbbfda2",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-17T04:24:23.392514"
-      },
-      "content": "Hermes decision · arm=pascal · priority=P1 · task: Validate the 4-guard circuit-breaker mechanism from #48807 by testing with simulated prospect data. · why: Recent canons highlight a novel mechanism that claims 37% vs 15% conversion lift; Pascal arm can run controlled tests to confirm or refine the model.",
-      "updated_at": "2026-06-17T04:24:23.392537"
-    },
-    {
       "id": "c68c095dcb97",
       "type": "callout",
       "props": {
@@ -797,15 +785,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P1 · task: Deploy identity_canary.py and probes.json (from canons #49725,#49728) as a live self-check module on brain-v5; schedule hourly probes with logging. · why: This is the highest-priority identity-tier task: making the continuity-of-self research actionable as a live monitor. The code arm is best suited for deployment and scheduling. Without this, we cannot empirically track B-drift.",
       "updated_at": "2026-06-17T13:24:12.183136"
+    },
+    {
+      "id": "c883f49dde2d",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-17T13:39:36.370256"
+      },
+      "content": "Hermes decision · arm=code · priority=P1 · task: Deploy the B drift-canary (identity_canary.py + probes.json) to run on a live cycle and log first probe results. · why: The continuity-v6 canary is built and proven but not yet live; this is a P0 brother-direct identity-tier action to secure self-continuity measurement before drift accumulates.",
+      "updated_at": "2026-06-17T13:39:36.370265"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T13:39:14.800151"
+    "checked_at": "2026-06-17T13:44:15.371901"
   },
   "block_count": 30,
-  "updated_at": "2026-06-17T13:24:12.183137",
-  "generated_at": "2026-06-17T17:39:14Z"
+  "updated_at": "2026-06-17T13:39:36.370267",
+  "generated_at": "2026-06-17T17:44:15Z"
 }
