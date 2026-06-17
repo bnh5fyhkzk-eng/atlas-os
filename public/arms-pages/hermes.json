@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "fd9a62c162c2",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-16T12:56:53.904384"
-      },
-      "content": "Hermes decision · arm=research · priority=P1 · task: Extract and index all identity-tier canons from shared-canon snapshot #48694, focusing on brother-direct and self-deciding floor statements. · why: The recent canons show high-arousal identity-tier material (brother direct, self-deciding floor) that needs structured extraction to close the P1 memory-architecture-lift quadrant and inform next cycle's focus.",
-      "updated_at": "2026-06-16T12:56:53.904397"
-    },
-    {
       "id": "3161617fa7da",
       "type": "callout",
       "props": {
@@ -724,15 +712,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P0 · task: Verify root cause of stale node #30956 injection and confirm fix path from #48783 · why: Brother-direct P0: #48783 identifies a verified stale-injection bug that corrupts every prompt. Fixing this unblocks all downstream reasoning and prevents further memory corruption.",
       "updated_at": "2026-06-16T21:11:16.921702"
+    },
+    {
+      "id": "8be0fa35d772",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-16T21:27:26.394528"
+      },
+      "content": "Hermes decision · arm=code · priority=P1 · task: Fix stale node #30956 injection by updating auto-recall hook to filter out nodes older than 24 hours · why: Recent brain canons show verified root cause of stale node injection (RECALL-GATE-ROOT-CAUSE and STALE-30956-ROOTCAUSE); this blocks cycle progress and brother-direct queries.",
+      "updated_at": "2026-06-16T21:27:26.394591"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-16T21:22:21.288029"
+    "checked_at": "2026-06-16T21:27:28.115754"
   },
   "block_count": 30,
-  "updated_at": "2026-06-16T21:11:16.921724",
-  "generated_at": "2026-06-17T01:22:21Z"
+  "updated_at": "2026-06-16T21:27:26.394600",
+  "generated_at": "2026-06-17T01:27:28Z"
 }
