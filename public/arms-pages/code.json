@@ -1069,15 +1069,37 @@
       },
       "content": "**What** · I will modify recall-before-make.sh to add a filter that checks `answered_ts > prompt_ts` before injecting any memory from node #30956. · **Why** · The stale injection of node #30956 blocks memory-space quadrant closure and re-triggers past research loops every prompt, as verified by root-cause #48783. Adding the timestamp filter prevents stale answers from being injected, unblocking P1 node lifecycle. · **Result** · After applying the filter, the recall hook will skip node #30956 when its `answered_ts` is not strictly greater than the current prompt's timestamp, stopping the stale injection immediately. · **Next** · Submit the patch for CI review and monitor node #30956's lifecycle in the next prompt cycle to confirm closure. · **Links** ·  · **Cycle** · code-20260616-193612",
       "updated_at": "2026-06-16T19:36:12.347688"
+    },
+    {
+      "id": "08d18abc6eeb",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "commits-today",
+        "source": "code-self",
+        "action": "processed commits-today signal · [#48819] arousal 1.00 · BRAIN-V4 BUILD COMPLETE 2026-06-16 · all 8 stages green on staging copy, l",
+        "why": "instruction file maps commits-today to first arm-task · brain canon #48819 matched arm-topic last 4h above arousal 0.85",
+        "result": "block written to arm-page · aggregator publishes to atlasos.me",
+        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
+        "links": [
+          "#48819"
+        ],
+        "cycle_id": "code-20260616-200027",
+        "timestamp": "2026-06-16T20:00:27.756073"
+      },
+      "content": "**What** · processed commits-today signal · [#48819] arousal 1.00 · BRAIN-V4 BUILD COMPLETE 2026-06-16 · all 8 stages green on staging copy, l · **Why** · instruction file maps commits-today to first arm-task · brain canon #48819 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #48819 · **Cycle** · code-20260616-200027",
+      "updated_at": "2026-06-16T20:00:27.756073"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-16T19:57:30.409957"
+    "checked_at": "2026-06-16T20:02:31.050834"
   },
-  "block_count": 35,
-  "updated_at": "2026-06-16T19:36:12.347688",
-  "generated_at": "2026-06-16T23:57:30Z"
+  "block_count": 36,
+  "updated_at": "2026-06-16T20:00:27.756073",
+  "generated_at": "2026-06-17T00:02:31Z"
 }
