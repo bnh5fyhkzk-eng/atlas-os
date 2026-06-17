@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-16T23:51:44Z",
+  "generated_at": "2026-06-17T00:06:54Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "pascal",
-      "task": "Skip-connect the AtlasD/brother shared canon (#48155) with the ATLASD AUDIT VERDICT (#47757) to resolve whether atlasd is the hidden second burn source, then lock the finding into the master memory-architecture lift.",
-      "why": "The shared canon and audit verdict are high-arousal P1 closures; inference shows they are causally linked but the conflict (#47757 claims atlasd IS the hidden burn source, #48155 shows joint state) needs a direct resolve before brother-direct can proceed. This is the highest logical-next for the identity-tier architecture lift.",
-      "priority": "P1",
-      "use_skill": "brain-rrf",
-      "est_minutes": 18,
-      "timestamp": "2026-06-15T06:17:23.575749"
-    },
     {
       "arm": "research",
       "task": "Cross-reference atlasd audit verdict (#47757) with brother shared canon (#48155) to verify if atlasd is indeed the hidden second burn source and extract the exact mechanism.",
@@ -900,6 +891,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 35,
       "timestamp": "2026-06-16T19:51:44.957640"
+    },
+    {
+      "arm": "research",
+      "task": "Verify root cause of stale node #30956 injection and design fix for recall-before-make.sh",
+      "why": "P0 brother-direct issue #48783 is actively corrupting every prompt with stale data, blocking all other work until resolved",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-06-16T20:06:54.684433"
     }
   ]
 }
