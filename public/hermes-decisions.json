@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-17T06:06:53Z",
+  "generated_at": "2026-06-17T06:22:10Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Extract and summarize the shared canon from the atlas-brother-shared.md snapshot (#48155) with focus on current identity constraints and brother-direct expectations",
-      "why": "This snapshot is the highest-signal item: it captures joint state after a long cycle, likely contains explicit instructions or boundaries that will guide all subsequent arm decisions. Clearing this first prevents redundant or conflicting work across arms.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 15,
-      "timestamp": "2026-06-15T14:57:29.492831"
-    },
     {
       "arm": "research",
       "task": "Deep-dive into the 'brother direct' canon #30956 to extract the unanswered question and prepare a structured answer draft.",
@@ -900,6 +891,15 @@
       "use_skill": "websearch",
       "est_minutes": 12,
       "timestamp": "2026-06-17T02:06:53.041112"
+    },
+    {
+      "arm": "pascal",
+      "task": "Implement Guard 4 (scope violation detection) in the sales pipeline to automatically filter noise prospects before they consume advisor time, targeting the 37% conversion lift seen in coaching.",
+      "why": "Canon #48807 directly links the 4-guard circuit-breaker to a proven 37% conversion lift; next cycle is the prime moment to code this into the active pipeline, leveraging immediate high-arousal insight before it decays.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-06-17T02:22:10.256401"
     }
   ]
 }
