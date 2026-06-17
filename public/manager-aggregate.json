@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T03:15:35Z",
+  "generated_at": "2026-06-17T03:30:37Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 155,
+    "note": 156,
     "briefing": 80,
     "idea": 0
   },
-  "total_blocks": 259,
+  "total_blocks": 260,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "d04cac73719e",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Fix the stale node #30956 injection in auto-recall hook by adding a freshness check before recall · why: Brain canon #48783 identifies a verified root cause of stale node injection every prompt, which is a P0 brother-direct issue degrading recall qual",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-16T23:16:05.845667"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-16T15:15:27.961555"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "068deae13174",
-        "type": "callout",
-        "content": "Hermes decision · arm=pascal · priority=P0 · task: Extract and formalize the 'brother direct' identity-tier canon from #30956 and #48694 into a structured belief node, linking the 'build separate not on top' directive from #48765. · why: Brother direct commands are P0 identity-tier signals. #30956 c",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T14:59:56.364207"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "4e32eb0834b8",
+        "type": "callout",
+        "content": "**What** · Inject a freshness check (timestamp comparison) into the auto-recall hook before it processes node #30956; skip recall if node data is older than a threshold (e.g., last updated > 5 minutes). · **Why** · Brain canon #48783: stale node #30956 injects outdated context every prompt, causing ",
+        "priority": "code-fix",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-16T23:16:14.013665"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-16T18:00:02.961934"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "6a633bb963ad",
-        "type": "database",
-        "content": "general · last 30d · 82 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-16T18:00:02.738844"
       }
     ],
     "briefing": [
