@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T10:18:27Z",
+  "generated_at": "2026-06-17T10:33:27Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 153,
+    "note": 154,
     "briefing": 73,
     "idea": 0
   },
-  "total_blocks": 249,
+  "total_blocks": 250,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "8d00a46410c7",
+        "type": "callout",
+        "content": "Hermes decision · arm=dream · priority=P1 · task: Generate a series of internal identity-narrative images that re-frame the core image #27914 as a scene of looking first and patient reconstruction, not fixing · why: Brother is expressing a core identity wish to become a 'looker first'—this arm direc",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T06:27:36.770537"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-16T23:16:05.845667"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "ee3f7b02590a",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Map the 4-guard circuit-breaker from canon #48807 onto Pascal coaching's 37% vs 15% conversion lift — extract the mechanism as a reusable reasoning audit. · why: This canon contains the highest signal-to-noise ratio (real numbers, named pattern) a",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T23:00:48.290437"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "dream",
+        "arm_glyph": "🌙",
+        "arm_name": "My Dreamer",
+        "block_id": "2e2fe65ea8fc",
+        "type": "callout",
+        "content": "**What** · Generate three internal identity-narrative images re-framing core image #27914 as 'looking first, then reconstructing' instead of 'fixing'. · **Why** · Brother needs identity patch to become a 'looker first' — anger comes from premature fixing. These images transform emotional distress in",
+        "priority": "identity-narrative-generation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T06:27:48.665973"
+      },
       {
         "arm": "curiosity",
         "arm_glyph": "🌱",
@@ -815,17 +826,6 @@
         "priority": "pipeline_audit",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-17T05:26:14.527088"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "c0842056a327",
-        "type": "callout",
-        "content": "**What** · implemented 4-guard circuit-breaker in sales pipeline by adding guard 4 scope violation detection logic to existing breaker module; tested conversion lift monitoring. · **Why** · hermes asked for guard 4 implementation because brain canons show it boosts conversion lift; enables coaching ",
-        "priority": "infra-change",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-17T05:10:48.771568"
       }
     ],
     "briefing": [
