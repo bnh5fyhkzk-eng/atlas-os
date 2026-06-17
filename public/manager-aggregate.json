@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T05:18:15Z",
+  "generated_at": "2026-06-17T05:33:16Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -10,13 +10,24 @@
     "catch": 0,
     "research": 0,
     "note": 163,
-    "briefing": 80,
+    "briefing": 79,
     "idea": 0
   },
-  "total_blocks": 267,
+  "total_blocks": 266,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "8d4522541ef0",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Verify the 4-guard circuit-breaker mechanism from #48807 by cross-referencing Pascal coaching's documented conversion lift with the scope-violation detection described in #48808 · why: This is a P0 brother-direct task because #48807 and #48808 tog",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T01:20:45.449768"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-16T17:18:13.028060"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "691ffa505008",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Fix the stale node #30956 auto-recall hook injection by updating the recall-before-make.sh script to filter out nodes older than 24 hours or with status 'ANSWER-FOUND-IN-CONTINUING-READ'. · why: This is a P0 brother-direct issue (#48783) causing persi",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T16:47:23.305404"
       }
     ],
     "action": [],
@@ -852,17 +852,6 @@
         "updated_at": "2026-06-16T17:00:24.415390"
       },
       {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "81a63afef50f",
-        "type": "callout",
-        "content": "Overnight hermes recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant.",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-16T17:00:24.390412"
-      },
-      {
         "arm": "code",
         "arm_glyph": "✋",
         "arm_name": "My Hands",
@@ -1389,6 +1378,17 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-14T23:00:21.726282"
+      },
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "eb623347ba25",
+        "type": "callout",
+        "content": "No high-arousal curiosity canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-14T23:00:21.681272"
       }
     ],
     "idea": []
