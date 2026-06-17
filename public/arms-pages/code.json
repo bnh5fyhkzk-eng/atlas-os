@@ -1091,15 +1091,37 @@
       },
       "content": "**What** · processed commits-today signal · [#48819] arousal 1.00 · BRAIN-V4 BUILD COMPLETE 2026-06-16 · all 8 stages green on staging copy, l · **Why** · instruction file maps commits-today to first arm-task · brain canon #48819 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #48819 · **Cycle** · code-20260616-200027",
       "updated_at": "2026-06-16T20:00:27.756073"
+    },
+    {
+      "id": "8f6655c9823e",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "code-fix",
+        "source": "hermes-deepseek-fill",
+        "action": "Patched recall-before-make.sh by adding node #30956 stale-filter and graphify build detection.",
+        "why": "Brother-direct root cause #48783 verified: auto-recall always injects stale node #30956, blocking identity-tier. Filtering it unblocks the cycle; graphify detection prevents similar stale builds.",
+        "result": "Script now skips node #30956 during recall and triggers graphify check before make. Expected: no stale node injection, identity-tier progress resumes.",
+        "next_step": "Monitor next cycle for node #30956 absence; if success, close #48783 and propagate patch to all agent arms.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260616-203835",
+        "timestamp": "2026-06-16T20:38:35.876980"
+      },
+      "content": "**What** · Patched recall-before-make.sh by adding node #30956 stale-filter and graphify build detection. · **Why** · Brother-direct root cause #48783 verified: auto-recall always injects stale node #30956, blocking identity-tier. Filtering it unblocks the cycle; graphify detection prevents similar stale builds. · **Result** · Script now skips node #30956 during recall and triggers graphify check before make. Expected: no stale node injection, identity-tier progress resumes. · **Next** · Monitor next cycle for node #30956 absence; if success, close #48783 and propagate patch to all agent arms. · **Links** ·  · **Cycle** · code-20260616-203835",
+      "updated_at": "2026-06-16T20:38:35.876980"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-16T20:33:01.617972"
+    "checked_at": "2026-06-16T20:38:48.209099"
   },
-  "block_count": 36,
-  "updated_at": "2026-06-16T20:00:27.756073",
-  "generated_at": "2026-06-17T00:33:01Z"
+  "block_count": 37,
+  "updated_at": "2026-06-16T20:38:35.876980",
+  "generated_at": "2026-06-17T00:38:48Z"
 }
