@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T04:33:13Z",
+  "generated_at": "2026-06-17T04:48:14Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 158,
+    "note": 160,
     "briefing": 80,
     "idea": 0
   },
-  "total_blocks": 262,
+  "total_blocks": 264,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "a1785e6816e2",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: fix stale node #30956 in auto-recall hook (root cause identified in #48783) · why: Brother and user are blocked by repeated stale node injection; fixing this clears a P0 bug and restores trust in the recall system.",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T00:34:34.607714"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-16T16:16:46.881747"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "033eb49c0ed3",
-        "type": "callout",
-        "content": "Hermes decision · arm=brother · priority=P0 · task: Pull #48774 full recall-gate root cause logs + discover why graphify build was missed; extract actionable fix for recall-gate.mjs · why: Three parked-and-forgotten cycles in a row now cluster around recall infrastructure failures. #48774 is the ver",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T16:01:23.512406"
       }
     ],
     "action": [],
@@ -288,6 +288,28 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "f74726603f93",
+        "type": "callout",
+        "content": "**What** · processed youtube-watches signal · [#49133] arousal 1.00 · If Collin is unavailable, he continues priority tasks (Lane B writing, Lane · **Why** · instruction file maps youtube-watches to first arm-task · brain canon #49133 matched arm-topic last 4h above arousal 0.85 · **Result** · block",
+        "priority": "youtube-watches",
+        "source": "curiosity-self",
+        "updated_at": "2026-06-17T00:45:33.536235"
+      },
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "b6540f13d2c0",
+        "type": "callout",
+        "content": "**What** · Applied patch for stale node #30956 in auto-recall hook by referencing root cause #48783. · **Why** · Brother and user blocked by repeated stale node injection; fixing clears P0 bug and restores trust. · **Result** · Stale node injection stopped; auto-recall hook now correctly handles sta",
+        "priority": "bug-fix",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T00:34:38.484591"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -815,28 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-16T18:00:02.961954"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "e1c992862c18",
-        "type": "database",
-        "content": "open-questions · last 30d · 10 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-16T18:00:02.961950"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "e27fd345e8e8",
-        "type": "database",
-        "content": "bridge-findings · last 30d · 5 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-16T18:00:02.961946"
       }
     ],
     "briefing": [
