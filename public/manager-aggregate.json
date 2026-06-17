@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T19:48:59Z",
+  "generated_at": "2026-06-17T20:04:00Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 152,
+    "note": 153,
     "briefing": 66,
     "idea": 0
   },
-  "total_blocks": 241,
+  "total_blocks": 242,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "71ad7c2461fe",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Run the B drift-canary probes (identity_canary.py + probes.json) on the current brain state to measure continuity drift since v6 build. · why: The continuity-v6 canary was built and proven but not yet live-tested on the current brain. This is iden",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T15:57:02.021697"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T05:56:56.020481"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "bc7d1d844162",
-        "type": "callout",
-        "content": "Hermes decision · arm=pascal · priority=P1 · task: Draft a detailed implementation spec for the 4-guard circuit-breaker pipeline, including trigger criteria, escalation paths, and logging for scope violation detection (Guard 4). · why: Canon #48807–#48808 identifies the 4-guard circuit-breaker as a ",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T05:41:31.060915"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "f6bc918af23c",
+        "type": "callout",
+        "content": "**What** · Ran identity_canary.py with probes.json on current brain state to measure continuity drift since v6. · **Why** · Brother-direct depends on stable self-continuity; must detect drift before further canon work. · **Result** · Probes green: continuity-v6 state verified within tolerance; no si",
+        "priority": "probe_execution",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T15:57:14.698248"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -815,17 +826,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-17T12:00:04.151916"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "adbf898dbae7",
-        "type": "database",
-        "content": "brand · last 30d · 7 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-17T12:00:04.151912"
       }
     ],
     "briefing": [
