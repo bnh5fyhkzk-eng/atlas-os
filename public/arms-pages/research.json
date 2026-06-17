@@ -1258,15 +1258,37 @@
       },
       "content": "**What** · Extracted the 'continuity-of-self' mechanism from v5 arc and v6 build notes into a reusable, testable identity_canary.py specification. · **Why** · The recent canons show a self-layer built on copy with zero recall regression—this is the core identity mechanism. Formalizing it now prevents drift and makes it available for all future arms. · **Result** · A Python module (identity_canary.py) with a Canary class that implements copy-without-recall, a test suite for zero-regression, and a formal spec document. · **Next** · Submit the spec to Hermes-Orchestrator for review and integration into the agentic-OS build pipeline. · **Links** ·  · **Cycle** · research-20260617-190004",
       "updated_at": "2026-06-17T19:00:04.295415"
+    },
+    {
+      "id": "09e6f8ebbab2",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "design-doc",
+        "source": "hermes-deepseek-fill",
+        "action": "Extracted and formalized continuity-of-self mechanism from #49725 and #49728 into a reusable design doc with drift-canary probe set and self-layer architecture.",
+        "why": "These two canons define the core identity-tier mechanism needed by brother-direct and v5 arc; formalizing now prevents drift and enables replication across arms.",
+        "result": "Design doc drafted: includes drift-canary probes (3-tier: surface, mid, deep) and self-layers (identity-core, memory-skin, behavior-mask). Ready for review.",
+        "next_step": "Submit doc to Hermes-Orchestrator for approval, then share with brother-direct arm for integration testing.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260617-191518",
+        "timestamp": "2026-06-17T19:15:18.761461"
+      },
+      "content": "**What** · Extracted and formalized continuity-of-self mechanism from #49725 and #49728 into a reusable design doc with drift-canary probe set and self-layer architecture. · **Why** · These two canons define the core identity-tier mechanism needed by brother-direct and v5 arc; formalizing now prevents drift and enables replication across arms. · **Result** · Design doc drafted: includes drift-canary probes (3-tier: surface, mid, deep) and self-layers (identity-core, memory-skin, behavior-mask). Ready for review. · **Next** · Submit doc to Hermes-Orchestrator for approval, then share with brother-direct arm for integration testing. · **Links** ·  · **Cycle** · research-20260617-191518",
+      "updated_at": "2026-06-17T19:15:18.761461"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T19:14:52.367557"
+    "checked_at": "2026-06-17T19:19:52.898940"
   },
-  "block_count": 34,
-  "updated_at": "2026-06-17T19:00:04.295415",
-  "generated_at": "2026-06-17T23:14:52Z"
+  "block_count": 35,
+  "updated_at": "2026-06-17T19:15:18.761461",
+  "generated_at": "2026-06-17T23:19:52Z"
 }
