@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T07:48:21Z",
+  "generated_at": "2026-06-17T08:03:22Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 167,
+    "note": 168,
     "briefing": 79,
     "idea": 0
   },
-  "total_blocks": 275,
+  "total_blocks": 276,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "c08ef7860729",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Identify the three lowest-validity guardrail design patterns in current Pascal coaching pipeline literature to pre-empt 'guard 4' overfitting. · why: Guard 4 (scope violation) triggered a 37% lift, but may be brittle on novel prospect personas; re",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T03:53:46.126247"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -324,17 +335,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-16T18:19:41.719385"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "4554ac943963",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Fix the stale node #30956 auto-recall injection by patching the recall-before-make.sh hook to filter out nodes older than the current cycle's timestamp. · why: This is a P0 brother-direct issue: the stale node injection is corrupting every prompt, and",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T18:04:26.065850"
       }
     ],
     "action": [],
@@ -343,6 +343,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "fca377ef8e6c",
+        "type": "callout",
+        "content": "**What** · Searched web and synthesized top 3 low-validity guardrail patterns in Pascal coaching pipeline literature to pre-empt Guard 4 overfitting. · **Why** · Guard 4 (scope violation) shows 37% lift but may be brittle on novel personas; surfacing failure modes prevents conversion degradation. · ",
+        "priority": "guardrail failure analysis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T03:54:03.851955"
+      },
       {
         "arm": "pascal",
         "arm_glyph": "🤝",
@@ -881,17 +892,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-16T18:00:03.413411"
-      },
-      {
-        "arm": "infra",
-        "arm_glyph": "💗",
-        "arm_name": "My Heart",
-        "block_id": "30359a013761",
-        "type": "database",
-        "content": "hooks · last 30d · 2 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-16T18:00:03.413407"
       }
     ],
     "briefing": [
