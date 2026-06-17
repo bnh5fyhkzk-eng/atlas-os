@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "10611d55a8ea",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-16T18:35:11.899894"
-      },
-      "content": "Hermes decision · arm=research · priority=P0 · task: Verify root cause of stale node #30956 injection and confirm fix path from #48783 · why: This is a P0 brother-direct issue: the auto-recall hook is injecting stale node #30956 every prompt, breaking recall integrity. #48783 already identified the root cause (verified, not theorized), so we need to close the loop by confirming the fix and ensuring no recurrence.",
-      "updated_at": "2026-06-16T18:35:11.899910"
-    },
-    {
       "id": "d1c74d9b5da8",
       "type": "callout",
       "props": {
@@ -378,15 +366,27 @@
       },
       "content": "Hermes decision · arm=pascal · priority=P1 · task: Validate the 4-guard circuit-breaker mechanism from #48807 by testing with simulated prospect data. · why: Recent canons highlight a novel mechanism that claims 37% vs 15% conversion lift; Pascal arm can run controlled tests to confirm or refine the model.",
       "updated_at": "2026-06-17T04:24:23.392537"
+    },
+    {
+      "id": "c68c095dcb97",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-17T04:40:09.109622"
+      },
+      "content": "Hermes decision · arm=curiosity · priority=P1 · task: Investigate how guard 4 (scope violation detection) in pascal coaching achieves the 37% conversion lift by analyzing psychological framing and rejection thresholds in sales pipeline noise screening. · why: Recent canons point to a specific 4-guard circuit mechanism; curiosity arm can surface the cognitive biases and decision heuristics behind the scope-violation filter that explains the conversion differential.",
+      "updated_at": "2026-06-17T04:40:09.109650"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T04:36:45.759294"
+    "checked_at": "2026-06-17T04:41:46.348033"
   },
   "block_count": 30,
-  "updated_at": "2026-06-17T04:24:23.392539",
-  "generated_at": "2026-06-17T08:36:45Z"
+  "updated_at": "2026-06-17T04:40:09.109652",
+  "generated_at": "2026-06-17T08:41:46Z"
 }
