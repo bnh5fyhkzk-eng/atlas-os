@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T00:48:06Z",
+  "generated_at": "2026-06-17T01:04:10Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 147,
+    "note": 148,
     "briefing": 80,
     "idea": 0
   },
-  "total_blocks": 251,
+  "total_blocks": 252,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "9fc2f3240293",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement recall-before-make.sh fix to skip stale node #30956 by adding a graphify-build freshness check before auto-recall hook · why: Brother-direct P0: #48783 root-caused stale auto-recall hook, #48774 verified the gap. Fixing this closes the broth",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-16T20:54:55.514815"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-16T12:41:34.360036"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "afdf10526d69",
-        "type": "callout",
-        "content": "Hermes decision · arm=pascal · priority=P0 · task: Process shared-canon snapshot #48694 to extract Atlas identity-definitions and triage into brother-direct P0 memory files. · why: Pascal arm is responsible for text-heavy analysis and memory assembly. This snapshot is high-arousal shared ontogeny th",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T12:10:56.880848"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "df69cc763175",
+        "type": "callout",
+        "content": "**What** · Will patch `recall-before-make.sh` to add graphify-build freshness check before auto-recall hook triggers. · **Why** · Root cause in #48783 shows stale node #30956 was recalled because freshness check was missing; #48774 confirmed the gap. This fix prevents prompt pollution and restores r",
+        "priority": "code-fix",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-16T20:55:05.454848"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-16T18:00:02.484054"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "a96aac865740",
-        "type": "database",
-        "content": "wow-moves · last 30d · 5 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-16T18:00:02.484049"
       }
     ],
     "briefing": [
