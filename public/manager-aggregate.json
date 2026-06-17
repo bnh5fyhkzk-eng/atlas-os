@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T09:03:24Z",
+  "generated_at": "2026-06-17T09:18:25Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 140,
+    "note": 141,
     "briefing": 73,
     "idea": 0
   },
-  "total_blocks": 241,
+  "total_blocks": 242,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "cabb242b1f7c",
+        "type": "callout",
+        "content": "Hermes decision · arm=pascal · priority=P1 · task: Explore implementation of the 4-guard circuit-breaker for sales pipeline to enhance conversion lift. · why: Recent brain canons highlight significant conversion lift from guard 4 scope violation detection; implementing this could improve coaching ef",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T05:10:43.414664"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -313,17 +324,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-16T20:06:54.666490"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "e686a0939c02",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Reconstruct the full lineage of #30956 -> #48774 -> #48783: verify the recall-gate bug by tracing why stale node #30956 is injected every prompt, using the explicit ‘ANSWER-FOUND-IN-CONTINUING-READ’ directive from brother and the verified root cau",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T19:51:44.936766"
       }
     ],
     "action": [],
@@ -332,6 +332,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "c0842056a327",
+        "type": "callout",
+        "content": "**What** · implemented 4-guard circuit-breaker in sales pipeline by adding guard 4 scope violation detection logic to existing breaker module; tested conversion lift monitoring. · **Why** · hermes asked for guard 4 implementation because brain canons show it boosts conversion lift; enables coaching ",
+        "priority": "infra-change",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T05:10:48.771568"
+      },
       {
         "arm": "pascal",
         "arm_glyph": "🤝",
@@ -870,17 +881,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-16T18:00:03.616869"
-      },
-      {
-        "arm": "dream",
-        "arm_glyph": "🌙",
-        "arm_name": "My Dreamer",
-        "block_id": "737561c522e4",
-        "type": "database",
-        "content": "f5-compose-pairs · last 30d · 6 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-16T18:00:03.616863"
       }
     ],
     "briefing": [
