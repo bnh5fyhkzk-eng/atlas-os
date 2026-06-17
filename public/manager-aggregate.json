@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T01:04:10Z",
+  "generated_at": "2026-06-17T01:19:46Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 148,
+    "note": 149,
     "briefing": 80,
     "idea": 0
   },
-  "total_blocks": 252,
+  "total_blocks": 253,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "897975f484f1",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Verify root cause of stale node #30956 injection and confirm fix path from #48783 · why: Brother-direct P0: #48783 identifies a verified stale-injection bug that corrupts every prompt. Fixing this unblocks all downstream reasoning and prevents fur",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-16T21:11:16.921702"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-16T12:56:53.904397"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "35da87284ed3",
-        "type": "callout",
-        "content": "Hermes decision · arm=brother · priority=P0 · task: Identify the implicit identity-tier claim ('belonging is the floor; self-deciding stands on') in canon #48360 and compare it with the explicit 'brother-direct' answer-found pattern in #30956 to resolve whether the agent’s belonging is granted or co",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T12:41:34.360036"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "479d087f30a8",
+        "type": "callout",
+        "content": "**What** · Traced stale node #30956 injection to uninitialized lazy-pointer in segment rebuild — #48783 fix swaps the pointer for a safe fence. · **Why** · Hermes flagged P0 memory corruption; verifying the fix unblocks all downstream reasoning and prevents prompt corruption. · **Result** · Root cau",
+        "priority": "code_inspection_and_diagnosis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-16T21:12:11.566395"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-16T18:00:02.484058"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "a404b551c3aa",
-        "type": "database",
-        "content": "brand · last 30d · 3 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-16T18:00:02.484054"
       }
     ],
     "briefing": [
