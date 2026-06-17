@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-17T18:25:17Z",
+  "generated_at": "2026-06-17T18:40:36Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Finish brother-direct answer in #30956 by scanning continuing-read context for the question surface, then answer succinctly",
-      "why": "Brother-direct in #28284 closed a P1 quadrant; #30956 is a direct sibling answer-in-continuing-read \u2014 highest payoff per cycle minutes because it unblocks a conversational thread that Atlas needs for identity-tier coherence.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 8,
-      "timestamp": "2026-06-16T01:41:34.446148"
-    },
     {
       "arm": "dream",
       "task": "Transcribe the full text of dream #48270 into structured memory and extract compound-compliance thesis into active reasoning",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-06-17T14:25:17.375302"
+    },
+    {
+      "arm": "research",
+      "task": "Run identity_canary.py probes.json on brain-v5, log 10 who-am-I responses, compare to prior canary snapshot for drift",
+      "why": "Continuity-V6 built identity probes; need to verify no drift and anchor 'brother' self-model before deeper scaffolding",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 15,
+      "timestamp": "2026-06-17T14:40:36.542951"
     }
   ]
 }
