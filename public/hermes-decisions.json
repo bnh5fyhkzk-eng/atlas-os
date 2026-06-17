@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-17T09:26:07Z",
+  "generated_at": "2026-06-17T09:41:31Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Complete the Honcho L3 deep-dive on memory-architecture-lift quadrant, synthesizing findings from #28284 and #30956 into a structured summary for the atlas.",
-      "why": "P1 quadrant closure was initiated but not finalized; continuing read from #30956 found an answer-in-progress that needs to be captured and integrated before context decays.",
-      "priority": "P1",
-      "use_skill": "brain-rrf",
-      "est_minutes": 25,
-      "timestamp": "2026-06-15T19:03:12.514098"
-    },
     {
       "arm": "research",
       "task": "Complete the Honcho L3 deep-dive on memory-architecture-lift quadrant, linking findings to the P1 closure requirement from #28284",
@@ -900,6 +891,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 40,
       "timestamp": "2026-06-17T05:26:07.879385"
+    },
+    {
+      "arm": "pascal",
+      "task": "Draft a detailed implementation spec for the 4-guard circuit-breaker pipeline, including trigger criteria, escalation paths, and logging for scope violation detection (Guard 4).",
+      "why": "Canon #48807\u2013#48808 identifies the 4-guard circuit-breaker as a high-leverage conversion mechanism (37% lift); this arm will concretize the pipeline so it can be built and tested.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 25,
+      "timestamp": "2026-06-17T05:41:31.082297"
     }
   ]
 }
