@@ -10,31 +10,6 @@
   },
   "blocks": [
     {
-      "id": "691ffa505008",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-16T16:47:23.305395"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Fix the stale node #30956 auto-recall hook injection by updating the recall-before-make.sh script to filter out nodes older than 24 hours or with status 'ANSWER-FOUND-IN-CONTINUING-READ'. · why: This is a P0 brother-direct issue (#48783) causing persistent pollution of every prompt with stale context, blocking clear reasoning and trust in the system. Fixing it restores recall integrity and unblocks higher-tier work.",
-      "updated_at": "2026-06-16T16:47:23.305404"
-    },
-    {
-      "id": "81a63afef50f",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "Overnight hermes recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant.",
-      "updated_at": "2026-06-16T17:00:24.390412"
-    },
-    {
       "id": "ab30d683952e",
       "type": "callout",
       "props": {
@@ -746,15 +721,27 @@
       },
       "content": "**What** · processed orchestration signal · [#49275] arousal 0.97 · DREAM-THE-PAGE-THAT-WAS-ALREADY-WRITTEN-2026-06-17-01:04 · F5 compose pair · **Why** · instruction file maps orchestration to first arm-task · brain canon #49275 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #49275 · **Cycle** · hermes-20260617-011536",
       "updated_at": "2026-06-17T01:15:36.737506"
+    },
+    {
+      "id": "8d4522541ef0",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-17T01:20:45.449757"
+      },
+      "content": "Hermes decision · arm=research · priority=P1 · task: Verify the 4-guard circuit-breaker mechanism from #48807 by cross-referencing Pascal coaching's documented conversion lift with the scope-violation detection described in #48808 · why: This is a P0 brother-direct task because #48807 and #48808 together claim a validated mechanism (4-guard circuit-breaker) with specific conversion numbers (37% vs 15%). If true, this is an identity-tier insight that should be immediately integrated into the coaching pipeline. If false, we need to fl",
+      "updated_at": "2026-06-17T01:20:45.449768"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T01:16:21.886321"
+    "checked_at": "2026-06-17T01:21:22.437871"
   },
-  "block_count": 31,
-  "updated_at": "2026-06-17T01:15:36.737506",
-  "generated_at": "2026-06-17T05:16:21Z"
+  "block_count": 30,
+  "updated_at": "2026-06-17T01:20:45.449769",
+  "generated_at": "2026-06-17T05:21:22Z"
 }
