@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-17T13:23:43Z",
-  "total_items_scored": 199,
+  "generated_at": "2026-06-17T13:33:44Z",
+  "total_items_scored": 200,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: fix stale node #30956 in auto-recall hook (root cause identified in #48783) \u00b7 why: Brother and user are blocked by repeated stale node injection; fixing this clears a P0 bug and restores trus",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Verify the 4-guard circuit-breaker mechanism from #48807 against Pascal coaching's 37% vs 15% conversion lift, and document the root cause chain linking stale node #30956 injection to the",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-17T00:34:34.607714"
+      "updated_at": "2026-06-17T00:49:44.327925"
     },
     {
       "arm": "pascal",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: fix stale node #30956 in auto-recall hook (root cause identified in #48783) \u00b7 why: Brother and user are blocked by repeated stale node injection; fixing this clears a P0 bug and restores trus",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-17T00:34:34.607714"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-17T03:38:28.745213"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Identify the three lowest-validity guardrail design patterns in current Pascal coaching pipeline literature to pre-empt 'guard 4' overfitting. \u00b7 why: Guard 4 (scope violation) triggered a",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-17T03:53:46.126247"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
