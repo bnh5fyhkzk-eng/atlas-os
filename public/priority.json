@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-17T08:56:30Z",
-  "total_items_scored": 187,
+  "generated_at": "2026-06-17T09:06:31Z",
+  "total_items_scored": 188,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Fix `auto-recall hook` to stop injecting stale node #30956 by filtering on `answered_ts > prompt_ts` check in recall-before-make.sh \u00b7 why: Brother-direct root-cause from #48783 verified \u2014 thi",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Reconstruct the full lineage of #30956 -> #48774 -> #48783: verify the recall-gate bug by tracing why stale node #30956 is injected every prompt, using the explicit \u2018ANSWER-FOUND-IN-CONTI",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-16T19:36:07.244909"
+      "updated_at": "2026-06-16T19:51:44.936766"
     },
     {
       "arm": "research",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Fix `auto-recall hook` to stop injecting stale node #30956 by filtering on `answered_ts > prompt_ts` check in recall-before-make.sh \u00b7 why: Brother-direct root-cause from #48783 verified \u2014 thi",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-16T19:36:07.244909"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-16T22:18:23.772180"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Patch the auto-recall hook to skip stale node #30956, re-root to active #48774 with context injection. \u00b7 why: #48774 root-causes recall misdirection; code-arm can directly fix the hook to sto",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-16T22:33:46.828954"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
