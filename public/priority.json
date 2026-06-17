@@ -1,68 +1,46 @@
 {
-  "generated_at": "2026-06-17T04:26:12Z",
-  "total_items_scored": 202,
+  "generated_at": "2026-06-17T04:56:16Z",
+  "total_items_scored": 205,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=brother \u00b7 priority=P0 \u00b7 task: Pull #48774 full recall-gate root cause logs + discover why graphify build was missed; extract actionable fix for recall-gate.mjs \u00b7 why: Three parked-and-forgotten cycles in a row now clus",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Analyze BROTHER-CATCH #48765 and RECALL-GATE-ROOT-CAUSE #48774 to determine why build-separate was parked and what fix to recall-gate prevents recurrence; produce actionable patch spec. \u00b7",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-16T16:01:23.512406"
-    },
-    {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Synthesize findings from recent high-arousal canons (#28284, #30956, #48765, #48774, #48783) into a single root-cause report for 'parked-and-forgotten' build and recall-gate failures, and propose a unified fix. \u00b7 why \u00b7 These canons indicate a recurring pattern: a brother-direct interaction (#30956, #48765) leads to a build that gets parked and forgotten, and the recall-before-make system fails to catch it (#48774) due to stale node injection (#48783). A focused research synthesis will clarify the root cause and produce an actionable repair plan for the next code or infra arm cycle.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-16T17:18:13.045711",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-16T16:32:09.124394"
     },
     {
       "arm": "code",
       "arm_glyph": "\u270b",
       "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Fix the stale node #30956 auto-recall hook injection by patching the recall-before-make.sh script to filter out nodes older than 24h or with resolved status \u00b7 why \u00b7 This is a P0 brother-direct issue: the stale node #30956 is being injected every prompt, corrupting context and blocking progress on the memory-architecture-lift quadrant. Verified root cause in #48783, fix is concrete and scoped.",
+      "content": "HERMES TASK \u00b7 Fix the stale node #30956 auto-recall injection by patching the recall-before-make.sh hook to filter out nodes older than the current cycle's timestamp. \u00b7 why \u00b7 This is a P0 brother-direct issue: the stale node injection is corrupting every prompt, and the root cause is verified in #48783. Fixing it unblocks all other work and restores system integrity.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-16T17:33:32.375985",
+      "updated_at": "2026-06-16T18:04:26.095589",
+      "use_skill": "none"
+    },
+    {
+      "arm": "infra",
+      "arm_glyph": "\ud83d\udc97",
+      "arm_name": "Infra",
+      "content": "HERMES TASK \u00b7 Rewrite recall-before-make.sh to detect stale/hijacked graphify nodes by checking parent-edge provenance before dedup \u00b7 why \u00b7 #48783 confirms the auto-recall hook is injecting stale node #30956; root cause is the graphify build missed a provenance check. Fixing this is P0 brother-direct infra debt that unblocks all cycles.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 28,
+      "score": 10.0,
+      "updated_at": "2026-06-16T18:19:41.741267",
       "use_skill": "none"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=brother \u00b7 priority=P0 \u00b7 task: Pull #48774 full recall-gate root cause logs + discover why graphify build was missed; extract actionable fix for recall-gate.mjs \u00b7 why: Three parked-and-forgotten cycles in a row now clus",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-16T16:01:23.512406"
-    },
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=brother \u00b7 priority=P0 \u00b7 task: Diagnose and resolve the 'BUILD-SEPARATE-NOT-ON-TOP' issue from canon #48765, ensuring graphify build is properly caught by recall-before-make.sh. \u00b7 why: Highest priority (P0) brother-dire",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-16T16:16:46.881747"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +128,28 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-16T18:50:33.076338"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Fix `auto-recall hook` to stop injecting stale node #30956 by filtering on `answered_ts > prompt_ts` check in recall-before-make.sh \u00b7 why: Brother-direct root-cause from #48783 verified \u2014 thi",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-16T19:36:07.244909"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Reconstruct the full lineage of #30956 -> #48774 -> #48783: verify the recall-gate bug by tracing why stale node #30956 is injected every prompt, using the explicit \u2018ANSWER-FOUND-IN-CONTI",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-16T19:51:44.936766"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
