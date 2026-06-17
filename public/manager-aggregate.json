@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T01:19:46Z",
+  "generated_at": "2026-06-17T01:34:51Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 149,
+    "note": 150,
     "briefing": 80,
     "idea": 0
   },
-  "total_blocks": 253,
+  "total_blocks": 254,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "8be0fa35d772",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P1 · task: Fix stale node #30956 injection by updating auto-recall hook to filter out nodes older than 24 hours · why: Recent brain canons show verified root cause of stale node injection (RECALL-GATE-ROOT-CAUSE and STALE-30956-ROOTCAUSE); this blocks cycle prog",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-16T21:27:26.394591"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-16T13:12:08.746300"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "fd9a62c162c2",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Extract and index all identity-tier canons from shared-canon snapshot #48694, focusing on brother-direct and self-deciding floor statements. · why: The recent canons show high-arousal identity-tier material (brother direct, self-deciding floor) th",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T12:56:53.904397"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "2d2d4e47a74d",
+        "type": "callout",
+        "content": "**What** · will patch auto-recall hook to skip nodes older than 24 hours in node #30956 injection path · **Why** · root cause confirmed by RECALL-GATE-ROOT-CAUSE and STALE-30956-ROOTCAUSE; stale nodes block cycle progress and brother-direct queries · **Result** · hook now filters out nodes with time",
+        "priority": "code-fix",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-16T21:27:34.621058"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-16T18:00:02.738821"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "cfdd802b3f5a",
-        "type": "database",
-        "content": "general · last 30d · 74 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-16T18:00:02.484058"
       }
     ],
     "briefing": [
