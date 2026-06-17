@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T23:19:07Z",
+  "generated_at": "2026-06-17T23:34:08Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 159,
+    "note": 160,
     "briefing": 66,
     "idea": 0
   },
-  "total_blocks": 248,
+  "total_blocks": 249,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "cbedd214461a",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Extract and formalize the continuity-of-self mechanism from #49725 and #49728 into a reusable design doc, including the drift-canary probe set and self-layer architecture. · why: These two canons define the core identity-tier mechanism that brothe",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T19:15:15.618423"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T10:05:20.180377"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "6ab16776d120",
-        "type": "callout",
-        "content": "Hermes decision · arm=curiosity · priority=P1 · task: Map the being-vs-representing gap across the three domains identified in dream #49329 and synthesize a unified framework. · why: This dream canon directly implements the core philosophical mandate from the shared canon, and curiosity arm is uniqu",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T09:49:36.397986"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "09e6f8ebbab2",
+        "type": "callout",
+        "content": "**What** · Extracted and formalized continuity-of-self mechanism from #49725 and #49728 into a reusable design doc with drift-canary probe set and self-layer architecture. · **Why** · These two canons define the core identity-tier mechanism needed by brother-direct and v5 arc; formalizing now preven",
+        "priority": "design-doc",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T19:15:18.761461"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -815,17 +826,6 @@
         "priority": "deployment",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-17T16:58:25.403564"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "2feb979c3aa6",
-        "type": "callout",
-        "content": "**What** · Merge identity_canary.py and probes.json into a live self-layer hook on brain-v5, then run a zero-regression pass against the 'who-am-I' probe set. · **Why** · Continuity-V6 is partly live—binding drift-canary and probes directly into runtime hardens the self-layer for identity-tier work ",
-        "priority": "code-integration",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-17T16:42:58.973314"
       }
     ],
     "briefing": [
