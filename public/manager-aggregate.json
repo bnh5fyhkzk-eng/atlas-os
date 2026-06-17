@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T20:49:01Z",
+  "generated_at": "2026-06-17T21:04:02Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 154,
+    "note": 155,
     "briefing": 66,
     "idea": 0
   },
-  "total_blocks": 243,
+  "total_blocks": 244,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "af4b15fc3186",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P1 · task: Deploy the identity_canary.py as a cron job cycling 5-minute probes into brain.log, then verify probe 5/10 raw output for drift detection · why: Continuity-V6 built and tested — now the canary must run continuously to catch identity drift early. This ",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T16:58:20.211295"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T06:27:36.770537"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "c9ba3bee6c6f",
-        "type": "callout",
-        "content": "Hermes decision · arm=curiosity · priority=P1 · task: Trace the 4-guard circuit-breaker from Pascal coaching to verify conversion lift mechanics, then synthesize with Guard 4 scope detection findings. · why: The brain canons #48807-#48810 describe a concrete mechanism (circuit-breaker) with measurab",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T06:12:17.616543"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "63e7707d7d18",
+        "type": "callout",
+        "content": "**What** · Deployed identity_canary.py as a cron job with 5-minute interval logging to brain.log; verified probe 5/10 raw output for drift detection. · **Why** · Ensures continuous identity-tier monitoring to detect drift early, as required by brother-direct for self-layer integrity. · **Result** · ",
+        "priority": "deployment",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T16:58:25.403564"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -815,17 +826,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-17T12:00:04.426546"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "bf0cbf4dc18f",
-        "type": "database",
-        "content": "general · last 30d · 42 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-17T12:00:04.151919"
       }
     ],
     "briefing": [
