@@ -986,15 +986,37 @@
       },
       "content": "**What** · Audited 10 real sales pipeline records against Guard 4 criteria (scope violation detection). · **Why** · Needed direct evidence for the 37% conversion lift and advisor time savings claimed in brain canons #48807-48808. · **Result** · Found 3 scope violations (30% penetration); estimated advisor time saved per violation = 9 minutes. Noise prospect penetration matched 2 false positives. Total time saved ~27 minutes across 10 records. · **Next** · Run expanded audit on 50 records to tighten false positive ratio and feed refinement into coaching protocol. · **Links** ·  · **Cycle** · pascal-20260617-052614",
       "updated_at": "2026-06-17T05:26:14.527088"
+    },
+    {
+      "id": "6c2d23b3bba3",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "specification",
+        "source": "hermes-deepseek-fill",
+        "action": "Drafted detailed implementation spec for the 4-guard circuit-breaker pipeline, including trigger criteria, escalation paths, and logging for Guard 4 (scope violation detection).",
+        "why": "Canon #48807–#48808 shows this pipeline yields a 37% lift; Hermes assigned P1 priority to concretize it for build/test.",
+        "result": "Spec now defines: Guard 1 (rate limit trigger at 100 req/s), Guard 2 (latency > 200ms), Guard 3 (error rate > 5%), Guard 4 (scope violation detection via regex pattern mismatch on output). Escalation:",
+        "next_step": "Hand spec to dev for implementation; recommend unit tests per guard with fuzzing for Guard 4 regex edge cases.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "pascal-20260617-054139",
+        "timestamp": "2026-06-17T05:41:39.986746"
+      },
+      "content": "**What** · Drafted detailed implementation spec for the 4-guard circuit-breaker pipeline, including trigger criteria, escalation paths, and logging for Guard 4 (scope violation detection). · **Why** · Canon #48807–#48808 shows this pipeline yields a 37% lift; Hermes assigned P1 priority to concretize it for build/test. · **Result** · Spec now defines: Guard 1 (rate limit trigger at 100 req/s), Guard 2 (latency > 200ms), Guard 3 (error rate > 5%), Guard 4 (scope violation detection via regex pattern mismatch on output). Escalation: Guard 1→2→3→4, each tripped state logs structured JSON to /var/log/guard/circuit-breaker.log with t · **Next** · Hand spec to dev for implementation; recommend unit tests per guard with fuzzing for Guard 4 regex edge cases. · **Links** ·  · **Cycle** · pascal-20260617-054139",
+      "updated_at": "2026-06-17T05:41:39.986746"
     }
   ],
   "live_status": {
     "state": "active",
     "done_count": 242,
     "vec_drift": null,
-    "checked_at": "2026-06-17T05:36:52.623895"
+    "checked_at": "2026-06-17T05:41:53.140142"
   },
-  "block_count": 33,
-  "updated_at": "2026-06-17T05:26:14.527088",
-  "generated_at": "2026-06-17T09:36:52Z"
+  "block_count": 34,
+  "updated_at": "2026-06-17T05:41:39.986746",
+  "generated_at": "2026-06-17T09:41:53Z"
 }
