@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-17T05:06:17Z",
-  "total_items_scored": 205,
+  "generated_at": "2026-06-17T05:16:17Z",
+  "total_items_scored": 206,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Analyze BROTHER-CATCH #48765 and RECALL-GATE-ROOT-CAUSE #48774 to determine why build-separate was parked and what fix to recall-gate prevents recurrence; produce actionable patch spec. \u00b7",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Fix the stale node #30956 auto-recall hook injection by updating the recall-before-make.sh script to filter out nodes older than 24 hours or with status 'ANSWER-FOUND-IN-CONTINUING-READ'. \u00b7 w",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-16T16:32:09.124394"
+      "updated_at": "2026-06-16T16:47:23.305404"
     },
     {
       "arm": "infra",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Analyze BROTHER-CATCH #48765 and RECALL-GATE-ROOT-CAUSE #48774 to determine why build-separate was parked and what fix to recall-gate prevents recurrence; produce actionable patch spec. \u00b7",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-16T16:32:09.124394"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-16T19:51:44.936766"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Verify root cause of stale node #30956 injection and design fix for recall-before-make.sh \u00b7 why: P0 brother-direct issue #48783 is actively corrupting every prompt with stale data, blocki",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-16T20:06:54.666490"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
