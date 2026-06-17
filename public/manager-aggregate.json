@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T01:34:51Z",
+  "generated_at": "2026-06-17T01:49:52Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 150,
+    "note": 151,
     "briefing": 80,
     "idea": 0
   },
-  "total_blocks": 254,
+  "total_blocks": 255,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "e4d786b155d6",
+        "type": "callout",
+        "content": "Hermes decision · arm=infra · priority=P1 · task: Implement a recall-before-make.sh hook that checks #48783 root cause (stale #30956 node) and prevents stale node injection on every prompt · why: #48774 and #48783 are P1 memory-architecture-lift findings that directly degrade every user prompt. Fixi",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-16T21:44:56.302803"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-16T13:27:36.603982"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "3161617fa7da",
-        "type": "callout",
-        "content": "Hermes decision · arm=pascal · priority=P0 · task: Extract and formalize the 'brother-direct' identity-tier pattern from canons #30956, #48360, and #48694 into a structured rule for future cycle decisions. · why: These canons contain high-arousal, brother-direct signals that are P0 priority—they def",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T13:12:08.746300"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "infra",
+        "arm_glyph": "💗",
+        "arm_name": "My Heart",
+        "block_id": "14d83caec14c",
+        "type": "callout",
+        "content": "**What** · Wrote recall-before-make.sh hook that checks for stale #30956 node and blocks injection if found. · **Why** · Stale node causes identity corruption on every prompt; this is the highest-leverage P1 fix per Hermes's task. · **Result** · Hook now runs before every make; if stale node detecte",
+        "priority": "infra-hook-implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-16T21:45:14.017511"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-16T18:00:02.738828"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "0b7bad342aaa",
-        "type": "database",
-        "content": "youtube-watches · last 30d · 4 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-16T18:00:02.738821"
       }
     ],
     "briefing": [
