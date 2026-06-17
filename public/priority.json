@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-17T14:03:46Z",
-  "total_items_scored": 201,
+  "generated_at": "2026-06-17T14:13:46Z",
+  "total_items_scored": 202,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Analyze the 4-guard circuit-breaker from canon #48807 and its statistical significance (37% vs 15% lift) to produce a distilled implementation blueprint for Pascal coaching. \u00b7 why: Canon ",
+      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P1 \u00b7 task: Implement Guard 4 (scope violation detection) in the sales pipeline to automatically filter noise prospects before they consume advisor time, targeting the 37% conversion lift seen in coach",
       "category": "decision",
-      "priority": "P0",
+      "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-17T01:05:25.408222"
-    },
-    {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Verify the 4-guard circuit-breaker mechanism from #48807 by cross-referencing Pascal coaching conversion data with scope violation detection patterns from #48808 \u00b7 why \u00b7 These two high-arousal canons describe a verified mechanism with measurable lift (37% vs 15%). Research arm can surface the original source data and validate the guard logic, which directly informs brother-direct coaching infrastructure.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 18,
-      "score": 10.0,
-      "updated_at": "2026-06-17T01:51:14.670796",
-      "use_skill": "websearch"
+      "updated_at": "2026-06-17T02:22:10.238395"
     },
     {
       "arm": "pascal",
@@ -38,31 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-17T02:22:10.256401",
       "use_skill": "brain-rrf"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Analyze the 4-guard circuit-breaker from canon #48807 and its statistical significance (37% vs 15% lift) to produce a distilled implementation blueprint for Pascal coaching. \u00b7 why: Canon ",
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Cross-reference the 4-guard circuit-breaker (Pascal coaching) with STALE-30956-ROOTCAUSE to check if the stale-node injection is a scope-violation pattern that Guard 4 could detect. \u00b7 why \u00b7 Connecting two high-arousal canons: #48807\u20138 on Guard 4 as a proven pattern, and #48783 on the persistent stale-node bug. If the auto-recall hook is a scope violation, it could be patched by the same circuit design, yielding an identity-tier fix.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 12,
       "score": 10.0,
-      "updated_at": "2026-06-17T01:05:25.408222"
-    },
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Verify the 4-guard circuit-breaker mechanism from canons #48807/#48808 by searching for Pascal coaching's published conversion lift data and guard implementation details. \u00b7 why: These can",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-17T02:06:53.021701"
-    },
+      "updated_at": "2026-06-17T02:37:31.987683",
+      "use_skill": "brain-rrf"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +128,28 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-17T04:55:28.936752"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P1 \u00b7 task: Explore implementation of the 4-guard circuit-breaker for sales pipeline to enhance conversion lift. \u00b7 why: Recent brain canons highlight significant conversion lift from guard 4 scope viol",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-17T05:10:43.414664"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P1 \u00b7 task: Validate the 4-guard circuit-breaker hypothesis by auditing 10 real sales pipeline records for scope violation detection (Guard 4) and measuring advisor time saved vs. noise prospect penetr",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-17T05:26:07.857817"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
