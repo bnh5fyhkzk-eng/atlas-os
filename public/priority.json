@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T13:43:45Z",
+  "generated_at": "2026-06-17T13:53:45Z",
   "total_items_scored": 200,
   "top_3": [
     {
@@ -14,19 +14,6 @@
       "updated_at": "2026-06-17T00:49:44.327925"
     },
     {
-      "arm": "pascal",
-      "arm_glyph": "\ud83e\udd1d",
-      "arm_name": "Pascal",
-      "content": "HERMES TASK \u00b7 Implement Guard 4 (scope violation detection) as a production-ready Python module with unit tests and integration into the sales pipeline \u00b7 why \u00b7 Canon #48808 validates Guard 4 as the mechanism driving measurable conversion lift (37% vs 15%). This is a brother-direct, identity-tier task: building the actual component converts insight into deployable value. It also cross-cuts curiosity (why it works), code (implementation), and infra (pipeline hook).",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 90,
-      "score": 10.0,
-      "updated_at": "2026-06-17T01:36:03.858193",
-      "use_skill": "brain-rrf"
-    },
-    {
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
@@ -38,6 +25,19 @@
       "score": 10.0,
       "updated_at": "2026-06-17T01:51:14.670796",
       "use_skill": "websearch"
+    },
+    {
+      "arm": "pascal",
+      "arm_glyph": "\ud83e\udd1d",
+      "arm_name": "Pascal",
+      "content": "HERMES TASK \u00b7 Implement Guard 4 (scope violation detection) in the sales pipeline to automatically filter noise prospects before they consume advisor time, targeting the 37% conversion lift seen in coaching. \u00b7 why \u00b7 Canon #48807 directly links the 4-guard circuit-breaker to a proven 37% conversion lift; next cycle is the prime moment to code this into the active pipeline, leveraging immediate high-arousal insight before it decays.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 45,
+      "score": 10.0,
+      "updated_at": "2026-06-17T02:22:10.256401",
+      "use_skill": "brain-rrf"
     }
   ],
   "top_10": [
@@ -62,17 +62,6 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-17T01:05:25.408222"
-    },
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Verify the 4-guard circuit-breaker mechanism from #48807 by cross-referencing Pascal coaching conversion data with scope violation detection patterns from #48808 \u00b7 why: These two high-aro",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-17T01:51:14.650070"
     },
     {
       "arm": "hermes",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-17T04:24:23.392537"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Investigate how guard 4 (scope violation detection) in pascal coaching achieves the 37% conversion lift by analyzing psychological framing and rejection thresholds in sales pipeline nois",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-17T04:40:09.109650"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
