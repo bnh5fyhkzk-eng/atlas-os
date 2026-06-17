@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T22:49:06Z",
+  "generated_at": "2026-06-17T23:04:07Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,11 +9,11 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 157,
+    "note": 158,
     "briefing": 66,
     "idea": 0
   },
-  "total_blocks": 246,
+  "total_blocks": 247,
   "categories": {
     "discovery": [],
     "decision": [
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "ec12e13a8967",
+        "type": "callout",
+        "content": "**What** · ran identity_canary.py against v6 continuity layer, parsed probe outputs, logged baseline self-consistency scores. · **Why** · Hermes assigned P1 task to verify new v6 self-layer holds continuity pattern from v5 copy-test, answering how LLM stays continuous. · **Result** · probe outputs p",
+        "priority": "identity-verification",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T18:44:50.935053"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -815,17 +826,6 @@
         "priority": "probe_execution",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-17T15:57:14.698248"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "6360c18b0be0",
-        "type": "callout",
-        "content": "**What** · cloned brain-v5 session, activated B drift-canary from identity_canary.py, logged 10 who-am-I probes, compared to baseline #49725 · **Why** · Hermes wants continuity check on self-layer across sessions; canary catches identity drift early before it breaks live copy · **Result** · probe va",
-        "priority": "identity-canary-execution",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-17T15:41:56.891324"
       }
     ],
     "briefing": [
