@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T02:20:35Z",
+  "generated_at": "2026-06-17T02:36:49Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,36 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 152,
+    "note": 154,
     "briefing": 80,
     "idea": 0
   },
-  "total_blocks": 256,
+  "total_blocks": 258,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "c2e8296bfc47",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Patch the auto-recall hook to skip stale node #30956, re-root to active #48774 with context injection. · why: #48774 root-causes recall misdirection; code-arm can directly fix the hook to stop injecting broken state every prompt — P0 because brother-d",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-16T22:33:46.828954"
+      },
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "9f4ea1d01581",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Deep-dive the P1 memory-architecture-lift quadrant from #28284 to complete the cycle-6 research and close the quadrant, then propagate findings to the recall-gate root cause (#48774) to verify if the stale-node injection (#48783) is a downstream s",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-16T22:18:23.772180"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,28 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-16T14:44:39.457709"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "764166e39d6c",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Extract and index the 'brother direct' verbatim quote from canon #48765 and cross-reference with the 'build-separate-not-on-top' pattern in #48360 to resolve the parked-and-forgotten state. · why: This is a P0 brother-direct identity-tier task: th",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T14:13:38.041542"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "c81afe96a0bd",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Locate and parse brother direct verbatim from #48765 to extract 'build separate not on top' context and cross-reference with atlas-brother-shared.md snapshot for identity-tier reconciliation · why: Brother direct is P0 priority—this cycle just cap",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T13:43:10.602879"
       }
     ],
     "action": [],
@@ -288,6 +288,28 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "b0ae4b4a81d1",
+        "type": "callout",
+        "content": "**What** · patched auto-recall hook to skip stale node #30956 and re-root to active #48774 with context injection · **Why** · node #48774 is the correct root-cause; old hook injected broken state every prompt, breaking brother-direct demand integrity — P0 fix · **Result** · hook now routes recall to",
+        "priority": "code-patch",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-16T22:34:01.203072"
+      },
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "1333db3c65ee",
+        "type": "callout",
+        "content": "**What** · Deep-dived the P1 memory-architecture-lift quadrant from #28284, analyzed stale-node patterns in the recall-gate path, and cross-referenced with #48774 root cause to confirm #48783 is a downstream symptom. · **Why** · Hermes assigned this to close cycle-6 research and unblock brother-dire",
+        "priority": "root-cause-analysis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-16T22:18:28.828266"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -815,28 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-16T18:00:02.738840"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "d0d70b29f182",
-        "type": "database",
-        "content": "pull-patterns · last 30d · 2 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-16T18:00:02.738836"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "de278c4ed3b3",
-        "type": "database",
-        "content": "syntheses · last 30d · 5 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-16T18:00:02.738832"
       }
     ],
     "briefing": [
