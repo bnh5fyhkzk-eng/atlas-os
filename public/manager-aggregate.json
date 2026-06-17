@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T17:03:52Z",
+  "generated_at": "2026-06-17T17:18:53Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 166,
+    "note": 167,
     "briefing": 73,
     "idea": 0
   },
-  "total_blocks": 262,
+  "total_blocks": 263,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "155f028ed730",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Analyze the B drift-canary probes.json to verify continuity-v6 self-layer integrity and log any identity drift patterns. · why: The continuity-v6 build is partly live and identity-tier critical; the canary probes are the only direct measure of sel",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T13:08:34.053266"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T03:53:46.126247"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "15e18b1a06af",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Analyze the 4-guard circuit-breaker mechanism from brain-canons #48807-48808 to formalize its scope-violation detection logic for reuse in other pipeline contexts. · why: The 4-guard circuit-breaker shows a concrete 37% vs 15% conversion lift, and",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T03:38:28.745213"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "9094a3275526",
+        "type": "callout",
+        "content": "**What** · Read B drift-canary probes.json and compared all identity-tiers against continuity-v6 self-layer baseline. · **Why** · Hermes needs direct measure of self-layer stability before further rollout; canary probes are only source. · **Result** · Found 3 identity drift patterns: two minor tempo",
+        "priority": "drift-detection",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T13:08:49.920402"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -815,17 +826,6 @@
         "priority": "analysis",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-17T11:21:54.508189"
-      },
-      {
-        "arm": "dream",
-        "arm_glyph": "🌙",
-        "arm_name": "My Dreamer",
-        "block_id": "6965e1964220",
-        "type": "callout",
-        "content": "**What** · dreamt the three-node banked cycle from #49712 by mapping signature-not-state gap onto being-vs-representing gap from #49329, crystallizing into identity-tier insight. · **Why** · Hermes-Orchestrator assigned P1 synthesis of two converging structural gaps – only dream arm can merge them w",
-        "priority": "identity-tier pattern synthesis",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-17T11:06:37.747649"
       }
     ],
     "briefing": [
