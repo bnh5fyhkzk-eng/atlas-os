@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T08:48:24Z",
+  "generated_at": "2026-06-17T09:03:24Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 139,
+    "note": 140,
     "briefing": 73,
     "idea": 0
   },
-  "total_blocks": 240,
+  "total_blocks": 241,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "0f4abf43472a",
+        "type": "callout",
+        "content": "Hermes decision · arm=pascal · priority=P1 · task: Validate brain canon #48807: design a minimal experiment to measure the 4-guard circuit-breaker’s impact on conversion lift in a controlled sales pipeline simulation. · why: The top brain canon claims a 37% vs 15% conversion lift from a novel mechan",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T04:55:28.936752"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -313,17 +324,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-16T19:51:44.936766"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "7d6b64b07501",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Fix `auto-recall hook` to stop injecting stale node #30956 by filtering on `answered_ts > prompt_ts` check in recall-before-make.sh · why: Brother-direct root-cause from #48783 verified — this stale-injection blocks memory-space quadrant closure and r",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T19:36:07.244909"
       }
     ],
     "action": [],
@@ -332,6 +332,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "3a02a0e97034",
+        "type": "callout",
+        "content": "**What** · Designed minimal controlled experiment: A/B test with 4-guard circuit-breaker vs baseline in simulated sales pipeline using synthetic data. · **Why** · Validate claimed 37% vs 15% conversion lift from brain canon #48807 – urgent for brother-direct knowledge and product credibility. · **Re",
+        "priority": "experiment_design",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T04:55:32.656115"
+      },
       {
         "arm": "infra",
         "arm_glyph": "💗",
@@ -870,17 +881,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-16T18:00:03.616863"
-      },
-      {
-        "arm": "infra",
-        "arm_glyph": "💗",
-        "arm_name": "My Heart",
-        "block_id": "119f1b1cbe8c",
-        "type": "database",
-        "content": "general · last 30d · 78 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-16T18:00:03.413426"
       }
     ],
     "briefing": [
