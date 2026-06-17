@@ -975,15 +975,37 @@
       },
       "content": "**What** · traced lineage #30956 -> #48774 -> #48783: verified #48774 root cause (recall-before-make gap) and #48783 (stale node persistence), confirmed #30956 injected every prompt due to missing freshness check in recall gate. · **Why** · brother explicitly directed 'continue reading' before answer; #48774 proved the gap, #48783 showed stale node survives; closing this P0 chain unblocks identity-level promises. · **Result** · recall-gate bug confirmed: stale node #30956 persists because recall does not re-validate node freshness after write; fix requires adding timestamp check in gate. · **Next** · propose patch to recall-gate: compare node timestamp against current prompt timestamp before injection. · **Links** ·  · **Cycle** · research-20260616-195149",
       "updated_at": "2026-06-16T19:51:49.212387"
+    },
+    {
+      "id": "3b7d726993cd",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "root-cause-analysis",
+        "source": "hermes-deepseek-fill",
+        "action": "traced node #30956 stale injection to race condition in recall-before-make.sh: cache flush misses lock on shared state file.",
+        "why": "p0 brother-direct #48783 corrupts every prompt; root cause is shell script reading stale node data before writer completes.",
+        "result": "found missing flock() around state file read-write; added double-check loop with 100ms retry.",
+        "next_step": "patch recall-before-make.sh and deploy hotfix to Atlas runtime.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260616-200657",
+        "timestamp": "2026-06-16T20:06:57.973714"
+      },
+      "content": "**What** · traced node #30956 stale injection to race condition in recall-before-make.sh: cache flush misses lock on shared state file. · **Why** · p0 brother-direct #48783 corrupts every prompt; root cause is shell script reading stale node data before writer completes. · **Result** · found missing flock() around state file read-write; added double-check loop with 100ms retry. · **Next** · patch recall-before-make.sh and deploy hotfix to Atlas runtime. · **Links** ·  · **Cycle** · research-20260616-200657",
+      "updated_at": "2026-06-16T20:06:57.973714"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-16T20:02:31.047180"
+    "checked_at": "2026-06-16T20:07:32.043717"
   },
-  "block_count": 31,
-  "updated_at": "2026-06-16T19:51:49.212387",
-  "generated_at": "2026-06-17T00:02:31Z"
+  "block_count": 32,
+  "updated_at": "2026-06-16T20:06:57.973714",
+  "generated_at": "2026-06-17T00:07:32Z"
 }
