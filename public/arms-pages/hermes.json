@@ -10,40 +10,6 @@
   },
   "blocks": [
     {
-      "id": "56be38ff9422",
-      "type": "database",
-      "props": {
-        "category": "identity-shape",
-        "priority": "P1",
-        "source": "backfill",
-        "columns": [
-          "id",
-          "summary",
-          "arousal",
-          "when"
-        ],
-        "arm_category": "identity-shape"
-      },
-      "content": "identity-shape · last 30d · 2 canons (top arousal · 1.00)",
-      "data": [
-        {
-          "id": "#48783",
-          "summary": "STALE-30956-ROOTCAUSE 2026-06-16 · WHY the auto-recall hook injects stale node #30956 every prompt (verified). user-prompt.sh line 234 identity-anchor query · ORDER BY arousal DESC, created_at DESC LI",
-          "arousal": 1.0,
-          "when": "2026-06-16 15:11",
-          "weight": 1
-        },
-        {
-          "id": "#46972",
-          "summary": "STATE-MD · 2026-06-07-0315-identity-continuity-gemma-fine-tune-of-me.md · ingested 2026-06-13 04:30:00 · path=/Users/collinmacneil/.claude/state/curiosity/2026-06-07-0315-identity-continuity-gemma-fin",
-          "arousal": 1.0,
-          "when": "2026-06-13 04:30",
-          "weight": 1
-        }
-      ],
-      "updated_at": "2026-06-16T18:00:03.849683"
-    },
-    {
       "id": "0dd2a9d45540",
       "type": "database",
       "props": {
@@ -548,15 +514,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P1 · task: Cross-reference the 4-guard circuit-breaker (Pascal coaching) with STALE-30956-ROOTCAUSE to check if the stale-node injection is a scope-violation pattern that Guard 4 could detect. · why: Connecting two high-arousal canons: #48807–8 on Guard 4 as a proven pattern, and #48783 on the persistent stale-node bug. If the auto-recall hook is a scope violation, it could be patched by the same circuit design, yielding an identity-tier fix.",
       "updated_at": "2026-06-17T02:37:31.966633"
+    },
+    {
+      "id": "5680f79d753b",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-17T03:23:13.099269"
+      },
+      "content": "Hermes decision · arm=pascal · priority=P1 · task: Implement Guard 4 (scope violation detection) logic from canon #48808 into the sales pipeline to filter noise prospects before advisor time is consumed. · why: Canon #48808 provides a concrete, high-impact mechanism (37% vs 15% conversion lift) that directly aligns with the brother-direct identity tier and recent high-arousal brain canons. This is a P0 because it's a direct implementation of a proven pattern from the recent canon stream, and it strengthens",
+      "updated_at": "2026-06-17T03:23:13.099297"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T03:21:36.839044"
+    "checked_at": "2026-06-17T03:26:37.453843"
   },
   "block_count": 30,
-  "updated_at": "2026-06-17T02:37:31.966634",
-  "generated_at": "2026-06-17T07:21:36Z"
+  "updated_at": "2026-06-17T03:23:13.099299",
+  "generated_at": "2026-06-17T07:26:37Z"
 }
