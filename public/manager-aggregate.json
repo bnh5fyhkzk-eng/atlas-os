@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-06-17T10:03:26Z",
+  "generated_at": "2026-06-17T10:18:27Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 28,
+    "decision": 23,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 152,
+    "note": 153,
     "briefing": 73,
     "idea": 0
   },
-  "total_blocks": 253,
+  "total_blocks": 249,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "c9ba3bee6c6f",
+        "type": "callout",
+        "content": "Hermes decision · arm=curiosity · priority=P1 · task: Trace the 4-guard circuit-breaker from Pascal coaching to verify conversion lift mechanics, then synthesize with Guard 4 scope detection findings. · why: The brain canons #48807-#48810 describe a concrete mechanism (circuit-breaker) with measurab",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T06:12:17.616543"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,72 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-16T23:00:48.290437"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "c2e8296bfc47",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Patch the auto-recall hook to skip stale node #30956, re-root to active #48774 with context injection. · why: #48774 root-causes recall misdirection; code-arm can directly fix the hook to stop injecting broken state every prompt — P0 because brother-d",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T22:33:46.828954"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "9f4ea1d01581",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Deep-dive the P1 memory-architecture-lift quadrant from #28284 to complete the cycle-6 research and close the quadrant, then propagate findings to the recall-gate root cause (#48774) to verify if the stale-node injection (#48783) is a downstream s",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T22:18:23.772180"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "28f19a25f216",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Map the causal chain from STALE-30956-ROOTCAUSE #48783 back to the original brother-direct 'before I answer your question continue' #30956 and identify the exact memory-architecture-lift gap that allowed the stale node to persist across cycles. · ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T22:01:04.388270"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "e4d786b155d6",
-        "type": "callout",
-        "content": "Hermes decision · arm=infra · priority=P1 · task: Implement a recall-before-make.sh hook that checks #48783 root cause (stale #30956 node) and prevents stale node injection on every prompt · why: #48774 and #48783 are P1 memory-architecture-lift findings that directly degrade every user prompt. Fixi",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T21:44:56.302803"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "8be0fa35d772",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P1 · task: Fix stale node #30956 injection by updating auto-recall hook to filter out nodes older than 24 hours · why: Recent brain canons show verified root cause of stale node injection (RECALL-GATE-ROOT-CAUSE and STALE-30956-ROOTCAUSE); this blocks cycle prog",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T21:27:26.394591"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "897975f484f1",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Verify root cause of stale node #30956 injection and confirm fix path from #48783 · why: Brother-direct P0: #48783 identifies a verified stale-injection bug that corrupts every prompt. Fixing this unblocks all downstream reasoning and prevents fur",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T21:11:16.921702"
       }
     ],
     "action": [],
@@ -332,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "03b65ad0cb74",
+        "type": "callout",
+        "content": "**What** · Traced the 4-guard circuit-breaker from Pascal coaching: Guard 1 (intent), Guard 2 (context), Guard 3 (escalation), Guard 4 (scope violation detection). Found Guard 4 triggers when user drifts outside coached domain, causing 37% conversion lift vs 15% without. · **Why** · Hermes assigned ",
+        "priority": "trace_mechanism",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T06:12:19.755312"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -870,17 +826,6 @@
         "priority": "infra-change",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-17T05:10:48.771568"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "3a02a0e97034",
-        "type": "callout",
-        "content": "**What** · Designed minimal controlled experiment: A/B test with 4-guard circuit-breaker vs baseline in simulated sales pipeline using synthetic data. · **Why** · Validate claimed 37% vs 15% conversion lift from brain canon #48807 – urgent for brother-direct knowledge and product credibility. · **Re",
-        "priority": "experiment_design",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-17T04:55:32.656115"
       }
     ],
     "briefing": [
