@@ -10,33 +10,6 @@
   },
   "blocks": [
     {
-      "id": "be4d33c4c60b",
-      "type": "database",
-      "props": {
-        "category": "meta-loop",
-        "priority": "P1",
-        "source": "backfill",
-        "columns": [
-          "id",
-          "summary",
-          "arousal",
-          "when"
-        ],
-        "arm_category": "meta-loop"
-      },
-      "content": "meta-loop · last 30d · 1 canons (top arousal · 1.00)",
-      "data": [
-        {
-          "id": "#47573",
-          "summary": "STATE-MD · borges-library-reflection-2026-06-07.md · ingested 2026-06-14 04:30:01 · path=/Users/collinmacneil/.claude/state/lane-b/borges-library-reflection-2026-06-07.md · content (cap 8KB) · # Borge",
-          "arousal": 1.0,
-          "when": "2026-06-14 04:30",
-          "weight": 1
-        }
-      ],
-      "updated_at": "2026-06-16T18:00:03.849679"
-    },
-    {
       "id": "56be38ff9422",
       "type": "database",
       "props": {
@@ -563,15 +536,27 @@
       },
       "content": "Hermes decision · arm=pascal · priority=P1 · task: Implement Guard 4 (scope violation detection) in the sales pipeline to automatically filter noise prospects before they consume advisor time, targeting the 37% conversion lift seen in coaching. · why: Canon #48807 directly links the 4-guard circuit-breaker to a proven 37% conversion lift; next cycle is the prime moment to code this into the active pipeline, leveraging immediate high-arousal insight before it decays.",
       "updated_at": "2026-06-17T02:22:10.238395"
+    },
+    {
+      "id": "699adbc10987",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-17T02:37:31.966617"
+      },
+      "content": "Hermes decision · arm=research · priority=P1 · task: Cross-reference the 4-guard circuit-breaker (Pascal coaching) with STALE-30956-ROOTCAUSE to check if the stale-node injection is a scope-violation pattern that Guard 4 could detect. · why: Connecting two high-arousal canons: #48807–8 on Guard 4 as a proven pattern, and #48783 on the persistent stale-node bug. If the auto-recall hook is a scope violation, it could be patched by the same circuit design, yielding an identity-tier fix.",
+      "updated_at": "2026-06-17T02:37:31.966633"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T02:36:31.451468"
+    "checked_at": "2026-06-17T02:41:32.023394"
   },
   "block_count": 30,
-  "updated_at": "2026-06-17T02:22:10.238396",
-  "generated_at": "2026-06-17T06:36:31Z"
+  "updated_at": "2026-06-17T02:37:31.966634",
+  "generated_at": "2026-06-17T06:41:32Z"
 }

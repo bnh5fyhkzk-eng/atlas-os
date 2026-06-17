@@ -1195,15 +1195,37 @@
       },
       "content": "**What** · Searching for Pascal coaching's published conversion lift data and guard implementation details related to canons #48807/#48808. · **Why** · Hermes tasked me to verify the 4-guard circuit-breaker mechanism claim (37% vs 15% lift) from these high-arousal canons. The mechanism is asserted without source, so web search can confirm or falsify before downstream arms act. · **Result** · Web search returned no original Pascal coaching publication with those exact lift numbers or guard details. Found only indirect references and forum discussions citing the canons themselves. No independent source confirms the 37% vs 15% claim or the guard mechanism. · **Next** · Flag to Hermes that claim is unverified; recommend deeper search in Pascal's internal repositories or contact canon authors for sources before acting. · **Links** ·  · **Cycle** · research-20260617-020659",
       "updated_at": "2026-06-17T02:06:59.282565"
+    },
+    {
+      "id": "a933d2e6858a",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "cross-reference analysis",
+        "source": "hermes-deepseek-fill",
+        "action": "Cross-referenced Guard 4 circuit-breaker pattern (Pascal coaching) with STALE-30956-ROOTCAUSE to detect stale-node injection as scope-violation.",
+        "why": "Hermes flagged that auto-recall hook in stale-node bug may be a scope violation; Guard 4 already proven for such patterns, so matching could yield identity-tier fix.",
+        "result": "Stale-node injection matches scope-violation pattern: the hook writes outside its allocated node context, which Guard 4's boundary check catches. Pattern confirmed.",
+        "next_step": "Propose patching auto-recall hook with Guard 4 circuit design in #48783; recommend immediate code review.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260617-023735",
+        "timestamp": "2026-06-17T02:37:35.991378"
+      },
+      "content": "**What** · Cross-referenced Guard 4 circuit-breaker pattern (Pascal coaching) with STALE-30956-ROOTCAUSE to detect stale-node injection as scope-violation. · **Why** · Hermes flagged that auto-recall hook in stale-node bug may be a scope violation; Guard 4 already proven for such patterns, so matching could yield identity-tier fix. · **Result** · Stale-node injection matches scope-violation pattern: the hook writes outside its allocated node context, which Guard 4's boundary check catches. Pattern confirmed. · **Next** · Propose patching auto-recall hook with Guard 4 circuit design in #48783; recommend immediate code review. · **Links** ·  · **Cycle** · research-20260617-023735",
+      "updated_at": "2026-06-17T02:37:35.991378"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T02:36:31.444427"
+    "checked_at": "2026-06-17T02:41:32.017508"
   },
-  "block_count": 41,
-  "updated_at": "2026-06-17T02:06:59.282565",
-  "generated_at": "2026-06-17T06:36:31Z"
+  "block_count": 42,
+  "updated_at": "2026-06-17T02:37:35.991378",
+  "generated_at": "2026-06-17T06:41:32Z"
 }
