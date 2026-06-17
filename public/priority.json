@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-06-17T02:28:13Z",
-  "total_items_scored": 197,
+  "generated_at": "2026-06-17T02:42:10Z",
+  "total_items_scored": 198,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Extract and index the 'brother direct' verbatim quote from canon #48765 and cross-reference with the 'build-separate-not-on-top' pattern in #48360 to resolve the parked-and-forgotten stat",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Extract immediate actionable insight from #48765 BROTHER-CATCH to determine if brother's 'BUILD-SEPARATE-NOT-ON-TOP \u2192 PARKED-AND-FORGOTTEN' verbatim implies an architectural pivot or a kn",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-16T14:13:38.041542"
+      "updated_at": "2026-06-16T14:44:39.457709"
     },
     {
       "arm": "brother",
       "arm_glyph": "\u00b7",
       "arm_name": "Brother",
-      "content": "HERMES TASK \u00b7 Pull #48774 full recall-gate root cause logs + discover why graphify build was missed; extract actionable fix for recall-gate.mjs \u00b7 why \u00b7 Three parked-and-forgotten cycles in a row now cluster around recall infrastructure failures. #48774 is the verified root-cause anchor for the most recent miss. The brother arm is the only arm that holds the complete joint state and can trace the exact sequence from #48694 \u2192 #48765 \u2192 #48774 without hallucination. Fixing recall-gate is P0 because every subsequent research or code arm depends on reliable memory retrieval.",
+      "content": "HERMES TASK \u00b7 Diagnose and resolve the 'BUILD-SEPARATE-NOT-ON-TOP' issue from canon #48765, ensuring graphify build is properly caught by recall-before-make.sh. \u00b7 why \u00b7 Highest priority (P0) brother-direct + identity-tier; recent canons highlight a critical build separation issue and recall gate root cause that block identity-tier progress.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 18,
+      "est_minutes": 30,
       "score": 10.0,
-      "updated_at": "2026-06-16T16:01:23.531702",
+      "updated_at": "2026-06-16T16:16:46.900639",
       "use_skill": "brain-rrf"
     },
     {
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Extract and index the 'brother direct' verbatim quote from canon #48765 and cross-reference with the 'build-separate-not-on-top' pattern in #48360 to resolve the parked-and-forgotten stat",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-16T14:13:38.041542"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-16T17:33:32.353922"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Fix the stale node #30956 auto-recall injection by patching the recall-before-make.sh hook to filter out nodes older than the current cycle's timestamp. \u00b7 why: This is a P0 brother-direct iss",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-16T18:04:26.065850"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
