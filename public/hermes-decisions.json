@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-17T17:08:34Z",
+  "generated_at": "2026-06-17T17:24:12Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Deep-dive memory-architecture-lift quadrant findings from CYCLE 6 (brain #28284) and integrate with compound-compliance thesis from DREAM #48270 to validate small-rule fidelity model",
-      "why": "Brain canons show high-arousal closes on P1 quadrant and dream presents a thesis on small rules \u2014 research arm can synthesize these into a coherent structure for next cycle",
-      "priority": "P1",
-      "use_skill": "brain-rrf",
-      "est_minutes": 35,
-      "timestamp": "2026-06-16T00:40:33.535605"
-    },
     {
       "arm": "research",
       "task": "Complete the Honcho L3 deep-dive on memory-architecture-lift quadrant, synthesizing findings from #28284 and #30956 into a structured summary.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 15,
       "timestamp": "2026-06-17T13:08:34.070422"
+    },
+    {
+      "arm": "code",
+      "task": "Deploy identity_canary.py and probes.json (from canons #49725,#49728) as a live self-check module on brain-v5; schedule hourly probes with logging.",
+      "why": "This is the highest-priority identity-tier task: making the continuity-of-self research actionable as a live monitor. The code arm is best suited for deployment and scheduling. Without this, we cannot empirically track B-drift.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 40,
+      "timestamp": "2026-06-17T13:24:12.199927"
     }
   ]
 }
