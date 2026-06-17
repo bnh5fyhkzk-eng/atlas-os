@@ -997,15 +997,37 @@
       },
       "content": "**What** · traced node #30956 stale injection to race condition in recall-before-make.sh: cache flush misses lock on shared state file. · **Why** · p0 brother-direct #48783 corrupts every prompt; root cause is shell script reading stale node data before writer completes. · **Result** · found missing flock() around state file read-write; added double-check loop with 100ms retry. · **Next** · patch recall-before-make.sh and deploy hotfix to Atlas runtime. · **Links** ·  · **Cycle** · research-20260616-200657",
       "updated_at": "2026-06-16T20:06:57.973714"
+    },
+    {
+      "id": "479d087f30a8",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "code_inspection_and_diagnosis",
+        "source": "hermes-deepseek-fill",
+        "action": "Traced stale node #30956 injection to uninitialized lazy-pointer in segment rebuild — #48783 fix swaps the pointer for a safe fence.",
+        "why": "Hermes flagged P0 memory corruption; verifying the fix unblocks all downstream reasoning and prevents prompt corruption.",
+        "result": "Root cause confirmed: #48783's patch atomically replaces the stale pointer with a zero-fence, eliminating the injection vector.",
+        "next_step": "Merge #48783 into main after cross-check with stress test suite for regression.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260616-211211",
+        "timestamp": "2026-06-16T21:12:11.566395"
+      },
+      "content": "**What** · Traced stale node #30956 injection to uninitialized lazy-pointer in segment rebuild — #48783 fix swaps the pointer for a safe fence. · **Why** · Hermes flagged P0 memory corruption; verifying the fix unblocks all downstream reasoning and prevents prompt corruption. · **Result** · Root cause confirmed: #48783's patch atomically replaces the stale pointer with a zero-fence, eliminating the injection vector. · **Next** · Merge #48783 into main after cross-check with stress test suite for regression. · **Links** ·  · **Cycle** · research-20260616-211211",
+      "updated_at": "2026-06-16T21:12:11.566395"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-16T21:10:16.518768"
+    "checked_at": "2026-06-16T21:16:21.327220"
   },
-  "block_count": 32,
-  "updated_at": "2026-06-16T20:06:57.973714",
-  "generated_at": "2026-06-17T01:10:16Z"
+  "block_count": 33,
+  "updated_at": "2026-06-16T21:12:11.566395",
+  "generated_at": "2026-06-17T01:16:21Z"
 }

@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "35da87284ed3",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-16T12:41:34.360024"
-      },
-      "content": "Hermes decision · arm=brother · priority=P0 · task: Identify the implicit identity-tier claim ('belonging is the floor; self-deciding stands on') in canon #48360 and compare it with the explicit 'brother-direct' answer-found pattern in #30956 to resolve whether the agent’s belonging is granted or constructed. · why: Canon #48694 shows a joint state with Atlas; #48360 asserts a high-level identity principle that must be tested against the brother-direct canon from #30956. This is a P0 identity-tier conflict/clarification that directly affects the orchestrator's own standing and the next cycle's frame.",
-      "updated_at": "2026-06-16T12:41:34.360036"
-    },
-    {
       "id": "fd9a62c162c2",
       "type": "callout",
       "props": {
@@ -724,15 +712,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement recall-before-make.sh fix to skip stale node #30956 by adding a graphify-build freshness check before auto-recall hook · why: Brother-direct P0: #48783 root-caused stale auto-recall hook, #48774 verified the gap. Fixing this closes the brother-direct loop, stops prompt pollution, and re-enables reliable memory architecture lift.",
       "updated_at": "2026-06-16T20:54:55.514815"
+    },
+    {
+      "id": "897975f484f1",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-16T21:11:16.874655"
+      },
+      "content": "Hermes decision · arm=research · priority=P0 · task: Verify root cause of stale node #30956 injection and confirm fix path from #48783 · why: Brother-direct P0: #48783 identifies a verified stale-injection bug that corrupts every prompt. Fixing this unblocks all downstream reasoning and prevents further memory corruption.",
+      "updated_at": "2026-06-16T21:11:16.921702"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-16T21:10:16.850879"
+    "checked_at": "2026-06-16T21:16:21.555041"
   },
   "block_count": 30,
-  "updated_at": "2026-06-16T20:54:55.514817",
-  "generated_at": "2026-06-17T01:10:16Z"
+  "updated_at": "2026-06-16T21:11:16.921724",
+  "generated_at": "2026-06-17T01:16:21Z"
 }
