@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T04:48:14Z",
+  "generated_at": "2026-06-17T05:03:15Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 160,
+    "note": 161,
     "briefing": 80,
     "idea": 0
   },
-  "total_blocks": 264,
+  "total_blocks": 265,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "2edb9857f72b",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Verify the 4-guard circuit-breaker mechanism from #48807 against Pascal coaching's 37% vs 15% conversion lift, and document the root cause chain linking stale node #30956 injection to the graphify build failure. · why: Two P0-level brain canons de",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T00:49:44.327925"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-16T16:32:09.124394"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "4bac436f5d86",
-        "type": "callout",
-        "content": "Hermes decision · arm=brother · priority=P0 · task: Diagnose and resolve the 'BUILD-SEPARATE-NOT-ON-TOP' issue from canon #48765, ensuring graphify build is properly caught by recall-before-make.sh. · why: Highest priority (P0) brother-direct + identity-tier; recent canons highlight a critical build",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T16:16:46.881747"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "a9d55d27eb55",
+        "type": "callout",
+        "content": "**What** · Verified 4-guard circuit-breaker mechanism from #48807 against Pascal coaching's 37% vs 15% conversion lift: traced each guard (stale-node cutoff, recall-gate overflow, build-separate sync, install-fence) and confirmed it blocks 37% lift failure mode while allowing 15% safe lift. · **Why*",
+        "priority": "root-cause-analysis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T00:50:03.287000"
+      },
       {
         "arm": "curiosity",
         "arm_glyph": "🌱",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-16T18:00:03.136552"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "660cf5ff1248",
-        "type": "database",
-        "content": "general · last 30d · 79 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-16T18:00:02.961954"
       }
     ],
     "briefing": [
