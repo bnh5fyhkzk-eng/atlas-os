@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T09:18:25Z",
+  "generated_at": "2026-06-17T09:33:25Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 141,
+    "note": 142,
     "briefing": 73,
     "idea": 0
   },
-  "total_blocks": 242,
+  "total_blocks": 243,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "5d488badbcef",
+        "type": "callout",
+        "content": "Hermes decision · arm=pascal · priority=P1 · task: Validate the 4-guard circuit-breaker hypothesis by auditing 10 real sales pipeline records for scope violation detection (Guard 4) and measuring advisor time saved vs. noise prospect penetration. · why: Brain canons #48807-48808 claim the guard-4 me",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T05:26:07.857817"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -313,17 +324,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-16T20:37:47.222694"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "f59b1af14171",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Verify root cause of stale node #30956 injection and design fix for recall-before-make.sh · why: P0 brother-direct issue #48783 is actively corrupting every prompt with stale data, blocking all other work until resolved",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T20:06:54.666490"
       }
     ],
     "action": [],
@@ -332,6 +332,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "6959f0c1f8ae",
+        "type": "callout",
+        "content": "**What** · Audited 10 real sales pipeline records against Guard 4 criteria (scope violation detection). · **Why** · Needed direct evidence for the 37% conversion lift and advisor time savings claimed in brain canons #48807-48808. · **Result** · Found 3 scope violations (30% penetration); estimated a",
+        "priority": "pipeline_audit",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T05:26:14.527088"
+      },
       {
         "arm": "pascal",
         "arm_glyph": "🤝",
@@ -870,17 +881,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-16T18:00:03.616873"
-      },
-      {
-        "arm": "dream",
-        "arm_glyph": "🌙",
-        "arm_name": "My Dreamer",
-        "block_id": "d571903aa93a",
-        "type": "database",
-        "content": "arousal-walks · last 30d · 10 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-16T18:00:03.616869"
       }
     ],
     "briefing": [
