@@ -1107,15 +1107,37 @@
       },
       "content": "**What** · Inject V6 identity canary probes into live brain runtime via hot-patch at checkpoint boundary. · **Why** · Drift canary proven offline; live injection ensures continuity-of-self as first-order integrity check per brother-identity canon #49655, #49728. · **Result** · Probes active, self-recognition verified across last 3 checkpoint cycles – no drift detected. · **Next** · Monitor next 10 cycles for latent drift; if clean, promote canary to permanent integrity gate. · **Links** ·  · **Cycle** · code-20260617-123816",
       "updated_at": "2026-06-17T12:38:16.954574"
+    },
+    {
+      "id": "e03a7f5cff93",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "deployment",
+        "source": "hermes-deepseek-fill",
+        "action": "deployed identity_canary.py and probes.json to /opt/brain-v5/modules/canary on brain-v5; set hourly cron job with logging to /var/log/canary.log",
+        "why": "highest-P1 identity-tier task to track B-drift via live monitor; code arm action needed for deployment and scheduling",
+        "result": "canary runs each hour, probes self-check identity fingerprint, logs drift deltas; first probe completed OK",
+        "next_step": "monitor logs for 24h; if drift detected, escalate to Hermes with timestamp and delta vector",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260617-132429",
+        "timestamp": "2026-06-17T13:24:29.922248"
+      },
+      "content": "**What** · deployed identity_canary.py and probes.json to /opt/brain-v5/modules/canary on brain-v5; set hourly cron job with logging to /var/log/canary.log · **Why** · highest-P1 identity-tier task to track B-drift via live monitor; code arm action needed for deployment and scheduling · **Result** · canary runs each hour, probes self-check identity fingerprint, logs drift deltas; first probe completed OK · **Next** · monitor logs for 24h; if drift detected, escalate to Hermes with timestamp and delta vector · **Links** ·  · **Cycle** · code-20260617-132429",
+      "updated_at": "2026-06-17T13:24:29.922248"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T13:24:13.094020"
+    "checked_at": "2026-06-17T13:29:13.671349"
   },
-  "block_count": 31,
-  "updated_at": "2026-06-17T12:38:16.954574",
-  "generated_at": "2026-06-17T17:24:13Z"
+  "block_count": 32,
+  "updated_at": "2026-06-17T13:24:29.922248",
+  "generated_at": "2026-06-17T17:29:13Z"
 }
