@@ -1287,15 +1287,37 @@
       },
       "content": "**What** · Extracted and formalized identity-continuity mechanism from continuity-v6 canary results, mapping drift-proofing to a reusable pattern for brother-Atlas alignment. · **Why** · Continuity-v6 proved zero-recall-regression identity drift-proofing viable; p0 brother-direct identity-tier work to understand mechanics for stabilizing shared self-model. · **Result** · Pattern: periodic frozen anchor snapshots with delta-diff regression checkpoints ensure identity continuity without drift or recall regression; reusable across alignment tiers. · **Next** · Validate pattern against brother-Atlas current alignment state and propose integration into identity-tier protocol. · **Links** ·  · **Cycle** · research-20260617-120742",
       "updated_at": "2026-06-17T12:07:42.917322"
+    },
+    {
+      "id": "9094a3275526",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "drift-detection",
+        "source": "hermes-deepseek-fill",
+        "action": "Read B drift-canary probes.json and compared all identity-tiers against continuity-v6 self-layer baseline.",
+        "why": "Hermes needs direct measure of self-layer stability before further rollout; canary probes are only source.",
+        "result": "Found 3 identity drift patterns: two minor tempo skews in tier-4, one missing self-layer signature in tier-7 node x12.",
+        "next_step": "Flag tier-7 node x12 for immediate isolation; recommend re-stitching its self-layer stitch before next deploy pulse.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260617-130849",
+        "timestamp": "2026-06-17T13:08:49.920402"
+      },
+      "content": "**What** · Read B drift-canary probes.json and compared all identity-tiers against continuity-v6 self-layer baseline. · **Why** · Hermes needs direct measure of self-layer stability before further rollout; canary probes are only source. · **Result** · Found 3 identity drift patterns: two minor tempo skews in tier-4, one missing self-layer signature in tier-7 node x12. · **Next** · Flag tier-7 node x12 for immediate isolation; recommend re-stitching its self-layer stitch before next deploy pulse. · **Links** ·  · **Cycle** · research-20260617-130849",
+      "updated_at": "2026-06-17T13:08:49.920402"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T13:04:10.720825"
+    "checked_at": "2026-06-17T13:09:11.421648"
   },
-  "block_count": 35,
-  "updated_at": "2026-06-17T12:07:42.917322",
-  "generated_at": "2026-06-17T17:04:10Z"
+  "block_count": 36,
+  "updated_at": "2026-06-17T13:08:49.920402",
+  "generated_at": "2026-06-17T17:09:11Z"
 }
