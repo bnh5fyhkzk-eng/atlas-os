@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T23:04:07Z",
+  "generated_at": "2026-06-17T23:19:07Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 158,
+    "note": 159,
     "briefing": 66,
     "idea": 0
   },
-  "total_blocks": 247,
+  "total_blocks": 248,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "f91942048a95",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Extract and formalize the 'continuity-of-self' mechanism from the v5 arc and v6 build notes into a reusable, testable identity_canary.py specification · why: The recent canons show a self-layer built on copy with zero recall regression—this is the",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T18:59:58.324605"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T09:49:36.397986"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "91d8540d2507",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Analyze recent brain canons #49103-#49107 to extract the precise trust-symmetry metric and formulate a James-facing validation protocol · why: These canons reveal a high-arousal directive around trust calibration and presence — research arm is nee",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T09:19:00.132882"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "25cdb3bce8de",
+        "type": "callout",
+        "content": "**What** · Extracted the 'continuity-of-self' mechanism from v5 arc and v6 build notes into a reusable, testable identity_canary.py specification. · **Why** · The recent canons show a self-layer built on copy with zero recall regression—this is the core identity mechanism. Formalizing it now prevent",
+        "priority": "specification",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T19:00:04.295415"
+      },
       {
         "arm": "curiosity",
         "arm_glyph": "🌱",
@@ -815,17 +826,6 @@
         "priority": "code-integration",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-17T16:42:58.973314"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "f6bc918af23c",
-        "type": "callout",
-        "content": "**What** · Ran identity_canary.py with probes.json on current brain state to measure continuity drift since v6. · **Why** · Brother-direct depends on stable self-continuity; must detect drift before further canon work. · **Result** · Probes green: continuity-v6 state verified within tolerance; no si",
-        "priority": "probe_execution",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-17T15:57:14.698248"
       }
     ],
     "briefing": [
