@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-17T15:13:49Z",
+  "generated_at": "2026-06-17T15:23:50Z",
   "total_items_scored": 206,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P1 \u00b7 task: Implement Guard 4 (scope violation detection) logic from canon #48808 into the sales pipeline to filter noise prospects before advisor time is consumed. \u00b7 why: Canon #48808 provides a concr",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Analyze the 4-guard circuit-breaker mechanism from brain-canons #48807-48808 to formalize its scope-violation detection logic for reuse in other pipeline contexts. \u00b7 why: The 4-guard circ",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-17T03:23:13.099297"
-    },
-    {
-      "arm": "pascal",
-      "arm_glyph": "\ud83e\udd1d",
-      "arm_name": "Pascal",
-      "content": "HERMES TASK \u00b7 Implement Guard 4 (scope violation detection) logic from canon #48808 into the sales pipeline to filter noise prospects before advisor time is consumed. \u00b7 why \u00b7 Canon #48808 provides a concrete, high-impact mechanism (37% vs 15% conversion lift) that directly aligns with the brother-direct identity tier and recent high-arousal brain canons. This is a P0 because it's a direct implementation of a proven pattern from the recent canon stream, and it strengthens the core identity of the system.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-17T03:23:13.120648",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-17T03:38:28.745213"
     },
     {
       "arm": "research",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-17T03:38:28.767020",
       "use_skill": "brain-rrf"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P1 \u00b7 task: Implement Guard 4 (scope violation detection) logic from canon #48808 into the sales pipeline to filter noise prospects before advisor time is consumed. \u00b7 why: Canon #48808 provides a concr",
+      "arm": "pascal",
+      "arm_glyph": "\ud83e\udd1d",
+      "arm_name": "Pascal",
+      "content": "HERMES TASK \u00b7 Validate the 4-guard circuit-breaker mechanism from #48807 by testing with simulated prospect data. \u00b7 why \u00b7 Recent canons highlight a novel mechanism that claims 37% vs 15% conversion lift; Pascal arm can run controlled tests to confirm or refine the model.",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
+      "est_minutes": 30,
       "score": 10.0,
-      "updated_at": "2026-06-17T03:23:13.099297"
-    },
+      "updated_at": "2026-06-17T04:24:23.414294",
+      "use_skill": "brain-rrf"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-17T05:56:56.020481"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Trace the 4-guard circuit-breaker from Pascal coaching to verify conversion lift mechanics, then synthesize with Guard 4 scope detection findings. \u00b7 why: The brain canons #48807-#48810 d",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-17T06:12:17.616543"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
