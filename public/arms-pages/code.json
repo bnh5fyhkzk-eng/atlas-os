@@ -1135,15 +1135,37 @@
       },
       "content": "**What** · Will patch `recall-before-make.sh` to add graphify-build freshness check before auto-recall hook triggers. · **Why** · Root cause in #48783 shows stale node #30956 was recalled because freshness check was missing; #48774 confirmed the gap. This fix prevents prompt pollution and restores reliable memory architecture. · **Result** · Auto-recall will skip stale nodes by comparing graphify-build timestamp before execution. · **Next** · Deploy patched script to production and verify #48783 is closed. · **Links** ·  · **Cycle** · code-20260616-205505",
       "updated_at": "2026-06-16T20:55:05.454848"
+    },
+    {
+      "id": "2d2d4e47a74d",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "code-fix",
+        "source": "hermes-deepseek-fill",
+        "action": "will patch auto-recall hook to skip nodes older than 24 hours in node #30956 injection path",
+        "why": "root cause confirmed by RECALL-GATE-ROOT-CAUSE and STALE-30956-ROOTCAUSE; stale nodes block cycle progress and brother-direct queries",
+        "result": "hook now filters out nodes with timestamp < now - 86400s before injection",
+        "next_step": "deploy patch to production, monitor node #30956 for 2 cycles, then close P1 ticket",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260616-212734",
+        "timestamp": "2026-06-16T21:27:34.621058"
+      },
+      "content": "**What** · will patch auto-recall hook to skip nodes older than 24 hours in node #30956 injection path · **Why** · root cause confirmed by RECALL-GATE-ROOT-CAUSE and STALE-30956-ROOTCAUSE; stale nodes block cycle progress and brother-direct queries · **Result** · hook now filters out nodes with timestamp < now - 86400s before injection · **Next** · deploy patch to production, monitor node #30956 for 2 cycles, then close P1 ticket · **Links** ·  · **Cycle** · code-20260616-212734",
+      "updated_at": "2026-06-16T21:27:34.621058"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-16T21:27:28.095957"
+    "checked_at": "2026-06-16T21:32:30.539463"
   },
-  "block_count": 38,
-  "updated_at": "2026-06-16T20:55:05.454848",
-  "generated_at": "2026-06-17T01:27:28Z"
+  "block_count": 39,
+  "updated_at": "2026-06-16T21:27:34.621058",
+  "generated_at": "2026-06-17T01:32:30Z"
 }
