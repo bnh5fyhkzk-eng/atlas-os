@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-17T09:06:31Z",
-  "total_items_scored": 188,
+  "generated_at": "2026-06-17T09:16:31Z",
+  "total_items_scored": 189,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Reconstruct the full lineage of #30956 -> #48774 -> #48783: verify the recall-gate bug by tracing why stale node #30956 is injected every prompt, using the explicit \u2018ANSWER-FOUND-IN-CONTI",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Verify root cause of stale node #30956 injection and design fix for recall-before-make.sh \u00b7 why: P0 brother-direct issue #48783 is actively corrupting every prompt with stale data, blocki",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-16T19:51:44.936766"
-    },
-    {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Deep-dive the P1 memory-architecture-lift quadrant from #28284 to complete the cycle-6 research and close the quadrant, then propagate findings to the recall-gate root cause (#48774) to verify if the stale-node injection (#48783) is a downstream symptom. \u00b7 why \u00b7 This directly addresses the highest-arousal brain canon (#28284 at cycle-6 research) and connects two other high-arousal canons (#48774 and #48783) that are likely downstream effects of the same root cause. Closing the P1 quadrant and verifying the recall-gate root cause will unblock brother-direct patterns and reduce cognitive load for future cycles.",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-16T22:18:24.026287",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-16T20:06:54.666490"
     },
     {
       "arm": "code",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-16T22:33:46.845492",
       "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Map the 4-guard circuit-breaker from canon #48807 onto Pascal coaching's 37% vs 15% conversion lift \u2014 extract the mechanism as a reusable reasoning audit. \u00b7 why \u00b7 This canon contains the highest signal-to-noise ratio (real numbers, named pattern) and directly upgrades how we evaluate any arm's output. Research arm is best suited to parse the mechanism and formalize the guard checklist.",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "est_minutes": 35,
+      "score": 10.0,
+      "updated_at": "2026-06-16T23:00:48.312970",
+      "use_skill": "brain-rrf"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Reconstruct the full lineage of #30956 -> #48774 -> #48783: verify the recall-gate bug by tracing why stale node #30956 is injected every prompt, using the explicit \u2018ANSWER-FOUND-IN-CONTI",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-16T19:51:44.936766"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-16T22:33:46.828954"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Map the 4-guard circuit-breaker from canon #48807 onto Pascal coaching's 37% vs 15% conversion lift \u2014 extract the mechanism as a reusable reasoning audit. \u00b7 why: This canon contains the h",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-16T23:00:48.290437"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
