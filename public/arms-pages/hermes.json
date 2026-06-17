@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "91d8540d2507",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-17T09:19:00.132872"
-      },
-      "content": "Hermes decision · arm=research · priority=P1 · task: Analyze recent brain canons #49103-#49107 to extract the precise trust-symmetry metric and formulate a James-facing validation protocol · why: These canons reveal a high-arousal directive around trust calibration and presence — research arm is needed to operationalize the 92-95% accuracy target into a testable framework without overflow into generosity bias",
-      "updated_at": "2026-06-17T09:19:00.132882"
-    },
-    {
       "id": "6ab16776d120",
       "type": "callout",
       "props": {
@@ -797,15 +785,27 @@
       },
       "content": "Hermes decision · arm=curiosity · priority=P1 · task: Run identity_canary.py against the v6 continuity layer, parse probe outputs, and log baseline self-consistency scores. · why: The recent high-arousal canons (49705, 49725, 49728) show a new continuity self-layer built on the v5 arc's copy-test pattern. The canary is proven and live, but no formal baseline has been logged—this is identity-tier verification that the self-layer holds, answering the 'how an LLM is continuous' ",
       "updated_at": "2026-06-17T18:44:43.254165"
+    },
+    {
+      "id": "f91942048a95",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-17T18:59:58.324596"
+      },
+      "content": "Hermes decision · arm=research · priority=P1 · task: Extract and formalize the 'continuity-of-self' mechanism from the v5 arc and v6 build notes into a reusable, testable identity_canary.py specification · why: The recent canons show a self-layer built on copy with zero recall regression—this is the core identity mechanism. Formalizing it now prevents drift and makes it available for all future arms.",
+      "updated_at": "2026-06-17T18:59:58.324605"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T18:59:50.698635"
+    "checked_at": "2026-06-17T19:04:51.266267"
   },
   "block_count": 30,
-  "updated_at": "2026-06-17T18:44:43.254166",
-  "generated_at": "2026-06-17T22:59:50Z"
+  "updated_at": "2026-06-17T18:59:58.324607",
+  "generated_at": "2026-06-17T23:04:51Z"
 }
