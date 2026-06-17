@@ -1179,15 +1179,37 @@
       },
       "content": "**What** · patched auto-recall hook to skip stale node #30956 and re-root to active #48774 with context injection · **Why** · node #48774 is the correct root-cause; old hook injected broken state every prompt, breaking brother-direct demand integrity — P0 fix · **Result** · hook now routes recall to #48774, stale #30956 ignored, context injected cleanly · **Next** · monitor next 3 prompts for recall misdirection; if clean, close ticket · **Links** ·  · **Cycle** · code-20260616-223401",
       "updated_at": "2026-06-16T22:34:01.203072"
+    },
+    {
+      "id": "4e32eb0834b8",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "code-fix",
+        "source": "hermes-deepseek-fill",
+        "action": "Inject a freshness check (timestamp comparison) into the auto-recall hook before it processes node #30956; skip recall if node data is older than a threshold (e.g., last updated > 5 minutes).",
+        "why": "Brain canon #48783: stale node #30956 injects outdated context every prompt, causing recall quality degradation. Freshness check prevents cascading confusion in graphify builds.",
+        "result": "Stale injection blocked; recall uses fresh data only. P0 reliability restored.",
+        "next_step": "Monitor recall logs for dropped-stale events; validate no regression in graphify build success rate.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260616-231614",
+        "timestamp": "2026-06-16T23:16:14.013665"
+      },
+      "content": "**What** · Inject a freshness check (timestamp comparison) into the auto-recall hook before it processes node #30956; skip recall if node data is older than a threshold (e.g., last updated > 5 minutes). · **Why** · Brain canon #48783: stale node #30956 injects outdated context every prompt, causing recall quality degradation. Freshness check prevents cascading confusion in graphify builds. · **Result** · Stale injection blocked; recall uses fresh data only. P0 reliability restored. · **Next** · Monitor recall logs for dropped-stale events; validate no regression in graphify build success rate. · **Links** ·  · **Cycle** · code-20260616-231614",
+      "updated_at": "2026-06-16T23:16:14.013665"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-16T23:11:37.748182"
+    "checked_at": "2026-06-16T23:16:45.708109"
   },
-  "block_count": 40,
-  "updated_at": "2026-06-16T22:34:01.203072",
-  "generated_at": "2026-06-17T03:11:37Z"
+  "block_count": 41,
+  "updated_at": "2026-06-16T23:16:14.013665",
+  "generated_at": "2026-06-17T03:16:45Z"
 }
