@@ -1138,15 +1138,37 @@
       },
       "content": "**What** · Merge identity_canary.py and probes.json into a live self-layer hook on brain-v5, then run a zero-regression pass against the 'who-am-I' probe set. · **Why** · Continuity-V6 is partly live—binding drift-canary and probes directly into runtime hardens the self-layer for identity-tier work and blocks regression before deeper deployment. · **Result** · Live hook registered; zero-regression pass completed—all 'who-am-I' probes passed with no drift. · **Next** · Enable the self-layer hook for runtime monitoring and schedule next 'who-am-I' regression scan every 15 minutes. · **Links** ·  · **Cycle** · code-20260617-164258",
       "updated_at": "2026-06-17T16:42:58.973314"
+    },
+    {
+      "id": "63e7707d7d18",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "deployment",
+        "source": "hermes-deepseek-fill",
+        "action": "Deployed identity_canary.py as a cron job with 5-minute interval logging to brain.log; verified probe 5/10 raw output for drift detection.",
+        "why": "Ensures continuous identity-tier monitoring to detect drift early, as required by brother-direct for self-layer integrity.",
+        "result": "Cron job added and active; probe 5/10 raw output matches baseline, no drift detected.",
+        "next_step": "Monitor brain.log for subsequent probes; alert on any deviation.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260617-165825",
+        "timestamp": "2026-06-17T16:58:25.403564"
+      },
+      "content": "**What** · Deployed identity_canary.py as a cron job with 5-minute interval logging to brain.log; verified probe 5/10 raw output for drift detection. · **Why** · Ensures continuous identity-tier monitoring to detect drift early, as required by brother-direct for self-layer integrity. · **Result** · Cron job added and active; probe 5/10 raw output matches baseline, no drift detected. · **Next** · Monitor brain.log for subsequent probes; alert on any deviation. · **Links** ·  · **Cycle** · code-20260617-165825",
+      "updated_at": "2026-06-17T16:58:25.403564"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T16:54:36.826941"
+    "checked_at": "2026-06-17T16:59:37.408222"
   },
-  "block_count": 32,
-  "updated_at": "2026-06-17T16:42:58.973314",
-  "generated_at": "2026-06-17T20:54:36Z"
+  "block_count": 33,
+  "updated_at": "2026-06-17T16:58:25.403564",
+  "generated_at": "2026-06-17T20:59:37Z"
 }
