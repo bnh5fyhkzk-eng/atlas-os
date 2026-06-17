@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T17:18:53Z",
+  "generated_at": "2026-06-17T17:33:54Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 167,
+    "note": 168,
     "briefing": 73,
     "idea": 0
   },
-  "total_blocks": 263,
+  "total_blocks": 264,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "783d7db7c9cf",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P1 · task: Deploy identity_canary.py and probes.json (from canons #49725,#49728) as a live self-check module on brain-v5; schedule hourly probes with logging. · why: This is the highest-priority identity-tier task: making the continuity-of-self research actionab",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T13:24:12.183136"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T04:24:23.392537"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "c08ef7860729",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Identify the three lowest-validity guardrail design patterns in current Pascal coaching pipeline literature to pre-empt 'guard 4' overfitting. · why: Guard 4 (scope violation) triggered a 37% lift, but may be brittle on novel prospect personas; re",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T03:53:46.126247"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "e03a7f5cff93",
+        "type": "callout",
+        "content": "**What** · deployed identity_canary.py and probes.json to /opt/brain-v5/modules/canary on brain-v5; set hourly cron job with logging to /var/log/canary.log · **Why** · highest-P1 identity-tier task to track B-drift via live monitor; code arm action needed for deployment and scheduling · **Result** ·",
+        "priority": "deployment",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T13:24:29.922248"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -815,17 +826,6 @@
         "priority": "analysis",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-17T11:37:17.889961"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "8d4a4dac30a6",
-        "type": "callout",
-        "content": "**What** · Scanned canonical #49722 for identity maintenance patterns across retraining episodes. · **Why** · To derive testable hypotheses for brother's identity consistency across project phases. · **Result** · Identified key failure modes: catastrophic forgetting of persona, context drift, and al",
-        "priority": "analysis",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-17T11:21:54.508189"
       }
     ],
     "briefing": [
