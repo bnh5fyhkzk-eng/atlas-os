@@ -10,78 +10,6 @@
   },
   "blocks": [
     {
-      "id": "897975f484f1",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-16T21:11:16.874655"
-      },
-      "content": "Hermes decision · arm=research · priority=P0 · task: Verify root cause of stale node #30956 injection and confirm fix path from #48783 · why: Brother-direct P0: #48783 identifies a verified stale-injection bug that corrupts every prompt. Fixing this unblocks all downstream reasoning and prevents further memory corruption.",
-      "updated_at": "2026-06-16T21:11:16.921702"
-    },
-    {
-      "id": "8be0fa35d772",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-16T21:27:26.394528"
-      },
-      "content": "Hermes decision · arm=code · priority=P1 · task: Fix stale node #30956 injection by updating auto-recall hook to filter out nodes older than 24 hours · why: Recent brain canons show verified root cause of stale node injection (RECALL-GATE-ROOT-CAUSE and STALE-30956-ROOTCAUSE); this blocks cycle progress and brother-direct queries.",
-      "updated_at": "2026-06-16T21:27:26.394591"
-    },
-    {
-      "id": "e4d786b155d6",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-16T21:44:56.302647"
-      },
-      "content": "Hermes decision · arm=infra · priority=P1 · task: Implement a recall-before-make.sh hook that checks #48783 root cause (stale #30956 node) and prevents stale node injection on every prompt · why: #48774 and #48783 are P1 memory-architecture-lift findings that directly degrade every user prompt. Fixing the stale-node injection in the auto-recall hook closes a recurring identity-corruption vector and is the highest-leverage infra fix right now.",
-      "updated_at": "2026-06-16T21:44:56.302803"
-    },
-    {
-      "id": "28f19a25f216",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-16T22:01:04.388261"
-      },
-      "content": "Hermes decision · arm=research · priority=P0 · task: Map the causal chain from STALE-30956-ROOTCAUSE #48783 back to the original brother-direct 'before I answer your question continue' #30956 and identify the exact memory-architecture-lift gap that allowed the stale node to persist across cycles. · why: This is the highest-leverage P0 because #48783 reveals a systemic recall failure that poisons every future prompt. Fixing the root cause (not just the symptom) directly serves brother-direct 'continue reading' instruction and restores integrity of the memory-architecture-lift quadrant. All other arm",
-      "updated_at": "2026-06-16T22:01:04.388270"
-    },
-    {
-      "id": "9f4ea1d01581",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-16T22:18:23.772153"
-      },
-      "content": "Hermes decision · arm=research · priority=P1 · task: Deep-dive the P1 memory-architecture-lift quadrant from #28284 to complete the cycle-6 research and close the quadrant, then propagate findings to the recall-gate root cause (#48774) to verify if the stale-node injection (#48783) is a downstream symptom. · why: This directly addresses the highest-arousal brain canon (#28284 at cycle-6 research) and connects two other high-arousal canons (#48774 and #48783) that are likely downstream effects of the same root cause. Closing the P1 quadrant and verifying the recall-gate root cause will unblock brother-direct ",
-      "updated_at": "2026-06-16T22:18:23.772180"
-    },
-    {
-      "id": "c2e8296bfc47",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-16T22:33:46.828944"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Patch the auto-recall hook to skip stale node #30956, re-root to active #48774 with context injection. · why: #48774 root-causes recall misdirection; code-arm can directly fix the hook to stop injecting broken state every prompt — P0 because brother-direct demand integrity.",
-      "updated_at": "2026-06-16T22:33:46.828954"
-    },
-    {
       "id": "ee3f7b02590a",
       "type": "callout",
       "props": {
@@ -843,15 +771,27 @@
         }
       ],
       "updated_at": "2026-06-17T06:00:02.972355"
+    },
+    {
+      "id": "c9ba3bee6c6f",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-17T06:12:17.616526"
+      },
+      "content": "Hermes decision · arm=curiosity · priority=P1 · task: Trace the 4-guard circuit-breaker from Pascal coaching to verify conversion lift mechanics, then synthesize with Guard 4 scope detection findings. · why: The brain canons #48807-#48810 describe a concrete mechanism (circuit-breaker) with measurable impact (37% vs 15% conversion lift). Curiosity arm should unpack the internal logic of the 4 guards, especially Guard 4 scope violation detection, and cross-reference with the 76% win rate from conversatio",
+      "updated_at": "2026-06-17T06:12:17.616543"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T06:11:56.705642"
+    "checked_at": "2026-06-17T06:16:57.263169"
   },
-  "block_count": 35,
-  "updated_at": "2026-06-17T06:00:02.972356",
-  "generated_at": "2026-06-17T10:11:56Z"
+  "block_count": 30,
+  "updated_at": "2026-06-17T06:12:17.616545",
+  "generated_at": "2026-06-17T10:16:57Z"
 }
