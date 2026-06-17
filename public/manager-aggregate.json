@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-17T07:18:20Z",
+  "generated_at": "2026-06-17T07:33:21Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 27,
+    "decision": 28,
     "action": 0,
     "risk": 0,
     "win": 0,
@@ -13,10 +13,21 @@
     "briefing": 79,
     "idea": 0
   },
-  "total_blocks": 274,
+  "total_blocks": 275,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "5680f79d753b",
+        "type": "callout",
+        "content": "Hermes decision · arm=pascal · priority=P1 · task: Implement Guard 4 (scope violation detection) logic from canon #48808 into the sales pipeline to filter noise prospects before advisor time is consumed. · why: Canon #48808 provides a concrete, high-impact mechanism (37% vs 15% conversion lift) that",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T03:23:13.099297"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -321,6 +332,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "bac6587cc2cd",
+        "type": "callout",
+        "content": "**What** · Wired Guard 4 logic into sales pipeline. · **Why** · Canon #48808 proves 37% vs 15% conversion lift — stops noise prospects before advisor time gets wasted. Brother-direct tier demands this filter now. · **Result** · Guard 4 will reject scope-violating leads (e.g., wrong industry, budget ",
+        "priority": "process_robotics",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T03:23:20.123886"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -738,17 +760,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-16T18:00:03.849688"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "56be38ff9422",
-        "type": "database",
-        "content": "identity-shape · last 30d · 2 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-16T18:00:03.849683"
       },
       {
         "arm": "dream",
