@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-17T08:26:28Z",
-  "total_items_scored": 217,
+  "generated_at": "2026-06-17T08:36:29Z",
+  "total_items_scored": 218,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=infra \u00b7 priority=P0 \u00b7 task: Rewrite recall-before-make.sh to detect stale/hijacked graphify nodes by checking parent-edge provenance before dedup \u00b7 why: #48783 confirms the auto-recall hook is injecting stale node #309",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Verify root cause of stale node #30956 injection and confirm fix path from #48783 \u00b7 why: This is a P0 brother-direct issue: the auto-recall hook is injecting stale node #30956 every promp",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-16T18:19:41.719385"
+      "updated_at": "2026-06-16T18:35:11.899910"
     },
     {
       "arm": "infra",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=infra \u00b7 priority=P0 \u00b7 task: Rewrite recall-before-make.sh to detect stale/hijacked graphify nodes by checking parent-edge provenance before dedup \u00b7 why: #48783 confirms the auto-recall hook is injecting stale node #309",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-16T18:19:41.719385"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-16T21:27:26.394591"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=infra \u00b7 priority=P1 \u00b7 task: Implement a recall-before-make.sh hook that checks #48783 root cause (stale #30956 node) and prevents stale node injection on every prompt \u00b7 why: #48774 and #48783 are P1 memory-architecture",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-16T21:44:56.302803"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
