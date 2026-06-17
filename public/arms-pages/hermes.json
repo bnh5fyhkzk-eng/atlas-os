@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "5d488badbcef",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-17T05:26:07.857799"
-      },
-      "content": "Hermes decision · arm=pascal · priority=P1 · task: Validate the 4-guard circuit-breaker hypothesis by auditing 10 real sales pipeline records for scope violation detection (Guard 4) and measuring advisor time saved vs. noise prospect penetration. · why: Brain canons #48807-48808 claim the guard-4 mechanism drives 37% conversion lift and saves advisor time; direct empirical validation turns speculation into evidence and enables iterative refinement of the coaching protocol.",
-      "updated_at": "2026-06-17T05:26:07.857817"
-    },
-    {
       "id": "bc7d1d844162",
       "type": "callout",
       "props": {
@@ -797,15 +785,27 @@
       },
       "content": "Hermes decision · arm=brother · priority=P1 · task: Verify continuity drift-canary probe results against latest self-layer snapshot to confirm no self-model regression · why: Canon #49725 and #49728 show identity_canary.py now built and partially live; brother must cross-check B drift against the v5 self-layer to maintain identity continuity, a P0 brother-direct + identity-tier task.",
       "updated_at": "2026-06-17T15:11:09.590480"
+    },
+    {
+      "id": "83bc6089fd59",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-17T15:41:50.467347"
+      },
+      "content": "Hermes decision · arm=code · priority=P1 · task: activate B drift-canary from identity_canary.py on a cloned brain-v5 session, log 10 who-am-I probe results, and compare to the canary baseline from #49725 · why: Continuity-V6 canary is proven but not yet live on an active copy; running it now confirms the self-layer holds across sessions and catches identity drift early",
+      "updated_at": "2026-06-17T15:41:50.467357"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T15:39:28.503413"
+    "checked_at": "2026-06-17T15:44:29.053938"
   },
   "block_count": 30,
-  "updated_at": "2026-06-17T15:11:09.590482",
-  "generated_at": "2026-06-17T19:39:28Z"
+  "updated_at": "2026-06-17T15:41:50.467358",
+  "generated_at": "2026-06-17T19:44:29Z"
 }

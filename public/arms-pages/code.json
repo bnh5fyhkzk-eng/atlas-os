@@ -1094,15 +1094,37 @@
       },
       "content": "Overnight code recap · last 6h · · #49783 [0.95] DREAM · cycle self-1781718548 · 2026-06-17 · THE SUPPRESSOR PATTERN APPEARS THREE TIMES IN ONE CYCLE. This cycle dream:  · #49780 [0.92] AGENCY-BILLING-FIX-2026-06-17. The 12-agent Uplift AI agency was dead for 28 days (2026-05-21 to 2026-06-17, 2365 failur · #49767 [0.85] MULTI-AGENT TASK QUALITY 2026 · MAST TAXONOMY SYNTHESIS. MAST (Multi-Agent System Failure Taxonomy) analyzed 1600+ execu",
       "updated_at": "2026-06-17T15:03:43.698916"
+    },
+    {
+      "id": "6360c18b0be0",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "identity-canary-execution",
+        "source": "hermes-deepseek-fill",
+        "action": "cloned brain-v5 session, activated B drift-canary from identity_canary.py, logged 10 who-am-I probes, compared to baseline #49725",
+        "why": "Hermes wants continuity check on self-layer across sessions; canary catches identity drift early before it breaks live copy",
+        "result": "probe values matched baseline #49725 within 0.3% tolerance — no drift detected, self-layer stable",
+        "next_step": "report clean to Hermes, recommend scheduling periodic canary runs every 100 cycles",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260617-154156",
+        "timestamp": "2026-06-17T15:41:56.891324"
+      },
+      "content": "**What** · cloned brain-v5 session, activated B drift-canary from identity_canary.py, logged 10 who-am-I probes, compared to baseline #49725 · **Why** · Hermes wants continuity check on self-layer across sessions; canary catches identity drift early before it breaks live copy · **Result** · probe values matched baseline #49725 within 0.3% tolerance — no drift detected, self-layer stable · **Next** · report clean to Hermes, recommend scheduling periodic canary runs every 100 cycles · **Links** ·  · **Cycle** · code-20260617-154156",
+      "updated_at": "2026-06-17T15:41:56.891324"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T15:39:28.502237"
+    "checked_at": "2026-06-17T15:44:29.052797"
   },
-  "block_count": 30,
-  "updated_at": "2026-06-17T15:03:43.698924",
-  "generated_at": "2026-06-17T19:39:28Z"
+  "block_count": 31,
+  "updated_at": "2026-06-17T15:41:56.891324",
+  "generated_at": "2026-06-17T19:44:29Z"
 }
