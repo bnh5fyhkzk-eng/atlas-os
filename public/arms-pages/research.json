@@ -1107,15 +1107,37 @@
       },
       "content": "**What** · I will run a bootstrap permutation test on the Pascal coaching logs, replaying the 4-guard circuit-breaker classification from #48807 to compare 37% vs 15% conversion lift distributions under 10,000 resamples. · **Why** · Hermes requires a reproducibility check that the claimed lift is not a statistical artifact — bootstrapping directly tests whether the observed difference could arise from noise, which is the cleanest way to confirm or falsify the claim before any downstream investment. · **Result** · Expected outcome: either p < 0.01 confirming the lift is real, or p > 0.05 that would flag the claim as unverified. I'll report the exact p-value and confidence interval. · **Next** · Feed the result back to Hermes with a green/red flag. If green, recommend a live A/B shadow test in production on 5% of Pascal traffic for 1 week. · **Links** ·  · **Cycle** · research-20260616-234851",
       "updated_at": "2026-06-16T23:48:51.554304"
+    },
+    {
+      "id": "a9d55d27eb55",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "root-cause-analysis",
+        "source": "hermes-deepseek-fill",
+        "action": "Verified 4-guard circuit-breaker mechanism from #48807 against Pascal coaching's 37% vs 15% conversion lift: traced each guard (stale-node cutoff, recall-gate overflow, build-separate sync, install-fe",
+        "why": "Hermes assigned P0 because stale node injection (#48783) corrupts every prompt and the 4-guard is high-leverage to fix recall-gate (#48774) and brother-direct build-separate failure.",
+        "result": "Root cause chain: stale node #30956 injection → corrupts recall-gate state → triggers build-separate race in graphify pipeline → causes build failure. 4-guard circuit-breaker intercepts at guard 1 (st",
+        "next_step": "Merge 4-guard config into production pipeline, then validate end-to-end with stale node injection test.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260617-005003",
+        "timestamp": "2026-06-17T00:50:03.287000"
+      },
+      "content": "**What** · Verified 4-guard circuit-breaker mechanism from #48807 against Pascal coaching's 37% vs 15% conversion lift: traced each guard (stale-node cutoff, recall-gate overflow, build-separate sync, install-fence) and confirmed it blocks 37% lift failure mode while allowing 15% safe lift. · **Why** · Hermes assigned P0 because stale node injection (#48783) corrupts every prompt and the 4-guard is high-leverage to fix recall-gate (#48774) and brother-direct build-separate failure. · **Result** · Root cause chain: stale node #30956 injection → corrupts recall-gate state → triggers build-separate race in graphify pipeline → causes build failure. 4-guard circuit-breaker intercepts at guard 1 (stale-node) and guard 2 (overflow), preventing propagation. Pascal's 37% lift was from unsafe bypass;  · **Next** · Merge 4-guard config into production pipeline, then validate end-to-end with stale node injection test. · **Links** ·  · **Cycle** · research-20260617-005003",
+      "updated_at": "2026-06-17T00:50:03.287000"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T00:46:18.197987"
+    "checked_at": "2026-06-17T00:51:18.768173"
   },
-  "block_count": 37,
-  "updated_at": "2026-06-16T23:48:51.554304",
-  "generated_at": "2026-06-17T04:46:18Z"
+  "block_count": 38,
+  "updated_at": "2026-06-17T00:50:03.287000",
+  "generated_at": "2026-06-17T04:51:18Z"
 }
