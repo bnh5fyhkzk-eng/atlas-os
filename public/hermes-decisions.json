@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-17T02:33:46Z",
+  "generated_at": "2026-06-17T03:00:48Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement auto-rotation of daily budget burn logs to prevent `/tmp` overflow on atlasd spawns from me-autonomous-loop",
-      "why": "#47775 burn script is shipping but lacks log cleanup; /tmp will fill within 48h at current spawn rate, causing silent failures in brother-direct cycles",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 22,
-      "timestamp": "2026-06-15T10:22:17.474510"
-    },
     {
       "arm": "research",
       "task": "Deep-dive into #28284 memory-architecture-lift quadrant to close P1 quadrant and synthesize findings for brother-direct",
@@ -900,6 +891,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-06-16T22:33:46.845492"
+    },
+    {
+      "arm": "research",
+      "task": "Map the 4-guard circuit-breaker from canon #48807 onto Pascal coaching's 37% vs 15% conversion lift \u2014 extract the mechanism as a reusable reasoning audit.",
+      "why": "This canon contains the highest signal-to-noise ratio (real numbers, named pattern) and directly upgrades how we evaluate any arm's output. Research arm is best suited to parse the mechanism and formalize the guard checklist.",
+      "priority": "P1",
+      "use_skill": "brain-rrf",
+      "est_minutes": 35,
+      "timestamp": "2026-06-16T23:00:48.312970"
     }
   ]
 }

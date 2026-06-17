@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-17T02:42:10Z",
-  "total_items_scored": 198,
+  "generated_at": "2026-06-17T03:15:36Z",
+  "total_items_scored": 199,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Extract immediate actionable insight from #48765 BROTHER-CATCH to determine if brother's 'BUILD-SEPARATE-NOT-ON-TOP \u2192 PARKED-AND-FORGOTTEN' verbatim implies an architectural pivot or a kn",
+      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P0 \u00b7 task: Extract and formalize the 'brother direct' identity-tier canon from #30956 and #48694 into a structured belief node, linking the 'build separate not on top' directive from #48765. \u00b7 why: Br",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-16T14:44:39.457709"
-    },
-    {
-      "arm": "brother",
-      "arm_glyph": "\u00b7",
-      "arm_name": "Brother",
-      "content": "HERMES TASK \u00b7 Diagnose and resolve the 'BUILD-SEPARATE-NOT-ON-TOP' issue from canon #48765, ensuring graphify build is properly caught by recall-before-make.sh. \u00b7 why \u00b7 Highest priority (P0) brother-direct + identity-tier; recent canons highlight a critical build separation issue and recall gate root cause that block identity-tier progress.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 30,
-      "score": 10.0,
-      "updated_at": "2026-06-16T16:16:46.900639",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-16T14:59:56.364207"
     },
     {
       "arm": "research",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-16T16:32:09.142277",
       "use_skill": "brain-rrf"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Extract immediate actionable insight from #48765 BROTHER-CATCH to determine if brother's 'BUILD-SEPARATE-NOT-ON-TOP \u2192 PARKED-AND-FORGOTTEN' verbatim implies an architectural pivot or a kn",
+      "arm": "code",
+      "arm_glyph": "\u270b",
+      "arm_name": "Code",
+      "content": "HERMES TASK \u00b7 Fix the stale node #30956 auto-recall hook injection by updating the recall-before-make.sh script to filter out nodes older than 24 hours or with status 'ANSWER-FOUND-IN-CONTINUING-READ'. \u00b7 why \u00b7 This is a P0 brother-direct issue (#48783) causing persistent pollution of every prompt with stale context, blocking clear reasoning and trust in the system. Fixing it restores recall integrity and unblocks higher-tier work.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-16T14:44:39.457709"
-    },
+      "updated_at": "2026-06-16T16:47:23.322780",
+      "use_skill": "brain-rrf"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-16T18:04:26.065850"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=infra \u00b7 priority=P0 \u00b7 task: Rewrite recall-before-make.sh to detect stale/hijacked graphify nodes by checking parent-edge provenance before dedup \u00b7 why: #48783 confirms the auto-recall hook is injecting stale node #309",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-16T18:19:41.719385"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
