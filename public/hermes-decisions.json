@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-17T01:27:26Z",
+  "generated_at": "2026-06-17T01:44:57Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Verify whether atlasd is the hidden second burn source from 2026-06-13 by cross-referencing #47757 audit verdict with me-autonomous-loop spawn logs",
-      "why": "P0 identity-tier: #47757 claims atlasd IS the hidden second burn source \u2014 this must be confirmed or refuted immediately to prevent cascading misattribution in memory-architecture-lift quadrant",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 12,
-      "timestamp": "2026-06-15T08:19:34.437227"
-    },
     {
       "arm": "research",
       "task": "Correlate recent atlasd audit (#47757) and me-burn-budget (#47775) with memory-architecture-lift (#28284) to confirm the hidden second burn source is fully closed and no residual burn loop remains.",
@@ -900,6 +891,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-06-16T21:27:26.768313"
+    },
+    {
+      "arm": "infra",
+      "task": "Implement a recall-before-make.sh hook that checks #48783 root cause (stale #30956 node) and prevents stale node injection on every prompt",
+      "why": "#48774 and #48783 are P1 memory-architecture-lift findings that directly degrade every user prompt. Fixing the stale-node injection in the auto-recall hook closes a recurring identity-corruption vector and is the highest-leverage infra fix right now.",
+      "priority": "P1",
+      "use_skill": "none",
+      "est_minutes": 25,
+      "timestamp": "2026-06-16T21:44:57.523364"
     }
   ]
 }
