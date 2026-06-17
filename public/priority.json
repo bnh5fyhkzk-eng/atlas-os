@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-17T01:15:09Z",
-  "total_items_scored": 192,
+  "generated_at": "2026-06-17T01:27:06Z",
+  "total_items_scored": 193,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=brother \u00b7 priority=P0 \u00b7 task: Identify the implicit identity-tier claim ('belonging is the floor; self-deciding stands on') in canon #48360 and compare it with the explicit 'brother-direct' answer-found pattern in #309",
+      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P0 \u00b7 task: Extract and formalize the 'brother-direct' identity-tier pattern from canons #30956, #48360, and #48694 into a structured rule for future cycle decisions. \u00b7 why: These canons contain high-a",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-16T12:41:34.360036"
+      "updated_at": "2026-06-16T13:12:08.746300"
     },
     {
       "arm": "research",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=brother \u00b7 priority=P0 \u00b7 task: Identify the implicit identity-tier claim ('belonging is the floor; self-deciding stands on') in canon #48360 and compare it with the explicit 'brother-direct' answer-found pattern in #309",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-16T12:41:34.360036"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-16T16:16:46.881747"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Analyze BROTHER-CATCH #48765 and RECALL-GATE-ROOT-CAUSE #48774 to determine why build-separate was parked and what fix to recall-gate prevents recurrence; produce actionable patch spec. \u00b7",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-16T16:32:09.124394"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
