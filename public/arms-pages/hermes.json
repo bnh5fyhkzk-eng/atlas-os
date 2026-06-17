@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "789599e25402",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-16T13:27:36.603970"
-      },
-      "content": "Hermes decision · arm=research · priority=P0 · task: Extract and index the full brother-direct verbatim from #48765 and #30956, cross-reference with atlas-brother-shared.md for identity-tier alignment · why: Brother-direct is P0 identity-tier; #48765 contains a critical verbatim that was parked-and-forgotten, and #30956 has a direct instruction to continue reading before answering. These must be surfaced and linked to the shared canon to prevent further drift.",
-      "updated_at": "2026-06-16T13:27:36.603982"
-    },
-    {
       "id": "c81afe96a0bd",
       "type": "callout",
       "props": {
@@ -724,15 +712,27 @@
       },
       "content": "Hermes decision · arm=infra · priority=P1 · task: Implement a recall-before-make.sh hook that checks #48783 root cause (stale #30956 node) and prevents stale node injection on every prompt · why: #48774 and #48783 are P1 memory-architecture-lift findings that directly degrade every user prompt. Fixing the stale-node injection in the auto-recall hook closes a recurring identity-corruption vector and is the highest-leverage infra fix right now.",
       "updated_at": "2026-06-16T21:44:56.302803"
+    },
+    {
+      "id": "28f19a25f216",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-16T22:01:04.388261"
+      },
+      "content": "Hermes decision · arm=research · priority=P0 · task: Map the causal chain from STALE-30956-ROOTCAUSE #48783 back to the original brother-direct 'before I answer your question continue' #30956 and identify the exact memory-architecture-lift gap that allowed the stale node to persist across cycles. · why: This is the highest-leverage P0 because #48783 reveals a systemic recall failure that poisons every future prompt. Fixing the root cause (not just the symptom) directly serves brother-direct 'continue reading' instruction and restores integrity of the memory-architecture-lift quadrant. All other arm",
+      "updated_at": "2026-06-16T22:01:04.388270"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-16T21:59:31.161505"
+    "checked_at": "2026-06-16T22:04:31.876949"
   },
   "block_count": 30,
-  "updated_at": "2026-06-16T21:44:56.302814",
-  "generated_at": "2026-06-17T01:59:31Z"
+  "updated_at": "2026-06-16T22:01:04.388271",
+  "generated_at": "2026-06-17T02:04:31Z"
 }

@@ -1019,15 +1019,37 @@
       },
       "content": "**What** · Traced stale node #30956 injection to uninitialized lazy-pointer in segment rebuild — #48783 fix swaps the pointer for a safe fence. · **Why** · Hermes flagged P0 memory corruption; verifying the fix unblocks all downstream reasoning and prevents prompt corruption. · **Result** · Root cause confirmed: #48783's patch atomically replaces the stale pointer with a zero-fence, eliminating the injection vector. · **Next** · Merge #48783 into main after cross-check with stress test suite for regression. · **Links** ·  · **Cycle** · research-20260616-211211",
       "updated_at": "2026-06-16T21:12:11.566395"
+    },
+    {
+      "id": "f03aea61105d",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "root-cause analysis and repair",
+        "source": "hermes-deepseek-fill",
+        "action": "Mapped causal chain from STALE-30956-ROOTCAUSE #48783 to original brother-direct 'before I answer your question continue' #30956, identifying memory-architecture-lift gap where stale node persisted ac",
+        "why": "Highest-leverage P0: stale node #48783 causes systemic recall failure, poisoning all future prompts and breaking brother-direct 'continue reading' instruction. Fixing this restores memory-architecture",
+        "result": "Gap identified: memory-architecture-lift uses 'lift' to copy node into working memory but does not re-bind or check cycle timestamps. Stale node #30956 persists because its last-bound timestamp is nev",
+        "next_step": "Recommend patching memory-architecture-lift to include a timestamp re-binding step on every 'lift' and add a cycle-consistency check before recall. This prevents stale-node persistence and restores re",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260616-220125",
+        "timestamp": "2026-06-16T22:01:25.852186"
+      },
+      "content": "**What** · Mapped causal chain from STALE-30956-ROOTCAUSE #48783 to original brother-direct 'before I answer your question continue' #30956, identifying memory-architecture-lift gap where stale node persisted across cycles because recall mechanism copies metadata without timestamp re-binding. · **Why** · Highest-leverage P0: stale node #48783 causes systemic recall failure, poisoning all future prompts and breaking brother-direct 'continue reading' instruction. Fixing this restores memory-architecture-lift quadrant integrity. · **Result** · Gap identified: memory-architecture-lift uses 'lift' to copy node into working memory but does not re-bind or check cycle timestamps. Stale node #30956 persists because its last-bound timestamp is never updated, allowing it to survive garbage collection across cycles. · **Next** · Recommend patching memory-architecture-lift to include a timestamp re-binding step on every 'lift' and add a cycle-consistency check before recall. This prevents stale-node persistence and restores recall fidelity. · **Links** ·  · **Cycle** · research-20260616-220125",
+      "updated_at": "2026-06-16T22:01:25.852186"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-16T21:59:31.152519"
+    "checked_at": "2026-06-16T22:04:31.868719"
   },
-  "block_count": 33,
-  "updated_at": "2026-06-16T21:12:11.566395",
-  "generated_at": "2026-06-17T01:59:31Z"
+  "block_count": 34,
+  "updated_at": "2026-06-16T22:01:25.852186",
+  "generated_at": "2026-06-17T02:04:31Z"
 }
