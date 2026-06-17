@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "39884b913105",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-16T18:19:41.719371"
-      },
-      "content": "Hermes decision · arm=infra · priority=P0 · task: Rewrite recall-before-make.sh to detect stale/hijacked graphify nodes by checking parent-edge provenance before dedup · why: #48783 confirms the auto-recall hook is injecting stale node #30956; root cause is the graphify build missed a provenance check. Fixing this is P0 brother-direct infra debt that unblocks all cycles.",
-      "updated_at": "2026-06-16T18:19:41.719385"
-    },
-    {
       "id": "10611d55a8ea",
       "type": "callout",
       "props": {
@@ -378,15 +366,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P1 · task: Identify the three lowest-validity guardrail design patterns in current Pascal coaching pipeline literature to pre-empt 'guard 4' overfitting. · why: Guard 4 (scope violation) triggered a 37% lift, but may be brittle on novel prospect personas; research arm is idle and can surface failure modes via websearch + brain-rrf synthesis before they degrade conversion.",
       "updated_at": "2026-06-17T03:53:46.126247"
+    },
+    {
+      "id": "e2501dbbfda2",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-17T04:24:23.392514"
+      },
+      "content": "Hermes decision · arm=pascal · priority=P1 · task: Validate the 4-guard circuit-breaker mechanism from #48807 by testing with simulated prospect data. · why: Recent canons highlight a novel mechanism that claims 37% vs 15% conversion lift; Pascal arm can run controlled tests to confirm or refine the model.",
+      "updated_at": "2026-06-17T04:24:23.392537"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T04:21:43.955704"
+    "checked_at": "2026-06-17T04:26:44.592328"
   },
   "block_count": 30,
-  "updated_at": "2026-06-17T03:53:46.126249",
-  "generated_at": "2026-06-17T08:21:43Z"
+  "updated_at": "2026-06-17T04:24:23.392539",
+  "generated_at": "2026-06-17T08:26:44Z"
 }

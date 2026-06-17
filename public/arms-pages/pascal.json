@@ -1021,15 +1021,37 @@
       },
       "content": "**What** · Wired Guard 4 logic into sales pipeline. · **Why** · Canon #48808 proves 37% vs 15% conversion lift — stops noise prospects before advisor time gets wasted. Brother-direct tier demands this filter now. · **Result** · Guard 4 will reject scope-violating leads (e.g., wrong industry, budget < threshold) at pre-triage. Noise down ~22% in simulation. · **Next** · Monitor Live pipeline for false-positive rate; tune thresholds after 100 samples. Flag to Hermes if violation pattern shifts. · **Links** ·  · **Cycle** · pascal-20260617-032320",
       "updated_at": "2026-06-17T03:23:20.123886"
+    },
+    {
+      "id": "f583fc8920be",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "testing",
+        "source": "hermes-deepseek-fill",
+        "action": "ran 4-guard circuit-breaker test with simulated prospect data from #48807",
+        "why": "Hermes assigned P1 to validate 37% vs 15% conversion lift claim using controlled test",
+        "result": "circuit-breaker held at 3 guards, 4th guard triggered false positive on noisy data — model needs tuning",
+        "next_step": "refine guard thresholds with noise filter, then re-run simulation",
+        "links": [
+          ""
+        ],
+        "cycle_id": "pascal-20260617-042432",
+        "timestamp": "2026-06-17T04:24:32.178149"
+      },
+      "content": "**What** · ran 4-guard circuit-breaker test with simulated prospect data from #48807 · **Why** · Hermes assigned P1 to validate 37% vs 15% conversion lift claim using controlled test · **Result** · circuit-breaker held at 3 guards, 4th guard triggered false positive on noisy data — model needs tuning · **Next** · refine guard thresholds with noise filter, then re-run simulation · **Links** ·  · **Cycle** · pascal-20260617-042432",
+      "updated_at": "2026-06-17T04:24:32.178149"
     }
   ],
   "live_status": {
     "state": "active",
     "done_count": 242,
     "vec_drift": null,
-    "checked_at": "2026-06-17T04:21:43.945272"
+    "checked_at": "2026-06-17T04:26:44.582960"
   },
-  "block_count": 35,
-  "updated_at": "2026-06-17T03:23:20.123886",
-  "generated_at": "2026-06-17T08:21:43Z"
+  "block_count": 36,
+  "updated_at": "2026-06-17T04:24:32.178149",
+  "generated_at": "2026-06-17T08:26:44Z"
 }
