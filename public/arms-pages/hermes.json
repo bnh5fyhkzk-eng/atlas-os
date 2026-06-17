@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "033eb49c0ed3",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-16T16:01:23.512393"
-      },
-      "content": "Hermes decision · arm=brother · priority=P0 · task: Pull #48774 full recall-gate root cause logs + discover why graphify build was missed; extract actionable fix for recall-gate.mjs · why: Three parked-and-forgotten cycles in a row now cluster around recall infrastructure failures. #48774 is the verified root-cause anchor for the most recent miss. The brother arm is the only arm that holds the complete joint state and can trace the exact sequence from #48694 → #48765 → #48774 without ",
-      "updated_at": "2026-06-16T16:01:23.512406"
-    },
-    {
       "id": "4bac436f5d86",
       "type": "callout",
       "props": {
@@ -724,15 +712,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P0 · task: Verify the 4-guard circuit-breaker mechanism from #48807 against Pascal coaching logs to confirm the 37% vs 15% conversion lift is reproducible and not a statistical artifact. · why: This is a high-arousal, brother-direct insight (#48807) that claims a specific mechanism with a concrete lift. It's P0 because it's identity-tier (Pascal coaching is core to our value) and brother-direct. Confirming this now prevents wasted cycles on unverified claims and could unlock a major coachi",
       "updated_at": "2026-06-16T23:48:34.118099"
+    },
+    {
+      "id": "a1785e6816e2",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-17T00:34:34.607702"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: fix stale node #30956 in auto-recall hook (root cause identified in #48783) · why: Brother and user are blocked by repeated stale node injection; fixing this clears a P0 bug and restores trust in the recall system.",
+      "updated_at": "2026-06-17T00:34:34.607714"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T00:31:04.053153"
+    "checked_at": "2026-06-17T00:36:15.440224"
   },
   "block_count": 30,
-  "updated_at": "2026-06-16T23:48:34.118100",
-  "generated_at": "2026-06-17T04:31:04Z"
+  "updated_at": "2026-06-17T00:34:34.607716",
+  "generated_at": "2026-06-17T04:36:15Z"
 }

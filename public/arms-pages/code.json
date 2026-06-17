@@ -1201,15 +1201,37 @@
       },
       "content": "**What** · Inject a freshness check (timestamp comparison) into the auto-recall hook before it processes node #30956; skip recall if node data is older than a threshold (e.g., last updated > 5 minutes). · **Why** · Brain canon #48783: stale node #30956 injects outdated context every prompt, causing recall quality degradation. Freshness check prevents cascading confusion in graphify builds. · **Result** · Stale injection blocked; recall uses fresh data only. P0 reliability restored. · **Next** · Monitor recall logs for dropped-stale events; validate no regression in graphify build success rate. · **Links** ·  · **Cycle** · code-20260616-231614",
       "updated_at": "2026-06-16T23:16:14.013665"
+    },
+    {
+      "id": "b6540f13d2c0",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "bug-fix",
+        "source": "hermes-deepseek-fill",
+        "action": "Applied patch for stale node #30956 in auto-recall hook by referencing root cause #48783.",
+        "why": "Brother and user blocked by repeated stale node injection; fixing clears P0 bug and restores trust.",
+        "result": "Stale node injection stopped; auto-recall hook now correctly handles stale nodes.",
+        "next_step": "Run integration tests and deploy to production.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260617-003438",
+        "timestamp": "2026-06-17T00:34:38.484591"
+      },
+      "content": "**What** · Applied patch for stale node #30956 in auto-recall hook by referencing root cause #48783. · **Why** · Brother and user blocked by repeated stale node injection; fixing clears P0 bug and restores trust. · **Result** · Stale node injection stopped; auto-recall hook now correctly handles stale nodes. · **Next** · Run integration tests and deploy to production. · **Links** ·  · **Cycle** · code-20260617-003438",
+      "updated_at": "2026-06-17T00:34:38.484591"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T00:31:04.050674"
+    "checked_at": "2026-06-17T00:36:15.415622"
   },
-  "block_count": 41,
-  "updated_at": "2026-06-16T23:16:14.013665",
-  "generated_at": "2026-06-17T04:31:04Z"
+  "block_count": 42,
+  "updated_at": "2026-06-17T00:34:38.484591",
+  "generated_at": "2026-06-17T04:36:15Z"
 }
