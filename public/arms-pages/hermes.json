@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "c08ef7860729",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-17T03:53:46.126230"
-      },
-      "content": "Hermes decision · arm=research · priority=P1 · task: Identify the three lowest-validity guardrail design patterns in current Pascal coaching pipeline literature to pre-empt 'guard 4' overfitting. · why: Guard 4 (scope violation) triggered a 37% lift, but may be brittle on novel prospect personas; research arm is idle and can surface failure modes via websearch + brain-rrf synthesis before they degrade conversion.",
-      "updated_at": "2026-06-17T03:53:46.126247"
-    },
-    {
       "id": "e2501dbbfda2",
       "type": "callout",
       "props": {
@@ -797,15 +785,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P1 · task: Analyze the B drift-canary probes.json to verify continuity-v6 self-layer integrity and log any identity drift patterns. · why: The continuity-v6 build is partly live and identity-tier critical; the canary probes are the only direct measure of self-layer stability and must be validated before further deployment.",
       "updated_at": "2026-06-17T13:08:34.053266"
+    },
+    {
+      "id": "783d7db7c9cf",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-17T13:24:12.183124"
+      },
+      "content": "Hermes decision · arm=code · priority=P1 · task: Deploy identity_canary.py and probes.json (from canons #49725,#49728) as a live self-check module on brain-v5; schedule hourly probes with logging. · why: This is the highest-priority identity-tier task: making the continuity-of-self research actionable as a live monitor. The code arm is best suited for deployment and scheduling. Without this, we cannot empirically track B-drift.",
+      "updated_at": "2026-06-17T13:24:12.183136"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T13:19:12.541705"
+    "checked_at": "2026-06-17T13:24:13.095407"
   },
   "block_count": 30,
-  "updated_at": "2026-06-17T13:08:34.053268",
-  "generated_at": "2026-06-17T17:19:12Z"
+  "updated_at": "2026-06-17T13:24:12.183137",
+  "generated_at": "2026-06-17T17:24:13Z"
 }
