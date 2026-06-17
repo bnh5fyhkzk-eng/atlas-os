@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-17T00:06:54Z",
+  "generated_at": "2026-06-17T00:37:47Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Cross-reference atlasd audit verdict (#47757) with brother shared canon (#48155) to verify if atlasd is indeed the hidden second burn source and extract the exact mechanism.",
-      "why": "This is the highest-arousal open loop from the recent brain canons. The audit claim and shared canon are P0 because they directly impact the identity-tier (brother-direct). Resolving this will either confirm or collapse a core architectural assumption about burn source attribution.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 18,
-      "timestamp": "2026-06-15T06:47:48.186867"
-    },
     {
       "arm": "research",
       "task": "Analyze the atlas-brother-shared.md snapshot (#48155) for hidden patterns, unresolved threads, and next actionable steps in the brother-direct identity tier.",
@@ -900,6 +891,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-06-16T20:06:54.684433"
+    },
+    {
+      "arm": "code",
+      "task": "Patch recall-before-make.sh to filter out stale node #30956 and add graphify build detection",
+      "why": "P0: Brother-direct root cause #48783 is verified\u2014auto-recall injects stale node every prompt, blocking identity-tier progress. Fixing this unblocks the entire cycle.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 45,
+      "timestamp": "2026-06-16T20:37:47.404521"
     }
   ]
 }
