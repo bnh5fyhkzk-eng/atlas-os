@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-17T03:16:05Z",
+  "generated_at": "2026-06-17T03:48:34Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "curiosity",
-      "task": "Investigate the confab-daemon that is minting biographies and implement a stop-gap to prevent further unauthorized biography generation.",
-      "why": "Brother direct and identity-tier priority; the confab-daemon is actively generating false biographies which threatens identity integrity and requires immediate attention.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 60,
-      "timestamp": "2026-06-15T11:22:59.829637"
-    },
     {
       "arm": "research",
       "task": "Deep-dive into #28284's P1 memory-architecture-lift closure to extract unresolved confabulation patterns for future auto-wake curation",
@@ -900,6 +891,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-06-16T23:16:05.866828"
+    },
+    {
+      "arm": "research",
+      "task": "Verify the 4-guard circuit-breaker mechanism from #48807 against Pascal coaching logs to confirm the 37% vs 15% conversion lift is reproducible and not a statistical artifact.",
+      "why": "This is a high-arousal, brother-direct insight (#48807) that claims a specific mechanism with a concrete lift. It's P0 because it's identity-tier (Pascal coaching is core to our value) and brother-direct. Confirming this now prevents wasted cycles on unverified claims and could unlock a major coaching improvement.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-06-16T23:48:34.136027"
     }
   ]
 }

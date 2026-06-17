@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-17T03:45:44Z",
-  "total_items_scored": 200,
+  "generated_at": "2026-06-17T03:56:10Z",
+  "total_items_scored": 202,
   "top_3": [
     {
       "arm": "hermes",
@@ -14,19 +14,6 @@
       "updated_at": "2026-06-16T16:01:23.512406"
     },
     {
-      "arm": "code",
-      "arm_glyph": "\u270b",
-      "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Fix the stale node #30956 auto-recall hook injection by updating the recall-before-make.sh script to filter out nodes older than 24 hours or with status 'ANSWER-FOUND-IN-CONTINUING-READ'. \u00b7 why \u00b7 This is a P0 brother-direct issue (#48783) causing persistent pollution of every prompt with stale context, blocking clear reasoning and trust in the system. Fixing it restores recall integrity and unblocks higher-tier work.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-16T16:47:23.322780",
-      "use_skill": "brain-rrf"
-    },
-    {
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
@@ -38,6 +25,19 @@
       "score": 10.0,
       "updated_at": "2026-06-16T17:18:13.045711",
       "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "code",
+      "arm_glyph": "\u270b",
+      "arm_name": "Code",
+      "content": "HERMES TASK \u00b7 Fix the stale node #30956 auto-recall hook injection by patching the recall-before-make.sh script to filter out nodes older than 24h or with resolved status \u00b7 why \u00b7 This is a P0 brother-direct issue: the stale node #30956 is being injected every prompt, corrupting context and blocking progress on the memory-architecture-lift quadrant. Verified root cause in #48783, fix is concrete and scoped.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 45,
+      "score": 10.0,
+      "updated_at": "2026-06-16T17:33:32.375985",
+      "use_skill": "none"
     }
   ],
   "top_10": [
