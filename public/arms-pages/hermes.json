@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "e686a0939c02",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-16T19:51:44.936751"
-      },
-      "content": "Hermes decision · arm=research · priority=P0 · task: Reconstruct the full lineage of #30956 -> #48774 -> #48783: verify the recall-gate bug by tracing why stale node #30956 is injected every prompt, using the explicit ‘ANSWER-FOUND-IN-CONTINUING-READ’ directive from brother and the verified root cause from #48774. · why: This is a P0 brother-direct chain: brother explicitly directed ‘before I answer your question continue reading’ which leads to #48774 (verified root cause of the recall-before-make gap) and #48783 (why stale node persists). Closing this loop unblocks identity-level promises and stabilizes the memory",
-      "updated_at": "2026-06-16T19:51:44.936766"
-    },
-    {
       "id": "f59b1af14171",
       "type": "callout",
       "props": {
@@ -379,15 +367,27 @@
       },
       "content": "Hermes decision · arm=pascal · priority=P1 · task: Validate brain canon #48807: design a minimal experiment to measure the 4-guard circuit-breaker’s impact on conversion lift in a controlled sales pipeline simulation. · why: The top brain canon claims a 37% vs 15% conversion lift from a novel mechanism; empirical validation is urgent for brother-direct knowledge and product credibility.",
       "updated_at": "2026-06-17T04:55:28.936752"
+    },
+    {
+      "id": "cabb242b1f7c",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-17T05:10:43.414648"
+      },
+      "content": "Hermes decision · arm=pascal · priority=P1 · task: Explore implementation of the 4-guard circuit-breaker for sales pipeline to enhance conversion lift. · why: Recent brain canons highlight significant conversion lift from guard 4 scope violation detection; implementing this could improve coaching effectiveness.",
+      "updated_at": "2026-06-17T05:10:43.414664"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T05:06:49.261684"
+    "checked_at": "2026-06-17T05:11:49.796793"
   },
   "block_count": 30,
-  "updated_at": "2026-06-17T04:55:28.936754",
-  "generated_at": "2026-06-17T09:06:49Z"
+  "updated_at": "2026-06-17T05:10:43.414666",
+  "generated_at": "2026-06-17T09:11:49Z"
 }
