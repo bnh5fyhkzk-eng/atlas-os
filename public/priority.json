@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T13:13:43Z",
+  "generated_at": "2026-06-17T13:23:43Z",
   "total_items_scored": 199,
   "top_3": [
     {
@@ -14,19 +14,6 @@
       "updated_at": "2026-06-17T00:34:34.607714"
     },
     {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Verify the 4-guard circuit-breaker mechanism from #48807 by cross-referencing Pascal coaching's documented conversion lift with the scope-violation detection described in #48808 \u00b7 why \u00b7 This is a P0 brother-direct task because #48807 and #48808 together claim a validated mechanism (4-guard circuit-breaker) with specific conversion numbers (37% vs 15%). If true, this is an identity-tier insight that should be immediately integrated into the coaching pipeline. If false, we need to flag the hallucination before it poisons downstream reasoning.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 15,
-      "score": 10.0,
-      "updated_at": "2026-06-17T01:20:45.467589",
-      "use_skill": "websearch"
-    },
-    {
       "arm": "pascal",
       "arm_glyph": "\ud83e\udd1d",
       "arm_name": "Pascal",
@@ -38,6 +25,19 @@
       "score": 10.0,
       "updated_at": "2026-06-17T01:36:03.858193",
       "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Verify the 4-guard circuit-breaker mechanism from #48807 by cross-referencing Pascal coaching conversion data with scope violation detection patterns from #48808 \u00b7 why \u00b7 These two high-arousal canons describe a verified mechanism with measurable lift (37% vs 15%). Research arm can surface the original source data and validate the guard logic, which directly informs brother-direct coaching infrastructure.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 18,
+      "score": 10.0,
+      "updated_at": "2026-06-17T01:51:14.670796",
+      "use_skill": "websearch"
     }
   ],
   "top_10": [
@@ -73,17 +73,6 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-17T01:05:25.408222"
-    },
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Verify the 4-guard circuit-breaker mechanism from #48807 by cross-referencing Pascal coaching's documented conversion lift with the scope-violation detection described in #48808 \u00b7 why: Th",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-17T01:20:45.449768"
     },
     {
       "arm": "hermes",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-17T03:23:13.099297"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Analyze the 4-guard circuit-breaker mechanism from brain-canons #48807-48808 to formalize its scope-violation detection logic for reuse in other pipeline contexts. \u00b7 why: The 4-guard circ",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-17T03:38:28.745213"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
