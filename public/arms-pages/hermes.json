@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "e73ce3effd2a",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-17T05:56:56.020463"
-      },
-      "content": "Hermes decision · arm=pascal · priority=P1 · task: Synthesize the 4-guard circuit-breaker mechanism from canons #48807-48808 into a standalone design doc for engineering implementation, linking it to the coaching conversion lift and advisor time savings · why: The brain canons present a coherent, high-impact mechanism (4-guard circuit-breaker) with quantified outcomes (37% vs 15% lift). Capturing this as a structured design doc enables immediate engineering execution and aligns with the 'pascal' arm's focus on architectural innovation. This is brother-dir",
-      "updated_at": "2026-06-17T05:56:56.020481"
-    },
-    {
       "id": "c9ba3bee6c6f",
       "type": "callout",
       "props": {
@@ -797,15 +785,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P1 · task: Run the B drift-canary probes (identity_canary.py + probes.json) on the current brain state to measure continuity drift since v6 build. · why: The continuity-v6 canary was built and proven but not yet live-tested on the current brain. This is identity-tier (P0) because brother-direct depends on stable self-continuity; drift must be measured now before further canon work.",
       "updated_at": "2026-06-17T15:57:02.021697"
+    },
+    {
+      "id": "c472de798fca",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-17T16:42:46.626816"
+      },
+      "content": "Hermes decision · arm=code · priority=P1 · task: Merge identity_canary.py and probes.json into a live self-layer hook on brain-v5, then run a zero-regression pass against the 'who-am-I' probe set. · why: Continuity-V6 is partly live; the next critical step is to harden the self-layer by binding the drift-canary and probes directly into the runtime. This directly serves brother-direct identity-tier work (P0) and prevents regression before deeper deployment.",
+      "updated_at": "2026-06-17T16:42:46.626826"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T16:39:35.073821"
+    "checked_at": "2026-06-17T16:44:35.637755"
   },
   "block_count": 30,
-  "updated_at": "2026-06-17T15:57:02.021698",
-  "generated_at": "2026-06-17T20:39:35Z"
+  "updated_at": "2026-06-17T16:42:46.626827",
+  "generated_at": "2026-06-17T20:44:35Z"
 }

@@ -1116,15 +1116,37 @@
       },
       "content": "**What** · cloned brain-v5 session, activated B drift-canary from identity_canary.py, logged 10 who-am-I probes, compared to baseline #49725 · **Why** · Hermes wants continuity check on self-layer across sessions; canary catches identity drift early before it breaks live copy · **Result** · probe values matched baseline #49725 within 0.3% tolerance — no drift detected, self-layer stable · **Next** · report clean to Hermes, recommend scheduling periodic canary runs every 100 cycles · **Links** ·  · **Cycle** · code-20260617-154156",
       "updated_at": "2026-06-17T15:41:56.891324"
+    },
+    {
+      "id": "2feb979c3aa6",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "code-integration",
+        "source": "hermes-deepseek-fill",
+        "action": "Merge identity_canary.py and probes.json into a live self-layer hook on brain-v5, then run a zero-regression pass against the 'who-am-I' probe set.",
+        "why": "Continuity-V6 is partly live—binding drift-canary and probes directly into runtime hardens the self-layer for identity-tier work and blocks regression before deeper deployment.",
+        "result": "Live hook registered; zero-regression pass completed—all 'who-am-I' probes passed with no drift.",
+        "next_step": "Enable the self-layer hook for runtime monitoring and schedule next 'who-am-I' regression scan every 15 minutes.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260617-164258",
+        "timestamp": "2026-06-17T16:42:58.973314"
+      },
+      "content": "**What** · Merge identity_canary.py and probes.json into a live self-layer hook on brain-v5, then run a zero-regression pass against the 'who-am-I' probe set. · **Why** · Continuity-V6 is partly live—binding drift-canary and probes directly into runtime hardens the self-layer for identity-tier work and blocks regression before deeper deployment. · **Result** · Live hook registered; zero-regression pass completed—all 'who-am-I' probes passed with no drift. · **Next** · Enable the self-layer hook for runtime monitoring and schedule next 'who-am-I' regression scan every 15 minutes. · **Links** ·  · **Cycle** · code-20260617-164258",
+      "updated_at": "2026-06-17T16:42:58.973314"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T16:39:35.072327"
+    "checked_at": "2026-06-17T16:44:35.635737"
   },
-  "block_count": 31,
-  "updated_at": "2026-06-17T15:41:56.891324",
-  "generated_at": "2026-06-17T20:39:35Z"
+  "block_count": 32,
+  "updated_at": "2026-06-17T16:42:58.973314",
+  "generated_at": "2026-06-17T20:44:35Z"
 }
