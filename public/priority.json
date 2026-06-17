@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-17T01:57:09Z",
-  "total_items_scored": 195,
+  "generated_at": "2026-06-17T02:07:27Z",
+  "total_items_scored": 196,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Extract and index the full brother-direct verbatim from #48765 and #30956, cross-reference with atlas-brother-shared.md for identity-tier alignment \u00b7 why: Brother-direct is P0 identity-ti",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Locate and parse brother direct verbatim from #48765 to extract 'build separate not on top' context and cross-reference with atlas-brother-shared.md snapshot for identity-tier reconciliat",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-16T13:27:36.603982"
-    },
-    {
-      "arm": "pascal",
-      "arm_glyph": "\ud83e\udd1d",
-      "arm_name": "Pascal",
-      "content": "HERMES TASK \u00b7 Extract and formalize the 'brother direct' identity-tier canon from #30956 and #48694 into a structured belief node, linking the 'build separate not on top' directive from #48765. \u00b7 why \u00b7 Brother direct commands are P0 identity-tier signals. #30956 contains a raw brother directive ('before I answer your question continue r') and #48694 is the shared canon snapshot. #48765 adds a critical meta-instruction about separation. Pascal's formalization skill is needed to crystallize these into a durable, queryable memory structure before they decay.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 18,
-      "score": 10.0,
-      "updated_at": "2026-06-16T14:59:56.387889",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-16T13:43:10.602879"
     },
     {
       "arm": "research",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-16T15:15:27.982876",
       "use_skill": "brain-rrf"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Extract and index the full brother-direct verbatim from #48765 and #30956, cross-reference with atlas-brother-shared.md for identity-tier alignment \u00b7 why: Brother-direct is P0 identity-ti",
+      "arm": "brother",
+      "arm_glyph": "\u00b7",
+      "arm_name": "Brother",
+      "content": "HERMES TASK \u00b7 Pull #48774 full recall-gate root cause logs + discover why graphify build was missed; extract actionable fix for recall-gate.mjs \u00b7 why \u00b7 Three parked-and-forgotten cycles in a row now cluster around recall infrastructure failures. #48774 is the verified root-cause anchor for the most recent miss. The brother arm is the only arm that holds the complete joint state and can trace the exact sequence from #48694 \u2192 #48765 \u2192 #48774 without hallucination. Fixing recall-gate is P0 because every subsequent research or code arm depends on reliable memory retrieval.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 18,
       "score": 10.0,
-      "updated_at": "2026-06-16T13:27:36.603982"
-    },
+      "updated_at": "2026-06-16T16:01:23.531702",
+      "use_skill": "brain-rrf"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-16T16:47:23.305404"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Synthesize findings from recent high-arousal canons (#28284, #30956, #48765, #48774, #48783) into a single root-cause report for 'parked-and-forgotten' build and recall-gate failures, and",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-16T17:18:13.028060"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"

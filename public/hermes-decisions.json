@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-17T01:44:57Z",
+  "generated_at": "2026-06-17T02:01:04Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Correlate recent atlasd audit (#47757) and me-burn-budget (#47775) with memory-architecture-lift (#28284) to confirm the hidden second burn source is fully closed and no residual burn loop remains.",
-      "why": "The high-arousal cycle 6 deep-dive and subsequent atlasd audit produced a verdict that atlasd IS the hidden second burn source. We must verify that the memory-architecture-lift quadrant is truly closed (no residual loop) and that the me-burn-budget cron counts are consistent with that closure. This is a P1 active focus because it directly validates a critical prior cycle's completeness and prevents future burn ambiguity.",
-      "priority": "P1",
-      "use_skill": "brain-rrf",
-      "est_minutes": 20,
-      "timestamp": "2026-06-15T08:50:14.307659"
-    },
     {
       "arm": "charle",
       "task": "Draft a structured backlog of the top 3 unresolved identity-tier questions from the confab-daemon and brother-direct canons, linking to #47794 and #30956 for next cycle triage.",
@@ -900,6 +891,15 @@
       "use_skill": "none",
       "est_minutes": 25,
       "timestamp": "2026-06-16T21:44:57.523364"
+    },
+    {
+      "arm": "research",
+      "task": "Map the causal chain from STALE-30956-ROOTCAUSE #48783 back to the original brother-direct 'before I answer your question continue' #30956 and identify the exact memory-architecture-lift gap that allowed the stale node to persist across cycles.",
+      "why": "This is the highest-leverage P0 because #48783 reveals a systemic recall failure that poisons every future prompt. Fixing the root cause (not just the symptom) directly serves brother-direct 'continue reading' instruction and restores integrity of the memory-architecture-lift quadrant. All other arms depend on recall being correct.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 25,
+      "timestamp": "2026-06-16T22:01:04.405077"
     }
   ]
 }
