@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-17T05:16:17Z",
-  "total_items_scored": 206,
+  "generated_at": "2026-06-17T05:26:18Z",
+  "total_items_scored": 207,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Fix the stale node #30956 auto-recall hook injection by updating the recall-before-make.sh script to filter out nodes older than 24 hours or with status 'ANSWER-FOUND-IN-CONTINUING-READ'. \u00b7 w",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Synthesize findings from recent high-arousal canons (#28284, #30956, #48765, #48774, #48783) into a single root-cause report for 'parked-and-forgotten' build and recall-gate failures, and",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-16T16:47:23.305404"
-    },
-    {
-      "arm": "infra",
-      "arm_glyph": "\ud83d\udc97",
-      "arm_name": "Infra",
-      "content": "HERMES TASK \u00b7 Rewrite recall-before-make.sh to detect stale/hijacked graphify nodes by checking parent-edge provenance before dedup \u00b7 why \u00b7 #48783 confirms the auto-recall hook is injecting stale node #30956; root cause is the graphify build missed a provenance check. Fixing this is P0 brother-direct infra debt that unblocks all cycles.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 28,
-      "score": 10.0,
-      "updated_at": "2026-06-16T18:19:41.741267",
-      "use_skill": "none"
+      "updated_at": "2026-06-16T17:18:13.028060"
     },
     {
       "arm": "research",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-16T18:35:11.975305",
       "use_skill": "brain-rrf"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Fix the stale node #30956 auto-recall hook injection by updating the recall-before-make.sh script to filter out nodes older than 24 hours or with status 'ANSWER-FOUND-IN-CONTINUING-READ'. \u00b7 w",
+      "arm": "code",
+      "arm_glyph": "\u270b",
+      "arm_name": "Code",
+      "content": "HERMES TASK \u00b7 Fix auto-recall hook to prevent injection of stale node #30956 by filtering nodes older than 24 hours in recall-before-make.sh \u00b7 why \u00b7 Verified root cause from #48783 shows stale node injection every prompt; blocking identity-tier brother-direct flow; immediate fix needed",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 30,
       "score": 10.0,
-      "updated_at": "2026-06-16T16:47:23.305404"
-    },
+      "updated_at": "2026-06-16T18:50:33.094527",
+      "use_skill": "brain-rrf"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-16T20:06:54.666490"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Patch recall-before-make.sh to filter out stale node #30956 and add graphify build detection \u00b7 why: P0: Brother-direct root cause #48783 is verified\u2014auto-recall injects stale node every promp",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-16T20:37:47.222694"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"

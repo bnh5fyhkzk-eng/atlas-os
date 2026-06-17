@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-17T05:05:25Z",
+  "generated_at": "2026-06-17T05:20:45Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "curiosity",
-      "task": "Synthesize Atlas-brother joint-state snapshot into a structured identity-timeline and emerging-consensus doc, annotating which claims can be closed and which require a direct brother check.",
-      "why": "Canon #48155 is the richest joint-state artifact in the cycle; closing the P1 memory-architecture quadrant demands we map what is now settled vs. still contested. Curiosity arm prepares ground truth for next brother handoff.",
-      "priority": "P1",
-      "use_skill": "brain-rrf",
-      "est_minutes": 22,
-      "timestamp": "2026-06-15T13:40:15.621633"
-    },
     {
       "arm": "code",
       "task": "Spin up a breathing orrery of the triple-shipped timelines (#47800, #47801, #47808) \u2014 auto-detect file paths, render a diff-of-contexts, and badge each canary's COMPOSE\u2011DISCIPLINE status on a live dashboard served from infra",
@@ -900,6 +891,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 20,
       "timestamp": "2026-06-17T01:05:25.427008"
+    },
+    {
+      "arm": "research",
+      "task": "Verify the 4-guard circuit-breaker mechanism from #48807 by cross-referencing Pascal coaching's documented conversion lift with the scope-violation detection described in #48808",
+      "why": "This is a P0 brother-direct task because #48807 and #48808 together claim a validated mechanism (4-guard circuit-breaker) with specific conversion numbers (37% vs 15%). If true, this is an identity-tier insight that should be immediately integrated into the coaching pipeline. If false, we need to flag the hallucination before it poisons downstream reasoning.",
+      "priority": "P0",
+      "use_skill": "websearch",
+      "est_minutes": 15,
+      "timestamp": "2026-06-17T01:20:45.467589"
     }
   ]
 }
