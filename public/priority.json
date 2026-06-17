@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-06-17T05:46:19Z",
-  "total_items_scored": 208,
+  "generated_at": "2026-06-17T05:56:20Z",
+  "total_items_scored": 209,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Fix the stale node #30956 auto-recall hook injection by patching the recall-before-make.sh script to filter out nodes older than 24h or with resolved status \u00b7 why: This is a P0 brother-direct",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Fix the stale node #30956 auto-recall injection by patching the recall-before-make.sh hook to filter out nodes older than the current cycle's timestamp. \u00b7 why: This is a P0 brother-direct iss",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-16T17:33:32.353922"
+      "updated_at": "2026-06-16T18:04:26.065850"
     },
     {
       "arm": "code",
       "arm_glyph": "\u270b",
       "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Fix auto-recall hook to prevent injection of stale node #30956 by filtering nodes older than 24 hours in recall-before-make.sh \u00b7 why \u00b7 Verified root cause from #48783 shows stale node injection every prompt; blocking identity-tier brother-direct flow; immediate fix needed",
+      "content": "HERMES TASK \u00b7 Fix `auto-recall hook` to stop injecting stale node #30956 by filtering on `answered_ts > prompt_ts` check in recall-before-make.sh \u00b7 why \u00b7 Brother-direct root-cause from #48783 verified \u2014 this stale-injection blocks memory-space quadrant closure and re-triggers past research loops every prompt. Fixing it unblocks P1 node lifecycle.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 30,
+      "est_minutes": 25,
       "score": 10.0,
-      "updated_at": "2026-06-16T18:50:33.094527",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-16T19:36:07.267137",
+      "use_skill": "none"
     },
     {
       "arm": "research",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Fix the stale node #30956 auto-recall hook injection by patching the recall-before-make.sh script to filter out nodes older than 24h or with resolved status \u00b7 why: This is a P0 brother-direct",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-16T17:33:32.353922"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-16T20:54:55.514815"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Verify root cause of stale node #30956 injection and confirm fix path from #48783 \u00b7 why: Brother-direct P0: #48783 identifies a verified stale-injection bug that corrupts every prompt. Fi",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-16T21:11:16.921702"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"

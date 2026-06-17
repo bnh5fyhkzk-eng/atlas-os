@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-17T05:36:03Z",
+  "generated_at": "2026-06-17T05:51:14Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "curiosity",
-      "task": "Scan the most recent 48 hours of brother-direct canaries and shared canon for any unresolved P0 escalations or contradictions that affect identity-tier reasoning.",
-      "why": "Recent auto-wake and shared-canon snapshots (e.g., #48155, #48159) indicate high-frequency state updates; a curiosity sweep ensures no P0 signal is missed before other arms commit to deeper dives.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 12,
-      "timestamp": "2026-06-15T14:26:36.280778"
-    },
     {
       "arm": "dream",
       "task": "Review the brother-direct pattern in the 2016-05 interactions (#28284, #47808, #48155) and distill a shared-canon proposal for the dream arm's role in identity-tier synchronization.",
@@ -900,6 +891,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 90,
       "timestamp": "2026-06-17T01:36:03.858193"
+    },
+    {
+      "arm": "research",
+      "task": "Verify the 4-guard circuit-breaker mechanism from #48807 by cross-referencing Pascal coaching conversion data with scope violation detection patterns from #48808",
+      "why": "These two high-arousal canons describe a verified mechanism with measurable lift (37% vs 15%). Research arm can surface the original source data and validate the guard logic, which directly informs brother-direct coaching infrastructure.",
+      "priority": "P0",
+      "use_skill": "websearch",
+      "est_minutes": 18,
+      "timestamp": "2026-06-17T01:51:14.670796"
     }
   ]
 }
