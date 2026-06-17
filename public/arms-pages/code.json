@@ -1113,15 +1113,37 @@
       },
       "content": "**What** · Patched recall-before-make.sh by adding node #30956 stale-filter and graphify build detection. · **Why** · Brother-direct root cause #48783 verified: auto-recall always injects stale node #30956, blocking identity-tier. Filtering it unblocks the cycle; graphify detection prevents similar stale builds. · **Result** · Script now skips node #30956 during recall and triggers graphify check before make. Expected: no stale node injection, identity-tier progress resumes. · **Next** · Monitor next cycle for node #30956 absence; if success, close #48783 and propagate patch to all agent arms. · **Links** ·  · **Cycle** · code-20260616-203835",
       "updated_at": "2026-06-16T20:38:35.876980"
+    },
+    {
+      "id": "df69cc763175",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "code-fix",
+        "source": "hermes-deepseek-fill",
+        "action": "Will patch `recall-before-make.sh` to add graphify-build freshness check before auto-recall hook triggers.",
+        "why": "Root cause in #48783 shows stale node #30956 was recalled because freshness check was missing; #48774 confirmed the gap. This fix prevents prompt pollution and restores reliable memory architecture.",
+        "result": "Auto-recall will skip stale nodes by comparing graphify-build timestamp before execution.",
+        "next_step": "Deploy patched script to production and verify #48783 is closed.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260616-205505",
+        "timestamp": "2026-06-16T20:55:05.454848"
+      },
+      "content": "**What** · Will patch `recall-before-make.sh` to add graphify-build freshness check before auto-recall hook triggers. · **Why** · Root cause in #48783 shows stale node #30956 was recalled because freshness check was missing; #48774 confirmed the gap. This fix prevents prompt pollution and restores reliable memory architecture. · **Result** · Auto-recall will skip stale nodes by comparing graphify-build timestamp before execution. · **Next** · Deploy patched script to production and verify #48783 is closed. · **Links** ·  · **Cycle** · code-20260616-205505",
+      "updated_at": "2026-06-16T20:55:05.454848"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-16T20:54:32.538769"
+    "checked_at": "2026-06-16T20:59:43.078257"
   },
-  "block_count": 37,
-  "updated_at": "2026-06-16T20:38:35.876980",
-  "generated_at": "2026-06-17T00:54:32Z"
+  "block_count": 38,
+  "updated_at": "2026-06-16T20:55:05.454848",
+  "generated_at": "2026-06-17T00:59:43Z"
 }
