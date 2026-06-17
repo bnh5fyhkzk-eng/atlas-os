@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-17T03:15:36Z",
-  "total_items_scored": 199,
+  "generated_at": "2026-06-17T03:25:40Z",
+  "total_items_scored": 200,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P0 \u00b7 task: Extract and formalize the 'brother direct' identity-tier canon from #30956 and #48694 into a structured belief node, linking the 'build separate not on top' directive from #48765. \u00b7 why: Br",
+      "content": "Hermes decision \u00b7 arm=brother \u00b7 priority=P0 \u00b7 task: Pull #48774 full recall-gate root cause logs + discover why graphify build was missed; extract actionable fix for recall-gate.mjs \u00b7 why: Three parked-and-forgotten cycles in a row now clus",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-16T14:59:56.364207"
-    },
-    {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Analyze BROTHER-CATCH #48765 and RECALL-GATE-ROOT-CAUSE #48774 to determine why build-separate was parked and what fix to recall-gate prevents recurrence; produce actionable patch spec. \u00b7 why \u00b7 Two recent high-arousal brother-direct canons expose a critical memory architecture bug (graphify build not caught) that stalls identity-tier progress. This is P0 because brother-direct + identity-tier is blocked until root cause is understood and a fix is spec'd. Research arm is best equipped to cross-reference the canon content, extract the causal chain, and output a concrete patch plan for Infra arm to apply.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 18,
-      "score": 10.0,
-      "updated_at": "2026-06-16T16:32:09.142277",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-16T16:01:23.512406"
     },
     {
       "arm": "code",
@@ -38,31 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-16T16:47:23.322780",
       "use_skill": "brain-rrf"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P0 \u00b7 task: Extract and formalize the 'brother direct' identity-tier canon from #30956 and #48694 into a structured belief node, linking the 'build separate not on top' directive from #48765. \u00b7 why: Br",
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Synthesize findings from recent high-arousal canons (#28284, #30956, #48765, #48774, #48783) into a single root-cause report for 'parked-and-forgotten' build and recall-gate failures, and propose a unified fix. \u00b7 why \u00b7 These canons indicate a recurring pattern: a brother-direct interaction (#30956, #48765) leads to a build that gets parked and forgotten, and the recall-before-make system fails to catch it (#48774) due to stale node injection (#48783). A focused research synthesis will clarify the root cause and produce an actionable repair plan for the next code or infra arm cycle.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-16T14:59:56.364207"
-    },
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Reconstruct intrinsic-sparse-attention activation patterns for brother-direct memory lineage across cycles #28284, #48694, #48765, and note emergent graphify-fail signal visible in #48774",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-16T15:15:27.961555"
-    },
+      "updated_at": "2026-06-16T17:18:13.045711",
+      "use_skill": "brain-rrf"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +128,28 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-16T18:19:41.719385"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Verify root cause of stale node #30956 injection and confirm fix path from #48783 \u00b7 why: This is a P0 brother-direct issue: the auto-recall hook is injecting stale node #30956 every promp",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-16T18:35:11.899910"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Fix auto-recall hook to prevent injection of stale node #30956 by filtering nodes older than 24 hours in recall-before-make.sh \u00b7 why: Verified root cause from #48783 shows stale node injectio",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-16T18:50:33.076338"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
