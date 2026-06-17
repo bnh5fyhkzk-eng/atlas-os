@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T05:26:18Z",
+  "generated_at": "2026-06-17T05:36:19Z",
   "total_items_scored": 207,
   "top_3": [
     {
@@ -14,19 +14,6 @@
       "updated_at": "2026-06-16T17:18:13.028060"
     },
     {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Verify root cause of stale node #30956 injection and confirm fix path from #48783 \u00b7 why \u00b7 This is a P0 brother-direct issue: the auto-recall hook is injecting stale node #30956 every prompt, breaking recall integrity. #48783 already identified the root cause (verified, not theorized), so we need to close the loop by confirming the fix and ensuring no recurrence.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 15,
-      "score": 10.0,
-      "updated_at": "2026-06-16T18:35:11.975305",
-      "use_skill": "brain-rrf"
-    },
-    {
       "arm": "code",
       "arm_glyph": "\u270b",
       "arm_name": "Code",
@@ -37,6 +24,19 @@
       "est_minutes": 30,
       "score": 10.0,
       "updated_at": "2026-06-16T18:50:33.094527",
+      "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Reconstruct the full lineage of #30956 -> #48774 -> #48783: verify the recall-gate bug by tracing why stale node #30956 is injected every prompt, using the explicit \u2018ANSWER-FOUND-IN-CONTINUING-READ\u2019 directive from brother and the verified root cause from #48774. \u00b7 why \u00b7 This is a P0 brother-direct chain: brother explicitly directed \u2018before I answer your question continue reading\u2019 which leads to #48774 (verified root cause of the recall-before-make gap) and #48783 (why stale node persists). Closing this loop unblocks identity-level promises and stabilizes the memory architecture. Research arm is most suited for deep causal graph analysis.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 35,
+      "score": 10.0,
+      "updated_at": "2026-06-16T19:51:44.957640",
       "use_skill": "brain-rrf"
     }
   ],
