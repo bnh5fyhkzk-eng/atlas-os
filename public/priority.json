@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-17T07:56:26Z",
-  "total_items_scored": 216,
+  "generated_at": "2026-06-17T08:06:27Z",
+  "total_items_scored": 217,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Fix the stale node #30956 auto-recall injection by patching the recall-before-make.sh hook to filter out nodes older than the current cycle's timestamp. \u00b7 why: This is a P0 brother-direct iss",
+      "content": "Hermes decision \u00b7 arm=infra \u00b7 priority=P0 \u00b7 task: Rewrite recall-before-make.sh to detect stale/hijacked graphify nodes by checking parent-edge provenance before dedup \u00b7 why: #48783 confirms the auto-recall hook is injecting stale node #309",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-16T18:04:26.065850"
+      "updated_at": "2026-06-16T18:19:41.719385"
     },
     {
       "arm": "code",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Fix the stale node #30956 auto-recall injection by patching the recall-before-make.sh hook to filter out nodes older than the current cycle's timestamp. \u00b7 why: This is a P0 brother-direct iss",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-16T18:04:26.065850"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-16T21:11:16.921702"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: Fix stale node #30956 injection by updating auto-recall hook to filter out nodes older than 24 hours \u00b7 why: Recent brain canons show verified root cause of stale node injection (RECALL-GATE-R",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-16T21:27:26.394591"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
