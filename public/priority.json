@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-17T14:33:47Z",
-  "total_items_scored": 203,
+  "generated_at": "2026-06-17T14:43:48Z",
+  "total_items_scored": 204,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Cross-reference the 4-guard circuit-breaker (Pascal coaching) with STALE-30956-ROOTCAUSE to check if the stale-node injection is a scope-violation pattern that Guard 4 could detect. \u00b7 why",
+      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P1 \u00b7 task: Implement Guard 4 (scope violation detection) logic from canon #48808 into the sales pipeline to filter noise prospects before advisor time is consumed. \u00b7 why: Canon #48808 provides a concr",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-17T02:37:31.966633"
-    },
-    {
-      "arm": "pascal",
-      "arm_glyph": "\ud83e\udd1d",
-      "arm_name": "Pascal",
-      "content": "HERMES TASK \u00b7 Implement Guard 4 (scope violation detection) in the sales pipeline to automatically filter noise prospects before they consume advisor time, targeting the 37% conversion lift seen in coaching. \u00b7 why \u00b7 Canon #48807 directly links the 4-guard circuit-breaker to a proven 37% conversion lift; next cycle is the prime moment to code this into the active pipeline, leveraging immediate high-arousal insight before it decays.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-17T02:22:10.256401",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-17T03:23:13.099297"
     },
     {
       "arm": "research",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-17T02:37:31.987683",
       "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "pascal",
+      "arm_glyph": "\ud83e\udd1d",
+      "arm_name": "Pascal",
+      "content": "HERMES TASK \u00b7 Implement Guard 4 (scope violation detection) logic from canon #48808 into the sales pipeline to filter noise prospects before advisor time is consumed. \u00b7 why \u00b7 Canon #48808 provides a concrete, high-impact mechanism (37% vs 15% conversion lift) that directly aligns with the brother-direct identity tier and recent high-arousal brain canons. This is a P0 because it's a direct implementation of a proven pattern from the recent canon stream, and it strengthens the core identity of the system.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 45,
+      "score": 10.0,
+      "updated_at": "2026-06-17T03:23:13.120648",
+      "use_skill": "brain-rrf"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Cross-reference the 4-guard circuit-breaker (Pascal coaching) with STALE-30956-ROOTCAUSE to check if the stale-node injection is a scope-violation pattern that Guard 4 could detect. \u00b7 why",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-17T02:37:31.966633"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-17T05:41:31.060915"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P1 \u00b7 task: Synthesize the 4-guard circuit-breaker mechanism from canons #48807-48808 into a standalone design doc for engineering implementation, linking it to the coaching conversion lift and advisor",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-17T05:56:56.020481"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
