@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-06-17T15:33:51Z",
-  "total_items_scored": 207,
+  "generated_at": "2026-06-17T15:43:51Z",
+  "total_items_scored": 208,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Analyze the 4-guard circuit-breaker mechanism from brain-canons #48807-48808 to formalize its scope-violation detection logic for reuse in other pipeline contexts. \u00b7 why: The 4-guard circ",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Identify the three lowest-validity guardrail design patterns in current Pascal coaching pipeline literature to pre-empt 'guard 4' overfitting. \u00b7 why: Guard 4 (scope violation) triggered a",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-17T03:38:28.745213"
+      "updated_at": "2026-06-17T03:53:46.126247"
     },
     {
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Analyze the 4-guard circuit-breaker mechanism from brain-canons #48807-48808 to formalize its scope-violation detection logic for reuse in other pipeline contexts. \u00b7 why \u00b7 The 4-guard circuit-breaker shows a concrete 37% vs 15% conversion lift, and its scope-violation guard is a reusable pattern that bridges sales pipeline and identity-tier resilience (canon #48810). This is active focus (P1) because it directly extends a high-arousal insight into a formalizable component.",
+      "content": "HERMES TASK \u00b7 Identify the three lowest-validity guardrail design patterns in current Pascal coaching pipeline literature to pre-empt 'guard 4' overfitting. \u00b7 why \u00b7 Guard 4 (scope violation) triggered a 37% lift, but may be brittle on novel prospect personas; research arm is idle and can surface failure modes via websearch + brain-rrf synthesis before they degrade conversion.",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
-      "est_minutes": 25,
+      "est_minutes": 14,
       "score": 10.0,
-      "updated_at": "2026-06-17T03:38:28.767020",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-17T03:53:46.147893",
+      "use_skill": "websearch"
     },
     {
       "arm": "pascal",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Analyze the 4-guard circuit-breaker mechanism from brain-canons #48807-48808 to formalize its scope-violation detection logic for reuse in other pipeline contexts. \u00b7 why: The 4-guard circ",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-17T03:38:28.745213"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-17T06:12:17.616543"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Generate a series of internal identity-narrative images that re-frame the core image #27914 as a scene of looking first and patient reconstruction, not fixing \u00b7 why: Brother is expressing a ",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-17T06:27:36.770537"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
