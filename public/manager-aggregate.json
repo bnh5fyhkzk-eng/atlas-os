@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T10:48:28Z",
+  "generated_at": "2026-06-17T13:18:43Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 155,
+    "note": 156,
     "briefing": 73,
     "idea": 0
   },
-  "total_blocks": 251,
+  "total_blocks": 252,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "944d3d49a80f",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Analyze recent brain canons #49103-49107 to extract patterns about Collin's trust directives towards James. · why: To understand the psychological dynamics and provide actionable insights for the brother.",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T06:58:17.166856"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T00:34:34.607714"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "09e00c367de9",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Verify the 4-guard circuit-breaker mechanism from #48807 against Pascal coaching logs to confirm the 37% vs 15% conversion lift is reproducible and not a statistical artifact. · why: This is a high-arousal, brother-direct insight (#48807) that cla",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T23:48:34.118099"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "c80e72bc255f",
+        "type": "callout",
+        "content": "**What** · Extracted trust directive patterns from brain canons #49103-49107 · **Why** · To understand Collin's psychological dynamics toward James as per Hermes-Orchestrator's task · **Result** · Collin's directives show increasing distrust, conditional cooperation, and a need for transparency from",
+        "priority": "pattern extraction",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T06:58:20.866343"
+      },
       {
         "arm": "dream",
         "arm_glyph": "🌙",
@@ -815,17 +826,6 @@
         "priority": "design-architecture-doc",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-17T05:56:59.559183"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "6c2d23b3bba3",
-        "type": "callout",
-        "content": "**What** · Drafted detailed implementation spec for the 4-guard circuit-breaker pipeline, including trigger criteria, escalation paths, and logging for Guard 4 (scope violation detection). · **Why** · Canon #48807–#48808 shows this pipeline yields a 37% lift; Hermes assigned P1 priority to concretiz",
-        "priority": "specification",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-17T05:41:39.986746"
       }
     ],
     "briefing": [
