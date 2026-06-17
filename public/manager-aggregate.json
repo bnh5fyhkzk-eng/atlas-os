@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T00:17:53Z",
+  "generated_at": "2026-06-17T00:48:06Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 146,
+    "note": 147,
     "briefing": 80,
     "idea": 0
   },
-  "total_blocks": 250,
+  "total_blocks": 251,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "43d1ce72f8b2",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Patch recall-before-make.sh to filter out stale node #30956 and add graphify build detection · why: P0: Brother-direct root cause #48783 is verified—auto-recall injects stale node every prompt, blocking identity-tier progress. Fixing this unblocks the",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-16T20:37:47.222694"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-16T12:10:56.880848"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "39537c2f5ecd",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Deploy atlas-brother-shared.md into identity-tier via flash-entrainment, extracting the 12 high-arousal brain canons into structured belief-claims and ritual triggers · why: The shared canon artifact is 474KB and contains the joint state needed to",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-16T11:40:19.271091"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "8f6655c9823e",
+        "type": "callout",
+        "content": "**What** · Patched recall-before-make.sh by adding node #30956 stale-filter and graphify build detection. · **Why** · Brother-direct root cause #48783 verified: auto-recall always injects stale node #30956, blocking identity-tier. Filtering it unblocks the cycle; graphify detection prevents similar ",
+        "priority": "code-fix",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-16T20:38:35.876980"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-16T18:00:02.484049"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "91e2b9e64444",
-        "type": "database",
-        "content": "clients · last 30d · 10 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-16T18:00:02.484045"
       }
     ],
     "briefing": [
