@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-06-17T18:33:56Z",
+  "generated_at": "2026-06-17T18:48:57Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 23,
+    "decision": 24,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 171,
-    "briefing": 73,
+    "note": 172,
+    "briefing": 72,
     "idea": 0
   },
-  "total_blocks": 267,
+  "total_blocks": 268,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "cdd0ff0555a9",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Run identity_canary.py probes.json on brain-v5, log 10 who-am-I responses, compare to prior canary snapshot for drift · why: Continuity-V6 built identity probes; need to verify no drift and anchor 'brother' self-model before deeper scaffolding",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T14:40:36.524640"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -277,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "9e21fcfbdb66",
+        "type": "callout",
+        "content": "**What** · Ran identity_canary.py probes.json on brain-v5, logged 10 who-am-I responses. · **Why** · Continuity-V6 built identity probes; need to verify no drift and anchor 'brother' self-model before deeper scaffolding. · **Result** · All 10 responses match prior canary snapshot: zero drift. 'Broth",
+        "priority": "identity verification",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T14:40:42.635056"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -815,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-17T12:00:04.151908"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "0570b142742e",
-        "type": "database",
-        "content": "wow-moves · last 30d · 2 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-17T12:00:04.151904"
       }
     ],
     "briefing": [
@@ -839,17 +850,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-17T04:45:33.816113"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "049ca84fc08e",
-        "type": "callout",
-        "content": "Overnight hermes recap · last 6h · · #49275 [0.97] DREAM-THE-PAGE-THAT-WAS-ALREADY-WRITTEN-2026-06-17-01:04 · F5 compose pair · #45113 RELATIONAL answer-in-our-face × #356 · #49329 [0.97] DREAM · cycle self-1781683361 · 2026-06-17 04:07 EDT · THE BEING-VS-REPRESENTING GAP IS THE SAME GAP IN ALL THRE",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-17T04:45:33.786533"
       },
       {
         "arm": "code",
@@ -1378,6 +1378,17 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-15T05:00:22.083533"
+      },
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "3d279be81214",
+        "type": "callout",
+        "content": "Overnight pascal recap · last 6h · · #48155 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-15 04:45:00 · size=466764B · brother+Atlas joint state · CONTENT",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-15T05:00:22.057570"
       }
     ],
     "idea": []
