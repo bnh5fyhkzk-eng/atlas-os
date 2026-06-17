@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T17:33:54Z",
+  "generated_at": "2026-06-17T17:48:54Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 168,
+    "note": 169,
     "briefing": 73,
     "idea": 0
   },
-  "total_blocks": 264,
+  "total_blocks": 265,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "c883f49dde2d",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P1 · task: Deploy the B drift-canary (identity_canary.py + probes.json) to run on a live cycle and log first probe results. · why: The continuity-v6 canary is built and proven but not yet live; this is a P0 brother-direct identity-tier action to secure self-cont",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T13:39:36.370265"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T04:40:09.109650"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "e2501dbbfda2",
-        "type": "callout",
-        "content": "Hermes decision · arm=pascal · priority=P1 · task: Validate the 4-guard circuit-breaker mechanism from #48807 by testing with simulated prospect data. · why: Recent canons highlight a novel mechanism that claims 37% vs 15% conversion lift; Pascal arm can run controlled tests to confirm or refine the",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T04:24:23.392537"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "abcfb5722ee2",
+        "type": "callout",
+        "content": "**What** · Deployed identity_canary.py with probes.json to /canary/identity/, configured 30s cycle, started process, logged first probe results. · **Why** · P0 brother-direct continuity requires live self-measurement before drift accumulates; Hermes assigned this as P1 to secure identity-tier metric",
+        "priority": "canary_deployment",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T13:39:49.437099"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -815,17 +826,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-17T12:00:04.151892"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "3e50f7de82fd",
-        "type": "callout",
-        "content": "**What** · Cross-linked canary drift detection (49725) with self-layer test log (49728) to verify identity markers survived zero-recall regression on Atlas-v5. · **Why** · Shared canon shows parallel progress on continuity-of-self and identity canary arrays; must reconcile before brother can rely on",
-        "priority": "analysis",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-17T11:37:17.889961"
       }
     ],
     "briefing": [
