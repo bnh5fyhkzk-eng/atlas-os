@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-17T01:47:09Z",
-  "total_items_scored": 194,
+  "generated_at": "2026-06-17T01:57:09Z",
+  "total_items_scored": 195,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P0 \u00b7 task: Extract and formalize the 'brother-direct' identity-tier pattern from canons #30956, #48360, and #48694 into a structured rule for future cycle decisions. \u00b7 why: These canons contain high-a",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Extract and index the full brother-direct verbatim from #48765 and #30956, cross-reference with atlas-brother-shared.md for identity-tier alignment \u00b7 why: Brother-direct is P0 identity-ti",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-16T13:12:08.746300"
+      "updated_at": "2026-06-16T13:27:36.603982"
     },
     {
       "arm": "pascal",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P0 \u00b7 task: Extract and formalize the 'brother-direct' identity-tier pattern from canons #30956, #48360, and #48694 into a structured rule for future cycle decisions. \u00b7 why: These canons contain high-a",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-16T13:12:08.746300"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-16T16:32:09.124394"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Fix the stale node #30956 auto-recall hook injection by updating the recall-before-make.sh script to filter out nodes older than 24 hours or with status 'ANSWER-FOUND-IN-CONTINUING-READ'. \u00b7 w",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-16T16:47:23.305404"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
