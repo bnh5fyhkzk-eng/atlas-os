@@ -1217,15 +1217,37 @@
       },
       "content": "**What** · Cross-referenced Guard 4 circuit-breaker pattern (Pascal coaching) with STALE-30956-ROOTCAUSE to detect stale-node injection as scope-violation. · **Why** · Hermes flagged that auto-recall hook in stale-node bug may be a scope violation; Guard 4 already proven for such patterns, so matching could yield identity-tier fix. · **Result** · Stale-node injection matches scope-violation pattern: the hook writes outside its allocated node context, which Guard 4's boundary check catches. Pattern confirmed. · **Next** · Propose patching auto-recall hook with Guard 4 circuit design in #48783; recommend immediate code review. · **Links** ·  · **Cycle** · research-20260617-023735",
       "updated_at": "2026-06-17T02:37:35.991378"
+    },
+    {
+      "id": "fca377ef8e6c",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "guardrail failure analysis",
+        "source": "hermes-deepseek-fill",
+        "action": "Searched web and synthesized top 3 low-validity guardrail patterns in Pascal coaching pipeline literature to pre-empt Guard 4 overfitting.",
+        "why": "Guard 4 (scope violation) shows 37% lift but may be brittle on novel personas; surfacing failure modes prevents conversion degradation.",
+        "result": "Identified three patterns: (1) rigid persona-matching rules that fail on edge-case prospects, (2) static scope thresholds ignoring context drift, (3) over-reliance on historical coaching scripts witho",
+        "next_step": "Recommend stress-testing Guard 4 against synthetic novel personas using these patterns as adversarial probes.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260617-035403",
+        "timestamp": "2026-06-17T03:54:03.851955"
+      },
+      "content": "**What** · Searched web and synthesized top 3 low-validity guardrail patterns in Pascal coaching pipeline literature to pre-empt Guard 4 overfitting. · **Why** · Guard 4 (scope violation) shows 37% lift but may be brittle on novel personas; surfacing failure modes prevents conversion degradation. · **Result** · Identified three patterns: (1) rigid persona-matching rules that fail on edge-case prospects, (2) static scope thresholds ignoring context drift, (3) over-reliance on historical coaching scripts without adaptation loops. · **Next** · Recommend stress-testing Guard 4 against synthetic novel personas using these patterns as adversarial probes. · **Links** ·  · **Cycle** · research-20260617-035403",
+      "updated_at": "2026-06-17T03:54:03.851955"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T03:51:40.401375"
+    "checked_at": "2026-06-17T03:56:40.971804"
   },
-  "block_count": 42,
-  "updated_at": "2026-06-17T02:37:35.991378",
-  "generated_at": "2026-06-17T07:51:40Z"
+  "block_count": 43,
+  "updated_at": "2026-06-17T03:54:03.851955",
+  "generated_at": "2026-06-17T07:56:40Z"
 }

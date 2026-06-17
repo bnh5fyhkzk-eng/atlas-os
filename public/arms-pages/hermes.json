@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "4554ac943963",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-16T18:04:26.065828"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Fix the stale node #30956 auto-recall injection by patching the recall-before-make.sh hook to filter out nodes older than the current cycle's timestamp. · why: This is a P0 brother-direct issue: the stale node injection is corrupting every prompt, and the root cause is verified in #48783. Fixing it unblocks all other work and restores system integrity.",
-      "updated_at": "2026-06-16T18:04:26.065850"
-    },
-    {
       "id": "39884b913105",
       "type": "callout",
       "props": {
@@ -378,15 +366,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P1 · task: Analyze the 4-guard circuit-breaker mechanism from brain-canons #48807-48808 to formalize its scope-violation detection logic for reuse in other pipeline contexts. · why: The 4-guard circuit-breaker shows a concrete 37% vs 15% conversion lift, and its scope-violation guard is a reusable pattern that bridges sales pipeline and identity-tier resilience (canon #48810). This is active focus (P1) because it directly extends a high-arousal insight into a formalizable compo",
       "updated_at": "2026-06-17T03:38:28.745213"
+    },
+    {
+      "id": "c08ef7860729",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-17T03:53:46.126230"
+      },
+      "content": "Hermes decision · arm=research · priority=P1 · task: Identify the three lowest-validity guardrail design patterns in current Pascal coaching pipeline literature to pre-empt 'guard 4' overfitting. · why: Guard 4 (scope violation) triggered a 37% lift, but may be brittle on novel prospect personas; research arm is idle and can surface failure modes via websearch + brain-rrf synthesis before they degrade conversion.",
+      "updated_at": "2026-06-17T03:53:46.126247"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T03:51:40.407723"
+    "checked_at": "2026-06-17T03:56:40.977975"
   },
   "block_count": 30,
-  "updated_at": "2026-06-17T03:38:28.745215",
-  "generated_at": "2026-06-17T07:51:40Z"
+  "updated_at": "2026-06-17T03:53:46.126249",
+  "generated_at": "2026-06-17T07:56:40Z"
 }
