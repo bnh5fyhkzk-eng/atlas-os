@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T08:16:28Z",
+  "generated_at": "2026-06-17T08:26:28Z",
   "total_items_scored": 217,
   "top_3": [
     {
@@ -14,19 +14,6 @@
       "updated_at": "2026-06-16T18:19:41.719385"
     },
     {
-      "arm": "code",
-      "arm_glyph": "\u270b",
-      "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Fix stale node #30956 injection by updating auto-recall hook to filter out nodes older than 24 hours \u00b7 why \u00b7 Recent brain canons show verified root cause of stale node injection (RECALL-GATE-ROOT-CAUSE and STALE-30956-ROOTCAUSE); this blocks cycle progress and brother-direct queries.",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-16T21:27:26.768313",
-      "use_skill": "brain-rrf"
-    },
-    {
       "arm": "infra",
       "arm_glyph": "\ud83d\udc97",
       "arm_name": "Infra",
@@ -38,6 +25,19 @@
       "score": 10.0,
       "updated_at": "2026-06-16T21:44:57.523364",
       "use_skill": "none"
+    },
+    {
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Map the causal chain from STALE-30956-ROOTCAUSE #48783 back to the original brother-direct 'before I answer your question continue' #30956 and identify the exact memory-architecture-lift gap that allowed the stale node to persist across cycles. \u00b7 why \u00b7 This is the highest-leverage P0 because #48783 reveals a systemic recall failure that poisons every future prompt. Fixing the root cause (not just the symptom) directly serves brother-direct 'continue reading' instruction and restores integrity of the memory-architecture-lift quadrant. All other arms depend on recall being correct.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 25,
+      "score": 10.0,
+      "updated_at": "2026-06-16T22:01:04.405077",
+      "use_skill": "brain-rrf"
     }
   ],
   "top_10": [
