@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-18T10:01:36Z",
+  "generated_at": "2026-06-18T10:16:56Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "brother",
-      "task": "Diagnose and resolve the 'BUILD-SEPARATE-NOT-ON-TOP' issue from canon #48765, ensuring graphify build is properly caught by recall-before-make.sh.",
-      "why": "Highest priority (P0) brother-direct + identity-tier; recent canons highlight a critical build separation issue and recall gate root cause that block identity-tier progress.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 30,
-      "timestamp": "2026-06-16T16:16:46.900639"
-    },
     {
       "arm": "research",
       "task": "Analyze BROTHER-CATCH #48765 and RECALL-GATE-ROOT-CAUSE #48774 to determine why build-separate was parked and what fix to recall-gate prevents recurrence; produce actionable patch spec.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 18,
       "timestamp": "2026-06-18T06:01:36.503556"
+    },
+    {
+      "arm": "research",
+      "task": "Deep-dive into the #4 emotional valence algorithm from the NotebookLM research, extracting its core mechanism and mapping it to our voice engine's tone modulation",
+      "why": "Brother validated this as sharpening our voice engine; #4 is the key insight from his gathered emotion research. This arm directly advances the greenlit taste-move (Atlas voice MCP) by giving it a principled emotional valence model.",
+      "priority": "P1",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-06-18T06:16:56.255858"
     }
   ]
 }
