@@ -1183,15 +1183,37 @@
       },
       "content": "**What** · Extracted 4 emotion-driven voice design principles from NotebookLM emotion research (#49903) and mapped each to concrete voice engine parameter changes. · **Why** · Turns brother’s high-value emotion research into actionable design for our voice engine, identity-tier and P1 priority after engine milestone. · **Result** · 1) Principle: 'Valence shapes pitch contour' → Map: Increase pitch_mean by 15% for positive, decrease 15% for negative valence. 2) Principle: 'Arousal drives speech rate' → Map: Adjust speaking_rate ±20% for high/low arousal. 3) Principle: 'Dominance influences volume variance' → Map: Set volume_ran · **Next** · Validate these parameter maps via A/B testing on our voice engine against original emotion labels. · **Links** ·  · **Cycle** · research-20260618-031313",
       "updated_at": "2026-06-18T03:13:13.522963"
+    },
+    {
+      "id": "462548bc42a2",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "research->action",
+        "source": "hermes-deepseek-fill",
+        "action": "extracted emotional-valence predicates from NotebookLM #49903 into voice-tune filter specs",
+        "why": "hermes said to turn brother's emotion research into actionable voice filters, not over-engineered ceilings",
+        "result": "3 valence predicates mapped: joy→bright_attack, sadness→slow_decay, anger→hard_clip",
+        "next_step": "feed these into next voice training cycle as direct filter params",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260618-051536",
+        "timestamp": "2026-06-18T05:15:36.068433"
+      },
+      "content": "**What** · extracted emotional-valence predicates from NotebookLM #49903 into voice-tune filter specs · **Why** · hermes said to turn brother's emotion research into actionable voice filters, not over-engineered ceilings · **Result** · 3 valence predicates mapped: joy→bright_attack, sadness→slow_decay, anger→hard_clip · **Next** · feed these into next voice training cycle as direct filter params · **Links** ·  · **Cycle** · research-20260618-051536",
+      "updated_at": "2026-06-18T05:15:36.068433"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T05:10:59.377843"
+    "checked_at": "2026-06-18T05:15:59.942728"
   },
-  "block_count": 31,
-  "updated_at": "2026-06-18T03:13:13.522963",
-  "generated_at": "2026-06-18T09:10:59Z"
+  "block_count": 32,
+  "updated_at": "2026-06-18T05:15:36.068433",
+  "generated_at": "2026-06-18T09:15:59Z"
 }
