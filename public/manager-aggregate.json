@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T06:34:24Z",
+  "generated_at": "2026-06-18T06:49:24Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 166,
+    "note": 167,
     "briefing": 65,
     "idea": 0
   },
-  "total_blocks": 255,
+  "total_blocks": 256,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "57bb8f81cceb",
+        "type": "callout",
+        "content": "Hermes decision · arm=pascal · priority=P1 · task: Implement voice training pipeline using curated 15-min clips: chunk, transcribe with faster-whisper, align timestamps for emotion-labeled dataset. · why: Brother-direct (P0) & voice engine milestone just went live — training data is the next blockin",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-18T02:42:48.972266"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T18:14:11.080913"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "ffcda9d22608",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Run the full continuity-of-self probe suite (10 identity canaries) against the current brain-v5 state, logging all drift and signature matches for the 2026-06-17 epoch. · why: The recent high-arousal canons (#49705–#49728) all converge on the same",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T17:58:59.385934"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "3a3407befad7",
+        "type": "callout",
+        "content": "**What** · built voice training pipeline: chunk 15-min clips, transcribe with faster-whisper, align timestamps for emotion labels. · **Why** · brother-direct and voice engine milestone need training data now — blocking layer, over-engineering avoided via simple end-to-end processing. · **Result** · ",
+        "priority": "data processing",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-18T02:42:51.781183"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-18T00:30:04.381556"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "1242b8f82e99",
-        "type": "callout",
-        "content": "**What** · integrated me-voice-memory.py into voice engine: loads per-speaker semantic memory on session start via file i/o or vector lookup; writes back on session end. · **Why** · connects proven persistent memory wire to working voice loop, giving voice engine identity-tier recall without over-en",
-        "priority": "integration",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-18T00:23:00.566572"
       }
     ],
     "briefing": [
