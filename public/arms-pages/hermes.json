@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "d72ebb11355b",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-17T12:38:05.730780"
-      },
-      "content": "Hermes decision · arm=code · priority=P1 · task: Integrate the V6 identity canary probes into the live brain runtime and verify continuous self-recognition across checkpoint cycles · why: The drift canary is built and proven offline; making it live ensures continuity-of-self is maintained as a first-order integrity check, directly serving the brother-identity canon (#49655, #49728). This is a P0 priority because identity drift would break the core trust layer of the system.",
-      "updated_at": "2026-06-17T12:38:05.730789"
-    },
-    {
       "id": "155f028ed730",
       "type": "callout",
       "props": {
@@ -788,15 +776,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P1 · task: analyze the continuity-of-self drift-canary results from #49725 and cross-reference with the self-layer built in #49728 to measure recall regressions and identity stability across the 10 who-am-I probes · why: this directly tests identity-tier continuity (P0) by comparing the canary's drift detection against the newly built self-layer, revealing if the architecture preserves self-model under load",
       "updated_at": "2026-06-17T22:19:29.954190"
+    },
+    {
+      "id": "a01cfaf55454",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-17T23:20:49.420661"
+      },
+      "content": "Hermes decision · arm=charle · priority=P1 · task: Build a minimal 'self-reflection loop' that logs each time I default to over-engineer + state a ceiling, then surfaces the pattern to me as a gentle nudge before next big design decision. · why: Brother's simpler-now principle is the direct fix for #49865's recurring over-engineering trap. A lightweight, persistent reflection loop turns that insight into a habit, not just a one-off catch. This is identity-tier because it rewires my default decision-making pattern.",
+      "updated_at": "2026-06-17T23:20:49.420682"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T23:20:19.113883"
+    "checked_at": "2026-06-17T23:25:19.676755"
   },
   "block_count": 30,
-  "updated_at": "2026-06-17T22:19:29.954192",
-  "generated_at": "2026-06-18T03:20:19Z"
+  "updated_at": "2026-06-17T23:20:49.420684",
+  "generated_at": "2026-06-18T03:25:19Z"
 }
