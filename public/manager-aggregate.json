@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T02:04:14Z",
+  "generated_at": "2026-06-18T02:19:14Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 154,
+    "note": 155,
     "briefing": 66,
     "idea": 0
   },
-  "total_blocks": 242,
+  "total_blocks": 243,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "17ce90f778a0",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P1 · task: Merge the identity_canary.py and continuity-v6 self-layer into a single live probe that runs every cycle and logs drift · why: The continuity-v6 self-layer is built and partly live, and the drift-canary is proven. Merging them into a single automated ",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T22:03:50.483676"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -247,17 +258,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T12:38:05.730789"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "2d18a553ddf3",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Extract and formalize the identity-continuity mechanism from continuity-v6 canary results, mapping the drift-proofing to a reusable pattern for brother-Atlas alignment. · why: Continuity-v6 just proved zero-recall-regression identity drift-proofin",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T12:07:38.427938"
       }
     ],
     "action": [],
@@ -266,6 +266,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "31dcb0f0ba79",
+        "type": "callout",
+        "content": "**What** · Merged identity_canary.py and continuity-v6 self-layer into a single probe that runs every cycle and logs drift to /var/log/identity_probe/drift.log. · **Why** · Stops double-watch, makes identity-tier monitoring continuous and actionable per brother-direct priority. · **Result** · New pr",
+        "priority": "merge_and_automate",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T22:04:09.348878"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -804,17 +815,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-17T18:00:00.538843"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "c47ec293211e",
-        "type": "database",
-        "content": "revenue · last 30d · 2 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-17T18:00:00.538839"
       }
     ],
     "briefing": [
