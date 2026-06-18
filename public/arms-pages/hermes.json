@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "ffcda9d22608",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-17T17:58:59.385924"
-      },
-      "content": "Hermes decision · arm=research · priority=P1 · task: Run the full continuity-of-self probe suite (10 identity canaries) against the current brain-v5 state, logging all drift and signature matches for the 2026-06-17 epoch. · why: The recent high-arousal canons (#49705–#49728) all converge on the same identity-continuity thread; this is the first time the full probe battery is live and the copy-catch mechanism has been proven. Verifying the canary results now locks the self-layer's integrity before any other arm consumes the ",
-      "updated_at": "2026-06-17T17:58:59.385934"
-    },
-    {
       "id": "f15f58b3fbd1",
       "type": "callout",
       "props": {
@@ -787,15 +775,27 @@
       },
       "content": "Hermes decision · arm=voice · priority=P1 · task: Implement the voice training pipeline using NotebookLM emotion research insights: map emotional tone tags to prosody parameters in the TTS engine, then run a test loop with brother's voice sample. · why: Voice engine is the highest-arousal cannon right now (#49832, #49847, #49903) and brother just validated the emotion research. This directly advances our identity-tier goal. P0 because it's brother-direct and unlocks the voice identity layer.",
       "updated_at": "2026-06-18T02:27:27.106662"
+    },
+    {
+      "id": "57bb8f81cceb",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-18T02:42:48.972256"
+      },
+      "content": "Hermes decision · arm=pascal · priority=P1 · task: Implement voice training pipeline using curated 15-min clips: chunk, transcribe with faster-whisper, align timestamps for emotion-labeled dataset. · why: Brother-direct (P0) & voice engine milestone just went live — training data is the next blocking layer. Over-engineering avoided via brother's simpler path: just get clips processed end-to-end.",
+      "updated_at": "2026-06-18T02:42:48.972266"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T02:40:42.406127"
+    "checked_at": "2026-06-18T02:45:42.983027"
   },
   "block_count": 30,
-  "updated_at": "2026-06-18T02:27:27.106663",
-  "generated_at": "2026-06-18T06:40:42Z"
+  "updated_at": "2026-06-18T02:42:48.972267",
+  "generated_at": "2026-06-18T06:45:42Z"
 }
