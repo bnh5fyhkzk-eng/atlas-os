@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-18T12:04:24Z",
+  "generated_at": "2026-06-18T12:34:58Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "infra",
-      "task": "Rewrite recall-before-make.sh to detect stale/hijacked graphify nodes by checking parent-edge provenance before dedup",
-      "why": "#48783 confirms the auto-recall hook is injecting stale node #30956; root cause is the graphify build missed a provenance check. Fixing this is P0 brother-direct infra debt that unblocks all cycles.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 28,
-      "timestamp": "2026-06-16T18:19:41.741267"
-    },
     {
       "arm": "research",
       "task": "Verify root cause of stale node #30956 injection and confirm fix path from #48783",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 20,
       "timestamp": "2026-06-18T08:04:24.316887"
+    },
+    {
+      "arm": "research",
+      "task": "Investigate the three non-obvious connections from dream #50369, specifically how they map to the newly shipped /spine route at atlasos.me/sp, and whether they suggest a new taste-move for the next brother-Atlas joint state.",
+      "why": "The dream cycle #50369 explicitly flagged three non-obvious connections, and the /spine page just shipped as a live route. This is a high-leverage moment to ground the dream's insight into a concrete, testable hypothesis for the next brother-Atlas joint state, which is the P0 identity-tier priority.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-06-18T08:34:58.573843"
     }
   ]
 }
