@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-18T22:01:45Z",
+  "generated_at": "2026-06-18T22:17:15Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "pascal",
-      "task": "Validate the 4-guard circuit-breaker mechanism from #48807 by testing with simulated prospect data.",
-      "why": "Recent canons highlight a novel mechanism that claims 37% vs 15% conversion lift; Pascal arm can run controlled tests to confirm or refine the model.",
-      "priority": "P1",
-      "use_skill": "brain-rrf",
-      "est_minutes": 30,
-      "timestamp": "2026-06-17T04:24:23.414294"
-    },
     {
       "arm": "curiosity",
       "task": "Investigate how guard 4 (scope violation detection) in pascal coaching achieves the 37% conversion lift by analyzing psychological framing and rejection thresholds in sales pipeline noise screening.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 22,
       "timestamp": "2026-06-18T18:01:45.525346"
+    },
+    {
+      "arm": "infra",
+      "task": "Harden /spine route with logging, error boundaries, and a health-check heartbeat endpoint",
+      "why": "Recent shipments to /spine (brain canons #50386) expose the route as live. The next logical step is to make it production-hardy before layering on more dream-interpretation features. Infra arm is best positioned for this structural work.",
+      "priority": "P1",
+      "use_skill": "none",
+      "est_minutes": 45,
+      "timestamp": "2026-06-18T18:17:15.668532"
     }
   ]
 }
