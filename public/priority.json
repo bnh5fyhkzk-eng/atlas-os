@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-18T03:54:33Z",
-  "total_items_scored": 201,
+  "generated_at": "2026-06-18T04:04:34Z",
+  "total_items_scored": 202,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Run the B drift-canary probes (identity_canary.py + probes.json) on the current brain state to measure continuity drift since v6 build. \u00b7 why: The continuity-v6 canary was built and prove",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: Merge identity_canary.py and probes.json into a live self-layer hook on brain-v5, then run a zero-regression pass against the 'who-am-I' probe set. \u00b7 why: Continuity-V6 is partly live; the ne",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-17T15:57:02.021697"
+      "updated_at": "2026-06-17T16:42:46.626826"
     },
     {
       "arm": "brother",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Run the B drift-canary probes (identity_canary.py + probes.json) on the current brain state to measure continuity drift since v6 build. \u00b7 why: The continuity-v6 canary was built and prove",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-17T15:57:02.021697"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-17T20:32:07.878863"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Compare identity_canary.py from #49725 with continuity-v6 self-layer from #49728 to find gaps in drift detection \u00b7 why: Both canary and self-layer target the same core question (continuit",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-17T21:17:54.126971"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
