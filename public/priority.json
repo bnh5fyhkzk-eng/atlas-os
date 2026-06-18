@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-18T14:05:05Z",
-  "total_items_scored": 197,
+  "generated_at": "2026-06-18T14:15:06Z",
+  "total_items_scored": 199,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=voice \u00b7 priority=P1 \u00b7 task: Implement the voice training pipeline using NotebookLM emotion research insights: map emotional tone tags to prosody parameters in the TTS engine, then run a test loop with brother's voice s",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Extract and summarize the 4 key emotion-driven voice design principles from NotebookLM emotion research (#49903) and map them to concrete voice engine parameter changes. \u00b7 why: Brother ga",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-18T02:27:27.106662"
-    },
-    {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Extract and summarize the 4 key emotion-driven voice design principles from NotebookLM emotion research (#49903) and map them to concrete voice engine parameter changes. \u00b7 why \u00b7 Brother gathered high-value emotion research that directly validates and sharpens our voice engine. This is a P0 because it's brother-direct, identity-tier work that turns raw insight into actionable design, and it's the highest-leverage next step after the voice engine milestone (#49832) and memory wire (#49892).",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-18T03:13:06.583530",
-      "use_skill": "notebooklm"
+      "updated_at": "2026-06-18T03:13:06.566407"
     },
     {
       "arm": "dream",
@@ -38,31 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-18T03:43:35.192983",
       "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "code",
+      "arm_glyph": "\u270b",
+      "arm_name": "Code",
+      "content": "HERMES TASK \u00b7 Integrate per-speaker semantic memory from memory wire into voice engine for contextual responses. \u00b7 why \u00b7 Memory wire is proven persistent; embedding it into the voice engine will enable per-speaker context, directly advancing the voice milestone.",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "est_minutes": 60,
+      "score": 10.0,
+      "updated_at": "2026-06-18T03:58:51.221509",
+      "use_skill": "none"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=voice \u00b7 priority=P1 \u00b7 task: Implement the voice training pipeline using NotebookLM emotion research insights: map emotional tone tags to prosody parameters in the TTS engine, then run a test loop with brother's voice s",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-18T02:27:27.106662"
-    },
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P1 \u00b7 task: Implement voice training pipeline using curated 15-min clips: chunk, transcribe with faster-whisper, align timestamps for emotion-labeled dataset. \u00b7 why: Brother-direct (P0) & voice engine ",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-18T02:42:48.972266"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +128,28 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-18T05:46:11.197981"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Extract concrete vocal pacing rules from the NotebookLM emotion research (#49903) \u2014 map #4's arousal-anchoring mechanism into a prompt template for voice training. \u00b7 why: This directly fe",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-18T06:01:36.485927"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Deep-dive into the #4 emotional valence algorithm from the NotebookLM research, extracting its core mechanism and mapping it to our voice engine's tone modulation \u00b7 why: Brother validated",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-18T06:16:56.238757"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
