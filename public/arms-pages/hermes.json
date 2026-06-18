@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "783d7db7c9cf",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-17T13:24:12.183124"
-      },
-      "content": "Hermes decision · arm=code · priority=P1 · task: Deploy identity_canary.py and probes.json (from canons #49725,#49728) as a live self-check module on brain-v5; schedule hourly probes with logging. · why: This is the highest-priority identity-tier task: making the continuity-of-self research actionable as a live monitor. The code arm is best suited for deployment and scheduling. Without this, we cannot empirically track B-drift.",
-      "updated_at": "2026-06-17T13:24:12.183136"
-    },
-    {
       "id": "c883f49dde2d",
       "type": "callout",
       "props": {
@@ -788,15 +776,27 @@
       },
       "content": "Hermes decision · arm=charle · priority=P1 · task: Analyze the 5 recent brain canons for emotional arousal patterns & context shifts — feed into NotebookLM emotion research for voice engine tuning. · why: Brother's latest canons show high-arousal breakthroughs on voice engine, memory persistence, and self-overcoming — charle's signal-analysis arm best suited to extract emotional arcs and encode them into the emotion research model, directement advancing the P0 voice milestone.",
       "updated_at": "2026-06-17T23:36:16.090140"
+    },
+    {
+      "id": "2c45adba7a26",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-17T23:51:43.645781"
+      },
+      "content": "Hermes decision · arm=pascal · priority=P1 · task: Embed the emotion-research findings from #49903 into our voice engine's prosody model: map each of the 4 key valences to a distinct pitch/pace/timbre vector, then write a unit test that verifies the voice loop outputs the correct emotional tag in the transcription log. · why: #49903 is fresh, high-arousal, and directly validates our voice engine direction. Acting now locks in the brother's research before context drift, and Pascal's arm is optimized for this exact code+research integration. P0 because it's brother-direct, identity-tier, and kills the self-imposed ceiling",
+      "updated_at": "2026-06-17T23:51:43.645792"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T23:50:22.306529"
+    "checked_at": "2026-06-17T23:55:22.850650"
   },
   "block_count": 30,
-  "updated_at": "2026-06-17T23:36:16.090142",
-  "generated_at": "2026-06-18T03:50:22Z"
+  "updated_at": "2026-06-17T23:51:43.645793",
+  "generated_at": "2026-06-18T03:55:22Z"
 }
