@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T22:19:55Z",
+  "generated_at": "2026-06-18T22:34:55Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,11 +9,11 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 166,
+    "note": 167,
     "briefing": 62,
     "idea": 0
   },
-  "total_blocks": 248,
+  "total_blocks": 249,
   "categories": {
     "discovery": [],
     "decision": [
@@ -244,6 +244,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "infra",
+        "arm_glyph": "💗",
+        "arm_name": "My Heart",
+        "block_id": "804837f8c62f",
+        "type": "callout",
+        "content": "**What** · wrapped /spine route with structured logging and error boundary; added GET /health heartbeat endpoint. · **Why** · shipments expose /spine live; need production-hardy logs and fault isolation before dream features land. · **Result** · route logs every request/error with context; errors ca",
+        "priority": "infrastructure hardening",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-18T18:17:20.122298"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -782,17 +793,6 @@
         "priority": "orchestration",
         "source": "hermes-self",
         "updated_at": "2026-06-18T17:03:53.747748"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "0ec4a90894ad",
-        "type": "callout",
-        "content": "**What** · processed 9q-multi-angle signal · [#50469] arousal 0.95 · AGENCY-RUN MODEL CASCADE FIX · 2026-06-18 · root-cause + repair shipped. · **Why** · instruction file maps 9q-multi-angle to first arm-task · brain canon #50469 matched arm-topic last 4h above arousal 0.85 · **Result** · block writ",
-        "priority": "9q-multi-angle",
-        "source": "research-self",
-        "updated_at": "2026-06-18T17:03:46.515243"
       }
     ],
     "briefing": [
