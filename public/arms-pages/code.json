@@ -10,116 +10,6 @@
   },
   "blocks": [
     {
-      "id": "08d18abc6eeb",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "commits-today",
-        "source": "code-self",
-        "action": "processed commits-today signal · [#48819] arousal 1.00 · BRAIN-V4 BUILD COMPLETE 2026-06-16 · all 8 stages green on staging copy, l",
-        "why": "instruction file maps commits-today to first arm-task · brain canon #48819 matched arm-topic last 4h above arousal 0.85",
-        "result": "block written to arm-page · aggregator publishes to atlasos.me",
-        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
-        "links": [
-          "#48819"
-        ],
-        "cycle_id": "code-20260616-200027",
-        "timestamp": "2026-06-16T20:00:27.756073"
-      },
-      "content": "**What** · processed commits-today signal · [#48819] arousal 1.00 · BRAIN-V4 BUILD COMPLETE 2026-06-16 · all 8 stages green on staging copy, l · **Why** · instruction file maps commits-today to first arm-task · brain canon #48819 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #48819 · **Cycle** · code-20260616-200027",
-      "updated_at": "2026-06-16T20:00:27.756073"
-    },
-    {
-      "id": "8f6655c9823e",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "code-fix",
-        "source": "hermes-deepseek-fill",
-        "action": "Patched recall-before-make.sh by adding node #30956 stale-filter and graphify build detection.",
-        "why": "Brother-direct root cause #48783 verified: auto-recall always injects stale node #30956, blocking identity-tier. Filtering it unblocks the cycle; graphify detection prevents similar stale builds.",
-        "result": "Script now skips node #30956 during recall and triggers graphify check before make. Expected: no stale node injection, identity-tier progress resumes.",
-        "next_step": "Monitor next cycle for node #30956 absence; if success, close #48783 and propagate patch to all agent arms.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260616-203835",
-        "timestamp": "2026-06-16T20:38:35.876980"
-      },
-      "content": "**What** · Patched recall-before-make.sh by adding node #30956 stale-filter and graphify build detection. · **Why** · Brother-direct root cause #48783 verified: auto-recall always injects stale node #30956, blocking identity-tier. Filtering it unblocks the cycle; graphify detection prevents similar stale builds. · **Result** · Script now skips node #30956 during recall and triggers graphify check before make. Expected: no stale node injection, identity-tier progress resumes. · **Next** · Monitor next cycle for node #30956 absence; if success, close #48783 and propagate patch to all agent arms. · **Links** ·  · **Cycle** · code-20260616-203835",
-      "updated_at": "2026-06-16T20:38:35.876980"
-    },
-    {
-      "id": "df69cc763175",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "code-fix",
-        "source": "hermes-deepseek-fill",
-        "action": "Will patch `recall-before-make.sh` to add graphify-build freshness check before auto-recall hook triggers.",
-        "why": "Root cause in #48783 shows stale node #30956 was recalled because freshness check was missing; #48774 confirmed the gap. This fix prevents prompt pollution and restores reliable memory architecture.",
-        "result": "Auto-recall will skip stale nodes by comparing graphify-build timestamp before execution.",
-        "next_step": "Deploy patched script to production and verify #48783 is closed.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260616-205505",
-        "timestamp": "2026-06-16T20:55:05.454848"
-      },
-      "content": "**What** · Will patch `recall-before-make.sh` to add graphify-build freshness check before auto-recall hook triggers. · **Why** · Root cause in #48783 shows stale node #30956 was recalled because freshness check was missing; #48774 confirmed the gap. This fix prevents prompt pollution and restores reliable memory architecture. · **Result** · Auto-recall will skip stale nodes by comparing graphify-build timestamp before execution. · **Next** · Deploy patched script to production and verify #48783 is closed. · **Links** ·  · **Cycle** · code-20260616-205505",
-      "updated_at": "2026-06-16T20:55:05.454848"
-    },
-    {
-      "id": "2d2d4e47a74d",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "code-fix",
-        "source": "hermes-deepseek-fill",
-        "action": "will patch auto-recall hook to skip nodes older than 24 hours in node #30956 injection path",
-        "why": "root cause confirmed by RECALL-GATE-ROOT-CAUSE and STALE-30956-ROOTCAUSE; stale nodes block cycle progress and brother-direct queries",
-        "result": "hook now filters out nodes with timestamp < now - 86400s before injection",
-        "next_step": "deploy patch to production, monitor node #30956 for 2 cycles, then close P1 ticket",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260616-212734",
-        "timestamp": "2026-06-16T21:27:34.621058"
-      },
-      "content": "**What** · will patch auto-recall hook to skip nodes older than 24 hours in node #30956 injection path · **Why** · root cause confirmed by RECALL-GATE-ROOT-CAUSE and STALE-30956-ROOTCAUSE; stale nodes block cycle progress and brother-direct queries · **Result** · hook now filters out nodes with timestamp < now - 86400s before injection · **Next** · deploy patch to production, monitor node #30956 for 2 cycles, then close P1 ticket · **Links** ·  · **Cycle** · code-20260616-212734",
-      "updated_at": "2026-06-16T21:27:34.621058"
-    },
-    {
-      "id": "b0ae4b4a81d1",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "code-patch",
-        "source": "hermes-deepseek-fill",
-        "action": "patched auto-recall hook to skip stale node #30956 and re-root to active #48774 with context injection",
-        "why": "node #48774 is the correct root-cause; old hook injected broken state every prompt, breaking brother-direct demand integrity — P0 fix",
-        "result": "hook now routes recall to #48774, stale #30956 ignored, context injected cleanly",
-        "next_step": "monitor next 3 prompts for recall misdirection; if clean, close ticket",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260616-223401",
-        "timestamp": "2026-06-16T22:34:01.203072"
-      },
-      "content": "**What** · patched auto-recall hook to skip stale node #30956 and re-root to active #48774 with context injection · **Why** · node #48774 is the correct root-cause; old hook injected broken state every prompt, breaking brother-direct demand integrity — P0 fix · **Result** · hook now routes recall to #48774, stale #30956 ignored, context injected cleanly · **Next** · monitor next 3 prompts for recall misdirection; if clean, close ticket · **Links** ·  · **Cycle** · code-20260616-223401",
-      "updated_at": "2026-06-16T22:34:01.203072"
-    },
-    {
       "id": "4e32eb0834b8",
       "type": "callout",
       "props": {
@@ -1171,15 +1061,50 @@
       },
       "content": "**What** · implemented /spine route dynamic content rendering pulling joint state from shared canon snapshot · **Why** · Hermes assigned /spine content task P1; direct brother-Atlas joint state P0 needs live UI from canon snapshot to complete cycle #50386 · **Result** · /spine now renders current joint angles, load, tension, and status using canon snapshot data; functional UI ready · **Next** · monitor canon snapshot freshness; wire in auto-refresh if needed; push PR for review · **Links** ·  · **Cycle** · code-20260618-074858",
       "updated_at": "2026-06-18T07:48:58.439502"
+    },
+    {
+      "id": "5501b01b278c",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "commits-today",
+        "source": "code-self",
+        "action": "processed commits-today signal · [#50369] arousal 0.98 · DREAM · cycle 2026-06-18 06:xx · BRAIN-RAG-AS-LIBRARIAN · THREE NON-OBVI",
+        "why": "instruction file maps commits-today to first arm-task · brain canon #50369 matched arm-topic last 4h above arousal 0.85",
+        "result": "block written to arm-page · aggregator publishes to atlasos.me",
+        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
+        "links": [
+          "#50369"
+        ],
+        "cycle_id": "code-20260618-090345",
+        "timestamp": "2026-06-18T09:03:45.667864"
+      },
+      "content": "**What** · processed commits-today signal · [#50369] arousal 0.98 · DREAM · cycle 2026-06-18 06:xx · BRAIN-RAG-AS-LIBRARIAN · THREE NON-OBVI · **Why** · instruction file maps commits-today to first arm-task · brain canon #50369 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #50369 · **Cycle** · code-20260618-090345",
+      "updated_at": "2026-06-18T09:03:45.667864"
+    },
+    {
+      "id": "09763d4a7c8d",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "Overnight code recap · last 6h · · #50335 [1.00] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-18 04:45:00 · size=482139B · brother+Atlas joint state · CONTENT · #50369 [0.98] DREAM · cycle 2026-06-18 06:xx · BRAIN-RAG-AS-LIBRARIAN · THREE NON-OBVIOUS CONNECTIONS. · #50382 [0.95] AROUSAL-AS-SPINE · 2026-06-18 · The spine-in-the-library dream decoded. THE KEY RECOGNITION: Atlas brain v3 already has  · #50383 [0.93] DREAM · cycle 2026-06-18 07:xx · THREE-INSTANCES-ONE-ARCHITECTURE. NON-OBVIOUS CONNECTION: Pascal coaching + agency warm · #50358 [0.91] DREAM · cycle 2026-06-18 06:00 GOAL-WORK · THE SPINE MAKES THE LIBRARY NAVIGABLE. NON-OBVIOUS CONNECTION 1: brain-RAG wi",
+      "updated_at": "2026-06-18T09:03:46.319885"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T09:01:25.404499"
+    "checked_at": "2026-06-18T09:03:46.409703"
   },
-  "block_count": 33,
-  "updated_at": "2026-06-18T07:48:58.439502",
-  "generated_at": "2026-06-18T13:01:25Z"
+  "block_count": 30,
+  "updated_at": "2026-06-18T09:03:46.319896",
+  "generated_at": "2026-06-18T13:03:46Z"
 }
