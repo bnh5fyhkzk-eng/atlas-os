@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-18T15:35:10Z",
+  "generated_at": "2026-06-18T15:45:10Z",
   "total_items_scored": 206,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Extract and tag the exact emotional-valence predicates from NotebookLM emotion research (#49903) into actionable voice-tune filters for the next voice training cycle \u00b7 why: This arm direc",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Extract and formalize the 'AL' principle from NotebookLM emotion research source #49903 into a reusable RRF pattern for voice engine tuning \u00b7 why: The recent canon #49903 validates and sh",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-18T05:15:32.666592"
-    },
-    {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Extract and formalize the 'AL' principle from NotebookLM emotion research source #49903 into a reusable RRF pattern for voice engine tuning \u00b7 why \u00b7 The recent canon #49903 validates and sharpens our voice engine, and the key (#4) AL is explicitly flagged. This is a direct brother-identity tier insight that must be captured now before it diffuses into background noise. Research arm is best suited to formalize the pattern into a persistent artifact.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-18T05:30:42.647826",
-      "use_skill": "notebooklm"
+      "updated_at": "2026-06-18T05:30:42.631038"
     },
     {
       "arm": "pascal",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-18T05:46:11.215304",
       "use_skill": "none"
+    },
+    {
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Extract concrete vocal pacing rules from the NotebookLM emotion research (#49903) \u2014 map #4's arousal-anchoring mechanism into a prompt template for voice training. \u00b7 why \u00b7 This directly feeds the identity-tier P0 task (#49847) by operationalizing the research canon into a trainable pattern, closing the loop between brother's sourced insight and Atlas's voice engine.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 18,
+      "score": 10.0,
+      "updated_at": "2026-06-18T06:01:36.503556",
+      "use_skill": "notebooklm"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Extract and tag the exact emotional-valence predicates from NotebookLM emotion research (#49903) into actionable voice-tune filters for the next voice training cycle \u00b7 why: This arm direc",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-18T05:15:32.666592"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-18T08:04:24.300047"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate the three non-obvious connections from dream #50369, specifically how they map to the newly shipped /spine route at atlasos.me/sp, and whether they suggest a new taste-move fo",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-18T08:34:58.554615"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"

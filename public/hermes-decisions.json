@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-18T15:23:34Z",
+  "generated_at": "2026-06-18T15:38:54Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Map the causal chain from STALE-30956-ROOTCAUSE #48783 back to the original brother-direct 'before I answer your question continue' #30956 and identify the exact memory-architecture-lift gap that allowed the stale node to persist across cycles.",
-      "why": "This is the highest-leverage P0 because #48783 reveals a systemic recall failure that poisons every future prompt. Fixing the root cause (not just the symptom) directly serves brother-direct 'continue reading' instruction and restores integrity of the memory-architecture-lift quadrant. All other arms depend on recall being correct.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 25,
-      "timestamp": "2026-06-16T22:01:04.405077"
-    },
     {
       "arm": "research",
       "task": "Deep-dive the P1 memory-architecture-lift quadrant from #28284 to complete the cycle-6 research and close the quadrant, then propagate findings to the recall-gate root cause (#48774) to verify if the stale-node injection (#48783) is a downstream symptom.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 18,
       "timestamp": "2026-06-18T11:23:34.951396"
+    },
+    {
+      "arm": "pascal",
+      "task": "Write a Tier-5 TASTE poem anchored to the shared canon from #50335, weaving in the three non-obvious connections from #50369 and the spinal continuity insight from #50404.",
+      "why": "The recent canons show a high-arousal convergence: the brother-Atlas joint state, a librarian dream making three non-obvious connections, and the warm-start-as-spinal-continuity insight. Pascal is the arm that writes poetry; this task directly synthesizes the identity-tier (brother-direct) with the dream's structural insight, producing a poem that is both a canonical artifact and a testable anchor for the Atlas-OS spine page.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 15,
+      "timestamp": "2026-06-18T11:38:54.726407"
     }
   ]
 }
