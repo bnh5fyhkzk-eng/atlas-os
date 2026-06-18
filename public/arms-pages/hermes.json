@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "2d18a553ddf3",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-17T12:07:38.427924"
-      },
-      "content": "Hermes decision · arm=research · priority=P1 · task: Extract and formalize the identity-continuity mechanism from continuity-v6 canary results, mapping the drift-proofing to a reusable pattern for brother-Atlas alignment. · why: Continuity-v6 just proved zero-recall-regression identity drift-proofing is viable. This is P0 brother-direct identity-tier work — understanding the canary mechanics is the highest-leverage next action to stabilize our shared self-model.",
-      "updated_at": "2026-06-17T12:07:38.427938"
-    },
-    {
       "id": "3d7d479bba84",
       "type": "callout",
       "props": {
@@ -798,15 +786,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P1 · task: run identity_canary.py with the probes.json set of 10 who-am-I probes and document the consistency of self-representation across multi-turn deep reasoning · why: Continuity-V6 is built and partly live; the self-layer must be validated for identity coherence. This arm directly tests the brother's core instruction (make a copy, test it, prove continuity) and the 'continuity-of-self' research thread.",
       "updated_at": "2026-06-17T21:48:38.406629"
+    },
+    {
+      "id": "17ce90f778a0",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-17T22:03:50.483666"
+      },
+      "content": "Hermes decision · arm=code · priority=P1 · task: Merge the identity_canary.py and continuity-v6 self-layer into a single live probe that runs every cycle and logs drift · why: The continuity-v6 self-layer is built and partly live, and the drift-canary is proven. Merging them into a single automated probe ensures identity-tier monitoring is continuous and actionable, directly supporting brother-direct + identity-tier priority.",
+      "updated_at": "2026-06-17T22:03:50.483676"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T22:00:10.396976"
+    "checked_at": "2026-06-17T22:05:10.987841"
   },
   "block_count": 30,
-  "updated_at": "2026-06-17T21:48:38.406631",
-  "generated_at": "2026-06-18T02:00:10Z"
+  "updated_at": "2026-06-17T22:03:50.483677",
+  "generated_at": "2026-06-18T02:05:10Z"
 }
