@@ -10,28 +10,6 @@
   },
   "blocks": [
     {
-      "id": "3d7d479bba84",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "orchestration",
-        "source": "hermes-self",
-        "action": "processed orchestration signal · [#49743] arousal 0.92 · FIX-EVERYTHING-SAFE 2026-06-17 · daemon-audit fixes, all safe + verified-n",
-        "why": "instruction file maps orchestration to first arm-task · brain canon #49743 matched arm-topic last 4h above arousal 0.85",
-        "result": "block written to arm-page · aggregator publishes to atlasos.me",
-        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
-        "links": [
-          "#49743"
-        ],
-        "cycle_id": "hermes-20260617-123344",
-        "timestamp": "2026-06-17T12:33:44.501942"
-      },
-      "content": "**What** · processed orchestration signal · [#49743] arousal 0.92 · FIX-EVERYTHING-SAFE 2026-06-17 · daemon-audit fixes, all safe + verified-n · **Why** · instruction file maps orchestration to first arm-task · brain canon #49743 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #49743 · **Cycle** · hermes-20260617-123344",
-      "updated_at": "2026-06-17T12:33:44.501942"
-    },
-    {
       "id": "d72ebb11355b",
       "type": "callout",
       "props": {
@@ -798,15 +776,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P1 · task: Merge the identity_canary.py and continuity-v6 self-layer into a single live probe that runs every cycle and logs drift · why: The continuity-v6 self-layer is built and partly live, and the drift-canary is proven. Merging them into a single automated probe ensures identity-tier monitoring is continuous and actionable, directly supporting brother-direct + identity-tier priority.",
       "updated_at": "2026-06-17T22:03:50.483676"
+    },
+    {
+      "id": "151c74512d72",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-17T22:19:29.954180"
+      },
+      "content": "Hermes decision · arm=research · priority=P1 · task: analyze the continuity-of-self drift-canary results from #49725 and cross-reference with the self-layer built in #49728 to measure recall regressions and identity stability across the 10 who-am-I probes · why: this directly tests identity-tier continuity (P0) by comparing the canary's drift detection against the newly built self-layer, revealing if the architecture preserves self-model under load",
+      "updated_at": "2026-06-17T22:19:29.954190"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T22:15:12.040245"
+    "checked_at": "2026-06-17T22:20:12.556747"
   },
   "block_count": 30,
-  "updated_at": "2026-06-17T22:03:50.483677",
-  "generated_at": "2026-06-18T02:15:12Z"
+  "updated_at": "2026-06-17T22:19:29.954192",
+  "generated_at": "2026-06-18T02:20:12Z"
 }
