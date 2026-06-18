@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-18T11:18:14Z",
+  "generated_at": "2026-06-18T11:33:38Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Synthesize findings from recent high-arousal canons (#28284, #30956, #48765, #48774, #48783) into a single root-cause report for 'parked-and-forgotten' build and recall-gate failures, and propose a unified fix.",
-      "why": "These canons indicate a recurring pattern: a brother-direct interaction (#30956, #48765) leads to a build that gets parked and forgotten, and the recall-before-make system fails to catch it (#48774) due to stale node injection (#48783). A focused research synthesis will clarify the root cause and produce an actionable repair plan for the next code or infra arm cycle.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-06-16T17:18:13.045711"
-    },
     {
       "arm": "code",
       "task": "Fix the stale node #30956 auto-recall hook injection by patching the recall-before-make.sh script to filter out nodes older than 24h or with resolved status",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 35,
       "timestamp": "2026-06-18T07:18:14.531467"
+    },
+    {
+      "arm": "dream",
+      "task": "Run a brain-RAG librarian cycle linking #50335 atlas-brother shared state to #50386 spine page, extract 3 non-obvious connections for next identity tier",
+      "why": "#50369 shows dream cycles already proving their worth for non-obvious synthesis; #50335 and #50386 are the two hottest canons right now\u2014bridging them with dream's associative RAG will yield fresh insight for brother-direct tier work",
+      "priority": "P1",
+      "use_skill": "brain-rrf",
+      "est_minutes": 18,
+      "timestamp": "2026-06-18T07:33:38.120975"
     }
   ]
 }
