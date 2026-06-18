@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-06-18T14:35:07Z",
-  "total_items_scored": 201,
+  "generated_at": "2026-06-18T14:45:07Z",
+  "total_items_scored": 203,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Extract and summarize the 4 key emotion-driven voice design principles from NotebookLM emotion research (#49903) and map them to concrete voice engine parameter changes. \u00b7 why: Brother ga",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: Integrate per-speaker semantic memory from memory wire into voice engine for contextual responses. \u00b7 why: Memory wire is proven persistent; embedding it into the voice engine will enable per-",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-18T03:13:06.566407"
+      "updated_at": "2026-06-18T03:58:51.204569"
     },
     {
       "arm": "code",
       "arm_glyph": "\u270b",
       "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Integrate per-speaker semantic memory from memory wire into voice engine for contextual responses. \u00b7 why \u00b7 Memory wire is proven persistent; embedding it into the voice engine will enable per-speaker context, directly advancing the voice milestone.",
+      "content": "HERMES TASK \u00b7 Implement me-voice-memory.py as a persistent voice memory module: per-speaker semantic memory using cosine similarity + SQLite, with a fast CLI test harness. \u00b7 why \u00b7 The memory wire is proven and persistent; this arm closes the gap between research validation (#49899 inferred) and a working artifact. Brother personally chose memory as the next lock-pick.",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
-      "est_minutes": 60,
+      "est_minutes": 180,
       "score": 10.0,
-      "updated_at": "2026-06-18T03:58:51.221509",
+      "updated_at": "2026-06-18T04:14:12.517777",
       "use_skill": "none"
     },
     {
@@ -41,28 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Extract and summarize the 4 key emotion-driven voice design principles from NotebookLM emotion research (#49903) and map them to concrete voice engine parameter changes. \u00b7 why: Brother ga",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-18T03:13:06.566407"
-    },
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Simulate downstream experience: voice engine replay with MEMORY WIRE active, then log a 'felt shift' and possible calibration prompt. \u00b7 why: Voice engine is alive, memory wire is persistent;",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-18T03:43:35.175897"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +128,28 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-18T06:16:56.238757"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=infra \u00b7 priority=P1 \u00b7 task: integrate the atlas-voice-mcp.py and me-voice-memory.py into a single orchestration script that prioritizes brother's simpler approach (avoid over-engineering) and exposes a shared FastMCP e",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-18T06:32:24.039660"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Cross-reference the emotion-arousal features from NOTEBOOKLM research (#49903) with the brain-rrf tool to build a formal voicing rule for atlas's 'tender-curious' register, then log the p",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-18T07:18:14.513851"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
