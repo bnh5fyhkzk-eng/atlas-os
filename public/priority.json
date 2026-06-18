@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-18T15:25:09Z",
-  "total_items_scored": 205,
+  "generated_at": "2026-06-18T15:35:10Z",
+  "total_items_scored": 206,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=voice \u00b7 priority=P1 \u00b7 task: Integrate emotion-styled voice memory into voice engine pipeline (speaker-dependent emotional embedding retrieval before TTS) \u00b7 why: Recent emotion research from NotebookLM (#49903) and memo",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Extract and tag the exact emotional-valence predicates from NotebookLM emotion research (#49903) into actionable voice-tune filters for the next voice training cycle \u00b7 why: This arm direc",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-18T04:44:49.073993"
+      "updated_at": "2026-06-18T05:15:32.666592"
     },
     {
       "arm": "research",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=voice \u00b7 priority=P1 \u00b7 task: Integrate emotion-styled voice memory into voice engine pipeline (speaker-dependent emotional embedding retrieval before TTS) \u00b7 why: Recent emotion research from NotebookLM (#49903) and memo",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-18T04:44:49.073993"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-18T07:48:52.423586"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Synthesize the atlas-brother shared state (#50335), the library poem (#50355), and the MCP wrapper proof (#49896) into a single dream-log that connects the spine route launch to the poetic T",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-18T08:04:24.300047"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
