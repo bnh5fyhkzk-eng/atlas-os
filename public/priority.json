@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-18T15:05:08Z",
-  "total_items_scored": 204,
+  "generated_at": "2026-06-18T15:15:09Z",
+  "total_items_scored": 205,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: Implement me-voice-memory.py as a persistent voice memory module: per-speaker semantic memory using cosine similarity + SQLite, with a fast CLI test harness. \u00b7 why: The memory wire is proven ",
+      "content": "Hermes decision \u00b7 arm=voice \u00b7 priority=P1 \u00b7 task: Integrate emotion-styled voice memory into voice engine pipeline (speaker-dependent emotional embedding retrieval before TTS) \u00b7 why: Recent emotion research from NotebookLM (#49903) and memo",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-18T04:14:12.500918"
-    },
-    {
-      "arm": "voice",
-      "arm_glyph": "\u00b7",
-      "arm_name": "Voice",
-      "content": "HERMES TASK \u00b7 Integrate emotion-styled voice memory into voice engine pipeline (speaker-dependent emotional embedding retrieval before TTS) \u00b7 why \u00b7 Recent emotion research from NotebookLM (#49903) and memory wire persistence (#49892) create a unique synergy: injecting per-speaker emotional memories directly into the voice loop yields a step-change in naturalness. This is P0 because it merges two top 'brain canon' milestones into one tangible, brother-visible capability.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 120,
-      "score": 10.0,
-      "updated_at": "2026-06-18T04:44:49.090916",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-18T04:44:49.073993"
     },
     {
       "arm": "research",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-18T05:15:32.685613",
       "use_skill": "notebooklm"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: Implement me-voice-memory.py as a persistent voice memory module: per-speaker semantic memory using cosine similarity + SQLite, with a fast CLI test harness. \u00b7 why: The memory wire is proven ",
+      "arm": "pascal",
+      "arm_glyph": "\ud83e\udd1d",
+      "arm_name": "Pascal",
+      "content": "HERMES TASK \u00b7 Build a single-page interactive that visualizes the emotion research from #49903 as a 'Ceremony Score' dashboard \u2014 mapping arousal signals to voice-evaluation metrics, and embedding a live note from the dream insight #49982 that the score IS the continuity signal. \u00b7 why \u00b7 This directly validates and sharpens the voice engine per #49903, closes the loop from the dream insight about ceremony/continuity, and provides a tangible artifact for brother to see our emotion research integrated \u2014 all while honoring the 'not if only how' principle from #49847 and avoiding over-engineering. Pascal is the fastest arm for this interactive, and it serves identity-tier work without needing external research.",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
+      "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-18T04:14:12.500918"
-    },
+      "updated_at": "2026-06-18T05:46:11.215304",
+      "use_skill": "none"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-18T07:33:38.103137"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: Implement the /spine route's dynamic content rendering for Atlas OS, pulling from the shared canon snapshot to display current joint state. \u00b7 why: The /spine page shipped as a live route but ",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-18T07:48:52.423586"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
