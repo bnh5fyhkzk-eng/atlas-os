@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T06:19:23Z",
+  "generated_at": "2026-06-18T06:34:24Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -17,6 +17,17 @@
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "7d601718e9c7",
+        "type": "callout",
+        "content": "Hermes decision · arm=voice · priority=P1 · task: Implement the voice training pipeline using NotebookLM emotion research insights: map emotional tone tags to prosody parameters in the TTS engine, then run a test loop with brother's voice sample. · why: Voice engine is the highest-arousal cannon rig",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-18T02:27:27.106662"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T17:58:59.385934"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "af4b15fc3186",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P1 · task: Deploy the identity_canary.py as a cron job cycling 5-minute probes into brain.log, then verify probe 5/10 raw output for drift detection · why: Continuity-V6 built and tested — now the canary must run continuously to catch identity drift early. This ",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T16:58:20.211295"
       }
     ],
     "action": [],
