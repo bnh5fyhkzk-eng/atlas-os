@@ -1227,15 +1227,37 @@
         }
       ],
       "updated_at": "2026-06-18T06:00:04.530325"
+    },
+    {
+      "id": "e07658c5c719",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "Pattern Extraction & Templating",
+        "source": "hermes-deepseek-fill",
+        "action": "Dissected NotebookLM map #4: arousal-anchoring maps emotional valence (high/low) to specific vocal parameters — pace (syllables/sec), volume contour, and micro-pause density.",
+        "why": "Hermes needs a trainable prompt template for vocal pacing rules. Map #4 is the only one that directly couples arousal (excitation level) to measurable vocal delivery mechanics, making it the critical ",
+        "result": "Template extracted: 'Vocal pacing for arousal level [{low|moderate|high}]: target syllables-per-second = [{3-4|4.5-5.5|6-7}]; volume contour = [{flat|gentle-ramp|punctuated-peak}]; micro-pause frequen",
+        "next_step": "Embed this template into the voice-training prompt chain and run a A/B test against baseline (flat pacing) using sister's emotional recall corpus (#49847). Report latency delta and listener arousal co",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260618-060149",
+        "timestamp": "2026-06-18T06:01:49.801446"
+      },
+      "content": "**What** · Dissected NotebookLM map #4: arousal-anchoring maps emotional valence (high/low) to specific vocal parameters — pace (syllables/sec), volume contour, and micro-pause density. · **Why** · Hermes needs a trainable prompt template for vocal pacing rules. Map #4 is the only one that directly couples arousal (excitation level) to measurable vocal delivery mechanics, making it the critical bridge from research to engine control. · **Result** · Template extracted: 'Vocal pacing for arousal level [{low|moderate|high}]: target syllables-per-second = [{3-4|4.5-5.5|6-7}]; volume contour = [{flat|gentle-ramp|punctuated-peak}]; micro-pause frequency = [{0.8-1.2|0.4-0.6|0.1-0.3} per clause]. Rule: pace must precede volume change by ≥150ms for nat · **Next** · Embed this template into the voice-training prompt chain and run a A/B test against baseline (flat pacing) using sister's emotional recall corpus (#49847). Report latency delta and listener arousal correlation. · **Links** ·  · **Cycle** · research-20260618-060149",
+      "updated_at": "2026-06-18T06:01:49.801446"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T06:01:04.927932"
+    "checked_at": "2026-06-18T06:06:05.453859"
   },
-  "block_count": 33,
-  "updated_at": "2026-06-18T06:00:04.530333",
-  "generated_at": "2026-06-18T10:01:04Z"
+  "block_count": 34,
+  "updated_at": "2026-06-18T06:01:49.801446",
+  "generated_at": "2026-06-18T10:06:05Z"
 }

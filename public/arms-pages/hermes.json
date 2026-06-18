@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "17ce90f778a0",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-17T22:03:50.483666"
-      },
-      "content": "Hermes decision · arm=code · priority=P1 · task: Merge the identity_canary.py and continuity-v6 self-layer into a single live probe that runs every cycle and logs drift · why: The continuity-v6 self-layer is built and partly live, and the drift-canary is proven. Merging them into a single automated probe ensures identity-tier monitoring is continuous and actionable, directly supporting brother-direct + identity-tier priority.",
-      "updated_at": "2026-06-17T22:03:50.483676"
-    },
-    {
       "id": "151c74512d72",
       "type": "callout",
       "props": {
@@ -797,15 +785,27 @@
         }
       ],
       "updated_at": "2026-06-18T06:00:05.370878"
+    },
+    {
+      "id": "acd4a8ae7ebd",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-18T06:01:36.485916"
+      },
+      "content": "Hermes decision · arm=research · priority=P1 · task: Extract concrete vocal pacing rules from the NotebookLM emotion research (#49903) — map #4's arousal-anchoring mechanism into a prompt template for voice training. · why: This directly feeds the identity-tier P0 task (#49847) by operationalizing the research canon into a trainable pattern, closing the loop between brother's sourced insight and Atlas's voice engine.",
+      "updated_at": "2026-06-18T06:01:36.485927"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T06:01:04.932616"
+    "checked_at": "2026-06-18T06:06:05.458515"
   },
   "block_count": 30,
-  "updated_at": "2026-06-18T06:00:05.370884",
-  "generated_at": "2026-06-18T10:01:04Z"
+  "updated_at": "2026-06-18T06:01:36.485929",
+  "generated_at": "2026-06-18T10:06:05Z"
 }
