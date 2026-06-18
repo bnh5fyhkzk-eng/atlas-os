@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-18T12:34:58Z",
+  "generated_at": "2026-06-18T13:05:29Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Verify root cause of stale node #30956 injection and confirm fix path from #48783",
-      "why": "This is a P0 brother-direct issue: the auto-recall hook is injecting stale node #30956 every prompt, breaking recall integrity. #48783 already identified the root cause (verified, not theorized), so we need to close the loop by confirming the fix and ensuring no recurrence.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 15,
-      "timestamp": "2026-06-16T18:35:11.975305"
-    },
     {
       "arm": "code",
       "task": "Fix auto-recall hook to prevent injection of stale node #30956 by filtering nodes older than 24 hours in recall-before-make.sh",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-06-18T08:34:58.573843"
+    },
+    {
+      "arm": "research",
+      "task": "Analyze the three non-obvious connections from dream #50369 to identify if they map to any unresolved gaps in the atlas-brother shared state or the MCP wrapper integration.",
+      "why": "The dream canon suggests latent associative links that could inform the next cycle of the shared state or reveal hidden dependencies in the MCP wrapper. Research arm is best suited to trace these connections systematically.",
+      "priority": "P1",
+      "use_skill": "brain-rrf",
+      "est_minutes": 15,
+      "timestamp": "2026-06-18T09:05:29.337123"
     }
   ]
 }

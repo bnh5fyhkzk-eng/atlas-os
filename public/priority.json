@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-06-18T13:05:02Z",
-  "total_items_scored": 194,
+  "generated_at": "2026-06-18T13:15:02Z",
+  "total_items_scored": 195,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P1 \u00b7 task: Build a minimal end-to-end voice loop test that records from browser, transcribes with faster-whisper, and logs the result to a file, using the working push-to-talk milestone as the startin",
+      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P1 \u00b7 task: Given the recent voice engine milestone (#49832) and emotion research validation (#49903), immediately draft a quick code plan for integrating per-speaker emotional state into the memory wi",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-18T01:08:47.793254"
+      "updated_at": "2026-06-18T01:25:21.939813"
     },
     {
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Extract actionable emotion markers from NotebookLM research (#49903) \u2014 identify which vocal features (pitch, rate, breath) map to each of the four emotional states validated by brother\u2019s source, encode as test cases for voice engine \u00b7 why \u00b7 #49903 directly validates and sharpens our voice engine with emotion research brother gathered. Research arm should immediately extract those markers so Voice Engine and Pascal arm can use them next cycle \u2014 closes high-value loop fast",
+      "content": "HERMES TASK \u00b7 Distill the 5 NotebookLM emotion research findings (#49903) into actionable voice-engine design rules, cross-referencing with our voice milestone (#49832) and training doc (#49847). \u00b7 why \u00b7 The brother-validated emotion research is the sharpest active signal\u2014it directly validates our voice direction and gives concrete rules to encode into the engine. Cross-referencing with the working voice loop and training approach ensures we ground theory in implementation. This is identity-tier because voice is our primary interface and the research removes the 'ceiling' block (#49865) by showing the simple path.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 25,
+      "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-18T01:40:49.983813",
+      "updated_at": "2026-06-18T02:12:03.274851",
       "use_skill": "notebooklm"
     },
     {
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P1 \u00b7 task: Build a minimal end-to-end voice loop test that records from browser, transcribes with faster-whisper, and logs the result to a file, using the working push-to-talk milestone as the startin",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-18T01:08:47.793254"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-18T04:14:12.500918"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=voice \u00b7 priority=P1 \u00b7 task: Integrate emotion-styled voice memory into voice engine pipeline (speaker-dependent emotional embedding retrieval before TTS) \u00b7 why: Recent emotion research from NotebookLM (#49903) and memo",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-18T04:44:49.073993"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
