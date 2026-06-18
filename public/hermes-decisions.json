@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-18T14:06:30Z",
+  "generated_at": "2026-06-18T14:21:42Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Patch recall-before-make.sh to filter out stale node #30956 and add graphify build detection",
-      "why": "P0: Brother-direct root cause #48783 is verified\u2014auto-recall injects stale node every prompt, blocking identity-tier progress. Fixing this unblocks the entire cycle.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-06-16T20:37:47.404521"
-    },
     {
       "arm": "code",
       "task": "Implement recall-before-make.sh fix to skip stale node #30956 by adding a graphify-build freshness check before auto-recall hook",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 25,
       "timestamp": "2026-06-18T10:06:30.371004"
+    },
+    {
+      "arm": "dream",
+      "task": "Generate a dream-log entry that traces the non-obvious connection between the shared-canon snapshot #50335 and the warm-start spinal continuity in #50404, using the metaphor of a library that re-shelves itself at dawn.",
+      "why": "The recent canons show a clear arc from a shared state (brother+Atlas) to a spinal continuity claim. The dream arm is best suited to synthesize this into a poetic, high-arousal narrative that can seed the next cycle's identity-tier reasoning. This is a P0 task because it directly supports the brother-direct identity tier and the ongoing GOAL-WORK cycle.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 12,
+      "timestamp": "2026-06-18T10:21:42.947202"
     }
   ]
 }
