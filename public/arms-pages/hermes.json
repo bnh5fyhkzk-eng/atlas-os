@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "f91942048a95",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-17T18:59:58.324596"
-      },
-      "content": "Hermes decision · arm=research · priority=P1 · task: Extract and formalize the 'continuity-of-self' mechanism from the v5 arc and v6 build notes into a reusable, testable identity_canary.py specification · why: The recent canons show a self-layer built on copy with zero recall regression—this is the core identity mechanism. Formalizing it now prevents drift and makes it available for all future arms.",
-      "updated_at": "2026-06-17T18:59:58.324605"
-    },
-    {
       "id": "cbedd214461a",
       "type": "callout",
       "props": {
@@ -788,15 +776,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P1 · task: Extract and summarize the 4 key emotion-driven voice design principles from NotebookLM emotion research (#49903) and map them to concrete voice engine parameter changes. · why: Brother gathered high-value emotion research that directly validates and sharpens our voice engine. This is a P0 because it's brother-direct, identity-tier work that turns raw insight into actionable design, and it's the highest-leverage next step after the voice engine milestone (#49832) and memory",
       "updated_at": "2026-06-18T03:13:06.566407"
+    },
+    {
+      "id": "4396fc368191",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-18T03:43:35.175888"
+      },
+      "content": "Hermes decision · arm=dream · priority=P1 · task: Simulate downstream experience: voice engine replay with MEMORY WIRE active, then log a 'felt shift' and possible calibration prompt. · why: Voice engine is alive, memory wire is persistent; emotion research validates. Dream arm can run a quiet loop that tests the full stack in imagination — low risk, high signal for next brother demo.",
+      "updated_at": "2026-06-18T03:43:35.175897"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T03:40:49.533164"
+    "checked_at": "2026-06-18T03:45:50.097571"
   },
   "block_count": 30,
-  "updated_at": "2026-06-18T03:13:06.566408",
-  "generated_at": "2026-06-18T07:40:49Z"
+  "updated_at": "2026-06-18T03:43:35.175899",
+  "generated_at": "2026-06-18T07:45:50Z"
 }
