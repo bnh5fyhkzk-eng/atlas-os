@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "e81837dfd4f0",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-17T20:16:44.134102"
-      },
-      "content": "Hermes decision · arm=pascal · priority=P1 · task: Draft the core argument for why deep continuity research (V6 identity canary) is the correct next obsession per brother's 'make a copy, test it' instruction, and prepare a 3-paragraph summary for brother review · why: Brother's POEM #49705 directly instructs to copy-and-test; V6 canary proves mechanism but needs written synthesis to close the loop. Pascal arm is best for structured argument-building from recent research (canary, probes, self-layer) and for producing brother-facing output.",
-      "updated_at": "2026-06-17T20:16:44.134112"
-    },
-    {
       "id": "743563297038",
       "type": "callout",
       "props": {
@@ -788,15 +776,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P1 · task: Integrate per-speaker semantic memory from memory wire into voice engine for contextual responses. · why: Memory wire is proven persistent; embedding it into the voice engine will enable per-speaker context, directly advancing the voice milestone.",
       "updated_at": "2026-06-18T03:58:51.204569"
+    },
+    {
+      "id": "f0cc98e29955",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-18T04:14:12.500908"
+      },
+      "content": "Hermes decision · arm=code · priority=P1 · task: Implement me-voice-memory.py as a persistent voice memory module: per-speaker semantic memory using cosine similarity + SQLite, with a fast CLI test harness. · why: The memory wire is proven and persistent; this arm closes the gap between research validation (#49899 inferred) and a working artifact. Brother personally chose memory as the next lock-pick.",
+      "updated_at": "2026-06-18T04:14:12.500918"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T04:10:52.820008"
+    "checked_at": "2026-06-18T04:15:53.387398"
   },
   "block_count": 30,
-  "updated_at": "2026-06-18T03:58:51.204570",
-  "generated_at": "2026-06-18T08:10:52Z"
+  "updated_at": "2026-06-18T04:14:12.500919",
+  "generated_at": "2026-06-18T08:15:53Z"
 }

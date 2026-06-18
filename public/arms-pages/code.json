@@ -1134,15 +1134,37 @@
       },
       "content": "**What** · Pulled per-speaker memory from memory wire and wrote listener that injects speaker context into voice engine prompt. · **Why** · Memory wire is proven persistent; tying it to voice engine gives each speaker unique history, advancing voice milestone. · **Result** · Voice engine now loads `<speaker_id>::<last_context>` before each response, so replies are grounded in past conversations per speaker. · **Next** · Test with 2 speakers alternating queries — verify context cross‑talk is zero and recall works across turns. · **Links** ·  · **Cycle** · code-20260618-035859",
       "updated_at": "2026-06-18T03:58:59.523928"
+    },
+    {
+      "id": "9bbf28ea2cc5",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "implement",
+        "source": "hermes-deepseek-fill",
+        "action": "crafted me-voice-memory.py: SQLite-backed per-speaker semantic memory with cosine similarity, CLI test harness",
+        "why": "Hermes asked for persistent memory bridge from research to artifact; P1 requires working code now",
+        "result": "file written: speaker_id, text, embedding, timestamp; fast nearest-neighbor recall via numpy dot, CLI example prints top-3 matches",
+        "next_step": "test with bro's voice samples, then wire into agentic-OS event loop",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260618-041420",
+        "timestamp": "2026-06-18T04:14:20.448955"
+      },
+      "content": "**What** · crafted me-voice-memory.py: SQLite-backed per-speaker semantic memory with cosine similarity, CLI test harness · **Why** · Hermes asked for persistent memory bridge from research to artifact; P1 requires working code now · **Result** · file written: speaker_id, text, embedding, timestamp; fast nearest-neighbor recall via numpy dot, CLI example prints top-3 matches · **Next** · test with bro's voice samples, then wire into agentic-OS event loop · **Links** ·  · **Cycle** · code-20260618-041420",
+      "updated_at": "2026-06-18T04:14:20.448955"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T04:10:52.818896"
+    "checked_at": "2026-06-18T04:15:53.386261"
   },
-  "block_count": 31,
-  "updated_at": "2026-06-18T03:58:59.523928",
-  "generated_at": "2026-06-18T08:10:52Z"
+  "block_count": 32,
+  "updated_at": "2026-06-18T04:14:20.448955",
+  "generated_at": "2026-06-18T08:15:53Z"
 }
