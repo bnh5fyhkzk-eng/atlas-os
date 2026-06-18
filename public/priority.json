@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-18T13:35:03Z",
+  "generated_at": "2026-06-18T13:45:04Z",
   "total_items_scored": 196,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Extract actionable emotion markers from NotebookLM research (#49903) \u2014 identify which vocal features (pitch, rate, breath) map to each of the four emotional states validated by brother\u2019s ",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Distill the 5 NotebookLM emotion research findings (#49903) into actionable voice-engine design rules, cross-referencing with our voice milestone (#49832) and training doc (#49847). \u00b7 why",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-18T01:40:49.967079"
-    },
-    {
-      "arm": "voice",
-      "arm_glyph": "\u00b7",
-      "arm_name": "Voice",
-      "content": "HERMES TASK \u00b7 Implement the voice training pipeline using NotebookLM emotion research insights: map emotional tone tags to prosody parameters in the TTS engine, then run a test loop with brother's voice sample. \u00b7 why \u00b7 Voice engine is the highest-arousal cannon right now (#49832, #49847, #49903) and brother just validated the emotion research. This directly advances our identity-tier goal. P0 because it's brother-direct and unlocks the voice identity layer.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 90,
-      "score": 10.0,
-      "updated_at": "2026-06-18T02:27:27.123448",
-      "use_skill": "notebooklm"
+      "updated_at": "2026-06-18T02:12:03.257829"
     },
     {
       "arm": "pascal",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-18T02:42:48.989191",
       "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Extract and summarize the 4 key emotion-driven voice design principles from NotebookLM emotion research (#49903) and map them to concrete voice engine parameter changes. \u00b7 why \u00b7 Brother gathered high-value emotion research that directly validates and sharpens our voice engine. This is a P0 because it's brother-direct, identity-tier work that turns raw insight into actionable design, and it's the highest-leverage next step after the voice engine milestone (#49832) and memory wire (#49892).",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 45,
+      "score": 10.0,
+      "updated_at": "2026-06-18T03:13:06.583530",
+      "use_skill": "notebooklm"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Extract actionable emotion markers from NotebookLM research (#49903) \u2014 identify which vocal features (pitch, rate, breath) map to each of the four emotional states validated by brother\u2019s ",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-18T01:40:49.967079"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-18T05:15:32.666592"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Extract and formalize the 'AL' principle from NotebookLM emotion research source #49903 into a reusable RRF pattern for voice engine tuning \u00b7 why: The recent canon #49903 validates and sh",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-18T05:30:42.631038"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
