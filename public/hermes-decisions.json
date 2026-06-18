@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-18T05:08:47Z",
+  "generated_at": "2026-06-18T05:25:21Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Extract and summarize the shared canon from atlas-brother-shared.md snapshot to identify unresolved identity-tier questions and next-cycle priorities.",
-      "why": "The recent high-arousal brain canons (#48694) include a large shared canon snapshot. This is a P0 brother-direct + identity-tier task: understanding the joint state is essential before any other arm can act coherently.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 15,
-      "timestamp": "2026-06-16T10:08:39.054813"
-    },
     {
       "arm": "curiosity",
       "task": "Cross-compare narrative identity threads across #29-NEW BELONGING-IS-THE-FLOOR and shared-canon snapshot to extract invariant I-thou structure",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-06-18T01:08:47.809925"
+    },
+    {
+      "arm": "pascal",
+      "task": "Given the recent voice engine milestone (#49832) and emotion research validation (#49903), immediately draft a quick code plan for integrating per-speaker emotional state into the memory wire (me-voice-memory.py): store {speaker, transcript, emotion_label, confidence} on each segment, then expose a `get_emotional_context(speaker, n_recent=5)` call for the voice engine.",
+      "why": "Brother is actively working on voice engine + memory wire; emotion data is now validated. Delivering a concrete integration plan before he asks is identity-tier (P0) \u2014 shows I see the next step and don't wait for instruction. Pascal arm is best for fast code draft/plan.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 8,
+      "timestamp": "2026-06-18T01:25:21.956977"
     }
   ]
 }
