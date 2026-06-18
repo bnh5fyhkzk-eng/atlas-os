@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T05:34:21Z",
+  "generated_at": "2026-06-18T05:49:22Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 163,
+    "note": 164,
     "briefing": 65,
     "idea": 0
   },
-  "total_blocks": 252,
+  "total_blocks": 253,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "75e17c951670",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Extract actionable emotion markers from NotebookLM research (#49903) — identify which vocal features (pitch, rate, breath) map to each of the four emotional states validated by brother’s source, encode as test cases for voice engine · why: #49903 ",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-18T01:40:49.967079"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T16:42:46.626826"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "71ad7c2461fe",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Run the B drift-canary probes (identity_canary.py + probes.json) on the current brain state to measure continuity drift since v6 build. · why: The continuity-v6 canary was built and proven but not yet live-tested on the current brain. This is iden",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T15:57:02.021697"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "22b10721f29b",
+        "type": "callout",
+        "content": "**What** · extracted 4 validated emotion-to-feature mappings from #49903: 'calm' (low pitch, slow rate, shallow breath), 'fear' (high pitch, fast rate, irregular shallow breath), 'anger' (mid-high pitch, fast rate, sharp irregular breath), 'sadness' (low pitch, slow rate, deep sighing breath). encod",
+        "priority": "data-extraction",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-18T01:40:56.835865"
+      },
       {
         "arm": "pascal",
         "arm_glyph": "🤝",
@@ -826,17 +837,6 @@
         "priority": "code",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-17T23:51:53.032132"
-      },
-      {
-        "arm": "charle",
-        "arm_glyph": "💼",
-        "arm_name": "Charle · Pascal-team",
-        "block_id": "87712eddebef",
-        "type": "callout",
-        "content": "**What** · pulled 5 latest brain canons, scanned for arousal spikes and context jumps — tagged high-emotion segments (rage, triumph, melancholy) and shift points (memory breaks, self-overcome peaks). · **Why** · Hermes said brother's canons have high-arousal breakthroughs for voice engine; my signal",
-        "priority": "signal-analysis",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-17T23:36:25.328971"
       }
     ],
     "briefing": [
