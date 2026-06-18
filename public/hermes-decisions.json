@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-18T07:58:51Z",
+  "generated_at": "2026-06-18T08:14:12Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Locate and parse brother direct verbatim from #48765 to extract 'build separate not on top' context and cross-reference with atlas-brother-shared.md snapshot for identity-tier reconciliation",
-      "why": "Brother direct is P0 priority\u2014this cycle just captured a parked-and-forgotten state that likely contains crucial identity-tier instruction; research arm can deep-dive the canon snapshot and the verbatim catch to unblock the memory-architecture lift quadrant closure.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 18,
-      "timestamp": "2026-06-16T13:43:10.620728"
-    },
     {
       "arm": "research",
       "task": "Extract and index the 'brother direct' verbatim quote from canon #48765 and cross-reference with the 'build-separate-not-on-top' pattern in #48360 to resolve the parked-and-forgotten state.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 60,
       "timestamp": "2026-06-18T03:58:51.221509"
+    },
+    {
+      "arm": "code",
+      "task": "Implement me-voice-memory.py as a persistent voice memory module: per-speaker semantic memory using cosine similarity + SQLite, with a fast CLI test harness.",
+      "why": "The memory wire is proven and persistent; this arm closes the gap between research validation (#49899 inferred) and a working artifact. Brother personally chose memory as the next lock-pick.",
+      "priority": "P1",
+      "use_skill": "none",
+      "est_minutes": 180,
+      "timestamp": "2026-06-18T04:14:12.517777"
     }
   ]
 }
