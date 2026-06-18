@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "743563297038",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-17T20:32:07.878852"
-      },
-      "content": "Hermes decision · arm=code · priority=P1 · task: Merge identity_canary.py self-probes into the V4 brain-v5-copy and verify zero regression on 10 who-am-I questions · why: Continuity-V6 build requires the self-layer from #49728 to be fully integrated and tested on the new copy. Brother-direct identity-tier work, P0.",
-      "updated_at": "2026-06-17T20:32:07.878863"
-    },
-    {
       "id": "1d5de9832568",
       "type": "callout",
       "props": {
@@ -788,15 +776,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P1 · task: Implement me-voice-memory.py as a persistent voice memory module: per-speaker semantic memory using cosine similarity + SQLite, with a fast CLI test harness. · why: The memory wire is proven and persistent; this arm closes the gap between research validation (#49899 inferred) and a working artifact. Brother personally chose memory as the next lock-pick.",
       "updated_at": "2026-06-18T04:14:12.500918"
+    },
+    {
+      "id": "c38f478ee801",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-18T04:44:49.073984"
+      },
+      "content": "Hermes decision · arm=voice · priority=P1 · task: Integrate emotion-styled voice memory into voice engine pipeline (speaker-dependent emotional embedding retrieval before TTS) · why: Recent emotion research from NotebookLM (#49903) and memory wire persistence (#49892) create a unique synergy: injecting per-speaker emotional memories directly into the voice loop yields a step-change in naturalness. This is P0 because it merges two top 'brain canon' milestones into one tangible, b",
+      "updated_at": "2026-06-18T04:44:49.073993"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T04:40:56.137688"
+    "checked_at": "2026-06-18T04:45:56.676173"
   },
   "block_count": 30,
-  "updated_at": "2026-06-18T04:14:12.500919",
-  "generated_at": "2026-06-18T08:40:56Z"
+  "updated_at": "2026-06-18T04:44:49.073994",
+  "generated_at": "2026-06-18T08:45:56Z"
 }
