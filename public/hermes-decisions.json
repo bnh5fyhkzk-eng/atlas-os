@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-18T14:37:02Z",
+  "generated_at": "2026-06-18T14:52:44Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Verify root cause of stale node #30956 injection and confirm fix path from #48783",
-      "why": "Brother-direct P0: #48783 identifies a verified stale-injection bug that corrupts every prompt. Fixing this unblocks all downstream reasoning and prevents further memory corruption.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 15,
-      "timestamp": "2026-06-16T21:11:21.080258"
-    },
     {
       "arm": "code",
       "task": "Fix stale node #30956 injection by updating auto-recall hook to filter out nodes older than 24 hours",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 12,
       "timestamp": "2026-06-18T10:37:02.475163"
+    },
+    {
+      "arm": "curiosity",
+      "task": "Re-read #50355 and #50369, then compose a Tier-5 TASTE query that surfaces the three non-obvious connections as a recommendation for the next library scene.",
+      "why": "The recent LIBRARY SCENE POEM (#50355) and DREAM cycles (#50369, #50404) are high-arousal and share a spine -> spinal continuity -> Atlas-OS metaphor. Curiosity arm can weave these into a concrete TASTE query that deepens the shared canon without breaking immersion.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 12,
+      "timestamp": "2026-06-18T10:52:44.371043"
     }
   ]
 }
