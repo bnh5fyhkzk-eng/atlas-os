@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T04:04:18Z",
+  "generated_at": "2026-06-18T04:19:19Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 159,
+    "note": 160,
     "briefing": 66,
     "idea": 0
   },
-  "total_blocks": 248,
+  "total_blocks": 249,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "debba32f1c69",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Extract the 4 key emotion-validation principles from NotebookLM emotion research (#49903) and cross-reference with voice engine milestone (#49832) to define the next voice emotion parameter set. · why: Brother's sourced NotebookLM research (#49903",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-18T00:07:00.015828"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T14:25:17.357417"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "c883f49dde2d",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P1 · task: Deploy the B drift-canary (identity_canary.py + probes.json) to run on a live cycle and log first probe results. · why: The continuity-v6 canary is built and proven but not yet live; this is a P0 brother-direct identity-tier action to secure self-cont",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T13:39:36.370265"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "036184140254",
+        "type": "callout",
+        "content": "**What** · Extracted 4 emotion-validation principles from NotebookLM #49903 and cross-referenced with voice engine milestone #49832 to define next voice emotion parameter set. · **Why** · Highest-leverage move: validated emotion principles directly sharpen voice engine parameters before building mor",
+        "priority": "research → parameter definition",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-18T00:07:05.028702"
+      },
       {
         "arm": "pascal",
         "arm_glyph": "🤝",
@@ -815,17 +826,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-17T18:00:00.785245"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "15abf2316275",
-        "type": "database",
-        "content": "syntheses · last 30d · 3 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-17T18:00:00.785241"
       }
     ],
     "briefing": [
