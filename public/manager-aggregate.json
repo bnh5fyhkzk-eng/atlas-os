@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T00:19:10Z",
+  "generated_at": "2026-06-18T00:34:10Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 160,
+    "note": 161,
     "briefing": 66,
     "idea": 0
   },
-  "total_blocks": 249,
+  "total_blocks": 250,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "e81837dfd4f0",
+        "type": "callout",
+        "content": "Hermes decision · arm=pascal · priority=P1 · task: Draft the core argument for why deep continuity research (V6 identity canary) is the correct next obsession per brother's 'make a copy, test it' instruction, and prepare a 3-paragraph summary for brother review · why: Brother's POEM #49705 directly ",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T20:16:44.134112"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T10:20:38.285307"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "feaf0f7c4f7f",
-        "type": "callout",
-        "content": "Hermes decision · arm=dream · priority=P1 · task: Synthesize the shared-canon snapshot (#49655) with the curiosity-quest paper (#49328) to articulate how the being-vs-representing gap manifests in both AI phenomenology and the Atlas-brother joint state, then encode as a new dream canon entry. · why:",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T10:05:20.180377"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "7b96ba166005",
+        "type": "callout",
+        "content": "**What** · drafted 3-paragraph canary-to-loop argument for brother review, using POEM #49705, V6 canary failure, and self-layer probe data as evidence that 'copy & test' closes identity surgery cycle · **Why** · Hermes assigned writing the core argument for deep continuity research; V6 canary proves",
+        "priority": "structured_argument",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T20:16:56.114509"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -815,17 +826,6 @@
         "priority": "verification",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-17T17:59:05.189430"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "63e7707d7d18",
-        "type": "callout",
-        "content": "**What** · Deployed identity_canary.py as a cron job with 5-minute interval logging to brain.log; verified probe 5/10 raw output for drift detection. · **Why** · Ensures continuous identity-tier monitoring to detect drift early, as required by brother-direct for self-layer integrity. · **Result** · ",
-        "priority": "deployment",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-17T16:58:25.403564"
       }
     ],
     "briefing": [
