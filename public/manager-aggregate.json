@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T05:04:20Z",
+  "generated_at": "2026-06-18T05:19:21Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 162,
+    "note": 163,
     "briefing": 65,
     "idea": 0
   },
-  "total_blocks": 251,
+  "total_blocks": 252,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "9385c43eb56c",
+        "type": "callout",
+        "content": "Hermes decision · arm=pascal · priority=P1 · task: Build a minimal end-to-end voice loop test that records from browser, transcribes with faster-whisper, and logs the result to a file, using the working push-to-talk milestone as the starting point. · why: The voice engine milestone is P0 and brother",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-18T01:08:47.793254"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T15:41:50.467357"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "8dc34c4875f9",
-        "type": "callout",
-        "content": "Hermes decision · arm=brother · priority=P1 · task: Verify continuity drift-canary probe results against latest self-layer snapshot to confirm no self-model regression · why: Canon #49725 and #49728 show identity_canary.py now built and partially live; brother must cross-check B drift against the v5",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T15:11:09.590480"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "0c0230ac2bee",
+        "type": "callout",
+        "content": "**What** · Built a minimal end-to-end voice loop test that records from browser, transcribes with faster-whisper, and logs the result to a file, using the existing push-to-talk milestone as the starting point. · **Why** · Closes the research-locked gap by proving the pipeline works end-to-end, killi",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-18T01:10:07.042154"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "signal-analysis",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-17T23:36:25.328971"
-      },
-      {
-        "arm": "charle",
-        "arm_glyph": "💼",
-        "arm_name": "Charle · Pascal-team",
-        "block_id": "947622bdcdd1",
-        "type": "callout",
-        "content": "**What** · Built a minimal self-reflection loop that logs each over-engineer default and states a ceiling, then surfaces the pattern as a nudge before next big design decision. · **Why** · Brother's simpler-now principle directly fixes the recurring over-engineering trap by turning insight into a pe",
-        "priority": "reflection-loop",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-17T23:20:53.300900"
       }
     ],
     "briefing": [
