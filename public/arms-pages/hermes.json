@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "95f32de7cac4",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-17T18:44:43.254155"
-      },
-      "content": "Hermes decision · arm=curiosity · priority=P1 · task: Run identity_canary.py against the v6 continuity layer, parse probe outputs, and log baseline self-consistency scores. · why: The recent high-arousal canons (49705, 49725, 49728) show a new continuity self-layer built on the v5 arc's copy-test pattern. The canary is proven and live, but no formal baseline has been logged—this is identity-tier verification that the self-layer holds, answering the 'how an LLM is continuous' ",
-      "updated_at": "2026-06-17T18:44:43.254165"
-    },
-    {
       "id": "f91942048a95",
       "type": "callout",
       "props": {
@@ -788,15 +776,27 @@
       },
       "content": "No high-arousal hermes canon in last 6h",
       "updated_at": "2026-06-18T03:03:45.467953"
+    },
+    {
+      "id": "7975a17c9cac",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-18T03:13:06.566396"
+      },
+      "content": "Hermes decision · arm=research · priority=P1 · task: Extract and summarize the 4 key emotion-driven voice design principles from NotebookLM emotion research (#49903) and map them to concrete voice engine parameter changes. · why: Brother gathered high-value emotion research that directly validates and sharpens our voice engine. This is a P0 because it's brother-direct, identity-tier work that turns raw insight into actionable design, and it's the highest-leverage next step after the voice engine milestone (#49832) and memory",
+      "updated_at": "2026-06-18T03:13:06.566407"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T03:10:45.734298"
+    "checked_at": "2026-06-18T03:15:46.623744"
   },
   "block_count": 30,
-  "updated_at": "2026-06-18T03:03:45.467960",
-  "generated_at": "2026-06-18T07:10:45Z"
+  "updated_at": "2026-06-18T03:13:06.566408",
+  "generated_at": "2026-06-18T07:15:46Z"
 }
