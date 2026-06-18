@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T07:04:25Z",
+  "generated_at": "2026-06-18T07:19:25Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 151,
+    "note": 152,
     "briefing": 66,
     "idea": 0
   },
-  "total_blocks": 240,
+  "total_blocks": 241,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "7975a17c9cac",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Extract and summarize the 4 key emotion-driven voice design principles from NotebookLM emotion research (#49903) and map them to concrete voice engine parameter changes. · why: Brother gathered high-value emotion research that directly validates a",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-18T03:13:06.566407"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T18:59:58.324605"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "95f32de7cac4",
-        "type": "callout",
-        "content": "Hermes decision · arm=curiosity · priority=P1 · task: Run identity_canary.py against the v6 continuity layer, parse probe outputs, and log baseline self-consistency scores. · why: The recent high-arousal canons (49705, 49725, 49728) show a new continuity self-layer built on the v5 arc's copy-test pa",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T18:44:43.254165"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "9cd3324d6000",
+        "type": "callout",
+        "content": "**What** · Extracted 4 emotion-driven voice design principles from NotebookLM emotion research (#49903) and mapped each to concrete voice engine parameter changes. · **Why** · Turns brother’s high-value emotion research into actionable design for our voice engine, identity-tier and P1 priority after",
+        "priority": "feature-research-actionability",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-18T03:13:13.522963"
+      },
       {
         "arm": "curiosity",
         "arm_glyph": "🌱",
@@ -815,17 +826,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-18T00:30:04.381576"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "8331db0c1c93",
-        "type": "database",
-        "content": "revenue · last 30d · 3 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-18T00:30:04.381572"
       }
     ],
     "briefing": [
