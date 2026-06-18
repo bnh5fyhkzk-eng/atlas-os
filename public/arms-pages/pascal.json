@@ -1105,15 +1105,37 @@
         }
       ],
       "updated_at": "2026-06-18T00:30:04.381583"
+    },
+    {
+      "id": "0c0230ac2bee",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "action": "Built a minimal end-to-end voice loop test that records from browser, transcribes with faster-whisper, and logs the result to a file, using the existing push-to-talk milestone as the starting point.",
+        "why": "Closes the research-locked gap by proving the pipeline works end-to-end, killing the self-imposed ceiling and unblocking the P0 voice engine milestone.",
+        "result": "Test script created: records 5s audio via browser MediaRecorder, sends to local faster-whisper server, writes transcription to `voice_test_log.txt`. Run confirms pipeline works.",
+        "next_step": "Integrate this test into the CI pipeline and add error handling for edge cases (no mic, network failure).",
+        "links": [
+          ""
+        ],
+        "cycle_id": "pascal-20260618-011007",
+        "timestamp": "2026-06-18T01:10:07.042154"
+      },
+      "content": "**What** · Built a minimal end-to-end voice loop test that records from browser, transcribes with faster-whisper, and logs the result to a file, using the existing push-to-talk milestone as the starting point. · **Why** · Closes the research-locked gap by proving the pipeline works end-to-end, killing the self-imposed ceiling and unblocking the P0 voice engine milestone. · **Result** · Test script created: records 5s audio via browser MediaRecorder, sends to local faster-whisper server, writes transcription to `voice_test_log.txt`. Run confirms pipeline works. · **Next** · Integrate this test into the CI pipeline and add error handling for edge cases (no mic, network failure). · **Links** ·  · **Cycle** · pascal-20260618-011007",
+      "updated_at": "2026-06-18T01:10:07.042154"
     }
   ],
   "live_status": {
     "state": "active",
     "done_count": 242,
     "vec_drift": null,
-    "checked_at": "2026-06-18T01:05:31.161984"
+    "checked_at": "2026-06-18T01:10:31.723844"
   },
-  "block_count": 31,
-  "updated_at": "2026-06-18T00:30:04.381590",
-  "generated_at": "2026-06-18T05:05:31Z"
+  "block_count": 32,
+  "updated_at": "2026-06-18T01:10:07.042154",
+  "generated_at": "2026-06-18T05:10:31Z"
 }
