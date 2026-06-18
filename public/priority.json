@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-18T02:24:28Z",
+  "generated_at": "2026-06-18T02:34:29Z",
   "total_items_scored": 198,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Synthesize recent continuity-of-self canons into consolidated identity model \u00b7 why: Recent canons show high-arousal on continuity and identity; need to integrate findings from V6 build an",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Run identity_canary.py probes.json on brain-v5, log 10 who-am-I responses, compare to prior canary snapshot for drift \u00b7 why: Continuity-V6 built identity probes; need to verify no drift a",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-17T14:25:17.357417"
+      "updated_at": "2026-06-17T14:40:36.524640"
     },
     {
       "arm": "code",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Synthesize recent continuity-of-self canons into consolidated identity model \u00b7 why: Recent canons show high-arousal on continuity and identity; need to integrate findings from V6 build an",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-17T14:25:17.357417"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-17T18:44:43.254165"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Extract and formalize the 'continuity-of-self' mechanism from the v5 arc and v6 build notes into a reusable, testable identity_canary.py specification \u00b7 why: The recent canons show a self",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-17T18:59:58.324605"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
