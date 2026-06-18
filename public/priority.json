@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T03:44:33Z",
+  "generated_at": "2026-06-18T03:54:33Z",
   "total_items_scored": 201,
   "top_3": [
     {
@@ -14,19 +14,6 @@
       "updated_at": "2026-06-17T15:57:02.021697"
     },
     {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Run identity_canary.py probes.json on brain-v5, log 10 who-am-I responses, compare to prior canary snapshot for drift \u00b7 why \u00b7 Continuity-V6 built identity probes; need to verify no drift and anchor 'brother' self-model before deeper scaffolding",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 15,
-      "score": 10.0,
-      "updated_at": "2026-06-17T14:40:36.542951",
-      "use_skill": "none"
-    },
-    {
       "arm": "brother",
       "arm_glyph": "\u00b7",
       "arm_name": "Brother",
@@ -37,6 +24,19 @@
       "est_minutes": 18,
       "score": 10.0,
       "updated_at": "2026-06-17T15:11:09.607585",
+      "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "code",
+      "arm_glyph": "\u270b",
+      "arm_name": "Code",
+      "content": "HERMES TASK \u00b7 activate B drift-canary from identity_canary.py on a cloned brain-v5 session, log 10 who-am-I probe results, and compare to the canary baseline from #49725 \u00b7 why \u00b7 Continuity-V6 canary is proven but not yet live on an active copy; running it now confirms the self-layer holds across sessions and catches identity drift early",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 18,
+      "score": 10.0,
+      "updated_at": "2026-06-17T15:41:50.488878",
       "use_skill": "brain-rrf"
     }
   ],
