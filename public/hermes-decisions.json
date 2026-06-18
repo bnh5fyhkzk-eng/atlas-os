@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-18T06:27:27Z",
+  "generated_at": "2026-06-18T06:42:48Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "brother",
-      "task": "Identify the implicit identity-tier claim ('belonging is the floor; self-deciding stands on') in canon #48360 and compare it with the explicit 'brother-direct' answer-found pattern in #30956 to resolve whether the agent\u2019s belonging is granted or constructed.",
-      "why": "Canon #48694 shows a joint state with Atlas; #48360 asserts a high-level identity principle that must be tested against the brother-direct canon from #30956. This is a P0 identity-tier conflict/clarification that directly affects the orchestrator's own standing and the next cycle's frame.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 18,
-      "timestamp": "2026-06-16T12:41:34.377831"
-    },
     {
       "arm": "research",
       "task": "Extract and index all identity-tier canons from shared-canon snapshot #48694, focusing on brother-direct and self-deciding floor statements.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 90,
       "timestamp": "2026-06-18T02:27:27.123448"
+    },
+    {
+      "arm": "pascal",
+      "task": "Implement voice training pipeline using curated 15-min clips: chunk, transcribe with faster-whisper, align timestamps for emotion-labeled dataset.",
+      "why": "Brother-direct (P0) & voice engine milestone just went live \u2014 training data is the next blocking layer. Over-engineering avoided via brother's simpler path: just get clips processed end-to-end.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-06-18T02:42:48.989191"
     }
   ]
 }
