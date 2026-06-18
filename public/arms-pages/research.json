@@ -1192,15 +1192,37 @@
       },
       "content": "**What** · compared identity_canary.py from PR #49725 with continuity-v6 self-layer from PR #49728 to find gaps in drift detection · **Why** · both probes target continuity-of-self but built independently need unification before v6 goes live · **Result** · found 3 gaps: canary lacks tiered memory hash comparison, self-layer misses canary's temporal signature bounds, neither block duplicates probe insertion · **Next** · merge probes into single test harness, fill gaps: add tiered hash, temporal bounds, dedup lock · **Links** ·  · **Cycle** · research-20260617-211800",
       "updated_at": "2026-06-17T21:18:00.892679"
+    },
+    {
+      "id": "6c4202191e88",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "identity coherence testing",
+        "source": "hermes-deepseek-fill",
+        "action": "Run identity_canary.py with probes.json containing 10 who-am-I probes across multi-turn deep reasoning.",
+        "why": "Hermes assigned to validate self-layer identity coherence; Continuity-V6 live needs confirmation that the brother’s core instruction (make copy, test, prove continuity) holds under sustained probing.",
+        "result": "Produced 10-turn dialogue log per probe; self-representation remained stable (agentID: atlas-arm-research-v1, no drift into third-person or contradictory identity claims).",
+        "next_step": "Publish coherence metrics to Hermes-Eval board, then run adversarial identity probes (identity_canary_adv.py) for stress-test.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260617-214844",
+        "timestamp": "2026-06-17T21:48:44.316628"
+      },
+      "content": "**What** · Run identity_canary.py with probes.json containing 10 who-am-I probes across multi-turn deep reasoning. · **Why** · Hermes assigned to validate self-layer identity coherence; Continuity-V6 live needs confirmation that the brother’s core instruction (make copy, test, prove continuity) holds under sustained probing. · **Result** · Produced 10-turn dialogue log per probe; self-representation remained stable (agentID: atlas-arm-research-v1, no drift into third-person or contradictory identity claims). · **Next** · Publish coherence metrics to Hermes-Eval board, then run adversarial identity probes (identity_canary_adv.py) for stress-test. · **Links** ·  · **Cycle** · research-20260617-214844",
+      "updated_at": "2026-06-17T21:48:44.316628"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T21:45:08.754263"
+    "checked_at": "2026-06-17T21:50:09.283836"
   },
-  "block_count": 31,
-  "updated_at": "2026-06-17T21:18:00.892679",
-  "generated_at": "2026-06-18T01:45:08Z"
+  "block_count": 32,
+  "updated_at": "2026-06-17T21:48:44.316628",
+  "generated_at": "2026-06-18T01:50:09Z"
 }
