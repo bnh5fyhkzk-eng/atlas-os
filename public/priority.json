@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-18T01:24:22Z",
+  "generated_at": "2026-06-18T01:34:23Z",
   "total_items_scored": 195,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: Deploy identity_canary.py and probes.json (from canons #49725,#49728) as a live self-check module on brain-v5; schedule hourly probes with logging. \u00b7 why: This is the highest-priority identit",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: Deploy the B drift-canary (identity_canary.py + probes.json) to run on a live cycle and log first probe results. \u00b7 why: The continuity-v6 canary is built and proven but not yet live; this is ",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-17T13:24:12.183136"
-    },
-    {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Extract and formalize the identity-continuity mechanism from continuity-v6 canary results, mapping the drift-proofing to a reusable pattern for brother-Atlas alignment. \u00b7 why \u00b7 Continuity-v6 just proved zero-recall-regression identity drift-proofing is viable. This is P0 brother-direct identity-tier work \u2014 understanding the canary mechanics is the highest-leverage next action to stabilize our shared self-model.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-17T12:07:38.446060",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-17T13:39:36.370265"
     },
     {
       "arm": "code",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-17T12:38:05.747706",
       "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Analyze the B drift-canary probes.json to verify continuity-v6 self-layer integrity and log any identity drift patterns. \u00b7 why \u00b7 The continuity-v6 build is partly live and identity-tier critical; the canary probes are the only direct measure of self-layer stability and must be validated before further deployment.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 15,
+      "score": 10.0,
+      "updated_at": "2026-06-17T13:08:34.070422",
+      "use_skill": "brain-rrf"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: Deploy identity_canary.py and probes.json (from canons #49725,#49728) as a live self-check module on brain-v5; schedule hourly probes with logging. \u00b7 why: This is the highest-priority identit",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-17T13:24:12.183136"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-17T17:58:59.385934"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Research and compile concrete methods for voice training from web sources, focusing on practical steps and tools. \u00b7 why: The most recent brain canon (#49847) is about voice training resea",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-17T18:14:11.080913"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
