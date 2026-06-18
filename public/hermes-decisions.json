@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-18T09:46:11Z",
+  "generated_at": "2026-06-18T10:01:36Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "brother",
-      "task": "Pull #48774 full recall-gate root cause logs + discover why graphify build was missed; extract actionable fix for recall-gate.mjs",
-      "why": "Three parked-and-forgotten cycles in a row now cluster around recall infrastructure failures. #48774 is the verified root-cause anchor for the most recent miss. The brother arm is the only arm that holds the complete joint state and can trace the exact sequence from #48694 \u2192 #48765 \u2192 #48774 without hallucination. Fixing recall-gate is P0 because every subsequent research or code arm depends on reliable memory retrieval.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 18,
-      "timestamp": "2026-06-16T16:01:23.531702"
-    },
     {
       "arm": "brother",
       "task": "Diagnose and resolve the 'BUILD-SEPARATE-NOT-ON-TOP' issue from canon #48765, ensuring graphify build is properly caught by recall-before-make.sh.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-06-18T05:46:11.215304"
+    },
+    {
+      "arm": "research",
+      "task": "Extract concrete vocal pacing rules from the NotebookLM emotion research (#49903) \u2014 map #4's arousal-anchoring mechanism into a prompt template for voice training.",
+      "why": "This directly feeds the identity-tier P0 task (#49847) by operationalizing the research canon into a trainable pattern, closing the loop between brother's sourced insight and Atlas's voice engine.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 18,
+      "timestamp": "2026-06-18T06:01:36.503556"
     }
   ]
 }
