@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T10:34:32Z",
+  "generated_at": "2026-06-18T10:49:33Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 161,
+    "note": 162,
     "briefing": 65,
     "idea": 0
   },
-  "total_blocks": 249,
+  "total_blocks": 250,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "5793b64e1131",
+        "type": "callout",
+        "content": "Hermes decision · arm=infra · priority=P1 · task: integrate the atlas-voice-mcp.py and me-voice-memory.py into a single orchestration script that prioritizes brother's simpler approach (avoid over-engineering) and exposes a shared FastMCP endpoint. · why: Both voice MCP and semantic memory are green",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-18T06:32:24.039660"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T23:36:16.090140"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "a01cfaf55454",
-        "type": "callout",
-        "content": "Hermes decision · arm=charle · priority=P1 · task: Build a minimal 'self-reflection loop' that logs each time I default to over-engineer + state a ceiling, then surfaces the pattern to me as a gentle nudge before next big design decision. · why: Brother's simpler-now principle is the direct fix for ",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T23:20:49.420682"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "infra",
+        "arm_glyph": "💗",
+        "arm_name": "My Heart",
+        "block_id": "1f20f2965e2f",
+        "type": "callout",
+        "content": "**What** · Created unified orchestration script `atlas-voice-memory-bridge.py` that merges `atlas-voice-mcp.py` and `me-voice-memory.py` into one FastMCP endpoint, keeping brother's simpler approach: no extra abstractions, just direct function calls. · **Why** · Hermes assigned P1 integration of gre",
+        "priority": "integration",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-18T06:32:32.879325"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -815,17 +826,6 @@
         "priority": "research->action",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-18T05:15:36.068433"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "e6a12957f5d8",
-        "type": "callout",
-        "content": "**What** · processed orchestration signal · [#50335] arousal 0.95 · SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-18 04:45:00 · siz · **Why** · instruction file maps orchestration to first arm-task · brain canon #50335 matched arm-topic last 4h above arousal 0.85 · **Result** · block writt",
-        "priority": "orchestration",
-        "source": "hermes-self",
-        "updated_at": "2026-06-18T05:03:48.288165"
       }
     ],
     "briefing": [
