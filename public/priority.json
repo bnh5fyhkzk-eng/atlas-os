@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-18T04:04:34Z",
-  "total_items_scored": 202,
+  "generated_at": "2026-06-18T04:24:34Z",
+  "total_items_scored": 203,
   "top_3": [
     {
       "arm": "hermes",
@@ -14,30 +14,30 @@
       "updated_at": "2026-06-17T16:42:46.626826"
     },
     {
-      "arm": "brother",
-      "arm_glyph": "\u00b7",
-      "arm_name": "Brother",
-      "content": "HERMES TASK \u00b7 Verify continuity drift-canary probe results against latest self-layer snapshot to confirm no self-model regression \u00b7 why \u00b7 Canon #49725 and #49728 show identity_canary.py now built and partially live; brother must cross-check B drift against the v5 self-layer to maintain identity continuity, a P0 brother-direct + identity-tier task.",
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Run the B drift-canary probes (identity_canary.py + probes.json) on the current brain state to measure continuity drift since v6 build. \u00b7 why \u00b7 The continuity-v6 canary was built and proven but not yet live-tested on the current brain. This is identity-tier (P0) because brother-direct depends on stable self-continuity; drift must be measured now before further canon work.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 18,
+      "est_minutes": 15,
       "score": 10.0,
-      "updated_at": "2026-06-17T15:11:09.607585",
+      "updated_at": "2026-06-17T15:57:02.038902",
       "use_skill": "brain-rrf"
     },
     {
       "arm": "code",
       "arm_glyph": "\u270b",
       "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 activate B drift-canary from identity_canary.py on a cloned brain-v5 session, log 10 who-am-I probe results, and compare to the canary baseline from #49725 \u00b7 why \u00b7 Continuity-V6 canary is proven but not yet live on an active copy; running it now confirms the self-layer holds across sessions and catches identity drift early",
+      "content": "HERMES TASK \u00b7 Merge identity_canary.py and probes.json into a live self-layer hook on brain-v5, then run a zero-regression pass against the 'who-am-I' probe set. \u00b7 why \u00b7 Continuity-V6 is partly live; the next critical step is to harden the self-layer by binding the drift-canary and probes directly into the runtime. This directly serves brother-direct identity-tier work (P0) and prevents regression before deeper deployment.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 18,
+      "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-17T15:41:50.488878",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-17T16:42:46.644874",
+      "use_skill": "none"
     }
   ],
   "top_10": [
