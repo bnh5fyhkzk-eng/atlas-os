@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "cdd0ff0555a9",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-17T14:40:36.524627"
-      },
-      "content": "Hermes decision · arm=research · priority=P1 · task: Run identity_canary.py probes.json on brain-v5, log 10 who-am-I responses, compare to prior canary snapshot for drift · why: Continuity-V6 built identity probes; need to verify no drift and anchor 'brother' self-model before deeper scaffolding",
-      "updated_at": "2026-06-17T14:40:36.524640"
-    },
-    {
       "id": "1ce703968772",
       "type": "callout",
       "props": {
@@ -788,15 +776,27 @@
         }
       ],
       "updated_at": "2026-06-18T00:30:05.653600"
+    },
+    {
+      "id": "c95e5bd10efe",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-18T00:38:14.391592"
+      },
+      "content": "Hermes decision · arm=code · priority=P1 · task: Integrate me-voice-memory.py per-speaker semantic memory into the voice engine's inference pipeline so it auto-embeds and recalls speaker context before whisper transcription · why: This directly operationalizes the validated memory wire (brain canon #49892) into the real-time voice loop (#49832), giving us persistent per-speaker awareness — an identity-tier capability the brother just chose as proven. Completing this unlocks the emotional resonance layer (#49903) and kills the",
+      "updated_at": "2026-06-18T00:38:14.391601"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T00:35:27.992478"
+    "checked_at": "2026-06-18T00:40:28.500956"
   },
   "block_count": 30,
-  "updated_at": "2026-06-18T00:30:05.653606",
-  "generated_at": "2026-06-18T04:35:27Z"
+  "updated_at": "2026-06-18T00:38:14.391602",
+  "generated_at": "2026-06-18T04:40:28Z"
 }
