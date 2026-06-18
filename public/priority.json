@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-18T14:55:08Z",
-  "total_items_scored": 203,
+  "generated_at": "2026-06-18T15:05:08Z",
+  "total_items_scored": 204,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: Integrate per-speaker semantic memory from memory wire into voice engine for contextual responses. \u00b7 why: Memory wire is proven persistent; embedding it into the voice engine will enable per-",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: Implement me-voice-memory.py as a persistent voice memory module: per-speaker semantic memory using cosine similarity + SQLite, with a fast CLI test harness. \u00b7 why: The memory wire is proven ",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-18T03:58:51.204569"
+      "updated_at": "2026-06-18T04:14:12.500918"
     },
     {
       "arm": "voice",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: Integrate per-speaker semantic memory from memory wire into voice engine for contextual responses. \u00b7 why: Memory wire is proven persistent; embedding it into the voice engine will enable per-",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-18T03:58:51.204569"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-18T07:18:14.513851"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Run a brain-RAG librarian cycle linking #50335 atlas-brother shared state to #50386 spine page, extract 3 non-obvious connections for next identity tier \u00b7 why: #50369 shows dream cycles alre",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-18T07:33:38.103137"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
