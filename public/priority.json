@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-18T02:34:29Z",
-  "total_items_scored": 198,
+  "generated_at": "2026-06-18T02:44:30Z",
+  "total_items_scored": 199,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Run identity_canary.py probes.json on brain-v5, log 10 who-am-I responses, compare to prior canary snapshot for drift \u00b7 why: Continuity-V6 built identity probes; need to verify no drift a",
+      "content": "Hermes decision \u00b7 arm=brother \u00b7 priority=P1 \u00b7 task: Verify continuity drift-canary probe results against latest self-layer snapshot to confirm no self-model regression \u00b7 why: Canon #49725 and #49728 show identity_canary.py now built and par",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-17T14:40:36.524640"
+      "updated_at": "2026-06-17T15:11:09.590480"
     },
     {
       "arm": "code",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Run identity_canary.py probes.json on brain-v5, log 10 who-am-I responses, compare to prior canary snapshot for drift \u00b7 why: Continuity-V6 built identity probes; need to verify no drift a",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-17T14:40:36.524640"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-17T18:59:58.324605"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Extract and formalize the continuity-of-self mechanism from #49725 and #49728 into a reusable design doc, including the drift-canary probe set and self-layer architecture. \u00b7 why: These tw",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-17T19:15:15.618423"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
