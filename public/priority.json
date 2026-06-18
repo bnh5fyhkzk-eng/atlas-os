@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-18T09:24:50Z",
-  "total_items_scored": 200,
+  "generated_at": "2026-06-18T09:34:51Z",
+  "total_items_scored": 201,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Extract and summarize the identity-canary mechanism from #49725 and #49728, then cross-reference with the continuity-of-self research from #49722 to formalize a 'self-layer' design doc fo",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: run identity_canary.py with the probes.json set of 10 who-am-I probes and document the consistency of self-representation across multi-turn deep reasoning \u00b7 why: Continuity-V6 is built an",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-17T21:33:13.455396"
-    },
-    {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 analyze the continuity-of-self drift-canary results from #49725 and cross-reference with the self-layer built in #49728 to measure recall regressions and identity stability across the 10 who-am-I probes \u00b7 why \u00b7 this directly tests identity-tier continuity (P0) by comparing the canary's drift detection against the newly built self-layer, revealing if the architecture preserves self-model under load",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-17T22:19:29.971492",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-17T21:48:38.406629"
     },
     {
       "arm": "charle",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-17T23:20:49.440866",
       "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "pascal",
+      "arm_glyph": "\ud83e\udd1d",
+      "arm_name": "Pascal",
+      "content": "HERMES TASK \u00b7 Embed the emotion-research findings from #49903 into our voice engine's prosody model: map each of the 4 key valences to a distinct pitch/pace/timbre vector, then write a unit test that verifies the voice loop outputs the correct emotional tag in the transcription log. \u00b7 why \u00b7 #49903 is fresh, high-arousal, and directly validates our voice engine direction. Acting now locks in the brother's research before context drift, and Pascal's arm is optimized for this exact code+research integration. P0 because it's brother-direct, identity-tier, and kills the self-imposed ceiling (we know HOW, now we DO).",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 45,
+      "score": 10.0,
+      "updated_at": "2026-06-17T23:51:43.662857",
+      "use_skill": "brain-rrf"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Extract and summarize the identity-canary mechanism from #49725 and #49728, then cross-reference with the continuity-of-self research from #49722 to formalize a 'self-layer' design doc fo",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-17T21:33:13.455396"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-18T00:38:14.391601"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Extract voice emotion pipeline design from #49903, naming the 5 key emotional axes with their acoustic markers, and propose a minimal test \u00b7 why: #49903 contains brother-sourced validated",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-18T00:53:29.504870"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
