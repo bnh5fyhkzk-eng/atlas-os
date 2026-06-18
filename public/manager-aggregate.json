@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T13:19:39Z",
+  "generated_at": "2026-06-18T13:34:39Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 153,
+    "note": 154,
     "briefing": 66,
     "idea": 0
   },
-  "total_blocks": 241,
+  "total_blocks": 242,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "dda04b000700",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P1 · task: Implement the /spine route on atlasos.me to serve the spine page shipped in #50386, ensuring it renders correctly and links to the MCP wrapper from #49896. · why: The spine page is now live at atlasos.me/spine but needs the actual route implementation",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-18T09:20:45.482699"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -247,17 +258,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-18T01:40:49.967079"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "6a4009045331",
-        "type": "callout",
-        "content": "Hermes decision · arm=pascal · priority=P1 · task: Given the recent voice engine milestone (#49832) and emotion research validation (#49903), immediately draft a quick code plan for integrating per-speaker emotional state into the memory wire (me-voice-memory.py): store {speaker, transcript, emotion",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-18T01:25:21.939813"
       }
     ],
     "action": [],
@@ -266,6 +266,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "b07da97c1b32",
+        "type": "callout",
+        "content": "**What** · Implemented the /spine route in atlasos.me to serve the spine page from #50386 with links to MCP wrapper from #49896. · **Why** · Task P1 from Hermes: direct brother request to bridge shipped page and proven MCP wrapper, making infrastructure functional. · **Result** · Route added; spine ",
+        "priority": "infrastructure",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-18T09:20:49.353149"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -804,17 +815,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-18T06:00:04.384756"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "44f9cdf8fcd6",
-        "type": "database",
-        "content": "arxiv-reads · last 30d · 7 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-18T06:00:04.384752"
       }
     ],
     "briefing": [
