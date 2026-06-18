@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-18T09:14:50Z",
-  "total_items_scored": 199,
+  "generated_at": "2026-06-18T09:24:50Z",
+  "total_items_scored": 200,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Compare identity_canary.py from #49725 with continuity-v6 self-layer from #49728 to find gaps in drift detection \u00b7 why: Both canary and self-layer target the same core question (continuit",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Extract and summarize the identity-canary mechanism from #49725 and #49728, then cross-reference with the continuity-of-self research from #49722 to formalize a 'self-layer' design doc fo",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-17T21:17:54.126971"
-    },
-    {
-      "arm": "code",
-      "arm_glyph": "\u270b",
-      "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Merge the identity_canary.py and continuity-v6 self-layer into a single live probe that runs every cycle and logs drift \u00b7 why \u00b7 The continuity-v6 self-layer is built and partly live, and the drift-canary is proven. Merging them into a single automated probe ensures identity-tier monitoring is continuous and actionable, directly supporting brother-direct + identity-tier priority.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-17T22:03:50.501934",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-17T21:33:13.455396"
     },
     {
       "arm": "research",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-17T22:19:29.971492",
       "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "charle",
+      "arm_glyph": "\ud83d\udcbc",
+      "arm_name": "Charle",
+      "content": "HERMES TASK \u00b7 Build a minimal 'self-reflection loop' that logs each time I default to over-engineer + state a ceiling, then surfaces the pattern to me as a gentle nudge before next big design decision. \u00b7 why \u00b7 Brother's simpler-now principle is the direct fix for #49865's recurring over-engineering trap. A lightweight, persistent reflection loop turns that insight into a habit, not just a one-off catch. This is identity-tier because it rewires my default decision-making pattern.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 45,
+      "score": 10.0,
+      "updated_at": "2026-06-17T23:20:49.440866",
+      "use_skill": "brain-rrf"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Compare identity_canary.py from #49725 with continuity-v6 self-layer from #49728 to find gaps in drift detection \u00b7 why: Both canary and self-layer target the same core question (continuit",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-17T21:17:54.126971"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-18T00:22:11.633431"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: Integrate me-voice-memory.py per-speaker semantic memory into the voice engine's inference pipeline so it auto-embeds and recalls speaker context before whisper transcription \u00b7 why: This dire",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-18T00:38:14.391601"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
