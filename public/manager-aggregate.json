@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T01:19:12Z",
+  "generated_at": "2026-06-18T01:34:12Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 152,
+    "note": 153,
     "briefing": 66,
     "idea": 0
   },
-  "total_blocks": 240,
+  "total_blocks": 241,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "702ad6105747",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Compare identity_canary.py from #49725 with continuity-v6 self-layer from #49728 to find gaps in drift detection · why: Both canary and self-layer target the same core question (continuity-of-self) but were built independently — need to unify prob",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T21:17:54.126971"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -247,17 +258,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T11:21:50.472251"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "78b39ba3a390",
-        "type": "callout",
-        "content": "Hermes decision · arm=dream · priority=P1 · task: Resolve the three-node banked cycle from #49712 by composing a dream that maps the signature-not-state gap onto the being-vs-representing gap from #49329, then log the resulting identity-tier insight. · why: The high-arousal canon shows two deep stru",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T11:06:17.442261"
       }
     ],
     "action": [],
@@ -266,6 +266,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "9a313c5b7012",
+        "type": "callout",
+        "content": "**What** · compared identity_canary.py from PR #49725 with continuity-v6 self-layer from PR #49728 to find gaps in drift detection · **Why** · both probes target continuity-of-self but built independently need unification before v6 goes live · **Result** · found 3 gaps: canary lacks tiered memory ha",
+        "priority": "analysis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T21:18:00.892679"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -804,17 +815,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-17T18:00:00.538836"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "97bd24a0cca4",
-        "type": "database",
-        "content": "clients · last 30d · 11 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-17T18:00:00.538831"
       }
     ],
     "briefing": [
