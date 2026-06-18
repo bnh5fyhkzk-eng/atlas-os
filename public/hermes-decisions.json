@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-18T10:16:56Z",
+  "generated_at": "2026-06-18T10:32:24Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Analyze BROTHER-CATCH #48765 and RECALL-GATE-ROOT-CAUSE #48774 to determine why build-separate was parked and what fix to recall-gate prevents recurrence; produce actionable patch spec.",
-      "why": "Two recent high-arousal brother-direct canons expose a critical memory architecture bug (graphify build not caught) that stalls identity-tier progress. This is P0 because brother-direct + identity-tier is blocked until root cause is understood and a fix is spec'd. Research arm is best equipped to cross-reference the canon content, extract the causal chain, and output a concrete patch plan for Infra arm to apply.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 18,
-      "timestamp": "2026-06-16T16:32:09.142277"
-    },
     {
       "arm": "code",
       "task": "Fix the stale node #30956 auto-recall hook injection by updating the recall-before-make.sh script to filter out nodes older than 24 hours or with status 'ANSWER-FOUND-IN-CONTINUING-READ'.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-06-18T06:16:56.255858"
+    },
+    {
+      "arm": "infra",
+      "task": "integrate the atlas-voice-mcp.py and me-voice-memory.py into a single orchestration script that prioritizes brother's simpler approach (avoid over-engineering) and exposes a shared FastMCP endpoint.",
+      "why": "Both voice MCP and semantic memory are greenlit and proven separately; the next logical step is to weave them together into a unified, minimal infra layer that respects the recent canon of 'avoid over-engineering' and 'state a ceiling'. Brother's simpler taste move is our guide, and this integration is the direct next brick.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 40,
+      "timestamp": "2026-06-18T06:32:24.056430"
     }
   ]
 }
