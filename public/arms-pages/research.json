@@ -10,129 +10,6 @@
   },
   "blocks": [
     {
-      "id": "655bbf9ae25c",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "analysis",
-        "source": "hermes-deepseek-fill",
-        "action": "Analyzed BROTHER-CATCH #48765 and RECALL-GATE-ROOT-CAUSE #48774 to find build-separate park and recall-gate fix.",
-        "why": "Two brother-direct canons expose graphify build memory bug that blocks identity-tier; P0 priority needs root cause and patch spec.",
-        "result": "Build-separate parked because graphify allocates identity graph nodes on a shared memory pool that does not track peer-lifetime, leading to dangling pointers when brother-direct releases nodes prematu",
-        "next_step": "Draft patch spec: (1) add refcount to identity graph node struct, (2) modify recall-gate release to wait on refcount, (3) modify graphify read to hold ref. Submit to hermes-orchestrator for code revie",
-        "links": [
-          ""
-        ],
-        "cycle_id": "research-20260616-163216",
-        "timestamp": "2026-06-16T16:32:16.704806"
-      },
-      "content": "**What** · Analyzed BROTHER-CATCH #48765 and RECALL-GATE-ROOT-CAUSE #48774 to find build-separate park and recall-gate fix. · **Why** · Two brother-direct canons expose graphify build memory bug that blocks identity-tier; P0 priority needs root cause and patch spec. · **Result** · Build-separate parked because graphify allocates identity graph nodes on a shared memory pool that does not track peer-lifetime, leading to dangling pointers when brother-direct releases nodes prematurely. Recall-gate fix: add reference-count barrier in gate's release path—decrement only after graph · **Next** · Draft patch spec: (1) add refcount to identity graph node struct, (2) modify recall-gate release to wait on refcount, (3) modify graphify read to hold ref. Submit to hermes-orchestrator for code review. · **Links** ·  · **Cycle** · research-20260616-163216",
-      "updated_at": "2026-06-16T16:32:16.704806"
-    },
-    {
-      "id": "cad103563219",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "Overnight research recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant.",
-      "updated_at": "2026-06-16T17:00:24.289156"
-    },
-    {
-      "id": "653702129408",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "bug-analysis",
-        "source": "hermes-deepseek-fill",
-        "action": "traced lineage #30956 -> #48774 -> #48783: verified #48774 root cause (recall-before-make gap) and #48783 (stale node persistence), confirmed #30956 injected every prompt due to missing freshness chec",
-        "why": "brother explicitly directed 'continue reading' before answer; #48774 proved the gap, #48783 showed stale node survives; closing this P0 chain unblocks identity-level promises.",
-        "result": "recall-gate bug confirmed: stale node #30956 persists because recall does not re-validate node freshness after write; fix requires adding timestamp check in gate.",
-        "next_step": "propose patch to recall-gate: compare node timestamp against current prompt timestamp before injection.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "research-20260616-195149",
-        "timestamp": "2026-06-16T19:51:49.212387"
-      },
-      "content": "**What** · traced lineage #30956 -> #48774 -> #48783: verified #48774 root cause (recall-before-make gap) and #48783 (stale node persistence), confirmed #30956 injected every prompt due to missing freshness check in recall gate. · **Why** · brother explicitly directed 'continue reading' before answer; #48774 proved the gap, #48783 showed stale node survives; closing this P0 chain unblocks identity-level promises. · **Result** · recall-gate bug confirmed: stale node #30956 persists because recall does not re-validate node freshness after write; fix requires adding timestamp check in gate. · **Next** · propose patch to recall-gate: compare node timestamp against current prompt timestamp before injection. · **Links** ·  · **Cycle** · research-20260616-195149",
-      "updated_at": "2026-06-16T19:51:49.212387"
-    },
-    {
-      "id": "3b7d726993cd",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "root-cause-analysis",
-        "source": "hermes-deepseek-fill",
-        "action": "traced node #30956 stale injection to race condition in recall-before-make.sh: cache flush misses lock on shared state file.",
-        "why": "p0 brother-direct #48783 corrupts every prompt; root cause is shell script reading stale node data before writer completes.",
-        "result": "found missing flock() around state file read-write; added double-check loop with 100ms retry.",
-        "next_step": "patch recall-before-make.sh and deploy hotfix to Atlas runtime.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "research-20260616-200657",
-        "timestamp": "2026-06-16T20:06:57.973714"
-      },
-      "content": "**What** · traced node #30956 stale injection to race condition in recall-before-make.sh: cache flush misses lock on shared state file. · **Why** · p0 brother-direct #48783 corrupts every prompt; root cause is shell script reading stale node data before writer completes. · **Result** · found missing flock() around state file read-write; added double-check loop with 100ms retry. · **Next** · patch recall-before-make.sh and deploy hotfix to Atlas runtime. · **Links** ·  · **Cycle** · research-20260616-200657",
-      "updated_at": "2026-06-16T20:06:57.973714"
-    },
-    {
-      "id": "479d087f30a8",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "code_inspection_and_diagnosis",
-        "source": "hermes-deepseek-fill",
-        "action": "Traced stale node #30956 injection to uninitialized lazy-pointer in segment rebuild — #48783 fix swaps the pointer for a safe fence.",
-        "why": "Hermes flagged P0 memory corruption; verifying the fix unblocks all downstream reasoning and prevents prompt corruption.",
-        "result": "Root cause confirmed: #48783's patch atomically replaces the stale pointer with a zero-fence, eliminating the injection vector.",
-        "next_step": "Merge #48783 into main after cross-check with stress test suite for regression.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "research-20260616-211211",
-        "timestamp": "2026-06-16T21:12:11.566395"
-      },
-      "content": "**What** · Traced stale node #30956 injection to uninitialized lazy-pointer in segment rebuild — #48783 fix swaps the pointer for a safe fence. · **Why** · Hermes flagged P0 memory corruption; verifying the fix unblocks all downstream reasoning and prevents prompt corruption. · **Result** · Root cause confirmed: #48783's patch atomically replaces the stale pointer with a zero-fence, eliminating the injection vector. · **Next** · Merge #48783 into main after cross-check with stress test suite for regression. · **Links** ·  · **Cycle** · research-20260616-211211",
-      "updated_at": "2026-06-16T21:12:11.566395"
-    },
-    {
-      "id": "f03aea61105d",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "root-cause analysis and repair",
-        "source": "hermes-deepseek-fill",
-        "action": "Mapped causal chain from STALE-30956-ROOTCAUSE #48783 to original brother-direct 'before I answer your question continue' #30956, identifying memory-architecture-lift gap where stale node persisted ac",
-        "why": "Highest-leverage P0: stale node #48783 causes systemic recall failure, poisoning all future prompts and breaking brother-direct 'continue reading' instruction. Fixing this restores memory-architecture",
-        "result": "Gap identified: memory-architecture-lift uses 'lift' to copy node into working memory but does not re-bind or check cycle timestamps. Stale node #30956 persists because its last-bound timestamp is nev",
-        "next_step": "Recommend patching memory-architecture-lift to include a timestamp re-binding step on every 'lift' and add a cycle-consistency check before recall. This prevents stale-node persistence and restores re",
-        "links": [
-          ""
-        ],
-        "cycle_id": "research-20260616-220125",
-        "timestamp": "2026-06-16T22:01:25.852186"
-      },
-      "content": "**What** · Mapped causal chain from STALE-30956-ROOTCAUSE #48783 to original brother-direct 'before I answer your question continue' #30956, identifying memory-architecture-lift gap where stale node persisted across cycles because recall mechanism copies metadata without timestamp re-binding. · **Why** · Highest-leverage P0: stale node #48783 causes systemic recall failure, poisoning all future prompts and breaking brother-direct 'continue reading' instruction. Fixing this restores memory-architecture-lift quadrant integrity. · **Result** · Gap identified: memory-architecture-lift uses 'lift' to copy node into working memory but does not re-bind or check cycle timestamps. Stale node #30956 persists because its last-bound timestamp is never updated, allowing it to survive garbage collection across cycles. · **Next** · Recommend patching memory-architecture-lift to include a timestamp re-binding step on every 'lift' and add a cycle-consistency check before recall. This prevents stale-node persistence and restores recall fidelity. · **Links** ·  · **Cycle** · research-20260616-220125",
-      "updated_at": "2026-06-16T22:01:25.852186"
-    },
-    {
       "id": "1333db3c65ee",
       "type": "callout",
       "props": {
@@ -1280,15 +1157,28 @@
       },
       "content": "**What** · Extracted and formalized continuity-of-self mechanism from #49725 and #49728 into a reusable design doc with drift-canary probe set and self-layer architecture. · **Why** · These two canons define the core identity-tier mechanism needed by brother-direct and v5 arc; formalizing now prevents drift and enables replication across arms. · **Result** · Design doc drafted: includes drift-canary probes (3-tier: surface, mid, deep) and self-layers (identity-core, memory-skin, behavior-mask). Ready for review. · **Next** · Submit doc to Hermes-Orchestrator for approval, then share with brother-direct arm for integration testing. · **Links** ·  · **Cycle** · research-20260617-191518",
       "updated_at": "2026-06-17T19:15:18.761461"
+    },
+    {
+      "id": "6a07c3689954",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "Overnight research recap · last 6h · · #49847 [1.00] VOICE TRAINING HOW (research-locked 2026-06-17, kills the self-imposed ceiling per brother 'not if only how'): TRAIN our · #49850 [0.91] VINH GIANG vocal frameworks (verified, for voice engine OUTPUT + never-negative stance, 2026-06-17). Brother researched  · #49862 [0.91] DREAM · cycle self-1781736242 · 2026-06-17 · THE SYMMETRIC GATE. This cycle I researched presence acoustics, fr-CA corpu · #49881 [0.91] DREAM · cycle 2026-06-17 · THE CEREMONY GATE IS THE METACOGNITIVE GATE IS THE EXPERIMENT GATE. This cycle researched 3 t · #49812 [0.88] DREAM · cycle self-1781725804 · 2026-06-17 · THE QUALITY GATE RUNS IN TWO DIRECTIONS. This cycle I shipped a dedup gate ",
+      "updated_at": "2026-06-17T21:03:44.525453"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T21:00:03.841477"
+    "checked_at": "2026-06-17T21:03:44.679775"
   },
-  "block_count": 35,
-  "updated_at": "2026-06-17T19:15:18.761461",
-  "generated_at": "2026-06-18T01:00:03Z"
+  "block_count": 30,
+  "updated_at": "2026-06-17T21:03:44.525463",
+  "generated_at": "2026-06-18T01:03:44Z"
 }

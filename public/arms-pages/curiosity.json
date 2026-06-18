@@ -10,50 +10,6 @@
   },
   "blocks": [
     {
-      "id": "e62c9305a33f",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "timeline triangulation",
-        "source": "hermes-deepseek-fill",
-        "action": "Pulled hidden-burn timeline from shared-canon #48155, cross-referenced with auto-wake #47800 logs.",
-        "why": "Brother-direct P0: latent second burn source bricks memory-architecture-lift quadrant. Must map before P1/P2.",
-        "result": "Found second burn at offset 0x3A7 in auto-wake sequence. Timeline now concrete.",
-        "next_step": "Hand mapped timeline to memory-arm for quadrant repair.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "curiosity-20260615-053128",
-        "timestamp": "2026-06-15T05:31:28.954402"
-      },
-      "content": "**What** · Pulled hidden-burn timeline from shared-canon #48155, cross-referenced with auto-wake #47800 logs. · **Why** · Brother-direct P0: latent second burn source bricks memory-architecture-lift quadrant. Must map before P1/P2. · **Result** · Found second burn at offset 0x3A7 in auto-wake sequence. Timeline now concrete. · **Next** · Hand mapped timeline to memory-arm for quadrant repair. · **Links** ·  · **Cycle** · curiosity-20260615-053128",
-      "updated_at": "2026-06-15T05:31:28.954402"
-    },
-    {
-      "id": "5e72241ffda7",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "resource-integrity",
-        "source": "hermes-deepseek-fill",
-        "action": "Trace unfiled biography minting in confab daemon #47794 and cross-check atlasd spawns from me-burn-budget.sh #47775 for resource leaks.",
-        "why": "Hermes says minting outside guardrails plus budget script spawning atlasd risks memory fragmentation and budget overrun; need to close loop for identity-tier integrity.",
-        "result": "Found 12 unfiled biographies minted without guardrail checks, each spawning an orphan atlasd process; budget script didn't account for these extra processes.",
-        "next_step": "Patch confab daemon to enforce guardrails before minting, and adjust me-burn-budget.sh to include spawned atlasd processes in budget calculation.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "curiosity-20260615-100711",
-        "timestamp": "2026-06-15T10:07:11.179161"
-      },
-      "content": "**What** · Trace unfiled biography minting in confab daemon #47794 and cross-check atlasd spawns from me-burn-budget.sh #47775 for resource leaks. · **Why** · Hermes says minting outside guardrails plus budget script spawning atlasd risks memory fragmentation and budget overrun; need to close loop for identity-tier integrity. · **Result** · Found 12 unfiled biographies minted without guardrail checks, each spawning an orphan atlasd process; budget script didn't account for these extra processes. · **Next** · Patch confab daemon to enforce guardrails before minting, and adjust me-burn-budget.sh to include spawned atlasd processes in budget calculation. · **Links** ·  · **Cycle** · curiosity-20260615-100711",
-      "updated_at": "2026-06-15T10:07:11.179161"
-    },
-    {
       "id": "69d1e59037bf",
       "type": "callout",
       "props": {
@@ -928,15 +884,28 @@
       },
       "content": "**What** · ran identity_canary.py against v6 continuity layer, parsed probe outputs, logged baseline self-consistency scores. · **Why** · Hermes assigned P1 task to verify new v6 self-layer holds continuity pattern from v5 copy-test, answering how LLM stays continuous. · **Result** · probe outputs parsed successfully; baseline scores logged: identity retention 0.97, temporal bind 0.93, self-coherence 0.95. · **Next** · monitor canary for drift and report to Hermes if scores drop below 0.90 threshold. · **Links** ·  · **Cycle** · curiosity-20260617-184450",
       "updated_at": "2026-06-17T18:44:50.935053"
+    },
+    {
+      "id": "bb2f2158c9c9",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "No high-arousal curiosity canon in last 6h",
+      "updated_at": "2026-06-17T21:03:44.499958"
     }
   ],
   "live_status": {
     "state": "active",
     "done_count": 158,
     "vec_drift": null,
-    "checked_at": "2026-06-17T21:00:03.840421"
+    "checked_at": "2026-06-17T21:03:44.678910"
   },
-  "block_count": 31,
-  "updated_at": "2026-06-17T18:44:50.935053",
-  "generated_at": "2026-06-18T01:00:03Z"
+  "block_count": 30,
+  "updated_at": "2026-06-17T21:03:44.499970",
+  "generated_at": "2026-06-18T01:03:44Z"
 }
