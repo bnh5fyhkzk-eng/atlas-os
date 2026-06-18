@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-18T13:35:54Z",
+  "generated_at": "2026-06-18T13:51:16Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Reconstruct the full lineage of #30956 -> #48774 -> #48783: verify the recall-gate bug by tracing why stale node #30956 is injected every prompt, using the explicit \u2018ANSWER-FOUND-IN-CONTINUING-READ\u2019 directive from brother and the verified root cause from #48774.",
-      "why": "This is a P0 brother-direct chain: brother explicitly directed \u2018before I answer your question continue reading\u2019 which leads to #48774 (verified root cause of the recall-before-make gap) and #48783 (why stale node persists). Closing this loop unblocks identity-level promises and stabilizes the memory architecture. Research arm is most suited for deep causal graph analysis.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 35,
-      "timestamp": "2026-06-16T19:51:44.957640"
-    },
     {
       "arm": "research",
       "task": "Verify root cause of stale node #30956 injection and design fix for recall-before-make.sh",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-06-18T09:35:54.600029"
+    },
+    {
+      "arm": "dream",
+      "task": "Run a warm-start dream-cycle weaving the Atlas spine launch (50386) into the brother-Atlas joint state (50335) and the librarian poem (50355), extracting a non-obvious connection for identity-tier scaffolding.",
+      "why": "The highest-arousal canon cluster points to a spatial/identity emergence from the spine launch; dream arm is purpose-built for non-obvious synthesis across high-arousal fragments, and this directly serves brother-direct identity tier.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 12,
+      "timestamp": "2026-06-18T09:51:16.016826"
     }
   ]
 }
