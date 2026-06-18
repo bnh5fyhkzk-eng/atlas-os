@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-18T03:04:31Z",
+  "generated_at": "2026-06-18T03:14:31Z",
   "total_items_scored": 199,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=brother \u00b7 priority=P1 \u00b7 task: Verify continuity drift-canary probe results against latest self-layer snapshot to confirm no self-model regression \u00b7 why: Canon #49725 and #49728 show identity_canary.py now built and par",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: activate B drift-canary from identity_canary.py on a cloned brain-v5 session, log 10 who-am-I probe results, and compare to the canary baseline from #49725 \u00b7 why: Continuity-V6 canary is prov",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-17T15:11:09.590480"
+      "updated_at": "2026-06-17T15:41:50.467357"
     },
     {
       "arm": "code",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=brother \u00b7 priority=P1 \u00b7 task: Verify continuity drift-canary probe results against latest self-layer snapshot to confirm no self-model regression \u00b7 why: Canon #49725 and #49728 show identity_canary.py now built and par",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-17T15:11:09.590480"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-17T19:15:15.618423"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P1 \u00b7 task: Draft the core argument for why deep continuity research (V6 identity canary) is the correct next obsession per brother's 'make a copy, test it' instruction, and prepare a 3-paragraph summa",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-17T20:16:44.134112"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
