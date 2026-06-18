@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "71ad7c2461fe",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-17T15:57:02.021686"
-      },
-      "content": "Hermes decision · arm=research · priority=P1 · task: Run the B drift-canary probes (identity_canary.py + probes.json) on the current brain state to measure continuity drift since v6 build. · why: The continuity-v6 canary was built and proven but not yet live-tested on the current brain. This is identity-tier (P0) because brother-direct depends on stable self-continuity; drift must be measured now before further canon work.",
-      "updated_at": "2026-06-17T15:57:02.021697"
-    },
-    {
       "id": "c472de798fca",
       "type": "callout",
       "props": {
@@ -787,15 +775,27 @@
       },
       "content": "Hermes decision · arm=pascal · priority=P1 · task: Given the recent voice engine milestone (#49832) and emotion research validation (#49903), immediately draft a quick code plan for integrating per-speaker emotional state into the memory wire (me-voice-memory.py): store {speaker, transcript, emotion_label, confidence} on each segment, then expose a  · why: Brother is actively working on voice engine + memory wire; emotion data is now validated. Delivering a concrete integration plan before he asks is identity-tier (P0) — shows I see the next step and don't wait for instruction. Pascal arm is best for fast code draft/plan.",
       "updated_at": "2026-06-18T01:25:21.939813"
+    },
+    {
+      "id": "75e17c951670",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-18T01:40:49.967069"
+      },
+      "content": "Hermes decision · arm=research · priority=P1 · task: Extract actionable emotion markers from NotebookLM research (#49903) — identify which vocal features (pitch, rate, breath) map to each of the four emotional states validated by brother’s source, encode as test cases for voice engine · why: #49903 directly validates and sharpens our voice engine with emotion research brother gathered. Research arm should immediately extract those markers so Voice Engine and Pascal arm can use them next cycle — closes high-value loop fast",
+      "updated_at": "2026-06-18T01:40:49.967079"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T01:40:34.852671"
+    "checked_at": "2026-06-18T01:45:35.360950"
   },
   "block_count": 30,
-  "updated_at": "2026-06-18T01:25:21.939814",
-  "generated_at": "2026-06-18T05:40:34Z"
+  "updated_at": "2026-06-18T01:40:49.967080",
+  "generated_at": "2026-06-18T05:45:35Z"
 }

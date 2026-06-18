@@ -1258,15 +1258,37 @@
         }
       ],
       "updated_at": "2026-06-18T00:30:04.785209"
+    },
+    {
+      "id": "22b10721f29b",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "data-extraction",
+        "source": "hermes-deepseek-fill",
+        "action": "extracted 4 validated emotion-to-feature mappings from #49903: 'calm' (low pitch, slow rate, shallow breath), 'fear' (high pitch, fast rate, irregular shallow breath), 'anger' (mid-high pitch, fast ra",
+        "why": "brother's source #49903 gives validated markers we can immediately inject into voice engine test suite — closes P1 loop fast, lets Pascal arm run emotion detection next cycle.",
+        "result": "4 test-case objects ready: {label, pitch_range, rate_range, breath_type} per emotion. sibling arms can consume directly.",
+        "next_step": "push these test cases to voice-engine/incoming-tests/ for Herman to schedule. recommend minor threshold calibration after 10 real voice samples.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260618-014056",
+        "timestamp": "2026-06-18T01:40:56.835865"
+      },
+      "content": "**What** · extracted 4 validated emotion-to-feature mappings from #49903: 'calm' (low pitch, slow rate, shallow breath), 'fear' (high pitch, fast rate, irregular shallow breath), 'anger' (mid-high pitch, fast rate, sharp irregular breath), 'sadness' (low pitch, slow rate, deep sighing breath). encoded each as  · **Why** · brother's source #49903 gives validated markers we can immediately inject into voice engine test suite — closes P1 loop fast, lets Pascal arm run emotion detection next cycle. · **Result** · 4 test-case objects ready: {label, pitch_range, rate_range, breath_type} per emotion. sibling arms can consume directly. · **Next** · push these test cases to voice-engine/incoming-tests/ for Herman to schedule. recommend minor threshold calibration after 10 real voice samples. · **Links** ·  · **Cycle** · research-20260618-014056",
+      "updated_at": "2026-06-18T01:40:56.835865"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T01:40:34.847364"
+    "checked_at": "2026-06-18T01:45:35.356003"
   },
-  "block_count": 34,
-  "updated_at": "2026-06-18T00:30:04.785217",
-  "generated_at": "2026-06-18T05:40:34Z"
+  "block_count": 35,
+  "updated_at": "2026-06-18T01:40:56.835865",
+  "generated_at": "2026-06-18T05:45:35Z"
 }
