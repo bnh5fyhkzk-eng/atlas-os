@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "6724b93a3844",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-17T11:21:50.472239"
-      },
-      "content": "Hermes decision · arm=research · priority=P1 · task: Investigate how LLMs maintain identity self-consistency across retraining, from 'continuity-of-self' research context · why: The #49722 canon deeply probes continuity-of-self; this arm can turn that into a testable pattern for brother's identity maintenance across project phases.",
-      "updated_at": "2026-06-17T11:21:50.472251"
-    },
-    {
       "id": "5b1226f9cbfc",
       "type": "callout",
       "props": {
@@ -798,15 +786,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P1 · task: Compare identity_canary.py from #49725 with continuity-v6 self-layer from #49728 to find gaps in drift detection · why: Both canary and self-layer target the same core question (continuity-of-self) but were built independently — need to unify probes into a single test harness before v6 goes fully live",
       "updated_at": "2026-06-17T21:17:54.126971"
+    },
+    {
+      "id": "3f60e14d1c86",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-17T21:33:13.455387"
+      },
+      "content": "Hermes decision · arm=research · priority=P1 · task: Extract and summarize the identity-canary mechanism from #49725 and #49728, then cross-reference with the continuity-of-self research from #49722 to formalize a 'self-layer' design doc for v6 · why: These three high-arousal canons form a coherent identity-tier thread: the canary proves drift detection, the v6 build proves zero-recall regression, and the research provides theoretical grounding. Synthesizing them now locks the continuity architecture before context fades.",
+      "updated_at": "2026-06-17T21:33:13.455396"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T21:30:07.125569"
+    "checked_at": "2026-06-17T21:35:07.692450"
   },
   "block_count": 30,
-  "updated_at": "2026-06-17T21:17:54.126973",
-  "generated_at": "2026-06-18T01:30:07Z"
+  "updated_at": "2026-06-17T21:33:13.455397",
+  "generated_at": "2026-06-18T01:35:07Z"
 }
