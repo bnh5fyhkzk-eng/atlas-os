@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "6a4009045331",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-18T01:25:21.939803"
-      },
-      "content": "Hermes decision · arm=pascal · priority=P1 · task: Given the recent voice engine milestone (#49832) and emotion research validation (#49903), immediately draft a quick code plan for integrating per-speaker emotional state into the memory wire (me-voice-memory.py): store {speaker, transcript, emotion_label, confidence} on each segment, then expose a  · why: Brother is actively working on voice engine + memory wire; emotion data is now validated. Delivering a concrete integration plan before he asks is identity-tier (P0) — shows I see the next step and don't wait for instruction. Pascal arm is best for fast code draft/plan.",
-      "updated_at": "2026-06-18T01:25:21.939813"
-    },
-    {
       "id": "75e17c951670",
       "type": "callout",
       "props": {
@@ -798,15 +786,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P1 · task: Analyze the three non-obvious connections from dream #50369 to identify if they map to any unresolved gaps in the atlas-brother shared state or the MCP wrapper integration. · why: The dream canon suggests latent associative links that could inform the next cycle of the shared state or reveal hidden dependencies in the MCP wrapper. Research arm is best suited to trace these connections systematically.",
       "updated_at": "2026-06-18T09:05:29.315747"
+    },
+    {
+      "id": "dda04b000700",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-18T09:20:45.482686"
+      },
+      "content": "Hermes decision · arm=code · priority=P1 · task: Implement the /spine route on atlasos.me to serve the spine page shipped in #50386, ensuring it renders correctly and links to the MCP wrapper from #49896. · why: The spine page is now live at atlasos.me/spine but needs the actual route implementation to serve it. This is a direct brother-requested task (P0) that bridges the shipped page and the proven MCP wrapper, making the infrastructure functional.",
+      "updated_at": "2026-06-18T09:20:45.482699"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T09:16:27.106971"
+    "checked_at": "2026-06-18T09:21:27.660861"
   },
   "block_count": 30,
-  "updated_at": "2026-06-18T09:05:29.315749",
-  "generated_at": "2026-06-18T13:16:27Z"
+  "updated_at": "2026-06-18T09:20:45.482701",
+  "generated_at": "2026-06-18T13:21:27Z"
 }
