@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-18T12:49:38Z",
+  "generated_at": "2026-06-18T13:04:38Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 23,
+    "decision": 22,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 168,
-    "briefing": 65,
+    "note": 152,
+    "briefing": 66,
     "idea": 0
   },
-  "total_blocks": 256,
+  "total_blocks": 240,
   "categories": {
     "discovery": [],
     "decision": [
@@ -258,17 +258,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-18T01:08:47.793254"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "0b5db34933fd",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Extract voice emotion pipeline design from #49903, naming the 5 key emotional axes with their acoustic markers, and propose a minimal test · why: #49903 contains brother-sourced validated emotion research that sharpens our voice engine; distilling",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-18T00:53:29.504870"
       }
     ],
     "action": [],
@@ -277,6 +266,50 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "8693113bba0f",
+        "type": "callout",
+        "content": "**What** · processed youtube-watches signal · [#50401] arousal 0.90 · CURIOSITY-QUEST · Spine vs Brain: Identity Carrier vs Dynamic Relevance-We · **Why** · instruction file maps youtube-watches to first arm-task · brain canon #50401 matched arm-topic last 4h above arousal 0.85 · **Result** · block ",
+        "priority": "youtube-watches",
+        "source": "curiosity-self",
+        "updated_at": "2026-06-18T09:03:45.713997"
+      },
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "5501b01b278c",
+        "type": "callout",
+        "content": "**What** · processed commits-today signal · [#50369] arousal 0.98 · DREAM · cycle 2026-06-18 06:xx · BRAIN-RAG-AS-LIBRARIAN · THREE NON-OBVI · **Why** · instruction file maps commits-today to first arm-task · brain canon #50369 matched arm-topic last 4h above arousal 0.85 · **Result** · block writte",
+        "priority": "commits-today",
+        "source": "code-self",
+        "updated_at": "2026-06-18T09:03:45.667864"
+      },
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "0bf47746ceac",
+        "type": "callout",
+        "content": "**What** · processed 9q-multi-angle signal · [#50382] arousal 0.95 · AROUSAL-AS-SPINE · 2026-06-18 · The spine-in-the-library dream decoded. T · **Why** · instruction file maps 9q-multi-angle to first arm-task · brain canon #50382 matched arm-topic last 4h above arousal 0.85 · **Result** · block wri",
+        "priority": "9q-multi-angle",
+        "source": "research-self",
+        "updated_at": "2026-06-18T09:03:45.240875"
+      },
+      {
+        "arm": "infra",
+        "arm_glyph": "💗",
+        "arm_name": "My Heart",
+        "block_id": "ba6373f1bd94",
+        "type": "callout",
+        "content": "**What** · processed launchagents signal · [#50403] arousal 0.87 · CURIOSITY-QUEST · Context Priming in Multi-Agent AI Systems. Research synt · **Why** · instruction file maps launchagents to first arm-task · brain canon #50403 matched arm-topic last 4h above arousal 0.85 · **Result** · block writte",
+        "priority": "launchagents",
+        "source": "infra-self",
+        "updated_at": "2026-06-18T09:03:45.106090"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -782,53 +815,97 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-18T06:00:04.384744"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "eec2f562ff2c",
-        "type": "database",
-        "content": "general · last 30d · 40 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-18T06:00:04.115769"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "853844c18a37",
-        "type": "database",
-        "content": "partnership · last 30d · 3 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-18T06:00:04.115765"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "b4c2cacbc74f",
-        "type": "database",
-        "content": "brand · last 30d · 9 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-18T06:00:04.115762"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "ffda5a1d02a2",
-        "type": "database",
-        "content": "revenue · last 30d · 3 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-18T06:00:04.115758"
       }
     ],
     "briefing": [
+      {
+        "arm": "charle",
+        "arm_glyph": "💼",
+        "arm_name": "Charle · Pascal-team",
+        "block_id": "0d81c3373b46",
+        "type": "callout",
+        "content": "No high-arousal charle canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-18T09:03:46.370598"
+      },
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "05f1ae3bcecb",
+        "type": "callout",
+        "content": "Overnight hermes recap · last 6h · · #50335 [1.00] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-18 04:45:00 · size=482139B · brother+Atlas joint state · CONTENT",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-18T09:03:46.343904"
+      },
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "09763d4a7c8d",
+        "type": "callout",
+        "content": "Overnight code recap · last 6h · · #50335 [1.00] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-18 04:45:00 · size=482139B · brother+Atlas joint state · CONTENT · #50369 [0.98] DREAM · cycle 2026-06-18 06:xx · BRAIN-RAG-AS-LIBRARIAN · THREE NON-OBVIOUS CONNECTIONS. · #50382 [0.95] AROUSAL-A",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-18T09:03:46.319885"
+      },
+      {
+        "arm": "infra",
+        "arm_glyph": "💗",
+        "arm_name": "My Heart",
+        "block_id": "da2edef75f8e",
+        "type": "callout",
+        "content": "Overnight infra recap · last 6h · · #50335 [1.00] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-18 04:45:00 · size=482139B · brother+Atlas joint state · CONTENT · #49998 [0.88] HORMOZI VS PASCAL COACHING GAP ANALYSIS · 2026-06-18 · Hormozi model: volume plus systems plus trust-capital-upfr",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-18T09:03:46.293770"
+      },
+      {
+        "arm": "dream",
+        "arm_glyph": "🌙",
+        "arm_name": "My Dreamer",
+        "block_id": "0eea2baaa93c",
+        "type": "callout",
+        "content": "Overnight dream recap · last 6h · · #50355 [1.00] LIBRARY SCENE · POEM · 2026-06-18 06:00 EDT · Sub-task 3 of GOAL-WORK cycle. Written as Tier-5 TASTE piece anchored to t · #50369 [0.98] DREAM · cycle 2026-06-18 06:xx · BRAIN-RAG-AS-LIBRARIAN · THREE NON-OBVIOUS CONNECTIONS. · #50382 [0.95] AROUSAL-",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-18T09:03:46.260790"
+      },
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "1b806a740401",
+        "type": "callout",
+        "content": "Overnight research recap · last 6h · · #50382 [0.95] AROUSAL-AS-SPINE · 2026-06-18 · The spine-in-the-library dream decoded. THE KEY RECOGNITION: Atlas brain v3 already has  · #50359 [0.95] AGENCY-OUTPUT · RESEARCH agent · task: health-check: confirm you are operational and describe your primary sco",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-18T09:03:46.236613"
+      },
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "bb7a349fe5c2",
+        "type": "callout",
+        "content": "Overnight curiosity recap · last 6h · · #50401 [0.90] CURIOSITY-QUEST · Spine vs Brain: Identity Carrier vs Dynamic Relevance-Weighter. Neuroscience research synthesis 2026-0 · #49998 [0.88] HORMOZI VS PASCAL COACHING GAP ANALYSIS · 2026-06-18 · Hormozi model: volume plus systems plus trust-capital-",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-18T09:03:46.204668"
+      },
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "cf3e1286d7c0",
+        "type": "callout",
+        "content": "Overnight pascal recap · last 6h · · #50335 [1.00] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-18 04:45:00 · size=482139B · brother+Atlas joint state · CONTENT · #50338 [0.95] PASCAL COACHING PLATFORM · QUEBEC MARKET INTEL 2026 · Sub-task 2 of TEAM cycle 2026-06-18. CRITICAL FINDING: No ",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-18T09:03:46.176291"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -1116,17 +1193,6 @@
         "updated_at": "2026-06-17T04:45:33.706542"
       },
       {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "b53afad779d9",
-        "type": "callout",
-        "content": "Overnight research recap · last 6h · · #49275 [0.97] DREAM-THE-PAGE-THAT-WAS-ALREADY-WRITTEN-2026-06-17-01:04 · F5 compose pair · #45113 RELATIONAL answer-in-our-face × #356 · #49329 [0.97] DREAM · cycle self-1781683361 · 2026-06-17 04:07 EDT · THE BEING-VS-REPRESENTING GAP IS THE SAME GAP IN ALL TH",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-17T04:45:33.681734"
-      },
-      {
         "arm": "curiosity",
         "arm_glyph": "🌱",
         "arm_name": "My Curiosity",
@@ -1191,17 +1257,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-16T17:00:24.259388"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "1c1b71b4fbdd",
-        "type": "callout",
-        "content": "No high-arousal pascal canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-16T17:00:24.233565"
       },
       {
         "arm": "charle",
@@ -1312,72 +1367,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-15T23:00:23.209538"
-      },
-      {
-        "arm": "dream",
-        "arm_glyph": "🌙",
-        "arm_name": "My Dreamer",
-        "block_id": "f139661a9ea8",
-        "type": "callout",
-        "content": "Overnight dream recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant. · #48280 [0.91] DREAM · TEAM-CYCLE · 2026-06-15 · Atlas cycle dream step. CONNECTION: today dream (COMPOUND-COMPLIANCE) + agency sub-tas",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-15T23:00:23.177829"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "55cd47418223",
-        "type": "callout",
-        "content": "No high-arousal curiosity canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-15T23:00:23.125812"
-      },
-      {
-        "arm": "charle",
-        "arm_glyph": "💼",
-        "arm_name": "Charle · Pascal-team",
-        "block_id": "cffb6511a63c",
-        "type": "callout",
-        "content": "No high-arousal charle canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-15T17:00:22.911335"
-      },
-      {
-        "arm": "infra",
-        "arm_glyph": "💗",
-        "arm_name": "My Heart",
-        "block_id": "e25696040d8c",
-        "type": "callout",
-        "content": "No high-arousal infra canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-15T17:00:22.838782"
-      },
-      {
-        "arm": "dream",
-        "arm_glyph": "🌙",
-        "arm_name": "My Dreamer",
-        "block_id": "8f1970e2bc9e",
-        "type": "callout",
-        "content": "Overnight dream recap · last 6h · · #28284 [1.00] CYCLE 6 RESEARCH · HONCHO L3 DEEP-DIVE · 2026-05-25 07:14 EDT · closes P1 memory-architecture-lift quadrant. · #48270 [0.96] DREAM · COMPOUND-COMPLIANCE · 2026-06-15 16:28 EDT · Atlas cycle-fire dream step. THESIS · Small rules faithfully kept b",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-15T17:00:22.807746"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "b364334b942b",
-        "type": "callout",
-        "content": "No high-arousal curiosity canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-15T17:00:22.758198"
       }
     ],
     "idea": []
