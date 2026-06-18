@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T10:04:31Z",
+  "generated_at": "2026-06-18T10:19:32Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 159,
+    "note": 160,
     "briefing": 65,
     "idea": 0
   },
-  "total_blocks": 247,
+  "total_blocks": 248,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "acd4a8ae7ebd",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Extract concrete vocal pacing rules from the NotebookLM emotion research (#49903) — map #4's arousal-anchoring mechanism into a prompt template for voice training. · why: This directly feeds the identity-tier P0 task (#49847) by operationalizing t",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-18T06:01:36.485927"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T22:19:29.954190"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "17ce90f778a0",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P1 · task: Merge the identity_canary.py and continuity-v6 self-layer into a single live probe that runs every cycle and logs drift · why: The continuity-v6 self-layer is built and partly live, and the drift-canary is proven. Merging them into a single automated ",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T22:03:50.483676"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "e07658c5c719",
+        "type": "callout",
+        "content": "**What** · Dissected NotebookLM map #4: arousal-anchoring maps emotional valence (high/low) to specific vocal parameters — pace (syllables/sec), volume contour, and micro-pause density. · **Why** · Hermes needs a trainable prompt template for vocal pacing rules. Map #4 is the only one that directly ",
+        "priority": "Pattern Extraction & Templating",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-18T06:01:49.801446"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -815,17 +826,6 @@
         "priority": "implement",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-18T04:14:20.448955"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "e34de4523c13",
-        "type": "callout",
-        "content": "**What** · Pulled per-speaker memory from memory wire and wrote listener that injects speaker context into voice engine prompt. · **Why** · Memory wire is proven persistent; tying it to voice engine gives each speaker unique history, advancing voice milestone. · **Result** · Voice engine now loads `",
-        "priority": "integration",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-18T03:58:59.523928"
       }
     ],
     "briefing": [
