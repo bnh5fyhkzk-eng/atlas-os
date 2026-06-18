@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T05:19:21Z",
+  "generated_at": "2026-06-18T05:34:21Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -17,6 +17,17 @@
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "6a4009045331",
+        "type": "callout",
+        "content": "Hermes decision · arm=pascal · priority=P1 · task: Given the recent voice engine milestone (#49832) and emotion research validation (#49903), immediately draft a quick code plan for integrating per-speaker emotional state into the memory wire (me-voice-memory.py): store {speaker, transcript, emotion",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-18T01:25:21.939813"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T15:57:02.021697"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "83bc6089fd59",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P1 · task: activate B drift-canary from identity_canary.py on a cloned brain-v5 session, log 10 who-am-I probe results, and compare to the canary baseline from #49725 · why: Continuity-V6 canary is proven but not yet live on an active copy; running it now confir",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T15:41:50.467357"
       }
     ],
     "action": [],
