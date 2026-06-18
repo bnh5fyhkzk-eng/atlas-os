@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T07:49:26Z",
+  "generated_at": "2026-06-18T08:04:27Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 153,
+    "note": 154,
     "briefing": 66,
     "idea": 0
   },
-  "total_blocks": 242,
+  "total_blocks": 243,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "7715516a88a6",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P1 · task: Integrate per-speaker semantic memory from memory wire into voice engine for contextual responses. · why: Memory wire is proven persistent; embedding it into the voice engine will enable per-speaker context, directly advancing the voice milestone.",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-18T03:58:51.204569"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T20:16:44.134112"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "cbedd214461a",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Extract and formalize the continuity-of-self mechanism from #49725 and #49728 into a reusable design doc, including the drift-canary probe set and self-layer architecture. · why: These two canons define the core identity-tier mechanism that brothe",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T19:15:15.618423"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "e34de4523c13",
+        "type": "callout",
+        "content": "**What** · Pulled per-speaker memory from memory wire and wrote listener that injects speaker context into voice engine prompt. · **Why** · Memory wire is proven persistent; tying it to voice engine gives each speaker unique history, advancing voice milestone. · **Result** · Voice engine now loads `",
+        "priority": "integration",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-18T03:58:59.523928"
+      },
       {
         "arm": "dream",
         "arm_glyph": "🌙",
@@ -815,17 +826,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-18T00:30:04.381583"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "e93a6225eed3",
-        "type": "database",
-        "content": "partnership · last 30d · 3 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-18T00:30:04.381579"
       }
     ],
     "briefing": [
