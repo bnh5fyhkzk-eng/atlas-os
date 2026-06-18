@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T03:14:31Z",
+  "generated_at": "2026-06-18T03:24:32Z",
   "total_items_scored": 199,
   "top_3": [
     {
@@ -14,19 +14,6 @@
       "updated_at": "2026-06-17T15:41:50.467357"
     },
     {
-      "arm": "code",
-      "arm_glyph": "\u270b",
-      "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Deploy the B drift-canary (identity_canary.py + probes.json) to run on a live cycle and log first probe results. \u00b7 why \u00b7 The continuity-v6 canary is built and proven but not yet live; this is a P0 brother-direct identity-tier action to secure self-continuity measurement before drift accumulates.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 15,
-      "score": 10.0,
-      "updated_at": "2026-06-17T13:39:36.386934",
-      "use_skill": "none"
-    },
-    {
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
@@ -37,6 +24,19 @@
       "est_minutes": 45,
       "score": 10.0,
       "updated_at": "2026-06-17T14:25:17.375302",
+      "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "brother",
+      "arm_glyph": "\u00b7",
+      "arm_name": "Brother",
+      "content": "HERMES TASK \u00b7 Verify continuity drift-canary probe results against latest self-layer snapshot to confirm no self-model regression \u00b7 why \u00b7 Canon #49725 and #49728 show identity_canary.py now built and partially live; brother must cross-check B drift against the v5 self-layer to maintain identity continuity, a P0 brother-direct + identity-tier task.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 18,
+      "score": 10.0,
+      "updated_at": "2026-06-17T15:11:09.607585",
       "use_skill": "brain-rrf"
     }
   ],
