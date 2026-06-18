@@ -15,6 +15,7 @@ import KanbanPage from "./pages/KanbanPage";
 import StudioPage from "./pages/StudioPage";
 import NotebookPage from "./pages/NotebookPage";
 import { TodayPage } from "./pages/TodayPage";
+import SpinePage from "./pages/SpinePage";
 import { CmdK } from "./components/CmdK";
 import { AtlasBar } from "./components/AtlasBar";
 
@@ -111,6 +112,15 @@ function Shell() {
         </button>
 
         <div className="px-2">
+          {/* house rooms · fixed identity pages */}
+          <button
+            className={"flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-left text-sm " + (pathname === "/spine" ? "font-medium" : "")}
+            style={{ background: pathname === "/spine" ? "var(--active)" : undefined }}
+            onClick={() => { navigate("/spine"); setMobileOpen(false); }}
+          >
+            <span>🦴</span>
+            <span className="flex-1 truncate">Spine</span>
+          </button>
           {main.filter((n) => n.template !== "canvas").map((n) => (
             <button
               key={n.id}
@@ -195,6 +205,7 @@ function Shell() {
       <main className="min-w-0 flex-1 overflow-y-auto">
         <Routes>
           <Route path="/home" element={home ? <Canvas nav={nav} home={home} /> : null} />
+          <Route path="/spine" element={<SpinePage />} />
           <Route path="/p/:navId" element={<PageRouter nav={nav} />} />
           <Route path="/p/:navId/n/:nodeId" element={<PageRouter nav={nav} />} />
           <Route path="*" element={<Navigate to="/home" replace />} />
