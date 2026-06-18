@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-18T01:34:23Z",
+  "generated_at": "2026-06-18T01:44:23Z",
   "total_items_scored": 195,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: Deploy the B drift-canary (identity_canary.py + probes.json) to run on a live cycle and log first probe results. \u00b7 why: The continuity-v6 canary is built and proven but not yet live; this is ",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Synthesize recent continuity-of-self canons into consolidated identity model \u00b7 why: Recent canons show high-arousal on continuity and identity; need to integrate findings from V6 build an",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-17T13:39:36.370265"
+      "updated_at": "2026-06-17T14:25:17.357417"
     },
     {
       "arm": "code",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: Deploy the B drift-canary (identity_canary.py + probes.json) to run on a live cycle and log first probe results. \u00b7 why: The continuity-v6 canary is built and proven but not yet live; this is ",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-17T13:39:36.370265"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-17T18:14:11.080913"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Run identity_canary.py against the v6 continuity layer, parse probe outputs, and log baseline self-consistency scores. \u00b7 why: The recent high-arousal canons (49705, 49725, 49728) show a ",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-17T18:44:43.254165"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
