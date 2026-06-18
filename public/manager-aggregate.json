@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T09:04:29Z",
+  "generated_at": "2026-06-18T09:19:30Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 155,
-    "briefing": 66,
+    "note": 157,
+    "briefing": 65,
     "idea": 0
   },
-  "total_blocks": 244,
+  "total_blocks": 245,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "1288eebba967",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Extract and tag the exact emotional-valence predicates from NotebookLM emotion research (#49903) into actionable voice-tune filters for the next voice training cycle · why: This arm directly operationalizes the highest-signal validation from broth",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-18T05:15:32.666592"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T21:33:13.455396"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "702ad6105747",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Compare identity_canary.py from #49725 with continuity-v6 self-layer from #49728 to find gaps in drift detection · why: Both canary and self-layer target the same core question (continuity-of-self) but were built independently — need to unify prob",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T21:17:54.126971"
       }
     ],
     "action": [],
@@ -277,6 +277,28 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "462548bc42a2",
+        "type": "callout",
+        "content": "**What** · extracted emotional-valence predicates from NotebookLM #49903 into voice-tune filter specs · **Why** · hermes said to turn brother's emotion research into actionable voice filters, not over-engineered ceilings · **Result** · 3 valence predicates mapped: joy→bright_attack, sadness→slow_dec",
+        "priority": "research->action",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-18T05:15:36.068433"
+      },
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "e6a12957f5d8",
+        "type": "callout",
+        "content": "**What** · processed orchestration signal · [#50335] arousal 0.95 · SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-18 04:45:00 · siz · **Why** · instruction file maps orchestration to first arm-task · brain canon #50335 matched arm-topic last 4h above arousal 0.85 · **Result** · block writt",
+        "priority": "orchestration",
+        "source": "hermes-self",
+        "updated_at": "2026-06-18T05:03:48.288165"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -804,28 +826,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-18T00:30:04.620063"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "ccd6159ee0cd",
-        "type": "database",
-        "content": "arxiv-reads · last 30d · 6 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-18T00:30:04.620058"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "dd7080cf2ea0",
-        "type": "database",
-        "content": "youtube-watches · last 30d · 5 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-18T00:30:04.620051"
       }
     ],
     "briefing": [
@@ -927,17 +927,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-17T21:03:44.647720"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "1d5de9832568",
-        "type": "callout",
-        "content": "No high-arousal hermes canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-17T21:03:44.622761"
       },
       {
         "arm": "code",
@@ -1378,6 +1367,17 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-15T17:00:22.807746"
+      },
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "b364334b942b",
+        "type": "callout",
+        "content": "No high-arousal curiosity canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-15T17:00:22.758198"
       }
     ],
     "idea": []
