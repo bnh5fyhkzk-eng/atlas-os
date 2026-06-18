@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-18T13:05:29Z",
+  "generated_at": "2026-06-18T13:20:45Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Fix auto-recall hook to prevent injection of stale node #30956 by filtering nodes older than 24 hours in recall-before-make.sh",
-      "why": "Verified root cause from #48783 shows stale node injection every prompt; blocking identity-tier brother-direct flow; immediate fix needed",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 30,
-      "timestamp": "2026-06-16T18:50:33.094527"
-    },
     {
       "arm": "code",
       "task": "Fix `auto-recall hook` to stop injecting stale node #30956 by filtering on `answered_ts > prompt_ts` check in recall-before-make.sh",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 15,
       "timestamp": "2026-06-18T09:05:29.337123"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the /spine route on atlasos.me to serve the spine page shipped in #50386, ensuring it renders correctly and links to the MCP wrapper from #49896.",
+      "why": "The spine page is now live at atlasos.me/spine but needs the actual route implementation to serve it. This is a direct brother-requested task (P0) that bridges the shipped page and the proven MCP wrapper, making the infrastructure functional.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 45,
+      "timestamp": "2026-06-18T09:20:45.504277"
     }
   ]
 }

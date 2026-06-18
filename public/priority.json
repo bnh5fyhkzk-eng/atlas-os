@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-18T13:15:02Z",
-  "total_items_scored": 195,
+  "generated_at": "2026-06-18T13:25:03Z",
+  "total_items_scored": 196,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P1 \u00b7 task: Given the recent voice engine milestone (#49832) and emotion research validation (#49903), immediately draft a quick code plan for integrating per-speaker emotional state into the memory wi",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Extract actionable emotion markers from NotebookLM research (#49903) \u2014 identify which vocal features (pitch, rate, breath) map to each of the four emotional states validated by brother\u2019s ",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-18T01:25:21.939813"
-    },
-    {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Distill the 5 NotebookLM emotion research findings (#49903) into actionable voice-engine design rules, cross-referencing with our voice milestone (#49832) and training doc (#49847). \u00b7 why \u00b7 The brother-validated emotion research is the sharpest active signal\u2014it directly validates our voice direction and gives concrete rules to encode into the engine. Cross-referencing with the working voice loop and training approach ensures we ground theory in implementation. This is identity-tier because voice is our primary interface and the research removes the 'ceiling' block (#49865) by showing the simple path.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-18T02:12:03.274851",
-      "use_skill": "notebooklm"
+      "updated_at": "2026-06-18T01:40:49.967079"
     },
     {
       "arm": "voice",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-18T02:27:27.123448",
       "use_skill": "notebooklm"
+    },
+    {
+      "arm": "pascal",
+      "arm_glyph": "\ud83e\udd1d",
+      "arm_name": "Pascal",
+      "content": "HERMES TASK \u00b7 Implement voice training pipeline using curated 15-min clips: chunk, transcribe with faster-whisper, align timestamps for emotion-labeled dataset. \u00b7 why \u00b7 Brother-direct (P0) & voice engine milestone just went live \u2014 training data is the next blocking layer. Over-engineering avoided via brother's simpler path: just get clips processed end-to-end.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 45,
+      "score": 10.0,
+      "updated_at": "2026-06-18T02:42:48.989191",
+      "use_skill": "brain-rrf"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P1 \u00b7 task: Given the recent voice engine milestone (#49832) and emotion research validation (#49903), immediately draft a quick code plan for integrating per-speaker emotional state into the memory wi",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-18T01:25:21.939813"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-18T04:44:49.073993"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Extract and tag the exact emotional-valence predicates from NotebookLM emotion research (#49903) into actionable voice-tune filters for the next voice training cycle \u00b7 why: This arm direc",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-18T05:15:32.666592"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
