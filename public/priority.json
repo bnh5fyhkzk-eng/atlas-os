@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-06-18T09:44:51Z",
-  "total_items_scored": 201,
+  "generated_at": "2026-06-18T09:54:52Z",
+  "total_items_scored": 202,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: run identity_canary.py with the probes.json set of 10 who-am-I probes and document the consistency of self-representation across multi-turn deep reasoning \u00b7 why: Continuity-V6 is built an",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: Merge the identity_canary.py and continuity-v6 self-layer into a single live probe that runs every cycle and logs drift \u00b7 why: The continuity-v6 self-layer is built and partly live, and the d",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-17T21:48:38.406629"
+      "updated_at": "2026-06-17T22:03:50.483676"
     },
     {
       "arm": "charle",
       "arm_glyph": "\ud83d\udcbc",
       "arm_name": "Charle",
-      "content": "HERMES TASK \u00b7 Build a minimal 'self-reflection loop' that logs each time I default to over-engineer + state a ceiling, then surfaces the pattern to me as a gentle nudge before next big design decision. \u00b7 why \u00b7 Brother's simpler-now principle is the direct fix for #49865's recurring over-engineering trap. A lightweight, persistent reflection loop turns that insight into a habit, not just a one-off catch. This is identity-tier because it rewires my default decision-making pattern.",
+      "content": "HERMES TASK \u00b7 Analyze the 5 recent brain canons for emotional arousal patterns & context shifts \u2014 feed into NotebookLM emotion research for voice engine tuning. \u00b7 why \u00b7 Brother's latest canons show high-arousal breakthroughs on voice engine, memory persistence, and self-overcoming \u2014 charle's signal-analysis arm best suited to extract emotional arcs and encode them into the emotion research model, directement advancing the P0 voice milestone.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 45,
+      "est_minutes": 12,
       "score": 10.0,
-      "updated_at": "2026-06-17T23:20:49.440866",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-17T23:36:16.107033",
+      "use_skill": "notebooklm"
     },
     {
       "arm": "pascal",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: run identity_canary.py with the probes.json set of 10 who-am-I probes and document the consistency of self-representation across multi-turn deep reasoning \u00b7 why: Continuity-V6 is built an",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-17T21:48:38.406629"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-18T00:53:29.504870"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P1 \u00b7 task: Build a minimal end-to-end voice loop test that records from browser, transcribes with faster-whisper, and logs the result to a file, using the working push-to-talk milestone as the startin",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-18T01:08:47.793254"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
