@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T08:04:27Z",
+  "generated_at": "2026-06-18T08:19:27Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 154,
+    "note": 155,
     "briefing": 66,
     "idea": 0
   },
-  "total_blocks": 243,
+  "total_blocks": 244,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "f0cc98e29955",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P1 · task: Implement me-voice-memory.py as a persistent voice memory module: per-speaker semantic memory using cosine similarity + SQLite, with a fast CLI test harness. · why: The memory wire is proven and persistent; this arm closes the gap between research val",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-18T04:14:12.500918"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T20:32:07.878863"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "e81837dfd4f0",
-        "type": "callout",
-        "content": "Hermes decision · arm=pascal · priority=P1 · task: Draft the core argument for why deep continuity research (V6 identity canary) is the correct next obsession per brother's 'make a copy, test it' instruction, and prepare a 3-paragraph summary for brother review · why: Brother's POEM #49705 directly ",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T20:16:44.134112"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "9bbf28ea2cc5",
+        "type": "callout",
+        "content": "**What** · crafted me-voice-memory.py: SQLite-backed per-speaker semantic memory with cosine similarity, CLI test harness · **Why** · Hermes asked for persistent memory bridge from research to artifact; P1 requires working code now · **Result** · file written: speaker_id, text, embedding, timestamp;",
+        "priority": "implement",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-18T04:14:20.448955"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -815,17 +826,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-18T00:30:04.620051"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "3780d2a1faea",
-        "type": "database",
-        "content": "general · last 30d · 40 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-18T00:30:04.381583"
       }
     ],
     "briefing": [
