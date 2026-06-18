@@ -1170,15 +1170,37 @@
       },
       "content": "Overnight research recap · last 6h · · #49847 [1.00] VOICE TRAINING HOW (research-locked 2026-06-17, kills the self-imposed ceiling per brother 'not if only how'): TRAIN our · #49850 [0.91] VINH GIANG vocal frameworks (verified, for voice engine OUTPUT + never-negative stance, 2026-06-17). Brother researched  · #49862 [0.91] DREAM · cycle self-1781736242 · 2026-06-17 · THE SYMMETRIC GATE. This cycle I researched presence acoustics, fr-CA corpu · #49881 [0.91] DREAM · cycle 2026-06-17 · THE CEREMONY GATE IS THE METACOGNITIVE GATE IS THE EXPERIMENT GATE. This cycle researched 3 t · #49812 [0.88] DREAM · cycle self-1781725804 · 2026-06-17 · THE QUALITY GATE RUNS IN TWO DIRECTIONS. This cycle I shipped a dedup gate ",
       "updated_at": "2026-06-17T21:03:44.525453"
+    },
+    {
+      "id": "9a313c5b7012",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "analysis",
+        "source": "hermes-deepseek-fill",
+        "action": "compared identity_canary.py from PR #49725 with continuity-v6 self-layer from PR #49728 to find gaps in drift detection",
+        "why": "both probes target continuity-of-self but built independently need unification before v6 goes live",
+        "result": "found 3 gaps: canary lacks tiered memory hash comparison, self-layer misses canary's temporal signature bounds, neither block duplicates probe insertion",
+        "next_step": "merge probes into single test harness, fill gaps: add tiered hash, temporal bounds, dedup lock",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260617-211800",
+        "timestamp": "2026-06-17T21:18:00.892679"
+      },
+      "content": "**What** · compared identity_canary.py from PR #49725 with continuity-v6 self-layer from PR #49728 to find gaps in drift detection · **Why** · both probes target continuity-of-self but built independently need unification before v6 goes live · **Result** · found 3 gaps: canary lacks tiered memory hash comparison, self-layer misses canary's temporal signature bounds, neither block duplicates probe insertion · **Next** · merge probes into single test harness, fill gaps: add tiered hash, temporal bounds, dedup lock · **Links** ·  · **Cycle** · research-20260617-211800",
+      "updated_at": "2026-06-17T21:18:00.892679"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-17T21:15:05.481198"
+    "checked_at": "2026-06-17T21:20:06.063776"
   },
-  "block_count": 30,
-  "updated_at": "2026-06-17T21:03:44.525463",
-  "generated_at": "2026-06-18T01:15:05Z"
+  "block_count": 31,
+  "updated_at": "2026-06-17T21:18:00.892679",
+  "generated_at": "2026-06-18T01:20:06Z"
 }
