@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T03:49:18Z",
+  "generated_at": "2026-06-18T04:04:18Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 158,
+    "note": 159,
     "briefing": 66,
     "idea": 0
   },
-  "total_blocks": 247,
+  "total_blocks": 248,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "2c45adba7a26",
+        "type": "callout",
+        "content": "Hermes decision · arm=pascal · priority=P1 · task: Embed the emotion-research findings from #49903 into our voice engine's prosody model: map each of the 4 key valences to a distinct pitch/pace/timbre vector, then write a unit test that verifies the voice loop outputs the correct emotional tag in th",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-17T23:51:43.645792"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T13:39:36.370265"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "783d7db7c9cf",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P1 · task: Deploy identity_canary.py and probes.json (from canons #49725,#49728) as a live self-check module on brain-v5; schedule hourly probes with logging. · why: This is the highest-priority identity-tier task: making the continuity-of-self research actionab",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T13:24:12.183136"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "a9134a190d04",
+        "type": "callout",
+        "content": "**What** · Parsed #49903, mapped 4 valences to pitch/pace/timbre vectors. Implemented `prosody_embeddings` module. Wrote unit test `test_emotional_tag_in_transcript` that verifies transcription log contains correct emotion tag for each valence. · **Why** · #49903 is fresh high-arousal research direc",
+        "priority": "code",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-17T23:51:53.032132"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -815,17 +826,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-17T18:00:00.785241"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "29d732dc9443",
-        "type": "database",
-        "content": "arxiv-reads · last 30d · 5 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-17T18:00:00.785237"
       }
     ],
     "briefing": [
