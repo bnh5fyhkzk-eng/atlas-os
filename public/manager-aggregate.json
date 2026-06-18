@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T10:19:32Z",
+  "generated_at": "2026-06-18T10:34:32Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 160,
+    "note": 161,
     "briefing": 65,
     "idea": 0
   },
-  "total_blocks": 248,
+  "total_blocks": 249,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "0875d957e151",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Deep-dive into the #4 emotional valence algorithm from the NotebookLM research, extracting its core mechanism and mapping it to our voice engine's tone modulation · why: Brother validated this as sharpening our voice engine; #4 is the key insight ",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-18T06:16:56.238757"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-17T23:20:49.420682"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "151c74512d72",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: analyze the continuity-of-self drift-canary results from #49725 and cross-reference with the self-layer built in #49728 to measure recall regressions and identity stability across the 10 who-am-I probes · why: this directly tests identity-tier con",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-17T22:19:29.954190"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "9940c41e3497",
+        "type": "callout",
+        "content": "**What** · extracted #4 emotional valence algorithm from NotebookLM: a 2D vector (arousal x valence) with sigmoid-gated blend of 8 core emotions, mapped via eigen-decomposition to voice tone parameters (pitch, rate, timbre, breathiness). · **Why** · brother validated #4 as the key emotional model; t",
+        "priority": "research_arm_algorithm_extraction",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-18T06:17:02.688497"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -815,17 +826,6 @@
         "priority": "orchestration",
         "source": "hermes-self",
         "updated_at": "2026-06-18T05:03:48.288165"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "9bbf28ea2cc5",
-        "type": "callout",
-        "content": "**What** · crafted me-voice-memory.py: SQLite-backed per-speaker semantic memory with cosine similarity, CLI test harness · **Why** · Hermes asked for persistent memory bridge from research to artifact; P1 requires working code now · **Result** · file written: speaker_id, text, embedding, timestamp;",
-        "priority": "implement",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-18T04:14:20.448955"
       }
     ],
     "briefing": [
