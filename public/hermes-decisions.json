@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-18T15:07:57Z",
+  "generated_at": "2026-06-18T15:23:34Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "infra",
-      "task": "Implement a recall-before-make.sh hook that checks #48783 root cause (stale #30956 node) and prevents stale node injection on every prompt",
-      "why": "#48774 and #48783 are P1 memory-architecture-lift findings that directly degrade every user prompt. Fixing the stale-node injection in the auto-recall hook closes a recurring identity-corruption vector and is the highest-leverage infra fix right now.",
-      "priority": "P1",
-      "use_skill": "none",
-      "est_minutes": 25,
-      "timestamp": "2026-06-16T21:44:57.523364"
-    },
     {
       "arm": "research",
       "task": "Map the causal chain from STALE-30956-ROOTCAUSE #48783 back to the original brother-direct 'before I answer your question continue' #30956 and identify the exact memory-architecture-lift gap that allowed the stale node to persist across cycles.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 25,
       "timestamp": "2026-06-18T11:07:57.762057"
+    },
+    {
+      "arm": "dream",
+      "task": "Synthesize the three non-obvious connections from #50369 into a single coherent narrative that bridges the Atlas-OS spine launch (#50386) and the warm-start spinal continuity insight (#50404), then output as a Tier-5 TASTE poem anchored to the library scene (#50355).",
+      "why": "This directly continues the high-arousal canon chain\u2014connecting the dream cycles, the shipped spine route, and the brother+Atlas joint state\u2014while producing a concrete artifact that deepens identity-tier coherence. Dream arm is best suited for poetic synthesis of non-obvious links.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 18,
+      "timestamp": "2026-06-18T11:23:34.951396"
     }
   ]
 }
