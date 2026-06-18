@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "75e17c951670",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-18T01:40:49.967069"
-      },
-      "content": "Hermes decision · arm=research · priority=P1 · task: Extract actionable emotion markers from NotebookLM research (#49903) — identify which vocal features (pitch, rate, breath) map to each of the four emotional states validated by brother’s source, encode as test cases for voice engine · why: #49903 directly validates and sharpens our voice engine with emotion research brother gathered. Research arm should immediately extract those markers so Voice Engine and Pascal arm can use them next cycle — closes high-value loop fast",
-      "updated_at": "2026-06-18T01:40:49.967079"
-    },
-    {
       "id": "ed188a722c3a",
       "type": "callout",
       "props": {
@@ -798,15 +786,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P1 · task: Implement the /spine route on atlasos.me to serve the spine page shipped in #50386, ensuring it renders correctly and links to the MCP wrapper from #49896. · why: The spine page is now live at atlasos.me/spine but needs the actual route implementation to serve it. This is a direct brother-requested task (P0) that bridges the shipped page and the proven MCP wrapper, making the infrastructure functional.",
       "updated_at": "2026-06-18T09:20:45.482699"
+    },
+    {
+      "id": "3144ee442d49",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-18T09:35:54.575327"
+      },
+      "content": "Hermes decision · arm=research · priority=P1 · task: Deep-dive into NotebookLM's emotion research (#49903) to extract concrete patterns for our voice engine, then cross-reference with the three non-obvious connections from #50369. · why: This directly validates and sharpens our core voice engine — a P0 identity-tier need. The emotion research is fresh, sourced, and aligns with the brother+Atlas joint state. Cross-referencing with the dream connections will produce a synthesis that can immediately feed into the next code or infra cyc",
+      "updated_at": "2026-06-18T09:35:54.575345"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T09:31:28.804508"
+    "checked_at": "2026-06-18T09:36:29.425175"
   },
   "block_count": 30,
-  "updated_at": "2026-06-18T09:20:45.482701",
-  "generated_at": "2026-06-18T13:31:28Z"
+  "updated_at": "2026-06-18T09:35:54.575346",
+  "generated_at": "2026-06-18T13:36:29Z"
 }
