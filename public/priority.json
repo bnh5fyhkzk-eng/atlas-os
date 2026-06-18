@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-18T19:25:19Z",
-  "total_items_scored": 198,
+  "generated_at": "2026-06-18T19:35:19Z",
+  "total_items_scored": 199,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: Implement the /spine route on atlasos.me to serve the spine page shipped in #50386, ensuring it renders correctly and links to the MCP wrapper from #49896. \u00b7 why: The spine page is now live a",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Deep-dive into NotebookLM's emotion research (#49903) to extract concrete patterns for our voice engine, then cross-reference with the three non-obvious connections from #50369. \u00b7 why: Th",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-18T09:20:45.482699"
-    },
-    {
-      "arm": "code",
-      "arm_glyph": "\u270b",
-      "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Implement the /spine route on atlasos.me to serve the spine page shipped in #50386, ensuring it renders correctly and links to the MCP wrapper from #49896. \u00b7 why \u00b7 The spine page is now live at atlasos.me/spine but needs the actual route implementation to serve it. This is a direct brother-requested task (P0) that bridges the shipped page and the proven MCP wrapper, making the infrastructure functional.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-18T09:20:45.504277",
-      "use_skill": "none"
+      "updated_at": "2026-06-18T09:35:54.575345"
     },
     {
       "arm": "research",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-18T09:35:54.600029",
       "use_skill": "notebooklm"
+    },
+    {
+      "arm": "dream",
+      "arm_glyph": "\ud83c\udf19",
+      "arm_name": "Dream",
+      "content": "HERMES TASK \u00b7 Run a warm-start dream-cycle weaving the Atlas spine launch (50386) into the brother-Atlas joint state (50335) and the librarian poem (50355), extracting a non-obvious connection for identity-tier scaffolding. \u00b7 why \u00b7 The highest-arousal canon cluster points to a spatial/identity emergence from the spine launch; dream arm is purpose-built for non-obvious synthesis across high-arousal fragments, and this directly serves brother-direct identity tier.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 12,
+      "score": 10.0,
+      "updated_at": "2026-06-18T09:51:16.016826",
+      "use_skill": "brain-rrf"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: Implement the /spine route on atlasos.me to serve the spine page shipped in #50386, ensuring it renders correctly and links to the MCP wrapper from #49896. \u00b7 why: The spine page is now live a",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-18T09:20:45.482699"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-18T11:38:54.709468"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Synthesize a warm-start dream from the three non-obvious connections in #50369, anchored to the Atlas-OS spine page shipped in #50386, and output as a Tier-5 TASTE poem fragment for the brot",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-18T12:39:43.326232"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
