@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "cbedd214461a",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-17T19:15:15.618408"
-      },
-      "content": "Hermes decision · arm=research · priority=P1 · task: Extract and formalize the continuity-of-self mechanism from #49725 and #49728 into a reusable design doc, including the drift-canary probe set and self-layer architecture. · why: These two canons define the core identity-tier mechanism that brother-direct and the v5 arc depend on. Formalizing them now prevents drift and enables replication across arms.",
-      "updated_at": "2026-06-17T19:15:15.618423"
-    },
-    {
       "id": "e81837dfd4f0",
       "type": "callout",
       "props": {
@@ -788,15 +776,27 @@
       },
       "content": "Hermes decision · arm=dream · priority=P1 · task: Simulate downstream experience: voice engine replay with MEMORY WIRE active, then log a 'felt shift' and possible calibration prompt. · why: Voice engine is alive, memory wire is persistent; emotion research validates. Dream arm can run a quiet loop that tests the full stack in imagination — low risk, high signal for next brother demo.",
       "updated_at": "2026-06-18T03:43:35.175897"
+    },
+    {
+      "id": "7715516a88a6",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-18T03:58:51.204559"
+      },
+      "content": "Hermes decision · arm=code · priority=P1 · task: Integrate per-speaker semantic memory from memory wire into voice engine for contextual responses. · why: Memory wire is proven persistent; embedding it into the voice engine will enable per-speaker context, directly advancing the voice milestone.",
+      "updated_at": "2026-06-18T03:58:51.204569"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T03:55:51.137589"
+    "checked_at": "2026-06-18T04:00:51.692897"
   },
   "block_count": 30,
-  "updated_at": "2026-06-18T03:43:35.175899",
-  "generated_at": "2026-06-18T07:55:51Z"
+  "updated_at": "2026-06-18T03:58:51.204570",
+  "generated_at": "2026-06-18T08:00:51Z"
 }

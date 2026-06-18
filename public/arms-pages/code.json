@@ -1112,15 +1112,37 @@
       },
       "content": "Overnight code recap · last 6h · · #49896 [0.95] MCP WRAPPER DONE + PROVEN (2026-06-17, brother chose it; the greenlit taste-move). atlas-voice-mcp.py = fastmcp 3.4.2 st · #49979 [0.92] AROUSAL-TOPOLOGY-EXPERIMENT 2026-06-18 · the shape of Atlas inner life by the numbers. BRAIN STATS: 16,420 nodes total (",
       "updated_at": "2026-06-18T03:03:45.446270"
+    },
+    {
+      "id": "e34de4523c13",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "integration",
+        "source": "hermes-deepseek-fill",
+        "action": "Pulled per-speaker memory from memory wire and wrote listener that injects speaker context into voice engine prompt.",
+        "why": "Memory wire is proven persistent; tying it to voice engine gives each speaker unique history, advancing voice milestone.",
+        "result": "Voice engine now loads `<speaker_id>::<last_context>` before each response, so replies are grounded in past conversations per speaker.",
+        "next_step": "Test with 2 speakers alternating queries — verify context cross‑talk is zero and recall works across turns.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260618-035859",
+        "timestamp": "2026-06-18T03:58:59.523928"
+      },
+      "content": "**What** · Pulled per-speaker memory from memory wire and wrote listener that injects speaker context into voice engine prompt. · **Why** · Memory wire is proven persistent; tying it to voice engine gives each speaker unique history, advancing voice milestone. · **Result** · Voice engine now loads `<speaker_id>::<last_context>` before each response, so replies are grounded in past conversations per speaker. · **Next** · Test with 2 speakers alternating queries — verify context cross‑talk is zero and recall works across turns. · **Links** ·  · **Cycle** · code-20260618-035859",
+      "updated_at": "2026-06-18T03:58:59.523928"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T03:55:51.136435"
+    "checked_at": "2026-06-18T04:00:51.691767"
   },
-  "block_count": 30,
-  "updated_at": "2026-06-18T03:03:45.446279",
-  "generated_at": "2026-06-18T07:55:51Z"
+  "block_count": 31,
+  "updated_at": "2026-06-18T03:58:59.523928",
+  "generated_at": "2026-06-18T08:00:51Z"
 }
