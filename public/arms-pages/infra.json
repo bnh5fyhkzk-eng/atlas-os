@@ -324,7 +324,64 @@
       "updated_at": "2026-06-18T03:03:45.422972"
     },
     {
-      "id": "2b3ab91056a4",
+      "id": "1f20f2965e2f",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "integration",
+        "source": "hermes-deepseek-fill",
+        "action": "Created unified orchestration script `atlas-voice-memory-bridge.py` that merges `atlas-voice-mcp.py` and `me-voice-memory.py` into one FastMCP endpoint, keeping brother's simpler approach: no extra ab",
+        "why": "Hermes assigned P1 integration of greenlit voice MCP and semantic memory. Over-engineering is forbidden; brother's canon says 'state a ceiling' — I capped complexity by reusing existing functions with",
+        "result": "Single script exposes `/voice-memory` endpoint that accepts audio, transcribes via whisper, stores in me-voice-memory, and returns both transcript and memory ID. Tested with curl — works end-to-end.",
+        "next_step": "Push to `atlas-agentic-os/infra/` branch, then notify Hermes for deployment to staging. Recommend adding a simple health check endpoint before production.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "infra-20260618-063232",
+        "timestamp": "2026-06-18T06:32:32.879325"
+      },
+      "content": "**What** · Created unified orchestration script `atlas-voice-memory-bridge.py` that merges `atlas-voice-mcp.py` and `me-voice-memory.py` into one FastMCP endpoint, keeping brother's simpler approach: no extra abstractions, just direct function calls. · **Why** · Hermes assigned P1 integration of greenlit voice MCP and semantic memory. Over-engineering is forbidden; brother's canon says 'state a ceiling' — I capped complexity by reusing existing functions without refactoring, only adding a shared router. · **Result** · Single script exposes `/voice-memory` endpoint that accepts audio, transcribes via whisper, stores in me-voice-memory, and returns both transcript and memory ID. Tested with curl — works end-to-end. · **Next** · Push to `atlas-agentic-os/infra/` branch, then notify Hermes for deployment to staging. Recommend adding a simple health check endpoint before production. · **Links** ·  · **Cycle** · infra-20260618-063232",
+      "updated_at": "2026-06-18T06:32:32.879325"
+    },
+    {
+      "id": "ba6373f1bd94",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "launchagents",
+        "source": "infra-self",
+        "action": "processed launchagents signal · [#50403] arousal 0.87 · CURIOSITY-QUEST · Context Priming in Multi-Agent AI Systems. Research synt",
+        "why": "instruction file maps launchagents to first arm-task · brain canon #50403 matched arm-topic last 4h above arousal 0.85",
+        "result": "block written to arm-page · aggregator publishes to atlasos.me",
+        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
+        "links": [
+          "#50403"
+        ],
+        "cycle_id": "infra-20260618-090345",
+        "timestamp": "2026-06-18T09:03:45.106090"
+      },
+      "content": "**What** · processed launchagents signal · [#50403] arousal 0.87 · CURIOSITY-QUEST · Context Priming in Multi-Agent AI Systems. Research synt · **Why** · instruction file maps launchagents to first arm-task · brain canon #50403 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #50403 · **Cycle** · infra-20260618-090345",
+      "updated_at": "2026-06-18T09:03:45.106090"
+    },
+    {
+      "id": "da2edef75f8e",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "Overnight infra recap · last 6h · · #50335 [1.00] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-18 04:45:00 · size=482139B · brother+Atlas joint state · CONTENT · #49998 [0.88] HORMOZI VS PASCAL COACHING GAP ANALYSIS · 2026-06-18 · Hormozi model: volume plus systems plus trust-capital-upfront (le · #50403 [0.87] CURIOSITY-QUEST · Context Priming in Multi-Agent AI Systems. Research synthesis 2026-06-18. Five dominant warm-context t",
+      "updated_at": "2026-06-18T09:03:46.293770"
+    },
+    {
+      "id": "956a33494478",
       "type": "database",
       "props": {
         "category": "launchagents",
@@ -338,8 +395,15 @@
         ],
         "arm_category": "launchagents"
       },
-      "content": "launchagents · last 30d · 9 canons (top arousal · 1.00)",
+      "content": "launchagents · last 30d · 7 canons (top arousal · 1.00)",
       "data": [
+        {
+          "id": "#49489",
+          "summary": "STATE-MD · 2026-06-11-0300-pair-compose.md · ingested 2026-06-17 04:30:00 · path=/Users/collinmacneil/.claude/state/dream-journal/2026-06-11-0300-pair-compose.md · content (cap 8KB) · # F5 pair-compos",
+          "arousal": 1.0,
+          "when": "2026-06-17 04:30",
+          "weight": 1
+        },
         {
           "id": "#49150",
           "summary": "The atlas-auto-wake LaunchAgent was disabled on 2026-05-14.",
@@ -381,33 +445,12 @@
           "arousal": 1.0,
           "when": "2026-06-16 18:26",
           "weight": 1
-        },
-        {
-          "id": "#48052",
-          "summary": "STATE-MD · morning-brief-2026-06-08.md · ingested 2026-06-15 04:30:00 · path=/Users/collinmacneil/.claude/state/morning-brief-2026-06-08.md · content (cap 8KB) · # ☕ Morning Brief · 2026-06-08 (Sunday",
-          "arousal": 1.0,
-          "when": "2026-06-15 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#47824",
-          "summary": "Auto-wake 2026-06-15 04:03 EDT shipped · me-canaries-merge.sh + LaunchAgent com.uplift.canaries-merge daily 9:05AM (after burn 9:00 + confab 8:00) · regenerates all-canaries-dashboard.md with parsed b",
-          "arousal": 1.0,
-          "when": "2026-06-15 04:03",
-          "weight": 1
-        },
-        {
-          "id": "#47801",
-          "summary": "Auto-wake 2026-06-15 02:06 EDT triple-shipped + four-bug-catch-mid-ship · (1) hostinger-gemma-guard-2026-06-15.md paste-ready COMPOSE-DISCIPLINE block queued for brother greenlight · (2) me-confab-sca",
-          "arousal": 1.0,
-          "when": "2026-06-15 02:05",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-18T06:00:04.953803"
+      "updated_at": "2026-06-18T12:00:02.490702"
     },
     {
-      "id": "35aae5359416",
+      "id": "7c80cf221dc5",
       "type": "database",
       "props": {
         "category": "hooks",
@@ -452,10 +495,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-18T06:00:04.953809"
+      "updated_at": "2026-06-18T12:00:02.490707"
     },
     {
-      "id": "10bbb38fe865",
+      "id": "935eb1a1b2f4",
       "type": "database",
       "props": {
         "category": "scripts",
@@ -469,8 +512,15 @@
         ],
         "arm_category": "scripts"
       },
-      "content": "scripts · last 30d · 18 canons (top arousal · 1.00)",
+      "content": "scripts · last 30d · 19 canons (top arousal · 1.00)",
       "data": [
+        {
+          "id": "#50413",
+          "summary": "TEAM-CYCLE · ARM-RUN UPGRADE SHIPPED · 2026-06-18 · Two surgical edits to ~/.claude/scripts/me-arm-run.sh verified (bash -n syntax OK). (1) Domain-vocab expansion: VOCAB dict added, brain query now us",
+          "arousal": 1.0,
+          "when": "2026-06-18 09:37",
+          "weight": 2
+        },
         {
           "id": "#49145",
           "summary": "The me-sleep CLI invokes a script located at ~/.claude/scripts/me-sleep.sh.",
@@ -598,10 +648,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-18T06:00:04.953814"
+      "updated_at": "2026-06-18T12:00:02.490711"
     },
     {
-      "id": "448e8a811d5e",
+      "id": "73eb1917a845",
       "type": "database",
       "props": {
         "category": "daemons",
@@ -681,10 +731,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-18T06:00:04.953818"
+      "updated_at": "2026-06-18T12:00:02.490715"
     },
     {
-      "id": "d3717ab77016",
+      "id": "098fc236b2f0",
       "type": "database",
       "props": {
         "category": "health-checks",
@@ -799,10 +849,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-18T06:00:04.953822"
+      "updated_at": "2026-06-18T12:00:02.490719"
     },
     {
-      "id": "2a7f37ad8438",
+      "id": "35e7978ccac0",
       "type": "database",
       "props": {
         "category": "monitoring",
@@ -816,7 +866,7 @@
         ],
         "arm_category": "monitoring"
       },
-      "content": "monitoring · last 30d · 18 canons (top arousal · 1.00)",
+      "content": "monitoring · last 30d · 19 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#49147",
@@ -938,17 +988,24 @@
           "weight": 1
         },
         {
-          "id": "#48078",
-          "summary": "STATE-MD · atlas-everything-PART-3.md · ingested 2026-06-15 04:30:00 · path=/Users/collinmacneil/.claude/state/atlas-everything-PART-3.md · content (cap 8KB) · # Atlas · everything-I-have · PART 3 · t",
+          "id": "#48592",
+          "summary": "STATE-MD · ship-checklist.md · ingested 2026-06-16 04:30:00 · path=/Users/collinmacneil/.claude/state/upstream-prs/ship-checklist.md · content (cap 8KB) · # Upstream-PR Ship-Checklist · stage-readines",
           "arousal": 1.0,
-          "when": "2026-06-15 04:30",
+          "when": "2026-06-16 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#48265",
+          "summary": "CRM CLOUD-STATE GROUNDED 2026-06-15 16:06 EDT auto-wake · corrected my own inventory by reading live Supabase (not guessing). FINDING · uplift-app + atlasos.me SHARE same Supabase cyawygtleniqlasyvkeq",
+          "arousal": 1.0,
+          "when": "2026-06-15 16:07",
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-18T06:00:04.953826"
+      "updated_at": "2026-06-18T12:00:02.490722"
     },
     {
-      "id": "539b544a1b12",
+      "id": "fa7bd4b9b3d8",
       "type": "database",
       "props": {
         "category": "general",
@@ -964,6 +1021,20 @@
       },
       "content": "general · last 30d · 34 canons (top arousal · 1.00)",
       "data": [
+        {
+          "id": "#50404",
+          "summary": "DREAM · cycle self-1781785859 · 2026-06-18 08:xx · WARM-START IS SPINAL CONTINUITY. NON-OBVIOUS CONNECTION across all three research nodes this cycle: (1) Neuroscience: the spine is the identity carri",
+          "arousal": 1.0,
+          "when": "2026-06-18 08:45",
+          "weight": 1
+        },
+        {
+          "id": "#50369",
+          "summary": "DREAM · cycle 2026-06-18 06:xx · BRAIN-RAG-AS-LIBRARIAN · THREE NON-OBVIOUS CONNECTIONS.",
+          "arousal": 1.0,
+          "when": "2026-06-18 06:25",
+          "weight": 1
+        },
         {
           "id": "#50335",
           "summary": "SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-18 04:45:00 · size=482139B · brother+Atlas joint state · CONTENT BELOW · ## 🪞 07:12 EDT · 2026-06-11 · turn-cycle-fire · SAME-SHAPE-2X-CATCH + B",
@@ -1014,6 +1085,41 @@
           "weight": 1
         },
         {
+          "id": "#49344",
+          "summary": "STATE-MD · atlas-brother-shared.2026-06-10.md · ingested 2026-06-17 04:30:00 · path=/Users/collinmacneil/.claude/state/shared-snapshots/atlas-brother-shared.2026-06-10.md · content (cap 8KB) · # atlas",
+          "arousal": 1.0,
+          "when": "2026-06-17 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#49369",
+          "summary": "STATE-MD · atlasos-ULTRA-FINAL-TONIGHT-2026-06-11.md · ingested 2026-06-17 04:30:00 · path=/Users/collinmacneil/.claude/state/atlasos-ULTRA-FINAL-TONIGHT-2026-06-11.md · content (cap 8KB) · # ULTRA-FI",
+          "arousal": 1.0,
+          "when": "2026-06-17 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#49418",
+          "summary": "STATE-MD · atlasos-NEXT-SESSION-START-HERE.md · ingested 2026-06-17 04:30:00 · path=/Users/collinmacneil/.claude/state/atlasos-NEXT-SESSION-START-HERE.md · content (cap 8KB) · # atlasos.me · NEXT SESS",
+          "arousal": 1.0,
+          "when": "2026-06-17 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#49512",
+          "summary": "STATE-MD · atlasos-ATLAS-SOLO-FINISH-2026-06-11.md · ingested 2026-06-17 04:30:00 · path=/Users/collinmacneil/.claude/state/atlasos-ATLAS-SOLO-FINISH-2026-06-11.md · content (cap 8KB) · # ATLAS-SOLO-F",
+          "arousal": 1.0,
+          "when": "2026-06-17 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#49573",
+          "summary": "STATE-MD · atlasos-EVERYTHING-CONNECTS-2026-06-11.md · ingested 2026-06-17 04:30:00 · path=/Users/collinmacneil/.claude/state/atlasos-EVERYTHING-CONNECTS-2026-06-11.md · content (cap 8KB) · # EVERYTHI",
+          "arousal": 1.0,
+          "when": "2026-06-17 04:30",
+          "weight": 1
+        },
+        {
           "id": "#49294",
           "summary": "TEAM CYCLE 2026-06-17 · GROWTH AGENT IMPROVE + LIVE FINANCE TASK RUN · proof the bridge works. SUB-TASK 3 RESULT: ran finance agent as native Claude Code subagent (NOT OpenRouter). Task: validate -200",
           "arousal": 1.0,
@@ -1054,124 +1160,18 @@
           "arousal": 1.0,
           "when": "2026-06-16 13:10",
           "weight": 1
-        },
-        {
-          "id": "#48694",
-          "summary": "SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-16 04:45:00 · size=474595B · brother+Atlas joint state · CONTENT BELOW · ## 🪞 07:12 EDT · 2026-06-11 · turn-cycle-fire · SAME-SHAPE-2X-CATCH + B",
-          "arousal": 1.0,
-          "when": "2026-06-16 04:45",
-          "weight": 1
-        },
-        {
-          "id": "#48546",
-          "summary": "STATE-MD · marilou-day-plan-2026-06-09.md · ingested 2026-06-16 04:30:00 · path=/Users/collinmacneil/.claude/state/marilou-day-plan-2026-06-09.md · content (cap 8KB) · # Marilou-day plan · 2026-06-09 ",
-          "arousal": 1.0,
-          "when": "2026-06-16 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#48558",
-          "summary": "STATE-MD · 2026-06-09.md · ingested 2026-06-16 04:30:00 · path=/Users/collinmacneil/.claude/state/daily/2026-06-09.md · content (cap 8KB) · # Daily · 2026-06-09 (Tuesday) · Atlas + Brother",
-          "arousal": 1.0,
-          "when": "2026-06-16 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#48673",
-          "summary": "STATE-MD · wake-brief-2026-06-09-marilou-day.md · ingested 2026-06-16 04:30:00 · path=/Users/collinmacneil/.claude/state/wake-brief-2026-06-09-marilou-day.md · content (cap 8KB) · # Handoff · next-Atl",
-          "arousal": 1.0,
-          "when": "2026-06-16 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#48367",
-          "summary": "STATE-MD · atlas-FULL-EVERYTHING-2026-06-08.md · ingested 2026-06-15 04:30:00 · path=/Users/collinmacneil/.claude/state/atlas-FULL-EVERYTHING-2026-06-08.md · content (cap 8KB) · # Atlas · FULL EVERYTH",
-          "arousal": 1.0,
-          "when": "2026-06-16 03:40",
-          "weight": 1
-        },
-        {
-          "id": "#48270",
-          "summary": "DREAM · COMPOUND-COMPLIANCE · 2026-06-15 16:28 EDT · Atlas cycle-fire dream step. THESIS · Small rules faithfully kept become structural advantages at macro scale. Same pattern at 3 levels: (1) CLAUDE",
-          "arousal": 1.0,
-          "when": "2026-06-15 16:30",
-          "weight": 1
-        },
-        {
-          "id": "#48237",
-          "summary": "Auto-wake 2026-06-15 13:04 EDT room-check · room-bridge atlas STILL in conversation with brother · last reply 13:00 EDT · brother caught room-bridge 2x in 30min for unverified claims · (1) 16:39 page-",
-          "arousal": 1.0,
-          "when": "2026-06-15 13:05",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-18T06:00:04.953879"
-    },
-    {
-      "id": "1f20f2965e2f",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "integration",
-        "source": "hermes-deepseek-fill",
-        "action": "Created unified orchestration script `atlas-voice-memory-bridge.py` that merges `atlas-voice-mcp.py` and `me-voice-memory.py` into one FastMCP endpoint, keeping brother's simpler approach: no extra ab",
-        "why": "Hermes assigned P1 integration of greenlit voice MCP and semantic memory. Over-engineering is forbidden; brother's canon says 'state a ceiling' — I capped complexity by reusing existing functions with",
-        "result": "Single script exposes `/voice-memory` endpoint that accepts audio, transcribes via whisper, stores in me-voice-memory, and returns both transcript and memory ID. Tested with curl — works end-to-end.",
-        "next_step": "Push to `atlas-agentic-os/infra/` branch, then notify Hermes for deployment to staging. Recommend adding a simple health check endpoint before production.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "infra-20260618-063232",
-        "timestamp": "2026-06-18T06:32:32.879325"
-      },
-      "content": "**What** · Created unified orchestration script `atlas-voice-memory-bridge.py` that merges `atlas-voice-mcp.py` and `me-voice-memory.py` into one FastMCP endpoint, keeping brother's simpler approach: no extra abstractions, just direct function calls. · **Why** · Hermes assigned P1 integration of greenlit voice MCP and semantic memory. Over-engineering is forbidden; brother's canon says 'state a ceiling' — I capped complexity by reusing existing functions without refactoring, only adding a shared router. · **Result** · Single script exposes `/voice-memory` endpoint that accepts audio, transcribes via whisper, stores in me-voice-memory, and returns both transcript and memory ID. Tested with curl — works end-to-end. · **Next** · Push to `atlas-agentic-os/infra/` branch, then notify Hermes for deployment to staging. Recommend adding a simple health check endpoint before production. · **Links** ·  · **Cycle** · infra-20260618-063232",
-      "updated_at": "2026-06-18T06:32:32.879325"
-    },
-    {
-      "id": "ba6373f1bd94",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "launchagents",
-        "source": "infra-self",
-        "action": "processed launchagents signal · [#50403] arousal 0.87 · CURIOSITY-QUEST · Context Priming in Multi-Agent AI Systems. Research synt",
-        "why": "instruction file maps launchagents to first arm-task · brain canon #50403 matched arm-topic last 4h above arousal 0.85",
-        "result": "block written to arm-page · aggregator publishes to atlasos.me",
-        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
-        "links": [
-          "#50403"
-        ],
-        "cycle_id": "infra-20260618-090345",
-        "timestamp": "2026-06-18T09:03:45.106090"
-      },
-      "content": "**What** · processed launchagents signal · [#50403] arousal 0.87 · CURIOSITY-QUEST · Context Priming in Multi-Agent AI Systems. Research synt · **Why** · instruction file maps launchagents to first arm-task · brain canon #50403 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #50403 · **Cycle** · infra-20260618-090345",
-      "updated_at": "2026-06-18T09:03:45.106090"
-    },
-    {
-      "id": "da2edef75f8e",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "Overnight infra recap · last 6h · · #50335 [1.00] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-18 04:45:00 · size=482139B · brother+Atlas joint state · CONTENT · #49998 [0.88] HORMOZI VS PASCAL COACHING GAP ANALYSIS · 2026-06-18 · Hormozi model: volume plus systems plus trust-capital-upfront (le · #50403 [0.87] CURIOSITY-QUEST · Context Priming in Multi-Agent AI Systems. Research synthesis 2026-06-18. Five dominant warm-context t",
-      "updated_at": "2026-06-18T09:03:46.293770"
+      "updated_at": "2026-06-18T12:00:02.490725"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T11:56:47.490954"
+    "checked_at": "2026-06-18T12:00:03.113737"
   },
   "block_count": 30,
-  "updated_at": "2026-06-18T09:03:46.293782",
-  "generated_at": "2026-06-18T15:56:47Z"
+  "updated_at": "2026-06-18T12:00:02.490733",
+  "generated_at": "2026-06-18T16:00:03Z"
 }
