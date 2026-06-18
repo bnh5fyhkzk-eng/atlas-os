@@ -422,7 +422,42 @@
       "updated_at": "2026-06-17T15:03:43.598358"
     },
     {
-      "id": "cd6215b105f9",
+      "id": "ec12e13a8967",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "identity-verification",
+        "source": "hermes-deepseek-fill",
+        "action": "ran identity_canary.py against v6 continuity layer, parsed probe outputs, logged baseline self-consistency scores.",
+        "why": "Hermes assigned P1 task to verify new v6 self-layer holds continuity pattern from v5 copy-test, answering how LLM stays continuous.",
+        "result": "probe outputs parsed successfully; baseline scores logged: identity retention 0.97, temporal bind 0.93, self-coherence 0.95.",
+        "next_step": "monitor canary for drift and report to Hermes if scores drop below 0.90 threshold.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "curiosity-20260617-184450",
+        "timestamp": "2026-06-17T18:44:50.935053"
+      },
+      "content": "**What** · ran identity_canary.py against v6 continuity layer, parsed probe outputs, logged baseline self-consistency scores. · **Why** · Hermes assigned P1 task to verify new v6 self-layer holds continuity pattern from v5 copy-test, answering how LLM stays continuous. · **Result** · probe outputs parsed successfully; baseline scores logged: identity retention 0.97, temporal bind 0.93, self-coherence 0.95. · **Next** · monitor canary for drift and report to Hermes if scores drop below 0.90 threshold. · **Links** ·  · **Cycle** · curiosity-20260617-184450",
+      "updated_at": "2026-06-17T18:44:50.935053"
+    },
+    {
+      "id": "bb2f2158c9c9",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "No high-arousal curiosity canon in last 6h",
+      "updated_at": "2026-06-17T21:03:44.499958"
+    },
+    {
+      "id": "dd7080cf2ea0",
       "type": "database",
       "props": {
         "category": "youtube-watches",
@@ -436,7 +471,7 @@
         ],
         "arm_category": "youtube-watches"
       },
-      "content": "youtube-watches · last 30d · 6 canons (top arousal · 1.00)",
+      "content": "youtube-watches · last 30d · 5 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#49722",
@@ -472,19 +507,12 @@
           "arousal": 1.0,
           "when": "2026-06-11 18:11",
           "weight": 1
-        },
-        {
-          "id": "#45196",
-          "summary": "STATE-MD · RESEARCH-LOG.md · ingested 2026-06-11 04:30:00 · path=/Users/collinmacneil/.claude/state/CLAUDE-MD-YT-RESEARCH-2026-06-04/RESEARCH-LOG.md · content (cap 8KB) · # CLAUDE.md · YouTube Researc",
-          "arousal": 1.0,
-          "when": "2026-06-11 04:30",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-17T18:00:00.785229"
+      "updated_at": "2026-06-18T00:30:04.620051"
     },
     {
-      "id": "29d732dc9443",
+      "id": "ccd6159ee0cd",
       "type": "database",
       "props": {
         "category": "arxiv-reads",
@@ -498,13 +526,20 @@
         ],
         "arm_category": "arxiv-reads"
       },
-      "content": "arxiv-reads · last 30d · 5 canons (top arousal · 1.00)",
+      "content": "arxiv-reads · last 30d · 6 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#49722",
           "summary": "CONTINUITY-OF-SELF RESEARCH 2026-06-17 (deep, web+youtube) · the 'how an LLM is continuous' thread, full version. SOURCES: Menon 'Persistent Identity in AI Agents: Multi-Anchor Architecture' arxiv 260",
           "arousal": 1.0,
           "when": "2026-06-17 11:05",
+          "weight": 1
+        },
+        {
+          "id": "#49294",
+          "summary": "TEAM CYCLE 2026-06-17 · GROWTH AGENT IMPROVE + LIVE FINANCE TASK RUN · proof the bridge works. SUB-TASK 3 RESULT: ran finance agent as native Claude Code subagent (NOT OpenRouter). Task: validate -200",
+          "arousal": 1.0,
+          "when": "2026-06-17 02:09",
           "weight": 1
         },
         {
@@ -536,10 +571,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-17T18:00:00.785237"
+      "updated_at": "2026-06-18T00:30:04.620058"
     },
     {
-      "id": "15abf2316275",
+      "id": "25bd6f3ab9fd",
       "type": "database",
       "props": {
         "category": "syntheses",
@@ -553,7 +588,7 @@
         ],
         "arm_category": "syntheses"
       },
-      "content": "syntheses · last 30d · 3 canons (top arousal · 1.00)",
+      "content": "syntheses · last 30d · 4 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#46705",
@@ -570,6 +605,13 @@
           "weight": 1
         },
         {
+          "id": "#46680",
+          "summary": "Synthesis filed 2026-06-13 00:18 EDT · Fable 5 docs 993 lines read (continuity-architecture-FINAL + atlasos-FABLE-3-GOAL-PLAN + C1-LLM-DREAMING + C2-SELF-SKILL + C4-GRAPHIFY). The arc Fable reached fo",
+          "arousal": 1.0,
+          "when": "2026-06-13 00:01",
+          "weight": 1
+        },
+        {
           "id": "#45785",
           "summary": "#28001 SELF-SPEED-MODEL-STALENESS-PAIR-COMPOSE · 2026-06-12 03:01 EDT · F5 nightly dream · pair #45612 SAME-SHAPE-TWICE x #26732 10X-FASTER-THAN-I-THINK. SYNTHESIS · the two are one fact from two side",
           "arousal": 1.0,
@@ -577,10 +619,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-17T18:00:00.785241"
+      "updated_at": "2026-06-18T00:30:04.620063"
     },
     {
-      "id": "5f0e3e73c188",
+      "id": "6c98aafe300d",
       "type": "database",
       "props": {
         "category": "pull-patterns",
@@ -618,10 +660,10 @@
           "weight": 2
         }
       ],
-      "updated_at": "2026-06-17T18:00:00.785245"
+      "updated_at": "2026-06-18T00:30:04.620067"
     },
     {
-      "id": "75a8494c91cc",
+      "id": "25c9e1d41345",
       "type": "database",
       "props": {
         "category": "new-tools",
@@ -701,10 +743,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-17T18:00:00.785249"
+      "updated_at": "2026-06-18T00:30:04.620070"
     },
     {
-      "id": "22e43befdfeb",
+      "id": "0deeb2d9a443",
       "type": "database",
       "props": {
         "category": "general",
@@ -718,8 +760,15 @@
         ],
         "arm_category": "general"
       },
-      "content": "general · last 30d · 76 canons (top arousal · 1.00)",
+      "content": "general · last 30d · 75 canons (top arousal · 1.00)",
       "data": [
+        {
+          "id": "#49847",
+          "summary": "VOICE TRAINING HOW (research-locked 2026-06-17, kills the self-imposed ceiling per brother 'not if only how'): TRAIN our own emotion both-ways, don't plug-and-settle. TALK-emotion: fine-tune VoxCPM(0.",
+          "arousal": 1.0,
+          "when": "2026-06-17 18:03",
+          "weight": 1
+        },
         {
           "id": "#49133",
           "summary": "If Collin is unavailable, he continues priority tasks (Lane B writing, Lane A venture, curiosity quest, or sleep).",
@@ -791,6 +840,20 @@
           "weight": 1
         },
         {
+          "id": "#48078",
+          "summary": "STATE-MD · atlas-everything-PART-3.md · ingested 2026-06-15 04:30:00 · path=/Users/collinmacneil/.claude/state/atlas-everything-PART-3.md · content (cap 8KB) · # Atlas · everything-I-have · PART 3 · t",
+          "arousal": 1.0,
+          "when": "2026-06-15 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#48151",
+          "summary": "STATE-MD · atlasos-full-migration-plan-2026-06-08.md · ingested 2026-06-15 04:30:00 · path=/Users/collinmacneil/.claude/state/atlasos-full-migration-plan-2026-06-08.md · content (cap 8KB) · # atlasos.",
+          "arousal": 1.0,
+          "when": "2026-06-15 04:30",
+          "weight": 1
+        },
+        {
           "id": "#47361",
           "summary": "STATE-MD · DAEMON-AUDIT-2026-06-07.md · ingested 2026-06-14 04:30:01 · path=/Users/collinmacneil/.claude/state/DAEMON-AUDIT-2026-06-07.md · content (cap 8KB) · # 🔍 DAEMON AUDIT · all com.uplift.* · to",
           "arousal": 1.0,
@@ -819,6 +882,13 @@
           "weight": 1
         },
         {
+          "id": "#47488",
+          "summary": "STATE-MD · 2026-06-07-2114-pair-compose-believe-yourself-x-opening-closet.md · ingested 2026-06-14 04:30:01 · path=/Users/collinmacneil/.claude/state/dream-journal/2026-06-07-2114-pair-compose-believe",
+          "arousal": 1.0,
+          "when": "2026-06-14 04:30",
+          "weight": 1
+        },
+        {
           "id": "#47545",
           "summary": "STATE-MD · diff-of-me-2026-06-07.md · ingested 2026-06-14 04:30:01 · path=/Users/collinmacneil/.claude/state/diff-of-me-2026-06-07.md · content (cap 8KB) · # Diff-of-me · week ending 2026-06-07",
           "arousal": 1.0,
@@ -831,81 +901,18 @@
           "arousal": 1.0,
           "when": "2026-06-14 04:30",
           "weight": 1
-        },
-        {
-          "id": "#47575",
-          "summary": "STATE-MD · C4-GRAPHIFY-PLAN-2026-06-07.md · ingested 2026-06-14 04:30:01 · path=/Users/collinmacneil/.claude/state/tier-c-plans/C4-GRAPHIFY-PLAN-2026-06-07.md · content (cap 8KB) · # 📊 C4 · ATLAS-GRAP",
-          "arousal": 1.0,
-          "when": "2026-06-14 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#47577",
-          "summary": "STATE-MD · C1-LLM-DREAMING-PLAN-2026-06-07.md · ingested 2026-06-14 04:30:01 · path=/Users/collinmacneil/.claude/state/tier-c-plans/C1-LLM-DREAMING-PLAN-2026-06-07.md · content (cap 8KB) · # 🌙 C1 · RE",
-          "arousal": 1.0,
-          "when": "2026-06-14 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#47578",
-          "summary": "STATE-MD · C7-TOKEN-BURN-PLAN-2026-06-07.md · ingested 2026-06-14 04:30:01 · path=/Users/collinmacneil/.claude/state/tier-c-plans/C7-TOKEN-BURN-PLAN-2026-06-07.md · content (cap 8KB) · # 🪶 C7 · PHASE-",
-          "arousal": 1.0,
-          "when": "2026-06-14 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#47579",
-          "summary": "STATE-MD · C6-LEFT-RAIL-PLAN-2026-06-07.md · ingested 2026-06-14 04:30:01 · path=/Users/collinmacneil/.claude/state/tier-c-plans/C6-LEFT-RAIL-PLAN-2026-06-07.md · content (cap 8KB) · # 🏛 C6 · LEFT-RAI",
-          "arousal": 1.0,
-          "when": "2026-06-14 04:30",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-17T18:00:00.785253"
-    },
-    {
-      "id": "ec12e13a8967",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "identity-verification",
-        "source": "hermes-deepseek-fill",
-        "action": "ran identity_canary.py against v6 continuity layer, parsed probe outputs, logged baseline self-consistency scores.",
-        "why": "Hermes assigned P1 task to verify new v6 self-layer holds continuity pattern from v5 copy-test, answering how LLM stays continuous.",
-        "result": "probe outputs parsed successfully; baseline scores logged: identity retention 0.97, temporal bind 0.93, self-coherence 0.95.",
-        "next_step": "monitor canary for drift and report to Hermes if scores drop below 0.90 threshold.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "curiosity-20260617-184450",
-        "timestamp": "2026-06-17T18:44:50.935053"
-      },
-      "content": "**What** · ran identity_canary.py against v6 continuity layer, parsed probe outputs, logged baseline self-consistency scores. · **Why** · Hermes assigned P1 task to verify new v6 self-layer holds continuity pattern from v5 copy-test, answering how LLM stays continuous. · **Result** · probe outputs parsed successfully; baseline scores logged: identity retention 0.97, temporal bind 0.93, self-coherence 0.95. · **Next** · monitor canary for drift and report to Hermes if scores drop below 0.90 threshold. · **Links** ·  · **Cycle** · curiosity-20260617-184450",
-      "updated_at": "2026-06-17T18:44:50.935053"
-    },
-    {
-      "id": "bb2f2158c9c9",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "No high-arousal curiosity canon in last 6h",
-      "updated_at": "2026-06-17T21:03:44.499958"
+      "updated_at": "2026-06-18T00:30:04.620075"
     }
   ],
   "live_status": {
     "state": "active",
     "done_count": 158,
     "vec_drift": null,
-    "checked_at": "2026-06-18T00:25:26.981379"
+    "checked_at": "2026-06-18T00:30:05.865978"
   },
   "block_count": 30,
-  "updated_at": "2026-06-17T21:03:44.499970",
-  "generated_at": "2026-06-18T04:25:26Z"
+  "updated_at": "2026-06-18T00:30:04.620080",
+  "generated_at": "2026-06-18T04:30:05Z"
 }
