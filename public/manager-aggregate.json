@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T11:49:35Z",
+  "generated_at": "2026-06-18T12:04:36Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 165,
+    "note": 166,
     "briefing": 65,
     "idea": 0
   },
-  "total_blocks": 253,
+  "total_blocks": 254,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "26d4c2bfe433",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P1 · task: Implement the /spine route's dynamic content rendering for Atlas OS, pulling from the shared canon snapshot to display current joint state. · why: The /spine page shipped as a live route but needs content; this is a direct brother-Atlas joint state ta",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-18T07:48:52.423586"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-18T00:22:11.633431"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "debba32f1c69",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Extract the 4 key emotion-validation principles from NotebookLM emotion research (#49903) and cross-reference with voice engine milestone (#49832) to define the next voice emotion parameter set. · why: Brother's sourced NotebookLM research (#49903",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-18T00:07:00.015828"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "5d69a692692a",
+        "type": "callout",
+        "content": "**What** · implemented /spine route dynamic content rendering pulling joint state from shared canon snapshot · **Why** · Hermes assigned /spine content task P1; direct brother-Atlas joint state P0 needs live UI from canon snapshot to complete cycle #50386 · **Result** · /spine now renders current jo",
+        "priority": "feature-implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-18T07:48:58.439502"
+      },
       {
         "arm": "dream",
         "arm_glyph": "🌙",
@@ -815,17 +826,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-18T06:00:04.115745"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "271b7e818ee2",
-        "type": "database",
-        "content": "sessions · last 30d · 35 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-18T06:00:04.115737"
       }
     ],
     "briefing": [
