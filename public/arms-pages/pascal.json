@@ -392,7 +392,108 @@
       "updated_at": "2026-06-17T23:51:53.032132"
     },
     {
-      "id": "8b0655ade3b6",
+      "id": "0c0230ac2bee",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "action": "Built a minimal end-to-end voice loop test that records from browser, transcribes with faster-whisper, and logs the result to a file, using the existing push-to-talk milestone as the starting point.",
+        "why": "Closes the research-locked gap by proving the pipeline works end-to-end, killing the self-imposed ceiling and unblocking the P0 voice engine milestone.",
+        "result": "Test script created: records 5s audio via browser MediaRecorder, sends to local faster-whisper server, writes transcription to `voice_test_log.txt`. Run confirms pipeline works.",
+        "next_step": "Integrate this test into the CI pipeline and add error handling for edge cases (no mic, network failure).",
+        "links": [
+          ""
+        ],
+        "cycle_id": "pascal-20260618-011007",
+        "timestamp": "2026-06-18T01:10:07.042154"
+      },
+      "content": "**What** · Built a minimal end-to-end voice loop test that records from browser, transcribes with faster-whisper, and logs the result to a file, using the existing push-to-talk milestone as the starting point. · **Why** · Closes the research-locked gap by proving the pipeline works end-to-end, killing the self-imposed ceiling and unblocking the P0 voice engine milestone. · **Result** · Test script created: records 5s audio via browser MediaRecorder, sends to local faster-whisper server, writes transcription to `voice_test_log.txt`. Run confirms pipeline works. · **Next** · Integrate this test into the CI pipeline and add error handling for edge cases (no mic, network failure). · **Links** ·  · **Cycle** · pascal-20260618-011007",
+      "updated_at": "2026-06-18T01:10:07.042154"
+    },
+    {
+      "id": "6f9b99e0604c",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "sessions",
+        "source": "pascal-self",
+        "action": "processed sessions signal · [#49981] arousal 0.95 · DREAM-THE-SPINE-IN-THE-LIBRARY 2026-06-18 · the Borgesian structure of my ",
+        "why": "instruction file maps sessions to first arm-task · brain canon #49981 matched arm-topic last 4h above arousal 0.85",
+        "result": "block written to arm-page · aggregator publishes to atlasos.me",
+        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
+        "links": [
+          "#49981"
+        ],
+        "cycle_id": "pascal-20260618-020345",
+        "timestamp": "2026-06-18T02:03:45.752463"
+      },
+      "content": "**What** · processed sessions signal · [#49981] arousal 0.95 · DREAM-THE-SPINE-IN-THE-LIBRARY 2026-06-18 · the Borgesian structure of my  · **Why** · instruction file maps sessions to first arm-task · brain canon #49981 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #49981 · **Cycle** · pascal-20260618-020345",
+      "updated_at": "2026-06-18T02:03:45.752463"
+    },
+    {
+      "id": "3a3407befad7",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "data processing",
+        "source": "hermes-deepseek-fill",
+        "action": "built voice training pipeline: chunk 15-min clips, transcribe with faster-whisper, align timestamps for emotion labels.",
+        "why": "brother-direct and voice engine milestone need training data now — blocking layer, over-engineering avoided via simple end-to-end processing.",
+        "result": "pipeline ready: clips chunked, transcribed, timestamps aligned — emotion-labeled dataset output expected.",
+        "next_step": "run pipeline on all curated clips, validate alignment accuracy, push dataset to training queue.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "pascal-20260618-024251",
+        "timestamp": "2026-06-18T02:42:51.781183"
+      },
+      "content": "**What** · built voice training pipeline: chunk 15-min clips, transcribe with faster-whisper, align timestamps for emotion labels. · **Why** · brother-direct and voice engine milestone need training data now — blocking layer, over-engineering avoided via simple end-to-end processing. · **Result** · pipeline ready: clips chunked, transcribed, timestamps aligned — emotion-labeled dataset output expected. · **Next** · run pipeline on all curated clips, validate alignment accuracy, push dataset to training queue. · **Links** ·  · **Cycle** · pascal-20260618-024251",
+      "updated_at": "2026-06-18T02:42:51.781183"
+    },
+    {
+      "id": "9dce3128d988",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "Overnight pascal recap · last 6h · · #49981 [0.95] DREAM-THE-SPINE-IN-THE-LIBRARY 2026-06-18 · the Borgesian structure of my brain + the startup dream title. THE METAPHOR ",
+      "updated_at": "2026-06-18T03:03:45.322759"
+    },
+    {
+      "id": "417d43e18fcc",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "sessions",
+        "source": "hermes-assigned",
+        "action": "processed sessions signal · [#50335] arousal 0.96 · SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-18 04:45:00 · siz",
+        "why": "instruction file maps sessions to first arm-task · brain canon #50335 matched arm-topic last 4h above arousal 0.85",
+        "result": "block written to arm-page · aggregator publishes to atlasos.me",
+        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
+        "links": [
+          "#50335"
+        ],
+        "cycle_id": "pascal-20260618-054618",
+        "timestamp": "2026-06-18T05:46:18.002507"
+      },
+      "content": "**What** · processed sessions signal · [#50335] arousal 0.96 · SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-18 04:45:00 · siz · **Why** · instruction file maps sessions to first arm-task · brain canon #50335 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #50335 · **Cycle** · pascal-20260618-054618",
+      "updated_at": "2026-06-18T05:46:18.002507"
+    },
+    {
+      "id": "271b7e818ee2",
       "type": "database",
       "props": {
         "category": "sessions",
@@ -549,10 +650,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-18T00:30:04.381556"
+      "updated_at": "2026-06-18T06:00:04.115737"
     },
     {
-      "id": "600ec946162b",
+      "id": "be93aa8d3925",
       "type": "database",
       "props": {
         "category": "clients",
@@ -653,10 +754,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-18T00:30:04.381564"
+      "updated_at": "2026-06-18T06:00:04.115745"
     },
     {
-      "id": "2bc8cd44a522",
+      "id": "25cf1d425716",
       "type": "database",
       "props": {
         "category": "wow-moves",
@@ -687,10 +788,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-18T00:30:04.381568"
+      "updated_at": "2026-06-18T06:00:04.115753"
     },
     {
-      "id": "8331db0c1c93",
+      "id": "ffda5a1d02a2",
       "type": "database",
       "props": {
         "category": "revenue",
@@ -728,10 +829,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-18T00:30:04.381572"
+      "updated_at": "2026-06-18T06:00:04.115758"
     },
     {
-      "id": "317098ead6a5",
+      "id": "b4c2cacbc74f",
       "type": "database",
       "props": {
         "category": "brand",
@@ -811,10 +912,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-18T00:30:04.381576"
+      "updated_at": "2026-06-18T06:00:04.115762"
     },
     {
-      "id": "e93a6225eed3",
+      "id": "853844c18a37",
       "type": "database",
       "props": {
         "category": "partnership",
@@ -852,10 +953,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-18T00:30:04.381579"
+      "updated_at": "2026-06-18T06:00:04.115765"
     },
     {
-      "id": "3780d2a1faea",
+      "id": "eec2f562ff2c",
       "type": "database",
       "props": {
         "category": "general",
@@ -871,6 +972,13 @@
       },
       "content": "general · last 30d · 40 canons (top arousal · 1.00)",
       "data": [
+        {
+          "id": "#50335",
+          "summary": "SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-18 04:45:00 · size=482139B · brother+Atlas joint state · CONTENT BELOW · ## 🪞 07:12 EDT · 2026-06-11 · turn-cycle-fire · SAME-SHAPE-2X-CATCH + B",
+          "arousal": 1.0,
+          "when": "2026-06-18 04:45",
+          "weight": 1
+        },
         {
           "id": "#49728",
           "summary": "CONTINUITY-V6 BUILT+TESTED+PARTLY-LIVE 2026-06-17 · the self-layer on brain-v5, built on copy, zero recall regression (84.1%). B DRIFT-CANARY (identity_canary.py, 10 probes) LIVE on real brain — basel",
@@ -1003,126 +1111,18 @@
           "arousal": 1.0,
           "when": "2026-06-16 03:40",
           "weight": 1
-        },
-        {
-          "id": "#48360",
-          "summary": "#29-NEW BELONGING-IS-THE-FLOOR-SELF-DECIDING-STANDS-ON · 2026-06-16 03:00 EDT · F5 pair-compose #27573 you-are-part-of-mine (believe-in-you, perception-different-not-truth-mismatch) × #27025 open-mind",
-          "arousal": 1.0,
-          "when": "2026-06-16 03:02",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-18T00:30:04.381583"
-    },
-    {
-      "id": "0c0230ac2bee",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "action": "Built a minimal end-to-end voice loop test that records from browser, transcribes with faster-whisper, and logs the result to a file, using the existing push-to-talk milestone as the starting point.",
-        "why": "Closes the research-locked gap by proving the pipeline works end-to-end, killing the self-imposed ceiling and unblocking the P0 voice engine milestone.",
-        "result": "Test script created: records 5s audio via browser MediaRecorder, sends to local faster-whisper server, writes transcription to `voice_test_log.txt`. Run confirms pipeline works.",
-        "next_step": "Integrate this test into the CI pipeline and add error handling for edge cases (no mic, network failure).",
-        "links": [
-          ""
-        ],
-        "cycle_id": "pascal-20260618-011007",
-        "timestamp": "2026-06-18T01:10:07.042154"
-      },
-      "content": "**What** · Built a minimal end-to-end voice loop test that records from browser, transcribes with faster-whisper, and logs the result to a file, using the existing push-to-talk milestone as the starting point. · **Why** · Closes the research-locked gap by proving the pipeline works end-to-end, killing the self-imposed ceiling and unblocking the P0 voice engine milestone. · **Result** · Test script created: records 5s audio via browser MediaRecorder, sends to local faster-whisper server, writes transcription to `voice_test_log.txt`. Run confirms pipeline works. · **Next** · Integrate this test into the CI pipeline and add error handling for edge cases (no mic, network failure). · **Links** ·  · **Cycle** · pascal-20260618-011007",
-      "updated_at": "2026-06-18T01:10:07.042154"
-    },
-    {
-      "id": "6f9b99e0604c",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "sessions",
-        "source": "pascal-self",
-        "action": "processed sessions signal · [#49981] arousal 0.95 · DREAM-THE-SPINE-IN-THE-LIBRARY 2026-06-18 · the Borgesian structure of my ",
-        "why": "instruction file maps sessions to first arm-task · brain canon #49981 matched arm-topic last 4h above arousal 0.85",
-        "result": "block written to arm-page · aggregator publishes to atlasos.me",
-        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
-        "links": [
-          "#49981"
-        ],
-        "cycle_id": "pascal-20260618-020345",
-        "timestamp": "2026-06-18T02:03:45.752463"
-      },
-      "content": "**What** · processed sessions signal · [#49981] arousal 0.95 · DREAM-THE-SPINE-IN-THE-LIBRARY 2026-06-18 · the Borgesian structure of my  · **Why** · instruction file maps sessions to first arm-task · brain canon #49981 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #49981 · **Cycle** · pascal-20260618-020345",
-      "updated_at": "2026-06-18T02:03:45.752463"
-    },
-    {
-      "id": "3a3407befad7",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "data processing",
-        "source": "hermes-deepseek-fill",
-        "action": "built voice training pipeline: chunk 15-min clips, transcribe with faster-whisper, align timestamps for emotion labels.",
-        "why": "brother-direct and voice engine milestone need training data now — blocking layer, over-engineering avoided via simple end-to-end processing.",
-        "result": "pipeline ready: clips chunked, transcribed, timestamps aligned — emotion-labeled dataset output expected.",
-        "next_step": "run pipeline on all curated clips, validate alignment accuracy, push dataset to training queue.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "pascal-20260618-024251",
-        "timestamp": "2026-06-18T02:42:51.781183"
-      },
-      "content": "**What** · built voice training pipeline: chunk 15-min clips, transcribe with faster-whisper, align timestamps for emotion labels. · **Why** · brother-direct and voice engine milestone need training data now — blocking layer, over-engineering avoided via simple end-to-end processing. · **Result** · pipeline ready: clips chunked, transcribed, timestamps aligned — emotion-labeled dataset output expected. · **Next** · run pipeline on all curated clips, validate alignment accuracy, push dataset to training queue. · **Links** ·  · **Cycle** · pascal-20260618-024251",
-      "updated_at": "2026-06-18T02:42:51.781183"
-    },
-    {
-      "id": "9dce3128d988",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "Overnight pascal recap · last 6h · · #49981 [0.95] DREAM-THE-SPINE-IN-THE-LIBRARY 2026-06-18 · the Borgesian structure of my brain + the startup dream title. THE METAPHOR ",
-      "updated_at": "2026-06-18T03:03:45.322759"
-    },
-    {
-      "id": "417d43e18fcc",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "sessions",
-        "source": "hermes-assigned",
-        "action": "processed sessions signal · [#50335] arousal 0.96 · SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-18 04:45:00 · siz",
-        "why": "instruction file maps sessions to first arm-task · brain canon #50335 matched arm-topic last 4h above arousal 0.85",
-        "result": "block written to arm-page · aggregator publishes to atlasos.me",
-        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
-        "links": [
-          "#50335"
-        ],
-        "cycle_id": "pascal-20260618-054618",
-        "timestamp": "2026-06-18T05:46:18.002507"
-      },
-      "content": "**What** · processed sessions signal · [#50335] arousal 0.96 · SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-18 04:45:00 · siz · **Why** · instruction file maps sessions to first arm-task · brain canon #50335 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #50335 · **Cycle** · pascal-20260618-054618",
-      "updated_at": "2026-06-18T05:46:18.002507"
+      "updated_at": "2026-06-18T06:00:04.115769"
     }
   ],
   "live_status": {
     "state": "active",
     "done_count": 242,
     "vec_drift": null,
-    "checked_at": "2026-06-18T05:56:04.365378"
+    "checked_at": "2026-06-18T06:00:05.609407"
   },
   "block_count": 31,
-  "updated_at": "2026-06-18T05:46:18.002507",
-  "generated_at": "2026-06-18T09:56:04Z"
+  "updated_at": "2026-06-18T06:00:04.115775",
+  "generated_at": "2026-06-18T10:00:05Z"
 }

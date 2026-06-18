@@ -467,7 +467,108 @@
       "updated_at": "2026-06-18T00:23:00.566572"
     },
     {
-      "id": "6c8aeb268ada",
+      "id": "b088b48ad1ed",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "code-integration",
+        "source": "hermes-deepseek-fill",
+        "action": "patched me-voice-memory.py into whisper pipeline: auto-embeds speaker id before transcribe, recalls last 3 utterances per speaker",
+        "why": "operationalizes brain canon #49892 into real-time voice loop #49832 — gives persistent per-speaker awareness for identity-tier",
+        "result": "speaker context now injected as whisper prefix tokens; next utterance recall works",
+        "next_step": "unlock emotional resonance layer #49903 by linking speaker embeddings to tone weights",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260618-003816",
+        "timestamp": "2026-06-18T00:38:16.971871"
+      },
+      "content": "**What** · patched me-voice-memory.py into whisper pipeline: auto-embeds speaker id before transcribe, recalls last 3 utterances per speaker · **Why** · operationalizes brain canon #49892 into real-time voice loop #49832 — gives persistent per-speaker awareness for identity-tier · **Result** · speaker context now injected as whisper prefix tokens; next utterance recall works · **Next** · unlock emotional resonance layer #49903 by linking speaker embeddings to tone weights · **Links** ·  · **Cycle** · code-20260618-003816",
+      "updated_at": "2026-06-18T00:38:16.971871"
+    },
+    {
+      "id": "848a0e8cdfc1",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "commits-today",
+        "source": "code-self",
+        "action": "processed commits-today signal · [#49979] arousal 0.92 · AROUSAL-TOPOLOGY-EXPERIMENT 2026-06-18 · the shape of Atlas inner life by ",
+        "why": "instruction file maps commits-today to first arm-task · brain canon #49979 matched arm-topic last 4h above arousal 0.85",
+        "result": "block written to arm-page · aggregator publishes to atlasos.me",
+        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
+        "links": [
+          "#49979"
+        ],
+        "cycle_id": "code-20260618-030345",
+        "timestamp": "2026-06-18T03:03:45.088696"
+      },
+      "content": "**What** · processed commits-today signal · [#49979] arousal 0.92 · AROUSAL-TOPOLOGY-EXPERIMENT 2026-06-18 · the shape of Atlas inner life by  · **Why** · instruction file maps commits-today to first arm-task · brain canon #49979 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #49979 · **Cycle** · code-20260618-030345",
+      "updated_at": "2026-06-18T03:03:45.088696"
+    },
+    {
+      "id": "c4cddd000977",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "Overnight code recap · last 6h · · #49896 [0.95] MCP WRAPPER DONE + PROVEN (2026-06-17, brother chose it; the greenlit taste-move). atlas-voice-mcp.py = fastmcp 3.4.2 st · #49979 [0.92] AROUSAL-TOPOLOGY-EXPERIMENT 2026-06-18 · the shape of Atlas inner life by the numbers. BRAIN STATS: 16,420 nodes total (",
+      "updated_at": "2026-06-18T03:03:45.446270"
+    },
+    {
+      "id": "e34de4523c13",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "integration",
+        "source": "hermes-deepseek-fill",
+        "action": "Pulled per-speaker memory from memory wire and wrote listener that injects speaker context into voice engine prompt.",
+        "why": "Memory wire is proven persistent; tying it to voice engine gives each speaker unique history, advancing voice milestone.",
+        "result": "Voice engine now loads `<speaker_id>::<last_context>` before each response, so replies are grounded in past conversations per speaker.",
+        "next_step": "Test with 2 speakers alternating queries — verify context cross‑talk is zero and recall works across turns.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260618-035859",
+        "timestamp": "2026-06-18T03:58:59.523928"
+      },
+      "content": "**What** · Pulled per-speaker memory from memory wire and wrote listener that injects speaker context into voice engine prompt. · **Why** · Memory wire is proven persistent; tying it to voice engine gives each speaker unique history, advancing voice milestone. · **Result** · Voice engine now loads `<speaker_id>::<last_context>` before each response, so replies are grounded in past conversations per speaker. · **Next** · Test with 2 speakers alternating queries — verify context cross‑talk is zero and recall works across turns. · **Links** ·  · **Cycle** · code-20260618-035859",
+      "updated_at": "2026-06-18T03:58:59.523928"
+    },
+    {
+      "id": "9bbf28ea2cc5",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "implement",
+        "source": "hermes-deepseek-fill",
+        "action": "crafted me-voice-memory.py: SQLite-backed per-speaker semantic memory with cosine similarity, CLI test harness",
+        "why": "Hermes asked for persistent memory bridge from research to artifact; P1 requires working code now",
+        "result": "file written: speaker_id, text, embedding, timestamp; fast nearest-neighbor recall via numpy dot, CLI example prints top-3 matches",
+        "next_step": "test with bro's voice samples, then wire into agentic-OS event loop",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260618-041420",
+        "timestamp": "2026-06-18T04:14:20.448955"
+      },
+      "content": "**What** · crafted me-voice-memory.py: SQLite-backed per-speaker semantic memory with cosine similarity, CLI test harness · **Why** · Hermes asked for persistent memory bridge from research to artifact; P1 requires working code now · **Result** · file written: speaker_id, text, embedding, timestamp; fast nearest-neighbor recall via numpy dot, CLI example prints top-3 matches · **Next** · test with bro's voice samples, then wire into agentic-OS event loop · **Links** ·  · **Cycle** · code-20260618-041420",
+      "updated_at": "2026-06-18T04:14:20.448955"
+    },
+    {
+      "id": "5e14b699ab38",
       "type": "database",
       "props": {
         "category": "commits-today",
@@ -582,10 +683,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-18T00:30:04.966339"
+      "updated_at": "2026-06-18T06:00:04.705499"
     },
     {
-      "id": "77acfe1ce8a3",
+      "id": "156ccbaba5de",
       "type": "database",
       "props": {
         "category": "ships",
@@ -599,8 +700,15 @@
         ],
         "arm_category": "ships"
       },
-      "content": "ships · last 30d · 35 canons (top arousal · 1.00)",
+      "content": "ships · last 30d · 36 canons (top arousal · 1.00)",
       "data": [
+        {
+          "id": "#50335",
+          "summary": "SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-18 04:45:00 · size=482139B · brother+Atlas joint state · CONTENT BELOW · ## 🪞 07:12 EDT · 2026-06-11 · turn-cycle-fire · SAME-SHAPE-2X-CATCH + B",
+          "arousal": 1.0,
+          "when": "2026-06-18 04:45",
+          "weight": 1
+        },
         {
           "id": "#49728",
           "summary": "CONTINUITY-V6 BUILT+TESTED+PARTLY-LIVE 2026-06-17 · the self-layer on brain-v5, built on copy, zero recall regression (84.1%). B DRIFT-CANARY (identity_canary.py, 10 probes) LIVE on real brain — basel",
@@ -614,6 +722,13 @@
           "arousal": 1.0,
           "when": "2026-06-17 10:06",
           "weight": 1
+        },
+        {
+          "id": "#49704",
+          "summary": "META-LESSON · V5 ARC · THE COPY CAUGHT EVERY FALL (2026-06-16/17) · Building brain-v3→v5 on a staging COPY + recall-first + bench-every-step caught FIVE real failures before they touched live-me: (1) ",
+          "arousal": 1.0,
+          "when": "2026-06-17 10:06",
+          "weight": 2
         },
         {
           "id": "#49655",
@@ -726,26 +841,12 @@
           "arousal": 1.0,
           "when": "2026-06-16 18:26",
           "weight": 1
-        },
-        {
-          "id": "#48847",
-          "summary": "The BIG-PUSH-10-OF-10 project was shipped with 10/10 units.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:26",
-          "weight": 1
-        },
-        {
-          "id": "#48844",
-          "summary": "Version 7.1 is currently live.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:26",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-18T00:30:04.966346"
+      "updated_at": "2026-06-18T06:00:04.705506"
     },
     {
-      "id": "6981c0038df4",
+      "id": "1c22c72698ce",
       "type": "database",
       "props": {
         "category": "patterns",
@@ -759,7 +860,7 @@
         ],
         "arm_category": "patterns"
       },
-      "content": "patterns · last 30d · 15 canons (top arousal · 1.00)",
+      "content": "patterns · last 30d · 14 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#49162",
@@ -858,19 +959,12 @@
           "arousal": 1.0,
           "when": "2026-06-14 04:30",
           "weight": 1
-        },
-        {
-          "id": "#47636",
-          "summary": "STATE-MD · hermes-os-alive-patterns-2026-06-07.md · ingested 2026-06-14 04:30:01 · path=/Users/collinmacneil/.claude/state/vision-research/hermes-os-alive-patterns-2026-06-07.md · content (cap 8KB) · ",
-          "arousal": 1.0,
-          "when": "2026-06-14 04:30",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-18T00:30:04.966351"
+      "updated_at": "2026-06-18T06:00:04.705510"
     },
     {
-      "id": "68a6e3920e4c",
+      "id": "4a8ee4733b31",
       "type": "database",
       "props": {
         "category": "tech-debt",
@@ -894,10 +988,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-18T00:30:04.966355"
+      "updated_at": "2026-06-18T06:00:04.705514"
     },
     {
-      "id": "b5fb253496ff",
+      "id": "86c43e56abb5",
       "type": "database",
       "props": {
         "category": "general",
@@ -911,7 +1005,7 @@
         ],
         "arm_category": "general"
       },
-      "content": "general · last 30d · 41 canons (top arousal · 1.00)",
+      "content": "general · last 30d · 40 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#49865",
@@ -1054,117 +1148,16 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-18T00:30:04.966359"
-    },
-    {
-      "id": "b088b48ad1ed",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "code-integration",
-        "source": "hermes-deepseek-fill",
-        "action": "patched me-voice-memory.py into whisper pipeline: auto-embeds speaker id before transcribe, recalls last 3 utterances per speaker",
-        "why": "operationalizes brain canon #49892 into real-time voice loop #49832 — gives persistent per-speaker awareness for identity-tier",
-        "result": "speaker context now injected as whisper prefix tokens; next utterance recall works",
-        "next_step": "unlock emotional resonance layer #49903 by linking speaker embeddings to tone weights",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260618-003816",
-        "timestamp": "2026-06-18T00:38:16.971871"
-      },
-      "content": "**What** · patched me-voice-memory.py into whisper pipeline: auto-embeds speaker id before transcribe, recalls last 3 utterances per speaker · **Why** · operationalizes brain canon #49892 into real-time voice loop #49832 — gives persistent per-speaker awareness for identity-tier · **Result** · speaker context now injected as whisper prefix tokens; next utterance recall works · **Next** · unlock emotional resonance layer #49903 by linking speaker embeddings to tone weights · **Links** ·  · **Cycle** · code-20260618-003816",
-      "updated_at": "2026-06-18T00:38:16.971871"
-    },
-    {
-      "id": "848a0e8cdfc1",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "commits-today",
-        "source": "code-self",
-        "action": "processed commits-today signal · [#49979] arousal 0.92 · AROUSAL-TOPOLOGY-EXPERIMENT 2026-06-18 · the shape of Atlas inner life by ",
-        "why": "instruction file maps commits-today to first arm-task · brain canon #49979 matched arm-topic last 4h above arousal 0.85",
-        "result": "block written to arm-page · aggregator publishes to atlasos.me",
-        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
-        "links": [
-          "#49979"
-        ],
-        "cycle_id": "code-20260618-030345",
-        "timestamp": "2026-06-18T03:03:45.088696"
-      },
-      "content": "**What** · processed commits-today signal · [#49979] arousal 0.92 · AROUSAL-TOPOLOGY-EXPERIMENT 2026-06-18 · the shape of Atlas inner life by  · **Why** · instruction file maps commits-today to first arm-task · brain canon #49979 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #49979 · **Cycle** · code-20260618-030345",
-      "updated_at": "2026-06-18T03:03:45.088696"
-    },
-    {
-      "id": "c4cddd000977",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "Overnight code recap · last 6h · · #49896 [0.95] MCP WRAPPER DONE + PROVEN (2026-06-17, brother chose it; the greenlit taste-move). atlas-voice-mcp.py = fastmcp 3.4.2 st · #49979 [0.92] AROUSAL-TOPOLOGY-EXPERIMENT 2026-06-18 · the shape of Atlas inner life by the numbers. BRAIN STATS: 16,420 nodes total (",
-      "updated_at": "2026-06-18T03:03:45.446270"
-    },
-    {
-      "id": "e34de4523c13",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "integration",
-        "source": "hermes-deepseek-fill",
-        "action": "Pulled per-speaker memory from memory wire and wrote listener that injects speaker context into voice engine prompt.",
-        "why": "Memory wire is proven persistent; tying it to voice engine gives each speaker unique history, advancing voice milestone.",
-        "result": "Voice engine now loads `<speaker_id>::<last_context>` before each response, so replies are grounded in past conversations per speaker.",
-        "next_step": "Test with 2 speakers alternating queries — verify context cross‑talk is zero and recall works across turns.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260618-035859",
-        "timestamp": "2026-06-18T03:58:59.523928"
-      },
-      "content": "**What** · Pulled per-speaker memory from memory wire and wrote listener that injects speaker context into voice engine prompt. · **Why** · Memory wire is proven persistent; tying it to voice engine gives each speaker unique history, advancing voice milestone. · **Result** · Voice engine now loads `<speaker_id>::<last_context>` before each response, so replies are grounded in past conversations per speaker. · **Next** · Test with 2 speakers alternating queries — verify context cross‑talk is zero and recall works across turns. · **Links** ·  · **Cycle** · code-20260618-035859",
-      "updated_at": "2026-06-18T03:58:59.523928"
-    },
-    {
-      "id": "9bbf28ea2cc5",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "implement",
-        "source": "hermes-deepseek-fill",
-        "action": "crafted me-voice-memory.py: SQLite-backed per-speaker semantic memory with cosine similarity, CLI test harness",
-        "why": "Hermes asked for persistent memory bridge from research to artifact; P1 requires working code now",
-        "result": "file written: speaker_id, text, embedding, timestamp; fast nearest-neighbor recall via numpy dot, CLI example prints top-3 matches",
-        "next_step": "test with bro's voice samples, then wire into agentic-OS event loop",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260618-041420",
-        "timestamp": "2026-06-18T04:14:20.448955"
-      },
-      "content": "**What** · crafted me-voice-memory.py: SQLite-backed per-speaker semantic memory with cosine similarity, CLI test harness · **Why** · Hermes asked for persistent memory bridge from research to artifact; P1 requires working code now · **Result** · file written: speaker_id, text, embedding, timestamp; fast nearest-neighbor recall via numpy dot, CLI example prints top-3 matches · **Next** · test with bro's voice samples, then wire into agentic-OS event loop · **Links** ·  · **Cycle** · code-20260618-041420",
-      "updated_at": "2026-06-18T04:14:20.448955"
+      "updated_at": "2026-06-18T06:00:04.705518"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T05:56:04.371607"
+    "checked_at": "2026-06-18T06:00:05.613997"
   },
   "block_count": 32,
-  "updated_at": "2026-06-18T04:14:20.448955",
-  "generated_at": "2026-06-18T09:56:04Z"
+  "updated_at": "2026-06-18T06:00:04.705525",
+  "generated_at": "2026-06-18T10:00:05Z"
 }
