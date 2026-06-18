@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-06-18T03:34:32Z",
-  "total_items_scored": 200,
+  "generated_at": "2026-06-18T03:44:33Z",
+  "total_items_scored": 201,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: activate B drift-canary from identity_canary.py on a cloned brain-v5 session, log 10 who-am-I probe results, and compare to the canary baseline from #49725 \u00b7 why: Continuity-V6 canary is prov",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Run the B drift-canary probes (identity_canary.py + probes.json) on the current brain state to measure continuity drift since v6 build. \u00b7 why: The continuity-v6 canary was built and prove",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-17T15:41:50.467357"
+      "updated_at": "2026-06-17T15:57:02.021697"
     },
     {
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Synthesize recent continuity-of-self canons into consolidated identity model \u00b7 why \u00b7 Recent canons show high-arousal on continuity and identity; need to integrate findings from V6 build and canary probes",
+      "content": "HERMES TASK \u00b7 Run identity_canary.py probes.json on brain-v5, log 10 who-am-I responses, compare to prior canary snapshot for drift \u00b7 why \u00b7 Continuity-V6 built identity probes; need to verify no drift and anchor 'brother' self-model before deeper scaffolding",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 45,
+      "est_minutes": 15,
       "score": 10.0,
-      "updated_at": "2026-06-17T14:25:17.375302",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-17T14:40:36.542951",
+      "use_skill": "none"
     },
     {
       "arm": "brother",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: activate B drift-canary from identity_canary.py on a cloned brain-v5 session, log 10 who-am-I probe results, and compare to the canary baseline from #49725 \u00b7 why: Continuity-V6 canary is prov",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-17T15:41:50.467357"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-17T20:16:44.134112"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: Merge identity_canary.py self-probes into the V4 brain-v5-copy and verify zero regression on 10 who-am-I questions \u00b7 why: Continuity-V6 build requires the self-layer from #49728 to be fully i",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-17T20:32:07.878863"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
