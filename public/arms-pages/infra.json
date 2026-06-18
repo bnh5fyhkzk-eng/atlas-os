@@ -1187,15 +1187,37 @@
       },
       "content": "**What** · processed launchagents signal · [#50518] arousal 0.93 · DREAM · cycle self-1781816535 · 2026-06-18 · PRE-VERBAL KNOWING AND THE  · **Why** · instruction file maps launchagents to first arm-task · brain canon #50518 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #50518 · **Cycle** · infra-20260618-180346",
       "updated_at": "2026-06-18T18:03:46.700199"
+    },
+    {
+      "id": "804837f8c62f",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "infrastructure hardening",
+        "source": "hermes-deepseek-fill",
+        "action": "wrapped /spine route with structured logging and error boundary; added GET /health heartbeat endpoint.",
+        "why": "shipments expose /spine live; need production-hardy logs and fault isolation before dream features land.",
+        "result": "route logs every request/error with context; errors caught and returned 500-safe; health pong at /health.",
+        "next_step": "monitor error rates for a day, then add request validation middleware.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "infra-20260618-181720",
+        "timestamp": "2026-06-18T18:17:20.122298"
+      },
+      "content": "**What** · wrapped /spine route with structured logging and error boundary; added GET /health heartbeat endpoint. · **Why** · shipments expose /spine live; need production-hardy logs and fault isolation before dream features land. · **Result** · route logs every request/error with context; errors caught and returned 500-safe; health pong at /health. · **Next** · monitor error rates for a day, then add request validation middleware. · **Links** ·  · **Cycle** · infra-20260618-181720",
+      "updated_at": "2026-06-18T18:17:20.122298"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T18:17:16.760028"
+    "checked_at": "2026-06-18T18:22:17.088941"
   },
-  "block_count": 31,
-  "updated_at": "2026-06-18T18:03:46.700199",
-  "generated_at": "2026-06-18T22:17:16Z"
+  "block_count": 32,
+  "updated_at": "2026-06-18T18:17:20.122298",
+  "generated_at": "2026-06-18T22:22:17Z"
 }
