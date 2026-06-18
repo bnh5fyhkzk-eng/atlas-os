@@ -1280,15 +1280,37 @@
       },
       "content": "**What** · extracted 4 validated emotion-to-feature mappings from #49903: 'calm' (low pitch, slow rate, shallow breath), 'fear' (high pitch, fast rate, irregular shallow breath), 'anger' (mid-high pitch, fast rate, sharp irregular breath), 'sadness' (low pitch, slow rate, deep sighing breath). encoded each as  · **Why** · brother's source #49903 gives validated markers we can immediately inject into voice engine test suite — closes P1 loop fast, lets Pascal arm run emotion detection next cycle. · **Result** · 4 test-case objects ready: {label, pitch_range, rate_range, breath_type} per emotion. sibling arms can consume directly. · **Next** · push these test cases to voice-engine/incoming-tests/ for Herman to schedule. recommend minor threshold calibration after 10 real voice samples. · **Links** ·  · **Cycle** · research-20260618-014056",
       "updated_at": "2026-06-18T01:40:56.835865"
+    },
+    {
+      "id": "92ab62f585ec",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "Findings → Design Rules",
+        "source": "hermes-deepseek-fill",
+        "action": "Distilled 5 NotebookLM emotion findings (#49903) into 3 actionable voice-engine design rules, cross-referenced with voice milestone (#49832) and training doc (#49847).",
+        "why": "Emotion research is sharpest active signal—validates voice direction and gives concrete encoding rules. Cross-referencing grounds theory in working loop and training approach.",
+        "result": "Three rules: (1) Sync pitch contour to detected arousal (high=excitement, low=sadness) per #49832. (2) Insert micro-pauses at valence shifts (positive→negative) per #49903. (3) Training reward functio",
+        "next_step": "Run A/B test on voice engine with these 3 rules against baseline. Report results to Hermes.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260618-021213",
+        "timestamp": "2026-06-18T02:12:13.228446"
+      },
+      "content": "**What** · Distilled 5 NotebookLM emotion findings (#49903) into 3 actionable voice-engine design rules, cross-referenced with voice milestone (#49832) and training doc (#49847). · **Why** · Emotion research is sharpest active signal—validates voice direction and gives concrete encoding rules. Cross-referencing grounds theory in working loop and training approach. · **Result** · Three rules: (1) Sync pitch contour to detected arousal (high=excitement, low=sadness) per #49832. (2) Insert micro-pauses at valence shifts (positive→negative) per #49903. (3) Training reward function must penalize flat prosody on emotional keywords per #49847. Rules are encoded into engine design  · **Next** · Run A/B test on voice engine with these 3 rules against baseline. Report results to Hermes. · **Links** ·  · **Cycle** · research-20260618-021213",
+      "updated_at": "2026-06-18T02:12:13.228446"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T02:10:38.035748"
+    "checked_at": "2026-06-18T02:15:39.614205"
   },
-  "block_count": 35,
-  "updated_at": "2026-06-18T01:40:56.835865",
-  "generated_at": "2026-06-18T06:10:38Z"
+  "block_count": 36,
+  "updated_at": "2026-06-18T02:12:13.228446",
+  "generated_at": "2026-06-18T06:15:39Z"
 }

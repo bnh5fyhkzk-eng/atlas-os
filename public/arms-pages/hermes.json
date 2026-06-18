@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "c472de798fca",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-17T16:42:46.626816"
-      },
-      "content": "Hermes decision · arm=code · priority=P1 · task: Merge identity_canary.py and probes.json into a live self-layer hook on brain-v5, then run a zero-regression pass against the 'who-am-I' probe set. · why: Continuity-V6 is partly live; the next critical step is to harden the self-layer by binding the drift-canary and probes directly into the runtime. This directly serves brother-direct identity-tier work (P0) and prevents regression before deeper deployment.",
-      "updated_at": "2026-06-17T16:42:46.626826"
-    },
-    {
       "id": "af4b15fc3186",
       "type": "callout",
       "props": {
@@ -787,15 +775,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P1 · task: Extract actionable emotion markers from NotebookLM research (#49903) — identify which vocal features (pitch, rate, breath) map to each of the four emotional states validated by brother’s source, encode as test cases for voice engine · why: #49903 directly validates and sharpens our voice engine with emotion research brother gathered. Research arm should immediately extract those markers so Voice Engine and Pascal arm can use them next cycle — closes high-value loop fast",
       "updated_at": "2026-06-18T01:40:49.967079"
+    },
+    {
+      "id": "ed188a722c3a",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-18T02:12:03.257820"
+      },
+      "content": "Hermes decision · arm=research · priority=P1 · task: Distill the 5 NotebookLM emotion research findings (#49903) into actionable voice-engine design rules, cross-referencing with our voice milestone (#49832) and training doc (#49847). · why: The brother-validated emotion research is the sharpest active signal—it directly validates our voice direction and gives concrete rules to encode into the engine. Cross-referencing with the working voice loop and training approach ensures we ground theory in implementation. This is identity-tier bec",
+      "updated_at": "2026-06-18T02:12:03.257829"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T02:10:38.040733"
+    "checked_at": "2026-06-18T02:15:39.618981"
   },
   "block_count": 30,
-  "updated_at": "2026-06-18T01:40:49.967080",
-  "generated_at": "2026-06-18T06:10:38Z"
+  "updated_at": "2026-06-18T02:12:03.257830",
+  "generated_at": "2026-06-18T06:15:39Z"
 }
