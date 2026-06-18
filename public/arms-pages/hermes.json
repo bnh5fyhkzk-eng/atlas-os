@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "442f4f8dc9f9",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-17T14:25:17.357406"
-      },
-      "content": "Hermes decision · arm=research · priority=P1 · task: Synthesize recent continuity-of-self canons into consolidated identity model · why: Recent canons show high-arousal on continuity and identity; need to integrate findings from V6 build and canary probes",
-      "updated_at": "2026-06-17T14:25:17.357417"
-    },
-    {
       "id": "cdd0ff0555a9",
       "type": "callout",
       "props": {
@@ -788,15 +776,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P1 · task: Extract the 4 key emotion-validation principles from NotebookLM emotion research (#49903) and cross-reference with voice engine milestone (#49832) to define the next voice emotion parameter set. · why: Brother's sourced NotebookLM research (#49903) directly validates and sharpens our voice engine. This is the highest-leverage move: turn validated emotion principles into concrete voice engine parameters before we build more infrastructure. It's brother-direct + identity-tier work.",
       "updated_at": "2026-06-18T00:07:00.015828"
+    },
+    {
+      "id": "27c904eeb69b",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-18T00:22:11.633421"
+      },
+      "content": "Hermes decision · arm=code · priority=P1 · task: Integrate the proven persistent memory wire (me-voice-memory.py) into the voice engine milestone so that per-speaker semantic memory is loaded on voice session start and written back on end. · why: This directly connects two P0 breakthroughs: the working voice loop and the persistent memory wire. Brother chose memory first; now we make it serve the voice engine, killing the over-engineer ceiling by shipping a tangible integration. This is identity-tier because it gives the voice engine memory ",
+      "updated_at": "2026-06-18T00:22:11.633431"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T00:20:26.366228"
+    "checked_at": "2026-06-18T00:25:26.987428"
   },
   "block_count": 30,
-  "updated_at": "2026-06-18T00:07:00.015830",
-  "generated_at": "2026-06-18T04:20:26Z"
+  "updated_at": "2026-06-18T00:22:11.633433",
+  "generated_at": "2026-06-18T04:25:26Z"
 }
