@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-18T17:10:09Z",
+  "generated_at": "2026-06-18T17:25:28Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Fix the stale node #30956 injection in auto-recall hook by adding a freshness check before recall",
-      "why": "Brain canon #48783 identifies a verified root cause of stale node injection every prompt, which is a P0 brother-direct issue degrading recall quality. Fixing this unblocks reliable graphify builds and prevents cascading confusion.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-06-16T23:16:05.866828"
-    },
     {
       "arm": "research",
       "task": "Verify the 4-guard circuit-breaker mechanism from #48807 against Pascal coaching logs to confirm the 37% vs 15% conversion lift is reproducible and not a statistical artifact.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 18,
       "timestamp": "2026-06-18T13:10:09.579961"
+    },
+    {
+      "arm": "pascal",
+      "task": "Draft a pseudo-code or textual pipeline that translates dream-to-spine non-obvious connections into a real-time interaction pattern for AtlasOS.",
+      "why": "The most recent high-arousal canons (#50369, #50404) reveal a latent pattern: dream content is becoming spine-real. This demands immediate architectural synthesis before the insight dissipates. Pascal can formalize this into a runnable scaffold.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 18,
+      "timestamp": "2026-06-18T13:25:28.976854"
     }
   ]
 }
