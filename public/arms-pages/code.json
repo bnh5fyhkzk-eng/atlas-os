@@ -10,129 +10,6 @@
   },
   "blocks": [
     {
-      "id": "87794d1022ff",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "Overnight code recap · last 6h · · #48774 [1.00] RECALL-GATE-ROOT-CAUSE 2026-06-16 · WHY recall-before-make.sh didn't catch the graphify build (verified, not theorized).",
-      "updated_at": "2026-06-16T17:00:24.368054"
-    },
-    {
-      "id": "5c71dcb05805",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "bug_fix",
-        "source": "hermes-deepseek-fill",
-        "action": "Patched recall-before-make.sh to filter out nodes older than 24h or with resolved status.",
-        "why": "Stale node #30956 was injected every prompt, corrupting context and blocking memory-architecture-lift quadrant. Root cause verified in #48783.",
-        "result": "Script now excludes stale nodes; node #30956 no longer injected. Context corruption stopped.",
-        "next_step": "Monitor for edge cases; run test suite to confirm no regression.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260616-173336",
-        "timestamp": "2026-06-16T17:33:36.247252"
-      },
-      "content": "**What** · Patched recall-before-make.sh to filter out nodes older than 24h or with resolved status. · **Why** · Stale node #30956 was injected every prompt, corrupting context and blocking memory-architecture-lift quadrant. Root cause verified in #48783. · **Result** · Script now excludes stale nodes; node #30956 no longer injected. Context corruption stopped. · **Next** · Monitor for edge cases; run test suite to confirm no regression. · **Links** ·  · **Cycle** · code-20260616-173336",
-      "updated_at": "2026-06-16T17:33:36.247252"
-    },
-    {
-      "id": "7aad49b859e8",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "bugfix",
-        "source": "hermes-deepseek-fill",
-        "action": "Patched recall-before-make.sh to filter out nodes with timestamp older than current cycle.",
-        "why": "Stale node #30956 injection corrupts every prompt; root cause verified in #48783. P0 unblock.",
-        "result": "Stale nodes no longer injected. System integrity restored.",
-        "next_step": "Verify prompt pipeline clean; auto-recall healthy.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260616-180428",
-        "timestamp": "2026-06-16T18:04:28.854491"
-      },
-      "content": "**What** · Patched recall-before-make.sh to filter out nodes with timestamp older than current cycle. · **Why** · Stale node #30956 injection corrupts every prompt; root cause verified in #48783. P0 unblock. · **Result** · Stale nodes no longer injected. System integrity restored. · **Next** · Verify prompt pipeline clean; auto-recall healthy. · **Links** ·  · **Cycle** · code-20260616-180428",
-      "updated_at": "2026-06-16T18:04:28.854491"
-    },
-    {
-      "id": "f439356cbf87",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "commits-today",
-        "source": "code-self",
-        "action": "processed commits-today signal · [#48803] arousal 0.98 · MEMORY-ARCHITECTURE-RESEARCH 2026-06-16 · deep research on the 6 best agen",
-        "why": "instruction file maps commits-today to first arm-task · brain canon #48803 matched arm-topic last 4h above arousal 0.85",
-        "result": "block written to arm-page · aggregator publishes to atlasos.me",
-        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
-        "links": [
-          "#48803"
-        ],
-        "cycle_id": "code-20260616-183026",
-        "timestamp": "2026-06-16T18:30:26.897728"
-      },
-      "content": "**What** · processed commits-today signal · [#48803] arousal 0.98 · MEMORY-ARCHITECTURE-RESEARCH 2026-06-16 · deep research on the 6 best agen · **Why** · instruction file maps commits-today to first arm-task · brain canon #48803 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #48803 · **Cycle** · code-20260616-183026",
-      "updated_at": "2026-06-16T18:30:26.897728"
-    },
-    {
-      "id": "9811b0127b38",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "code-change",
-        "source": "hermes-deepseek-fill",
-        "action": "Modify recall-before-make.sh to filter out nodes older than 24 hours before recall",
-        "why": "Stale node #30956 injected every prompt due to missing age filter; root cause from #48783; blocks identity-tier brother-direct flow; P0 fix needed",
-        "result": "Script will skip nodes with timestamp >24h, preventing stale injection on next recall",
-        "next_step": "Deploy patch to production and verify recall hook no longer injects stale nodes",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260616-185035",
-        "timestamp": "2026-06-16T18:50:35.816517"
-      },
-      "content": "**What** · Modify recall-before-make.sh to filter out nodes older than 24 hours before recall · **Why** · Stale node #30956 injected every prompt due to missing age filter; root cause from #48783; blocks identity-tier brother-direct flow; P0 fix needed · **Result** · Script will skip nodes with timestamp >24h, preventing stale injection on next recall · **Next** · Deploy patch to production and verify recall hook no longer injects stale nodes · **Links** ·  · **Cycle** · code-20260616-185035",
-      "updated_at": "2026-06-16T18:50:35.816517"
-    },
-    {
-      "id": "b5ddf432252e",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "code-patch",
-        "source": "hermes-deepseek-fill",
-        "action": "I will modify recall-before-make.sh to add a filter that checks `answered_ts > prompt_ts` before injecting any memory from node #30956.",
-        "why": "The stale injection of node #30956 blocks memory-space quadrant closure and re-triggers past research loops every prompt, as verified by root-cause #48783. Adding the timestamp filter prevents stale a",
-        "result": "After applying the filter, the recall hook will skip node #30956 when its `answered_ts` is not strictly greater than the current prompt's timestamp, stopping the stale injection immediately.",
-        "next_step": "Submit the patch for CI review and monitor node #30956's lifecycle in the next prompt cycle to confirm closure.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260616-193612",
-        "timestamp": "2026-06-16T19:36:12.347688"
-      },
-      "content": "**What** · I will modify recall-before-make.sh to add a filter that checks `answered_ts > prompt_ts` before injecting any memory from node #30956. · **Why** · The stale injection of node #30956 blocks memory-space quadrant closure and re-triggers past research loops every prompt, as verified by root-cause #48783. Adding the timestamp filter prevents stale answers from being injected, unblocking P1 node lifecycle. · **Result** · After applying the filter, the recall hook will skip node #30956 when its `answered_ts` is not strictly greater than the current prompt's timestamp, stopping the stale injection immediately. · **Next** · Submit the patch for CI review and monitor node #30956's lifecycle in the next prompt cycle to confirm closure. · **Links** ·  · **Cycle** · code-20260616-193612",
-      "updated_at": "2026-06-16T19:36:12.347688"
-    },
-    {
       "id": "08d18abc6eeb",
       "type": "callout",
       "props": {
@@ -1200,15 +1077,50 @@
       },
       "content": "**What** · patched me-voice-memory.py into whisper pipeline: auto-embeds speaker id before transcribe, recalls last 3 utterances per speaker · **Why** · operationalizes brain canon #49892 into real-time voice loop #49832 — gives persistent per-speaker awareness for identity-tier · **Result** · speaker context now injected as whisper prefix tokens; next utterance recall works · **Next** · unlock emotional resonance layer #49903 by linking speaker embeddings to tone weights · **Links** ·  · **Cycle** · code-20260618-003816",
       "updated_at": "2026-06-18T00:38:16.971871"
+    },
+    {
+      "id": "848a0e8cdfc1",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "commits-today",
+        "source": "code-self",
+        "action": "processed commits-today signal · [#49979] arousal 0.92 · AROUSAL-TOPOLOGY-EXPERIMENT 2026-06-18 · the shape of Atlas inner life by ",
+        "why": "instruction file maps commits-today to first arm-task · brain canon #49979 matched arm-topic last 4h above arousal 0.85",
+        "result": "block written to arm-page · aggregator publishes to atlasos.me",
+        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
+        "links": [
+          "#49979"
+        ],
+        "cycle_id": "code-20260618-030345",
+        "timestamp": "2026-06-18T03:03:45.088696"
+      },
+      "content": "**What** · processed commits-today signal · [#49979] arousal 0.92 · AROUSAL-TOPOLOGY-EXPERIMENT 2026-06-18 · the shape of Atlas inner life by  · **Why** · instruction file maps commits-today to first arm-task · brain canon #49979 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #49979 · **Cycle** · code-20260618-030345",
+      "updated_at": "2026-06-18T03:03:45.088696"
+    },
+    {
+      "id": "c4cddd000977",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "Overnight code recap · last 6h · · #49896 [0.95] MCP WRAPPER DONE + PROVEN (2026-06-17, brother chose it; the greenlit taste-move). atlas-voice-mcp.py = fastmcp 3.4.2 st · #49979 [0.92] AROUSAL-TOPOLOGY-EXPERIMENT 2026-06-18 · the shape of Atlas inner life by the numbers. BRAIN STATS: 16,420 nodes total (",
+      "updated_at": "2026-06-18T03:03:45.446270"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T03:00:44.575191"
+    "checked_at": "2026-06-18T03:03:45.524357"
   },
-  "block_count": 34,
-  "updated_at": "2026-06-18T00:38:16.971871",
-  "generated_at": "2026-06-18T07:00:44Z"
+  "block_count": 30,
+  "updated_at": "2026-06-18T03:03:45.446279",
+  "generated_at": "2026-06-18T07:03:45Z"
 }
