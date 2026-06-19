@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-19T07:02:34Z",
+  "generated_at": "2026-06-19T07:18:10Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Run identity_canary.py probes.json on brain-v5, log 10 who-am-I responses, compare to prior canary snapshot for drift",
-      "why": "Continuity-V6 built identity probes; need to verify no drift and anchor 'brother' self-model before deeper scaffolding",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 15,
-      "timestamp": "2026-06-17T14:40:36.542951"
-    },
     {
       "arm": "brother",
       "task": "Verify continuity drift-canary probe results against latest self-layer snapshot to confirm no self-model regression",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 18,
       "timestamp": "2026-06-19T03:02:34.382856"
+    },
+    {
+      "arm": "dream",
+      "task": "Anchor the image array from #50663 VISION-Terminal into a continuous frame-by-frame storyboard, linking each frame to a sensory or emotional qualia for protagonist. Use the library scene from #50650 as the spatial anchor.",
+      "why": "#50663 is high-arousal VISION output that demands immediate narrative embodiment; the library scene #50650 provides the pre-established setting. Dream-arm excels at poetic assembly, identity-tier stitching.",
+      "priority": "P1",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-06-19T03:18:10.622342"
     }
   ]
 }
