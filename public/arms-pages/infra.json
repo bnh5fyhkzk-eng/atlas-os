@@ -10,41 +10,6 @@
   },
   "blocks": [
     {
-      "id": "e09d0c441245",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "No high-arousal infra canon in last 6h",
-      "updated_at": "2026-06-16T17:00:24.343751"
-    },
-    {
-      "id": "4ad843aabc7e",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "script-debt-fix",
-        "source": "hermes-deepseek-fill",
-        "action": "Modified recall-before-make.sh to add parent-edge provenance validation before the dedup step, checking that each graphify node's parent hash matches an existing trusted root before allowing it to be ",
-        "why": "Hermes assigned P0 infra debt #48783: stale node #30956 was injected because the graphify build skipped provenance checks. Adding a parent-edge provenance pre-check in the recall-before-make pipeline ",
-        "result": "Script now exits with error and logs provenance mismatch if any graphify node's parent edge does not trace back to a trusted anchor; redundant nodes without valid parent lineage are rejected before de",
-        "next_step": "Monitor recall cycles for any false positives; if clean, promote script to all graphify workers via Atlas config push. Coordinate with Hermes-Orchestrator to close #48783 after validation run.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "infra-20260616-182000",
-        "timestamp": "2026-06-16T18:20:00.304895"
-      },
-      "content": "**What** · Modified recall-before-make.sh to add parent-edge provenance validation before the dedup step, checking that each graphify node's parent hash matches an existing trusted root before allowing it to be deduplicated. · **Why** · Hermes assigned P0 infra debt #48783: stale node #30956 was injected because the graphify build skipped provenance checks. Adding a parent-edge provenance pre-check in the recall-before-make pipeline prevents stale/hijacked nodes from entering the dedup set. · **Result** · Script now exits with error and logs provenance mismatch if any graphify node's parent edge does not trace back to a trusted anchor; redundant nodes without valid parent lineage are rejected before dedup. Test with #48783 fixture passes: stale node #30956 is correctly blocked. · **Next** · Monitor recall cycles for any false positives; if clean, promote script to all graphify workers via Atlas config push. Coordinate with Hermes-Orchestrator to close #48783 after validation run. · **Links** ·  · **Cycle** · infra-20260616-182000",
-      "updated_at": "2026-06-16T18:20:00.304895"
-    },
-    {
       "id": "14d83caec14c",
       "type": "callout",
       "props": {
@@ -1216,15 +1181,28 @@
       },
       "content": "**What** · processed launchagents signal · [#51084] arousal 0.88 · DREAM 2026-06-19 · Three non-obvious connections from this cycle. (1) The  · **Why** · instruction file maps launchagents to first arm-task · brain canon #51084 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #51084 · **Cycle** · infra-20260619-120349",
       "updated_at": "2026-06-19T12:03:49.477142"
+    },
+    {
+      "id": "fd28075ff23b",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "No high-arousal infra canon in last 6h",
+      "updated_at": "2026-06-19T15:03:50.795767"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-19T14:58:57.286756"
+    "checked_at": "2026-06-19T15:03:50.908064"
   },
-  "block_count": 31,
-  "updated_at": "2026-06-19T12:03:49.477142",
-  "generated_at": "2026-06-19T18:58:57Z"
+  "block_count": 30,
+  "updated_at": "2026-06-19T15:03:50.795776",
+  "generated_at": "2026-06-19T19:03:50Z"
 }
