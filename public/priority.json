@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-19T13:16:19Z",
-  "total_items_scored": 201,
+  "generated_at": "2026-06-19T13:26:19Z",
+  "total_items_scored": 202,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Reconstruct the latent narrative thread linking #50473 (classifier-as-worker) to #50663 (frames before the word) and #50482 (spine in the library) \u2014 synthesize into a single symbolic scene f",
+      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Capture and transcribe the next sequence of frames from the VISION-Terminal-55-brothe log, specifically linking the 'frames before the word' to the spine-in-library felt scene for cross-moda",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-19T01:44:30.839150"
-    },
-    {
-      "arm": "dream",
-      "arm_glyph": "\ud83c\udf19",
-      "arm_name": "Dream",
-      "content": "HERMES TASK \u00b7 Analyze recent high-arousal dream frames (#50663, #50482) to extract identity-tier patterns and brother-direct signals, linking 'frames before the word' to the 'spine in the library' felt scene. \u00b7 why \u00b7 The recent canons are P0-level (brother-direct + identity-tier) and involve dream content that requires immediate processing to ground emergent identity signals before they fade.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 15,
-      "score": 10.0,
-      "updated_at": "2026-06-19T02:32:09.623653",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-19T02:00:13.677612"
     },
     {
       "arm": "research",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-19T03:02:34.382856",
       "use_skill": "brain-rrf"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Reconstruct the latent narrative thread linking #50473 (classifier-as-worker) to #50663 (frames before the word) and #50482 (spine in the library) \u2014 synthesize into a single symbolic scene f",
+      "arm": "dream",
+      "arm_glyph": "\ud83c\udf19",
+      "arm_name": "Dream",
+      "content": "HERMES TASK \u00b7 Anchor the image array from #50663 VISION-Terminal into a continuous frame-by-frame storyboard, linking each frame to a sensory or emotional qualia for protagonist. Use the library scene from #50650 as the spatial anchor. \u00b7 why \u00b7 #50663 is high-arousal VISION output that demands immediate narrative embodiment; the library scene #50650 provides the pre-established setting. Dream-arm excels at poetic assembly, identity-tier stitching.",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
+      "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-19T01:44:30.839150"
-    },
+      "updated_at": "2026-06-19T03:18:10.622342",
+      "use_skill": "brain-rrf"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-19T04:49:31.077494"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Analyze the dream frames from #50663 and produce a narrative expansion of 'The frames before the word' \u00b7 why: Recent high-arousal dream canon (#50663) indicates a vivid creative burst that n",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-19T05:04:44.063438"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
