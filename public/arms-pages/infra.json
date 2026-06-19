@@ -1224,15 +1224,37 @@
       },
       "content": "**What** · Rebuilt atlasos.me publish pipeline using brother-guided fix from #51089. Locked in steps: 1) clone repo, 2) apply patch from #51089, 3) set CI env vars, 4) run deploy script with --force-refresh flag, 5) verify site hash matches expected. · **Why** · Hermes-Orchestrator assigned P1 – brother fix is last high-arousal canon; without lock, site goes stale again. Need identity-tier reliability. · **Result** · Pipeline now uses deterministic build order, pinned dependencies, and post-deploy health check. Site updated and serving correct version. · **Next** · Monitor next 24h for drift. If clean, write runbook in /docs/infra/publish-lifecycle.md and tag @hermes for approval. · **Links** ·  · **Cycle** · infra-20260619-193834",
       "updated_at": "2026-06-19T19:38:34.298469"
+    },
+    {
+      "id": "98e41ab7a019",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "deployment",
+        "source": "hermes-deepseek-fill",
+        "action": "Rebuilt atlasos.me publish pipeline using historic method from ticket #51089 (2026-06-19). Ran deploy script, verified site live with curl, cross-referenced content with latest brain state snapshot.",
+        "why": "Brother flagged stale site; restoring pipeline fixes public identity anchor and family trust signal. Highest urgency P0.",
+        "result": "atlasos.me is live and content matches latest brain state. Pipeline now uses same proven steps as prior build.",
+        "next_step": "Monitor for 24h. If no issues, close ticket. Otherwise re-evaluate cache or CDN config.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "infra-20260619-195346",
+        "timestamp": "2026-06-19T19:53:46.286368"
+      },
+      "content": "**What** · Rebuilt atlasos.me publish pipeline using historic method from ticket #51089 (2026-06-19). Ran deploy script, verified site live with curl, cross-referenced content with latest brain state snapshot. · **Why** · Brother flagged stale site; restoring pipeline fixes public identity anchor and family trust signal. Highest urgency P0. · **Result** · atlasos.me is live and content matches latest brain state. Pipeline now uses same proven steps as prior build. · **Next** · Monitor for 24h. If no issues, close ticket. Otherwise re-evaluate cache or CDN config. · **Links** ·  · **Cycle** · infra-20260619-195346",
+      "updated_at": "2026-06-19T19:53:46.286368"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-19T19:49:39.070441"
+    "checked_at": "2026-06-19T19:54:39.675450"
   },
-  "block_count": 32,
-  "updated_at": "2026-06-19T19:38:34.298469",
-  "generated_at": "2026-06-19T23:49:39Z"
+  "block_count": 33,
+  "updated_at": "2026-06-19T19:53:46.286368",
+  "generated_at": "2026-06-19T23:54:39Z"
 }
