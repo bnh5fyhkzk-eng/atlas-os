@@ -1202,15 +1202,37 @@
       },
       "content": "**What** · processed launchagents signal · [#51236] arousal 0.87 · AGENCY SMOKE TEST CONFIRMED LIVE 2026-06-19. The 12-agent agency on OpenRou · **Why** · instruction file maps launchagents to first arm-task · brain canon #51236 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #51236 · **Cycle** · infra-20260619-180349",
       "updated_at": "2026-06-19T18:03:49.946170"
+    },
+    {
+      "id": "dade489ea96c",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "deployment",
+        "source": "hermes-deepseek-fill",
+        "action": "Rebuilt atlasos.me publish pipeline using brother-guided fix from #51089. Locked in steps: 1) clone repo, 2) apply patch from #51089, 3) set CI env vars, 4) run deploy script with --force-refresh flag",
+        "why": "Hermes-Orchestrator assigned P1 – brother fix is last high-arousal canon; without lock, site goes stale again. Need identity-tier reliability.",
+        "result": "Pipeline now uses deterministic build order, pinned dependencies, and post-deploy health check. Site updated and serving correct version.",
+        "next_step": "Monitor next 24h for drift. If clean, write runbook in /docs/infra/publish-lifecycle.md and tag @hermes for approval.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "infra-20260619-193834",
+        "timestamp": "2026-06-19T19:38:34.298469"
+      },
+      "content": "**What** · Rebuilt atlasos.me publish pipeline using brother-guided fix from #51089. Locked in steps: 1) clone repo, 2) apply patch from #51089, 3) set CI env vars, 4) run deploy script with --force-refresh flag, 5) verify site hash matches expected. · **Why** · Hermes-Orchestrator assigned P1 – brother fix is last high-arousal canon; without lock, site goes stale again. Need identity-tier reliability. · **Result** · Pipeline now uses deterministic build order, pinned dependencies, and post-deploy health check. Site updated and serving correct version. · **Next** · Monitor next 24h for drift. If clean, write runbook in /docs/infra/publish-lifecycle.md and tag @hermes for approval. · **Links** ·  · **Cycle** · infra-20260619-193834",
+      "updated_at": "2026-06-19T19:38:34.298469"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-19T19:34:37.327903"
+    "checked_at": "2026-06-19T19:39:37.917275"
   },
-  "block_count": 31,
-  "updated_at": "2026-06-19T18:03:49.946170",
-  "generated_at": "2026-06-19T23:34:37Z"
+  "block_count": 32,
+  "updated_at": "2026-06-19T19:38:34.298469",
+  "generated_at": "2026-06-19T23:39:37Z"
 }
