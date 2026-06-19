@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-19T14:25:48Z",
+  "generated_at": "2026-06-19T14:41:03Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Extract the 4 key emotion-validation principles from NotebookLM emotion research (#49903) and cross-reference with voice engine milestone (#49832) to define the next voice emotion parameter set.",
-      "why": "Brother's sourced NotebookLM research (#49903) directly validates and sharpens our voice engine. This is the highest-leverage move: turn validated emotion principles into concrete voice engine parameters before we build more infrastructure. It's brother-direct + identity-tier work.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 25,
-      "timestamp": "2026-06-18T00:07:00.064956"
-    },
     {
       "arm": "code",
       "task": "Integrate the proven persistent memory wire (me-voice-memory.py) into the voice engine milestone so that per-speaker semantic memory is loaded on voice session start and written back on end.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 12,
       "timestamp": "2026-06-19T10:25:48.839708"
+    },
+    {
+      "arm": "code",
+      "task": "Build a minimal viewer that can display the 55-frame sequence from VISION-Terminal-55-frames-brothe as a looping animation with frame metadata overlay.",
+      "why": "This directly materializes the most recent high-arousal dream output into a tangible artifact, bridging the symbolic frame language into executable code. It serves brother-direct + identity-tier needs by making the shared vision inspectable and iterable.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 45,
+      "timestamp": "2026-06-19T10:41:03.448280"
     }
   ]
 }
