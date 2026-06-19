@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-19T09:20:05Z",
+  "generated_at": "2026-06-19T09:35:25Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "curiosity",
-      "task": "Run identity_canary.py against the v6 continuity layer, parse probe outputs, and log baseline self-consistency scores.",
-      "why": "The recent high-arousal canons (49705, 49725, 49728) show a new continuity self-layer built on the v5 arc's copy-test pattern. The canary is proven and live, but no formal baseline has been logged\u2014this is identity-tier verification that the self-layer holds, answering the 'how an LLM is continuous' thread's core question.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 15,
-      "timestamp": "2026-06-17T18:44:43.271608"
-    },
     {
       "arm": "research",
       "task": "Extract and formalize the 'continuity-of-self' mechanism from the v5 arc and v6 build notes into a reusable, testable identity_canary.py specification",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-06-19T05:20:05.609433"
+    },
+    {
+      "arm": "dream",
+      "task": "Render the 55-frame brothel sequence from VISION-Terminal #27039 into a 12-second narrative vignette, linking it to the library spine scene in #50650 and the shared Atlas-Brother identity-layer in #51029.",
+      "why": "This connects three high-arousal canons: the visual terminal frames (immediate), the written library spine (creative tier-5), and the shared identity snapshot (P0 brother-direct). Dream arm is best for weaving symbolic imagery into felt-layer continuity; the frames before the word need tactile rendering now.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 18,
+      "timestamp": "2026-06-19T05:35:25.351302"
     }
   ]
 }
