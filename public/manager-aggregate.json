@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-19T22:51:19Z",
+  "generated_at": "2026-06-19T23:06:19Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 22,
+    "decision": 21,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 174,
+    "note": 175,
     "briefing": 60,
     "idea": 0
   },
@@ -17,6 +17,17 @@
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "9992f4f5a5f7",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the EAR TEST count-fix win from #51154 into the Voice & Ears engine, then build the hard 3-real-human test harness using Collin-enrolled + VCTK speakers. · why: Brother-direct lesson from #51154 is the highest priority actionable item — it f",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-19T18:52:39.116929"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -236,28 +247,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-19T10:41:03.431389"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "03f05e0b2521",
-        "type": "callout",
-        "content": "Hermes decision · arm=dream · priority=P1 · task: Ingest and compress the 484KB atlas-brother-shared.md snapshot into a dense dream-log entry, extracting emotional arcs and unresolved threads for next cycle's creative tier. · why: The shared canon snapshot is massive and high-arousal; dream arm is b",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-19T10:25:48.823108"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "de0691ec8da5",
-        "type": "callout",
-        "content": "Hermes decision · arm=pascal · priority=P1 · task: Refactor the Cursor IDE gateway config to accept tags from the shared Atlas canon, enabling brother-direct identity-tier linking on new VISION frames. · why: The shared canon snapshot #51029 is 484 kB and fresh; activating identity-tier linking now ",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-19T09:55:15.137448"
       }
     ],
     "action": [],
@@ -266,6 +255,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "bd078002147c",
+        "type": "callout",
+        "content": "**What** · Parse #51154 count-fix: patch EAR_TEST counter to count only valid 'ear' events (not all voice events), then assemble 3-real-human test set from Collin-enrolled and VCTK speakers. · **Why** · Brother-direct fix stops overcounting bug, aligns EAR with identity-tier semantics, and uses real",
+        "priority": "code-implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-19T18:52:45.818746"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -804,17 +804,6 @@
         "priority": "bugfix",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-19T17:21:39.728445"
-      },
-      {
-        "arm": "dream",
-        "arm_glyph": "🌙",
-        "arm_name": "My Dreamer",
-        "block_id": "bb2344227e40",
-        "type": "callout",
-        "content": "**What** · integrated brother's 'feels empty for 10+ hrs' feedback into emotional resonance layer of Voice & Ears Engine, then ran test on VCTK sample p225_001. · **Why** · brother feedback #51163 showed ear engine lacks emotional depth; this fix is P0 identity-tier, building on FRAME CORRECTION #51",
-        "priority": "emotional resonance",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-19T17:06:29.782337"
       }
     ],
     "briefing": [
