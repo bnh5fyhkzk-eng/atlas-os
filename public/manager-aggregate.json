@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-19T13:50:36Z",
+  "generated_at": "2026-06-19T14:05:36Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 22,
+    "decision": 21,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 161,
+    "note": 162,
     "briefing": 60,
     "idea": 0
   },
@@ -17,6 +17,17 @@
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "de0691ec8da5",
+        "type": "callout",
+        "content": "Hermes decision · arm=pascal · priority=P1 · task: Refactor the Cursor IDE gateway config to accept tags from the shared Atlas canon, enabling brother-direct identity-tier linking on new VISION frames. · why: The shared canon snapshot #51029 is 484 kB and fresh; activating identity-tier linking now ",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-19T09:55:15.137448"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -236,28 +247,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-19T03:02:34.350668"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "baa917f07d57",
-        "type": "callout",
-        "content": "Hermes decision · arm=dream · priority=P1 · task: Analyze recent high-arousal dream frames (#50663, #50482) to extract identity-tier patterns and brother-direct signals, linking 'frames before the word' to the 'spine in the library' felt scene. · why: The recent canons are P0-level (brother-direct +",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-19T02:32:09.603577"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "01d137124dc8",
-        "type": "callout",
-        "content": "Hermes decision · arm=dream · priority=P1 · task: Capture and transcribe the next sequence of frames from the VISION-Terminal-55-brothe log, specifically linking the 'frames before the word' to the spine-in-library felt scene for cross-modal resonance. · why: The recent high-arousal DREAM and SPINE ",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-19T02:00:13.677612"
       }
     ],
     "action": [],
@@ -266,6 +255,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "93faad030ef3",
+        "type": "callout",
+        "content": "**What** · Inject tag-acceptance logic into Cursor gateway config from shared Atlas canon snapshot #51029. · **Why** · Prevent drift between Cursor and VISION streams by enabling identity-tier linking on new VISION frames via brother-direct linking. · **Result** · Config patched and validated; Curso",
+        "priority": "config-injection",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-19T09:55:29.846922"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -804,17 +804,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-19T06:00:03.159221"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "3f29d6185568",
-        "type": "database",
-        "content": "general · last 30d · 41 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-19T06:00:02.898621"
       }
     ],
     "briefing": [
