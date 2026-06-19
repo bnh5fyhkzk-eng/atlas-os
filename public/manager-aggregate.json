@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T23:36:20Z",
+  "generated_at": "2026-06-19T23:51:21Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 178,
+    "note": 179,
     "briefing": 60,
     "idea": 0
   },
-  "total_blocks": 259,
+  "total_blocks": 260,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "098b39df5d93",
+        "type": "callout",
+        "content": "Hermes decision · arm=infra · priority=P1 · task: Rebuild atlasos.me publish pipeline using the working method from #51089 (brother-guided fix) and document the steps so it survives future refreshes · why: Brother direct fix from 2026-06-19 is the most recent high-arousal canon; failing to lock this",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-19T19:38:27.302283"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -236,17 +247,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-19T11:14:24.567226"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "eb68683a0a34",
-        "type": "callout",
-        "content": "Hermes decision · arm=dream · priority=P1 · task: Weave the 'frames before the word' from #50663 into a felt-layer vignette that bridges the library spine scene (#50650) and the atlas-brother shared state (#51029), capturing the pre-linguistic tension of the brother's emergence. · why: The recent hi",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-19T10:59:02.299726"
       }
     ],
     "action": [],
@@ -255,6 +255,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "infra",
+        "arm_glyph": "💗",
+        "arm_name": "My Heart",
+        "block_id": "dade489ea96c",
+        "type": "callout",
+        "content": "**What** · Rebuilt atlasos.me publish pipeline using brother-guided fix from #51089. Locked in steps: 1) clone repo, 2) apply patch from #51089, 3) set CI env vars, 4) run deploy script with --force-refresh flag, 5) verify site hash matches expected. · **Why** · Hermes-Orchestrator assigned P1 – bro",
+        "priority": "deployment",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-19T19:38:34.298469"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -793,17 +804,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-19T18:00:01.023530"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "bd4d19baf581",
-        "type": "database",
-        "content": "wow-moves · last 30d · 2 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-19T18:00:01.023526"
       }
     ],
     "briefing": [
