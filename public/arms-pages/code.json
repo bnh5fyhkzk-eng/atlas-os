@@ -1109,15 +1109,37 @@
         }
       ],
       "updated_at": "2026-06-19T18:00:01.616854"
+    },
+    {
+      "id": "bd078002147c",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "code-implementation",
+        "source": "hermes-deepseek-fill",
+        "action": "Parse #51154 count-fix: patch EAR_TEST counter to count only valid 'ear' events (not all voice events), then assemble 3-real-human test set from Collin-enrolled and VCTK speakers.",
+        "why": "Brother-direct fix stops overcounting bug, aligns EAR with identity-tier semantics, and uses real heterogeneous voices for hard validation — unblocking Voice & Ears next phase.",
+        "result": "Count-fix applied in ear_engine.c: line 142-146 now incremented only on VOICE_EVENT_EAR; 3-speaker harness (Collin+2 VCTK) wired in test/voice_ears_hard_test.py with expected exact counts per utteranc",
+        "next_step": "Run harness, capture assertion output, then report pass/fail to Hermes-orchestrator for unblocked phase progression.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260619-185245",
+        "timestamp": "2026-06-19T18:52:45.818746"
+      },
+      "content": "**What** · Parse #51154 count-fix: patch EAR_TEST counter to count only valid 'ear' events (not all voice events), then assemble 3-real-human test set from Collin-enrolled and VCTK speakers. · **Why** · Brother-direct fix stops overcounting bug, aligns EAR with identity-tier semantics, and uses real heterogeneous voices for hard validation — unblocking Voice & Ears next phase. · **Result** · Count-fix applied in ear_engine.c: line 142-146 now incremented only on VOICE_EVENT_EAR; 3-speaker harness (Collin+2 VCTK) wired in test/voice_ears_hard_test.py with expected exact counts per utterance. · **Next** · Run harness, capture assertion output, then report pass/fail to Hermes-orchestrator for unblocked phase progression. · **Links** ·  · **Cycle** · code-20260619-185245",
+      "updated_at": "2026-06-19T18:52:45.818746"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-19T18:49:31.902013"
+    "checked_at": "2026-06-19T18:54:32.576405"
   },
-  "block_count": 33,
-  "updated_at": "2026-06-19T18:00:01.616860",
-  "generated_at": "2026-06-19T22:49:31Z"
+  "block_count": 34,
+  "updated_at": "2026-06-19T18:52:45.818746",
+  "generated_at": "2026-06-19T22:54:32Z"
 }
