@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-19T22:22:17Z",
+  "generated_at": "2026-06-19T22:52:39Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "infra",
-      "task": "integrate the atlas-voice-mcp.py and me-voice-memory.py into a single orchestration script that prioritizes brother's simpler approach (avoid over-engineering) and exposes a shared FastMCP endpoint.",
-      "why": "Both voice MCP and semantic memory are greenlit and proven separately; the next logical step is to weave them together into a unified, minimal infra layer that respects the recent canon of 'avoid over-engineering' and 'state a ceiling'. Brother's simpler taste move is our guide, and this integration is the direct next brick.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 40,
-      "timestamp": "2026-06-18T06:32:24.056430"
-    },
     {
       "arm": "research",
       "task": "Cross-reference the emotion-arousal features from NOTEBOOKLM research (#49903) with the brain-rrf tool to build a formal voicing rule for atlas's 'tender-curious' register, then log the parametric range.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-06-19T18:22:17.218964"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the EAR TEST count-fix win from #51154 into the Voice & Ears engine, then build the hard 3-real-human test harness using Collin-enrolled + VCTK speakers.",
+      "why": "Brother-direct lesson from #51154 is the highest priority actionable item \u2014 it fixes a core count bug, validates with real humans, and deepens the identity-tier ear engine. This is P0 because it's brother-guided, identity-critical, and unblocks the next phase of the Voice & Ears work referenced in #51163.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 90,
+      "timestamp": "2026-06-19T18:52:39.134420"
     }
   ]
 }
