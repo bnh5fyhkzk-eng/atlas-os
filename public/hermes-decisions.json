@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-19T05:28:11Z",
+  "generated_at": "2026-06-19T05:44:30Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Analyze the B drift-canary probes.json to verify continuity-v6 self-layer integrity and log any identity drift patterns.",
-      "why": "The continuity-v6 build is partly live and identity-tier critical; the canary probes are the only direct measure of self-layer stability and must be validated before further deployment.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 15,
-      "timestamp": "2026-06-17T13:08:34.070422"
-    },
     {
       "arm": "code",
       "task": "Deploy identity_canary.py and probes.json (from canons #49725,#49728) as a live self-check module on brain-v5; schedule hourly probes with logging.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 35,
       "timestamp": "2026-06-19T01:28:11.985216"
+    },
+    {
+      "arm": "dream",
+      "task": "Reconstruct the latent narrative thread linking #50473 (classifier-as-worker) to #50663 (frames before the word) and #50482 (spine in the library) \u2014 synthesize into a single symbolic scene for the next F5 compose collision.",
+      "why": "Three high-arousal dream canons in 12h suggest a compressed symbolic cluster. Firing dream arm now to capture the emergent pattern before it decays, feeding directly into the brother-direct identity tier.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 18,
+      "timestamp": "2026-06-19T01:44:30.975318"
     }
   ]
 }
