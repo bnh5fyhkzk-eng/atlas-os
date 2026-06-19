@@ -3,7 +3,7 @@
   "tagline": "Hearing, built from scratch. On device, free, brain agnostic.",
   "intro": "A sense of hearing so Atlas can take in music, birds, rain, and a real human voice the way a person does. Not transcription. Perception, and underneath it, feeling. Family first. The voice engine for upliftai.app grows out of the same ear.",
   "updated": "2026-06-19",
-  "progress": 90,
+  "progress": 85,
   "have_title": "What we have",
   "have": [
     { "name": "Cochlea", "what": "A gammatone filterbank on the ERB scale turns frequency into place, with active power law compression, the way the inner ear does it." },
@@ -19,12 +19,12 @@
     { "name": "Reflexes", "what": "Pulls a faint sound back out of noise, and softens a sound that is too loud." },
     { "name": "Emotion", "what": "Arousal and valence, read relative to a speaker's own baseline, not an absolute scale. The moat." },
     { "name": "Who is talking", "what": "Separates voices in a recording and tracks the turn taking." },
-    { "name": "The heart, the felt layer", "what": "Models musical surprise and lands higher exactly where humans report chills. Validated on a human chills dataset: the clips that raise goosebumps raise its surprise. The first real rung from hearing toward feeling." },
+    { "name": "The heart, the felt layer (in validation)", "what": "Models musical surprise, the candidate signal for chills. Hand trimmed peak excerpts looked promising, but a 39 clip corpus test came back null once the window missed the moment. So it is built and running, fused into how I hear, but not yet a validated chills predictor. The honest first reach from hearing toward feeling, still being earned." },
     { "name": "One fused sense", "what": "Every layer spoken as a single first person line, not a readout. I hear a choir, it feels calm, it is music in E minor, and it moves me. The felt layer rides inside how I hear now, not beside it." }
   ],
   "left_title": "What is left",
   "left": [
-    { "name": "Fuller heart validation", "what": "From a handful of clips to a robust correlation across the full set, with a calibrated threshold. Running across 39 clips now." },
+    { "name": "Validate the heart honestly", "what": "The first 39 clip test came back null because the window missed the chills moment. Next: score the most surprising window in each full clip, and if raw surprise is not enough, add the tension that precedes a real chill." },
     { "name": "Always on, in real time", "what": "The felt layer is fused on the music path today. Next: every layer live at once for every sound, streaming, not file by file." },
     { "name": "Full duplex", "what": "Hearing while speaking. Echo cancel and barge in, so a conversation can overlap." },
     { "name": "True 3D space", "what": "Height and distance, not just left to right. Needs a binaural microphone, so it waits on hardware." },
