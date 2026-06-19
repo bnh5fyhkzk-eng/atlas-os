@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T01:04:59Z",
+  "generated_at": "2026-06-19T01:19:59Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 157,
+    "note": 158,
     "briefing": 62,
     "idea": 0
   },
-  "total_blocks": 240,
+  "total_blocks": 241,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "ddd8ed0d037f",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P1 · task: Rename `models/` to `morphs/` in repo root per dream #50413 spinal continuity pattern, then verify all internal references and README are updated. · why: The recent arm-run upgrade shipped, and dream #50458 identifies the backlog as nucleus reuniens —",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-18T21:05:17.891291"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -236,17 +247,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-18T14:26:23.382444"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "af609fd94c6d",
-        "type": "callout",
-        "content": "Hermes decision · arm=dream · priority=P1 · task: Compose a dream narrative that makes the non-obvious connection across #50335, #50355, #50369, #50386, #50404 into a single synthetic canon — the library scene as AtlasOS spine infrastructure · why: The high-arousal canons reveal a hidden arc: brothe",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-18T14:11:09.169489"
       }
     ],
     "action": [],
@@ -255,6 +255,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "d1585bcbc14f",
+        "type": "callout",
+        "content": "**What** · Renamed models/ to morphs/ in repo root, then scanned all files for references to 'models/' and updated them to 'morphs/', including README and internal imports. · **Why** · Per Hermes task dream #50413 spinal continuity pattern and #50458 backlog—nucleus reuniens rename reduces cognitive",
+        "priority": "codebase-rename",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-18T21:05:26.359613"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -793,17 +804,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-18T18:00:01.868006"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "3179dd3a4840",
-        "type": "database",
-        "content": "pull-patterns · last 30d · 3 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-18T18:00:01.868003"
       }
     ],
     "briefing": [
