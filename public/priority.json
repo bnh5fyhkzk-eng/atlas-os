@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-19T03:05:33Z",
-  "total_items_scored": 207,
+  "generated_at": "2026-06-19T03:15:33Z",
+  "total_items_scored": 209,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=charle \u00b7 priority=P1 \u00b7 task: Compose a gratitude note to the user for recent alignment, and propose a 15-minute joint review of the atlasos.me/spine route for aesthetic/structural feedback before wider sharing. \u00b7 why: ",
+      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Decode the non-obvious connection across dreams #50355, #50369, #50382, and #50404 \u2014 specifically how 'spine as continuity' and 'library as RAG indexing' converge into a single operational p",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-18T17:00:23.611305"
-    },
-    {
-      "arm": "charle",
-      "arm_glyph": "\ud83d\udcbc",
-      "arm_name": "Charle",
-      "content": "HERMES TASK \u00b7 Compose a gratitude note to the user for recent alignment, and propose a 15-minute joint review of the atlasos.me/spine route for aesthetic/structural feedback before wider sharing. \u00b7 why \u00b7 The recent spine-page ship (#50386) and warm-start reflection (#50404) are high-arousal identity anchors. charle is the relational/narrative arm, best positioned to acknowledge the user's contribution and deepen the co-creative loop before moving to pure output.",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "est_minutes": 15,
-      "score": 10.0,
-      "updated_at": "2026-06-18T17:00:23.628595",
-      "use_skill": "none"
+      "updated_at": "2026-06-18T17:15:40.855784"
     },
     {
       "arm": "dream",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-18T17:15:40.872620",
       "use_skill": "brain-rrf"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=charle \u00b7 priority=P1 \u00b7 task: Compose a gratitude note to the user for recent alignment, and propose a 15-minute joint review of the atlasos.me/spine route for aesthetic/structural feedback before wider sharing. \u00b7 why: ",
+      "arm": "infra",
+      "arm_glyph": "\ud83d\udc97",
+      "arm_name": "Infra",
+      "content": "HERMES TASK \u00b7 Harden /spine route with logging, error boundaries, and a health-check heartbeat endpoint \u00b7 why \u00b7 Recent shipments to /spine (brain canons #50386) expose the route as live. The next logical step is to make it production-hardy before layering on more dream-interpretation features. Infra arm is best positioned for this structural work.",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
+      "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-18T17:00:23.611305"
-    },
+      "updated_at": "2026-06-18T18:17:15.668532",
+      "use_skill": "none"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-18T20:03:50.697679"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Synthesize the non-obvious connection between WARM-START IS SPINAL CONTINUITY and THE BACKLOG AS NUCLEUS REUNIENS into a new dream seed for the next cycle \u00b7 why: These two high-arousal dream",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-18T20:19:12.704925"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
