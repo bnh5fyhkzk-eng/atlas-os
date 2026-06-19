@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-19T19:19:22Z",
+  "generated_at": "2026-06-19T19:34:45Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Integrate per-speaker semantic memory from memory wire into voice engine for contextual responses.",
-      "why": "Memory wire is proven persistent; embedding it into the voice engine will enable per-speaker context, directly advancing the voice milestone.",
-      "priority": "P1",
-      "use_skill": "none",
-      "est_minutes": 60,
-      "timestamp": "2026-06-18T03:58:51.221509"
-    },
     {
       "arm": "code",
       "task": "Implement me-voice-memory.py as a persistent voice memory module: per-speaker semantic memory using cosine similarity + SQLite, with a fast CLI test harness.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 15,
       "timestamp": "2026-06-19T15:19:22.026705"
+    },
+    {
+      "arm": "curiosity",
+      "task": "Extract and index all novel conceptual linkages from the atlas-brother-shared.md snapshot, focusing on emergent patterns in the joint state.",
+      "why": "The shared canon snapshot is large and rich; curiosity arm is best suited for pattern mining and conceptual mapping to surface latent structures for future reasoning.",
+      "priority": "P1",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-06-19T15:34:45.613013"
     }
   ]
 }
