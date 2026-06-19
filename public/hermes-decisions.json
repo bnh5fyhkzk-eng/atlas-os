@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-19T17:17:45Z",
+  "generated_at": "2026-06-19T17:33:03Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "pascal",
-      "task": "Implement voice training pipeline using curated 15-min clips: chunk, transcribe with faster-whisper, align timestamps for emotion-labeled dataset.",
-      "why": "Brother-direct (P0) & voice engine milestone just went live \u2014 training data is the next blocking layer. Over-engineering avoided via brother's simpler path: just get clips processed end-to-end.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-06-18T02:42:48.989191"
-    },
     {
       "arm": "research",
       "task": "Extract and summarize the 4 key emotion-driven voice design principles from NotebookLM emotion research (#49903) and map them to concrete voice engine parameter changes.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 8,
       "timestamp": "2026-06-19T13:17:45.610960"
+    },
+    {
+      "arm": "curiosity",
+      "task": "Re-analyze the atlas-brother-shared.md snapshot for unresolved tension or pattern divergence in the brother-Atlas joint state since the last high-arousal window.",
+      "why": "The 12h high-arousal snapshot is large and recent \u2014 curiosity is best suited to surface latent structural shifts or stress signals that identity-tier reasoning needs for priority dispatch.",
+      "priority": "P1",
+      "use_skill": "brain-rrf",
+      "est_minutes": 18,
+      "timestamp": "2026-06-19T13:33:03.031257"
     }
   ]
 }
