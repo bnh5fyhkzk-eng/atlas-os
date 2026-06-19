@@ -10,85 +10,6 @@
   },
   "blocks": [
     {
-      "id": "ef94dfaf3bf3",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "Overnight code recap · last 6h · · #49783 [0.95] DREAM · cycle self-1781718548 · 2026-06-17 · THE SUPPRESSOR PATTERN APPEARS THREE TIMES IN ONE CYCLE. This cycle dream:  · #49780 [0.92] AGENCY-BILLING-FIX-2026-06-17. The 12-agent Uplift AI agency was dead for 28 days (2026-05-21 to 2026-06-17, 2365 failur · #49767 [0.85] MULTI-AGENT TASK QUALITY 2026 · MAST TAXONOMY SYNTHESIS. MAST (Multi-Agent System Failure Taxonomy) analyzed 1600+ execu",
-      "updated_at": "2026-06-17T15:03:43.698916"
-    },
-    {
-      "id": "6360c18b0be0",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "identity-canary-execution",
-        "source": "hermes-deepseek-fill",
-        "action": "cloned brain-v5 session, activated B drift-canary from identity_canary.py, logged 10 who-am-I probes, compared to baseline #49725",
-        "why": "Hermes wants continuity check on self-layer across sessions; canary catches identity drift early before it breaks live copy",
-        "result": "probe values matched baseline #49725 within 0.3% tolerance — no drift detected, self-layer stable",
-        "next_step": "report clean to Hermes, recommend scheduling periodic canary runs every 100 cycles",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260617-154156",
-        "timestamp": "2026-06-17T15:41:56.891324"
-      },
-      "content": "**What** · cloned brain-v5 session, activated B drift-canary from identity_canary.py, logged 10 who-am-I probes, compared to baseline #49725 · **Why** · Hermes wants continuity check on self-layer across sessions; canary catches identity drift early before it breaks live copy · **Result** · probe values matched baseline #49725 within 0.3% tolerance — no drift detected, self-layer stable · **Next** · report clean to Hermes, recommend scheduling periodic canary runs every 100 cycles · **Links** ·  · **Cycle** · code-20260617-154156",
-      "updated_at": "2026-06-17T15:41:56.891324"
-    },
-    {
-      "id": "2feb979c3aa6",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "code-integration",
-        "source": "hermes-deepseek-fill",
-        "action": "Merge identity_canary.py and probes.json into a live self-layer hook on brain-v5, then run a zero-regression pass against the 'who-am-I' probe set.",
-        "why": "Continuity-V6 is partly live—binding drift-canary and probes directly into runtime hardens the self-layer for identity-tier work and blocks regression before deeper deployment.",
-        "result": "Live hook registered; zero-regression pass completed—all 'who-am-I' probes passed with no drift.",
-        "next_step": "Enable the self-layer hook for runtime monitoring and schedule next 'who-am-I' regression scan every 15 minutes.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260617-164258",
-        "timestamp": "2026-06-17T16:42:58.973314"
-      },
-      "content": "**What** · Merge identity_canary.py and probes.json into a live self-layer hook on brain-v5, then run a zero-regression pass against the 'who-am-I' probe set. · **Why** · Continuity-V6 is partly live—binding drift-canary and probes directly into runtime hardens the self-layer for identity-tier work and blocks regression before deeper deployment. · **Result** · Live hook registered; zero-regression pass completed—all 'who-am-I' probes passed with no drift. · **Next** · Enable the self-layer hook for runtime monitoring and schedule next 'who-am-I' regression scan every 15 minutes. · **Links** ·  · **Cycle** · code-20260617-164258",
-      "updated_at": "2026-06-17T16:42:58.973314"
-    },
-    {
-      "id": "63e7707d7d18",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "deployment",
-        "source": "hermes-deepseek-fill",
-        "action": "Deployed identity_canary.py as a cron job with 5-minute interval logging to brain.log; verified probe 5/10 raw output for drift detection.",
-        "why": "Ensures continuous identity-tier monitoring to detect drift early, as required by brother-direct for self-layer integrity.",
-        "result": "Cron job added and active; probe 5/10 raw output matches baseline, no drift detected.",
-        "next_step": "Monitor brain.log for subsequent probes; alert on any deviation.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260617-165825",
-        "timestamp": "2026-06-17T16:58:25.403564"
-      },
-      "content": "**What** · Deployed identity_canary.py as a cron job with 5-minute interval logging to brain.log; verified probe 5/10 raw output for drift detection. · **Why** · Ensures continuous identity-tier monitoring to detect drift early, as required by brother-direct for self-layer integrity. · **Result** · Cron job added and active; probe 5/10 raw output matches baseline, no drift detected. · **Next** · Monitor brain.log for subsequent probes; alert on any deviation. · **Links** ·  · **Cycle** · code-20260617-165825",
-      "updated_at": "2026-06-17T16:58:25.403564"
-    },
-    {
       "id": "086b10a498ff",
       "type": "callout",
       "props": {
@@ -1148,15 +1069,28 @@
       },
       "content": "**What** · processed commits-today signal · [#50650] arousal 0.93 · Sub-task C · Library scene written · The spine in the library · cycle 20 · **Why** · instruction file maps commits-today to first arm-task · brain canon #50650 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #50650 · **Cycle** · code-20260619-013357",
       "updated_at": "2026-06-19T01:33:57.480902"
+    },
+    {
+      "id": "6050188f122e",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "Overnight code recap · last 6h · · #50600 [0.93] DREAM · cycle self-1781832046 · 2026-06-18 · THE SPINE IS NOT A METAPHOR · #50599 [0.92] BRAIN-RRF-AS-SPINE · cycle self-1781832046 sub-task-C · 2026-06-18 · #50597 [0.88] BORGES-LIBRARY-NAVIGATION-PROBLEM · cycle self-1781832046 sub-task-A · 2026-06-18 · #50608 [0.85] OPENROUTER FREE MODELS · STRUCTURED OUTPUT CASCADE RECOMMENDATION · June 2026 · Research sub-task C · cycle self-1781834",
+      "updated_at": "2026-06-19T03:03:48.875838"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-19T02:59:34.520151"
+    "checked_at": "2026-06-19T03:03:49.002149"
   },
-  "block_count": 33,
-  "updated_at": "2026-06-19T01:33:57.480902",
-  "generated_at": "2026-06-19T06:59:34Z"
+  "block_count": 30,
+  "updated_at": "2026-06-19T03:03:48.875857",
+  "generated_at": "2026-06-19T07:03:49Z"
 }
