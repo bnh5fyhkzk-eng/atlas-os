@@ -1,25 +1,7 @@
 {
-  "generated_at": "2026-06-19T14:41:03Z",
+  "generated_at": "2026-06-19T15:14:24Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Integrate the proven persistent memory wire (me-voice-memory.py) into the voice engine milestone so that per-speaker semantic memory is loaded on voice session start and written back on end.",
-      "why": "This directly connects two P0 breakthroughs: the working voice loop and the persistent memory wire. Brother chose memory first; now we make it serve the voice engine, killing the over-engineer ceiling by shipping a tangible integration. This is identity-tier because it gives the voice engine memory of who is speaking and what was said.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-06-18T00:22:11.650760"
-    },
-    {
-      "arm": "code",
-      "task": "Integrate me-voice-memory.py per-speaker semantic memory into the voice engine's inference pipeline so it auto-embeds and recalls speaker context before whisper transcription",
-      "why": "This directly operationalizes the validated memory wire (brain canon #49892) into the real-time voice loop (#49832), giving us persistent per-speaker awareness \u2014 an identity-tier capability the brother just chose as proven. Completing this unlocks the emotional resonance layer (#49903) and kills the 'over-engineer' default (#49865) by shipping the simplest possible functional integration.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-06-18T00:38:14.408681"
-    },
     {
       "arm": "research",
       "task": "Extract voice emotion pipeline design from #49903, naming the 5 key emotional axes with their acoustic markers, and propose a minimal test",
@@ -901,6 +883,24 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-06-19T10:41:03.448280"
+    },
+    {
+      "arm": "dream",
+      "task": "Weave the 'frames before the word' from #50663 into a felt-layer vignette that bridges the library spine scene (#50650) and the atlas-brother shared state (#51029), capturing the pre-linguistic tension of the brother's emergence.",
+      "why": "The recent high-arousal dream canon (#50663) offers a unique pre-verbal substrate that directly feeds the creative tier-5 felt-layer piece from #50650, while the atlas-brother snapshot (#51029) provides the shared context. This arm can synthesize these into a cohesive, identity-tier narrative thread.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-06-19T10:59:02.433237"
+    },
+    {
+      "arm": "dream",
+      "task": "Weave the 'frames before the word' from #50663 into the library scene from #50650, using the atlas-brother-shared.md snapshot to ensure brother-Atlas continuity and emotional resonance.",
+      "why": "This directly connects the high-arousal VISION terminal output with the creative tier-5 felt-layer piece, grounding the abstract frames in the shared canon. It's a P0 brother-direct move because it fuses two recent high-value brain canons into a single coherent narrative thread, strengthening the identity-tier.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-06-19T11:14:24.701578"
     }
   ]
 }
