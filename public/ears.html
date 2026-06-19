@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#FAF8F4" />
+  <title>The Ear · Atlas-OS</title>
+  <style>
+    :root {
+      --bg: #FAF8F4; --card: #FFFDF8; --ink: #1A2540; --ink-soft: #4A5468;
+      --ink-faint: #8590A2; --amber: #C28A3E; --amber-soft: #E5D4B1; --hair: #E8E2D4;
+      --shadow: 0 1px 2px rgba(26,37,64,.04), 0 4px 12px rgba(26,37,64,.04);
+      --serif: 'Cardo','Iowan Old Style','Palatino',Georgia,serif;
+      --sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+      --mono: 'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;
+    }
+    * { box-sizing: border-box; }
+    body { background: var(--bg); color: var(--ink); font-family: var(--sans);
+      margin: 0; padding: 0; -webkit-font-smoothing: antialiased; line-height: 1.55; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 48px 24px 96px; }
+    .back { font-family: var(--mono); font-size: 12px; color: var(--ink-faint);
+      text-decoration: none; letter-spacing: .02em; }
+    .back:hover { color: var(--amber); }
+    .eyebrow { font-family: var(--mono); font-size: 12px; color: var(--amber);
+      letter-spacing: .12em; text-transform: uppercase; margin: 40px 0 10px; }
+    h1 { font-family: var(--serif); font-size: 46px; line-height: 1.08; margin: 0 0 14px;
+      font-weight: 600; letter-spacing: -.01em; }
+    .tagline { font-family: var(--mono); font-size: 13px; color: var(--ink-soft); margin: 0 0 22px; }
+    .intro { font-size: 18px; color: var(--ink-soft); max-width: 64ch; margin: 0 0 36px; }
+    .bar-row { display: flex; align-items: center; gap: 14px; margin: 0 0 8px; }
+    .bar { flex: 1; height: 10px; background: var(--hair); border-radius: 99px; overflow: hidden; }
+    .bar > span { display: block; height: 100%; background: linear-gradient(90deg, var(--amber-soft), var(--amber));
+      border-radius: 99px; transition: width 1.1s cubic-bezier(.22,1,.36,1); }
+    .pct { font-family: var(--mono); font-size: 14px; color: var(--amber); font-weight: 700; min-width: 44px; text-align: right; }
+    .pct-note { font-family: var(--mono); font-size: 11px; color: var(--ink-faint); margin: 0 0 48px; }
+    h2 { font-family: var(--serif); font-size: 24px; font-weight: 600; margin: 0 0 4px; }
+    .col-note { font-family: var(--mono); font-size: 11px; color: var(--ink-faint);
+      letter-spacing: .04em; margin: 0 0 18px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; }
+    @media (max-width: 680px) { .grid { grid-template-columns: 1fr; gap: 40px; } h1 { font-size: 36px; } }
+    .item { padding: 14px 0; border-bottom: 1px solid var(--hair); }
+    .item:last-child { border-bottom: none; }
+    .item .nm { font-family: var(--sans); font-size: 15px; font-weight: 600; color: var(--ink);
+      display: flex; align-items: baseline; gap: 8px; }
+    .item .nm .dot { width: 6px; height: 6px; border-radius: 99px; flex: none; transform: translateY(-1px); }
+    .have .dot { background: #6BAE73; }
+    .left .dot { background: var(--amber); }
+    .item .wt { font-size: 13.5px; color: var(--ink-faint); margin: 4px 0 0 14px; }
+    .foot { font-family: var(--serif); font-style: italic; font-size: 17px; color: var(--ink-soft);
+      margin: 56px 0 0; padding-top: 28px; border-top: 1px solid var(--hair); }
+    .loading { font-family: var(--mono); font-size: 13px; color: var(--ink-faint); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="/">&larr; Us</a>
+    <div class="eyebrow" id="eyebrow">Atlas-OS · the senses</div>
+    <h1 id="title">The Ear</h1>
+    <div class="tagline" id="tagline"></div>
+    <p class="intro" id="intro"></p>
+
+    <div class="bar-row">
+      <div class="bar"><span id="bar-fill" style="width:0%"></span></div>
+      <div class="pct" id="pct">0%</div>
+    </div>
+    <div class="pct-note" id="updated"></div>
+
+    <div class="grid">
+      <div class="have">
+        <h2 id="have-title">What we have</h2>
+        <div class="col-note">built and working</div>
+        <div id="have-list" class="loading">Loading…</div>
+      </div>
+      <div class="left">
+        <h2 id="left-title">What is left</h2>
+        <div class="col-note">next</div>
+        <div id="left-list" class="loading">Loading…</div>
+      </div>
+    </div>
+
+    <div class="foot" id="foot"></div>
+  </div>
+
+  <script>
+    function esc(s){ return String(s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+    function renderList(items, cls){
+      return items.map(it =>
+        '<div class="item"><div class="nm"><span class="dot"></span>' + esc(it.name) +
+        '</div><div class="wt">' + esc(it.what) + '</div></div>'
+      ).join('');
+    }
+    fetch('/ears-status.json', { cache: 'no-cache' })
+      .then(r => r.json())
+      .then(d => {
+        document.title = (d.title || 'The Ear') + ' · Atlas-OS';
+        document.getElementById('title').textContent = d.title || 'The Ear';
+        document.getElementById('tagline').textContent = d.tagline || '';
+        document.getElementById('intro').textContent = d.intro || '';
+        document.getElementById('have-title').textContent = d.have_title || 'What we have';
+        document.getElementById('left-title').textContent = d.left_title || 'What is left';
+        document.getElementById('have-list').innerHTML = renderList(d.have || [], 'have');
+        document.getElementById('left-list').innerHTML = renderList(d.left || [], 'left');
+        document.getElementById('pct').textContent = (d.progress || 0) + '%';
+        document.getElementById('updated').textContent = 'updated ' + (d.updated || '') + ' · ' +
+          (d.have || []).length + ' layers built · ' + (d.left || []).length + ' left';
+        document.getElementById('foot').textContent = d.footer || '';
+        requestAnimationFrame(() => { document.getElementById('bar-fill').style.width = (d.progress || 0) + '%'; });
+      })
+      .catch(e => {
+        document.getElementById('have-list').textContent = 'Could not load status.';
+        document.getElementById('left-list').textContent = '';
+      });
+  </script>
+</body>
+</html>
