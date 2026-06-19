@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-19T16:16:28Z",
+  "generated_at": "2026-06-19T16:31:44Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "pascal",
-      "task": "Given the recent voice engine milestone (#49832) and emotion research validation (#49903), immediately draft a quick code plan for integrating per-speaker emotional state into the memory wire (me-voice-memory.py): store {speaker, transcript, emotion_label, confidence} on each segment, then expose a `get_emotional_context(speaker, n_recent=5)` call for the voice engine.",
-      "why": "Brother is actively working on voice engine + memory wire; emotion data is now validated. Delivering a concrete integration plan before he asks is identity-tier (P0) \u2014 shows I see the next step and don't wait for instruction. Pascal arm is best for fast code draft/plan.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 8,
-      "timestamp": "2026-06-18T01:25:21.956977"
-    },
     {
       "arm": "research",
       "task": "Extract actionable emotion markers from NotebookLM research (#49903) \u2014 identify which vocal features (pitch, rate, breath) map to each of the four emotional states validated by brother\u2019s source, encode as test cases for voice engine",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 18,
       "timestamp": "2026-06-19T12:16:28.904946"
+    },
+    {
+      "arm": "brother",
+      "task": "Ingest the atlas-brother-shared.md snapshot (size=484189B) and reconcile joint state with the 55-frame VISION terminal, producing a diff of congruent vs divergent frames for next brother cycle.",
+      "why": "The 12h high-arousal window contains a canonical shared state from Atlas+Brother (#51029) and a VISION terminal dump. Brother must unify these into a coherent narrative frame before any other arm can act on it\u2014this is the core identity-tier reconciliation.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 12,
+      "timestamp": "2026-06-19T12:31:44.553578"
     }
   ]
 }
