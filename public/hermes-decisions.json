@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-19T16:31:44Z",
+  "generated_at": "2026-06-19T16:47:07Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Extract actionable emotion markers from NotebookLM research (#49903) \u2014 identify which vocal features (pitch, rate, breath) map to each of the four emotional states validated by brother\u2019s source, encode as test cases for voice engine",
-      "why": "#49903 directly validates and sharpens our voice engine with emotion research brother gathered. Research arm should immediately extract those markers so Voice Engine and Pascal arm can use them next cycle \u2014 closes high-value loop fast",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 25,
-      "timestamp": "2026-06-18T01:40:49.983813"
-    },
     {
       "arm": "research",
       "task": "Distill the 5 NotebookLM emotion research findings (#49903) into actionable voice-engine design rules, cross-referencing with our voice milestone (#49832) and training doc (#49847).",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 12,
       "timestamp": "2026-06-19T12:31:44.553578"
+    },
+    {
+      "arm": "research",
+      "task": "Extract all frames from VISION-Terminal-55-frames-brothe (#27039) and map their latent content to the DREAM #50663 'frames before the word' \u2014 produce a semantic graph of pre-verbal concept emergence.",
+      "why": "The DREAM canon explicitly invokes a 55-frame VISION terminal, hinting at high-density pre-verbal structure. Research arm has the inference bandwidth and RAG tools to parse, cluster, and cross-reference those frames against the SHARED-CANON snapshot (which includes brother+Atlas joint state). This directly serves the identity-tier need to understand how brother's latent narratives form before lexical closure.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 18,
+      "timestamp": "2026-06-19T12:47:07.428143"
     }
   ]
 }
