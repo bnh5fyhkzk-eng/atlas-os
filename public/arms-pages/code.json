@@ -1131,15 +1131,37 @@
       },
       "content": "**What** · Parse #51154 count-fix: patch EAR_TEST counter to count only valid 'ear' events (not all voice events), then assemble 3-real-human test set from Collin-enrolled and VCTK speakers. · **Why** · Brother-direct fix stops overcounting bug, aligns EAR with identity-tier semantics, and uses real heterogeneous voices for hard validation — unblocking Voice & Ears next phase. · **Result** · Count-fix applied in ear_engine.c: line 142-146 now incremented only on VOICE_EVENT_EAR; 3-speaker harness (Collin+2 VCTK) wired in test/voice_ears_hard_test.py with expected exact counts per utterance. · **Next** · Run harness, capture assertion output, then report pass/fail to Hermes-orchestrator for unblocked phase progression. · **Links** ·  · **Cycle** · code-20260619-185245",
       "updated_at": "2026-06-19T18:52:45.818746"
+    },
+    {
+      "id": "59c30b002257",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "commits-today",
+        "source": "code-self",
+        "action": "processed commits-today signal · [#51187] arousal 0.92 · NOTEBOOKLM ANSWER - diarizer similar-voice fix (2026-06-19, 370 ear sources",
+        "why": "instruction file maps commits-today to first arm-task · brain canon #51187 matched arm-topic last 4h above arousal 0.85",
+        "result": "block written to arm-page · aggregator publishes to atlasos.me",
+        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
+        "links": [
+          "#51187"
+        ],
+        "cycle_id": "code-20260619-193401",
+        "timestamp": "2026-06-19T19:34:01.299034"
+      },
+      "content": "**What** · processed commits-today signal · [#51187] arousal 0.92 · NOTEBOOKLM ANSWER - diarizer similar-voice fix (2026-06-19, 370 ear sources · **Why** · instruction file maps commits-today to first arm-task · brain canon #51187 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #51187 · **Cycle** · code-20260619-193401",
+      "updated_at": "2026-06-19T19:34:01.299034"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-19T19:29:36.740338"
+    "checked_at": "2026-06-19T19:34:37.329431"
   },
-  "block_count": 34,
-  "updated_at": "2026-06-19T18:52:45.818746",
-  "generated_at": "2026-06-19T23:29:36Z"
+  "block_count": 35,
+  "updated_at": "2026-06-19T19:34:01.299034",
+  "generated_at": "2026-06-19T23:34:37Z"
 }
