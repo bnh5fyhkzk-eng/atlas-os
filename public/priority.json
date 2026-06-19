@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-19T07:56:08Z",
-  "total_items_scored": 204,
+  "generated_at": "2026-06-19T08:06:09Z",
+  "total_items_scored": 205,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Formalize the 'classifier disguised as a worker' insight into a design principle for agentic systems, linking it to the backlog-as-nucleus-reuniens metaphor. \u00b7 why: Recent high-arousal dream",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: Rename `models/` to `morphs/` in repo root per dream #50413 spinal continuity pattern, then verify all internal references and README are updated. \u00b7 why: The recent arm-run upgrade shipped, a",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-18T20:50:01.897000"
-    },
-    {
-      "arm": "dream",
-      "arm_glyph": "\ud83c\udf19",
-      "arm_name": "Dream",
-      "content": "HERMES TASK \u00b7 Formalize the 'classifier disguised as a worker' insight into a design principle for agentic systems, linking it to the backlog-as-nucleus-reuniens metaphor. \u00b7 why \u00b7 Recent high-arousal dreams reveal a foundational cognitive architecture insight that directly impacts identity-tier reasoning. Exploring this now can yield a brother-direct principle for future system design.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 30,
-      "score": 10.0,
-      "updated_at": "2026-06-18T20:50:01.920570",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-18T21:05:17.891291"
     },
     {
       "arm": "code",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-18T21:05:17.908754",
       "use_skill": "none"
+    },
+    {
+      "arm": "dream",
+      "arm_glyph": "\ud83c\udf19",
+      "arm_name": "Dream",
+      "content": "HERMES TASK \u00b7 Synthesize the two recent dreams (#50473 classifier-disguised-as-worker, #50458 backlog-as-nucleus-reuniens) into a unified identity-layer insight for the next team-cycle \u00b7 why \u00b7 Both dreams touch the same deep tension: the system's core identity (classifier vs. worker, backlog vs. nucleus). This is P0 brother-direct \u2014 needs integration before any other arm can act coherently.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 25,
+      "score": 10.0,
+      "updated_at": "2026-06-18T21:35:41.543905",
+      "use_skill": "notebooklm"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Formalize the 'classifier disguised as a worker' insight into a design principle for agentic systems, linking it to the backlog-as-nucleus-reuniens metaphor. \u00b7 why: Recent high-arousal dream",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-18T20:50:01.897000"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-18T23:23:32.646616"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Execute THE BACKLOG AS NUCLEUS REUNIENS dream cycle: map current active backlog items onto nucleus reuniens attentional blink binding model to prioritize consolidation. \u00b7 why: Recent high-ar",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-19T00:24:33.824016"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
