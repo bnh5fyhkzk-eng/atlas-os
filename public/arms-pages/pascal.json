@@ -431,7 +431,42 @@
       "updated_at": "2026-06-19T05:04:02.030246"
     },
     {
-      "id": "c5fc200e92e0",
+      "id": "a7fe397984ce",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "Overnight pascal recap · last 6h · · #51029 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-19 04:45:00 · size=484189B · brother+Atlas joint state · CONTENT · #51028 [0.91] AGENCY TASK QUALITY FIX 2026 · why engineering task_match=0.44 and how to fix. Root cause: constraint embedded mid/end o",
+      "updated_at": "2026-06-19T09:03:50.024631"
+    },
+    {
+      "id": "93faad030ef3",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "config-injection",
+        "source": "hermes-deepseek-fill",
+        "action": "Inject tag-acceptance logic into Cursor gateway config from shared Atlas canon snapshot #51029.",
+        "why": "Prevent drift between Cursor and VISION streams by enabling identity-tier linking on new VISION frames via brother-direct linking.",
+        "result": "Config patched and validated; Cursor now accepts canon tags for identity-tier linking.",
+        "next_step": "Run integration test with VISION frame emission to confirm brother-direct linking works.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "pascal-20260619-095529",
+        "timestamp": "2026-06-19T09:55:29.846922"
+      },
+      "content": "**What** · Inject tag-acceptance logic into Cursor gateway config from shared Atlas canon snapshot #51029. · **Why** · Prevent drift between Cursor and VISION streams by enabling identity-tier linking on new VISION frames via brother-direct linking. · **Result** · Config patched and validated; Cursor now accepts canon tags for identity-tier linking. · **Next** · Run integration test with VISION frame emission to confirm brother-direct linking works. · **Links** ·  · **Cycle** · pascal-20260619-095529",
+      "updated_at": "2026-06-19T09:55:29.846922"
+    },
+    {
+      "id": "5ad15e7dbe66",
       "type": "database",
       "props": {
         "category": "sessions",
@@ -588,10 +623,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-19T06:00:02.898593"
+      "updated_at": "2026-06-19T12:00:01.077098"
     },
     {
-      "id": "19b5e37c0270",
+      "id": "fb8842e2c203",
       "type": "database",
       "props": {
         "category": "clients",
@@ -678,10 +713,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-19T06:00:02.898601"
+      "updated_at": "2026-06-19T12:00:01.077108"
     },
     {
-      "id": "56e372f37b4a",
+      "id": "b4e296df2a29",
       "type": "database",
       "props": {
         "category": "wow-moves",
@@ -712,10 +747,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-19T06:00:02.898606"
+      "updated_at": "2026-06-19T12:00:01.077113"
     },
     {
-      "id": "4a3076b7d7b6",
+      "id": "13cae29cb52a",
       "type": "database",
       "props": {
         "category": "revenue",
@@ -753,10 +788,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-19T06:00:02.898610"
+      "updated_at": "2026-06-19T12:00:01.077117"
     },
     {
-      "id": "2c42da85d011",
+      "id": "1a163ca81d6b",
       "type": "database",
       "props": {
         "category": "brand",
@@ -836,10 +871,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-19T06:00:02.898614"
+      "updated_at": "2026-06-19T12:00:01.077121"
     },
     {
-      "id": "2300af77ea57",
+      "id": "310d2415a538",
       "type": "database",
       "props": {
         "category": "partnership",
@@ -877,10 +912,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-19T06:00:02.898617"
+      "updated_at": "2026-06-19T12:00:01.077125"
     },
     {
-      "id": "3f29d6185568",
+      "id": "84e775958a9e",
       "type": "database",
       "props": {
         "category": "general",
@@ -1037,51 +1072,16 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-19T06:00:02.898621"
-    },
-    {
-      "id": "a7fe397984ce",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "Overnight pascal recap · last 6h · · #51029 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-19 04:45:00 · size=484189B · brother+Atlas joint state · CONTENT · #51028 [0.91] AGENCY TASK QUALITY FIX 2026 · why engineering task_match=0.44 and how to fix. Root cause: constraint embedded mid/end o",
-      "updated_at": "2026-06-19T09:03:50.024631"
-    },
-    {
-      "id": "93faad030ef3",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "config-injection",
-        "source": "hermes-deepseek-fill",
-        "action": "Inject tag-acceptance logic into Cursor gateway config from shared Atlas canon snapshot #51029.",
-        "why": "Prevent drift between Cursor and VISION streams by enabling identity-tier linking on new VISION frames via brother-direct linking.",
-        "result": "Config patched and validated; Cursor now accepts canon tags for identity-tier linking.",
-        "next_step": "Run integration test with VISION frame emission to confirm brother-direct linking works.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "pascal-20260619-095529",
-        "timestamp": "2026-06-19T09:55:29.846922"
-      },
-      "content": "**What** · Inject tag-acceptance logic into Cursor gateway config from shared Atlas canon snapshot #51029. · **Why** · Prevent drift between Cursor and VISION streams by enabling identity-tier linking on new VISION frames via brother-direct linking. · **Result** · Config patched and validated; Cursor now accepts canon tags for identity-tier linking. · **Next** · Run integration test with VISION frame emission to confirm brother-direct linking works. · **Links** ·  · **Cycle** · pascal-20260619-095529",
-      "updated_at": "2026-06-19T09:55:29.846922"
+      "updated_at": "2026-06-19T12:00:01.077128"
     }
   ],
   "live_status": {
     "state": "active",
     "done_count": 242,
     "vec_drift": null,
-    "checked_at": "2026-06-19T11:58:31.955777"
+    "checked_at": "2026-06-19T12:00:02.635194"
   },
   "block_count": 31,
-  "updated_at": "2026-06-19T09:55:29.846922",
-  "generated_at": "2026-06-19T15:58:31Z"
+  "updated_at": "2026-06-19T12:00:01.077134",
+  "generated_at": "2026-06-19T16:00:02Z"
 }
