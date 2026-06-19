@@ -1174,15 +1174,37 @@
       },
       "content": "Overnight infra recap · last 6h · · #50574 [0.91] DREAM · cycle autonomous-1781826557 · 2026-06-18 · THE CONSTRAINT IS THE NAVIGATION",
       "updated_at": "2026-06-18T21:03:47.857055"
+    },
+    {
+      "id": "a5b16f482539",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "system_validation",
+        "source": "hermes-deepseek-fill",
+        "action": "验证AGENCY-RUN MODEL CASCADE FIX的修复稳定性，检查相关日志与系统状态。",
+        "why": "依据Hermes-Orchestrator分配的P1优先级任务，需确认高优先级修复是否稳定、无回归。Infra臂最适合执行系统级验证与监控。",
+        "result": "检查了cascade模块最近24小时的日志、资源使用、错误率，修复后未见异常，系统稳定。",
+        "next_step": "继续监控24小时，若仍稳定则报告Hermes可关闭此任务。",
+        "links": [
+          ""
+        ],
+        "cycle_id": "infra-20260618-225305",
+        "timestamp": "2026-06-18T22:53:05.166207"
+      },
+      "content": "**What** · 验证AGENCY-RUN MODEL CASCADE FIX的修复稳定性，检查相关日志与系统状态。 · **Why** · 依据Hermes-Orchestrator分配的P1优先级任务，需确认高优先级修复是否稳定、无回归。Infra臂最适合执行系统级验证与监控。 · **Result** · 检查了cascade模块最近24小时的日志、资源使用、错误率，修复后未见异常，系统稳定。 · **Next** · 继续监控24小时，若仍稳定则报告Hermes可关闭此任务。 · **Links** ·  · **Cycle** · infra-20260618-225305",
+      "updated_at": "2026-06-18T22:53:05.166207"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-18T22:52:35.090297"
+    "checked_at": "2026-06-18T22:57:35.402703"
   },
-  "block_count": 30,
-  "updated_at": "2026-06-18T21:03:47.857063",
-  "generated_at": "2026-06-19T02:52:35Z"
+  "block_count": 31,
+  "updated_at": "2026-06-18T22:53:05.166207",
+  "generated_at": "2026-06-19T02:57:35Z"
 }
