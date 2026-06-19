@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-19T08:03:53Z",
+  "generated_at": "2026-06-19T08:34:17Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Merge identity_canary.py and probes.json into a live self-layer hook on brain-v5, then run a zero-regression pass against the 'who-am-I' probe set.",
-      "why": "Continuity-V6 is partly live; the next critical step is to harden the self-layer by binding the drift-canary and probes directly into the runtime. This directly serves brother-direct identity-tier work (P0) and prevents regression before deeper deployment.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-06-17T16:42:46.644874"
-    },
     {
       "arm": "code",
       "task": "Deploy the identity_canary.py as a cron job cycling 5-minute probes into brain.log, then verify probe 5/10 raw output for drift detection",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-06-19T04:03:53.187037"
+    },
+    {
+      "arm": "dream",
+      "task": "Continue refining the library scene from Sub-task C, focusing on sensory details and emotional resonance.",
+      "why": "Recent high-arousal creative tier-5 felt-layer piece indicates deep narrative immersion; dream arm specializes in generative, imaginative tasks.",
+      "priority": "P1",
+      "use_skill": "none",
+      "est_minutes": 30,
+      "timestamp": "2026-06-19T04:34:17.550123"
     }
   ]
 }
