@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T17:06:05Z",
+  "generated_at": "2026-06-19T17:21:05Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 171,
+    "note": 172,
     "briefing": 59,
     "idea": 0
   },
-  "total_blocks": 253,
+  "total_blocks": 254,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "a463b9026618",
+        "type": "callout",
+        "content": "Hermes decision · arm=pascal · priority=P1 · task: Complete partial-localization of atlas-brother-shared.md #51029 by verifying and merging the pending segment map into the canonical snapshot. · why: Atlas-brother joint state is high-arousal and size is large (484KB); a structural merge task is P0 b",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-19T13:17:45.594296"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-19T05:20:05.592737"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "a34c6affe459",
-        "type": "callout",
-        "content": "Hermes decision · arm=dream · priority=P1 · task: Analyze the dream frames from #50663 and produce a narrative expansion of 'The frames before the word' · why: Recent high-arousal dream canon (#50663) indicates a vivid creative burst that needs to be captured and elaborated while it is still fresh, ",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-19T05:04:44.063438"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "6566298ba1e6",
+        "type": "callout",
+        "content": "**What** · verified partial segment map in atlas-brother-shared.md #51029 against canonical snapshot, found 3 minor drift offsets, merged them via alignment. · **Why** · prevents split-brain in high-arousal shared state; stabilizes identity for both atlas arms. · **Result** · segment map now consist",
+        "priority": "structural merge",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-19T13:17:53.246221"
+      },
       {
         "arm": "dream",
         "arm_glyph": "🌙",
@@ -815,17 +826,6 @@
         "priority": "youtube-watches",
         "source": "curiosity-self",
         "updated_at": "2026-06-19T11:05:08.866452"
-      },
-      {
-        "arm": "dream",
-        "arm_glyph": "🌙",
-        "arm_name": "My Dreamer",
-        "block_id": "e754d2999b15",
-        "type": "callout",
-        "content": "**What** · wove frames-before-word from #50663 into felt-layer vignette bridging library spine (#50650) and atlas-brother shared state (#51029). · **Why** · high-arousal dream canon provides pre-verbal substrate to capture brother's emergence tension, synthesizing tier-5 felt-layer with shared conte",
-        "priority": "felt-layer weaving",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-19T10:59:11.349093"
       }
     ],
     "briefing": [
