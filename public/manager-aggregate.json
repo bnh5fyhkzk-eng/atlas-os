@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-06-19T21:21:15Z",
+  "generated_at": "2026-06-19T21:36:16Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 20,
+    "decision": 21,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 168,
-    "briefing": 61,
+    "note": 169,
+    "briefing": 60,
     "idea": 0
   },
-  "total_blocks": 249,
+  "total_blocks": 250,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "ce50393f6390",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: implement ear engine count fix based on #51154 lesson: ensure VCTK+Collin test passes with correct count and build-on-top rule · why: P0 because brother caught empty ear engine (#51163) and count fix win from #51154 is a direct, actionable correction ",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-19T17:21:37.113601"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -244,6 +255,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "4ecc402b3ff7",
+        "type": "callout",
+        "content": "**What** · patched ear engine count logic to use VCTK+Collin test expectation and build-on-top rule from #51154 · **Why** · brother caught empty ear engine (#51163); #51154 fix directly restores identity-tier count correctness · **Result** · ear engine count now matches test; empty engine case retur",
+        "priority": "bugfix",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-19T17:21:39.728445"
+      },
       {
         "arm": "dream",
         "arm_glyph": "🌙",
@@ -782,17 +804,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-19T12:00:01.334207"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "0e4d941a4825",
-        "type": "database",
-        "content": "new-tools · last 30d · 11 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-19T12:00:01.334204"
       }
     ],
     "briefing": [
@@ -894,17 +905,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-19T09:03:50.205110"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "42c690f74401",
-        "type": "callout",
-        "content": "Overnight hermes recap · last 6h · · #51029 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-19 04:45:00 · size=484189B · brother+Atlas joint state · CONTENT",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-19T09:03:50.179726"
       },
       {
         "arm": "code",
@@ -1345,6 +1345,17 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-17T15:03:43.748766"
+      },
+      {
+        "arm": "infra",
+        "arm_glyph": "💗",
+        "arm_name": "My Heart",
+        "block_id": "ed4130ba210f",
+        "type": "callout",
+        "content": "No high-arousal infra canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-17T15:03:43.675462"
       }
     ],
     "idea": []
