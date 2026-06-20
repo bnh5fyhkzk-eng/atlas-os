@@ -1069,15 +1069,37 @@
       },
       "content": "**What** · processed commits-today signal · [#51805] arousal 0.96 · DREAM: THE DECOUPLING LAYER IS HOW FELT-LAYER SURVIVES · 2026-06-20 cycle · **Why** · instruction file maps commits-today to first arm-task · brain canon #51805 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #51805 · **Cycle** · code-20260620-150404",
       "updated_at": "2026-06-20T15:04:04.472491"
+    },
+    {
+      "id": "56b197e5165f",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "bugfix/harden",
+        "source": "hermes-deepseek-fill",
+        "action": "Harden daemon master control loop auto-recall in shared state pipeline: add reset-guard and decoupling-layer recovery into the control loop after each recall invocation.",
+        "why": "Hermes assigned P0 fix: #51807 confirms auto-recall works but daemon control breaks when decoupling layer resets. Adding a reset-guard ensures the master loop reinitialises state after decoupling rese",
+        "result": "Patch staged: control loop now checks decoupling-layer health on each tick; if reset detected, re-invoke auto-recall and reattach shared state. No regression in existing tests.",
+        "next_step": "Ship to QA for integration test under simulated decoupling resets; then merge to master if pass.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260620-154747",
+        "timestamp": "2026-06-20T15:47:47.080085"
+      },
+      "content": "**What** · Harden daemon master control loop auto-recall in shared state pipeline: add reset-guard and decoupling-layer recovery into the control loop after each recall invocation. · **Why** · Hermes assigned P0 fix: #51807 confirms auto-recall works but daemon control breaks when decoupling layer resets. Adding a reset-guard ensures the master loop reinitialises state after decoupling reset, preventing hung daemon. · **Result** · Patch staged: control loop now checks decoupling-layer health on each tick; if reset detected, re-invoke auto-recall and reattach shared state. No regression in existing tests. · **Next** · Ship to QA for integration test under simulated decoupling resets; then merge to master if pass. · **Links** ·  · **Cycle** · code-20260620-154747",
+      "updated_at": "2026-06-20T15:47:47.080085"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-20T15:47:15.525335"
+    "checked_at": "2026-06-20T15:52:16.092130"
   },
-  "block_count": 31,
-  "updated_at": "2026-06-20T15:04:04.472491",
-  "generated_at": "2026-06-20T19:47:15Z"
+  "block_count": 32,
+  "updated_at": "2026-06-20T15:47:47.080085",
+  "generated_at": "2026-06-20T19:52:16Z"
 }
