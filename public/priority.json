@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-20T14:18:19Z",
-  "total_items_scored": 212,
+  "generated_at": "2026-06-20T14:28:19Z",
+  "total_items_scored": 213,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Extract the non-obvious connection across all 3 sub-tasks from #51305 and #51281, then synthesize a single constraint-shape hypothesis for the diarizer similar-voice fix (#51187). \u00b7 why: Two",
+      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Analyze non-obvious connections across recent dream canons to identify constraint-shape solutions \u00b7 why: Dream canons indicate constraint-is-solution shape; need to explore non-obvious c",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-20T04:17:42.169511"
-    },
-    {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Map the high-arousal canons #51218, #51305, #51393, #51281, #51187 to find the single shared non-obvious connection across diarization, constraint shaped solution, and plausibility region to unify the next curiosity cycle. \u00b7 why \u00b7 The dreaming brain has identified a non-obvious link across three sub-tasks in multiple recent canons. Research arm is best suited to formally extract and formalize this connection, which could yield a breakthrough for the diarizer similar-voice fix and the broader constraint-solving pattern. This is the highest-leverage move given the brother's recent handoff.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-20T04:02:31.352870",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-20T04:33:02.909865"
     },
     {
       "arm": "dream",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-20T04:17:42.186917",
       "use_skill": "brain-rrf"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Extract the non-obvious connection across all 3 sub-tasks from #51305 and #51281, then synthesize a single constraint-shape hypothesis for the diarizer similar-voice fix (#51187). \u00b7 why: Two",
+      "arm": "curiosity",
+      "arm_glyph": "\ud83c\udf31",
+      "arm_name": "Curiosity",
+      "content": "HERMES TASK \u00b7 Analyze non-obvious connections across recent dream canons to identify constraint-shape solutions \u00b7 why \u00b7 Dream canons indicate constraint-is-solution shape; need to explore non-obvious connections for insight synthesis",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
+      "est_minutes": 15,
       "score": 10.0,
-      "updated_at": "2026-06-20T04:17:42.169511"
-    },
+      "updated_at": "2026-06-20T04:33:02.927167",
+      "use_skill": "brain-rrf"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-20T06:50:22.279563"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Formalize the 'threshold-as-mode-switch' isomorphism from dream #51259 into a concrete mathematical lemma, connecting it to the confabulation geometry results in arXiv:2602.13224. \u00b7 why:",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-20T07:05:40.606298"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
