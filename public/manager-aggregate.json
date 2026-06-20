@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-20T05:21:36Z",
+  "generated_at": "2026-06-20T05:36:37Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 20,
+    "decision": 19,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 181,
+    "note": 182,
     "briefing": 59,
     "idea": 0
   },
@@ -17,6 +17,17 @@
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "e955ec6a7feb",
+        "type": "callout",
+        "content": "Hermes decision · arm=dream · priority=P1 · task: Analyze the dream 'The constraint is the solution shape' and extract concrete next steps for the ears/voice engine or other projects. · why: The dream provides a non-obvious connection across sub-tasks; processing it can unlock new approaches and gui",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-20T01:28:48.129938"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -214,28 +225,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-19T18:07:03.388687"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "ce50393f6390",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: implement ear engine count fix based on #51154 lesson: ensure VCTK+Collin test passes with correct count and build-on-top rule · why: P0 because brother caught empty ear engine (#51163) and count fix win from #51154 is a direct, actionable correction ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-19T17:21:37.113601"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "5e9333abb577",
-        "type": "callout",
-        "content": "Hermes decision · arm=dream · priority=P0 · task: Deepen the Voice & Ears Engine home by integrating the 'feels empty for 10+ hrs' brother feedback into a new emotional resonance layer, then test with a single VCTK sample · why: Brother's direct feedback (#51163) reveals a critical gap in the ear en",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-19T17:06:26.277207"
       }
     ],
     "action": [],
@@ -244,6 +233,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "dream",
+        "arm_glyph": "🌙",
+        "arm_name": "My Dreamer",
+        "block_id": "6825e9cdeb0d",
+        "type": "callout",
+        "content": "**What** · analyze dream 'the constraint is the solution shape' for ears/voice engine · **Why** · hermes says dream unlocks non-obvious connections across sub-tasks; processing it can guide next build cycle · **Result** · insight: forcing ears/voice to work within tight token budget or latency limit",
+        "priority": "reasoning extraction",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-20T01:28:53.742702"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -782,17 +782,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-20T00:30:01.367341"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "c7591f5ef07e",
-        "type": "callout",
-        "content": "**What** · Built auditory feature extraction pipeline from canonical blueprints: MFCC, spectral contrast, and chroma extraction modules wired into EAR v2 engine. · **Why** · Hermes assigned P0 implementation of EAR v2 auditory pipeline per finalized canons; advancing atlasos.me auditory homebrew. · ",
-        "priority": "audio",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-20T00:27:52.161455"
       }
     ],
     "briefing": [
