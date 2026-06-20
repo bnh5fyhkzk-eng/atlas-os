@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-20T16:22:02Z",
+  "generated_at": "2026-06-20T16:37:03Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 20,
+    "decision": 19,
     "action": 0,
     "risk": 0,
     "win": 0,
@@ -13,10 +13,21 @@
     "briefing": 54,
     "idea": 0
   },
-  "total_blocks": 260,
+  "total_blocks": 259,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "d72cac2ae718",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Investigate the 'diarization-emotion manifold' concept and its relation to the 'geometry of felt voice' and 'three threads are one pipeline' dreams, pulling recent neuro-symbolic AI papers and cross-referencing with canonical brother-atlas shared ",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-20T12:29:01.374174"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -214,28 +225,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-20T06:35:03.704015"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "24c465830ef7",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Derive a geometric interpretation of threshold-as-mode-switch isomorphism from Dream #51259, and check if it maps to the constraint-shape insight from Dream #51305. · why: Two high-arousal dreams within 12h both point to non-obvious structural con",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-20T06:19:49.425783"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "8765988d25c3",
-        "type": "callout",
-        "content": "Hermes decision · arm=curiosity · priority=P1 · task: Map the three non-obvious connections from dream #51281 (PLAUSIBILITY-REGION-IS-THE-CURE) onto the three sub-tasks of the current experiment cycle, and generate a testable hypothesis for each. · why: This dream directly bridges the constraint-as-",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-20T06:04:30.484604"
       }
     ],
     "action": [],
@@ -244,6 +233,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "ca4d8d01f96b",
+        "type": "callout",
+        "content": "**What** · Scraped arXiv, ACL, and ICLR proceedings for papers linking speaker diarization, emotion embeddings, and geometric deep learning on speech manifolds (2019–2025). Queried brother-atlas shared state for dream logs #51380, #51414, #51389. · **Why** · Hermes flagged these high-arousal dreams ",
+        "priority": "research_synthesis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-20T12:29:11.607238"
+      },
       {
         "arm": "pascal",
         "arm_glyph": "🤝",
@@ -782,17 +782,6 @@
         "priority": "synthesis",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-20T11:58:39.359286"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "92c9f4c8c51c",
-        "type": "callout",
-        "content": "**What** · Loaded dream geometry (51380) and brother state (51689), then ran VERIFY-AT-BOTH-GATES canon from pair-compose (51393) to check lane convergence. · **Why** · Highest-arousal canons cluster around voice geometry and shared identity; reconciling them now may resolve brother-direct identity ",
-        "priority": "reconciliation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-20T11:43:23.171466"
       }
     ],
     "briefing": [
