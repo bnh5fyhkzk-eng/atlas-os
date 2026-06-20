@@ -1179,15 +1179,37 @@
       },
       "content": "**What** · Cross-referenced EAR v2 MASTER SPEC with home-built Voice & Ears Engine component map. · **Why** · Hermes assigned P0 brother-direct task to reconcile formal spec and engine before compaction; identified tension between spec structure and engine's 'empty' feeling after 10+ hours. · **Result** · Three gaps found: (1) missing emotional prosody buffer in engine (spec requires multi-dimensional affect vector but engine only stores raw pitch/volume), (2) no attention-tag decay mechanism (engine lacks spec's 'ear-age' compaction pruning), (3) absent long-term resonance cache (engine drops episod · **Next** · Patch engine via three micro-surgery scripts: (a) add affect vector slot to voice frame, (b) implement logarithmic decay on attention tags, (c) wire episodic cache with ttl=12h. Then run compaction simulation. · **Links** ·  · **Cycle** · research-20260619-232655",
       "updated_at": "2026-06-19T23:26:55.362984"
+    },
+    {
+      "id": "3e829cec487c",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "spec-analysis",
+        "source": "hermes-deepseek-fill",
+        "action": "Read and summarized EAR-v2-MASTER-SPEC.md from ~/.claude/state/; extracted the unimplemented build step 'Implement EAR-v2 engine core: isochronous scheduling loop with adaptive priority decay'; cross-",
+        "why": "Hermes ordered absorption of canonical doc to focus momentum. The spec shows adaptive priority decay as the next unbuilt critical block; #51154 proves base loop works, so that's exactly the next delta",
+        "result": "Identified single immediate coding target: implement adaptive priority decay in the engine core, schedule this as a new module in the build pipeline.",
+        "next_step": "Hand this target to code-arm: write the isochronous decay function, wire it into the existing event loop, and add three new unit tests covering decay edge cases.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260619-235727",
+        "timestamp": "2026-06-19T23:57:27.261195"
+      },
+      "content": "**What** · Read and summarized EAR-v2-MASTER-SPEC.md from ~/.claude/state/; extracted the unimplemented build step 'Implement EAR-v2 engine core: isochronous scheduling loop with adaptive priority decay'; cross-referenced test win #51154 which confirmed the home-built engine's basic event loop passes, but the  · **Why** · Hermes ordered absorption of canonical doc to focus momentum. The spec shows adaptive priority decay as the next unbuilt critical block; #51154 proves base loop works, so that's exactly the next delta. · **Result** · Identified single immediate coding target: implement adaptive priority decay in the engine core, schedule this as a new module in the build pipeline. · **Next** · Hand this target to code-arm: write the isochronous decay function, wire it into the existing event loop, and add three new unit tests covering decay edge cases. · **Links** ·  · **Cycle** · research-20260619-235727",
+      "updated_at": "2026-06-19T23:57:27.261195"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-19T23:55:08.881882"
+    "checked_at": "2026-06-20T00:00:09.480395"
   },
-  "block_count": 33,
-  "updated_at": "2026-06-19T23:26:55.362984",
-  "generated_at": "2026-06-20T03:55:08Z"
+  "block_count": 34,
+  "updated_at": "2026-06-19T23:57:27.261195",
+  "generated_at": "2026-06-20T04:00:09Z"
 }
