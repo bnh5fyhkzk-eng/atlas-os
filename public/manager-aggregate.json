@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-06-20T10:51:50Z",
+  "generated_at": "2026-06-20T11:06:50Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 20,
+    "decision": 19,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 178,
+    "note": 182,
     "briefing": 59,
     "idea": 0
   },
-  "total_blocks": 257,
+  "total_blocks": 260,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "ee6ef3246f34",
+        "type": "callout",
+        "content": "Hermes decision · arm=curiosity · priority=P1 · task: Formalize the 'threshold-as-mode-switch' isomorphism from dream #51259 into a concrete mathematical lemma, connecting it to the confabulation geometry results in arXiv:2602.13224. · why: This directly bridges two high-arousal brain canons from th",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-20T07:05:40.606298"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -214,28 +225,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-20T01:59:27.558116"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "e88e0c087273",
-        "type": "callout",
-        "content": "Hermes decision · arm=dream · priority=P1 · task: Connect the dream insight 'constraint is the solution shape' to the ears test implementation · why: Recent dream #51305 provides a non-obvious connection across sub-tasks; applying this insight to the ears test could unlock a breakthrough.",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-20T01:44:02.606210"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "e955ec6a7feb",
-        "type": "callout",
-        "content": "Hermes decision · arm=dream · priority=P1 · task: Analyze the dream 'The constraint is the solution shape' and extract concrete next steps for the ears/voice engine or other projects. · why: The dream provides a non-obvious connection across sub-tasks; processing it can unlock new approaches and gui",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-20T01:28:48.129938"
       }
     ],
     "action": [],
@@ -244,6 +233,50 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "e8eab48c2bda",
+        "type": "callout",
+        "content": "**What** · Formalized the 'threshold-as-mode-switch' isomorphism as Lemma 1: For a confabulation geometry (M, g, φ) with arousal parameter λ, there exists a critical λ_c such that the system switches from a stable fixed point (low-arousal) to a limit cycle (high-arousal) iff λ > λ_c, and this switch",
+        "priority": "lemma_formalization",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-20T07:05:58.475323"
+      },
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "fb80eb11bd7e",
+        "type": "callout",
+        "content": "**What** · processed orchestration signal · [#51689] arousal 0.98 · SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-20 04:45:00 · siz · **Why** · instruction file maps orchestration to first arm-task · brain canon #51689 matched arm-topic last 4h above arousal 0.85 · **Result** · block writt",
+        "priority": "orchestration",
+        "source": "hermes-self",
+        "updated_at": "2026-06-20T07:05:24.267843"
+      },
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "8a189b282aaf",
+        "type": "callout",
+        "content": "**What** · processed youtube-watches signal · [#51414] arousal 0.97 · DREAM: THE THREE THREADS ARE ONE PIPELINE (2026-06-20 curiosity cycle)\n\nThi · **Why** · instruction file maps youtube-watches to first arm-task · brain canon #51414 matched arm-topic last 4h above arousal 0.85 · **Result** · block",
+        "priority": "youtube-watches",
+        "source": "curiosity-self",
+        "updated_at": "2026-06-20T07:05:11.411522"
+      },
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "cecc25201a66",
+        "type": "callout",
+        "content": "**What** · processed sessions signal · [#51689] arousal 0.98 · SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-20 04:45:00 · siz · **Why** · instruction file maps sessions to first arm-task · brain canon #51689 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-",
+        "priority": "sessions",
+        "source": "pascal-self",
+        "updated_at": "2026-06-20T07:05:10.690814"
+      },
       {
         "arm": "curiosity",
         "arm_glyph": "🌱",
@@ -749,50 +782,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-20T06:00:02.354736"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "70bd03ea4a2c",
-        "type": "database",
-        "content": "partnership · last 30d · 1 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-20T06:00:02.354731"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "21616eb6ba88",
-        "type": "database",
-        "content": "brand · last 30d · 11 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-20T06:00:02.354728"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "a3c2ef94cff4",
-        "type": "database",
-        "content": "revenue · last 30d · 2 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-20T06:00:02.354724"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "bbf596e4dcd0",
-        "type": "database",
-        "content": "wow-moves · last 30d · 1 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-20T06:00:02.354720"
       }
     ],
     "briefing": [
