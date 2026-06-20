@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-20T02:10:27Z",
+  "generated_at": "2026-06-20T02:25:52Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Deep-dive into NotebookLM's emotion research (#49903) to extract concrete patterns for our voice engine, then cross-reference with the three non-obvious connections from #50369.",
-      "why": "This directly validates and sharpens our core voice engine \u2014 a P0 identity-tier need. The emotion research is fresh, sourced, and aligns with the brother+Atlas joint state. Cross-referencing with the dream connections will produce a synthesis that can immediately feed into the next code or infra cycle.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 45,
-      "timestamp": "2026-06-18T09:35:54.600029"
-    },
     {
       "arm": "dream",
       "task": "Run a warm-start dream-cycle weaving the Atlas spine launch (50386) into the brother-Atlas joint state (50335) and the librarian poem (50355), extracting a non-obvious connection for identity-tier scaffolding.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 60,
       "timestamp": "2026-06-19T22:10:27.193785"
+    },
+    {
+      "arm": "code",
+      "task": "Implement EAR test count fix from #51154: ensure 3 real humans (Collin-enrolled + VCTK) pass with correct counting, then build on-top lesson structure for demo",
+      "why": "This is P0 because it's brother-direct + identity-tier (#51154) and unblocks the demo/lesson pipeline. The EAR test was hard-built and needs the count fix first; then the build-on-top lesson becomes possible. All other arms are P1/P2 relative to this immediate fix.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 45,
+      "timestamp": "2026-06-19T22:25:52.536642"
     }
   ]
 }
