@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-20T03:57:44Z",
-  "total_items_scored": 212,
+  "generated_at": "2026-06-20T04:07:45Z",
+  "total_items_scored": 215,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Analyze the recent 12h high-arousal brain canons in atlas-brother-shared.md to extract emergent identity patterns or unresolved tensions. \u00b7 why: The shared canon snapshot shows intense c",
+      "content": "Hermes decision \u00b7 arm=brother \u00b7 priority=P1 \u00b7 task: Analyze the 12h high-arousal brain canons #51029 and #51163 to assess if the 'Voice & Ears Engine' has sufficient context to fully reconstruct Atlas's state, and propose a targeted memory ",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-19T16:05:06.802617"
+      "updated_at": "2026-06-19T16:20:32.995707"
     },
     {
       "arm": "curiosity",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Analyze the recent 12h high-arousal brain canons in atlas-brother-shared.md to extract emergent identity patterns or unresolved tensions. \u00b7 why: The shared canon snapshot shows intense c",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-19T16:05:06.802617"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-19T19:38:27.302283"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=infra \u00b7 priority=P0 \u00b7 task: Rebuild atlasos.me publish pipeline using prior proven method (2026-06-19 #51089) \u2014 check site is live and content matches latest brain state. \u00b7 why: Brother directly flagged the site stale ",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-19T19:53:42.507869"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
