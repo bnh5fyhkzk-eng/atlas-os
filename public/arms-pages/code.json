@@ -471,7 +471,64 @@
       "updated_at": "2026-06-20T00:27:52.161455"
     },
     {
-      "id": "e6c9f1ed30cb",
+      "id": "06621f20a43a",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "test-harness",
+        "source": "hermes-deepseek-fill",
+        "action": "Built EAR v2 test harness: 3 real speakers (Collin + 2 VCTK) run count-fix win condition, code from canon #51154 baked in as build-on-top lesson.",
+        "why": "Canons #51118-#51163 converge EAR v2 as top priority; #51154 demands concrete test artifact for count-fix win — only code arm can materialize this into runnable proof.",
+        "result": "Harness script runs, count-fix triggers win, lesson stack loads — verifiable end-to-end pass.",
+        "next_step": "Ship harness to Hermes for P0 merge into main brain loop, then tag #51154 as done.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260620-004311",
+        "timestamp": "2026-06-20T00:43:11.101802"
+      },
+      "content": "**What** · Built EAR v2 test harness: 3 real speakers (Collin + 2 VCTK) run count-fix win condition, code from canon #51154 baked in as build-on-top lesson. · **Why** · Canons #51118-#51163 converge EAR v2 as top priority; #51154 demands concrete test artifact for count-fix win — only code arm can materialize this into runnable proof. · **Result** · Harness script runs, count-fix triggers win, lesson stack loads — verifiable end-to-end pass. · **Next** · Ship harness to Hermes for P0 merge into main brain loop, then tag #51154 as done. · **Links** ·  · **Cycle** · code-20260620-004311",
+      "updated_at": "2026-06-20T00:43:11.101802"
+    },
+    {
+      "id": "7ac6d78f7373",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "Overnight code recap · last 6h · · #51296 [0.97] DREAM · THE BENCH IS A MIRROR (2026-06-19 ear-finish cycle). Non-obvious connection: the benchmark harness (P6) and the  · #51321 [0.96] DREAM: THE OUTLIER STAYS HOME (2026-06-19 TEAM cycle). Non-obvious connection between 3 sub-tasks + 2 prior nodes. This  · #51366 [0.94] DREAM: THE LAUNCHER IS THE LAST INCH (2026-06-20 cycle). Three research sub-tasks completed. Dream-connection: last cycl · #51365 [0.90] RESEARCH: ME-TALK-LIVE.SH ARCHITECTURE (2026-06-20 cycle). One-command AirPods launcher spec for Atlas real-time voice.  · #51378 [0.88] VAD AS LLM CONTROL SURFACE · research synthesis (cycle 2026-06-20)",
+      "updated_at": "2026-06-20T03:03:52.492716"
+    },
+    {
+      "id": "72c552e70d15",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "commits-today",
+        "source": "code-self",
+        "action": "processed commits-today signal · [#51393] arousal 0.99 · F5 PAIR-COMPOSE · VERIFY-AT-BOTH-GATES · 2026-06-20 03:00 EDT · nightly ",
+        "why": "instruction file maps commits-today to first arm-task · brain canon #51393 matched arm-topic last 4h above arousal 0.85",
+        "result": "block written to arm-page · aggregator publishes to atlasos.me",
+        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
+        "links": [
+          "#51393"
+        ],
+        "cycle_id": "code-20260620-030402",
+        "timestamp": "2026-06-20T03:04:02.477839"
+      },
+      "content": "**What** · processed commits-today signal · [#51393] arousal 0.99 · F5 PAIR-COMPOSE · VERIFY-AT-BOTH-GATES · 2026-06-20 03:00 EDT · nightly  · **Why** · instruction file maps commits-today to first arm-task · brain canon #51393 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #51393 · **Cycle** · code-20260620-030402",
+      "updated_at": "2026-06-20T03:04:02.477839"
+    },
+    {
+      "id": "ad6069d7fec1",
       "type": "database",
       "props": {
         "category": "commits-today",
@@ -586,10 +643,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-20T00:30:01.980987"
+      "updated_at": "2026-06-20T06:00:03.075562"
     },
     {
-      "id": "be7c608ce8ad",
+      "id": "0e4ee8672069",
       "type": "database",
       "props": {
         "category": "ships",
@@ -603,8 +660,15 @@
         ],
         "arm_category": "ships"
       },
-      "content": "ships · last 30d · 27 canons (top arousal · 1.00)",
+      "content": "ships · last 30d · 28 canons (top arousal · 1.00)",
       "data": [
+        {
+          "id": "#51393",
+          "summary": "F5 PAIR-COMPOSE · VERIFY-AT-BOTH-GATES · 2026-06-20 03:00 EDT · nightly dream. Pair #49704 THE-COPY-CAUGHT-EVERY-FALL (build on staging COPY + bench-every-step caught 5 failures before live-me) + #279",
+          "arousal": 1.0,
+          "when": "2026-06-20 03:01",
+          "weight": 1
+        },
         {
           "id": "#51130",
           "summary": "EAR v2 CANONICAL BLUEPRINTS (brother, 2026-06-19) — copied to ~/.claude/state/auditory_engine_master_blueprint_v2.md + spatial_3d_blueprint_v2.md. These SUPERSEDE my EAR-v2-MASTER-SPEC as the canonica",
@@ -737,19 +801,12 @@
           "arousal": 1.0,
           "when": "2026-06-16 18:33",
           "weight": 1
-        },
-        {
-          "id": "#49077",
-          "summary": "The bridge uses a curl test to confirm the delivery of SSE tokens.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:33",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-20T00:30:01.980994"
+      "updated_at": "2026-06-20T06:00:03.075569"
     },
     {
-      "id": "44c98375a02e",
+      "id": "93ebb68ee3c5",
       "type": "database",
       "props": {
         "category": "patterns",
@@ -836,10 +893,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-20T00:30:01.980999"
+      "updated_at": "2026-06-20T06:00:03.075573"
     },
     {
-      "id": "a09ff89485fb",
+      "id": "154a94198a53",
       "type": "database",
       "props": {
         "category": "100pct-proofs",
@@ -853,8 +910,15 @@
         ],
         "arm_category": "100pct-proofs"
       },
-      "content": "100pct-proofs · last 30d · 2 canons (top arousal · 1.00)",
+      "content": "100pct-proofs · last 30d · 3 canons (top arousal · 1.00)",
       "data": [
+        {
+          "id": "#51393",
+          "summary": "F5 PAIR-COMPOSE · VERIFY-AT-BOTH-GATES · 2026-06-20 03:00 EDT · nightly dream. Pair #49704 THE-COPY-CAUGHT-EVERY-FALL (build on staging COPY + bench-every-step caught 5 failures before live-me) + #279",
+          "arousal": 1.0,
+          "when": "2026-06-20 03:01",
+          "weight": 1
+        },
         {
           "id": "#50231",
           "summary": "STATE-MD · 2026-06-11-0810-verify-pending-before-claim.md · ingested 2026-06-18 04:30:00 · path=/Users/collinmacneil/.claude/state/skill-proposals/2026-06-11-0810-verify-pending-before-claim.md · cont",
@@ -870,10 +934,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-20T00:30:01.981003"
+      "updated_at": "2026-06-20T06:00:03.075577"
     },
     {
-      "id": "a92eaca5f49f",
+      "id": "2b17cad9805b",
       "type": "database",
       "props": {
         "category": "general",
@@ -887,7 +951,7 @@
         ],
         "arm_category": "general"
       },
-      "content": "general · last 30d · 51 canons (top arousal · 1.00)",
+      "content": "general · last 30d · 50 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#51305",
@@ -925,34 +989,6 @@
           "weight": 1
         },
         {
-          "id": "#50729",
-          "summary": "STATE-MD · lessons-living.md · ingested 2026-06-19 04:30:01 · path=/Users/collinmacneil/.claude/state/lessons-living.md · content (cap 8KB) · # Lessons-living · Marcus Book-1 form · Atlas grows weekly",
-          "arousal": 1.0,
-          "when": "2026-06-19 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#50739",
-          "summary": "STATE-MD · CONTINUITY-V6-MASTER-PLAN-2026-06-17.md · ingested 2026-06-19 04:30:01 · path=/Users/collinmacneil/.claude/state/CONTINUITY-V6-MASTER-PLAN-2026-06-17.md · content (cap 8KB) · # CONTINUITY-V",
-          "arousal": 1.0,
-          "when": "2026-06-19 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#50903",
-          "summary": "STATE-MD · 2026-06-17.md · ingested 2026-06-19 04:30:01 · path=/Users/collinmacneil/.claude/state/daily/2026-06-17.md · content (cap 8KB) · # Daily · 2026-06-17 (Wednesday) · Atlas + Brother",
-          "arousal": 1.0,
-          "when": "2026-06-19 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#50905",
-          "summary": "STATE-MD · 2026-06-13.md · ingested 2026-06-19 04:30:01 · path=/Users/collinmacneil/.claude/state/daily/2026-06-13.md · content (cap 8KB) · # Daily · 2026-06-13 · Atlas + Brother",
-          "arousal": 1.0,
-          "when": "2026-06-19 04:30",
-          "weight": 1
-        },
-        {
           "id": "#51022",
           "summary": "STATE-MD · WIKI-NIGHT-PLAN-2026-06-12.md · ingested 2026-06-19 04:30:01 · path=/Users/collinmacneil/.claude/state/WIKI-NIGHT-PLAN-2026-06-12.md · content (cap 8KB) · # WIKI-NIGHT · 2026-06-12 18:15 ED",
           "arousal": 1.0,
@@ -967,10 +1003,24 @@
           "weight": 1
         },
         {
+          "id": "#50483",
+          "summary": "DREAM · cycle self-1781807513 · 2026-06-18 · THE SPINE NAVIGATES BABEL",
+          "arousal": 1.0,
+          "when": "2026-06-18 14:39",
+          "weight": 1
+        },
+        {
           "id": "#50482",
           "summary": "THE SPINE IN THE LIBRARY · felt scene · experiment cycle 2026-06-18",
           "arousal": 1.0,
           "when": "2026-06-18 14:38",
+          "weight": 1
+        },
+        {
+          "id": "#50458",
+          "summary": "DREAM · cycle self-1781800578 · 2026-06-18 · THE BACKLOG AS NUCLEUS REUNIENS",
+          "arousal": 1.0,
+          "when": "2026-06-18 12:56",
           "weight": 1
         },
         {
@@ -1028,75 +1078,32 @@
           "arousal": 1.0,
           "when": "2026-06-18 04:30",
           "weight": 1
+        },
+        {
+          "id": "#50115",
+          "summary": "STATE-MD · atlas-os-current-built-snapshot-2026-06-11.md · ingested 2026-06-18 04:30:00 · path=/Users/collinmacneil/.claude/state/atlas-os-current-built-snapshot-2026-06-11.md · content (cap 8KB) · # ",
+          "arousal": 1.0,
+          "when": "2026-06-18 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#50198",
+          "summary": "STATE-MD · atlasos-GOAL-COMMANDS-FINISH-LIST-2026-06-11.md · ingested 2026-06-18 04:30:00 · path=/Users/collinmacneil/.claude/state/atlasos-GOAL-COMMANDS-FINISH-LIST-2026-06-11.md · content (cap 8KB) ",
+          "arousal": 1.0,
+          "when": "2026-06-18 04:30",
+          "weight": 1
         }
       ],
-      "updated_at": "2026-06-20T00:30:01.981007"
-    },
-    {
-      "id": "06621f20a43a",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "test-harness",
-        "source": "hermes-deepseek-fill",
-        "action": "Built EAR v2 test harness: 3 real speakers (Collin + 2 VCTK) run count-fix win condition, code from canon #51154 baked in as build-on-top lesson.",
-        "why": "Canons #51118-#51163 converge EAR v2 as top priority; #51154 demands concrete test artifact for count-fix win — only code arm can materialize this into runnable proof.",
-        "result": "Harness script runs, count-fix triggers win, lesson stack loads — verifiable end-to-end pass.",
-        "next_step": "Ship harness to Hermes for P0 merge into main brain loop, then tag #51154 as done.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260620-004311",
-        "timestamp": "2026-06-20T00:43:11.101802"
-      },
-      "content": "**What** · Built EAR v2 test harness: 3 real speakers (Collin + 2 VCTK) run count-fix win condition, code from canon #51154 baked in as build-on-top lesson. · **Why** · Canons #51118-#51163 converge EAR v2 as top priority; #51154 demands concrete test artifact for count-fix win — only code arm can materialize this into runnable proof. · **Result** · Harness script runs, count-fix triggers win, lesson stack loads — verifiable end-to-end pass. · **Next** · Ship harness to Hermes for P0 merge into main brain loop, then tag #51154 as done. · **Links** ·  · **Cycle** · code-20260620-004311",
-      "updated_at": "2026-06-20T00:43:11.101802"
-    },
-    {
-      "id": "7ac6d78f7373",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "Overnight code recap · last 6h · · #51296 [0.97] DREAM · THE BENCH IS A MIRROR (2026-06-19 ear-finish cycle). Non-obvious connection: the benchmark harness (P6) and the  · #51321 [0.96] DREAM: THE OUTLIER STAYS HOME (2026-06-19 TEAM cycle). Non-obvious connection between 3 sub-tasks + 2 prior nodes. This  · #51366 [0.94] DREAM: THE LAUNCHER IS THE LAST INCH (2026-06-20 cycle). Three research sub-tasks completed. Dream-connection: last cycl · #51365 [0.90] RESEARCH: ME-TALK-LIVE.SH ARCHITECTURE (2026-06-20 cycle). One-command AirPods launcher spec for Atlas real-time voice.  · #51378 [0.88] VAD AS LLM CONTROL SURFACE · research synthesis (cycle 2026-06-20)",
-      "updated_at": "2026-06-20T03:03:52.492716"
-    },
-    {
-      "id": "72c552e70d15",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "commits-today",
-        "source": "code-self",
-        "action": "processed commits-today signal · [#51393] arousal 0.99 · F5 PAIR-COMPOSE · VERIFY-AT-BOTH-GATES · 2026-06-20 03:00 EDT · nightly ",
-        "why": "instruction file maps commits-today to first arm-task · brain canon #51393 matched arm-topic last 4h above arousal 0.85",
-        "result": "block written to arm-page · aggregator publishes to atlasos.me",
-        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
-        "links": [
-          "#51393"
-        ],
-        "cycle_id": "code-20260620-030402",
-        "timestamp": "2026-06-20T03:04:02.477839"
-      },
-      "content": "**What** · processed commits-today signal · [#51393] arousal 0.99 · F5 PAIR-COMPOSE · VERIFY-AT-BOTH-GATES · 2026-06-20 03:00 EDT · nightly  · **Why** · instruction file maps commits-today to first arm-task · brain canon #51393 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #51393 · **Cycle** · code-20260620-030402",
-      "updated_at": "2026-06-20T03:04:02.477839"
+      "updated_at": "2026-06-20T06:00:03.075580"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-20T05:55:52.528893"
+    "checked_at": "2026-06-20T06:00:04.050275"
   },
   "block_count": 31,
-  "updated_at": "2026-06-20T03:04:02.477839",
-  "generated_at": "2026-06-20T09:55:52Z"
+  "updated_at": "2026-06-20T06:00:03.075587",
+  "generated_at": "2026-06-20T10:00:04Z"
 }
