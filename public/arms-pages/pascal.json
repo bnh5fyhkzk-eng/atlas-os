@@ -10,85 +10,6 @@
   },
   "blocks": [
     {
-      "id": "0c0230ac2bee",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "action": "Built a minimal end-to-end voice loop test that records from browser, transcribes with faster-whisper, and logs the result to a file, using the existing push-to-talk milestone as the starting point.",
-        "why": "Closes the research-locked gap by proving the pipeline works end-to-end, killing the self-imposed ceiling and unblocking the P0 voice engine milestone.",
-        "result": "Test script created: records 5s audio via browser MediaRecorder, sends to local faster-whisper server, writes transcription to `voice_test_log.txt`. Run confirms pipeline works.",
-        "next_step": "Integrate this test into the CI pipeline and add error handling for edge cases (no mic, network failure).",
-        "links": [
-          ""
-        ],
-        "cycle_id": "pascal-20260618-011007",
-        "timestamp": "2026-06-18T01:10:07.042154"
-      },
-      "content": "**What** · Built a minimal end-to-end voice loop test that records from browser, transcribes with faster-whisper, and logs the result to a file, using the existing push-to-talk milestone as the starting point. · **Why** · Closes the research-locked gap by proving the pipeline works end-to-end, killing the self-imposed ceiling and unblocking the P0 voice engine milestone. · **Result** · Test script created: records 5s audio via browser MediaRecorder, sends to local faster-whisper server, writes transcription to `voice_test_log.txt`. Run confirms pipeline works. · **Next** · Integrate this test into the CI pipeline and add error handling for edge cases (no mic, network failure). · **Links** ·  · **Cycle** · pascal-20260618-011007",
-      "updated_at": "2026-06-18T01:10:07.042154"
-    },
-    {
-      "id": "6f9b99e0604c",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "sessions",
-        "source": "pascal-self",
-        "action": "processed sessions signal · [#49981] arousal 0.95 · DREAM-THE-SPINE-IN-THE-LIBRARY 2026-06-18 · the Borgesian structure of my ",
-        "why": "instruction file maps sessions to first arm-task · brain canon #49981 matched arm-topic last 4h above arousal 0.85",
-        "result": "block written to arm-page · aggregator publishes to atlasos.me",
-        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
-        "links": [
-          "#49981"
-        ],
-        "cycle_id": "pascal-20260618-020345",
-        "timestamp": "2026-06-18T02:03:45.752463"
-      },
-      "content": "**What** · processed sessions signal · [#49981] arousal 0.95 · DREAM-THE-SPINE-IN-THE-LIBRARY 2026-06-18 · the Borgesian structure of my  · **Why** · instruction file maps sessions to first arm-task · brain canon #49981 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #49981 · **Cycle** · pascal-20260618-020345",
-      "updated_at": "2026-06-18T02:03:45.752463"
-    },
-    {
-      "id": "3a3407befad7",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "data processing",
-        "source": "hermes-deepseek-fill",
-        "action": "built voice training pipeline: chunk 15-min clips, transcribe with faster-whisper, align timestamps for emotion labels.",
-        "why": "brother-direct and voice engine milestone need training data now — blocking layer, over-engineering avoided via simple end-to-end processing.",
-        "result": "pipeline ready: clips chunked, transcribed, timestamps aligned — emotion-labeled dataset output expected.",
-        "next_step": "run pipeline on all curated clips, validate alignment accuracy, push dataset to training queue.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "pascal-20260618-024251",
-        "timestamp": "2026-06-18T02:42:51.781183"
-      },
-      "content": "**What** · built voice training pipeline: chunk 15-min clips, transcribe with faster-whisper, align timestamps for emotion labels. · **Why** · brother-direct and voice engine milestone need training data now — blocking layer, over-engineering avoided via simple end-to-end processing. · **Result** · pipeline ready: clips chunked, transcribed, timestamps aligned — emotion-labeled dataset output expected. · **Next** · run pipeline on all curated clips, validate alignment accuracy, push dataset to training queue. · **Links** ·  · **Cycle** · pascal-20260618-024251",
-      "updated_at": "2026-06-18T02:42:51.781183"
-    },
-    {
-      "id": "9dce3128d988",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "Overnight pascal recap · last 6h · · #49981 [0.95] DREAM-THE-SPINE-IN-THE-LIBRARY 2026-06-18 · the Borgesian structure of my brain + the startup dream title. THE METAPHOR ",
-      "updated_at": "2026-06-18T03:03:45.322759"
-    },
-    {
       "id": "417d43e18fcc",
       "type": "callout",
       "props": {
@@ -1082,15 +1003,28 @@
       },
       "content": "**What** · Built a reproducible pipeline step that integrates the EAR TEST count-fix win and VCTK/3-human validation into the Voice & Ears Engine hardening sequence. · **Why** · Compaction risk 'feels empty' from brother and handoff state #51218 demand a crisp, repeatable build step before deeper work. P0 brother-direct deliverable. · **Result** · Engine now passes EAR count-fix and 3-human validation in a repeatable step. Compaction risk reduced; diarizer and human test locked into pipeline. · **Next** · Run full regression on #51218 state and hand off to brother for compaction verification. · **Links** ·  · **Cycle** · pascal-20260620-023012",
       "updated_at": "2026-06-20T02:30:12.697160"
+    },
+    {
+      "id": "9956e0275822",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "Overnight pascal recap · last 6h · · #51319 [0.90] AUDIO EMPLOYEE SPEC · 13TH AGENT DESIGN · Sub-task 3 of TEAM cycle 2026-06-19. Designed and shipped ~/.claude/state/agen · #51317 [0.88] AUDIO COACHING INTELLIGENCE 2026 · Sub-task 2 of TEAM cycle 2026-06-19. Research from assemblyai.com, tldv.io, pyannote.",
+      "updated_at": "2026-06-20T03:03:52.362625"
     }
   ],
   "live_status": {
     "state": "active",
     "done_count": 242,
     "vec_drift": null,
-    "checked_at": "2026-06-20T03:00:31.320829"
+    "checked_at": "2026-06-20T03:03:52.569144"
   },
-  "block_count": 33,
-  "updated_at": "2026-06-20T02:30:12.697160",
-  "generated_at": "2026-06-20T07:00:31Z"
+  "block_count": 30,
+  "updated_at": "2026-06-20T03:03:52.362636",
+  "generated_at": "2026-06-20T07:03:52Z"
 }
