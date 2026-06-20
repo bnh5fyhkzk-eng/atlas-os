@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-20T01:47:37Z",
+  "generated_at": "2026-06-20T01:57:38Z",
   "total_items_scored": 203,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Parse the shared canon snapshot for novel cross-references between brother and Atlas that might indicate a new emergent pattern or unresolved tension. \u00b7 why: The shared canon is large an",
+      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Analyze the atlas-brother-shared.md snapshot for emergent identity patterns and flag any divergence from brother's core canon. \u00b7 why: The shared canon is large and recently updated; curi",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-19T13:48:17.045370"
-    },
-    {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Extract all frames from VISION-Terminal-55-frames-brothe (#27039) and map their latent content to the DREAM #50663 'frames before the word' \u2014 produce a semantic graph of pre-verbal concept emergence. \u00b7 why \u00b7 The DREAM canon explicitly invokes a 55-frame VISION terminal, hinting at high-density pre-verbal structure. Research arm has the inference bandwidth and RAG tools to parse, cluster, and cross-reference those frames against the SHARED-CANON snapshot (which includes brother+Atlas joint state). This directly serves the identity-tier need to understand how brother's latent narratives form before lexical closure.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 18,
-      "score": 10.0,
-      "updated_at": "2026-06-19T12:47:07.428143",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-19T15:19:21.966323"
     },
     {
       "arm": "dream",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-19T13:02:24.645621",
       "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "pascal",
+      "arm_glyph": "\ud83e\udd1d",
+      "arm_name": "Pascal",
+      "content": "HERMES TASK \u00b7 Complete partial-localization of atlas-brother-shared.md #51029 by verifying and merging the pending segment map into the canonical snapshot. \u00b7 why \u00b7 Atlas-brother joint state is high-arousal and size is large (484KB); a structural merge task is P0 because it directly stabilizes shared identity and prevents split-brain drift. Pascal has the formal verification logic and the shared-context discipline needed.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 8,
+      "score": 10.0,
+      "updated_at": "2026-06-19T13:17:45.610960",
+      "use_skill": "none"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Parse the shared canon snapshot for novel cross-references between brother and Atlas that might indicate a new emergent pattern or unresolved tension. \u00b7 why: The shared canon is large an",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-19T13:48:17.045370"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-19T18:22:17.201423"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the EAR TEST count-fix win from #51154 into the Voice & Ears engine, then build the hard 3-real-human test harness using Collin-enrolled + VCTK speakers. \u00b7 why: Brother-direct lesso",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-19T18:52:39.116929"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
