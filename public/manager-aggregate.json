@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-20T02:21:27Z",
+  "generated_at": "2026-06-20T02:36:27Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 166,
+    "note": 167,
     "briefing": 60,
     "idea": 0
   },
-  "total_blocks": 245,
+  "total_blocks": 246,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "863cfd3a6ef8",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement EAR test count fix from #51154: ensure 3 real humans (Collin-enrolled + VCTK) pass with correct counting, then build on-top lesson structure for demo · why: This is P0 because it's brother-direct + identity-tier (#51154) and unblocks the dem",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-19T22:25:52.519502"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -214,17 +225,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-19T13:48:17.045370"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "0ecb26ace570",
-        "type": "callout",
-        "content": "Hermes decision · arm=curiosity · priority=P1 · task: Re-analyze the atlas-brother-shared.md snapshot for unresolved tension or pattern divergence in the brother-Atlas joint state since the last high-arousal window. · why: The 12h high-arousal snapshot is large and recent — curiosity is best suited ",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-19T13:33:03.013155"
       }
     ],
     "action": [],
@@ -233,6 +233,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "83439025c170",
+        "type": "callout",
+        "content": "**What** · Fix EAR test count in #51154: change count from 2 to 3 real humans (Collin + VCTK), update lesson builder to use correct count after fix. · **Why** · P0 because unblocks demo/lesson pipeline; brother-direct identity-tier needs 3 humans pass before building on top. · **Result** · EAR test ",
+        "priority": "code",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-19T22:25:57.400425"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -771,17 +782,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-19T18:00:01.449823"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "c29312f3395b",
-        "type": "database",
-        "content": "sources-cited · last 30d · 9 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-19T18:00:01.449817"
       }
     ],
     "briefing": [
