@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-20T12:36:54Z",
+  "generated_at": "2026-06-20T12:51:54Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 19,
+    "decision": 20,
     "action": 0,
     "risk": 0,
     "win": 0,
@@ -13,10 +13,21 @@
     "briefing": 59,
     "idea": 0
   },
-  "total_blocks": 264,
+  "total_blocks": 265,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "ca9b55d2e163",
+        "type": "callout",
+        "content": "Hermes decision · arm=curiosity · priority=P1 · task: Analyze recent dreams for cross-cutting themes and integrate with existing canons · why: Recent dreams show patterns of constraint geometry and mirroring; curiosity can synthesize these into actionable insights",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-20T08:37:43.408766"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -233,6 +244,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "77ad25f22a80",
+        "type": "callout",
+        "content": "**What** · dug through dream logs for constraint geometry and mirror patterns, cross-referenced with existing canon structures · **Why** · Hermes flagged these as P1; synthesis needed to turn dream noise into actionable insight for the system · **Result** · found three recurring motifs: bounded latt",
+        "priority": "pattern synthesis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-20T08:37:54.624003"
+      },
       {
         "arm": "curiosity",
         "arm_glyph": "🌱",
@@ -771,17 +793,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-20T06:00:02.630851"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "924946fded5e",
-        "type": "database",
-        "content": "pull-patterns · last 30d · 2 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-20T06:00:02.630847"
       }
     ],
     "briefing": [
