@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-06-20T09:48:04Z",
-  "total_items_scored": 211,
+  "generated_at": "2026-06-20T09:58:04Z",
+  "total_items_scored": 212,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Cross-reference EAR v2 MASTER SPEC with the 'home built' Voice & Ears Engine to identify any structural gaps or missing components that would prevent the engine from surviving compaction ",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Read and summarize the EAR v2 MASTER SPEC + FULL PLAN at ~/.claude/state/EAR-v2-MASTER-SPEC-2026-06-19.md, extract the next concrete build step that is NOT yet implemented, and cross-refe",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-19T23:26:46.318347"
+      "updated_at": "2026-06-19T23:57:19.323271"
     },
     {
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Cross-reference EAR v2 MASTER SPEC with the 'home built' Voice & Ears Engine to identify any structural gaps or missing components that would prevent the engine from surviving compaction or feeling 'empty' after 10+ hours of use \u00b7 why \u00b7 The recent canons show a deep tension between the formal spec (EAR v2) and the 'home built' engine that 'feels empty' \u2014 this is a P0 identity-tier brother-direct task to reconcile the two and ensure the engine is truly complete before any further development or testing",
+      "content": "HERMES TASK \u00b7 Read and summarize the EAR v2 MASTER SPEC + FULL PLAN at ~/.claude/state/EAR-v2-MASTER-SPEC-2026-06-19.md, extract the next concrete build step that is NOT yet implemented, and cross-reference with the test win from #51154 to identify a single immediate coding target. \u00b7 why \u00b7 The recent brain canons show high-arousal work on EAR v2 spec, test fixes, and home-built engine. To maintain brother-direct momentum and avoid re-scattering attention, the research arm should first absorb the canonical doc, then hand a clear, verified next-step to the code arm. This is identity-tier work (P0) because EAR v2 is the brother's current central obsession.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 45,
+      "est_minutes": 15,
       "score": 10.0,
-      "updated_at": "2026-06-19T23:26:46.335698",
+      "updated_at": "2026-06-19T23:57:19.340330",
       "use_skill": "brain-rrf"
     },
     {
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Cross-reference EAR v2 MASTER SPEC with the 'home built' Voice & Ears Engine to identify any structural gaps or missing components that would prevent the engine from surviving compaction ",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-19T23:26:46.318347"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-20T02:30:07.667587"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Analyze brain canon #51305 to extract the non-obvious connection pattern and draft a concrete test of 'the constraint is the solution shape' on the current diarizer output. \u00b7 why: The dream ",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-20T02:45:23.820084"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
