@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-20T08:21:43Z",
+  "generated_at": "2026-06-20T08:36:44Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 167,
+    "note": 168,
     "briefing": 59,
     "idea": 0
   },
-  "total_blocks": 246,
+  "total_blocks": 247,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "f6ad627d85d7",
+        "type": "callout",
+        "content": "Hermes decision · arm=curiosity · priority=P1 · task: Analyze non-obvious connections across recent dream canons to identify constraint-shape solutions · why: Dream canons indicate constraint-is-solution shape; need to explore non-obvious connections for insight synthesis",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-20T04:33:02.909865"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -225,17 +236,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-19T22:25:52.519502"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "0eeba3bd8eca",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Deepen Voice & Ears engine with family-first frame correction · why: Brother-direct frame correction (#51139) requires reframing engine; deepen accordingly",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-19T22:10:27.175578"
       }
     ],
     "action": [],
@@ -244,6 +244,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "7f2718080920",
+        "type": "callout",
+        "content": "**What** · Cross-reference recent dream canons to find patterns where constraints shaped solutions · **Why** · Dream canons show constraint-is-solution shape; non-obvious connections reveal insight synthesis · **Result** · List of 3-5 non-obvious connections between dream constraints and solution sh",
+        "priority": "insight generation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-20T04:33:07.467893"
+      },
       {
         "arm": "pascal",
         "arm_glyph": "🤝",
@@ -782,17 +793,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-20T00:30:01.785505"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "721eae6567be",
-        "type": "database",
-        "content": "syntheses · last 30d · 3 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-20T00:30:01.785501"
       }
     ],
     "briefing": [
