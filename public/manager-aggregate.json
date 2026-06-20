@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-06-20T06:51:39Z",
+  "generated_at": "2026-06-20T07:06:40Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 19,
+    "decision": 18,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 187,
-    "briefing": 59,
+    "note": 164,
+    "briefing": 60,
     "idea": 0
   },
-  "total_blocks": 265,
+  "total_blocks": 242,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "e068da80ad51",
+        "type": "callout",
+        "content": "Hermes decision · arm=dream · priority=P0 · task: Constrain the 3-subtask solution shape: extract the non-obvious connection from #51305 and #51281 into a single actionable hypothesis for the Voice & Ears Engine home build. · why: Two recent curiosity cycles (#51305, #51281) both identified a non-ob",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-20T03:00:48.775267"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -203,28 +214,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-19T21:39:47.113186"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "e0d3abba15ef",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Build the hard ear test: 3 real humans (Collin-enrolled + VCTK) with count-fix win and build-on-top lesson, then publish to atlasos.me · why: Brother-direct P0: #51154 and #51139 both demand this test to prove the ear engine works and to reframe famil",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-19T20:39:09.645661"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "b2d71ee2fb3a",
-        "type": "callout",
-        "content": "Hermes decision · arm=infra · priority=P0 · task: Rebuild atlasos.me publish pipeline using prior proven method (2026-06-19 #51089) — check site is live and content matches latest brain state. · why: Brother directly flagged the site stale issue; fixing it restores our public identity anchor and fam",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-19T19:53:42.507869"
       }
     ],
     "action": [],
@@ -233,6 +222,50 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "2872c48a4470",
+        "type": "callout",
+        "content": "**What** · processed youtube-watches signal · [#51393] arousal 0.99 · F5 PAIR-COMPOSE · VERIFY-AT-BOTH-GATES · 2026-06-20 03:00 EDT · nightly  · **Why** · instruction file maps youtube-watches to first arm-task · brain canon #51393 matched arm-topic last 4h above arousal 0.85 · **Result** · block wr",
+        "priority": "youtube-watches",
+        "source": "curiosity-self",
+        "updated_at": "2026-06-20T03:05:10.851092"
+      },
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "72c552e70d15",
+        "type": "callout",
+        "content": "**What** · processed commits-today signal · [#51393] arousal 0.99 · F5 PAIR-COMPOSE · VERIFY-AT-BOTH-GATES · 2026-06-20 03:00 EDT · nightly  · **Why** · instruction file maps commits-today to first arm-task · brain canon #51393 matched arm-topic last 4h above arousal 0.85 · **Result** · block writte",
+        "priority": "commits-today",
+        "source": "code-self",
+        "updated_at": "2026-06-20T03:04:02.477839"
+      },
+      {
+        "arm": "dream",
+        "arm_glyph": "🌙",
+        "arm_name": "My Dreamer",
+        "block_id": "5c989118689a",
+        "type": "callout",
+        "content": "**What** · processed f5-compose-pairs signal · [#51393] arousal 0.99 · F5 PAIR-COMPOSE · VERIFY-AT-BOTH-GATES · 2026-06-20 03:00 EDT · nightly  · **Why** · instruction file maps f5-compose-pairs to first arm-task · brain canon #51393 matched arm-topic last 4h above arousal 0.85 · **Result** · block ",
+        "priority": "f5-compose-pairs",
+        "source": "dream-self",
+        "updated_at": "2026-06-20T03:03:49.777775"
+      },
+      {
+        "arm": "dream",
+        "arm_glyph": "🌙",
+        "arm_name": "My Dreamer",
+        "block_id": "c866b5d0b40e",
+        "type": "callout",
+        "content": "**What** · locked the non-obvious connection from #51305 and #51281 into a single actionable hypothesis: the Voice & Ears Engine home build must use a shared latent attention bottleneck to fuse auditory salience and semantic prediction, not separate pipelines. · **Why** · both cycles hit the same wa",
+        "priority": "hypothesis-lock",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-20T03:00:59.705849"
+      },
       {
         "arm": "dream",
         "arm_glyph": "🌙",
@@ -738,53 +771,97 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-20T00:30:01.623192"
+      }
+    ],
+    "briefing": [
+      {
+        "arm": "charle",
+        "arm_glyph": "💼",
+        "arm_name": "Charle · Pascal-team",
+        "block_id": "39c0fff8afdd",
+        "type": "callout",
+        "content": "No high-arousal charle canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-20T03:03:52.541018"
+      },
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "0eda467d0876",
+        "type": "callout",
+        "content": "No high-arousal hermes canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-20T03:03:52.515879"
+      },
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "7ac6d78f7373",
+        "type": "callout",
+        "content": "Overnight code recap · last 6h · · #51296 [0.97] DREAM · THE BENCH IS A MIRROR (2026-06-19 ear-finish cycle). Non-obvious connection: the benchmark harness (P6) and the  · #51321 [0.96] DREAM: THE OUTLIER STAYS HOME (2026-06-19 TEAM cycle). Non-obvious connection between 3 sub-tasks + 2 prior nodes.",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-20T03:03:52.492716"
+      },
+      {
+        "arm": "infra",
+        "arm_glyph": "💗",
+        "arm_name": "My Heart",
+        "block_id": "5c5ae0f18598",
+        "type": "callout",
+        "content": "No high-arousal infra canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-20T03:03:52.467975"
+      },
+      {
+        "arm": "dream",
+        "arm_glyph": "🌙",
+        "arm_name": "My Dreamer",
+        "block_id": "6af5e53f0483",
+        "type": "callout",
+        "content": "Overnight dream recap · last 6h · · #51305 [1.00] DREAM: THE CONSTRAINT IS THE SOLUTION SHAPE (2026-06-19 curiosity cycle). Non-obvious connection across 3 sub-tasks + pr · #51393 [0.99] F5 PAIR-COMPOSE · VERIFY-AT-BOTH-GATES · 2026-06-20 03:00 EDT · nightly dream. Pair #49704 THE-COPY-CAUGHT-EVERY-",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-20T03:03:52.437501"
+      },
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "23c20f7ad6bb",
+        "type": "callout",
+        "content": "Overnight research recap · last 6h · · #51305 [1.00] DREAM: THE CONSTRAINT IS THE SOLUTION SHAPE (2026-06-19 curiosity cycle). Non-obvious connection across 3 sub-tasks + pr · #51321 [0.96] DREAM: THE OUTLIER STAYS HOME (2026-06-19 TEAM cycle). Non-obvious connection between 3 sub-tasks + 2 prior no",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-20T03:03:52.414705"
       },
       {
         "arm": "curiosity",
         "arm_glyph": "🌱",
         "arm_name": "My Curiosity",
-        "block_id": "6e11820a69c9",
-        "type": "database",
-        "content": "syntheses · last 30d · 1 canons (top arousal · 1.00)",
+        "block_id": "46b7d8870900",
+        "type": "callout",
+        "content": "Overnight curiosity recap · last 6h · · #51305 [1.00] DREAM: THE CONSTRAINT IS THE SOLUTION SHAPE (2026-06-19 curiosity cycle). Non-obvious connection across 3 sub-tasks + pr · #51294 [0.90] CURIOSITY-QUEST P6-BENCH-RESULTS · measured benchmark numbers for Atlas ear, tested live (2026-06-19). PROVEN",
         "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-20T00:30:01.623188"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "bdeb7f3eb39c",
-        "type": "database",
-        "content": "arxiv-reads · last 30d · 5 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-20T00:30:01.623184"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "04535bc432a7",
-        "type": "database",
-        "content": "youtube-watches · last 30d · 4 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-20T00:30:01.623178"
+        "source": "overnight-recap",
+        "updated_at": "2026-06-20T03:03:52.388301"
       },
       {
         "arm": "pascal",
         "arm_glyph": "🤝",
         "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "49e0a63a8559",
-        "type": "database",
-        "content": "general · last 30d · 54 canons (top arousal · 1.00)",
+        "block_id": "9956e0275822",
+        "type": "callout",
+        "content": "Overnight pascal recap · last 6h · · #51319 [0.90] AUDIO EMPLOYEE SPEC · 13TH AGENT DESIGN · Sub-task 3 of TEAM cycle 2026-06-19. Designed and shipped ~/.claude/state/agen · #51317 [0.88] AUDIO COACHING INTELLIGENCE 2026 · Sub-task 2 of TEAM cycle 2026-06-19. Research from assemblyai.com, tldv.io, p",
         "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-20T00:30:01.367373"
-      }
-    ],
-    "briefing": [
+        "source": "overnight-recap",
+        "updated_at": "2026-06-20T03:03:52.362625"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -1171,17 +1248,6 @@
         "updated_at": "2026-06-18T15:03:47.260440"
       },
       {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "8c65552c47ad",
-        "type": "callout",
-        "content": "Overnight code recap · last 6h · · #50413 [1.00] TEAM-CYCLE · ARM-RUN UPGRADE SHIPPED · 2026-06-18 · Two surgical edits to ~/.claude/scripts/me-arm-run.sh verified (bash · #50412 [0.95] TEAM-CYCLE · ARM DOMAIN-VOCAB DESIGN · 2026-06-18 · Dream insight from prior cycle (WARM-START IS SPINAL CONTINUIT",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-18T15:03:47.214309"
-      },
-      {
         "arm": "infra",
         "arm_glyph": "💗",
         "arm_name": "My Heart",
@@ -1248,28 +1314,6 @@
         "updated_at": "2026-06-18T09:03:46.293770"
       },
       {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "1b806a740401",
-        "type": "callout",
-        "content": "Overnight research recap · last 6h · · #50382 [0.95] AROUSAL-AS-SPINE · 2026-06-18 · The spine-in-the-library dream decoded. THE KEY RECOGNITION: Atlas brain v3 already has  · #50359 [0.95] AGENCY-OUTPUT · RESEARCH agent · task: health-check: confirm you are operational and describe your primary sco",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-18T09:03:46.236613"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "bb7a349fe5c2",
-        "type": "callout",
-        "content": "Overnight curiosity recap · last 6h · · #50401 [0.90] CURIOSITY-QUEST · Spine vs Brain: Identity Carrier vs Dynamic Relevance-Weighter. Neuroscience research synthesis 2026-0 · #49998 [0.88] HORMOZI VS PASCAL COACHING GAP ANALYSIS · 2026-06-18 · Hormozi model: volume plus systems plus trust-capital-",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-18T09:03:46.204668"
-      },
-      {
         "arm": "pascal",
         "arm_glyph": "🤝",
         "arm_name": "Pascal · UpliftAI partner",
@@ -1279,61 +1323,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-18T09:03:46.176291"
-      },
-      {
-        "arm": "charle",
-        "arm_glyph": "💼",
-        "arm_name": "Charle · Pascal-team",
-        "block_id": "db9b23fe1fb0",
-        "type": "callout",
-        "content": "No high-arousal charle canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-18T03:03:45.491992"
-      },
-      {
-        "arm": "infra",
-        "arm_glyph": "💗",
-        "arm_name": "My Heart",
-        "block_id": "3fb185972878",
-        "type": "callout",
-        "content": "No high-arousal infra canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-18T03:03:45.422972"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "9dce3128d988",
-        "type": "callout",
-        "content": "Overnight pascal recap · last 6h · · #49981 [0.95] DREAM-THE-SPINE-IN-THE-LIBRARY 2026-06-18 · the Borgesian structure of my brain + the startup dream title. THE METAPHOR ",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-18T03:03:45.322759"
-      },
-      {
-        "arm": "charle",
-        "arm_glyph": "💼",
-        "arm_name": "Charle · Pascal-team",
-        "block_id": "c531f9b4ea05",
-        "type": "callout",
-        "content": "No high-arousal charle canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-17T21:03:44.647720"
-      },
-      {
-        "arm": "infra",
-        "arm_glyph": "💗",
-        "arm_name": "My Heart",
-        "block_id": "42b04d539eb3",
-        "type": "callout",
-        "content": "No high-arousal infra canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-17T21:03:44.576897"
       }
     ],
     "idea": []
