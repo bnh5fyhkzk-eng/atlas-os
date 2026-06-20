@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-20T01:55:09Z",
+  "generated_at": "2026-06-20T02:10:27Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the /spine route on atlasos.me to serve the spine page shipped in #50386, ensuring it renders correctly and links to the MCP wrapper from #49896.",
-      "why": "The spine page is now live at atlasos.me/spine but needs the actual route implementation to serve it. This is a direct brother-requested task (P0) that bridges the shipped page and the proven MCP wrapper, making the infrastructure functional.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-06-18T09:20:45.504277"
-    },
     {
       "arm": "research",
       "task": "Deep-dive into NotebookLM's emotion research (#49903) to extract concrete patterns for our voice engine, then cross-reference with the three non-obvious connections from #50369.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-06-19T21:55:09.117484"
+    },
+    {
+      "arm": "research",
+      "task": "Deepen Voice & Ears engine with family-first frame correction",
+      "why": "Brother-direct frame correction (#51139) requires reframing engine; deepen accordingly",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 60,
+      "timestamp": "2026-06-19T22:10:27.193785"
     }
   ]
 }
