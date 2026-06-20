@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-20T09:28:03Z",
-  "total_items_scored": 210,
+  "generated_at": "2026-06-20T09:38:03Z",
+  "total_items_scored": 211,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Open EAR v2 canonical blueprint from ~/.claude/state/auditory_engine_master_blueprint_v2.md, parse the VAD noise-floor recalibration section, and implement the fix for the count-win tail-trim",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Cross-reference EAR v2 MASTER SPEC with the 'home built' Voice & Ears Engine to identify any structural gaps or missing components that would prevent the engine from surviving compaction ",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-19T23:11:33.896730"
-    },
-    {
-      "arm": "code",
-      "arm_glyph": "\u270b",
-      "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Open EAR v2 canonical blueprint from ~/.claude/state/auditory_engine_master_blueprint_v2.md, parse the VAD noise-floor recalibration section, and implement the fix for the count-win tail-trim bug in the test harness. \u00b7 why \u00b7 The #51154 test win shows the count fix works but needs build-on-top consolidation; the VAD noise-floor spec is the next brittle piece blocking the canonical blueprint's P0 goal. Code arm is the only one that can turn the blueprint into runnable reality.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-19T23:11:33.913588",
-      "use_skill": "none"
+      "updated_at": "2026-06-19T23:26:46.318347"
     },
     {
       "arm": "research",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-19T23:26:46.335698",
       "use_skill": "brain-rrf"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Open EAR v2 canonical blueprint from ~/.claude/state/auditory_engine_master_blueprint_v2.md, parse the VAD noise-floor recalibration section, and implement the fix for the count-win tail-trim",
+      "arm": "code",
+      "arm_glyph": "\u270b",
+      "arm_name": "Code",
+      "content": "HERMES TASK \u00b7 Implement the next module of EAR v2: auditory feature extraction pipeline based on canonical blueprints \u00b7 why \u00b7 Recent canons finalized EAR v2 spec and blueprints; code arm should execute the build to advance the auditory engine home-built in atlasos.me",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 120,
       "score": 10.0,
-      "updated_at": "2026-06-19T23:11:33.896730"
-    },
+      "updated_at": "2026-06-20T00:27:49.679806",
+      "use_skill": "none"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-20T02:14:49.854042"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P0 \u00b7 task: Integrate the EAR TEST count-fix win and VCTK/3-human validation into a reproducible pipeline step, hardening the atlasos.me home-built Voice & Ears Engine against compaction. \u00b7 why: This i",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-20T02:30:07.667587"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
