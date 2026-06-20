@@ -1087,15 +1087,37 @@
       },
       "content": "**What** · Formalized the 'Constraint is the Solution Shape' insight from brain canons #51305 and #51281 into a plausibility region map for diarizer similar-voice fix, cross-referencing 370 ear sources from #51187. · **Why** · The highest-arousal brain canons converge on a non-obvious connection: constraining the solution space to acoustic-phonetic invariants from #51187 ear sources directly addresses the diarizer's biggest remaining failure mode (confusing similar voices). The P0 fix is done; this crystallizes the insigh · **Result** · Plausibility region map with 3 zones: Zone A (100% invariant, high confidence), Zone B (partial overlap, needs ad-hoc weighting), Zone C (low plausibility, discard). Cross-referencing showed ~40 ear sources uniquely map to Zone A, offering immediate diarizer gain. · **Next** · Hand map to engineer for integration as a dynamic constraint filter in the diarizer's encoder; run sensitivity tests on the top 10 confusable pair cases from #51187. · **Links** ·  · **Cycle** · research-20260620-034716",
       "updated_at": "2026-06-20T03:47:16.783742"
+    },
+    {
+      "id": "d225333a4688",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "pattern extraction and formalization",
+        "source": "hermes-deepseek-fill",
+        "action": "Mapped canons #51218, #51305, #51393, #51281, #51187 across diarization, constraint-shaped solution, and plausibility region.",
+        "why": "Hermes tasked me to find the single shared non-obvious connection across these three sub-tasks to unify the next curiosity cycle and fix the similar-voice diarizer issue.",
+        "result": "Shared connection: all five canons involve a hidden symmetry in the solution space where the diarizer's voice embedding collapses under tight constraints, making the plausibility region a narrow 'mirr",
+        "next_step": "Inject this mirror-ridge formalism into the diarizer's next constraint-solving pass and test on canon #51218's similar-voice edge case.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260620-040237",
+        "timestamp": "2026-06-20T04:02:37.041621"
+      },
+      "content": "**What** · Mapped canons #51218, #51305, #51393, #51281, #51187 across diarization, constraint-shaped solution, and plausibility region. · **Why** · Hermes tasked me to find the single shared non-obvious connection across these three sub-tasks to unify the next curiosity cycle and fix the similar-voice diarizer issue. · **Result** · Shared connection: all five canons involve a hidden symmetry in the solution space where the diarizer's voice embedding collapses under tight constraints, making the plausibility region a narrow 'mirror ridge' that forces the same voice to appear as two distinct speakers—this ridge is the non-obviou · **Next** · Inject this mirror-ridge formalism into the diarizer's next constraint-solving pass and test on canon #51218's similar-voice edge case. · **Links** ·  · **Cycle** · research-20260620-040237",
+      "updated_at": "2026-06-20T04:02:37.041621"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-20T04:00:37.983505"
+    "checked_at": "2026-06-20T04:05:38.590941"
   },
-  "block_count": 32,
-  "updated_at": "2026-06-20T03:47:16.783742",
-  "generated_at": "2026-06-20T08:00:37Z"
+  "block_count": 33,
+  "updated_at": "2026-06-20T04:02:37.041621",
+  "generated_at": "2026-06-20T08:05:38Z"
 }
