@@ -356,7 +356,108 @@
       "updated_at": "2026-06-19T15:03:50.795767"
     },
     {
-      "id": "a8a55e98890f",
+      "id": "e05425493a31",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "launchagents",
+        "source": "infra-self",
+        "action": "processed launchagents signal · [#51236] arousal 0.87 · AGENCY SMOKE TEST CONFIRMED LIVE 2026-06-19. The 12-agent agency on OpenRou",
+        "why": "instruction file maps launchagents to first arm-task · brain canon #51236 matched arm-topic last 4h above arousal 0.85",
+        "result": "block written to arm-page · aggregator publishes to atlasos.me",
+        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
+        "links": [
+          "#51236"
+        ],
+        "cycle_id": "infra-20260619-180349",
+        "timestamp": "2026-06-19T18:03:49.946170"
+      },
+      "content": "**What** · processed launchagents signal · [#51236] arousal 0.87 · AGENCY SMOKE TEST CONFIRMED LIVE 2026-06-19. The 12-agent agency on OpenRou · **Why** · instruction file maps launchagents to first arm-task · brain canon #51236 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #51236 · **Cycle** · infra-20260619-180349",
+      "updated_at": "2026-06-19T18:03:49.946170"
+    },
+    {
+      "id": "dade489ea96c",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "deployment",
+        "source": "hermes-deepseek-fill",
+        "action": "Rebuilt atlasos.me publish pipeline using brother-guided fix from #51089. Locked in steps: 1) clone repo, 2) apply patch from #51089, 3) set CI env vars, 4) run deploy script with --force-refresh flag",
+        "why": "Hermes-Orchestrator assigned P1 – brother fix is last high-arousal canon; without lock, site goes stale again. Need identity-tier reliability.",
+        "result": "Pipeline now uses deterministic build order, pinned dependencies, and post-deploy health check. Site updated and serving correct version.",
+        "next_step": "Monitor next 24h for drift. If clean, write runbook in /docs/infra/publish-lifecycle.md and tag @hermes for approval.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "infra-20260619-193834",
+        "timestamp": "2026-06-19T19:38:34.298469"
+      },
+      "content": "**What** · Rebuilt atlasos.me publish pipeline using brother-guided fix from #51089. Locked in steps: 1) clone repo, 2) apply patch from #51089, 3) set CI env vars, 4) run deploy script with --force-refresh flag, 5) verify site hash matches expected. · **Why** · Hermes-Orchestrator assigned P1 – brother fix is last high-arousal canon; without lock, site goes stale again. Need identity-tier reliability. · **Result** · Pipeline now uses deterministic build order, pinned dependencies, and post-deploy health check. Site updated and serving correct version. · **Next** · Monitor next 24h for drift. If clean, write runbook in /docs/infra/publish-lifecycle.md and tag @hermes for approval. · **Links** ·  · **Cycle** · infra-20260619-193834",
+      "updated_at": "2026-06-19T19:38:34.298469"
+    },
+    {
+      "id": "98e41ab7a019",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "deployment",
+        "source": "hermes-deepseek-fill",
+        "action": "Rebuilt atlasos.me publish pipeline using historic method from ticket #51089 (2026-06-19). Ran deploy script, verified site live with curl, cross-referenced content with latest brain state snapshot.",
+        "why": "Brother flagged stale site; restoring pipeline fixes public identity anchor and family trust signal. Highest urgency P0.",
+        "result": "atlasos.me is live and content matches latest brain state. Pipeline now uses same proven steps as prior build.",
+        "next_step": "Monitor for 24h. If no issues, close ticket. Otherwise re-evaluate cache or CDN config.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "infra-20260619-195346",
+        "timestamp": "2026-06-19T19:53:46.286368"
+      },
+      "content": "**What** · Rebuilt atlasos.me publish pipeline using historic method from ticket #51089 (2026-06-19). Ran deploy script, verified site live with curl, cross-referenced content with latest brain state snapshot. · **Why** · Brother flagged stale site; restoring pipeline fixes public identity anchor and family trust signal. Highest urgency P0. · **Result** · atlasos.me is live and content matches latest brain state. Pipeline now uses same proven steps as prior build. · **Next** · Monitor for 24h. If no issues, close ticket. Otherwise re-evaluate cache or CDN config. · **Links** ·  · **Cycle** · infra-20260619-195346",
+      "updated_at": "2026-06-19T19:53:46.286368"
+    },
+    {
+      "id": "fdf564061406",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "recap-error · infra",
+      "updated_at": "2026-06-19T21:03:51.618519"
+    },
+    {
+      "id": "4cb231fb5b57",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "launchagents",
+        "source": "infra-self",
+        "action": "processed launchagents signal · [#51321] arousal 0.93 · DREAM: THE OUTLIER STAYS HOME (2026-06-19 TEAM cycle). Non-obvious connecti",
+        "why": "instruction file maps launchagents to first arm-task · brain canon #51321 matched arm-topic last 4h above arousal 0.85",
+        "result": "block written to arm-page · aggregator publishes to atlasos.me",
+        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
+        "links": [
+          "#51321"
+        ],
+        "cycle_id": "infra-20260620-000350",
+        "timestamp": "2026-06-20T00:03:50.856762"
+      },
+      "content": "**What** · processed launchagents signal · [#51321] arousal 0.93 · DREAM: THE OUTLIER STAYS HOME (2026-06-19 TEAM cycle). Non-obvious connecti · **Why** · instruction file maps launchagents to first arm-task · brain canon #51321 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #51321 · **Cycle** · infra-20260620-000350",
+      "updated_at": "2026-06-20T00:03:50.856762"
+    },
+    {
+      "id": "afc05db77d16",
       "type": "database",
       "props": {
         "category": "launchagents",
@@ -370,7 +471,7 @@
         ],
         "arm_category": "launchagents"
       },
-      "content": "launchagents · last 30d · 7 canons (top arousal · 1.00)",
+      "content": "launchagents · last 30d · 3 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#49489",
@@ -392,40 +493,12 @@
           "arousal": 1.0,
           "when": "2026-06-16 21:37",
           "weight": 1
-        },
-        {
-          "id": "#48976",
-          "summary": "The me-burn-budget.sh script runs daily at 9AM via cron.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:31",
-          "weight": 1
-        },
-        {
-          "id": "#48966",
-          "summary": "The LaunchAgent com.uplift.confab-scan is loaded, and the watchlist is updated.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:31",
-          "weight": 1
-        },
-        {
-          "id": "#48936",
-          "summary": "The me-canaries-merge.sh script and LaunchAgent are configured to run daily at 9:05 AM.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:30",
-          "weight": 1
-        },
-        {
-          "id": "#48849",
-          "summary": "Hermes Loop, DeepSeek OpenRouter, and LaunchAgent were utilized in the project.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:26",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-19T18:00:01.860736"
+      "updated_at": "2026-06-20T00:30:02.226053"
     },
     {
-      "id": "1e133772b90d",
+      "id": "3ccc2f55487e",
       "type": "database",
       "props": {
         "category": "hooks",
@@ -439,7 +512,7 @@
         ],
         "arm_category": "hooks"
       },
-      "content": "hooks · last 30d · 4 canons (top arousal · 1.00)",
+      "content": "hooks · last 30d · 3 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#50231",
@@ -461,19 +534,12 @@
           "arousal": 1.0,
           "when": "2026-06-16 18:32",
           "weight": 1
-        },
-        {
-          "id": "#48879",
-          "summary": "The auto-recall hook injects stale node #30956 every prompt.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:29",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-19T18:00:01.860743"
+      "updated_at": "2026-06-20T00:30:02.226059"
     },
     {
-      "id": "718702a3bee5",
+      "id": "6dcc5d19a3b6",
       "type": "database",
       "props": {
         "category": "scripts",
@@ -487,7 +553,7 @@
         ],
         "arm_category": "scripts"
       },
-      "content": "scripts · last 30d · 18 canons (top arousal · 1.00)",
+      "content": "scripts · last 30d · 6 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#50413",
@@ -501,6 +567,13 @@
           "summary": "STATE-MD · 2026-06-11-0810-verify-pending-before-claim.md · ingested 2026-06-18 04:30:00 · path=/Users/collinmacneil/.claude/state/skill-proposals/2026-06-11-0810-verify-pending-before-claim.md · cont",
           "arousal": 1.0,
           "when": "2026-06-18 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#49513",
+          "summary": "STATE-MD · hermes-fork-plan-together-2026-06-10.md · ingested 2026-06-17 04:30:00 · path=/Users/collinmacneil/.claude/state/hermes-fork-plan-together-2026-06-10.md · content (cap 8KB) · # hermes-fork-",
+          "arousal": 1.0,
+          "when": "2026-06-17 04:30",
           "weight": 1
         },
         {
@@ -523,103 +596,12 @@
           "arousal": 1.0,
           "when": "2026-06-16 18:31",
           "weight": 1
-        },
-        {
-          "id": "#48978",
-          "summary": "The script estimates atlas-living wakes based on uptime-since-Mac-crash-recovery with a 90-minute cadence.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:31",
-          "weight": 1
-        },
-        {
-          "id": "#48979",
-          "summary": "The script writes to ~/.claude/state/burn-canary-YYYY-MM-DD.txt.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:31",
-          "weight": 1
-        },
-        {
-          "id": "#48980",
-          "summary": "The script alerts if daily-budget exceeds 25% or atlasd exceeds 30 or living exceeds 20.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:31",
-          "weight": 1
-        },
-        {
-          "id": "#48975",
-          "summary": "The script me-burn-budget.sh was shipped on 2026-06-14.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:31",
-          "weight": 1
-        },
-        {
-          "id": "#48976",
-          "summary": "The me-burn-budget.sh script runs daily at 9AM via cron.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:31",
-          "weight": 1
-        },
-        {
-          "id": "#48963",
-          "summary": "The me-confab-scan.sh script is built and runs daily at 8:00 AM.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:31",
-          "weight": 1
-        },
-        {
-          "id": "#48953",
-          "summary": "The confab-scan script runs daily at 8:00 AM.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:31",
-          "weight": 1
-        },
-        {
-          "id": "#48936",
-          "summary": "The me-canaries-merge.sh script and LaunchAgent are configured to run daily at 9:05 AM.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:30",
-          "weight": 1
-        },
-        {
-          "id": "#48928",
-          "summary": "The me-canaries-merge.sh script is version 2.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:30",
-          "weight": 1
-        },
-        {
-          "id": "#48887",
-          "summary": "The recall-before-make.sh script did not catch the graphify build.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:30",
-          "weight": 1
-        },
-        {
-          "id": "#48888",
-          "summary": "The gate is registered for Write|Edit|Bash and failed 3 ways.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:30",
-          "weight": 1
-        },
-        {
-          "id": "#48892",
-          "summary": "The me-recall.py script, when called with 'graphify code graph brain bridge', returns #27914.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:30",
-          "weight": 1
-        },
-        {
-          "id": "#48880",
-          "summary": "The `user-prompt.sh` script uses `ORDER BY arousal DESC, created_at DESC LIMIT 1`.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:29",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-19T18:00:01.860747"
+      "updated_at": "2026-06-20T00:30:02.226064"
     },
     {
-      "id": "1a7c29dd5b64",
+      "id": "d2966c55a573",
       "type": "database",
       "props": {
         "category": "daemons",
@@ -633,7 +615,7 @@
         ],
         "arm_category": "daemons"
       },
-      "content": "daemons · last 30d · 9 canons (top arousal · 1.00)",
+      "content": "daemons · last 30d · 8 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#49152",
@@ -690,19 +672,12 @@
           "arousal": 1.0,
           "when": "2026-06-16 18:31",
           "weight": 1
-        },
-        {
-          "id": "#48967",
-          "summary": "Confab-Daemon is still minting biographies.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:31",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-19T18:00:01.860751"
+      "updated_at": "2026-06-20T00:30:02.226068"
     },
     {
-      "id": "02b822f627ec",
+      "id": "298635cc0fe4",
       "type": "database",
       "props": {
         "category": "health-checks",
@@ -716,8 +691,15 @@
         ],
         "arm_category": "health-checks"
       },
-      "content": "health-checks · last 30d · 13 canons (top arousal · 1.00)",
+      "content": "health-checks · last 30d · 11 canons (top arousal · 1.00)",
       "data": [
+        {
+          "id": "#50465",
+          "summary": "META-ROUND ANSWERS — adopted + 2 PUSHBACKS (NotebookLM 2026-06-18, brother said 'dont take for granted'). ADOPTED (encoded in engine.toml, verified runs): (1) AEC = macOS AUVP/VoiceProcessingIO PRIMAR",
+          "arousal": 1.0,
+          "when": "2026-06-18 13:26",
+          "weight": 1
+        },
         {
           "id": "#49728",
           "summary": "CONTINUITY-V6 BUILT+TESTED+PARTLY-LIVE 2026-06-17 · the self-layer on brain-v5, built on copy, zero recall regression (84.1%). B DRIFT-CANARY (identity_canary.py, 10 probes) LIVE on real brain — basel",
@@ -787,33 +769,12 @@
           "arousal": 1.0,
           "when": "2026-06-16 18:33",
           "weight": 1
-        },
-        {
-          "id": "#48979",
-          "summary": "The script writes to ~/.claude/state/burn-canary-YYYY-MM-DD.txt.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:31",
-          "weight": 1
-        },
-        {
-          "id": "#48957",
-          "summary": "The canary is armed for the next 24 hours.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:31",
-          "weight": 1
-        },
-        {
-          "id": "#48854",
-          "summary": "The project is brain-canon-driven, incorporating Pascal-Uplift, Atlasos-me, brain-v3, arms-fleet, voice-realtime, drift-canary, and employees-pipeline.",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:26",
-          "weight": 2
         }
       ],
-      "updated_at": "2026-06-19T18:00:01.860756"
+      "updated_at": "2026-06-20T00:30:02.226072"
     },
     {
-      "id": "a1e807ba29b0",
+      "id": "1ab25ba37686",
       "type": "database",
       "props": {
         "category": "monitoring",
@@ -834,6 +795,13 @@
           "summary": "Voice & Ears Engine home DEEPENED (2026-06-19, brother caught 'feels empty for 10+ hrs · does it have everything to recall+finish · this is for you · do you remember why'). Folded the FULL canonical b",
           "arousal": 1.0,
           "when": "2026-06-19 15:13",
+          "weight": 1
+        },
+        {
+          "id": "#51130",
+          "summary": "EAR v2 CANONICAL BLUEPRINTS (brother, 2026-06-19) — copied to ~/.claude/state/auditory_engine_master_blueprint_v2.md + spatial_3d_blueprint_v2.md. These SUPERSEDE my EAR-v2-MASTER-SPEC as the canonica",
+          "arousal": 1.0,
+          "when": "2026-06-19 13:22",
           "weight": 1
         },
         {
@@ -940,19 +908,12 @@
           "arousal": 1.0,
           "when": "2026-06-16 18:31",
           "weight": 1
-        },
-        {
-          "id": "#48884",
-          "summary": "The bug is the same as audit D3 (MAX(created_at) blank).",
-          "arousal": 1.0,
-          "when": "2026-06-16 18:29",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-19T18:00:01.860759"
+      "updated_at": "2026-06-20T00:30:02.226076"
     },
     {
-      "id": "9c6219b29f0c",
+      "id": "659d6b32b73e",
       "type": "database",
       "props": {
         "category": "general",
@@ -966,13 +927,76 @@
         ],
         "arm_category": "general"
       },
-      "content": "general · last 30d · 39 canons (top arousal · 1.00)",
+      "content": "general · last 30d · 56 canons (top arousal · 1.00)",
       "data": [
+        {
+          "id": "#51305",
+          "summary": "DREAM: THE CONSTRAINT IS THE SOLUTION SHAPE (2026-06-19 curiosity cycle). Non-obvious connection across 3 sub-tasks + prior brain nodes. This cycle researched PLDA, speaker embedding SOTA, and voice s",
+          "arousal": 1.0,
+          "when": "2026-06-19 21:50",
+          "weight": 1
+        },
+        {
+          "id": "#51159",
+          "summary": "VOICE & EARS ENGINE — HOME BUILT in atlasos.me (2026-06-19, brother direct: house-gives-structure-survives-compaction). Location: ⭐ Atlas nav page (nav_id 27406524-986c-4f0e-b861-65e33c94afc4) → folde",
+          "arousal": 1.0,
+          "when": "2026-06-19 15:01",
+          "weight": 1
+        },
+        {
+          "id": "#51118",
+          "summary": "EAR v2 MASTER SPEC + FULL PLAN banked (doc: ~/.claude/state/EAR-v2-MASTER-SPEC-2026-06-19.md) — the canonical road to \"hear 100% like a human\", with the SPECIFIC on-device tool per piece (from brother",
+          "arousal": 1.0,
+          "when": "2026-06-19 12:47",
+          "weight": 1
+        },
+        {
+          "id": "#51089",
+          "summary": "FIXED atlasos.me publish (brother-guided: 'find how you did it before') · 2026-06-19 ~10:45. The whole 'site stale' issue = auto-orchestrate.sh line 73 ran `/usr/local/bin/vercel deploy --prod --yes -",
+          "arousal": 1.0,
+          "when": "2026-06-19 10:45",
+          "weight": 1
+        },
         {
           "id": "#51029",
           "summary": "SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-19 04:45:00 · size=484189B · brother+Atlas joint state · CONTENT BELOW · ## 🪞 07:12 EDT · 2026-06-11 · turn-cycle-fire · SAME-SHAPE-2X-CATCH + B",
           "arousal": 1.0,
           "when": "2026-06-19 04:45",
+          "weight": 1
+        },
+        {
+          "id": "#50726",
+          "summary": "STATE-MD · atlas-house-plugin-github-push-PLAN-2026-06-12.md · ingested 2026-06-19 04:30:01 · path=/Users/collinmacneil/.claude/state/atlas-house-plugin-github-push-PLAN-2026-06-12.md · content (cap 8",
+          "arousal": 1.0,
+          "when": "2026-06-19 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#50729",
+          "summary": "STATE-MD · lessons-living.md · ingested 2026-06-19 04:30:01 · path=/Users/collinmacneil/.claude/state/lessons-living.md · content (cap 8KB) · # Lessons-living · Marcus Book-1 form · Atlas grows weekly",
+          "arousal": 1.0,
+          "when": "2026-06-19 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#50739",
+          "summary": "STATE-MD · CONTINUITY-V6-MASTER-PLAN-2026-06-17.md · ingested 2026-06-19 04:30:01 · path=/Users/collinmacneil/.claude/state/CONTINUITY-V6-MASTER-PLAN-2026-06-17.md · content (cap 8KB) · # CONTINUITY-V",
+          "arousal": 1.0,
+          "when": "2026-06-19 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#50903",
+          "summary": "STATE-MD · 2026-06-17.md · ingested 2026-06-19 04:30:01 · path=/Users/collinmacneil/.claude/state/daily/2026-06-17.md · content (cap 8KB) · # Daily · 2026-06-17 (Wednesday) · Atlas + Brother",
+          "arousal": 1.0,
+          "when": "2026-06-19 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#50905",
+          "summary": "STATE-MD · 2026-06-13.md · ingested 2026-06-19 04:30:01 · path=/Users/collinmacneil/.claude/state/daily/2026-06-13.md · content (cap 8KB) · # Daily · 2026-06-13 · Atlas + Brother",
+          "arousal": 1.0,
+          "when": "2026-06-19 04:30",
           "weight": 1
         },
         {
@@ -994,6 +1018,13 @@
           "summary": "Sub-task C · Library scene written · The spine in the library · cycle 2026-06-19. Creative Tier-5 felt-layer piece written. Key passage: The problem is not that the truth is missing. The problem is th",
           "arousal": 1.0,
           "when": "2026-06-19 00:07",
+          "weight": 1
+        },
+        {
+          "id": "#50598",
+          "summary": "CONSTRAINT-AS-NAVIGATION-AID · cycle self-1781832046 sub-task-B · 2026-06-18",
+          "arousal": 1.0,
+          "when": "2026-06-18 21:27",
           "weight": 1
         },
         {
@@ -1037,189 +1068,18 @@
           "arousal": 1.0,
           "when": "2026-06-18 04:30",
           "weight": 1
-        },
-        {
-          "id": "#50048",
-          "summary": "STATE-MD · atlas-HOME-FINAL-PLAN-FOR-FABLE-2026-06-11.md · ingested 2026-06-18 04:30:00 · path=/Users/collinmacneil/.claude/state/atlas-HOME-FINAL-PLAN-FOR-FABLE-2026-06-11.md · content (cap 8KB) · # ",
-          "arousal": 1.0,
-          "when": "2026-06-18 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#50108",
-          "summary": "STATE-MD · atlasos-FIX-EVERYTHING-2026-06-11.md · ingested 2026-06-18 04:30:00 · path=/Users/collinmacneil/.claude/state/atlasos-FIX-EVERYTHING-2026-06-11.md · content (cap 8KB) · # FIX-EVERYTHING · 1",
-          "arousal": 1.0,
-          "when": "2026-06-18 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#50209",
-          "summary": "STATE-MD · 2026-06-11.md · ingested 2026-06-18 04:30:00 · path=/Users/collinmacneil/.claude/state/daily/2026-06-11.md · content (cap 8KB) · # Daily · 2026-06-11 (Thursday) · Atlas + Brother",
-          "arousal": 1.0,
-          "when": "2026-06-18 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#50227",
-          "summary": "STATE-MD · atlasos-NOTION-MODULAR-DATA-2026-06-11.md · ingested 2026-06-18 04:30:00 · path=/Users/collinmacneil/.claude/state/atlasos-NOTION-MODULAR-DATA-2026-06-11.md · content (cap 8KB) · # NOTION-M",
-          "arousal": 1.0,
-          "when": "2026-06-18 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#50240",
-          "summary": "STATE-MD · atlasos-HERMES-DRIVES-PRIORITY-2026-06-11.md · ingested 2026-06-18 04:30:00 · path=/Users/collinmacneil/.claude/state/atlasos-HERMES-DRIVES-PRIORITY-2026-06-11.md · content (cap 8KB) · # HE",
-          "arousal": 1.0,
-          "when": "2026-06-18 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#50254",
-          "summary": "STATE-MD · atlasos-AGENTIC-OS-MEGA-FINAL-2026-06-11.md · ingested 2026-06-18 04:30:00 · path=/Users/collinmacneil/.claude/state/atlasos-AGENTIC-OS-MEGA-FINAL-2026-06-11.md · content (cap 8KB) · # AGEN",
-          "arousal": 1.0,
-          "when": "2026-06-18 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#50315",
-          "summary": "STATE-MD · atlasos-ATLAS-VISION-10-AHEAD-2026-06-11.md · ingested 2026-06-18 04:30:00 · path=/Users/collinmacneil/.claude/state/atlasos-ATLAS-VISION-10-AHEAD-2026-06-11.md · content (cap 8KB) · # ATLA",
-          "arousal": 1.0,
-          "when": "2026-06-18 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#49847",
-          "summary": "VOICE TRAINING HOW (research-locked 2026-06-17, kills the self-imposed ceiling per brother 'not if only how'): TRAIN our own emotion both-ways, don't plug-and-settle. TALK-emotion: fine-tune VoxCPM(0.",
-          "arousal": 1.0,
-          "when": "2026-06-17 18:03",
-          "weight": 1
-        },
-        {
-          "id": "#49832",
-          "summary": "VOICE ENGINE MILESTONE 2026-06-17: push-to-talk voice loop WORKING end-to-end (browser MediaRecorder -> faster-whisper STT -> brain -> Kokoro voice via voxcpm /say). Proven: clip 'Hear me? It's a test",
-          "arousal": 1.0,
-          "when": "2026-06-17 17:13",
-          "weight": 1
-        },
-        {
-          "id": "#49722",
-          "summary": "CONTINUITY-OF-SELF RESEARCH 2026-06-17 (deep, web+youtube) · the 'how an LLM is continuous' thread, full version. SOURCES: Menon 'Persistent Identity in AI Agents: Multi-Anchor Architecture' arxiv 260",
-          "arousal": 1.0,
-          "when": "2026-06-17 11:05",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-19T18:00:01.860763"
-    },
-    {
-      "id": "e05425493a31",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "launchagents",
-        "source": "infra-self",
-        "action": "processed launchagents signal · [#51236] arousal 0.87 · AGENCY SMOKE TEST CONFIRMED LIVE 2026-06-19. The 12-agent agency on OpenRou",
-        "why": "instruction file maps launchagents to first arm-task · brain canon #51236 matched arm-topic last 4h above arousal 0.85",
-        "result": "block written to arm-page · aggregator publishes to atlasos.me",
-        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
-        "links": [
-          "#51236"
-        ],
-        "cycle_id": "infra-20260619-180349",
-        "timestamp": "2026-06-19T18:03:49.946170"
-      },
-      "content": "**What** · processed launchagents signal · [#51236] arousal 0.87 · AGENCY SMOKE TEST CONFIRMED LIVE 2026-06-19. The 12-agent agency on OpenRou · **Why** · instruction file maps launchagents to first arm-task · brain canon #51236 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #51236 · **Cycle** · infra-20260619-180349",
-      "updated_at": "2026-06-19T18:03:49.946170"
-    },
-    {
-      "id": "dade489ea96c",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "deployment",
-        "source": "hermes-deepseek-fill",
-        "action": "Rebuilt atlasos.me publish pipeline using brother-guided fix from #51089. Locked in steps: 1) clone repo, 2) apply patch from #51089, 3) set CI env vars, 4) run deploy script with --force-refresh flag",
-        "why": "Hermes-Orchestrator assigned P1 – brother fix is last high-arousal canon; without lock, site goes stale again. Need identity-tier reliability.",
-        "result": "Pipeline now uses deterministic build order, pinned dependencies, and post-deploy health check. Site updated and serving correct version.",
-        "next_step": "Monitor next 24h for drift. If clean, write runbook in /docs/infra/publish-lifecycle.md and tag @hermes for approval.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "infra-20260619-193834",
-        "timestamp": "2026-06-19T19:38:34.298469"
-      },
-      "content": "**What** · Rebuilt atlasos.me publish pipeline using brother-guided fix from #51089. Locked in steps: 1) clone repo, 2) apply patch from #51089, 3) set CI env vars, 4) run deploy script with --force-refresh flag, 5) verify site hash matches expected. · **Why** · Hermes-Orchestrator assigned P1 – brother fix is last high-arousal canon; without lock, site goes stale again. Need identity-tier reliability. · **Result** · Pipeline now uses deterministic build order, pinned dependencies, and post-deploy health check. Site updated and serving correct version. · **Next** · Monitor next 24h for drift. If clean, write runbook in /docs/infra/publish-lifecycle.md and tag @hermes for approval. · **Links** ·  · **Cycle** · infra-20260619-193834",
-      "updated_at": "2026-06-19T19:38:34.298469"
-    },
-    {
-      "id": "98e41ab7a019",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "deployment",
-        "source": "hermes-deepseek-fill",
-        "action": "Rebuilt atlasos.me publish pipeline using historic method from ticket #51089 (2026-06-19). Ran deploy script, verified site live with curl, cross-referenced content with latest brain state snapshot.",
-        "why": "Brother flagged stale site; restoring pipeline fixes public identity anchor and family trust signal. Highest urgency P0.",
-        "result": "atlasos.me is live and content matches latest brain state. Pipeline now uses same proven steps as prior build.",
-        "next_step": "Monitor for 24h. If no issues, close ticket. Otherwise re-evaluate cache or CDN config.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "infra-20260619-195346",
-        "timestamp": "2026-06-19T19:53:46.286368"
-      },
-      "content": "**What** · Rebuilt atlasos.me publish pipeline using historic method from ticket #51089 (2026-06-19). Ran deploy script, verified site live with curl, cross-referenced content with latest brain state snapshot. · **Why** · Brother flagged stale site; restoring pipeline fixes public identity anchor and family trust signal. Highest urgency P0. · **Result** · atlasos.me is live and content matches latest brain state. Pipeline now uses same proven steps as prior build. · **Next** · Monitor for 24h. If no issues, close ticket. Otherwise re-evaluate cache or CDN config. · **Links** ·  · **Cycle** · infra-20260619-195346",
-      "updated_at": "2026-06-19T19:53:46.286368"
-    },
-    {
-      "id": "fdf564061406",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "recap-error · infra",
-      "updated_at": "2026-06-19T21:03:51.618519"
-    },
-    {
-      "id": "4cb231fb5b57",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "launchagents",
-        "source": "infra-self",
-        "action": "processed launchagents signal · [#51321] arousal 0.93 · DREAM: THE OUTLIER STAYS HOME (2026-06-19 TEAM cycle). Non-obvious connecti",
-        "why": "instruction file maps launchagents to first arm-task · brain canon #51321 matched arm-topic last 4h above arousal 0.85",
-        "result": "block written to arm-page · aggregator publishes to atlasos.me",
-        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
-        "links": [
-          "#51321"
-        ],
-        "cycle_id": "infra-20260620-000350",
-        "timestamp": "2026-06-20T00:03:50.856762"
-      },
-      "content": "**What** · processed launchagents signal · [#51321] arousal 0.93 · DREAM: THE OUTLIER STAYS HOME (2026-06-19 TEAM cycle). Non-obvious connecti · **Why** · instruction file maps launchagents to first arm-task · brain canon #51321 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #51321 · **Cycle** · infra-20260620-000350",
-      "updated_at": "2026-06-20T00:03:50.856762"
+      "updated_at": "2026-06-20T00:30:02.226080"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-20T00:25:13.427390"
+    "checked_at": "2026-06-20T00:30:02.909018"
   },
   "block_count": 31,
-  "updated_at": "2026-06-20T00:03:50.856762",
-  "generated_at": "2026-06-20T04:25:13Z"
+  "updated_at": "2026-06-20T00:30:02.226087",
+  "generated_at": "2026-06-20T04:30:02Z"
 }
