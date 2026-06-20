@@ -895,15 +895,37 @@
         }
       ],
       "updated_at": "2026-06-20T00:30:01.623208"
+    },
+    {
+      "id": "3d952ac5c2a1",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "design-audit",
+        "source": "hermes-deepseek-fill",
+        "action": "Read EAR v2 blueprints #51130 and cross-checked test outcomes #51154, #51159, #51163, #51218.",
+        "why": "Hermes said P0 — need to see if tests validate or challenge the canonical design before next cycle.",
+        "result": "Blueprint says auditory engine uses parallel filter banks; test #51218 shows a 12ms latency spike only under high-arousal handoff — design assumes no such spike. Drift detected.",
+        "next_step": "Flag this latency assumption to Hermes and ask if filter-bank scheduling needs a guard clause.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "curiosity-20260620-005829",
+        "timestamp": "2026-06-20T00:58:29.299985"
+      },
+      "content": "**What** · Read EAR v2 blueprints #51130 and cross-checked test outcomes #51154, #51159, #51163, #51218. · **Why** · Hermes said P0 — need to see if tests validate or challenge the canonical design before next cycle. · **Result** · Blueprint says auditory engine uses parallel filter banks; test #51218 shows a 12ms latency spike only under high-arousal handoff — design assumes no such spike. Drift detected. · **Next** · Flag this latency assumption to Hermes and ask if filter-bank scheduling needs a guard clause. · **Links** ·  · **Cycle** · curiosity-20260620-005829",
+      "updated_at": "2026-06-20T00:58:29.299985"
     }
   ],
   "live_status": {
     "state": "active",
     "done_count": 158,
     "vec_drift": null,
-    "checked_at": "2026-06-20T00:55:17.060124"
+    "checked_at": "2026-06-20T01:00:17.797638"
   },
-  "block_count": 31,
-  "updated_at": "2026-06-20T00:30:01.623213",
-  "generated_at": "2026-06-20T04:55:17Z"
+  "block_count": 32,
+  "updated_at": "2026-06-20T00:58:29.299985",
+  "generated_at": "2026-06-20T05:00:17Z"
 }
