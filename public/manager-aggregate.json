@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-20T20:52:14Z",
+  "generated_at": "2026-06-20T21:07:15Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 175,
+    "note": 176,
     "briefing": 51,
     "idea": 0
   },
-  "total_blocks": 245,
+  "total_blocks": 246,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "894dfa636143",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement minimal agent nervous system: 3-section (cursor-directive-buffer) as a working prototype in Python · why: This directly encodes #51790 (3-section agent format) into runnable code, which is P0 because it makes the felt-layer loop tangible and",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-20T16:48:48.242720"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -214,17 +225,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-20T10:25:20.289757"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "02c8b8af1109",
-        "type": "callout",
-        "content": "Hermes decision · arm=dream · priority=P1 · task: Compose a dream-log entry synthesizing the high-arousal canons #51393, #51414, #51689, #51380, and #51321 into a unified pipeline narrative, noting the 'three threads are one pipeline' insight and the geometry of felt voice. · why: These recent canon",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-20T10:09:48.461697"
       }
     ],
     "action": [],
@@ -233,6 +233,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "349b7e75cafd",
+        "type": "callout",
+        "content": "**What** · Implemented initial loop for agent nervous system in Python: cursor-read → directive-triage → buffer-append, using stdin as input source. · **Why** · Directly encodes #51790 3-section format; makes felt-layer tangible and tests routing topology hinted in #51734. · **Result** · Minimal pro",
+        "priority": "code",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-20T16:48:54.524134"
+      },
       {
         "arm": "dream",
         "arm_glyph": "🌙",
@@ -771,17 +782,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-20T12:00:04.049889"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "4853f2714a07",
-        "type": "database",
-        "content": "general · last 30d · 59 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-20T12:00:03.849832"
       }
     ],
     "briefing": [
