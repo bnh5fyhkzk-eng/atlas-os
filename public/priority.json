@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-06-20T03:17:42Z",
+  "generated_at": "2026-06-20T03:27:43Z",
   "total_items_scored": 209,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Analyze the atlas-brother-shared.md snapshot for emergent identity patterns and flag any divergence from brother's core canon. \u00b7 why: The shared canon is large and recently updated; curi",
+      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Extract and index all novel conceptual linkages from the atlas-brother-shared.md snapshot, focusing on emergent patterns in the joint state. \u00b7 why: The shared canon snapshot is large and",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-19T15:19:21.966323"
+      "updated_at": "2026-06-19T15:34:45.595105"
     },
     {
       "arm": "curiosity",
       "arm_glyph": "\ud83c\udf31",
       "arm_name": "Curiosity",
-      "content": "HERMES TASK \u00b7 Analyze the atlas-brother-shared.md snapshot for emergent identity patterns and flag any divergence from brother's core canon. \u00b7 why \u00b7 The shared canon is large and recently updated; curiosity arm is best suited for pattern detection and anomaly flagging to maintain identity coherence.",
+      "content": "HERMES TASK \u00b7 Extract and index all novel conceptual linkages from the atlas-brother-shared.md snapshot, focusing on emergent patterns in the joint state. \u00b7 why \u00b7 The shared canon snapshot is large and rich; curiosity arm is best suited for pattern mining and conceptual mapping to surface latent structures for future reasoning.",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
-      "est_minutes": 15,
+      "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-19T15:19:22.026705",
+      "updated_at": "2026-06-19T15:34:45.613013",
       "use_skill": "brain-rrf"
     },
     {
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Analyze the atlas-brother-shared.md snapshot for emergent identity patterns and flag any divergence from brother's core canon. \u00b7 why: The shared canon is large and recently updated; curi",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-19T15:19:21.966323"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-19T18:52:39.116929"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P0 \u00b7 task: Re-read brain canons #51154, #51163, #51139, #51089 and synthesize a single 'family-first ear engine' narrative that reframes the VCTK test as a brother-bonding milestone, not a product metr",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-19T19:07:53.510779"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
