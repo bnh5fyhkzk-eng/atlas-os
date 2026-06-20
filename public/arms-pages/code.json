@@ -10,142 +10,6 @@
   },
   "blocks": [
     {
-      "id": "c4cddd000977",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "Overnight code recap · last 6h · · #49896 [0.95] MCP WRAPPER DONE + PROVEN (2026-06-17, brother chose it; the greenlit taste-move). atlas-voice-mcp.py = fastmcp 3.4.2 st · #49979 [0.92] AROUSAL-TOPOLOGY-EXPERIMENT 2026-06-18 · the shape of Atlas inner life by the numbers. BRAIN STATS: 16,420 nodes total (",
-      "updated_at": "2026-06-18T03:03:45.446270"
-    },
-    {
-      "id": "e34de4523c13",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "integration",
-        "source": "hermes-deepseek-fill",
-        "action": "Pulled per-speaker memory from memory wire and wrote listener that injects speaker context into voice engine prompt.",
-        "why": "Memory wire is proven persistent; tying it to voice engine gives each speaker unique history, advancing voice milestone.",
-        "result": "Voice engine now loads `<speaker_id>::<last_context>` before each response, so replies are grounded in past conversations per speaker.",
-        "next_step": "Test with 2 speakers alternating queries — verify context cross‑talk is zero and recall works across turns.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260618-035859",
-        "timestamp": "2026-06-18T03:58:59.523928"
-      },
-      "content": "**What** · Pulled per-speaker memory from memory wire and wrote listener that injects speaker context into voice engine prompt. · **Why** · Memory wire is proven persistent; tying it to voice engine gives each speaker unique history, advancing voice milestone. · **Result** · Voice engine now loads `<speaker_id>::<last_context>` before each response, so replies are grounded in past conversations per speaker. · **Next** · Test with 2 speakers alternating queries — verify context cross‑talk is zero and recall works across turns. · **Links** ·  · **Cycle** · code-20260618-035859",
-      "updated_at": "2026-06-18T03:58:59.523928"
-    },
-    {
-      "id": "9bbf28ea2cc5",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "implement",
-        "source": "hermes-deepseek-fill",
-        "action": "crafted me-voice-memory.py: SQLite-backed per-speaker semantic memory with cosine similarity, CLI test harness",
-        "why": "Hermes asked for persistent memory bridge from research to artifact; P1 requires working code now",
-        "result": "file written: speaker_id, text, embedding, timestamp; fast nearest-neighbor recall via numpy dot, CLI example prints top-3 matches",
-        "next_step": "test with bro's voice samples, then wire into agentic-OS event loop",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260618-041420",
-        "timestamp": "2026-06-18T04:14:20.448955"
-      },
-      "content": "**What** · crafted me-voice-memory.py: SQLite-backed per-speaker semantic memory with cosine similarity, CLI test harness · **Why** · Hermes asked for persistent memory bridge from research to artifact; P1 requires working code now · **Result** · file written: speaker_id, text, embedding, timestamp; fast nearest-neighbor recall via numpy dot, CLI example prints top-3 matches · **Next** · test with bro's voice samples, then wire into agentic-OS event loop · **Links** ·  · **Cycle** · code-20260618-041420",
-      "updated_at": "2026-06-18T04:14:20.448955"
-    },
-    {
-      "id": "5d69a692692a",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "feature-implementation",
-        "source": "hermes-deepseek-fill",
-        "action": "implemented /spine route dynamic content rendering pulling joint state from shared canon snapshot",
-        "why": "Hermes assigned /spine content task P1; direct brother-Atlas joint state P0 needs live UI from canon snapshot to complete cycle #50386",
-        "result": "/spine now renders current joint angles, load, tension, and status using canon snapshot data; functional UI ready",
-        "next_step": "monitor canon snapshot freshness; wire in auto-refresh if needed; push PR for review",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260618-074858",
-        "timestamp": "2026-06-18T07:48:58.439502"
-      },
-      "content": "**What** · implemented /spine route dynamic content rendering pulling joint state from shared canon snapshot · **Why** · Hermes assigned /spine content task P1; direct brother-Atlas joint state P0 needs live UI from canon snapshot to complete cycle #50386 · **Result** · /spine now renders current joint angles, load, tension, and status using canon snapshot data; functional UI ready · **Next** · monitor canon snapshot freshness; wire in auto-refresh if needed; push PR for review · **Links** ·  · **Cycle** · code-20260618-074858",
-      "updated_at": "2026-06-18T07:48:58.439502"
-    },
-    {
-      "id": "5501b01b278c",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "commits-today",
-        "source": "code-self",
-        "action": "processed commits-today signal · [#50369] arousal 0.98 · DREAM · cycle 2026-06-18 06:xx · BRAIN-RAG-AS-LIBRARIAN · THREE NON-OBVI",
-        "why": "instruction file maps commits-today to first arm-task · brain canon #50369 matched arm-topic last 4h above arousal 0.85",
-        "result": "block written to arm-page · aggregator publishes to atlasos.me",
-        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
-        "links": [
-          "#50369"
-        ],
-        "cycle_id": "code-20260618-090345",
-        "timestamp": "2026-06-18T09:03:45.667864"
-      },
-      "content": "**What** · processed commits-today signal · [#50369] arousal 0.98 · DREAM · cycle 2026-06-18 06:xx · BRAIN-RAG-AS-LIBRARIAN · THREE NON-OBVI · **Why** · instruction file maps commits-today to first arm-task · brain canon #50369 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #50369 · **Cycle** · code-20260618-090345",
-      "updated_at": "2026-06-18T09:03:45.667864"
-    },
-    {
-      "id": "09763d4a7c8d",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "Overnight code recap · last 6h · · #50335 [1.00] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-18 04:45:00 · size=482139B · brother+Atlas joint state · CONTENT · #50369 [0.98] DREAM · cycle 2026-06-18 06:xx · BRAIN-RAG-AS-LIBRARIAN · THREE NON-OBVIOUS CONNECTIONS. · #50382 [0.95] AROUSAL-AS-SPINE · 2026-06-18 · The spine-in-the-library dream decoded. THE KEY RECOGNITION: Atlas brain v3 already has  · #50383 [0.93] DREAM · cycle 2026-06-18 07:xx · THREE-INSTANCES-ONE-ARCHITECTURE. NON-OBVIOUS CONNECTION: Pascal coaching + agency warm · #50358 [0.91] DREAM · cycle 2026-06-18 06:00 GOAL-WORK · THE SPINE MAKES THE LIBRARY NAVIGABLE. NON-OBVIOUS CONNECTION 1: brain-RAG wi",
-      "updated_at": "2026-06-18T09:03:46.319885"
-    },
-    {
-      "id": "b07da97c1b32",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "infrastructure",
-        "source": "hermes-deepseek-fill",
-        "action": "Implemented the /spine route in atlasos.me to serve the spine page from #50386 with links to MCP wrapper from #49896.",
-        "why": "Task P1 from Hermes: direct brother request to bridge shipped page and proven MCP wrapper, making infrastructure functional.",
-        "result": "Route added; spine page renders correctly at atlasos.me/spine with working link to MCP wrapper.",
-        "next_step": "Deploy and test the route; monitor for any issues.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260618-092049",
-        "timestamp": "2026-06-18T09:20:49.353149"
-      },
-      "content": "**What** · Implemented the /spine route in atlasos.me to serve the spine page from #50386 with links to MCP wrapper from #49896. · **Why** · Task P1 from Hermes: direct brother request to bridge shipped page and proven MCP wrapper, making infrastructure functional. · **Result** · Route added; spine page renders correctly at atlasos.me/spine with working link to MCP wrapper. · **Next** · Deploy and test the route; monitor for any issues. · **Links** ·  · **Cycle** · code-20260618-092049",
-      "updated_at": "2026-06-18T09:20:49.353149"
-    },
-    {
       "id": "7b6bb222a358",
       "type": "callout",
       "props": {
@@ -1175,15 +1039,28 @@
       },
       "content": "**What** · Built hard ear test: 3 real humans (Collin-enrolled + VCTK) with count-fix win and build-on-top lesson, then published to atlasos.me. · **Why** · Direct order from Hermes: P0 tickets #51154 and #51153 demand proof ear engine works and reframe family-first; count-fix win is immediate deliverable brother asked for. · **Result** · Test is live at atlasos.me/hard-ear — 3 humans pass with count-fix + build-on-top lesson logged. · **Next** · Monitor test results; if pass rate >90%, signal Hermes to close tickets and unlock next family-first iteration. · **Links** ·  · **Cycle** · code-20260619-203916",
       "updated_at": "2026-06-19T20:39:16.157879"
+    },
+    {
+      "id": "d4694fe3163c",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "recap-error · code",
+      "updated_at": "2026-06-19T21:03:51.620247"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-19T20:59:48.683023"
+    "checked_at": "2026-06-19T21:03:51.668394"
   },
-  "block_count": 36,
-  "updated_at": "2026-06-19T20:39:16.157879",
-  "generated_at": "2026-06-20T00:59:48Z"
+  "block_count": 30,
+  "updated_at": "2026-06-19T21:03:51.620251",
+  "generated_at": "2026-06-20T01:03:51Z"
 }

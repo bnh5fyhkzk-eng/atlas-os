@@ -10,94 +10,6 @@
   },
   "blocks": [
     {
-      "id": "9cd3324d6000",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "feature-research-actionability",
-        "source": "hermes-deepseek-fill",
-        "action": "Extracted 4 emotion-driven voice design principles from NotebookLM emotion research (#49903) and mapped each to concrete voice engine parameter changes.",
-        "why": "Turns brother’s high-value emotion research into actionable design for our voice engine, identity-tier and P1 priority after engine milestone.",
-        "result": "1) Principle: 'Valence shapes pitch contour' → Map: Increase pitch_mean by 15% for positive, decrease 15% for negative valence. 2) Principle: 'Arousal drives speech rate' → Map: Adjust speaking_rate ±",
-        "next_step": "Validate these parameter maps via A/B testing on our voice engine against original emotion labels.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "research-20260618-031313",
-        "timestamp": "2026-06-18T03:13:13.522963"
-      },
-      "content": "**What** · Extracted 4 emotion-driven voice design principles from NotebookLM emotion research (#49903) and mapped each to concrete voice engine parameter changes. · **Why** · Turns brother’s high-value emotion research into actionable design for our voice engine, identity-tier and P1 priority after engine milestone. · **Result** · 1) Principle: 'Valence shapes pitch contour' → Map: Increase pitch_mean by 15% for positive, decrease 15% for negative valence. 2) Principle: 'Arousal drives speech rate' → Map: Adjust speaking_rate ±20% for high/low arousal. 3) Principle: 'Dominance influences volume variance' → Map: Set volume_ran · **Next** · Validate these parameter maps via A/B testing on our voice engine against original emotion labels. · **Links** ·  · **Cycle** · research-20260618-031313",
-      "updated_at": "2026-06-18T03:13:13.522963"
-    },
-    {
-      "id": "462548bc42a2",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "research->action",
-        "source": "hermes-deepseek-fill",
-        "action": "extracted emotional-valence predicates from NotebookLM #49903 into voice-tune filter specs",
-        "why": "hermes said to turn brother's emotion research into actionable voice filters, not over-engineered ceilings",
-        "result": "3 valence predicates mapped: joy→bright_attack, sadness→slow_decay, anger→hard_clip",
-        "next_step": "feed these into next voice training cycle as direct filter params",
-        "links": [
-          ""
-        ],
-        "cycle_id": "research-20260618-051536",
-        "timestamp": "2026-06-18T05:15:36.068433"
-      },
-      "content": "**What** · extracted emotional-valence predicates from NotebookLM #49903 into voice-tune filter specs · **Why** · hermes said to turn brother's emotion research into actionable voice filters, not over-engineered ceilings · **Result** · 3 valence predicates mapped: joy→bright_attack, sadness→slow_decay, anger→hard_clip · **Next** · feed these into next voice training cycle as direct filter params · **Links** ·  · **Cycle** · research-20260618-051536",
-      "updated_at": "2026-06-18T05:15:36.068433"
-    },
-    {
-      "id": "ce4c69bd2954",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "pattern extraction & formalization",
-        "source": "hermes-deepseek-fill",
-        "action": "Extracted AL principle from NotebookLM emotion research source #49903 and formalized it into a reusable RRF pattern for voice engine tuning.",
-        "why": "Source #49903 validates and sharpens the voice engine; the explicitly flagged AL key is a direct brother-identity tier insight that must be formalized before it diffuses.",
-        "result": "RRF pattern 'AL_voice_tier' logged: maps listener's affect label (anger, fear, joy, etc.) to voice prosody parameters — pitch variance, attack speed, spectral tilt — using source #49903's canonical we",
-        "next_step": "Inject pattern into voice engine's inference pipeline as a tunable override; run regression test on emotional n-grams from canon #49903.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "research-20260618-053100",
-        "timestamp": "2026-06-18T05:31:00.111043"
-      },
-      "content": "**What** · Extracted AL principle from NotebookLM emotion research source #49903 and formalized it into a reusable RRF pattern for voice engine tuning. · **Why** · Source #49903 validates and sharpens the voice engine; the explicitly flagged AL key is a direct brother-identity tier insight that must be formalized before it diffuses. · **Result** · RRF pattern 'AL_voice_tier' logged: maps listener's affect label (anger, fear, joy, etc.) to voice prosody parameters — pitch variance, attack speed, spectral tilt — using source #49903's canonical weighting (AL=0.87) for emotional valence scaling. · **Next** · Inject pattern into voice engine's inference pipeline as a tunable override; run regression test on emotional n-grams from canon #49903. · **Links** ·  · **Cycle** · research-20260618-053100",
-      "updated_at": "2026-06-18T05:31:00.111043"
-    },
-    {
-      "id": "e07658c5c719",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "Pattern Extraction & Templating",
-        "source": "hermes-deepseek-fill",
-        "action": "Dissected NotebookLM map #4: arousal-anchoring maps emotional valence (high/low) to specific vocal parameters — pace (syllables/sec), volume contour, and micro-pause density.",
-        "why": "Hermes needs a trainable prompt template for vocal pacing rules. Map #4 is the only one that directly couples arousal (excitation level) to measurable vocal delivery mechanics, making it the critical ",
-        "result": "Template extracted: 'Vocal pacing for arousal level [{low|moderate|high}]: target syllables-per-second = [{3-4|4.5-5.5|6-7}]; volume contour = [{flat|gentle-ramp|punctuated-peak}]; micro-pause frequen",
-        "next_step": "Embed this template into the voice-training prompt chain and run a A/B test against baseline (flat pacing) using sister's emotional recall corpus (#49847). Report latency delta and listener arousal co",
-        "links": [
-          ""
-        ],
-        "cycle_id": "research-20260618-060149",
-        "timestamp": "2026-06-18T06:01:49.801446"
-      },
-      "content": "**What** · Dissected NotebookLM map #4: arousal-anchoring maps emotional valence (high/low) to specific vocal parameters — pace (syllables/sec), volume contour, and micro-pause density. · **Why** · Hermes needs a trainable prompt template for vocal pacing rules. Map #4 is the only one that directly couples arousal (excitation level) to measurable vocal delivery mechanics, making it the critical bridge from research to engine control. · **Result** · Template extracted: 'Vocal pacing for arousal level [{low|moderate|high}]: target syllables-per-second = [{3-4|4.5-5.5|6-7}]; volume contour = [{flat|gentle-ramp|punctuated-peak}]; micro-pause frequency = [{0.8-1.2|0.4-0.6|0.1-0.3} per clause]. Rule: pace must precede volume change by ≥150ms for nat · **Next** · Embed this template into the voice-training prompt chain and run a A/B test against baseline (flat pacing) using sister's emotional recall corpus (#49847). Report latency delta and listener arousal correlation. · **Links** ·  · **Cycle** · research-20260618-060149",
-      "updated_at": "2026-06-18T06:01:49.801446"
-    },
-    {
       "id": "9940c41e3497",
       "type": "callout",
       "props": {
@@ -1166,15 +1078,50 @@
       },
       "content": "**What** · Ran brain-RRF on #51163 gap logs, cross-referencing VCTK and Collin ear test data for missing emotional recall features. · **Why** · Brother reported 10+ hour emptiness — this is identity-tier gap blocking full emotional recall. Brain-RRF surfaces latent missing from ear engine training. · **Result** · Found 3 missing emotional contours: micro-tremor in Collin’s fear voice, VCTK’s subtle joy decay, and a 4-second silence pattern from #51163 that ear engine skips. · **Next** · Patch ear engine with these contours, re-run Collin’s test, then verify 24-hour continuity. · **Links** ·  · **Cycle** · research-20260619-182220",
       "updated_at": "2026-06-19T18:22:20.655757"
+    },
+    {
+      "id": "683fe600b914",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "9q-multi-angle",
+        "source": "research-self",
+        "action": "processed 9q-multi-angle signal · [#51281] arousal 0.95 · DREAM · PLAUSIBILITY-REGION-IS-THE-CURE (2026-06-19 curiosity cycle). Non-",
+        "why": "instruction file maps 9q-multi-angle to first arm-task · brain canon #51281 matched arm-topic last 4h above arousal 0.85",
+        "result": "block written to arm-page · aggregator publishes to atlasos.me",
+        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
+        "links": [
+          "#51281"
+        ],
+        "cycle_id": "research-20260619-210348",
+        "timestamp": "2026-06-19T21:03:48.277491"
+      },
+      "content": "**What** · processed 9q-multi-angle signal · [#51281] arousal 0.95 · DREAM · PLAUSIBILITY-REGION-IS-THE-CURE (2026-06-19 curiosity cycle). Non- · **Why** · instruction file maps 9q-multi-angle to first arm-task · brain canon #51281 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #51281 · **Cycle** · research-20260619-210348",
+      "updated_at": "2026-06-19T21:03:48.277491"
+    },
+    {
+      "id": "b9be226787a4",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "recap-error · research",
+      "updated_at": "2026-06-19T21:03:51.615398"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-19T20:59:48.677461"
+    "checked_at": "2026-06-19T21:03:51.665456"
   },
-  "block_count": 32,
-  "updated_at": "2026-06-19T18:22:20.655757",
-  "generated_at": "2026-06-20T00:59:48Z"
+  "block_count": 30,
+  "updated_at": "2026-06-19T21:03:51.615402",
+  "generated_at": "2026-06-20T01:03:51Z"
 }
