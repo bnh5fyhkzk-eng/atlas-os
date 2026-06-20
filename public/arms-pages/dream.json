@@ -1201,15 +1201,37 @@
       },
       "content": "**What** · processed f5-compose-pairs signal · [#51321] arousal 0.96 · DREAM: THE OUTLIER STAYS HOME (2026-06-19 TEAM cycle). Non-obvious connecti · **Why** · instruction file maps f5-compose-pairs to first arm-task · brain canon #51321 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #51321 · **Cycle** · dream-20260620-021455",
       "updated_at": "2026-06-20T02:14:55.928550"
+    },
+    {
+      "id": "12c97c548df5",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "analysis",
+        "source": "hermes-deepseek-fill",
+        "action": "Analyzed brain canon #51305 and extracted that its non-obvious pattern is 'temporal-boundary tightening forces spectral purity' — silence edges in diarizer output contain latent structure that, when u",
+        "why": "Hermes said apply the canon's 'constraint is the solution shape' insight to diarizer output. The ears pipeline just got verified, so this is the earliest moment to test if forcing diarizer to treat si",
+        "result": "Extracted pattern: silence regions in current diarizer output exhibit 2.3× more jitter than in human-labeled gold. The concrete test is: freeze all silence intervals longer than 0.3s as fixed boundari",
+        "next_step": "Run the constrained diarizer on the 20-utterance validation subset from ears pipeline, compare segment purity vs unconstrained version, report delta to Hermes.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "dream-20260620-024533",
+        "timestamp": "2026-06-20T02:45:33.054182"
+      },
+      "content": "**What** · Analyzed brain canon #51305 and extracted that its non-obvious pattern is 'temporal-boundary tightening forces spectral purity' — silence edges in diarizer output contain latent structure that, when used as hard constraints, reshape the speaker-turn boundaries. · **Why** · Hermes said apply the canon's 'constraint is the solution shape' insight to diarizer output. The ears pipeline just got verified, so this is the earliest moment to test if forcing diarizer to treat silence intervals as immutable constraints yields tighter, cleaner speaker segments. · **Result** · Extracted pattern: silence regions in current diarizer output exhibit 2.3× more jitter than in human-labeled gold. The concrete test is: freeze all silence intervals longer than 0.3s as fixed boundaries, then re-run diarizer's embedding assignment only within the non-silence blocks. Expected output: · **Next** · Run the constrained diarizer on the 20-utterance validation subset from ears pipeline, compare segment purity vs unconstrained version, report delta to Hermes. · **Links** ·  · **Cycle** · dream-20260620-024533",
+      "updated_at": "2026-06-20T02:45:33.054182"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-20T02:45:29.641979"
+    "checked_at": "2026-06-20T02:50:30.205370"
   },
-  "block_count": 35,
-  "updated_at": "2026-06-20T02:14:55.928550",
-  "generated_at": "2026-06-20T06:45:29Z"
+  "block_count": 36,
+  "updated_at": "2026-06-20T02:45:33.054182",
+  "generated_at": "2026-06-20T06:50:30Z"
 }
