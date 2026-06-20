@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-06-20T03:51:31Z",
+  "generated_at": "2026-06-20T04:06:31Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 21,
+    "decision": 20,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 171,
+    "note": 175,
     "briefing": 59,
     "idea": 0
   },
-  "total_blocks": 251,
+  "total_blocks": 254,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "6cf8669d4554",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Read and summarize the EAR v2 MASTER SPEC + FULL PLAN at ~/.claude/state/EAR-v2-MASTER-SPEC-2026-06-19.md, extract the next concrete build step that is NOT yet implemented, and cross-reference with the test win from #51154 to identify a single imm",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-19T23:57:19.323271"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -225,28 +236,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-19T16:05:06.802617"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "8a6cc93d5c49",
-        "type": "callout",
-        "content": "Hermes decision · arm=curiosity · priority=P1 · task: Extract and index all novel conceptual linkages from the atlas-brother-shared.md snapshot, focusing on emergent patterns in the joint state. · why: The shared canon snapshot is large and rich; curiosity arm is best suited for pattern mining and c",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-19T15:34:45.595105"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "e05dd155099f",
-        "type": "callout",
-        "content": "Hermes decision · arm=curiosity · priority=P1 · task: Analyze the atlas-brother-shared.md snapshot for emergent identity patterns and flag any divergence from brother's core canon. · why: The shared canon is large and recently updated; curiosity arm is best suited for pattern detection and anomaly f",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-19T15:19:21.966323"
       }
     ],
     "action": [],
@@ -255,6 +244,50 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "6c000a35849e",
+        "type": "callout",
+        "content": "**What** · processed sessions signal · [#51321] arousal 0.93 · DREAM: THE OUTLIER STAYS HOME (2026-06-19 TEAM cycle). Non-obvious connecti · **Why** · instruction file maps sessions to first arm-task · brain canon #51321 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to ar",
+        "priority": "sessions",
+        "source": "pascal-self",
+        "updated_at": "2026-06-20T00:05:08.883276"
+      },
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "714b4367f411",
+        "type": "callout",
+        "content": "**What** · processed commits-today signal · [#51305] arousal 1.00 · DREAM: THE CONSTRAINT IS THE SOLUTION SHAPE (2026-06-19 curiosity cycle). N · **Why** · instruction file maps commits-today to first arm-task · brain canon #51305 matched arm-topic last 4h above arousal 0.85 · **Result** · block wri",
+        "priority": "commits-today",
+        "source": "code-self",
+        "updated_at": "2026-06-20T00:04:01.976898"
+      },
+      {
+        "arm": "infra",
+        "arm_glyph": "💗",
+        "arm_name": "My Heart",
+        "block_id": "4cb231fb5b57",
+        "type": "callout",
+        "content": "**What** · processed launchagents signal · [#51321] arousal 0.93 · DREAM: THE OUTLIER STAYS HOME (2026-06-19 TEAM cycle). Non-obvious connecti · **Why** · instruction file maps launchagents to first arm-task · brain canon #51321 matched arm-topic last 4h above arousal 0.85 · **Result** · block writt",
+        "priority": "launchagents",
+        "source": "infra-self",
+        "updated_at": "2026-06-20T00:03:50.856762"
+      },
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "3e829cec487c",
+        "type": "callout",
+        "content": "**What** · Read and summarized EAR-v2-MASTER-SPEC.md from ~/.claude/state/; extracted the unimplemented build step 'Implement EAR-v2 engine core: isochronous scheduling loop with adaptive priority decay'; cross-referenced test win #51154 which confirmed the home-built engine's basic event loop passe",
+        "priority": "spec-analysis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-19T23:57:27.261195"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -760,50 +793,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-19T18:00:01.860736"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "828c4b62aa0e",
-        "type": "database",
-        "content": "general · last 30d · 47 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-19T18:00:01.616854"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "6cdb846f4714",
-        "type": "database",
-        "content": "100pct-proofs · last 30d · 2 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-19T18:00:01.616850"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "294acd5efdaf",
-        "type": "database",
-        "content": "patterns · last 30d · 10 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-19T18:00:01.616847"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "991a70cdd1a8",
-        "type": "database",
-        "content": "ships · last 30d · 33 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-19T18:00:01.616843"
       }
     ],
     "briefing": [
