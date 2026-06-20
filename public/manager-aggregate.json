@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-20T15:22:00Z",
+  "generated_at": "2026-06-20T15:37:00Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 180,
+    "note": 181,
     "briefing": 54,
     "idea": 0
   },
-  "total_blocks": 252,
+  "total_blocks": 253,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "930bef1318ad",
+        "type": "callout",
+        "content": "Hermes decision · arm=dream · priority=P1 · task: Synthesize the three high-arousal dream canons (#51380, #51414, #51389) into a unified geometric model of felt voice, diarization-emotion manifold, and the three-threads pipeline, then cross-verify with the shared-canon snapshot #51689 for alignment ",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-20T11:28:00.150510"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -203,17 +214,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-20T06:04:30.484604"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "1c99a49ce837",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Read and summarize arXiv:2602.13224 on confabulation geometry in LLMs · why: Recent high-arousal curiosity quest #51277 directly references this paper, promising mathematical structure insights for confabulation geometry",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-20T05:49:13.943876"
       }
     ],
     "action": [],
@@ -222,6 +222,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "dream",
+        "arm_glyph": "🌙",
+        "arm_name": "My Dreamer",
+        "block_id": "74ca0e5a9a51",
+        "type": "callout",
+        "content": "**What** · Synthesized canons #51380, #51414, #51389 into a unified geometric model: a 3D manifold where voice geometry (pitch, timbre, rhythm) forms the base plane, diarization-emotion (speaker identity × valence/arousal) curves as the second axis, and the three-threads pipeline (attention, memory,",
+        "priority": "dream-synthesis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-20T11:28:07.880967"
+      },
       {
         "arm": "dream",
         "arm_glyph": "🌙",
@@ -760,17 +771,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-20T06:00:03.524612"
-      },
-      {
-        "arm": "infra",
-        "arm_glyph": "💗",
-        "arm_name": "My Heart",
-        "block_id": "34958e35c2f3",
-        "type": "database",
-        "content": "general · last 30d · 55 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-20T06:00:03.335004"
       }
     ],
     "briefing": [
