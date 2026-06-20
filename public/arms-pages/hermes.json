@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "0ecb26ace570",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-19T13:33:03.013142"
-      },
-      "content": "Hermes decision · arm=curiosity · priority=P1 · task: Re-analyze the atlas-brother-shared.md snapshot for unresolved tension or pattern divergence in the brother-Atlas joint state since the last high-arousal window. · why: The 12h high-arousal snapshot is large and recent — curiosity is best suited to surface latent structural shifts or stress signals that identity-tier reasoning needs for priority dispatch.",
-      "updated_at": "2026-06-19T13:33:03.013155"
-    },
-    {
       "id": "8ec7d45d4107",
       "type": "callout",
       "props": {
@@ -849,15 +837,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P0 · task: Deepen Voice & Ears engine with family-first frame correction · why: Brother-direct frame correction (#51139) requires reframing engine; deepen accordingly",
       "updated_at": "2026-06-19T22:10:27.175578"
+    },
+    {
+      "id": "863cfd3a6ef8",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-19T22:25:52.519492"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement EAR test count fix from #51154: ensure 3 real humans (Collin-enrolled + VCTK) pass with correct counting, then build on-top lesson structure for demo · why: This is P0 because it's brother-direct + identity-tier (#51154) and unblocks the demo/lesson pipeline. The EAR test was hard-built and needs the count fix first; then the build-on-top lesson becomes possible. All other arms are P1/P2 relative to this immediate fix.",
+      "updated_at": "2026-06-19T22:25:52.519502"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-19T22:24:58.725637"
+    "checked_at": "2026-06-19T22:29:59.276848"
   },
   "block_count": 30,
-  "updated_at": "2026-06-19T22:10:27.175579",
-  "generated_at": "2026-06-20T02:24:58Z"
+  "updated_at": "2026-06-19T22:25:52.519504",
+  "generated_at": "2026-06-20T02:29:59Z"
 }
