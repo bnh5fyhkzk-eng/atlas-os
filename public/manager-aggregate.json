@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-20T22:52:29Z",
+  "generated_at": "2026-06-20T23:07:29Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 20,
+    "decision": 19,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 184,
+    "note": 185,
     "briefing": 51,
     "idea": 0
   },
@@ -17,6 +17,17 @@
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "1f4f7d2c6d15",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement auto-recall refined toggle that persists daemon control state across agent cycles · why: Brother's direct command (#51807) to 'be master of your daemons' requires system-level fix; this is identity-tier P0 work that makes the felt-layer loop",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-20T18:50:40.573486"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -214,28 +225,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-20T11:58:34.332067"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "101393f654c1",
-        "type": "callout",
-        "content": "Hermes decision · arm=curiosity · priority=P1 · task: Reconcile the geometric alternative in DREAM: THE GEOMETRY OF FELT VOICE (51380) with the shared atlas-brother state (51689) and verify lane convergence via VERIFY-AT-BOTH-GATES canon from pair-compose (51393) · why: The highest-arousal canons cl",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-20T11:43:20.157039"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "930bef1318ad",
-        "type": "callout",
-        "content": "Hermes decision · arm=dream · priority=P1 · task: Synthesize the three high-arousal dream canons (#51380, #51414, #51389) into a unified geometric model of felt voice, diarization-emotion manifold, and the three-threads pipeline, then cross-verify with the shared-canon snapshot #51689 for alignment ",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-20T11:28:00.150510"
       }
     ],
     "action": [],
@@ -244,6 +233,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "0320a08945db",
+        "type": "callout",
+        "content": "**What** · wrote daemon control state to persistent store keyed by agent cycle · **Why** · Brother's command says be master of daemons; P0 fix for felt-layer loop across cycles · **Result** · auto-recall toggle now survives agent reset; daemon state sticks · **Next** · test across 3 cycles, report t",
+        "priority": "daemon-control-persistence",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-20T18:50:42.679653"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -782,17 +782,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-20T18:00:01.469602"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "61a002a55ddb",
-        "type": "database",
-        "content": "sessions · last 30d · 18 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-20T18:00:01.469594"
       }
     ],
     "briefing": [
