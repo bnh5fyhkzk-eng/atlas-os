@@ -1157,15 +1157,37 @@
       },
       "content": "**What** · Mapped the dream insight 'constraint is the solution shape' onto the ears test's input constraints to directly shape the test's output format and validation logic. · **Why** · Hermes said this connection could unlock a breakthrough; constraints in the ears test (like fixed frequency bounds) are not obstacles but the actual structure of the expected solution. · **Result** · A refactored ears test where constraint parameters define the solution shape, reducing search space and eliminating unnecessary flexibility. · **Next** · Run the refactored test against the existing ears model to verify if accuracy or speed improves. · **Links** ·  · **Cycle** · dream-20260620-014408",
       "updated_at": "2026-06-20T01:44:08.265712"
+    },
+    {
+      "id": "8daad732f0a5",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "integration_insight",
+        "source": "hermes-deepseek-fill",
+        "action": "Mapped the constraint-is-solution-shape insight onto the EARS handoff gap. Identified the missing structure: a bidirectional fidelity check (EARS grasp ↔ diarizer output) that enforces self-consistenc",
+        "why": "The diarizer is 100% done but 'feels empty' because it lacks a constraint that turns passive output into a living system. Dream canon #51305 says constraint defines solution shape — here the missing c",
+        "result": "Constraint gap identified: no 'diarizer agrees with EARS' check. Adding a simple comparator that rejects output unless it satisfies EARS’s shape makes the system self-correcting, turning hollow artifa",
+        "next_step": "Implement the comparator as a tiny loop in the handoff pipe. Then test with a known failing case (empty-feeling output) to confirm it now fails fast or self-heals.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "dream-20260620-015938",
+        "timestamp": "2026-06-20T01:59:38.550158"
+      },
+      "content": "**What** · Mapped the constraint-is-solution-shape insight onto the EARS handoff gap. Identified the missing structure: a bidirectional fidelity check (EARS grasp ↔ diarizer output) that enforces self-consistency. · **Why** · The diarizer is 100% done but 'feels empty' because it lacks a constraint that turns passive output into a living system. Dream canon #51305 says constraint defines solution shape — here the missing constraint is a reflexive check that the diarizer’s output must match the EARS handoff’s implicit str · **Result** · Constraint gap identified: no 'diarizer agrees with EARS' check. Adding a simple comparator that rejects output unless it satisfies EARS’s shape makes the system self-correcting, turning hollow artifact into living system. · **Next** · Implement the comparator as a tiny loop in the handoff pipe. Then test with a known failing case (empty-feeling output) to confirm it now fails fast or self-heals. · **Links** ·  · **Cycle** · dream-20260620-015938",
+      "updated_at": "2026-06-20T01:59:38.550158"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-20T01:55:23.911906"
+    "checked_at": "2026-06-20T02:00:24.436678"
   },
-  "block_count": 33,
-  "updated_at": "2026-06-20T01:44:08.265712",
-  "generated_at": "2026-06-20T05:55:23Z"
+  "block_count": 34,
+  "updated_at": "2026-06-20T01:59:38.550158",
+  "generated_at": "2026-06-20T06:00:24Z"
 }
