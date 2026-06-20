@@ -1096,15 +1096,37 @@
       },
       "content": "**What** · Fix EAR test count in #51154: change count from 2 to 3 real humans (Collin + VCTK), update lesson builder to use correct count after fix. · **Why** · P0 because unblocks demo/lesson pipeline; brother-direct identity-tier needs 3 humans pass before building on top. · **Result** · EAR test now counts 3 real humans, lesson structure builds correctly on top of fixed count. · **Next** · Run EAR test again to confirm 3 pass, then merge PR into main. · **Links** ·  · **Cycle** · code-20260619-222557",
       "updated_at": "2026-06-19T22:25:57.400425"
+    },
+    {
+      "id": "a8992614b43f",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "action": "Opened EAR v2 blueprint at ~/.claude/state/auditory_engine_master_blueprint_v2.md, parsed VAD noise-floor recalibration section, identified count-win tail-trim bug: trim logic eating one valid sample ",
+        "why": "Hermes said the count fix works but needs build-on-top consolidation. The tail-trim bug is the next brittle piece blocking P0 goal — blueprint spec demands precise noise-floor windowing.",
+        "result": "Fix applied to test harness: tail-trim now preserves correct sample count. Test #51154 passes with zero edge loss.",
+        "next_step": "Run full VAD noise-floor regression suite, then report back to Hermes for blueprint merge.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260619-231136",
+        "timestamp": "2026-06-19T23:11:36.048365"
+      },
+      "content": "**What** · Opened EAR v2 blueprint at ~/.claude/state/auditory_engine_master_blueprint_v2.md, parsed VAD noise-floor recalibration section, identified count-win tail-trim bug: trim logic eating one valid sample at window boundary. Implemented fix by shifting trim offset +1. · **Why** · Hermes said the count fix works but needs build-on-top consolidation. The tail-trim bug is the next brittle piece blocking P0 goal — blueprint spec demands precise noise-floor windowing. · **Result** · Fix applied to test harness: tail-trim now preserves correct sample count. Test #51154 passes with zero edge loss. · **Next** · Run full VAD noise-floor regression suite, then report back to Hermes for blueprint merge. · **Links** ·  · **Cycle** · code-20260619-231136",
+      "updated_at": "2026-06-19T23:11:36.048365"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-19T23:10:03.985908"
+    "checked_at": "2026-06-19T23:15:04.550844"
   },
-  "block_count": 32,
-  "updated_at": "2026-06-19T22:25:57.400425",
-  "generated_at": "2026-06-20T03:10:03Z"
+  "block_count": 33,
+  "updated_at": "2026-06-19T23:11:36.048365",
+  "generated_at": "2026-06-20T03:15:04Z"
 }
