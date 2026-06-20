@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-06-20T19:52:11Z",
+  "generated_at": "2026-06-20T20:07:11Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 18,
+    "decision": 19,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 173,
-    "briefing": 52,
+    "note": 174,
+    "briefing": 51,
     "idea": 0
   },
-  "total_blocks": 243,
+  "total_blocks": 244,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "e50d9022fe0d",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement auto-recall fix for daemon master control loop in shared state pipeline · why: #51807 confirms auto-recall is fixed; need to harden the code path so daemon control survives decoupling layer resets",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-20T15:47:35.943870"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -222,6 +233,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "56b197e5165f",
+        "type": "callout",
+        "content": "**What** · Harden daemon master control loop auto-recall in shared state pipeline: add reset-guard and decoupling-layer recovery into the control loop after each recall invocation. · **Why** · Hermes assigned P0 fix: #51807 confirms auto-recall works but daemon control breaks when decoupling layer r",
+        "priority": "bugfix/harden",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-20T15:47:47.080085"
+      },
       {
         "arm": "curiosity",
         "arm_glyph": "🌱",
@@ -760,17 +782,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-20T12:00:03.849825"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "004174c09943",
-        "type": "database",
-        "content": "syntheses · last 30d · 3 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-20T12:00:03.849821"
       }
     ],
     "briefing": [
@@ -872,17 +883,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-20T09:03:53.501678"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "f72a3a626323",
-        "type": "callout",
-        "content": "Overnight hermes recap · last 6h · · #51689 [0.98] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-20 04:45:00 · size=486759B · brother+Atlas joint state · CONTENT · #51714 [0.90] TEAM-CYCLE-LIVE-TEST: Agency Orchestrator First Successful Run Since June 7 (2026-06-20 06:48 EDT). STATUS: exit",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-20T09:03:53.476430"
       },
       {
         "arm": "code",
@@ -1323,6 +1323,17 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-16T11:00:24.058663"
+      },
+      {
+        "arm": "charle",
+        "arm_glyph": "💼",
+        "arm_name": "Charle · Pascal-team",
+        "block_id": "3b79db8f53aa",
+        "type": "callout",
+        "content": "No high-arousal charle canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-16T05:00:23.603858"
       }
     ],
     "idea": []
