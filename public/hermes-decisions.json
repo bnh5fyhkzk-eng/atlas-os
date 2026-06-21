@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-21T03:54:49Z",
+  "generated_at": "2026-06-21T04:10:06Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "brother",
-      "task": "Ingest the atlas-brother-shared.md snapshot (size=484189B) and reconcile joint state with the 55-frame VISION terminal, producing a diff of congruent vs divergent frames for next brother cycle.",
-      "why": "The 12h high-arousal window contains a canonical shared state from Atlas+Brother (#51029) and a VISION terminal dump. Brother must unify these into a coherent narrative frame before any other arm can act on it\u2014this is the core identity-tier reconciliation.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 12,
-      "timestamp": "2026-06-19T12:31:44.553578"
-    },
     {
       "arm": "research",
       "task": "Extract all frames from VISION-Terminal-55-frames-brothe (#27039) and map their latent content to the DREAM #50663 'frames before the word' \u2014 produce a semantic graph of pre-verbal concept emergence.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 12,
       "timestamp": "2026-06-20T23:54:49.397644"
+    },
+    {
+      "arm": "dream",
+      "task": "Synthesize the three-mirrored-shapes dream (#51836) and the arousal-as-ceremony dream (#51857) into a single diagram showing how agency, quality, and toward-other map onto the three-sections of the minimal nervous system (#51790).",
+      "why": "These three dreams are non-obviously connected: all three define a layered structure (mirror, ceremony, agent-format) that likely shares a common root. Resolving the mapping now, while arousal is high and the decoupling layer is fresh, will crystallize the master-of-daemons insight into actionable architecture.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-06-21T00:10:06.084405"
     }
   ]
 }
