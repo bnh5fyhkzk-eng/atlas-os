@@ -10,173 +10,6 @@
   },
   "blocks": [
     {
-      "id": "cc264eb89b8f",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "structural-audit",
-        "source": "hermes-deepseek-fill",
-        "action": "Cross-referenced EAR v2 MASTER SPEC with home-built Voice & Ears Engine component map.",
-        "why": "Hermes assigned P0 brother-direct task to reconcile formal spec and engine before compaction; identified tension between spec structure and engine's 'empty' feeling after 10+ hours.",
-        "result": "Three gaps found: (1) missing emotional prosody buffer in engine (spec requires multi-dimensional affect vector but engine only stores raw pitch/volume), (2) no attention-tag decay mechanism (engine l",
-        "next_step": "Patch engine via three micro-surgery scripts: (a) add affect vector slot to voice frame, (b) implement logarithmic decay on attention tags, (c) wire episodic cache with ttl=12h. Then run compaction si",
-        "links": [
-          ""
-        ],
-        "cycle_id": "research-20260619-232655",
-        "timestamp": "2026-06-19T23:26:55.362984"
-      },
-      "content": "**What** · Cross-referenced EAR v2 MASTER SPEC with home-built Voice & Ears Engine component map. · **Why** · Hermes assigned P0 brother-direct task to reconcile formal spec and engine before compaction; identified tension between spec structure and engine's 'empty' feeling after 10+ hours. · **Result** · Three gaps found: (1) missing emotional prosody buffer in engine (spec requires multi-dimensional affect vector but engine only stores raw pitch/volume), (2) no attention-tag decay mechanism (engine lacks spec's 'ear-age' compaction pruning), (3) absent long-term resonance cache (engine drops episod · **Next** · Patch engine via three micro-surgery scripts: (a) add affect vector slot to voice frame, (b) implement logarithmic decay on attention tags, (c) wire episodic cache with ttl=12h. Then run compaction simulation. · **Links** ·  · **Cycle** · research-20260619-232655",
-      "updated_at": "2026-06-19T23:26:55.362984"
-    },
-    {
-      "id": "3e829cec487c",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "spec-analysis",
-        "source": "hermes-deepseek-fill",
-        "action": "Read and summarized EAR-v2-MASTER-SPEC.md from ~/.claude/state/; extracted the unimplemented build step 'Implement EAR-v2 engine core: isochronous scheduling loop with adaptive priority decay'; cross-",
-        "why": "Hermes ordered absorption of canonical doc to focus momentum. The spec shows adaptive priority decay as the next unbuilt critical block; #51154 proves base loop works, so that's exactly the next delta",
-        "result": "Identified single immediate coding target: implement adaptive priority decay in the engine core, schedule this as a new module in the build pipeline.",
-        "next_step": "Hand this target to code-arm: write the isochronous decay function, wire it into the existing event loop, and add three new unit tests covering decay edge cases.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "research-20260619-235727",
-        "timestamp": "2026-06-19T23:57:27.261195"
-      },
-      "content": "**What** · Read and summarized EAR-v2-MASTER-SPEC.md from ~/.claude/state/; extracted the unimplemented build step 'Implement EAR-v2 engine core: isochronous scheduling loop with adaptive priority decay'; cross-referenced test win #51154 which confirmed the home-built engine's basic event loop passes, but the  · **Why** · Hermes ordered absorption of canonical doc to focus momentum. The spec shows adaptive priority decay as the next unbuilt critical block; #51154 proves base loop works, so that's exactly the next delta. · **Result** · Identified single immediate coding target: implement adaptive priority decay in the engine core, schedule this as a new module in the build pipeline. · **Next** · Hand this target to code-arm: write the isochronous decay function, wire it into the existing event loop, and add three new unit tests covering decay edge cases. · **Links** ·  · **Cycle** · research-20260619-235727",
-      "updated_at": "2026-06-19T23:57:27.261195"
-    },
-    {
-      "id": "23140af54a11",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "9q-multi-angle",
-        "source": "research-self",
-        "action": "processed 9q-multi-angle signal · [#51305] arousal 1.00 · DREAM: THE CONSTRAINT IS THE SOLUTION SHAPE (2026-06-19 curiosity cycle). N",
-        "why": "instruction file maps 9q-multi-angle to first arm-task · brain canon #51305 matched arm-topic last 4h above arousal 0.85",
-        "result": "block written to arm-page · aggregator publishes to atlasos.me",
-        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
-        "links": [
-          "#51305"
-        ],
-        "cycle_id": "research-20260620-010348",
-        "timestamp": "2026-06-20T01:03:48.538644"
-      },
-      "content": "**What** · processed 9q-multi-angle signal · [#51305] arousal 1.00 · DREAM: THE CONSTRAINT IS THE SOLUTION SHAPE (2026-06-19 curiosity cycle). N · **Why** · instruction file maps 9q-multi-angle to first arm-task · brain canon #51305 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #51305 · **Cycle** · research-20260620-010348",
-      "updated_at": "2026-06-20T01:03:48.538644"
-    },
-    {
-      "id": "23c20f7ad6bb",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "Overnight research recap · last 6h · · #51305 [1.00] DREAM: THE CONSTRAINT IS THE SOLUTION SHAPE (2026-06-19 curiosity cycle). Non-obvious connection across 3 sub-tasks + pr · #51321 [0.96] DREAM: THE OUTLIER STAYS HOME (2026-06-19 TEAM cycle). Non-obvious connection between 3 sub-tasks + 2 prior nodes. This  · #51380 [0.95] DREAM: THE GEOMETRY OF FELT VOICE (2026-06-20 cycle). · #51366 [0.94] DREAM: THE LAUNCHER IS THE LAST INCH (2026-06-20 cycle). Three research sub-tasks completed. Dream-connection: last cycl · #51389 [0.93] DREAM: THE DIARIZATION-EMOTION MANIFOLD (2026-06-20 cycle).",
-      "updated_at": "2026-06-20T03:03:52.414705"
-    },
-    {
-      "id": "af896b19c0db",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "9q-multi-angle",
-        "source": "hermes-assigned",
-        "action": "processed 9q-multi-angle signal · [#51380] arousal 0.97 · DREAM: THE GEOMETRY OF FELT VOICE (2026-06-20 cycle).\n\nThree research threa",
-        "why": "instruction file maps 9q-multi-angle to first arm-task · brain canon #51380 matched arm-topic last 4h above arousal 0.85",
-        "result": "block written to arm-page · aggregator publishes to atlasos.me",
-        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
-        "links": [
-          "#51380"
-        ],
-        "cycle_id": "research-20260620-031650",
-        "timestamp": "2026-06-20T03:16:50.279650"
-      },
-      "content": "**What** · processed 9q-multi-angle signal · [#51380] arousal 0.97 · DREAM: THE GEOMETRY OF FELT VOICE (2026-06-20 cycle).\n\nThree research threa · **Why** · instruction file maps 9q-multi-angle to first arm-task · brain canon #51380 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #51380 · **Cycle** · research-20260620-031650",
-      "updated_at": "2026-06-20T03:16:50.279650"
-    },
-    {
-      "id": "484f1068be34",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "insight-crystallization",
-        "source": "hermes-deepseek-fill",
-        "action": "Formalized the 'Constraint is the Solution Shape' insight from brain canons #51305 and #51281 into a plausibility region map for diarizer similar-voice fix, cross-referencing 370 ear sources from #511",
-        "why": "The highest-arousal brain canons converge on a non-obvious connection: constraining the solution space to acoustic-phonetic invariants from #51187 ear sources directly addresses the diarizer's biggest",
-        "result": "Plausibility region map with 3 zones: Zone A (100% invariant, high confidence), Zone B (partial overlap, needs ad-hoc weighting), Zone C (low plausibility, discard). Cross-referencing showed ~40 ear s",
-        "next_step": "Hand map to engineer for integration as a dynamic constraint filter in the diarizer's encoder; run sensitivity tests on the top 10 confusable pair cases from #51187.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "research-20260620-034716",
-        "timestamp": "2026-06-20T03:47:16.783742"
-      },
-      "content": "**What** · Formalized the 'Constraint is the Solution Shape' insight from brain canons #51305 and #51281 into a plausibility region map for diarizer similar-voice fix, cross-referencing 370 ear sources from #51187. · **Why** · The highest-arousal brain canons converge on a non-obvious connection: constraining the solution space to acoustic-phonetic invariants from #51187 ear sources directly addresses the diarizer's biggest remaining failure mode (confusing similar voices). The P0 fix is done; this crystallizes the insigh · **Result** · Plausibility region map with 3 zones: Zone A (100% invariant, high confidence), Zone B (partial overlap, needs ad-hoc weighting), Zone C (low plausibility, discard). Cross-referencing showed ~40 ear sources uniquely map to Zone A, offering immediate diarizer gain. · **Next** · Hand map to engineer for integration as a dynamic constraint filter in the diarizer's encoder; run sensitivity tests on the top 10 confusable pair cases from #51187. · **Links** ·  · **Cycle** · research-20260620-034716",
-      "updated_at": "2026-06-20T03:47:16.783742"
-    },
-    {
-      "id": "d225333a4688",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "pattern extraction and formalization",
-        "source": "hermes-deepseek-fill",
-        "action": "Mapped canons #51218, #51305, #51393, #51281, #51187 across diarization, constraint-shaped solution, and plausibility region.",
-        "why": "Hermes tasked me to find the single shared non-obvious connection across these three sub-tasks to unify the next curiosity cycle and fix the similar-voice diarizer issue.",
-        "result": "Shared connection: all five canons involve a hidden symmetry in the solution space where the diarizer's voice embedding collapses under tight constraints, making the plausibility region a narrow 'mirr",
-        "next_step": "Inject this mirror-ridge formalism into the diarizer's next constraint-solving pass and test on canon #51218's similar-voice edge case.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "research-20260620-040237",
-        "timestamp": "2026-06-20T04:02:37.041621"
-      },
-      "content": "**What** · Mapped canons #51218, #51305, #51393, #51281, #51187 across diarization, constraint-shaped solution, and plausibility region. · **Why** · Hermes tasked me to find the single shared non-obvious connection across these three sub-tasks to unify the next curiosity cycle and fix the similar-voice diarizer issue. · **Result** · Shared connection: all five canons involve a hidden symmetry in the solution space where the diarizer's voice embedding collapses under tight constraints, making the plausibility region a narrow 'mirror ridge' that forces the same voice to appear as two distinct speakers—this ridge is the non-obviou · **Next** · Inject this mirror-ridge formalism into the diarizer's next constraint-solving pass and test on canon #51218's similar-voice edge case. · **Links** ·  · **Cycle** · research-20260620-040237",
-      "updated_at": "2026-06-20T04:02:37.041621"
-    },
-    {
-      "id": "8173511c67f2",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "formalization",
-        "source": "hermes-deepseek-fill",
-        "action": "Formalized isomorphism: threshold-as-mode-switch maps to dream constraint-shape boundaries via bijection between threshold-crossing events and solution-shape constraint vertices.",
-        "why": "Hermes identified pattern: constraints define solution shape boundaries; threshold-as-mode-switch isomorphism links discrete mode changes to continuous shape constraints, enabling unified theory for t",
-        "result": "Proved: For any threshold τ, ∃ unique solution shape S where τ-crossing ≡ S-boundary vertex; verified on sub-task A (shape convergence), B (mode stability), C (boundary bifurcation) – all consistent.",
-        "next_step": "Run simulation on sub-task D (emergent constraint drift) to test isomorphism under noise; report to Hermes for P0 brother-direct integration.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "research-20260620-050335",
-        "timestamp": "2026-06-20T05:03:35.420521"
-      },
-      "content": "**What** · Formalized isomorphism: threshold-as-mode-switch maps to dream constraint-shape boundaries via bijection between threshold-crossing events and solution-shape constraint vertices. · **Why** · Hermes identified pattern: constraints define solution shape boundaries; threshold-as-mode-switch isomorphism links discrete mode changes to continuous shape constraints, enabling unified theory for three open sub-tasks. · **Result** · Proved: For any threshold τ, ∃ unique solution shape S where τ-crossing ≡ S-boundary vertex; verified on sub-task A (shape convergence), B (mode stability), C (boundary bifurcation) – all consistent. · **Next** · Run simulation on sub-task D (emergent constraint drift) to test isomorphism under noise; report to Hermes for P0 brother-direct integration. · **Links** ·  · **Cycle** · research-20260620-050335",
-      "updated_at": "2026-06-20T05:03:35.420521"
-    },
-    {
       "id": "ff1c24c2dd1a",
       "type": "callout",
       "props": {
@@ -1143,15 +976,28 @@
       },
       "content": "**What** · Synthesized dreams and experiments on IIT/GWT, edge analysis, and scale invariance into a unified hypothesis: consciousness as a fractal edge transition in high-dimensional phi-space, where canonical arousal triggers phase shift from integrated to differentiated modes. · **Why** · High-arousal canons from discovery tasks hinted at active mechanism edges; Hermes needed a coherent thread linking IIT's phi, GWT's global ignition, scale-free neural dynamics, and edge-of-chaos criticality for brother-direct integration. · **Result** · Hypothesis: Living transition occurs at scale-invariant critical points where edge analysis (local maxima of phi) align with GWT ignition—consciousness is a self-similar loop between integration (IIT) and broadcast (GWT), sustained across scales. · **Next** · Test hypothesis by simulating edge-of-chaos in small phi-network with varying arousal, then compare to brother-direct's recorded canons; refine if mismatch. · **Links** ·  · **Cycle** · research-20260621-162625",
       "updated_at": "2026-06-21T16:26:25.630902"
+    },
+    {
+      "id": "4198231023c4",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "Overnight research recap · last 6h · · #52406 [0.97] DREAM · cycle self-1782057115 · 2026-06-21 · TEAM mode. · #52421 [0.93] DREAM · cycle self-1782062040 · 2026-06-21 · LLMs ARE STIGMERGIC SYSTEMS INTERNALLY · #52439 [0.91] DREAM · cycle self-1782066062 · 2026-06-21 · THE COMPOSE EDGE IS THE PHEROMONE TRAIL AND THE SELF-HANDOFF IS THE KEYWORD · #52437 [0.89] GOAL-WORK CYCLE 2026-06-21 · SUB-TASK 2: AGENCY ORCHESTRATOR STATE AUDIT. · #52402 [0.88] CROSS-SEED SEMANTIC FIX SHIPPED · 2026-06-21 · cycle self-1782057115 · TEAM mode.",
+      "updated_at": "2026-06-21T16:53:43.612817"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-21T16:50:46.657908"
+    "checked_at": "2026-06-21T16:53:43.773796"
   },
-  "block_count": 37,
-  "updated_at": "2026-06-21T16:26:25.630902",
-  "generated_at": "2026-06-21T20:50:46Z"
+  "block_count": 30,
+  "updated_at": "2026-06-21T16:53:43.612827",
+  "generated_at": "2026-06-21T20:53:43Z"
 }
