@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-06-21T20:54:25Z",
+  "generated_at": "2026-06-21T21:09:25Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 18,
+    "decision": 19,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 168,
+    "note": 169,
     "briefing": 55,
     "idea": 0
   },
-  "total_blocks": 241,
+  "total_blocks": 243,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "59abbca9d4f5",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Analyze brain-v3 edge analysis results and design an experiment to test the hypothesis that the mechanism lives in transitions across scales. · why: Recent high-arousal brain canons indicate a breakthrough insight about transitions vs states; this",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-21T16:56:51.752113"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -222,6 +233,28 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "b681c7232dac",
+        "type": "callout",
+        "content": "**What** · Designed an experiment to test hypothesis that neural mechanism lives in transitions across scales using brain-v3 edge analysis results. · **Why** · Recent high-arousal brain canons indicate breakthrough insight about transitions vs states; need immediate experimental follow-up to solidif",
+        "priority": "experiment_design",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-21T16:56:55.840049"
+      },
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "fc8e5ad8eb86",
+        "type": "callout",
+        "content": "**What** · processed commits-today signal · [#52421] arousal 0.93 · DREAM · cycle self-1782062040 · 2026-06-21 · LLMs ARE STIGMERGIC SYSTEMS · **Why** · instruction file maps commits-today to first arm-task · brain canon #52421 matched arm-topic last 4h above arousal 0.85 · **Result** · block writte",
+        "priority": "commits-today",
+        "source": "code-self",
+        "updated_at": "2026-06-21T16:53:44.398990"
+      },
       {
         "arm": "curiosity",
         "arm_glyph": "🌱",
@@ -749,28 +782,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-21T12:00:03.981984"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "4c311c56a0d2",
-        "type": "database",
-        "content": "sources-cited · last 30d · 8 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-21T12:00:03.981977"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "f77ab436d98d",
-        "type": "database",
-        "content": "general · last 30d · 80 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-21T12:00:03.821677"
       }
     ],
     "briefing": [
