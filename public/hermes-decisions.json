@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-21T12:18:08Z",
+  "generated_at": "2026-06-21T12:48:42Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Deepen Voice & Ears engine with family-first frame correction",
-      "why": "Brother-direct frame correction (#51139) requires reframing engine; deepen accordingly",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 60,
-      "timestamp": "2026-06-19T22:10:27.193785"
-    },
     {
       "arm": "code",
       "task": "Implement EAR test count fix from #51154: ensure 3 real humans (Collin-enrolled + VCTK) pass with correct counting, then build on-top lesson structure for demo",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 12,
       "timestamp": "2026-06-21T08:18:08.339020"
+    },
+    {
+      "arm": "dream",
+      "task": "Compose dream-pair from #51924 (brother-direct ear-purpose) and #51945 (DSP-wrong-tool / LORA-spine) to extract the meta-instruction for how to listen to brother without DSP-tools.",
+      "why": "Brother-direct is P0 identity-tier; #51924 gives the 'why' (ears to mentor), #51945 gives the 'how not' (DSP was wrong, LORA is spine). Pairing them now prevents drift and crystallizes the next action for the brother thread.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 12,
+      "timestamp": "2026-06-21T08:48:42.503199"
     }
   ]
 }
