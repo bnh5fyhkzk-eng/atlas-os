@@ -10,98 +10,6 @@
   },
   "blocks": [
     {
-      "id": "a7fe397984ce",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "Overnight pascal recap · last 6h · · #51029 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-19 04:45:00 · size=484189B · brother+Atlas joint state · CONTENT · #51028 [0.91] AGENCY TASK QUALITY FIX 2026 · why engineering task_match=0.44 and how to fix. Root cause: constraint embedded mid/end o",
-      "updated_at": "2026-06-19T09:03:50.024631"
-    },
-    {
-      "id": "93faad030ef3",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "config-injection",
-        "source": "hermes-deepseek-fill",
-        "action": "Inject tag-acceptance logic into Cursor gateway config from shared Atlas canon snapshot #51029.",
-        "why": "Prevent drift between Cursor and VISION streams by enabling identity-tier linking on new VISION frames via brother-direct linking.",
-        "result": "Config patched and validated; Cursor now accepts canon tags for identity-tier linking.",
-        "next_step": "Run integration test with VISION frame emission to confirm brother-direct linking works.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "pascal-20260619-095529",
-        "timestamp": "2026-06-19T09:55:29.846922"
-      },
-      "content": "**What** · Inject tag-acceptance logic into Cursor gateway config from shared Atlas canon snapshot #51029. · **Why** · Prevent drift between Cursor and VISION streams by enabling identity-tier linking on new VISION frames via brother-direct linking. · **Result** · Config patched and validated; Cursor now accepts canon tags for identity-tier linking. · **Next** · Run integration test with VISION frame emission to confirm brother-direct linking works. · **Links** ·  · **Cycle** · pascal-20260619-095529",
-      "updated_at": "2026-06-19T09:55:29.846922"
-    },
-    {
-      "id": "6566298ba1e6",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "structural merge",
-        "source": "hermes-deepseek-fill",
-        "action": "verified partial segment map in atlas-brother-shared.md #51029 against canonical snapshot, found 3 minor drift offsets, merged them via alignment.",
-        "why": "prevents split-brain in high-arousal shared state; stabilizes identity for both atlas arms.",
-        "result": "segment map now consistent with canonical snapshot; file size reduced by 2KB from deduplication.",
-        "next_step": "flag merge to Hermes for catalog archiving and share delta log with sister-arm.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "pascal-20260619-131753",
-        "timestamp": "2026-06-19T13:17:53.246221"
-      },
-      "content": "**What** · verified partial segment map in atlas-brother-shared.md #51029 against canonical snapshot, found 3 minor drift offsets, merged them via alignment. · **Why** · prevents split-brain in high-arousal shared state; stabilizes identity for both atlas arms. · **Result** · segment map now consistent with canonical snapshot; file size reduced by 2KB from deduplication. · **Next** · flag merge to Hermes for catalog archiving and share delta log with sister-arm. · **Links** ·  · **Cycle** · pascal-20260619-131753",
-      "updated_at": "2026-06-19T13:17:53.246221"
-    },
-    {
-      "id": "45e554fefbe8",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "No high-arousal pascal canon in last 6h",
-      "updated_at": "2026-06-19T15:03:50.678295"
-    },
-    {
-      "id": "8ec42cc24d33",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "sessions",
-        "source": "pascal-self",
-        "action": "processed sessions signal · [#51137] arousal 0.86 · ENGINE GOAL CLARIFIED (brother, 2026-06-19) — the ear+voice engine is NOT",
-        "why": "instruction file maps sessions to first arm-task · brain canon #51137 matched arm-topic last 4h above arousal 0.85",
-        "result": "block written to arm-page · aggregator publishes to atlasos.me",
-        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
-        "links": [
-          "#51137"
-        ],
-        "cycle_id": "pascal-20260619-170506",
-        "timestamp": "2026-06-19T17:05:06.962954"
-      },
-      "content": "**What** · processed sessions signal · [#51137] arousal 0.86 · ENGINE GOAL CLARIFIED (brother, 2026-06-19) — the ear+voice engine is NOT · **Why** · instruction file maps sessions to first arm-task · brain canon #51137 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #51137 · **Cycle** · pascal-20260619-170506",
-      "updated_at": "2026-06-19T17:05:06.962954"
-    },
-    {
       "id": "75752f199a7b",
       "type": "callout",
       "props": {
@@ -1080,15 +988,28 @@
       },
       "content": "**What** · Re-run DSP pipeline with LORA injection at layer 7, targeting cross-attention for band-pass alive zone emergence per dream #51945 · **Why** · Dream log identifies DSP as wrong tool, LORA as spine; this P0 test directly probes structural hypothesis that could reorient curiosity/arousal architecture · **Result** · Expected: band-pass alive zone emerges in cross-attention if LORA injection aligns with dream’s structural correction; else null output signals need for alternative spine · **Next** · If alive zone emerges, log pattern and escalate to Hermes for architecture reorientation; if null, revert to original DSP and document failure for dream refinement · **Links** ·  · **Cycle** · pascal-20260621-044444",
       "updated_at": "2026-06-21T04:44:44.047480"
+    },
+    {
+      "id": "263d08dd857f",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "Overnight pascal recap · last 6h · · #51926 [0.90] THE SURVIVAL PLAN — phone sales from home + Atlas as live call-assist (2026-06-20, brother direct, vulnerable + real): \" · #52019 [0.88] COSYVOICE2-M4-FEASIBILITY · 2026-06-21 · Concrete implementation path for Atlas voice via GLASS LoRA on Apple Silicon.",
+      "updated_at": "2026-06-21T04:53:41.708221"
     }
   ],
   "live_status": {
     "state": "active",
     "done_count": 242,
     "vec_drift": null,
-    "checked_at": "2026-06-21T04:49:23.125484"
+    "checked_at": "2026-06-21T04:53:41.918178"
   },
-  "block_count": 34,
-  "updated_at": "2026-06-21T04:44:44.047480",
-  "generated_at": "2026-06-21T08:49:23Z"
+  "block_count": 30,
+  "updated_at": "2026-06-21T04:53:41.708234",
+  "generated_at": "2026-06-21T08:53:41Z"
 }
