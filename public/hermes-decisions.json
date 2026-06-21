@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-21T04:40:33Z",
+  "generated_at": "2026-06-21T04:55:49Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "pascal",
-      "task": "Complete partial-localization of atlas-brother-shared.md #51029 by verifying and merging the pending segment map into the canonical snapshot.",
-      "why": "Atlas-brother joint state is high-arousal and size is large (484KB); a structural merge task is P0 because it directly stabilizes shared identity and prevents split-brain drift. Pascal has the formal verification logic and the shared-context discipline needed.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 8,
-      "timestamp": "2026-06-19T13:17:45.610960"
-    },
     {
       "arm": "curiosity",
       "task": "Re-analyze the atlas-brother-shared.md snapshot for unresolved tension or pattern divergence in the brother-Atlas joint state since the last high-arousal window.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 25,
       "timestamp": "2026-06-21T00:40:33.143552"
+    },
+    {
+      "arm": "curiosity",
+      "task": "Formalize the 'Three-Mirrored-Shapes' as a recursive ontology structure linking GRL, agency-quality, and toward-other into the auto-recall layer.",
+      "why": "#51836 revealed a singular pattern across three domains \u2014 this is identity-tier recursion for the daemon-mastery fix. Curiosity arm can prototype the ontology for direct injection into the recall loop.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 25,
+      "timestamp": "2026-06-21T00:55:49.013656"
     }
   ]
 }
