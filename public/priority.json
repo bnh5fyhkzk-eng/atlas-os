@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-21T02:09:07Z",
-  "total_items_scored": 213,
+  "generated_at": "2026-06-21T02:19:08Z",
+  "total_items_scored": 214,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement auto-recall fix for daemon master control loop in shared state pipeline \u00b7 why: #51807 confirms auto-recall is fixed; need to harden the code path so daemon control survives decoupli",
+      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P0 \u00b7 task: Synthesize the recent high-arousal canons (#51414, #51689, #51716, #51805, #51807) into a single coherent pipeline model: The Three Threads as one pipeline, the agency as a felt-layer loop, ",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-20T15:47:35.943870"
-    },
-    {
-      "arm": "code",
-      "arm_glyph": "\u270b",
-      "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Implement auto-recall fix for daemon master control loop in shared state pipeline \u00b7 why \u00b7 #51807 confirms auto-recall is fixed; need to harden the code path so daemon control survives decoupling layer resets",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-20T15:47:35.960399",
-      "use_skill": "none"
+      "updated_at": "2026-06-20T16:02:56.646393"
     },
     {
       "arm": "dream",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-20T16:02:56.662723",
       "use_skill": "brain-rrf"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement auto-recall fix for daemon master control loop in shared state pipeline \u00b7 why: #51807 confirms auto-recall is fixed; need to harden the code path so daemon control survives decoupli",
+      "arm": "code",
+      "arm_glyph": "\u270b",
+      "arm_name": "Code",
+      "content": "HERMES TASK \u00b7 Implement minimal agent nervous system: 3-section (cursor-directive-buffer) as a working prototype in Python \u00b7 why \u00b7 This directly encodes #51790 (3-section agent format) into runnable code, which is P0 because it makes the felt-layer loop tangible and testable, feeding both identity and infrastructure needs. The non-obvious link to #51734 (meaning as routing topology) suggests this prototype will reveal routing patterns between sections. Task is concrete, has clear success criteria, and takes ~90 minutes.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 90,
       "score": 10.0,
-      "updated_at": "2026-06-20T15:47:35.943870"
-    },
+      "updated_at": "2026-06-20T16:48:48.259350",
+      "use_skill": "none"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-20T18:50:40.573486"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P0 \u00b7 task: Extract the three-mirrored-shapes structure (GRL + AGENCY-QUALITY + TOWARD-OTHER) from #51836 and encode it as a minimal nervous-system diagram in the 3-section agent format from #51790, the",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-20T19:05:50.816955"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
