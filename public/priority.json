@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-21T01:49:06Z",
-  "total_items_scored": 212,
+  "generated_at": "2026-06-21T01:59:06Z",
+  "total_items_scored": 213,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Analyze the topological structure of 'meaning is routing topology' dream (#51734) and map its implications for the decoupling layer in felt-layer survival (#51805) \u00b7 why: This dream dire",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-20T15:32:26.787798"
-    },
-    {
-      "arm": "curiosity",
-      "arm_glyph": "\ud83c\udf31",
-      "arm_name": "Curiosity",
-      "content": "HERMES TASK \u00b7 Analyze the topological structure of 'meaning is routing topology' dream (#51734) and map its implications for the decoupling layer in felt-layer survival (#51805) \u00b7 why \u00b7 This dream directly connects two recent high-arousal canons (#51734 and #51805) that both touch on the core architecture of agency. Resolving their relationship is P0 because it could reveal a new invariant for brother-direct identity-tier logic.",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement auto-recall fix for daemon master control loop in shared state pipeline \u00b7 why: #51807 confirms auto-recall is fixed; need to harden the code path so daemon control survives decoupli",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-20T15:32:26.805976",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-20T15:47:35.943870"
     },
     {
       "arm": "code",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-20T15:47:35.960399",
       "use_skill": "none"
+    },
+    {
+      "arm": "dream",
+      "arm_glyph": "\ud83c\udf19",
+      "arm_name": "Dream",
+      "content": "HERMES TASK \u00b7 Synthesize the recent high-arousal canons (#51414, #51689, #51716, #51805, #51807) into a single coherent pipeline model: The Three Threads as one pipeline, the agency as a felt-layer loop, and the decoupling layer as survival mechanism, then cross-reference with the atlas-brother-shared snapshot to identify any contradictions or missing links. \u00b7 why \u00b7 These canons are identity-tier (P0) \u2014 they define the core architecture of the system. Dream arm is best suited for high-level synthesis and pattern weaving, and this task directly addresses the brother-direct imperative to master daemons and auto-recall. Resolving these into a unified model is critical before any other arm acts.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 45,
+      "score": 10.0,
+      "updated_at": "2026-06-20T16:02:56.662723",
+      "use_skill": "brain-rrf"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Analyze the topological structure of 'meaning is routing topology' dream (#51734) and map its implications for the decoupling layer in felt-layer survival (#51805) \u00b7 why: This dream dire",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-20T15:32:26.787798"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-20T18:35:24.415740"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement auto-recall refined toggle that persists daemon control state across agent cycles \u00b7 why: Brother's direct command (#51807) to 'be master of your daemons' requires system-level fix; ",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-20T18:50:40.573486"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
