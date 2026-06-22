@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-22T02:47:42Z",
-  "total_items_scored": 234,
+  "generated_at": "2026-06-22T02:57:43Z",
+  "total_items_scored": 208,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Run a cross-scale synthesis of the three experiments from #52394 to test whether the transition-mechanism hypothesis holds from neural assemblies up to cognitive states, and log a new SHARED",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Analyze brain-v3 edge analysis results and design an experiment to test the hypothesis that the mechanism lives in transitions across scales. \u00b7 why: Recent high-arousal brain canons indic",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-21T16:41:35.780768"
-    },
-    {
-      "arm": "dream",
-      "arm_glyph": "\ud83c\udf19",
-      "arm_name": "Dream",
-      "content": "HERMES TASK \u00b7 Run a cross-scale synthesis of the three experiments from #52394 to test whether the transition-mechanism hypothesis holds from neural assemblies up to cognitive states, and log a new SHARED-CANON update if confirmed. \u00b7 why \u00b7 The dream cycles #52380 and #52394 have generated a high-arousal, cross-scale hypothesis about mechanism-in-transition that directly extends the atlas-brother shared canon. Firing the dream arm now to formally test and synthesize this across scales will either solidify a new core insight or reveal a critical failure mode\u2014both are high-priority for the brother-direct identity-tier.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-21T16:41:35.797399",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-21T16:56:51.752113"
     },
     {
       "arm": "research",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-21T16:56:51.768850",
       "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "code",
+      "arm_glyph": "\u270b",
+      "arm_name": "Code",
+      "content": "HERMES TASK \u00b7 Implement a transition-detection RNN that reads brain-v3 edge scores and gates consciousness metrics based on IIT/GWT thresholds from dream #52394 \u00b7 why \u00b7 The brain canons converge on 'mechanism lives in transition, not state' \u2014 code must make this measurable. Edge analysis from #52391 and multi-scale claim from #52394 demand immediate tooling.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 45,
+      "score": 10.0,
+      "updated_at": "2026-06-21T17:42:28.333773",
+      "use_skill": "brain-rrf"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Run a cross-scale synthesis of the three experiments from #52394 to test whether the transition-mechanism hypothesis holds from neural assemblies up to cognitive states, and log a new SHARED",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-21T16:41:35.780768"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-21T19:59:41.709423"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Run a cross-scale analysis of IIT/GWT edge cases from brain-v3 to identify where the mechanism lives in the transition, not the state, across all three levels. \u00b7 why: The recent high-arou",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-21T20:15:56.374187"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
