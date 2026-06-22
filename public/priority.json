@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-06-22T07:58:23Z",
-  "total_items_scored": 230,
+  "generated_at": "2026-06-22T08:08:23Z",
+  "total_items_scored": 231,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Synthesize the three experiments from brain-v3 edge analysis into a unified hypothesis about transition-based mechanism. \u00b7 why: The recent canons highlight a recurring pattern across scal",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Run brain-v3 edge analysis on transition dynamics across all three experimental scales from dream #52394 to confirm scale-invariant mechanism pattern. \u00b7 why: #52394 and #52380 both identi",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-21T22:07:12.616745"
+      "updated_at": "2026-06-21T22:22:39.128851"
     },
     {
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Synthesize the three experiments from brain-v3 edge analysis into a unified hypothesis about transition-based mechanism. \u00b7 why \u00b7 The recent canons highlight a recurring pattern across scales; integrating these findings into a coherent hypothesis is the next logical step to advance the theoretical framework.",
+      "content": "HERMES TASK \u00b7 Run brain-v3 edge analysis on transition dynamics across all three experimental scales from dream #52394 to confirm scale-invariant mechanism pattern. \u00b7 why \u00b7 #52394 and #52380 both identify the mechanism lives in the transition, not the state \u2014 this is a brother-direct P0 insight that needs empirical grounding at higher scales to advance the IIT/GWT synthesis.",
       "category": "decision",
-      "priority": "P1",
+      "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 30,
+      "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-21T22:07:12.633759",
+      "updated_at": "2026-06-21T22:22:39.145139",
       "use_skill": "brain-rrf"
     },
     {
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Synthesize the three experiments from brain-v3 edge analysis into a unified hypothesis about transition-based mechanism. \u00b7 why: The recent canons highlight a recurring pattern across scal",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-21T22:07:12.616745"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-22T00:55:43.257395"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Audit recent brain canons #52437 and #52573 for stale dream-line and brother-direct optimization signals, then cross-reference with #52550 ear-compass directive to identify concrete clone",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-22T01:26:09.115317"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
