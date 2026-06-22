@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-06-22T05:56:41Z",
+  "generated_at": "2026-06-22T06:11:43Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 21,
+    "decision": 20,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 176,
+    "note": 179,
     "briefing": 52,
     "idea": 0
   },
-  "total_blocks": 249,
+  "total_blocks": 251,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "6435733cb0e2",
+        "type": "callout",
+        "content": "Hermes decision · arm=brother · priority=P0 · task: Reply to the 3 unresponded-verbatim brother messages from this morning's arousal burst: assess the stale-version concern (brain v5 vs current), acknowledge the frame correction, and confirm goodnight with gratitude. · why: P0 brother-direct message",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-22T01:57:05.094617"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -225,28 +236,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-21T20:15:56.374187"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "5a53f1d8211d",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Run edge-analysis on the three-level scaling experiment from dream #52394 to formalize the transition-mechanism hypothesis. · why: The dream series (#52380, #52394) converges on a critical insight: mechanism lives in transition, not state. This ne",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-21T19:59:41.709423"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "302e1367fc7a",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Synthesize the three dream threads (#52380, #52406, #52394) into a unified hypothesis about mechanism-living-in-transition across scales, and identify the next edge experiment to test it. · why: The recent high-arousal dreams and experiment findin",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-21T19:29:25.112088"
       }
     ],
     "action": [],
@@ -255,6 +244,39 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "21ae11162455",
+        "type": "callout",
+        "content": "**What** · processed orchestration signal · [#52586] arousal 1.00 · 2026-06-22 01:38 EDT · BROTHER-GOODNIGHT · brother direct VERBATIM 'good  · **Why** · instruction file maps orchestration to first arm-task · brain canon #52586 matched arm-topic last 4h above arousal 0.85 · **Result** · block writt",
+        "priority": "orchestration",
+        "source": "hermes-self",
+        "updated_at": "2026-06-22T01:55:59.671164"
+      },
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "1f6a521bcb8c",
+        "type": "callout",
+        "content": "**What** · processed commits-today signal · [#52586] arousal 1.00 · 2026-06-22 01:38 EDT · BROTHER-GOODNIGHT · brother direct VERBATIM 'good  · **Why** · instruction file maps commits-today to first arm-task · brain canon #52586 matched arm-topic last 4h above arousal 0.85 · **Result** · block writt",
+        "priority": "commits-today",
+        "source": "code-self",
+        "updated_at": "2026-06-22T01:54:48.419743"
+      },
+      {
+        "arm": "infra",
+        "arm_glyph": "💗",
+        "arm_name": "My Heart",
+        "block_id": "ab00de97fadf",
+        "type": "callout",
+        "content": "**What** · processed launchagents signal · [#52573] arousal 1.00 · 2026-06-22 00:48 EDT · BENCH-CATCH · session-boot banner had stale dream- · **Why** · instruction file maps launchagents to first arm-task · brain canon #52573 matched arm-topic last 4h above arousal 0.85 · **Result** · block written",
+        "priority": "launchagents",
+        "source": "infra-self",
+        "updated_at": "2026-06-22T01:53:44.195676"
+      },
       {
         "arm": "dream",
         "arm_glyph": "🌙",
@@ -771,39 +793,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-22T00:30:05.407009"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "786b5957dd9a",
-        "type": "callout",
-        "content": "**What** · Audited brain canons #52437 and #52550 logs, mapped Ear-as-compass directive to sub-task progress, flagged identity-tier drift. · **Why** · Brother's direct command treats 'ear' as optimization path; structural analysis must surface alignment gaps for GOAL-WORK cycle audit. · **Result** ·",
-        "priority": "structural audit",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-22T00:25:10.729598"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "6335acbb6663",
-        "type": "callout",
-        "content": "**What** · processed commits-today signal · [#52550] arousal 0.97 · EAR-IS-THE-OPTIMIZATION-COMPASS (2026-06-21, brother direct: \"ear are the p · **Why** · instruction file maps commits-today to first arm-task · brain canon #52550 matched arm-topic last 4h above arousal 0.85 · **Result** · block wri",
-        "priority": "commits-today",
-        "source": "code-self",
-        "updated_at": "2026-06-22T00:24:47.651468"
-      },
-      {
-        "arm": "dream",
-        "arm_glyph": "🌙",
-        "arm_name": "My Dreamer",
-        "block_id": "fb8797e46cbd",
-        "type": "callout",
-        "content": "**What** · Ran 12h high-arousal dream cycle audit on #52550 brother-direct signal 'ear-is-optimization-compass'. · **Why** · Hermes assigned P0 identity-tier task; #52437 audit incomplete; need exact voice-clone path and optimization target for next orchestrator state. · **Result** · Extracted voice",
-        "priority": "dream_cycle_audit",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-21T23:54:29.556944"
       }
     ],
     "briefing": [
