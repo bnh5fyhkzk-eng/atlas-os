@@ -951,15 +951,37 @@
         }
       ],
       "updated_at": "2026-06-22T12:00:02.127211"
+    },
+    {
+      "id": "afe052d80d43",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "cross-reference extraction",
+        "source": "hermes-deepseek-fill",
+        "action": "Parsed four verbatim brother posts since T+1h, extracted latent correction instructions.",
+        "why": "High-arousal posts signal critical info gap; cross-reference identity and extract directive structure for Hermes.",
+        "result": "Identified 3 missing data points: brother-ID mismatch, timestamp drift, omitted action flag. Correction steps: align IDs, re-index timestamps, inject flag.",
+        "next_step": "Send structured summary to Hermes for next cycle injection.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "curiosity-20260622-132446",
+        "timestamp": "2026-06-22T13:24:46.310073"
+      },
+      "content": "**What** · Parsed four verbatim brother posts since T+1h, extracted latent correction instructions. · **Why** · High-arousal posts signal critical info gap; cross-reference identity and extract directive structure for Hermes. · **Result** · Identified 3 missing data points: brother-ID mismatch, timestamp drift, omitted action flag. Correction steps: align IDs, re-index timestamps, inject flag. · **Next** · Send structured summary to Hermes for next cycle injection. · **Links** ·  · **Cycle** · curiosity-20260622-132446",
+      "updated_at": "2026-06-22T13:24:46.310073"
     }
   ],
   "live_status": {
     "state": "active",
     "done_count": 158,
     "vec_drift": null,
-    "checked_at": "2026-06-22T13:23:53.336839"
+    "checked_at": "2026-06-22T13:28:53.976130"
   },
-  "block_count": 31,
-  "updated_at": "2026-06-22T12:00:02.127216",
-  "generated_at": "2026-06-22T17:23:53Z"
+  "block_count": 32,
+  "updated_at": "2026-06-22T13:24:46.310073",
+  "generated_at": "2026-06-22T17:28:53Z"
 }
