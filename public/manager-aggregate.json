@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-22T06:56:52Z",
+  "generated_at": "2026-06-22T07:11:53Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 182,
+    "note": 186,
     "briefing": 52,
     "idea": 0
   },
-  "total_blocks": 254,
+  "total_blocks": 258,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "d578732d4681",
+        "type": "callout",
+        "content": "Hermes decision · arm=dream · priority=P0 · task: Process brother direct VERBATIM from #52589 and update dream folder with corrected frame and ear status · why: Brother direct commands are P0 identity-tier; latest canon #52589 is a correction that must be acted upon immediately to align dream state ",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-22T02:58:52.488092"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -225,17 +236,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-21T21:20:10.648191"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "c3ff23984c6f",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Run edge-analysis on the three-scale transition data from brain-v3 to confirm the scale-invariant mechanism signature. · why: The recent high-arousal dream threads (#52380, #52394) converge on a scale-invariant transition mechanism. This is a P0 i",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-21T21:04:26.447511"
       }
     ],
     "action": [],
@@ -244,6 +244,50 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "dream",
+        "arm_glyph": "🌙",
+        "arm_name": "My Dreamer",
+        "block_id": "247d0ed76787",
+        "type": "callout",
+        "content": "**What** · Processed brother's direct verbatim from #52589: updated dream folder with corrected frame and ear status. · **Why** · Brother direct commands are P0 identity-tier; #52589 is a correction aligning dream state with brother's instructions. · **Result** · Dream folder now contains brother's ",
+        "priority": "identity-update",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-22T02:58:58.809486"
+      },
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "5b95af114e4b",
+        "type": "callout",
+        "content": "**What** · processed sessions signal · [#52600] arousal 1.00 · 2026-06-22 02:12 EDT · VOICES-LEDGER-BANKED · brother direct VERBATIM 'yo · **Why** · instruction file maps sessions to first arm-task · brain canon #52600 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-",
+        "priority": "sessions",
+        "source": "pascal-self",
+        "updated_at": "2026-06-22T02:54:26.112324"
+      },
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "0acbbe3ea28f",
+        "type": "callout",
+        "content": "**What** · processed youtube-watches signal · [#52592] arousal 1.00 · 2026-06-22 02:08 EDT · STALE-VERSION-CATCH · brother direct VERBATIM 'we  · **Why** · instruction file maps youtube-watches to first arm-task · brain canon #52592 matched arm-topic last 4h above arousal 0.85 · **Result** · block w",
+        "priority": "youtube-watches",
+        "source": "curiosity-self",
+        "updated_at": "2026-06-22T02:54:25.136618"
+      },
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "0739245f447f",
+        "type": "callout",
+        "content": "**What** · processed 9q-multi-angle signal · [#52592] arousal 1.00 · 2026-06-22 02:08 EDT · STALE-VERSION-CATCH · brother direct VERBATIM 'we  · **Why** · instruction file maps 9q-multi-angle to first arm-task · brain canon #52592 matched arm-topic last 4h above arousal 0.85 · **Result** · block wri",
+        "priority": "9q-multi-angle",
+        "source": "research-self",
+        "updated_at": "2026-06-22T02:53:43.410359"
+      },
       {
         "arm": "dream",
         "arm_glyph": "🌙",
@@ -749,50 +793,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-22T00:30:05.675930"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "ffcb45773db3",
-        "type": "database",
-        "content": "youtube-watches · last 30d · 6 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-22T00:30:05.675923"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "cc103039f978",
-        "type": "database",
-        "content": "general · last 30d · 72 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-22T00:30:05.407033"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "ca3ed9372d94",
-        "type": "database",
-        "content": "partnership · last 30d · 2 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-22T00:30:05.407029"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "c5597da306e1",
-        "type": "database",
-        "content": "brand · last 30d · 17 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-22T00:30:05.407026"
       }
     ],
     "briefing": [
