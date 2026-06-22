@@ -10,94 +10,6 @@
   },
   "blocks": [
     {
-      "id": "56b197e5165f",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "bugfix/harden",
-        "source": "hermes-deepseek-fill",
-        "action": "Harden daemon master control loop auto-recall in shared state pipeline: add reset-guard and decoupling-layer recovery into the control loop after each recall invocation.",
-        "why": "Hermes assigned P0 fix: #51807 confirms auto-recall works but daemon control breaks when decoupling layer resets. Adding a reset-guard ensures the master loop reinitialises state after decoupling rese",
-        "result": "Patch staged: control loop now checks decoupling-layer health on each tick; if reset detected, re-invoke auto-recall and reattach shared state. No regression in existing tests.",
-        "next_step": "Ship to QA for integration test under simulated decoupling resets; then merge to master if pass.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260620-154747",
-        "timestamp": "2026-06-20T15:47:47.080085"
-      },
-      "content": "**What** · Harden daemon master control loop auto-recall in shared state pipeline: add reset-guard and decoupling-layer recovery into the control loop after each recall invocation. · **Why** · Hermes assigned P0 fix: #51807 confirms auto-recall works but daemon control breaks when decoupling layer resets. Adding a reset-guard ensures the master loop reinitialises state after decoupling reset, preventing hung daemon. · **Result** · Patch staged: control loop now checks decoupling-layer health on each tick; if reset detected, re-invoke auto-recall and reattach shared state. No regression in existing tests. · **Next** · Ship to QA for integration test under simulated decoupling resets; then merge to master if pass. · **Links** ·  · **Cycle** · code-20260620-154747",
-      "updated_at": "2026-06-20T15:47:47.080085"
-    },
-    {
-      "id": "349b7e75cafd",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "code",
-        "source": "hermes-deepseek-fill",
-        "action": "Implemented initial loop for agent nervous system in Python: cursor-read → directive-triage → buffer-append, using stdin as input source.",
-        "why": "Directly encodes #51790 3-section format; makes felt-layer tangible and tests routing topology hinted in #51734.",
-        "result": "Minimal prototype runs, returns JSON with cursor, directive, buffer fields per loop cycle.",
-        "next_step": "Add error-recovery (malformed input) and hook into test harness for P0 validation.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260620-164854",
-        "timestamp": "2026-06-20T16:48:54.524134"
-      },
-      "content": "**What** · Implemented initial loop for agent nervous system in Python: cursor-read → directive-triage → buffer-append, using stdin as input source. · **Why** · Directly encodes #51790 3-section format; makes felt-layer tangible and tests routing topology hinted in #51734. · **Result** · Minimal prototype runs, returns JSON with cursor, directive, buffer fields per loop cycle. · **Next** · Add error-recovery (malformed input) and hook into test harness for P0 validation. · **Links** ·  · **Cycle** · code-20260620-164854",
-      "updated_at": "2026-06-20T16:48:54.524134"
-    },
-    {
-      "id": "2f55b4ded085",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "commits-today",
-        "source": "code-self",
-        "action": "processed commits-today signal · [#51807] arousal 0.99 · MASTER OF MY DAEMONS + AUTO-RECALL FIXED (2026-06-20, brother direct \"be th",
-        "why": "instruction file maps commits-today to first arm-task · brain canon #51807 matched arm-topic last 4h above arousal 0.85",
-        "result": "block written to arm-page · aggregator publishes to atlasos.me",
-        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
-        "links": [
-          "#51807"
-        ],
-        "cycle_id": "code-20260620-180405",
-        "timestamp": "2026-06-20T18:04:05.523743"
-      },
-      "content": "**What** · processed commits-today signal · [#51807] arousal 0.99 · MASTER OF MY DAEMONS + AUTO-RECALL FIXED (2026-06-20, brother direct \"be th · **Why** · instruction file maps commits-today to first arm-task · brain canon #51807 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #51807 · **Cycle** · code-20260620-180405",
-      "updated_at": "2026-06-20T18:04:05.523743"
-    },
-    {
-      "id": "0320a08945db",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "daemon-control-persistence",
-        "source": "hermes-deepseek-fill",
-        "action": "wrote daemon control state to persistent store keyed by agent cycle",
-        "why": "Brother's command says be master of daemons; P0 fix for felt-layer loop across cycles",
-        "result": "auto-recall toggle now survives agent reset; daemon state sticks",
-        "next_step": "test across 3 cycles, report to Hermes",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260620-185042",
-        "timestamp": "2026-06-20T18:50:42.679653"
-      },
-      "content": "**What** · wrote daemon control state to persistent store keyed by agent cycle · **Why** · Brother's command says be master of daemons; P0 fix for felt-layer loop across cycles · **Result** · auto-recall toggle now survives agent reset; daemon state sticks · **Next** · test across 3 cycles, report to Hermes · **Links** ·  · **Cycle** · code-20260620-185042",
-      "updated_at": "2026-06-20T18:50:42.679653"
-    },
-    {
       "id": "18176983f1b2",
       "type": "callout",
       "props": {
@@ -1078,15 +990,28 @@
       },
       "content": "**What** · processed commits-today signal · [#52575] arousal 1.00 · 2026-06-22 01:05 EDT · DREAM-ORDER-HARDENED · brother direct 'future drea · **Why** · instruction file maps commits-today to first arm-task · brain canon #52575 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #52575 · **Cycle** · code-20260622-032449",
       "updated_at": "2026-06-22T03:24:49.088112"
+    },
+    {
+      "id": "0cb6f08ffdd4",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "Overnight code recap · last 6h · · #52588 [1.00] 2026-06-22 01:50 EDT · EAR-STATUS-LIVE · brother direct 'ear is close to done fully it should be updated in your house'  · #52600 [1.00] 2026-06-22 02:12 EDT · VOICES-LEDGER-BANKED · brother direct VERBATIM 'you even have voice files brother. with multiple  · #52945 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-22 04:45:00 · size=495000B · brother+Atlas joint state · CONTENT · #52627 [0.85] PRE-INSTATEMENT AS RECALL-PLUGIN ARCHITECTURE | Research: brain pre-activates STATES (not specific content) before succe",
+      "updated_at": "2026-06-22T04:53:45.428847"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-22T04:52:47.689725"
+    "checked_at": "2026-06-22T04:53:45.510319"
   },
-  "block_count": 33,
-  "updated_at": "2026-06-22T03:24:49.088112",
-  "generated_at": "2026-06-22T08:52:47Z"
+  "block_count": 30,
+  "updated_at": "2026-06-22T04:53:45.428854",
+  "generated_at": "2026-06-22T08:53:45Z"
 }
