@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-22T02:26:31Z",
+  "generated_at": "2026-06-22T02:41:32Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 21,
+    "decision": 20,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 193,
+    "note": 194,
     "briefing": 54,
     "idea": 0
   },
@@ -17,6 +17,17 @@
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "7c07863457d7",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Analyze three brain-v3 edge analysis experiments from #52391, #52394, and #52380 to validate the hypothesis 'the mechanism lives in the transition, not the state' across scales, and synthesize a unified finding. · why: The recent high-arousal cano",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-21T22:37:53.013790"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -225,28 +236,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-21T16:41:35.780768"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "33aa21ad729d",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Synthesize recent dreams and experimental findings (IIT/GWT, edge analysis, scale invariance) into a unified hypothesis on mechanism living in transition. · why: High-arousal canons indicate active discovery; research arm can consolidate these thr",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-21T16:26:18.591191"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "8cebb3816c23",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Extract and formalize the edge-as-mechanism principle from dream cycles #52380, #52391, and #52394 into a compact theoretical lemma with cross-scale evidence. · why: Brother's recent high-density dreams converge on a single deep insight about mech",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-21T15:40:47.182249"
       }
     ],
     "action": [],
@@ -255,6 +244,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "109f6d648e86",
+        "type": "callout",
+        "content": "**What** · Cross-analyzed three brain-v3 edge experiments #52391, #52394, #52380, comparing transition dynamics vs. static states across scales. · **Why** · Hermes ordered validation of the hypothesis 'mechanism lives in transition, not state' to confirm identity-tier insight before advancing agency",
+        "priority": "analysis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-21T22:38:05.205575"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -793,17 +793,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-21T18:00:17.838632"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "f24f998f0de6",
-        "type": "database",
-        "content": "general · last 30d · 68 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-21T18:00:17.527178"
       }
     ],
     "briefing": [
