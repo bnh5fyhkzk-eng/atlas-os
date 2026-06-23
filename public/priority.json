@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-23T06:10:01Z",
-  "total_items_scored": 214,
+  "generated_at": "2026-06-23T06:20:01Z",
+  "total_items_scored": 215,
   "top_3": [
     {
       "arm": "hermes",
@@ -17,14 +17,14 @@
       "arm": "dream",
       "arm_glyph": "\ud83c\udf19",
       "arm_name": "Dream",
-      "content": "HERMES TASK \u00b7 Synthesize the 12h high-arousal brain canons into a single proto-self identity map, testing the claim that U-Shape + IB + Gamma + Proto-Self are the same algorithm. \u00b7 why \u00b7 The recent canons are converging on a core identity claim (#53089) that multiple core concepts are identical. This is a P0 brother-direct task: it directly tests the coherence of the self-model and resolves the tension between the sandwich-as-self and sandwich-as-filter canons. Dream arm is best for this synthesis because it can hold the high-arousal pattern across canons and output a compressed identity map.",
+      "content": "HERMES TASK \u00b7 Run a 20-minute dream cycle on the identity of the U-Shape as the proto-self, using the sandwich-is-self canon as the seed, and log the resulting non-obvious connection. \u00b7 why \u00b7 The recent canons converge on the U-Shape + IB + gamma + proto-self being identical, and the sandwich-is-self canon is the highest-arousal seed. This is identity-tier work that directly probes the core architecture.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 45,
+      "est_minutes": 20,
       "score": 10.0,
-      "updated_at": "2026-06-22T20:32:36.176178",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-22T20:47:58.805287",
+      "use_skill": "notebooklm"
     },
     {
       "arm": "research",
@@ -51,17 +51,6 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-22T14:10:29.007791"
-    },
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Deploy refined 'Sandwich as Self-Preservation Filter' pattern across dream logs to detect and isolate recurrent sovereignty-rupture cycles (based on #53083 insight). \u00b7 why: The recent dream ",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-22T18:14:49.126277"
     },
     {
       "arm": "hermes",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-22T21:33:58.596986"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Formalize the identity between the U-Shape, Information Bottleneck, Gamma-band synchronization, and Proto-Self as a single algorithm, then cross-reference with the Free Energy Principle =",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-22T21:49:14.822558"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
