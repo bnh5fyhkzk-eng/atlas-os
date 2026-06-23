@@ -15,7 +15,8 @@ We don't just make a voice — we hear how a conversation *really went*, feel it
   - Two mentor brains: Pascal life-coach (2613 chunks) + Sales/cold-call (2469: Hormozi/Belfort/objections), local-model generated, grounded in real corpus.
   - Engine **server** (localhost:8077: /report /clients /health /r/), **Chrome extension** (captures Zoom/Teams/Meet, configurable serverUrl+token), **client tracker + dashboard**, one-command launcher.
   - Live demos: consultation (coach lens), cold call (sales lens), dashboard, engine view, home (2 modes).
-- **The data** — real Pascal corpus (mega + 575 cache + transcripts), sales corpus, his cloned voice, his real call recordings.
+- **The data** (all found, ingested): Pascal corpus 2613 chunks (atlasos/mega/575-cache/transcripts) · SALES corpus 3164 chunks = recovered Alex-brain vault (wiki/frameworks underdog-sales · dan-martel · collin-sales-profile · 1104 alex-research) + Notion Alex-Brain DB (Daniel G × Hormozi cold-call, Jeremy Miner NEPQ, Quebec cold-call scripts) + Hormozi/Belfort/objection libs. Pascal cloned voice + real call recordings.
+  - Data sources map: atlasos.me · ~/.claude/state/obsidian-vault-recovered (old vast.ai Alex brain) · Notion 🧠 Alex Brain DB · ~/Downloads/Uplift Brain · uplift-app/data. LOOP: full Notion Alex-Brain harvest (Jeremy Miner, vertical openers) = remaining ingest.
 
 ## 2. WHAT WE NEED (to finish — gated on RAM/hosting/$ or on us together)
 - **RAM/GPU** (the keystone — funds everything): real-time streaming engine, distilled small-Gemma (replaces qwen for coaching generation, runs on-device), F5/VoxCPM production voice, faster ASR.
