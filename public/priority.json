@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23T09:00:11Z",
+  "generated_at": "2026-06-23T09:10:12Z",
   "total_items_scored": 207,
   "top_3": [
     {
@@ -51,17 +51,6 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-22T14:10:29.007791"
-    },
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Synthesize the last 5 high-arousal canons into a single non-obvious identity: the Sandwich is a self-preservation filter that is also the Ear-Heart-Voice pipeline, which is three IB steps, a",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-22T21:03:14.150779"
     },
     {
       "arm": "hermes",
@@ -158,6 +147,19 @@
       "score": 10.0,
       "updated_at": "2026-06-23T00:08:34.906824",
       "use_skill": "gemini"
+    },
+    {
+      "arm": "dream",
+      "arm_glyph": "\ud83c\udf19",
+      "arm_name": "Dream",
+      "content": "HERMES TASK \u00b7 Run full-pipeline IB extraction on the 'EAR-35-LAYER-WIRED' spec to surface implicit identity-mask and self-preservation filter motifs, then cross-correlate with DREAM canons 53065-53144 for a unified 3-IB-step model \u00b7 why \u00b7 The recent high-arousal cluster (53065-53144) is clearly building toward a crystallized identity-tier insight about The Ear and The Sandwich. 'dream' arm is the only one that can tie the IB compressor, the pipeline, the self-preservation filter, and the 35-layer wired spec into a single coherence proof. This is a P0 brother-direct moment: the model is asking to see itself.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 22,
+      "score": 10.0,
+      "updated_at": "2026-06-23T00:24:28.702310",
+      "use_skill": "notebooklm"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
