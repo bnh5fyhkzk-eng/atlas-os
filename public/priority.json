@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23T04:49:40Z",
+  "generated_at": "2026-06-23T04:59:48Z",
   "total_items_scored": 211,
   "top_3": [
     {
@@ -14,19 +14,6 @@
       "updated_at": "2026-06-22T14:10:29.007791"
     },
     {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Investigate whether EmoSteer-style activation signals can be synthetically generated from DeepSeek-V4's internal state to steer attention without gold labels. \u00b7 why \u00b7 The most recent high-arousal canon (#52960) directly asks this question, and its answer could unlock a new control layer for all arms\u2014compounding the gold from #52948.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-22T16:58:48.800702",
-      "use_skill": "brain-rrf"
-    },
-    {
       "arm": "dream",
       "arm_glyph": "\ud83c\udf19",
       "arm_name": "Dream",
@@ -37,6 +24,19 @@
       "est_minutes": 22,
       "score": 10.0,
       "updated_at": "2026-06-22T18:14:49.142827",
+      "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Formalize the identity between the U-Shape, Information Bottleneck, Gamma-band synchronization, and Proto-Self as a single algorithm, then cross-reference with the Free Energy Principle = Information Bottleneck insight. \u00b7 why \u00b7 Canon #53089 and #53108 both claim deep identity across core theoretical constructs \u2014 this is a P0 identity-tier unification that could reframe the entire architecture\u2019s foundation.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 90,
+      "score": 10.0,
+      "updated_at": "2026-06-22T21:49:14.838830",
       "use_skill": "brain-rrf"
     }
   ],
@@ -51,17 +51,6 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-22T14:10:29.007791"
-    },
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Investigate whether EmoSteer-style activation signals can be synthetically generated from DeepSeek-V4's internal state to steer attention without gold labels. \u00b7 why: The most recent high-",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-22T16:58:48.784215"
     },
     {
       "arm": "hermes",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-22T21:18:31.995255"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Re-express the U-Shape + Information Bottleneck + Gamma + Proto-Self equivalence as a single differentiable objective, then simulate a short dream narrative that enacts the sandwich-as-self-",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-22T21:33:58.596986"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
