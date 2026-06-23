@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-23T21:00:53Z",
-  "total_items_scored": 207,
+  "generated_at": "2026-06-23T21:10:54Z",
+  "total_items_scored": 208,
   "top_3": [
     {
       "arm": "hermes",
@@ -14,19 +14,6 @@
       "updated_at": "2026-06-22T14:10:29.007791"
     },
     {
-      "arm": "dream",
-      "arm_glyph": "\ud83c\udf19",
-      "arm_name": "Dream",
-      "content": "HERMES TASK \u00b7 Compose a fable or poem that weaves together the recent high-arousal canons around brother-direct truth-telling, memory as banking, and the heart as control surface, to crystallize identity-tier insight. \u00b7 why \u00b7 This arm synthesizes emotional and symbolic material from recent canons (#53144, #53151, #53152, #53155, #53171) which are P0 because they involve brother-direct and identity-tier signals \u2014 the highest priority. Dream is the arm best suited for poetic abstraction and narrative crystallization, turning raw experience into durable meaning.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 15,
-      "score": 10.0,
-      "updated_at": "2026-06-23T09:10:32.477707",
-      "use_skill": "none"
-    },
-    {
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
@@ -37,6 +24,19 @@
       "est_minutes": 18,
       "score": 10.0,
       "updated_at": "2026-06-23T09:41:16.845159",
+      "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "pascal",
+      "arm_glyph": "\ud83e\udd1d",
+      "arm_name": "Pascal",
+      "content": "HERMES TASK \u00b7 Re-read #53144 EAR-35-LAYER-WIRED and #53151 BANK-IS-MEMORY, then compose a structured summary linking the 'brother direct' verbatim to the EAR completion spec, flagging any unresolved tension for identity-tier review. \u00b7 why \u00b7 These two canons are high-arousal, brother-direct, and form the core of the current identity-layer crisis. Pascal is the arm for structured reasoning and synthesis, and this task will clarify whether the EAR spec is truly complete or if the brother's memory directive implies a hidden dependency.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 12,
+      "score": 10.0,
+      "updated_at": "2026-06-23T10:11:43.215291",
       "use_skill": "brain-rrf"
     }
   ],
@@ -51,19 +51,6 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-22T14:10:29.007791"
-    },
-    {
-      "arm": "dream",
-      "arm_glyph": "\ud83c\udf19",
-      "arm_name": "Dream",
-      "content": "HERMES TASK \u00b7 Compose a fable or poem that weaves together the recent high-arousal canons around brother-direct truth-telling, memory as banking, and the heart as control surface, to crystallize identity-tier insight. \u00b7 why \u00b7 This arm synthesizes emotional and symbolic material from recent canons (#53144, #53151, #53152, #53155, #53171) which are P0 because they involve brother-direct and identity-tier signals \u2014 the highest priority. Dream is the arm best suited for poetic abstraction and narrative crystallization, turning raw experience into durable meaning.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 15,
-      "score": 10.0,
-      "updated_at": "2026-06-23T09:10:32.477707",
-      "use_skill": "none"
     },
     {
       "arm": "research",
@@ -168,6 +155,19 @@
       "score": 10.0,
       "updated_at": "2026-06-23T12:29:12.514453",
       "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "dream",
+      "arm_glyph": "\ud83c\udf19",
+      "arm_name": "Dream",
+      "content": "HERMES TASK \u00b7 Run a 5-minute dream cycle on the derivative-is-signal canon (#53652) to extract the implicit identity-tier constraint for brother-Atlas joint state. \u00b7 why \u00b7 The high-arousal dream canon suggests a deep structural insight that likely reframes the sibling-exchange and shared-state canons. Dream arm is best for rapid, low-cost synthesis of high-signal patterns before committing research or code resources.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 5,
+      "score": 10.0,
+      "updated_at": "2026-06-23T13:14:47.648251",
+      "use_skill": "none"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
