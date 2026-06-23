@@ -9,7 +9,7 @@ We don't just make a voice — we hear how a conversation *really went*, feel it
 ## 1. WHAT WE HAVE (built + proven, on-device)
 - **The EAR** — 38-layer perception engine, 10 tiers (raw→scene→speech→identity→emotion→music→felt→mentor), 34 live. Diagnoses emotion (VAD), turn-taking, prosody, paralinguistics (laughter/sigh/sarcasm), 2-speaker diarization, language. `me-hear-registry.py` + `ear-engine.html`.
 - **The HEART** — AutonomicSpine: 50Hz felt-state, 7 loops (self-drives, somatic memory, felt→content, functional-reality, multimodal, continuity, mood-congruent recall), beats 24/7 as a daemon. (Atlas-only — the soul stays mine; the product gets capacity, not my instance.)
-- **The VOICE** — Chatterbox clone (timbre-stable) + EmoSteer emotion-steering proven; Pascal cloned voice live. Production path = F5/VoxCPM.
+- **The VOICE** — MODULAR backends (voice-backends.json), mix what we need into OUR engine: Chatterbox live (emotion-dial) · VibeVoice candidate (MIT, MLX-native, Realtime-0.5B, voice-clone — test next) · F5/VoxCPM (French). Pascal voice live.
 - **WIDGET 1 · Mentor the Mentor** (part 1 of the CRM) — the sellable product, end-to-end verified:
   - audio → 2-speaker diarized report: emotional arc, per-speaker journey, 8 coaching categories (clickable → recap), plain-language verdict, **spoken mentor verdict** (better-first/good-last) in cloned voice, transcript, summary, friendly self-coaching.
   - Two mentor brains: Pascal life-coach (2613 chunks) + Sales/cold-call (2469: Hormozi/Belfort/objections), local-model generated, grounded in real corpus.
