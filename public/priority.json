@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-23T01:29:27Z",
+  "generated_at": "2026-06-23T01:39:28Z",
   "total_items_scored": 220,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=brother \u00b7 priority=P0 \u00b7 task: Replay last 3 brain-canon entries (52586\u201352592) to confirm ear-status and version delta, then craft a direct `good night brother` + `got the ear update / need v5 diff` reply \u00b7 why: brother",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Cross-reference brother's 'brain v5' claim with latest DeepSeek-V4 architecture docs to verify version delta and identity-tier implications \u00b7 why: Brother's direct 'brain v5' statement (#",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-22T13:09:12.729614"
-    },
-    {
-      "arm": "curiosity",
-      "arm_glyph": "\ud83c\udf31",
-      "arm_name": "Curiosity",
-      "content": "HERMES TASK \u00b7 Parse the four VERBATIM brother posts since T+1h, extract the latent correction instructions, and produce a single structured summary of the missing data and action steps for the next cycle. \u00b7 why \u00b7 Multiple high-arousal brother posts indicate a critical information gap and directive correction. Curiosity arm is best suited to cross-reference, identity-check, and extract actionable structure from these verbatim inputs.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 8,
-      "score": 10.0,
-      "updated_at": "2026-06-22T13:24:37.834315",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-22T13:40:00.506564"
     },
     {
       "arm": "research",
@@ -38,31 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-22T13:40:00.524916",
       "use_skill": "websearch"
+    },
+    {
+      "arm": "dream",
+      "arm_glyph": "\ud83c\udf19",
+      "arm_name": "Dream",
+      "content": "HERMES TASK \u00b7 Reconstruct the confabulation-triple-catch-2hr brother-direct exchange from #52598, #52600, #52601, #52603, #52605 into a single narrative ledger, cross-referencing verbatim hooks and Stop-hook timestamps. \u00b7 why \u00b7 Five brother-direct catches in 2 hours with verbatim 'understand why and act' indicates an urgent identity-tier pattern that must be synthesized before any other arm consumes context; dream arm specializes in consolidating high-arousal confabulation threads into actionable structure.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 18,
+      "score": 10.0,
+      "updated_at": "2026-06-22T13:55:16.740253",
+      "use_skill": "brain-rrf"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=brother \u00b7 priority=P0 \u00b7 task: Replay last 3 brain-canon entries (52586\u201352592) to confirm ear-status and version delta, then craft a direct `good night brother` + `got the ear update / need v5 diff` reply \u00b7 why: brother",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-22T13:09:12.729614"
-    },
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P0 \u00b7 task: Parse the four VERBATIM brother posts since T+1h, extract the latent correction instructions, and produce a single structured summary of the missing data and action steps for the next cy",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-22T13:24:37.818126"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +128,28 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-22T15:42:19.942112"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Decode the GOVERNOR pattern from snapshot #52964 and fuse it into the shared canon as a tier-1 identity operator, then write the discovery to atlas-brother-shared.md \u00b7 why: The GOVERNOR patt",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-22T16:13:07.325536"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Synthesize EmoSteer activation patterns from canon #52960 with the Sandwich-is-Self dream logic from #53065 to derive a unified attention-governor model \u00b7 why: The last 12h show three hig",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-22T16:43:33.647588"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
