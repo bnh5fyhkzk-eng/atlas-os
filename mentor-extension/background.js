@@ -21,5 +21,5 @@ chrome.runtime.onMessage.addListener((msg,sender,reply)=>{
     return true;
   }
   if(msg.action==='stop'){ chrome.runtime.sendMessage({type:'stop-record'}); chrome.storage.local.set({recording:false}); reply({ok:true}); return true; }
-  if(msg.type==='report-url'){ chrome.tabs.create({url:'http://localhost:8077'+msg.url}); }
+  if(msg.type==='report-url'){ chrome.storage.local.get(['serverUrl'],c=>chrome.tabs.create({url:(c.serverUrl||'http://localhost:8077')+msg.url})); }
 });
