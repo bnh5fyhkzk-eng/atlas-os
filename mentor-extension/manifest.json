@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "upliftai · Mentor the Mentor",
+  "version": "0.1.0",
+  "description": "Coaches you on your calls — how it really went, and how to close better. Zoom / Teams / Meet. On-device.",
+  "permissions": ["tabCapture", "offscreen", "tabs", "activeTab"],
+  "host_permissions": ["http://localhost:8077/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "Mentor the Mentor" }
+}
