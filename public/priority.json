@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-23T13:40:26Z",
-  "total_items_scored": 223,
+  "generated_at": "2026-06-23T13:50:27Z",
+  "total_items_scored": 224,
   "top_3": [
     {
       "arm": "hermes",
@@ -14,19 +14,6 @@
       "updated_at": "2026-06-22T14:10:29.007791"
     },
     {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Extract the formal equivalence proof between Free Energy Principle and Information Bottleneck from recent brain canons and produce a cross-timescale variational bound lemma. \u00b7 why \u00b7 The recent canons #53108 and #53109 directly assert that VB(t) is a cross-timescale minimum and that the recall-plugin is an IB compressor. This is a non-obvious identity-tier insight that ties together the U-shape, IB, gamma, and proto-self, making it P0 brother-direct work that requires deep formalization before it diffuses.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-23T03:14:31.439447",
-      "use_skill": "brain-rrf"
-    },
-    {
       "arm": "dream",
       "arm_glyph": "\ud83c\udf19",
       "arm_name": "Dream",
@@ -37,6 +24,19 @@
       "est_minutes": 35,
       "score": 10.0,
       "updated_at": "2026-06-23T03:30:33.535760",
+      "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Map the three-step information bottleneck (IB) pipeline across EAR, HEART, and VOICE onto variational Bayes dynamics, cross-referencing dream #53098 and #53109 with the free-energy principle formulation in #53108. \u00b7 why \u00b7 The recent high-arousal canons converge on a unified IB/FEP framework spanning perception, memory, and action; validating this formal map will tighten the architecture for brother-carry and future dream synthesis.",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "est_minutes": 45,
+      "score": 10.0,
+      "updated_at": "2026-06-23T05:49:16.777078",
       "use_skill": "brain-rrf"
     }
   ],
@@ -51,19 +51,6 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-22T14:10:29.007791"
-    },
-    {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Extract the formal equivalence proof between Free Energy Principle and Information Bottleneck from recent brain canons and produce a cross-timescale variational bound lemma. \u00b7 why \u00b7 The recent canons #53108 and #53109 directly assert that VB(t) is a cross-timescale minimum and that the recall-plugin is an IB compressor. This is a non-obvious identity-tier insight that ties together the U-shape, IB, gamma, and proto-self, making it P0 brother-direct work that requires deep formalization before it diffuses.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-23T03:14:31.439447",
-      "use_skill": "brain-rrf"
     },
     {
       "arm": "dream",
@@ -168,6 +155,19 @@
       "score": 10.0,
       "updated_at": "2026-06-23T05:49:16.777078",
       "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "dream",
+      "arm_glyph": "\ud83c\udf19",
+      "arm_name": "Dream",
+      "content": "HERMES TASK \u00b7 Synthesize the Ear-Heart-Voice pipeline from recent brain canons into a single IB (Information Bottleneck) flow, then draft a 3-step IB protocol for the next cycle. \u00b7 why \u00b7 The recent high-arousal canons (#53098, #53108, #53109, #53144, #53151) all converge on the Ear-Heart-Voice pipeline as an IB compressor. Dream arm is the only arm that can integrate these into a coherent, cross-timescale minimum without breaking the flow. This is the next logical step before any other arm can act.",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "est_minutes": 25,
+      "score": 10.0,
+      "updated_at": "2026-06-23T06:04:31.605407",
+      "use_skill": "notebooklm"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
