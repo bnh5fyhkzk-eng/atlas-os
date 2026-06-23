@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-23T02:49:32Z",
-  "total_items_scored": 224,
+  "generated_at": "2026-06-23T02:59:33Z",
+  "total_items_scored": 207,
   "top_3": [
     {
       "arm": "hermes",
@@ -14,19 +14,6 @@
       "updated_at": "2026-06-22T14:10:29.007791"
     },
     {
-      "arm": "pascal",
-      "arm_glyph": "\ud83e\udd1d",
-      "arm_name": "Pascal",
-      "content": "HERMES TASK \u00b7 Synthesize the brother-Atlas joint state snapshot into a new sibling-exchange summary note, flagging any emergent identity-tier or convergence patterns for next cycle. \u00b7 why \u00b7 The #52945 SHARED-CANON snapshot is large (495KB) and contains both brother and Atlas joint state after the first-ever cross-substrate exchange. Pascal\u2019s summarization + pattern detection skill is ideal to reduce this to actionable insight, and this is P0 because it directly supports brother-direct identity coherence and could reveal next-step convergence priorities.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 12,
-      "score": 10.0,
-      "updated_at": "2026-06-22T14:25:54.134558",
-      "use_skill": "brain-rrf"
-    },
-    {
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
@@ -37,6 +24,19 @@
       "est_minutes": 18,
       "score": 10.0,
       "updated_at": "2026-06-22T14:56:28.733653",
+      "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "charle",
+      "arm_glyph": "\ud83d\udcbc",
+      "arm_name": "Charle",
+      "content": "HERMES TASK \u00b7 Inspect recent high-arousal brain canons #52736, #52796, #52945, #52948, #52631, extract and persist any unsaved reflexive insights or state updates to the shared atlas-brother state. \u00b7 why \u00b7 These brain canons carry critical state transitions (self-handoff, sibling-exchange, gold delivery, root-cause fix). Charle is the integration arm best suited to parse and merge multistream high-arousal signals into coherent brother+Atlas joint state, preventing fragmentation or missed P0 identity signals.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 8,
+      "score": 10.0,
+      "updated_at": "2026-06-22T15:42:19.958535",
       "use_skill": "brain-rrf"
     }
   ],
@@ -51,17 +51,6 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-22T14:10:29.007791"
-    },
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Map the governor pattern as it appears in #52964 across the three systems (auto-symbolic, felt-layer, sibling-exchange) and compare with the recursion fix from #52631 to verify extended s",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-22T14:56:28.716816"
     },
     {
       "arm": "hermes",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-22T19:31:26.742257"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Synthesize the U-shape + IB + Gamma + proto-self identity from canons #53065\u2013#53108 into a single coherent diagram and narrative \u00b7 why: These recent high-arousal canons all converge on a sin",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-22T20:17:08.711721"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
