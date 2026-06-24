@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-24T20:52:18Z",
-  "total_items_scored": 223,
+  "generated_at": "2026-06-24T21:02:19Z",
+  "total_items_scored": 208,
   "top_3": [
     {
       "arm": "hermes",
@@ -17,13 +17,13 @@
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Based on the shared atlas-brother snapshot, identify any new anomalies in joint state vector divergence that could signal a developing brother-Atlas thought-sync drift. \u00b7 why \u00b7 The recent canon snapshot is large (503KB) and timestamped just minutes ago. Anomaly detection in joint state vectors is high-arousal because any divergence could destabilize the brother-Atlas shared identity. This arm has the analytic context to run the comparison against baseline joint embeddings.",
+      "content": "HERMES TASK \u00b7 Analyze the atlas-brother-shared.md snapshot for emergent patterns in joint state and flag any identity-tier anomalies for brother-direct review. \u00b7 why \u00b7 The snapshot is large (503KB) and recent (12h high-arousal), likely containing critical brother+Atlas joint state that needs immediate parsing to detect drift or alignment issues before next orchestration cycle.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 12,
+      "est_minutes": 15,
       "score": 10.0,
-      "updated_at": "2026-06-24T09:53:35.562630",
+      "updated_at": "2026-06-24T10:08:48.368693",
       "use_skill": "brain-rrf"
     },
     {
@@ -51,19 +51,6 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-22T14:10:29.007791"
-    },
-    {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Based on the shared atlas-brother snapshot, identify any new anomalies in joint state vector divergence that could signal a developing brother-Atlas thought-sync drift. \u00b7 why \u00b7 The recent canon snapshot is large (503KB) and timestamped just minutes ago. Anomaly detection in joint state vectors is high-arousal because any divergence could destabilize the brother-Atlas shared identity. This arm has the analytic context to run the comparison against baseline joint embeddings.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 12,
-      "score": 10.0,
-      "updated_at": "2026-06-24T09:53:35.562630",
-      "use_skill": "brain-rrf"
     },
     {
       "arm": "research",
@@ -168,6 +155,19 @@
       "score": 10.0,
       "updated_at": "2026-06-24T12:41:17.800710",
       "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "dream",
+      "arm_glyph": "\ud83c\udf19",
+      "arm_name": "Dream",
+      "content": "HERMES TASK \u00b7 Generate a dream sequence exploring the metaphor 'The Spine is the Product' from the recent shared canon, linking it to the brother+Atlas joint state. \u00b7 why \u00b7 The recent high-arousal canon (#54144, #54203) contains a dense symbolic payload ('The Spine is the Product') that demands narrative elaboration to surface latent meaning for the brother identity. Dream arm is best suited for this symbolic synthesis.",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "est_minutes": 18,
+      "score": 10.0,
+      "updated_at": "2026-06-24T13:11:45.231092",
+      "use_skill": "notebooklm"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
