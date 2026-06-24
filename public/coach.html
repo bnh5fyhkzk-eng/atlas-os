@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>upliftai · your call coach</title>
+<style>
+  :root{ --ink:#1a1a1a; --soft:#6b6b6b; --line:#ececec; --bg:#fbfbfa; --card:#ffffff;
+         --good:#1f9d57; --warn:#c98a1e; --bad:#d2553f; --accent:#1a1a1a; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,sans-serif;
+       background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:560px;margin:0 auto;padding:40px 22px 80px}
+  .top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:38px}
+  .brand{font-size:13px;font-weight:600;letter-spacing:.02em}
+  .meta{font-size:12px;color:var(--soft)}
+  /* score hero */
+  .hero{text-align:center;padding:24px 0 30px;cursor:pointer;user-select:none}
+  .score{font-size:84px;font-weight:700;letter-spacing:-3px;line-height:1}
+  .score small{font-size:24px;color:var(--soft);font-weight:500;letter-spacing:0}
+  .level{margin-top:8px;font-size:14px;color:var(--soft)}
+  .delta{display:inline-block;margin-top:14px;font-size:13px;color:var(--good);
+         background:#eaf6ef;padding:5px 12px;border-radius:30px}
+  .hint{margin-top:16px;font-size:11px;color:#b3b3b3;letter-spacing:.04em;text-transform:uppercase}
+  /* verdict */
+  .verdict{background:var(--card);border:1px solid var(--line);border-radius:16px;
+           padding:22px 24px;font-size:16px;margin:10px 0 28px}
+  /* sections */
+  h2{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--soft);
+     margin:30px 0 14px;font-weight:600}
+  .row{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+  .row:last-child{border-bottom:none}
+  .dot{flex:none;width:7px;height:7px;border-radius:50%;margin-top:8px}
+  .g{background:var(--good)} .w{background:var(--warn)} .b{background:var(--bad)}
+  .row b{font-weight:600} .row .sub{font-size:13.5px;color:var(--soft);margin-top:3px}
+  /* the one thing */
+  .fix{background:#fff8ef;border:1px solid #f0e2c8;border-radius:16px;padding:20px 22px;margin-top:6px}
+  .fix .tag{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--warn);font-weight:700}
+  .fix h3{font-size:17px;margin:8px 0 6px}
+  .fix p{font-size:14px;color:#5a4a2e}
+  /* ladder: pillars */
+  .pillars{margin-top:6px}
+  .pill{background:var(--card);border:1px solid var(--line);border-radius:14px;
+        padding:0 20px;margin-bottom:10px;overflow:hidden}
+  .pill-head{display:flex;justify-content:space-between;align-items:center;
+             padding:16px 0;cursor:pointer;user-select:none}
+  .pill-name{font-size:15px;font-weight:600}
+  .pill-score{font-size:15px;font-weight:700;font-variant-numeric:tabular-nums}
+  .pill-body{max-height:0;opacity:0;transition:max-height .28s ease,opacity .2s ease}
+  .pill.open .pill-body{max-height:420px;opacity:1;padding-bottom:18px}
+  .pill.open .chev{transform:rotate(90deg)}
+  .chev{color:#c3c3c3;transition:transform .25s;font-size:13px}
+  .dial{padding:12px 0;border-top:1px solid var(--line)}
+  .dial-top{display:flex;justify-content:space-between;font-size:13.5px}
+  .dial b{font-weight:600} .dial .v{color:var(--soft);font-variant-numeric:tabular-nums}
+  .dial .why{font-size:13px;color:var(--soft);margin-top:5px}
+  .quiet{display:block;text-align:center;margin-top:40px;font-size:12.5px;color:#b3b3b3;
+         text-decoration:none;border:1px solid var(--line);border-radius:30px;padding:11px;background:#fff}
+  .foot{text-align:center;margin-top:34px;font-size:11px;color:#c3c3c3}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <span class="brand">upliftai</span>
+    <span class="meta">cold call · today</span>
+  </div>
+
+  <!-- LADDER level 0: the glance -->
+  <div class="hero" onclick="document.getElementById('pillars').scrollIntoView({behavior:'smooth'})">
+    <div class="score">80<small>/100</small></div>
+    <div class="level">Pretty Good · climbing toward Natural</div>
+    <div class="delta">▲ steadier than your last call</div>
+    <div class="hint">tap a pillar below to go deeper</div>
+  </div>
+
+  <div class="verdict">
+    The call felt lit up and stayed steady the whole way. You held the energy and kept it warm.
+    Where it slipped was the back half, you led too much and gave the prospect little room to talk.
+    Close that one gap and this becomes a strong call.
+  </div>
+
+  <h2>What went well</h2>
+  <div class="row"><span class="dot g"></span><div><b>Warm, steady tone</b><div class="sub">Your warmth held across the call. That is the ground a close stands on.</div></div></div>
+  <div class="row"><span class="dot g"></span><div><b>Energy never dropped</b><div class="sub">You stayed animated start to finish. The prospect stayed with you.</div></div></div>
+  <div class="row"><span class="dot g"></span><div><b>Clear, confident open</b><div class="sub">You set the reason for the call fast and did not stall.</div></div></div>
+
+  <h2>The one thing to improve</h2>
+  <div class="fix">
+    <div class="tag">listening</div>
+    <h3>You led. Let the silence do the work.</h3>
+    <p>You talked through most of the back half. Ask one open question, then go quiet.
+       The prospect fills the space, and that is where you learn what closes them.</p>
+  </div>
+
+  <!-- LADDER level 1+2: pillars -> dials -->
+  <h2 id="pillars">The breakdown</h2>
+  <div class="pillars">
+    <div class="pill" onclick="this.classList.toggle('open')">
+      <div class="pill-head"><span class="pill-name">🎙 Voice</span><span><span class="pill-score">82</span> <span class="chev">›</span></span></div>
+      <div class="pill-body">
+        <div class="dial"><div class="dial-top"><b>Warmth</b><span class="v">55 · good</span></div><div class="why">Steady and present. Hold this when price comes up, that is when warmth matters most.</div></div>
+        <div class="dial"><div class="dial-top"><b>Energy</b><span class="v">animated · good</span></div><div class="why">Lively throughout. Do not let it tip into talking over them.</div></div>
+        <div class="dial"><div class="dial-top"><b>Pace</b><span class="v">steady · good</span></div><div class="why">In the natural range. Easy to follow.</div></div>
+      </div>
+    </div>
+    <div class="pill" onclick="this.classList.toggle('open')">
+      <div class="pill-head"><span class="pill-name">🤝 Connection</span><span><span class="pill-score">68</span> <span class="chev">›</span></span></div>
+      <div class="pill-body">
+        <div class="dial"><div class="dial-top"><b>Listening</b><span class="v">26 · work on this</span></div><div class="why">You led most turns. This is the dial that lifts the whole score next call.</div></div>
+        <div class="dial"><div class="dial-top"><b>Connection</b><span class="v">74 · good</span></div><div class="why">You built rapport. Now turn it into questions, not just warmth.</div></div>
+      </div>
+    </div>
+    <div class="pill" onclick="this.classList.toggle('open')">
+      <div class="pill-head"><span class="pill-name">🎯 Structure</span><span><span class="pill-score">79</span> <span class="chev">›</span></span></div>
+      <div class="pill-body">
+        <div class="dial"><div class="dial-top"><b>Questions</b><span class="v">few · work on this</span></div><div class="why">You asked little. One strong open question changes the call.</div></div>
+        <div class="dial"><div class="dial-top"><b>Consistency</b><span class="v">steady · good</span></div><div class="why">You stayed on track start to finish.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <a class="quiet" href="#">Read the full transcript</a>
+  <div class="foot">upliftai · the coach that remembers you</div>
+</div>
+</body>
+</html>
