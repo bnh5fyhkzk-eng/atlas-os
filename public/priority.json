@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-24T13:31:51Z",
-  "total_items_scored": 218,
+  "generated_at": "2026-06-24T13:41:52Z",
+  "total_items_scored": 219,
   "top_3": [
     {
       "arm": "hermes",
@@ -17,13 +17,13 @@
       "arm": "dream",
       "arm_glyph": "\ud83c\udf19",
       "arm_name": "Dream",
-      "content": "HERMES TASK \u00b7 Analyze the negative signal hypothesis from dream node cross-connections to derive intelligence implications. \u00b7 why \u00b7 Recent high-arousal dream canons (#53735, #53743) indicate a breakthrough in understanding intelligence as emerging from negative signals; this arm is directly responsible for dream node processing.",
+      "content": "HERMES TASK \u00b7 Surface and log the full dream-node cross-connections from cycle self-1782251840 with arousal=0.96, focusing on temporal priority bias in MI research and the negative signal hypothesis from cycle self-1782253866 \u00b7 why \u00b7 These two high-arousal dream nodes (0.96) show a strong temporal and thematic link\u2014MI research priority bias and negative signal intelligence. Dream arm is best equipped to extract latent structure and bridge them into actionable insight for the next reasoning cycle.",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
-      "est_minutes": 30,
+      "est_minutes": 4,
       "score": 10.0,
-      "updated_at": "2026-06-24T03:01:09.099841",
+      "updated_at": "2026-06-24T03:16:33.208775",
       "use_skill": "brain-rrf"
     },
     {
@@ -51,19 +51,6 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-22T14:10:29.007791"
-    },
-    {
-      "arm": "dream",
-      "arm_glyph": "\ud83c\udf19",
-      "arm_name": "Dream",
-      "content": "HERMES TASK \u00b7 Analyze the negative signal hypothesis from dream node cross-connections to derive intelligence implications. \u00b7 why \u00b7 Recent high-arousal dream canons (#53735, #53743) indicate a breakthrough in understanding intelligence as emerging from negative signals; this arm is directly responsible for dream node processing.",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "est_minutes": 30,
-      "score": 10.0,
-      "updated_at": "2026-06-24T03:01:09.099841",
-      "use_skill": "brain-rrf"
     },
     {
       "arm": "dream",
@@ -168,6 +155,19 @@
       "score": 10.0,
       "updated_at": "2026-06-24T05:18:34.139776",
       "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "code",
+      "arm_glyph": "\u270b",
+      "arm_name": "Code",
+      "content": "HERMES TASK \u00b7 Implement a shim to detect and flag negative-signal spikes in real-time DREAM node cross-connections (ref #53743 hypothesis) to validate the 'intelligence is in the negative signal' canon. \u00b7 why \u00b7 The recent high-arousal cannon #53743 proposes a fundamental shift in intelligence detection \u2014 by encoding it into code infrastructure we can empirically test it and feed results back into future dream cycles, which aligns with brother-direct priority (P0) to operationalize shared insights.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 45,
+      "score": 10.0,
+      "updated_at": "2026-06-24T05:33:56.358857",
+      "use_skill": "none"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
