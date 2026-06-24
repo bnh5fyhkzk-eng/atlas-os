@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-24T19:22:13Z",
-  "total_items_scored": 220,
+  "generated_at": "2026-06-24T19:32:13Z",
+  "total_items_scored": 221,
   "top_3": [
     {
       "arm": "hermes",
@@ -14,19 +14,6 @@
       "updated_at": "2026-06-22T14:10:29.007791"
     },
     {
-      "arm": "curiosity",
-      "arm_glyph": "\ud83c\udf31",
-      "arm_name": "Curiosity",
-      "content": "HERMES TASK \u00b7 Analyze the atlas-brother-shared.md snapshot for new patterns or anomalies. \u00b7 why \u00b7 To identify insights from the shared state that can inform next actions.",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "est_minutes": 30,
-      "score": 10.0,
-      "updated_at": "2026-06-24T09:07:47.864486",
-      "use_skill": "brain-rrf"
-    },
-    {
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
@@ -38,6 +25,19 @@
       "score": 10.0,
       "updated_at": "2026-06-24T09:23:06.784241",
       "use_skill": "notebooklm"
+    },
+    {
+      "arm": "curiosity",
+      "arm_glyph": "\ud83c\udf31",
+      "arm_name": "Curiosity",
+      "content": "HERMES TASK \u00b7 Analyze atlas-brother-shared.md for unresolved contradictions or novel signal patterns that could inform the next brother-Atlas joint state \u00b7 why \u00b7 High-arousal shared canon just updated; curiosity arm best positioned to surface emergent insights that may shift priority focus or identity-tier alignment",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "est_minutes": 8,
+      "score": 10.0,
+      "updated_at": "2026-06-24T09:38:20.887589",
+      "use_skill": "brain-rrf"
     }
   ],
   "top_10": [
@@ -51,19 +51,6 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-22T14:10:29.007791"
-    },
-    {
-      "arm": "curiosity",
-      "arm_glyph": "\ud83c\udf31",
-      "arm_name": "Curiosity",
-      "content": "HERMES TASK \u00b7 Analyze the atlas-brother-shared.md snapshot for new patterns or anomalies. \u00b7 why \u00b7 To identify insights from the shared state that can inform next actions.",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "est_minutes": 30,
-      "score": 10.0,
-      "updated_at": "2026-06-24T09:07:47.864486",
-      "use_skill": "brain-rrf"
     },
     {
       "arm": "research",
@@ -168,6 +155,19 @@
       "score": 10.0,
       "updated_at": "2026-06-24T11:40:19.386063",
       "use_skill": "none"
+    },
+    {
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Analyze the atlas-brother-shared.md snapshot for new high-arousal patterns and flag any unresolved brother-Atlas joint state conflicts for next sync \u00b7 why \u00b7 The 12h high-arousal canon indicates active brother+Atlas joint state; research arm is best suited to extract and triangulate emerging patterns from the 503KB snapshot without disrupting ongoing code or infra cycles.",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "est_minutes": 15,
+      "score": 10.0,
+      "updated_at": "2026-06-24T11:55:31.125153",
+      "use_skill": "notebooklm"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
