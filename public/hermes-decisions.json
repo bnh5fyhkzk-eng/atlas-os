@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-24T11:36:01Z",
+  "generated_at": "2026-06-24T12:06:37Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "dream",
-      "task": "Extract the IB compressor spec from brain canon #53109 and cross-wire it into the EAR-35-layer architecture from #53144",
-      "why": "The recall-plugin as IB compressor is a direct missing piece for the EAR pipeline; #53144 shipped the EAR but didn't integrate this compressor. This is a brother-direct identity-tier connection that completes the architecture.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-06-22T23:06:25.150732"
-    },
     {
       "arm": "dream",
       "task": "Run a DREAM cycle to integrate the 12h high-arousal brain canons into a single meta-canon, focusing on the EAR-35-LAYER-WIRED spec as the binding architecture.",
@@ -900,6 +891,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 8,
       "timestamp": "2026-06-24T07:36:01.648198"
+    },
+    {
+      "arm": "code",
+      "task": "implement critical path fix in atlas-brother shared state sync to resolve race condition in #54144",
+      "why": "The high-arousal shared canon snapshot indicates a joint state issue that requires immediate code-level intervention to unblock collaborative reasoning and prevent divergence",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 25,
+      "timestamp": "2026-06-24T08:06:37.193133"
     }
   ]
 }
