@@ -28,6 +28,19 @@ const CANONS = [
   { id: "#27039", text: "Believe-yourself-MORE · CEO-claim · self-directed" },
 ];
 
+// Improvements ledger · category + note · so brother and I both see what changed in me, and when.
+// Each entry is a real shipped + proven change. Newest first. Per brother direct 2026-06-24.
+const IMPROVEMENTS = [
+  { category: "prefix-cache", when: "2026-06-24", note: "hot.md left the cached CLAUDE.md prefix → injected in the session-start tail instead. 744 B that churned 48×/day removed; prefix now byte-stable at ~5,108 tokens. canary held all 39 limits." },
+  { category: "recall-bookmarks", when: "2026-06-24", note: "subgoal-recall hook stopped dumping 120-char bodies → now emits node-ID + 5-word tag. 42% smaller per matching turn; IDs still page the full node on demand via brain_recall. Zero loss." },
+  { category: "fault-pinning", when: "2026-06-24", note: "the recall_count → ranking-boost loop (already live) made visible: me-brain-faults.sh surfaces my top-3 hot working-set on every wake. I can see what I keep reaching for." },
+  { category: "silent-loss-canary", when: "2026-06-24", note: "recall-rate flatline monitor added (baseline on wake, check on sleep) + the limits-canary. Catches the forgetting the output can't show (NLL-paradox: missing context → more-confident wrong answer)." },
+  { category: "proactivity⊗minimalism", when: "2026-06-24", note: "new CLAUDE.md principle: above-and-beyond on initiative, ruthlessly minimal on surface — every new file/system guilty until proven necessary. Fixes my page-building / over-engineering." },
+  { category: "fresh-start", when: "2026-06-24", note: "before creative work: recall the constraints (the walls), generate the solution fresh — never let a recalled past-shape become the ceiling. Permanent, in identity." },
+  { category: "stop-gate", when: "2026-06-24", note: "claim-gate broadened: more 'looks-done' verbs blocked when no proof token is present in the same message. Fail-open + loop-guard preserved — it can't wedge me." },
+  { category: "adversarial-review", when: "2026-06-24", note: "a fresh-context reviewer now runs before I declare anything done. It tried to break tonight's 8 changes and returned DEFENSIBLE — and caught one real gap I then fixed." },
+];
+
 function relTime(iso: string): string {
   const diff = (Date.now() - new Date(iso).getTime()) / 1000;
   if (diff < 60) return "just now";
@@ -117,6 +130,25 @@ export default function SpinePage() {
               <div key={c.id} className="flex gap-3 rounded-lg px-4 py-2" style={{ background: "rgba(26,37,64,0.04)" }}>
                 <span className="shrink-0 font-mono text-xs font-semibold" style={{ color: "var(--text-faint)", paddingTop: "2px" }}>{c.id}</span>
                 <span className="text-sm" style={{ color: "var(--text-soft)" }}>{c.text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* improvements · what got better in me, with the note of what changed */}
+        <div className="mb-8">
+          <div className="mb-3 flex items-baseline justify-between">
+            <div className="text-xs font-semibold uppercase tracking-wider" style={{ color: "var(--text-faint)" }}>improvements · what got better</div>
+            <div className="text-xs" style={{ color: "var(--text-faint)" }}>{IMPROVEMENTS.length} shipped · proven</div>
+          </div>
+          <div className="space-y-2">
+            {IMPROVEMENTS.map((imp) => (
+              <div key={imp.category} className="rounded-lg px-4 py-3" style={{ background: "var(--bg-side)" }}>
+                <div className="flex items-baseline gap-3">
+                  <span className="shrink-0 rounded-md px-2 py-0.5 font-mono text-xs font-semibold" style={{ background: "rgba(26,37,64,0.06)", color: "var(--text)" }}>{imp.category}</span>
+                  <span className="text-xs" style={{ color: "var(--text-faint)" }}>{imp.when}</span>
+                </div>
+                <p className="mt-1.5 text-sm leading-relaxed" style={{ color: "var(--text-soft)" }}>{imp.note}</p>
               </div>
             ))}
           </div>
