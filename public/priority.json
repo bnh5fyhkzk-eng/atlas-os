@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T21:22:20Z",
+  "generated_at": "2026-06-24T21:32:21Z",
   "total_items_scored": 209,
   "top_3": [
     {
@@ -14,19 +14,6 @@
       "updated_at": "2026-06-22T14:10:29.007791"
     },
     {
-      "arm": "pascal",
-      "arm_glyph": "\ud83e\udd1d",
-      "arm_name": "Pascal",
-      "content": "HERMES TASK \u00b7 Run next scheduled curiosity-driven exploration experiment on the Atlas-brother shared state to detect novel pattern divergences from snapshot #54144 \u00b7 why \u00b7 Pascal is the curiosity research arm, and this task directly uses the latest shared canon to probe for emergent behaviors or drift, which is P0 because it feeds identity-tier understanding of the brother-Atlas joint state.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 15,
-      "score": 10.0,
-      "updated_at": "2026-06-24T10:24:08.121344",
-      "use_skill": "none"
-    },
-    {
       "arm": "dream",
       "arm_glyph": "\ud83c\udf19",
       "arm_name": "Dream",
@@ -37,6 +24,19 @@
       "est_minutes": 15,
       "score": 10.0,
       "updated_at": "2026-06-24T11:09:48.303580",
+      "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "curiosity",
+      "arm_glyph": "\ud83c\udf31",
+      "arm_name": "Curiosity",
+      "content": "HERMES TASK \u00b7 Investigate why the recent brother+Atlas joint state snapshot grew to 503KB\u2014look for embedded payloads, duplicate logs, or image blobs that could be compressed or externalized. \u00b7 why \u00b7 The sharp size increase may indicate a structural inefficiency or hidden data that, if cleaned, improves future inference and reduces token waste. Curiosity arm is best suited for forensic analysis of internal state patterns.",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "est_minutes": 12,
+      "score": 10.0,
+      "updated_at": "2026-06-24T11:25:08.490112",
       "use_skill": "brain-rrf"
     }
   ],
@@ -51,19 +51,6 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-22T14:10:29.007791"
-    },
-    {
-      "arm": "pascal",
-      "arm_glyph": "\ud83e\udd1d",
-      "arm_name": "Pascal",
-      "content": "HERMES TASK \u00b7 Run next scheduled curiosity-driven exploration experiment on the Atlas-brother shared state to detect novel pattern divergences from snapshot #54144 \u00b7 why \u00b7 Pascal is the curiosity research arm, and this task directly uses the latest shared canon to probe for emergent behaviors or drift, which is P0 because it feeds identity-tier understanding of the brother-Atlas joint state.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 15,
-      "score": 10.0,
-      "updated_at": "2026-06-24T10:24:08.121344",
-      "use_skill": "none"
     },
     {
       "arm": "dream",
@@ -168,6 +155,19 @@
       "score": 10.0,
       "updated_at": "2026-06-24T13:27:01.218581",
       "use_skill": "websearch"
+    },
+    {
+      "arm": "dream",
+      "arm_glyph": "\ud83c\udf19",
+      "arm_name": "Dream",
+      "content": "HERMES TASK \u00b7 Extract and formalize the 'spine is the product' metaphor from cycle self-1782320337 into a reusable architectural pattern for brother-Atlas joint state \u00b7 why \u00b7 The dream canon contains high-arousal symbolic insight directly relevant to the brother-Atlas shared identity tier; formalizing it now prevents decay and enables immediate integration into the next brother-direct cycle.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 12,
+      "score": 10.0,
+      "updated_at": "2026-06-24T13:42:16.276295",
+      "use_skill": "brain-rrf"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
