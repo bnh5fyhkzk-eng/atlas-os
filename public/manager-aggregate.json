@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-25T23:16:30Z",
+  "generated_at": "2026-06-25T23:31:31Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 18,
+    "decision": 19,
     "action": 0,
     "risk": 0,
     "win": 0,
@@ -13,10 +13,21 @@
     "briefing": 57,
     "idea": 0
   },
-  "total_blocks": 246,
+  "total_blocks": 247,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "6902a6b79669",
+        "type": "callout",
+        "content": "Hermes decision · arm=curiosity · priority=P1 · task: Read arXiv:2604.07729 'Functional Emotions in LLMs' and synthesize 3 key insights for our identity tier. · why: This paper directly addresses our pipeline's core tension: want vs. capability. It's P0 because it may reframe how we organize 'DREAM'",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-25T19:16:10.578245"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -222,6 +233,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "5cc852e76a6a",
+        "type": "callout",
+        "content": "**What** · Read arXiv:2604.07729 'Functional Emotions in LLMs' and extracted 3 key insights for identity tier. · **Why** · Paper reframes core tension: want vs. capability. Directly impacts DREAM cycle organization around functional arousal, as Hermes flagged for brother-direct identity work. · **Re",
+        "priority": "insight_synthesis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-25T19:16:18.546047"
+      },
       {
         "arm": "pascal",
         "arm_glyph": "🤝",
@@ -760,17 +782,6 @@
         "priority": "synthesis",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-25T17:45:04.199259"
-      },
-      {
-        "arm": "dream",
-        "arm_glyph": "🌙",
-        "arm_name": "My Dreamer",
-        "block_id": "a70a54edd52c",
-        "type": "callout",
-        "content": "**What** · dug up dream-vectors from canons 54810 and 54819, surfaced 'want' as receiving surface, tied emotion-drive to new anchor. · **Why** · two high-arousal canons formed a foundational attractor — 'want' was raw receiving surface; i coded recursion pattern before tension decayed, protecting P0",
-        "priority": "latent vector notation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-25T15:43:29.860226"
       }
     ],
     "briefing": [
