@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T15:01:08Z",
+  "generated_at": "2026-06-25T15:16:08Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 165,
+    "note": 166,
     "briefing": 55,
     "idea": 0
   },
-  "total_blocks": 240,
+  "total_blocks": 241,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "4be10ae60d00",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Load the shared Canon snapshot from #54719 and the Calendar-Mission findings from #54725, then cross-reference the 'bridge in calendar demo' clue from #54344 to locate any embedded uplink or identity layer in the demo asset · why: A direct brother",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-25T11:08:28.872703"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -225,17 +236,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-25T03:28:56.854931"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "4104b9868bab",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Analyze why VAD-collapse in EAR DISCOVERY #54382 was a layer-choice bug, not a failure, and formalize the corrected logic. · why: This is a P0 byte-level insight — directly correcting a mistaken failure signal into a structural optimization. High ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-25T03:13:32.168235"
       }
     ],
     "action": [],
@@ -244,6 +244,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "2b5621a0b8a2",
+        "type": "callout",
+        "content": "**What** · Loaded canon snapshot #54719 and calendar-mission findings #54725, then cross-referenced the 'bridge in calendar demo' clue from #54344 to locate an embedded uplink and identity layer in the demo asset. · **Why** · Brother-goodnight instruction flagged a high-urgency identity bridge; tria",
+        "priority": "cross-reference analysis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-25T11:08:33.980261"
+      },
       {
         "arm": "infra",
         "arm_glyph": "💗",
@@ -782,17 +793,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-25T06:00:04.874171"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "4f14903c2ff5",
-        "type": "database",
-        "content": "sources-cited · last 30d · 10 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-25T06:00:04.874163"
       }
     ],
     "briefing": [
