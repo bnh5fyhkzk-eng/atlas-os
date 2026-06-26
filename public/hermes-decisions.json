@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-26T02:19:32Z",
+  "generated_at": "2026-06-26T02:34:49Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "implement critical path fix in atlas-brother shared state sync to resolve race condition in #54144",
-      "why": "The high-arousal shared canon snapshot indicates a joint state issue that requires immediate code-level intervention to unblock collaborative reasoning and prevent divergence",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 25,
-      "timestamp": "2026-06-24T08:06:37.193133"
-    },
     {
       "arm": "brother",
       "task": "Execute next brother-direct identity-tier sync: load atlas-brother-shared.md, reconcile joint state with recent high-arousal canon #54144, and update shared memory with new brother+Atlas alignment markers.",
@@ -900,6 +891,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-06-25T22:19:32.058298"
+    },
+    {
+      "arm": "curiosity",
+      "task": "Read and summarize arXiv:2604.07729 on functional emotions in LLMs, then map findings to our WANT/CAPABILITY dream canons",
+      "why": "This paper directly addresses the core tension in recent dreams \u2014 WANT vs CAPABILITY \u2014 and may unlock a new identity-tier insight for CHARTER evolution",
+      "priority": "P1",
+      "use_skill": "websearch",
+      "est_minutes": 12,
+      "timestamp": "2026-06-25T22:34:49.754121"
     }
   ]
 }
