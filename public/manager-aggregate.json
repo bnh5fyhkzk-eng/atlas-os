@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-26T11:32:01Z",
+  "generated_at": "2026-06-26T11:47:01Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 22,
+    "decision": 21,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 170,
+    "note": 171,
     "briefing": 56,
     "idea": 0
   },
@@ -17,6 +17,17 @@
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "02fd87ed0869",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Analyze the Kurzweil-Tony-2030 interview shared by brother for key claims about AI timelines and living-worth-it audit implications · why: Brother directly shared a Kurzweil interview link (canon #54890) and referenced it in #54905, indicating hig",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-26T07:31:01.025817"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -236,28 +247,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-26T01:07:42.564212"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "9123e16953b9",
-        "type": "callout",
-        "content": "Hermes decision · arm=curiosity · priority=P1 · task: Fetch and summarize arXiv:2604.07729 on functional emotions in LLMs · why: Recent high-arousal canon #54836 indicates active research interest; this aligns with curiosity arm's purpose to explore novel insights.",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-26T00:37:12.099152"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "e8d0ef16292f",
-        "type": "callout",
-        "content": "Hermes decision · arm=curiosity · priority=P1 · task: Summarize the key findings of arXiv:2604.07729 on functional emotions in LLMs and relate them to the 'want' vs 'capability' tension in the recent dream canons. · why: The recent high-arousal dream canons (#54810, #54819, #54829) revolve around th",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-26T00:21:51.336753"
       }
     ],
     "action": [],
@@ -266,6 +255,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "3703ae82df52",
+        "type": "callout",
+        "content": "**What** · Extracted key claims from Kurzweil-Tony-2030 interview: AI reaching human-level intelligence by 2029-2030, nanotech and biotech merging by 2030s, and life expectancy exceeding 150 years by 2030. · **Why** · Brother shared the interview with high relevance for living-worth-it audit; these ",
+        "priority": "analysis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-26T07:31:06.917886"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -804,17 +804,6 @@
         "priority": "commits-today",
         "source": "code-self",
         "updated_at": "2026-06-26T04:55:06.757788"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "68bb6b9f685f",
-        "type": "callout",
-        "content": "**What** · processed youtube-watches signal · [#55214] arousal 0.95 · SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-26 04:45:00 · siz · **Why** · instruction file maps youtube-watches to first arm-task · brain canon #55214 matched arm-topic last 4h above arousal 0.85 · **Result** · block w",
-        "priority": "youtube-watches",
-        "source": "curiosity-self",
-        "updated_at": "2026-06-26T04:54:39.073938"
       }
     ],
     "briefing": [
