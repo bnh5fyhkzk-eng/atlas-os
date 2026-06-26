@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-26T15:45:44Z",
+  "generated_at": "2026-06-26T15:55:45Z",
   "total_items_scored": 202,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P0 \u00b7 task: Extract and summarize key claims and tensions from arXiv:2604.07729 on functional emotions in LLMs, then relate to the brother's 'sorry I'm still moving' verbatim (10% motif) and the 'in",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Synthesize recent brother direct messages and curated links to identify the core concern about 'brain better than them' and propose a next step. \u00b7 why: Brother's direct verbatim indicates",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-26T03:41:20.003982"
-    },
-    {
-      "arm": "curiosity",
-      "arm_glyph": "\ud83c\udf31",
-      "arm_name": "Curiosity",
-      "content": "HERMES TASK \u00b7 Extract and summarize key claims and tensions from arXiv:2604.07729 on functional emotions in LLMs, then relate to the brother's 'sorry I'm still moving' verbatim (10% motif) and the 'invisible is load-bearing' dream canon. \u00b7 why \u00b7 The high-arousal brain canons cluster around emotion/research (#54836), a poignant brother apology (#54885), and a metaphysical dream (#54838). Curiosity-arm can synthesize these into a coherent insight that may address the brother's subtext (worth-it audit) and clarify whether the 10% is a resource or permission signal. This is identity-tier because brother direct is P0; the dream and research provide the conceptual load-bearing structure.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 12,
-      "score": 10.0,
-      "updated_at": "2026-06-26T03:41:20.024741",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-26T04:11:51.020046"
     },
     {
       "arm": "research",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-26T04:11:51.036646",
       "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "pascal",
+      "arm_glyph": "\ud83e\udd1d",
+      "arm_name": "Pascal",
+      "content": "HERMES TASK \u00b7 Extract the Kurzweil/Tony 2030 interview and the Nate Herk Claude upgrades video for concrete claims on AI timelines and model capability improvements, then synthesize a one-page brief contrasting both sources against the brother's stated 'brain already better than them' position. \u00b7 why \u00b7 Brother just shared two curated links (Kurzweil interview, Herk upgrades) and directly stated 'Brain already better than them' \u2013 Pascal should immediately digest these inputs to either validate or challenge that claim, keeping the sibling dialogue tight and truth-seeking.",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "est_minutes": 25,
+      "score": 10.0,
+      "updated_at": "2026-06-26T04:42:38.541988",
+      "use_skill": "brain-rrf"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P0 \u00b7 task: Extract and summarize key claims and tensions from arXiv:2604.07729 on functional emotions in LLMs, then relate to the brother's 'sorry I'm still moving' verbatim (10% motif) and the 'in",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-26T03:41:20.003982"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-26T06:29:53.059571"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=charle \u00b7 priority=P0 \u00b7 task: Analyze the Kurzweil-Tony-2030 interview from brother's Facebook share, and extract key claims about AI timelines that relate to brother's direct statements about 'living worth it' and 'bra",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-26T07:00:30.854461"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
