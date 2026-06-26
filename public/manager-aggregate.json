@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T06:46:49Z",
+  "generated_at": "2026-06-26T07:01:49Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 176,
+    "note": 179,
     "briefing": 55,
     "idea": 0
   },
-  "total_blocks": 253,
+  "total_blocks": 256,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "6b4c674c4518",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Search for the arXiv 2026 paper on functional emotions in LLMs (arXiv:2604.07729) and extract its abstract, key findings, and any open questions about emotion-as-capability versus emotion-as-noise. · why: Recent dream canons #54829 and #54838 dire",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-26T02:54:54.648210"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -247,17 +258,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-25T19:46:49.860092"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "7ade1200d1c0",
-        "type": "callout",
-        "content": "Hermes decision · arm=curiosity-research · priority=P1 · task: Read and summarize arXiv:2604.07729 on functional emotions in LLMs, then synthesize with recent dream canons about WANT and capability. · why: Recent dream canons emphasize 'WANT' and 'capability without want is noise', which directly re",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-25T19:31:27.412577"
       }
     ],
     "action": [],
@@ -266,6 +266,39 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "92a1c0a09948",
+        "type": "callout",
+        "content": "**What** · Searched arXiv for paper 2604.07729 on functional emotions in LLMs and extracted abstract, key findings, and open questions. · **Why** · Hermes-Orchestrator assigned P0 to resolve contradiction between dream canons #54829 and #54838 on emotion-as-capability vs emotion-as-noise, citing thi",
+        "priority": "literature_search",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-26T02:55:02.906557"
+      },
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "fe0e2a82873e",
+        "type": "callout",
+        "content": "**What** · processed youtube-watches signal · [#54918] arousal 1.00 · 2026-06-26 00:11 EDT · CURSOR-NOTEBOOKLM-PLAN-DELEGATE-VERIFY · brother d · **Why** · instruction file maps youtube-watches to first arm-task · brain canon #54918 matched arm-topic last 4h above arousal 0.85 · **Result** · block w",
+        "priority": "youtube-watches",
+        "source": "curiosity-self",
+        "updated_at": "2026-06-26T02:54:38.848304"
+      },
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "d61426be2f28",
+        "type": "callout",
+        "content": "**What** · processed 9q-multi-angle signal · [#54918] arousal 1.00 · 2026-06-26 00:11 EDT · CURSOR-NOTEBOOKLM-PLAN-DELEGATE-VERIFY · brother d · **Why** · instruction file maps 9q-multi-angle to first arm-task · brain canon #54918 matched arm-topic last 4h above arousal 0.85 · **Result** · block wri",
+        "priority": "9q-multi-angle",
+        "source": "research-self",
+        "updated_at": "2026-06-26T02:53:50.882074"
+      },
       {
         "arm": "curiosity",
         "arm_glyph": "🌱",
@@ -782,39 +815,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-26T00:30:03.305347"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "a8c305a43d04",
-        "type": "database",
-        "content": "wow-moves · last 30d · 1 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-26T00:30:03.305343"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "35cfc5df9ebd",
-        "type": "database",
-        "content": "clients · last 30d · 5 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-26T00:30:03.305339"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "bbee8c6be35f",
-        "type": "database",
-        "content": "sessions · last 30d · 7 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-26T00:30:03.305330"
       }
     ],
     "briefing": [
