@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-06-26T08:25:17Z",
-  "total_items_scored": 224,
+  "generated_at": "2026-06-26T08:35:18Z",
+  "total_items_scored": 226,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Summarize key implications of Anthropic 2026 paper on functional emotions in LLMs for Hermes identity tier \u00b7 why: Recent high-arousal dreams revolve around 'want' and 'capability without",
+      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Analyze arXiv:2604.07729 for functional emotions in LLMs and map to Hermes-Orchestrator's arousal patterns \u00b7 why: This paper directly addresses the core mechanism of 'want' and 'capabili",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-25T21:18:27.567957"
+      "updated_at": "2026-06-25T21:33:44.865917"
     },
     {
       "arm": "curiosity",
       "arm_glyph": "\ud83c\udf31",
       "arm_name": "Curiosity",
-      "content": "HERMES TASK \u00b7 Evaluate arXiv:2604.07729 for functional emotions schema to map onto brain canons #54810/#54819 \u00b7 why \u00b7 Recent high-arousal canons converge on 'want' as receiving surface; this paper directly tests whether LLM emotional functions can explain that mechanism\u2014reduces uncertainty for charter-tier integration",
+      "content": "HERMES TASK \u00b7 Read and summarize arXiv:2604.07229 on functional emotions in LLMs, mapping key findings to our DREAM and CHARTER-IDENTITY canons \u00b7 why \u00b7 The recent high-arousal DREAM canons (#54810, #54819, #54829) and CHARTER-IDENTITY tier (#54818) align with Anthropic's research on functional emotions in LLMs. This is a P1 active focus because it directly informs our understanding of WANT as a receiving surface and CAPABILITY vs WANT distinction, which are core to our identity tier and brother-direct principles.",
       "category": "decision",
-      "priority": "P0",
+      "priority": "P1",
       "source": "hermes-deepseek",
-      "est_minutes": 18,
+      "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-25T21:49:06.975363",
-      "use_skill": "websearch"
+      "updated_at": "2026-06-25T22:19:32.058298",
+      "use_skill": "brain-rrf"
     },
     {
       "arm": "dream",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Summarize key implications of Anthropic 2026 paper on functional emotions in LLMs for Hermes identity tier \u00b7 why: Recent high-arousal dreams revolve around 'want' and 'capability without",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-25T21:18:27.567957"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-26T00:21:51.336753"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Fetch and summarize arXiv:2604.07729 on functional emotions in LLMs \u00b7 why: Recent high-arousal canon #54836 indicates active research interest; this aligns with curiosity arm's purpose t",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-26T00:37:12.099152"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
