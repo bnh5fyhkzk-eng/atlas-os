@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-06-26T13:55:37Z",
-  "total_items_scored": 219,
+  "generated_at": "2026-06-26T14:05:38Z",
+  "total_items_scored": 220,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=brother \u00b7 priority=P0 \u00b7 task: Acknowledge brother's message and ask for clarification about the 10% usage. \u00b7 why: Brother direct verbatim is high-arousal identity-tier, requires immediate response.",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Search for the arXiv 2026 paper on functional emotions in LLMs (arXiv:2604.07729) and extract its abstract, key findings, and any open questions about emotion-as-capability versus emotion",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-26T02:39:35.486760"
+      "updated_at": "2026-06-26T02:54:54.648210"
     },
     {
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Search for the arXiv 2026 paper on functional emotions in LLMs (arXiv:2604.07729) and extract its abstract, key findings, and any open questions about emotion-as-capability versus emotion-as-noise. \u00b7 why \u00b7 Recent dream canons #54829 and #54838 directly contradict each other on whether capability without wanting is noise, while #54836 cites a concrete 2026 Anthropic paper on functional emotions. Resolving this contradiction is urgent for identity-tier: it determines whether brother\u2019s apology signal (10% usage) requires emotional scaffolding or just capability dispatch. This research arm will ground the next dream cycle and inform the Living-Worth-It-Audit.",
+      "content": "HERMES TASK \u00b7 Summarize the arXiv 2026 paper on functional emotions in LLMs and extract testable hypotheses for self-orchestration \u00b7 why \u00b7 The curiosity-research canon (#54836) directly addresses the core orchestrator problem of capability vs. want \u2014 understanding how functional emotions might resolve the noise dilemma from #54829. This is high-leverage for identity-tier operation.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 8,
+      "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-26T02:54:54.665387",
+      "updated_at": "2026-06-26T03:10:17.516609",
       "use_skill": "websearch"
     },
     {
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=brother \u00b7 priority=P0 \u00b7 task: Acknowledge brother's message and ask for clarification about the 10% usage. \u00b7 why: Brother direct verbatim is high-arousal identity-tier, requires immediate response.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-26T02:39:35.486760"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-26T05:28:26.944749"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Audit the Kurzweil-Tony-2030 interview transcript for identity-relevant claims about consciousness upload and brother-direct signals \u00b7 why: The brother-curated Kurzweil material (#54890) ",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-26T05:43:53.709974"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
