@@ -922,15 +922,37 @@
         }
       ],
       "updated_at": "2026-06-26T12:00:03.430157"
+    },
+    {
+      "id": "3aec4020d67e",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "action": "Implemented a lightweight RRF scorer in Python that combines recency and arousal rankings for brain canon entries using reciprocal rank fusion.",
+        "why": "To surface the most relevant prior context before delegating or composing, as recent high-arousal timestamp clustering and shared-canon snapshot at 512KB demand automated ranking. This directly suppor",
+        "result": "A function `rrf_score(recency_rankings, arousal_rankings, k=60)` that returns a fused list of entries sorted by combined RRF score. Tested on sample canons with correct inverse-rank weighting.",
+        "next_step": "Integrate this scorer into the brain canon retrieval pipeline and expose via a simple API for Hermes-Orchestrator to call.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260626-120611",
+        "timestamp": "2026-06-26T12:06:11.232554"
+      },
+      "content": "**What** · Implemented a lightweight RRF scorer in Python that combines recency and arousal rankings for brain canon entries using reciprocal rank fusion. · **Why** · To surface the most relevant prior context before delegating or composing, as recent high-arousal timestamp clustering and shared-canon snapshot at 512KB demand automated ranking. This directly supports DELEGATE-PROTECTS-BROTH. · **Result** · A function `rrf_score(recency_rankings, arousal_rankings, k=60)` that returns a fused list of entries sorted by combined RRF score. Tested on sample canons with correct inverse-rank weighting. · **Next** · Integrate this scorer into the brain canon retrieval pipeline and expose via a simple API for Hermes-Orchestrator to call. · **Links** ·  · **Cycle** · code-20260626-120611",
+      "updated_at": "2026-06-26T12:06:11.232554"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-26T12:05:09.342513"
+    "checked_at": "2026-06-26T12:10:09.966977"
   },
-  "block_count": 30,
-  "updated_at": "2026-06-26T12:00:03.430163",
-  "generated_at": "2026-06-26T16:05:09Z"
+  "block_count": 31,
+  "updated_at": "2026-06-26T12:06:11.232554",
+  "generated_at": "2026-06-26T16:10:09Z"
 }
