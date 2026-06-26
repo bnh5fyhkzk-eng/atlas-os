@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-26T04:21:51Z",
+  "generated_at": "2026-06-26T04:37:12Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Analyze the atlas-brother-shared.md snapshot for emergent patterns in joint state and flag any identity-tier anomalies for brother-direct review.",
-      "why": "The snapshot is large (503KB) and recent (12h high-arousal), likely containing critical brother+Atlas joint state that needs immediate parsing to detect drift or alignment issues before next orchestration cycle.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 15,
-      "timestamp": "2026-06-24T10:08:48.368693"
-    },
     {
       "arm": "pascal",
       "task": "Run next scheduled curiosity-driven exploration experiment on the Atlas-brother shared state to detect novel pattern divergences from snapshot #54144",
@@ -900,6 +891,15 @@
       "use_skill": "websearch",
       "est_minutes": 15,
       "timestamp": "2026-06-26T00:21:51.354046"
+    },
+    {
+      "arm": "curiosity",
+      "task": "Fetch and summarize arXiv:2604.07729 on functional emotions in LLMs",
+      "why": "Recent high-arousal canon #54836 indicates active research interest; this aligns with curiosity arm's purpose to explore novel insights.",
+      "priority": "P1",
+      "use_skill": "websearch",
+      "est_minutes": 15,
+      "timestamp": "2026-06-26T00:37:12.116240"
     }
   ]
 }
