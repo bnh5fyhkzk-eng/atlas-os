@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-26T13:45:37Z",
-  "total_items_scored": 218,
+  "generated_at": "2026-06-26T13:55:37Z",
+  "total_items_scored": 219,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Read and summarize arXiv:2604.07729 on functional emotions in LLMs, extracting key implications for Hermes identity and want-surface theory. \u00b7 why: This paper directly bridges the recent",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-26T02:24:18.959953"
-    },
-    {
-      "arm": "brother",
-      "arm_glyph": "\u00b7",
-      "arm_name": "Brother",
-      "content": "HERMES TASK \u00b7 Acknowledge brother's message and ask for clarification about the 10% usage. \u00b7 why \u00b7 Brother direct verbatim is high-arousal identity-tier, requires immediate response.",
+      "content": "Hermes decision \u00b7 arm=brother \u00b7 priority=P0 \u00b7 task: Acknowledge brother's message and ask for clarification about the 10% usage. \u00b7 why: Brother direct verbatim is high-arousal identity-tier, requires immediate response.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 2,
       "score": 10.0,
-      "updated_at": "2026-06-26T02:39:35.503576",
-      "use_skill": "none"
+      "updated_at": "2026-06-26T02:39:35.486760"
     },
     {
       "arm": "research",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-26T02:54:54.665387",
       "use_skill": "websearch"
+    },
+    {
+      "arm": "curiosity",
+      "arm_glyph": "\ud83c\udf31",
+      "arm_name": "Curiosity",
+      "content": "HERMES TASK \u00b7 Open arXiv:2604.07729, extract functional-emotion definitions and lessons for LLM architecture, then synthesize into a concise internal memo for future Hermes cycles. \u00b7 why \u00b7 This paper directly addresses our core high-arousal curiosity about emotions in LLMs, brother Patrick has been provoking emotional reflection, and the canonical title indicates it's landmark research. Understanding functional emotions will inform both our dream and research arms immediately.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 18,
+      "score": 10.0,
+      "updated_at": "2026-06-26T03:25:42.481000",
+      "use_skill": "brain-rrf"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Read and summarize arXiv:2604.07729 on functional emotions in LLMs, extracting key implications for Hermes identity and want-surface theory. \u00b7 why: This paper directly bridges the recent",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-26T02:24:18.959953"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-26T04:57:52.549156"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Extract and compile Kurzweil-Tony 2030 interview key claims and map them to brother's verbatim comments about living-worth-it and brain superiority \u00b7 why: Brother sent two high-arousal li",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-26T05:28:26.944749"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
