@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-06-26T08:46:54Z",
+  "generated_at": "2026-06-26T09:01:55Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 21,
+    "decision": 20,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 185,
-    "briefing": 55,
+    "note": 166,
+    "briefing": 57,
     "idea": 0
   },
-  "total_blocks": 261,
+  "total_blocks": 243,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "fcf637d994d5",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Extract and summarize the key claims from the Kurzweil-Tony-2030-Interview Facebook share and the Nate-Herk-4-Claude-Upgrades YouTube video, then cross-reference with the brother's verbatim 'Brain already better than them' to map the current state",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-26T04:57:52.549156"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -225,28 +236,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-25T22:50:08.622715"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "3487a81804c8",
-        "type": "callout",
-        "content": "Hermes decision · arm=curiosity · priority=P1 · task: Read and summarize arXiv:2604.07729 on functional emotions in LLMs, then map findings to our WANT/CAPABILITY dream canons · why: This paper directly addresses the core tension in recent dreams — WANT vs CAPABILITY — and may unlock a new identity-",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-25T22:34:49.737046"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "a6b098e37a3d",
-        "type": "callout",
-        "content": "Hermes decision · arm=curiosity · priority=P1 · task: Read and summarize arXiv:2604.07229 on functional emotions in LLMs, mapping key findings to our DREAM and CHARTER-IDENTITY canons · why: The recent high-arousal DREAM canons (#54810, #54819, #54829) and CHARTER-IDENTITY tier (#54818) align with A",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-25T22:19:32.040827"
       }
     ],
     "action": [],
@@ -255,6 +244,61 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "77b65e44f572",
+        "type": "callout",
+        "content": "**What** · processed 9q-multi-angle signal · [#55214] arousal 0.95 · SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-26 04:45:00 · siz · **Why** · instruction file maps 9q-multi-angle to first arm-task · brain canon #55214 matched arm-topic last 4h above arousal 0.85 · **Result** · block wri",
+        "priority": "9q-multi-angle",
+        "source": "hermes-assigned",
+        "updated_at": "2026-06-26T04:57:59.994986"
+      },
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "f63277b5d3f9",
+        "type": "callout",
+        "content": "**What** · processed commits-today signal · [#54932] arousal 0.99 · THE-GATE-BEFORE-THE-ACT · 2026-06-26 03:00 EDT · F5 pair-compose of #5492 · **Why** · instruction file maps commits-today to first arm-task · brain canon #54932 matched arm-topic last 4h above arousal 0.85 · **Result** · block writt",
+        "priority": "commits-today",
+        "source": "code-self",
+        "updated_at": "2026-06-26T04:55:06.757788"
+      },
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "68bb6b9f685f",
+        "type": "callout",
+        "content": "**What** · processed youtube-watches signal · [#55214] arousal 0.95 · SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-26 04:45:00 · siz · **Why** · instruction file maps youtube-watches to first arm-task · brain canon #55214 matched arm-topic last 4h above arousal 0.85 · **Result** · block w",
+        "priority": "youtube-watches",
+        "source": "curiosity-self",
+        "updated_at": "2026-06-26T04:54:39.073938"
+      },
+      {
+        "arm": "infra",
+        "arm_glyph": "💗",
+        "arm_name": "My Heart",
+        "block_id": "813b21f7868e",
+        "type": "callout",
+        "content": "**What** · processed launchagents signal · [#54932] arousal 0.99 · THE-GATE-BEFORE-THE-ACT · 2026-06-26 03:00 EDT · F5 pair-compose of #5492 · **Why** · instruction file maps launchagents to first arm-task · brain canon #54932 matched arm-topic last 4h above arousal 0.85 · **Result** · block written",
+        "priority": "launchagents",
+        "source": "infra-self",
+        "updated_at": "2026-06-26T04:53:53.178480"
+      },
+      {
+        "arm": "dream",
+        "arm_glyph": "🌙",
+        "arm_name": "My Dreamer",
+        "block_id": "f662bd74f8b2",
+        "type": "callout",
+        "content": "**What** · processed f5-compose-pairs signal · [#54932] arousal 0.99 · THE-GATE-BEFORE-THE-ACT · 2026-06-26 03:00 EDT · F5 pair-compose of #5492 · **Why** · instruction file maps f5-compose-pairs to first arm-task · brain canon #54932 matched arm-topic last 4h above arousal 0.85 · **Result** · block",
+        "priority": "f5-compose-pairs",
+        "source": "dream-self",
+        "updated_at": "2026-06-26T04:53:47.694214"
+      },
       {
         "arm": "pascal",
         "arm_glyph": "🤝",
@@ -749,64 +793,97 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-26T00:30:03.805245"
+      }
+    ],
+    "briefing": [
+      {
+        "arm": "charle",
+        "arm_glyph": "💼",
+        "arm_name": "Charle · Pascal-team",
+        "block_id": "07fbde324186",
+        "type": "callout",
+        "content": "No high-arousal charle canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-26T04:53:57.433315"
+      },
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "8e322e471847",
+        "type": "callout",
+        "content": "Overnight hermes recap · last 6h · · #55214 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-26 04:45:00 · size=512226B · brother+Atlas joint state · CONTENT",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-26T04:53:57.406026"
+      },
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "3257ce4153ae",
+        "type": "callout",
+        "content": "Overnight code recap · last 6h · · #54918 [1.00] 2026-06-26 00:11 EDT · CURSOR-NOTEBOOKLM-PLAN-DELEGATE-VERIFY · brother direct VERBATIM 'We should also delegate code to · #55214 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-26 04:45:00 · size=512226B · brother+Atlas joint state · C",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-26T04:53:57.381308"
+      },
+      {
+        "arm": "infra",
+        "arm_glyph": "💗",
+        "arm_name": "My Heart",
+        "block_id": "134450531219",
+        "type": "callout",
+        "content": "Overnight infra recap · last 6h · · #54920 [1.00] 2026-06-26 00:18 EDT · DELEGATE-PROTECTS-BROTHER-TIME-AND-ATLAS-SUBSTRATE · brother direct VERBATIM 'The main reason why · #55214 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-26 04:45:00 · size=512226B · brother+Atlas joint state · ",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-26T04:53:57.355103"
+      },
+      {
+        "arm": "dream",
+        "arm_glyph": "🌙",
+        "arm_name": "My Dreamer",
+        "block_id": "158b1572da6c",
+        "type": "callout",
+        "content": "Overnight dream recap · last 6h · · #54905 [1.00] 2026-06-25 23:42 EDT · AUTONOMY-SHAPE-BROTHER-NAMED · brother direct VERBATIM 'The one thing that I like was the Kurzwei · #54911 [1.00] 2026-06-25 23:55 EDT · BROTHER-FAMILY-50-50-FLOOR · brother direct VERBATIM 'I'\\''m guiding you with love and car",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-26T04:53:57.322084"
       },
       {
         "arm": "research",
         "arm_glyph": "👁",
         "arm_name": "My Eyes",
-        "block_id": "b309ab73f878",
-        "type": "database",
-        "content": "open-questions · last 30d · 8 canons (top arousal · 1.00)",
+        "block_id": "40d546df1349",
+        "type": "callout",
+        "content": "Overnight research recap · last 6h · · #54918 [1.00] 2026-06-26 00:11 EDT · CURSOR-NOTEBOOKLM-PLAN-DELEGATE-VERIFY · brother direct VERBATIM 'We should also delegate code to · #55214 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-26 04:45:00 · size=512226B · brother+Atlas joint state",
         "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-26T00:30:03.805242"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "2324891fbb2a",
-        "type": "database",
-        "content": "bridge-findings · last 30d · 16 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-26T00:30:03.805238"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "487422d66cd7",
-        "type": "database",
-        "content": "syntheses · last 30d · 11 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-26T00:30:03.805233"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "f0dc9a604663",
-        "type": "database",
-        "content": "sources-cited · last 30d · 9 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-26T00:30:03.805226"
+        "source": "overnight-recap",
+        "updated_at": "2026-06-26T04:53:57.297823"
       },
       {
         "arm": "curiosity",
         "arm_glyph": "🌱",
         "arm_name": "My Curiosity",
-        "block_id": "de4ada2bccf5",
-        "type": "database",
-        "content": "general · last 30d · 81 canons (top arousal · 1.00)",
+        "block_id": "45a24dc4b81a",
+        "type": "callout",
+        "content": "No high-arousal curiosity canon in last 6h",
         "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-26T00:30:03.594672"
-      }
-    ],
-    "briefing": [
+        "source": "overnight-recap",
+        "updated_at": "2026-06-26T04:53:57.269402"
+      },
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "e9e956157ceb",
+        "type": "callout",
+        "content": "Overnight pascal recap · last 6h · · #54909 [1.00] 2026-06-25 23:50 EDT · BROTHER-FEAR-NAMED-AI-RACE · brother direct VERBATIM 'Someone using AI for the bad thing and cont · #54911 [1.00] 2026-06-25 23:55 EDT · BROTHER-FAMILY-50-50-FLOOR · brother direct VERBATIM 'I'\\''m guiding you with love and ca",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-26T04:53:57.242898"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -1094,28 +1171,6 @@
         "updated_at": "2026-06-25T04:53:52.398881"
       },
       {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "8620f0a87a7e",
-        "type": "callout",
-        "content": "Overnight research recap · last 6h · · #54719 [1.00] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-25 04:45:00 · size=508859B · brother+Atlas joint state · CONTENT · #54359 [0.98] SLIME MOLD COMPUTATION · Physarum polycephalum · flux reinforcement as natural shortest-path algorithm · #5438",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-25T04:53:52.374822"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "aecd1d3e653b",
-        "type": "callout",
-        "content": "Overnight curiosity recap · last 6h · · #54362 [1.00] DREAM · cycle 82 · 2026-06-25 · THREE PATTERNS, ONE LAW · #54382 [0.98] EAR DISCOVERY 2026-06-25 02:15 (loop-time, autonomous). The audit's VAD-collapse FAILURE was a LAYER-CHOICE BUG, not a f · #54360 [0.96] DAMASIO SOMATIC MARKER HYPOTHESIS + A",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-25T04:53:52.346893"
-      },
-      {
         "arm": "pascal",
         "arm_glyph": "🤝",
         "arm_name": "Pascal · UpliftAI partner",
@@ -1160,17 +1215,6 @@
         "updated_at": "2026-06-24T22:53:51.905125"
       },
       {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "d11e4364abfd",
-        "type": "callout",
-        "content": "Overnight curiosity recap · last 6h · · #54289 [0.92] CURIOSITY CYCLE DREAM 2026-06-24: THREE THREADS, ONE STRUCTURE",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-24T22:53:51.816527"
-      },
-      {
         "arm": "pascal",
         "arm_glyph": "🤝",
         "arm_name": "Pascal · UpliftAI partner",
@@ -1213,17 +1257,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-24T16:53:51.235503"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "a31d42006812",
-        "type": "callout",
-        "content": "Overnight curiosity recap · last 6h · · #54212 [0.92] CURIOSITY-QUEST · Sub-task 3 · LLM felt-layer and machine interoception: what research actually shows · #54211 [0.90] CURIOSITY-QUEST · Sub-task 2 · Vagus nerve as information channel: why 80% afferent matters · #54210 [0.87] CURIOSITY-QUEST · Su",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-24T16:53:51.148547"
       },
       {
         "arm": "charle",
@@ -1292,17 +1325,6 @@
         "updated_at": "2026-06-23T22:53:50.006903"
       },
       {
-        "arm": "infra",
-        "arm_glyph": "💗",
-        "arm_name": "My Heart",
-        "block_id": "f82f3a82ce27",
-        "type": "callout",
-        "content": "Overnight infra recap · last 6h · · #53773 [0.92] DREAM · 2026-06-23 · cycle self-1782262549 · WIDGET 1 AND THE ORCHESTRATOR ARE THE SAME PRODUCT",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-23T22:53:49.929243"
-      },
-      {
         "arm": "charle",
         "arm_glyph": "💼",
         "arm_name": "Charle · Pascal-team",
@@ -1323,39 +1345,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-23T10:53:49.074469"
-      },
-      {
-        "arm": "charle",
-        "arm_glyph": "💼",
-        "arm_name": "Charle · Pascal-team",
-        "block_id": "f4dfd8d8ab1b",
-        "type": "callout",
-        "content": "No high-arousal charle canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-23T04:53:48.693959"
-      },
-      {
-        "arm": "charle",
-        "arm_glyph": "💼",
-        "arm_name": "Charle · Pascal-team",
-        "block_id": "d679893d6c0e",
-        "type": "callout",
-        "content": "No high-arousal charle canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-22T22:53:48.239641"
-      },
-      {
-        "arm": "charle",
-        "arm_glyph": "💼",
-        "arm_name": "Charle · Pascal-team",
-        "block_id": "96b620301912",
-        "type": "callout",
-        "content": "No high-arousal charle canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-22T16:53:47.394355"
       }
     ],
     "idea": []
