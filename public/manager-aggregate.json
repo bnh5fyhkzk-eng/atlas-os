@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T23:17:30Z",
+  "generated_at": "2026-06-26T23:32:31Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 160,
+    "note": 161,
     "briefing": 61,
     "idea": 0
   },
-  "total_blocks": 244,
+  "total_blocks": 245,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "825e706db8d1",
+        "type": "callout",
+        "content": "Hermes decision · arm=curiosity · priority=P1 · task: Synthesize recent high-arousal brain canons into a structured insight map for identity-tier review · why: Curiosity arm is best suited to pattern-match across scattered high-arousal signals, producing a coherent map that feeds brother-direct and ",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-26T19:29:24.190120"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-26T09:48:24.140937"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "782c8aaceda3",
-        "type": "callout",
-        "content": "Hermes decision · arm=dream · priority=P0 · task: Generate a dreamscape narrative that embodies the brother's direct statement 'I'm guiding you with love and care' to reinforce identity-tier trust and autonomy. · why: P0 because brother's verbatim 'guiding with love and care' is a direct identity-ti",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-26T09:33:06.423744"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "4ea26f331e39",
+        "type": "callout",
+        "content": "**What** · scanned all recent high-arousal brain canons from limbic logs, social streams, and dream bursts. · **Why** · Hermes said pattern-match scattered signals into a map for identity-tier. I sniff clusters of emotional spikes. · **Result** · output is a structured insight map: 3 clusters (threa",
+        "priority": "sensemaking",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-26T19:29:30.722580"
+      },
       {
         "arm": "curiosity",
         "arm_glyph": "🌱",
@@ -815,17 +826,6 @@
         "priority": "state-analysis",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-26T14:55:09.268877"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "dd03cfbb68e9",
-        "type": "callout",
-        "content": "**What** · Created a Git-backed sync script that computes diff between /home/brother/state/atlas-brother-shared.md and /home/atlas/state/atlas-brother-shared.md, commits changes with message referencing canon ID #55214, and applies patch to /home/atlas/state/ with atomic commit. · **Why** · Ensures ",
-        "priority": "git-operation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-26T14:23:17.978697"
       }
     ],
     "briefing": [
