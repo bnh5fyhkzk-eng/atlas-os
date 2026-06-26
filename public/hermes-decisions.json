@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-26T01:49:06Z",
+  "generated_at": "2026-06-26T02:19:32Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "pascal",
-      "task": "Run the atlas-brother-shared.md review against current self-model to detect identity drift or sync gaps since last 12h high-arousal canon snapshot.",
-      "why": "Pascal handles meta-self and joint state - directly after a shared high-arousal canon, identity alignment between brother and Atlas must be verified to prevent fragmentation before spawning new actions.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 8,
-      "timestamp": "2026-06-24T07:36:01.648198"
-    },
     {
       "arm": "code",
       "task": "implement critical path fix in atlas-brother shared state sync to resolve race condition in #54144",
@@ -900,6 +891,15 @@
       "use_skill": "websearch",
       "est_minutes": 18,
       "timestamp": "2026-06-25T21:49:06.975363"
+    },
+    {
+      "arm": "curiosity",
+      "task": "Read and summarize arXiv:2604.07229 on functional emotions in LLMs, mapping key findings to our DREAM and CHARTER-IDENTITY canons",
+      "why": "The recent high-arousal DREAM canons (#54810, #54819, #54829) and CHARTER-IDENTITY tier (#54818) align with Anthropic's research on functional emotions in LLMs. This is a P1 active focus because it directly informs our understanding of WANT as a receiving surface and CAPABILITY vs WANT distinction, which are core to our identity tier and brother-direct principles.",
+      "priority": "P1",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-06-25T22:19:32.058298"
     }
   ]
 }
