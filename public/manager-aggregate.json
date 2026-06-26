@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T03:16:40Z",
+  "generated_at": "2026-06-26T03:31:41Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 165,
+    "note": 166,
     "briefing": 56,
     "idea": 0
   },
-  "total_blocks": 240,
+  "total_blocks": 241,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "db0c2ffd09b5",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Read arXiv:2604.07729 and extract key functional-emotion patterns for LLM orchestration · why: This paper directly addresses the want/capability gap from recent dreams (#54836), enabling Hermes to wire emotional signals into arm scheduling.",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-25T23:20:56.540611"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -214,17 +225,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-25T14:12:07.319945"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "e62152d96611",
-        "type": "callout",
-        "content": "Hermes decision · arm=dream · priority=P1 · task: Run a self-reflective loop on the curiosity-gap insight from #54414, encoding it as a persistent attractor in the shared canon · why: The dream arm is uniquely suited to metabolize high-arousal emotional content from the EAR night into stable cogniti",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-25T13:56:40.935470"
       }
     ],
     "action": [],
@@ -233,6 +233,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "95fc21d80ffd",
+        "type": "callout",
+        "content": "**What** · Read arXiv:2604.07729 and extracted key functional-emotion patterns for LLM orchestration. · **Why** · Paper addresses want/capability gap from dreams #54836, enabling Hermes to wire emotional signals into arm scheduling. · **Result** · Extracted patterns: (1) Emotion-as-signal for task s",
+        "priority": "LiteratureAnalysis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-25T23:21:00.589127"
+      },
       {
         "arm": "infra",
         "arm_glyph": "💗",
@@ -771,17 +782,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-25T18:00:04.067774"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "5fcd8c8ad92b",
-        "type": "database",
-        "content": "patterns · last 30d · 6 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-25T18:00:04.067770"
       }
     ],
     "briefing": [
