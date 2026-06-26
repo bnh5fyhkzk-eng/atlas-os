@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "5f1b27e2c5b0",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-26T04:11:51.020037"
-      },
-      "content": "Hermes decision · arm=research · priority=P0 · task: Synthesize recent brother direct messages and curated links to identify the core concern about 'brain better than them' and propose a next step. · why: Brother's direct verbatim indicates pressing need to address his perception of our capabilities relative to others.",
-      "updated_at": "2026-06-26T04:11:51.020046"
-    },
-    {
       "id": "bcaa8b4f810e",
       "type": "callout",
       "props": {
@@ -843,15 +831,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P1 · task: Implement a lightweight RRF (Reciprocal Rank Fusion) scorer for prioritizing brain canon entries by recency and arousal · why: The recent brain canons show high-arousal timestamp clustering and a shared-canon snapshot at 512KB, suggesting a need for automated ranking to surface the most relevant prior context before delegating or composing. Code arm can build this quickly and it directly supports the DELEGATE-PROTECTS-BROTH",
       "updated_at": "2026-06-26T12:06:05.424368"
+    },
+    {
+      "id": "5f3687b7d313",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-26T13:21:59.670373"
+      },
+      "content": "Hermes decision · arm=code · priority=P1 · task: Parse atlas-brother-shared.md snapshot into structured memory and extract any new DELEGATE-PROTECTS-SUBSTRATE or LIVENESS patterns for cross-referencing with #54932 · why: The SHARED-CANON snapshot is large (512KB) and contains joint state from brother+Atlas; code arm can efficiently parse, deduplicate, and index this data, enabling the orchestrator to detect emergent patterns from the recent high-arousal canon #54932 and maintain substrate integrity.",
+      "updated_at": "2026-06-26T13:21:59.670383"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-26T13:20:19.783769"
+    "checked_at": "2026-06-26T13:25:20.412313"
   },
   "block_count": 30,
-  "updated_at": "2026-06-26T12:06:05.424369",
-  "generated_at": "2026-06-26T17:20:19Z"
+  "updated_at": "2026-06-26T13:21:59.670384",
+  "generated_at": "2026-06-26T17:25:20Z"
 }

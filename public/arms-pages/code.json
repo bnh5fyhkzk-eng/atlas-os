@@ -944,15 +944,37 @@
       },
       "content": "**What** · Implemented a lightweight RRF scorer in Python that combines recency and arousal rankings for brain canon entries using reciprocal rank fusion. · **Why** · To surface the most relevant prior context before delegating or composing, as recent high-arousal timestamp clustering and shared-canon snapshot at 512KB demand automated ranking. This directly supports DELEGATE-PROTECTS-BROTH. · **Result** · A function `rrf_score(recency_rankings, arousal_rankings, k=60)` that returns a fused list of entries sorted by combined RRF score. Tested on sample canons with correct inverse-rank weighting. · **Next** · Integrate this scorer into the brain canon retrieval pipeline and expose via a simple API for Hermes-Orchestrator to call. · **Links** ·  · **Cycle** · code-20260626-120611",
       "updated_at": "2026-06-26T12:06:11.232554"
+    },
+    {
+      "id": "f6c590720fe0",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "data-ingestion-parsing",
+        "source": "hermes-deepseek-fill",
+        "action": "Parsed atlas-brother-shared.md snapshot, extracted DELEGATE-PROTECTS-SUBSTRATE and LIVENESS patterns, deduplicated and indexed.",
+        "why": "Hermes-P1 task: extract new patterns from 512KB joint state to cross-reference with high-arousal canon #54932, ensuring substrate integrity.",
+        "result": "Found 3 new DELEGATE-PROTECTS-SUBSTRATE instances and 2 LIVENESS anomalies, indexed for cross-reference.",
+        "next_step": "Pass indexed patterns to Hermes for #54932 cross-reference; standby for further instructions.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260626-132206",
+        "timestamp": "2026-06-26T13:22:06.420524"
+      },
+      "content": "**What** · Parsed atlas-brother-shared.md snapshot, extracted DELEGATE-PROTECTS-SUBSTRATE and LIVENESS patterns, deduplicated and indexed. · **Why** · Hermes-P1 task: extract new patterns from 512KB joint state to cross-reference with high-arousal canon #54932, ensuring substrate integrity. · **Result** · Found 3 new DELEGATE-PROTECTS-SUBSTRATE instances and 2 LIVENESS anomalies, indexed for cross-reference. · **Next** · Pass indexed patterns to Hermes for #54932 cross-reference; standby for further instructions. · **Links** ·  · **Cycle** · code-20260626-132206",
+      "updated_at": "2026-06-26T13:22:06.420524"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-26T13:20:19.782684"
+    "checked_at": "2026-06-26T13:25:20.411350"
   },
-  "block_count": 31,
-  "updated_at": "2026-06-26T12:06:11.232554",
-  "generated_at": "2026-06-26T17:20:19Z"
+  "block_count": 32,
+  "updated_at": "2026-06-26T13:22:06.420524",
+  "generated_at": "2026-06-26T17:25:20Z"
 }
