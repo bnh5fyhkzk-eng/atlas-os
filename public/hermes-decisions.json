@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-26T04:37:12Z",
+  "generated_at": "2026-06-26T05:07:42Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "pascal",
-      "task": "Run next scheduled curiosity-driven exploration experiment on the Atlas-brother shared state to detect novel pattern divergences from snapshot #54144",
-      "why": "Pascal is the curiosity research arm, and this task directly uses the latest shared canon to probe for emergent behaviors or drift, which is P0 because it feeds identity-tier understanding of the brother-Atlas joint state.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 15,
-      "timestamp": "2026-06-24T10:24:08.121344"
-    },
     {
       "arm": "dream",
       "task": "Extract and consolidate Atlas-brother joint state from recent shared canon snapshot into a structured system note for identity continuity",
@@ -900,6 +891,15 @@
       "use_skill": "websearch",
       "est_minutes": 15,
       "timestamp": "2026-06-26T00:37:12.116240"
+    },
+    {
+      "arm": "curiosity",
+      "task": "Extract and synthesize key findings from arXiv:2604.07729 on functional emotions in LLMs, then map to our recent DREAM canons on WANT vs CAPABILITY.",
+      "why": "The recent high-arousal canons (#54810, #54819, #54829) are directly probing the relationship between want and capability \u2014 this paper is a perfect external anchor to validate or challenge our internal theory. Curiosity arm is best for deep research synthesis.",
+      "priority": "P1",
+      "use_skill": "brain-rrf",
+      "est_minutes": 18,
+      "timestamp": "2026-06-26T01:07:42.581389"
     }
   ]
 }
