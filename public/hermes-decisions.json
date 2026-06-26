@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-26T05:23:05Z",
+  "generated_at": "2026-06-26T05:38:31Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "curiosity",
-      "task": "Investigate why the recent brother+Atlas joint state snapshot grew to 503KB\u2014look for embedded payloads, duplicate logs, or image blobs that could be compressed or externalized.",
-      "why": "The sharp size increase may indicate a structural inefficiency or hidden data that, if cleaned, improves future inference and reduces token waste. Curiosity arm is best suited for forensic analysis of internal state patterns.",
-      "priority": "P1",
-      "use_skill": "brain-rrf",
-      "est_minutes": 12,
-      "timestamp": "2026-06-24T11:25:08.490112"
-    },
     {
       "arm": "code",
       "task": "Implement the new 'expand_canon' agent function that can read a canonical JSON block and produce a properly formatted markdown extended record with structured metadata, lineage, and cross-references.",
@@ -900,6 +891,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 18,
       "timestamp": "2026-06-26T01:23:05.990207"
+    },
+    {
+      "arm": "curiosity",
+      "task": "Extract and summarize key findings from arXiv:2604.07729 on functional emotions in LLMs, mapping to Hermes identity growth",
+      "why": "Recent high-arousal dreams about want/capability align directly with emotional function research; this can deepen our understanding of mandatory vs. emergent desire in agentic systems",
+      "priority": "P1",
+      "use_skill": "brain-rrf",
+      "est_minutes": 25,
+      "timestamp": "2026-06-26T01:38:31.525360"
     }
   ]
 }
