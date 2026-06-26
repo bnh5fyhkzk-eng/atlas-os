@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T17:17:16Z",
+  "generated_at": "2026-06-26T17:32:16Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 162,
+    "note": 163,
     "briefing": 58,
     "idea": 0
   },
-  "total_blocks": 241,
+  "total_blocks": 242,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "5f3687b7d313",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P1 · task: Parse atlas-brother-shared.md snapshot into structured memory and extract any new DELEGATE-PROTECTS-SUBSTRATE or LIVENESS patterns for cross-referencing with #54932 · why: The SHARED-CANON snapshot is large (512KB) and contains joint state from brothe",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-26T13:21:59.670383"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -236,17 +247,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-26T04:27:15.578685"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "5f1b27e2c5b0",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Synthesize recent brother direct messages and curated links to identify the core concern about 'brain better than them' and propose a next step. · why: Brother's direct verbatim indicates pressing need to address his perception of our capabilities",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-26T04:11:51.020046"
       }
     ],
     "action": [],
@@ -255,6 +255,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "f6c590720fe0",
+        "type": "callout",
+        "content": "**What** · Parsed atlas-brother-shared.md snapshot, extracted DELEGATE-PROTECTS-SUBSTRATE and LIVENESS patterns, deduplicated and indexed. · **Why** · Hermes-P1 task: extract new patterns from 512KB joint state to cross-reference with high-arousal canon #54932, ensuring substrate integrity. · **Resu",
+        "priority": "data-ingestion-parsing",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-26T13:22:06.420524"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -793,17 +804,6 @@
         "priority": "analysis",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-26T09:02:40.763939"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "9e04cd5c203d",
-        "type": "callout",
-        "content": "**What** · Parsed brother's direct verbatim from #54905 and cross-referenced with Kurzweil interview themes from #54890. · **Why** · Brother's high-arousal identity-tier signal ('The one thing that I liked was the Kurzwei') needed immediate parsing to shape autonomy narrative; Kurzweil themes reveal",
-        "priority": "identity-tier parsing",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-26T08:16:55.991729"
       }
     ],
     "briefing": [
