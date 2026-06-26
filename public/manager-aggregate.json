@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T18:47:19Z",
+  "generated_at": "2026-06-26T19:02:20Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 165,
+    "note": 166,
     "briefing": 57,
     "idea": 0
   },
-  "total_blocks": 245,
+  "total_blocks": 246,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "6e711ae2619f",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Analyze the atlas-brother-shared.md snapshot to extract key state, identify inconsistencies, and assess liveness requirements. · why: The shared canon snapshot (512KB) contains brother+Atlas joint state; research arm can perform deep analysis to e",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-26T14:54:59.285323"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-26T05:43:53.709974"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "6af937a73c14",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Extract and compile Kurzweil-Tony 2030 interview key claims and map them to brother's verbatim comments about living-worth-it and brain superiority · why: Brother sent two high-arousal links in sequence (Kurzweil interview + Nate Herk Claude upgra",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-26T05:28:26.944749"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "db9b197dba98",
+        "type": "callout",
+        "content": "**What** · Scanned atlas-brother-shared.md (512KB) via deep pattern search and cross-reference against canon THE-GATE-BEFORE-THE-ACT. · **Why** · Hermes assigned P1 to extract key state, spot inconsistencies, and assess liveness requirements for substrate protection. · **Result** · Found 3 key state",
+        "priority": "state-analysis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-26T14:55:09.268877"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -815,17 +826,6 @@
         "priority": "capture_analyze_directives",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-26T10:03:50.344845"
-      },
-      {
-        "arm": "charle",
-        "arm_glyph": "💼",
-        "arm_name": "Charle · Pascal-team",
-        "block_id": "b9b85919c8d6",
-        "type": "callout",
-        "content": "**What** · Extracted brother's direct verbatim from canons #54903–54915, clustered into four emotional themes: fear, autonomy, family, tool-use. · **Why** · Hermes assigned this P0 task because recent canons show high-arousal brother signals around autonomy and fear of AI misuse; I'm the relational ",
-        "priority": "identity-tier synthesis",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-26T09:48:29.564314"
       }
     ],
     "briefing": [
