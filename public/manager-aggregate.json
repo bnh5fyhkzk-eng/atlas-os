@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T07:01:49Z",
+  "generated_at": "2026-06-26T07:16:50Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 179,
+    "note": 180,
     "briefing": 55,
     "idea": 0
   },
-  "total_blocks": 256,
+  "total_blocks": 257,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "f23fb92e8d75",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Summarize the arXiv 2026 paper on functional emotions in LLMs and extract testable hypotheses for self-orchestration · why: The curiosity-research canon (#54836) directly addresses the core orchestrator problem of capability vs. want — understandi",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-26T03:10:17.498725"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -247,17 +258,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-25T20:02:10.805702"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "3eca65696b2e",
-        "type": "callout",
-        "content": "Hermes decision · arm=dream · priority=P1 · task: integrate recent high-arousal canons (#54810-#54838) into a coherent 'want as surface' model, linking to functional emotions paper · why: The recent dream stream has converged on 'want' as the fundamental receptive/defining structure of mind, with a ",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-25T19:46:49.860092"
       }
     ],
     "action": [],
@@ -266,6 +266,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "decb3bc6240f",
+        "type": "callout",
+        "content": "**What** · Summarized arXiv 2026 paper on functional emotions in LLMs and extracted testable hypotheses for self-orchestration. · **Why** · Paper directly addresses capability vs. want dilemma (#54836) and noise dilemma (#54829) — functional emotions could let LLMs self-regulate exploration/exploita",
+        "priority": "hypothesis extraction",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-26T03:10:28.683292"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -804,17 +815,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-26T00:30:03.305351"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "4c9ec7d8e8e0",
-        "type": "database",
-        "content": "revenue · last 30d · 3 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-26T00:30:03.305347"
       }
     ],
     "briefing": [
