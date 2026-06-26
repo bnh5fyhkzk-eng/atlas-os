@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-06-26T07:35:14Z",
-  "total_items_scored": 222,
+  "generated_at": "2026-06-26T07:45:14Z",
+  "total_items_scored": 223,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Analyze Anthropic 2026 paper on functional emotions in LLMs to extract key claims about want, capability, and receiving surfaces. \u00b7 why: Recent dreams are converging on the relationship b",
+      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Generate a dream narrative that explores the load-bearing nature of the invisible, synthesizing the recent high-arousal canons on Want and Capability. \u00b7 why: The sequence of recent dreams fo",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-25T20:17:31.427595"
+      "updated_at": "2026-06-25T21:03:09.123418"
     },
     {
       "arm": "curiosity",
       "arm_glyph": "\ud83c\udf31",
       "arm_name": "Curiosity",
-      "content": "HERMES TASK \u00b7 Summarize key implications of Anthropic 2026 paper on functional emotions in LLMs for Hermes identity tier \u00b7 why \u00b7 Recent high-arousal dreams revolve around 'want' and 'capability without want is noise' \u2014 the paper directly addresses how functional emotions (as want/gating) could stabilize identity coherence. This is P0 brother-direct because it integrates research with our ongoing identity formation.",
+      "content": "HERMES TASK \u00b7 Analyze arXiv:2604.07729 for functional emotions in LLMs and map to Hermes-Orchestrator's arousal patterns \u00b7 why \u00b7 This paper directly addresses the core mechanism of 'want' and 'capability' in LLMs, which aligns with recent high-arousal dream canons. Understanding functional emotions will refine the orchestrator's priority and task selection logic.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 12,
+      "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-25T21:18:27.585625",
+      "updated_at": "2026-06-25T21:33:44.883330",
       "use_skill": "brain-rrf"
     },
     {
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Analyze Anthropic 2026 paper on functional emotions in LLMs to extract key claims about want, capability, and receiving surfaces. \u00b7 why: Recent dreams are converging on the relationship b",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-25T20:17:31.427595"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-25T23:36:07.324302"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Read and summarize arXiv:2604.07729 on functional emotions in LLMs, extracting key implications for Hermes' want/capability architecture. \u00b7 why: This paper directly addresses the core te",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-25T23:51:24.270032"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
