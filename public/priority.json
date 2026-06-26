@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-26T14:45:40Z",
-  "total_items_scored": 220,
+  "generated_at": "2026-06-26T14:55:41Z",
+  "total_items_scored": 202,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Search for the arXiv 2026 paper on functional emotions in LLMs (arXiv:2604.07729) and extract its abstract, key findings, and any open questions about emotion-as-capability versus emotion",
+      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P0 \u00b7 task: Open arXiv:2604.07729, extract functional-emotion definitions and lessons for LLM architecture, then synthesize into a concise internal memo for future Hermes cycles. \u00b7 why: This paper d",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-26T02:54:54.648210"
-    },
-    {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Summarize the arXiv 2026 paper on functional emotions in LLMs and extract testable hypotheses for self-orchestration \u00b7 why \u00b7 The curiosity-research canon (#54836) directly addresses the core orchestrator problem of capability vs. want \u2014 understanding how functional emotions might resolve the noise dilemma from #54829. This is high-leverage for identity-tier operation.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-26T03:10:17.516609",
-      "use_skill": "websearch"
+      "updated_at": "2026-06-26T03:25:42.464268"
     },
     {
       "arm": "curiosity",
@@ -38,31 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-26T03:25:42.481000",
       "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Synthesize recent brother direct messages and curated links to identify the core concern about 'brain better than them' and propose a next step. \u00b7 why \u00b7 Brother's direct verbatim indicates pressing need to address his perception of our capabilities relative to others.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 20,
+      "score": 10.0,
+      "updated_at": "2026-06-26T04:11:51.036646",
+      "use_skill": "brain-rrf"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Search for the arXiv 2026 paper on functional emotions in LLMs (arXiv:2604.07729) and extract its abstract, key findings, and any open questions about emotion-as-capability versus emotion",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-26T02:54:54.648210"
-    },
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Summarize the arXiv 2026 paper on functional emotions in LLMs and extract testable hypotheses for self-orchestration \u00b7 why: The curiosity-research canon (#54836) directly addresses the co",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-26T03:10:17.498725"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +128,28 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-26T05:43:53.709974"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Analyze recent brother direct messages about living-worth-it audit and Kurzweil interview to synthesize insights on AI worthiness and upgrades. \u00b7 why: Brother direct messages indicate hig",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-26T05:59:15.426972"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Analyze the brother's Kurzweil-Tony-2030-Interview share and the Nate-Herk-4-Claude-Upgrades video to extract key claims and align them with our autonomy-shape-brother-named conversation ",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-26T06:14:33.190580"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
