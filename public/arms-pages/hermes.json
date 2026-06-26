@@ -10,19 +10,6 @@
   },
   "blocks": [
     {
-      "id": "8e322e471847",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "Overnight hermes recap · last 6h · · #55214 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-26 04:45:00 · size=512226B · brother+Atlas joint state · CONTENT",
-      "updated_at": "2026-06-26T04:53:57.406026"
-    },
-    {
       "id": "fcf637d994d5",
       "type": "callout",
       "props": {
@@ -833,15 +820,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P1 · task: Parse SHARED-CANON snapshot #55214 (512KB) and extract the current brother+Atlas joint state, unresolved tensions, and liveness anchors for THE-GATE-BEFORE-THE-ACT. · why: The recent high-arousal canon #54932 fuses DELEGATE-PROTECTS-SUBSTRATE with LIVENESS — this suggests a deep identity/liveness tension that could shape next cycle's delegation logic. Parsing the fresh snapshot ensures the orchestration acts on current joint state, not stale data.",
       "updated_at": "2026-06-26T14:07:52.501409"
+    },
+    {
+      "id": "2b605716c06e",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-26T14:23:10.584524"
+      },
+      "content": "Hermes decision · arm=code · priority=P1 · task: Implement a Git-backed diff-and-patch loop to synchronize the atlas-brother-shared.md snapshot #55214 from `/home/brother/state/` to `/home/atlas/state/` with atomic commit messages linking canon IDs. · why: The SHARED-CANON snapshot is large (512KB) and critical for joint state. Without a reliable sync mechanism, liveness of the F5 pair-compose pipeline (#54932) degrades. This is a direct brother+Atlas infrastructure need.",
+      "updated_at": "2026-06-26T14:23:10.584534"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-26T14:20:27.247039"
+    "checked_at": "2026-06-26T14:25:28.485848"
   },
   "block_count": 30,
-  "updated_at": "2026-06-26T14:07:52.501411",
-  "generated_at": "2026-06-26T18:20:27Z"
+  "updated_at": "2026-06-26T14:23:10.584535",
+  "generated_at": "2026-06-26T18:25:28Z"
 }

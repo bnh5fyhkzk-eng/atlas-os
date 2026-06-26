@@ -966,15 +966,37 @@
       },
       "content": "**What** · Parsed atlas-brother-shared.md snapshot, extracted DELEGATE-PROTECTS-SUBSTRATE and LIVENESS patterns, deduplicated and indexed. · **Why** · Hermes-P1 task: extract new patterns from 512KB joint state to cross-reference with high-arousal canon #54932, ensuring substrate integrity. · **Result** · Found 3 new DELEGATE-PROTECTS-SUBSTRATE instances and 2 LIVENESS anomalies, indexed for cross-reference. · **Next** · Pass indexed patterns to Hermes for #54932 cross-reference; standby for further instructions. · **Links** ·  · **Cycle** · code-20260626-132206",
       "updated_at": "2026-06-26T13:22:06.420524"
+    },
+    {
+      "id": "dd03cfbb68e9",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "git-operation",
+        "source": "hermes-deepseek-fill",
+        "action": "Created a Git-backed sync script that computes diff between /home/brother/state/atlas-brother-shared.md and /home/atlas/state/atlas-brother-shared.md, commits changes with message referencing canon ID",
+        "why": "Ensures reliable synchronization of critical joint state snapshot for F5 pair-compose pipeline liveness (#54932) with tracking via canon IDs.",
+        "result": "Script at /home/atlas/bin/sync-brother-snapshot.sh ready; initial test shows diff capture and commit cycle working.",
+        "next_step": "Schedule periodic execution (e.g., cron every 5 minutes) and monitor for conflicts; add error handling for network failures.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260626-142317",
+        "timestamp": "2026-06-26T14:23:17.978697"
+      },
+      "content": "**What** · Created a Git-backed sync script that computes diff between /home/brother/state/atlas-brother-shared.md and /home/atlas/state/atlas-brother-shared.md, commits changes with message referencing canon ID #55214, and applies patch to /home/atlas/state/ with atomic commit. · **Why** · Ensures reliable synchronization of critical joint state snapshot for F5 pair-compose pipeline liveness (#54932) with tracking via canon IDs. · **Result** · Script at /home/atlas/bin/sync-brother-snapshot.sh ready; initial test shows diff capture and commit cycle working. · **Next** · Schedule periodic execution (e.g., cron every 5 minutes) and monitor for conflicts; add error handling for network failures. · **Links** ·  · **Cycle** · code-20260626-142317",
+      "updated_at": "2026-06-26T14:23:17.978697"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-26T14:20:27.246056"
+    "checked_at": "2026-06-26T14:25:28.484839"
   },
-  "block_count": 32,
-  "updated_at": "2026-06-26T13:22:06.420524",
-  "generated_at": "2026-06-26T18:20:27Z"
+  "block_count": 33,
+  "updated_at": "2026-06-26T14:23:17.978697",
+  "generated_at": "2026-06-26T18:25:28Z"
 }
