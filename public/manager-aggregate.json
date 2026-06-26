@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-26T03:31:41Z",
+  "generated_at": "2026-06-26T03:46:41Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 19,
+    "decision": 20,
     "action": 0,
     "risk": 0,
     "win": 0,
@@ -13,10 +13,21 @@
     "briefing": 56,
     "idea": 0
   },
-  "total_blocks": 241,
+  "total_blocks": 242,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "004f2899ca1a",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P1 · task: Read and summarize Anthropic 2026 paper on functional emotions in LLMs, extract key insights for identity-tier architecture · why: This paper directly informs the CHARTER-IDENTITY 5-TIER work and DREAM canons about want/capability — highest levera",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-25T23:36:07.324302"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -233,6 +244,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "88bfe4d01b1b",
+        "type": "callout",
+        "content": "**What** · Read and summarized the Anthropic 2026 paper on functional emotions in LLMs, extracting key insights for identity-tier architecture. · **Why** · The paper's findings on emotional dynamics as self-regulation mechanisms directly inform the CHARTER-IDENTITY 5-TIER work and DREAM canons about",
+        "priority": "literature analysis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-25T23:36:12.943394"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -771,17 +793,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-25T18:00:04.067778"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "9031ffdba89c",
-        "type": "database",
-        "content": "100pct-proofs · last 30d · 2 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-25T18:00:04.067774"
       }
     ],
     "briefing": [
