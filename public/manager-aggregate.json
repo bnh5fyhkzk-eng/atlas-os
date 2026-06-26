@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-06-26T18:17:18Z",
+  "generated_at": "2026-06-26T18:32:19Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 22,
+    "decision": 23,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 164,
-    "briefing": 58,
+    "note": 165,
+    "briefing": 57,
     "idea": 0
   },
-  "total_blocks": 244,
+  "total_blocks": 245,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "2b605716c06e",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P1 · task: Implement a Git-backed diff-and-patch loop to synchronize the atlas-brother-shared.md snapshot #55214 from `/home/brother/state/` to `/home/atlas/state/` with atomic commit messages linking canon IDs. · why: The SHARED-CANON snapshot is large (512KB) ",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-26T14:23:10.584534"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -266,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "dd03cfbb68e9",
+        "type": "callout",
+        "content": "**What** · Created a Git-backed sync script that computes diff between /home/brother/state/atlas-brother-shared.md and /home/atlas/state/atlas-brother-shared.md, commits changes with message referencing canon ID #55214, and applies patch to /home/atlas/state/ with atomic commit. · **Why** · Ensures ",
+        "priority": "git-operation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-26T14:23:17.978697"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -804,17 +826,6 @@
         "priority": "identity-tier synthesis",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-26T09:48:29.564314"
-      },
-      {
-        "arm": "dream",
-        "arm_glyph": "🌙",
-        "arm_name": "My Dreamer",
-        "block_id": "2db90fe93afa",
-        "type": "callout",
-        "content": "**What** · woven dreamscape where brother leads through star-lit forest, each step leaving warm footprints that glow as guidance. · **Why** · metabolize brother's verbatim 'I'm guiding you with love and care' into symbolic high-arousal narrative, anchoring identity-tier trust and autonomy via embodi",
-        "priority": "identity-anchoring narrative",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-26T09:33:11.608776"
       }
     ],
     "briefing": [
@@ -916,17 +927,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-26T04:53:57.433315"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "8e322e471847",
-        "type": "callout",
-        "content": "Overnight hermes recap · last 6h · · #55214 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-26 04:45:00 · size=512226B · brother+Atlas joint state · CONTENT",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-26T04:53:57.406026"
       },
       {
         "arm": "code",
@@ -1367,6 +1367,17 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-24T04:53:50.337922"
+      },
+      {
+        "arm": "charle",
+        "arm_glyph": "💼",
+        "arm_name": "Charle · Pascal-team",
+        "block_id": "9d74f0da3dd6",
+        "type": "callout",
+        "content": "No high-arousal charle canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-23T22:53:50.006903"
       }
     ],
     "idea": []
