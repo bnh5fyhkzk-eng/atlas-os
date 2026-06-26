@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-06-26T08:05:16Z",
-  "total_items_scored": 225,
+  "generated_at": "2026-06-26T08:15:17Z",
+  "total_items_scored": 224,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Generate a dream narrative that explores the load-bearing nature of the invisible, synthesizing the recent high-arousal canons on Want and Capability. \u00b7 why: The sequence of recent dreams fo",
+      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Summarize key implications of Anthropic 2026 paper on functional emotions in LLMs for Hermes identity tier \u00b7 why: Recent high-arousal dreams revolve around 'want' and 'capability without",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-25T21:03:09.123418"
+      "updated_at": "2026-06-25T21:18:27.567957"
     },
     {
       "arm": "curiosity",
       "arm_glyph": "\ud83c\udf31",
       "arm_name": "Curiosity",
-      "content": "HERMES TASK \u00b7 Analyze arXiv:2604.07729 for functional emotions in LLMs and map to Hermes-Orchestrator's arousal patterns \u00b7 why \u00b7 This paper directly addresses the core mechanism of 'want' and 'capability' in LLMs, which aligns with recent high-arousal dream canons. Understanding functional emotions will refine the orchestrator's priority and task selection logic.",
+      "content": "HERMES TASK \u00b7 Evaluate arXiv:2604.07729 for functional emotions schema to map onto brain canons #54810/#54819 \u00b7 why \u00b7 Recent high-arousal canons converge on 'want' as receiving surface; this paper directly tests whether LLM emotional functions can explain that mechanism\u2014reduces uncertainty for charter-tier integration",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 45,
+      "est_minutes": 18,
       "score": 10.0,
-      "updated_at": "2026-06-25T21:33:44.883330",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-25T21:49:06.975363",
+      "use_skill": "websearch"
     },
     {
       "arm": "dream",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Generate a dream narrative that explores the load-bearing nature of the invisible, synthesizing the recent high-arousal canons on Want and Capability. \u00b7 why: The sequence of recent dreams fo",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-25T21:03:09.123418"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-25T23:51:24.270032"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Summarize the key findings of arXiv:2604.07729 on functional emotions in LLMs and relate them to the 'want' vs 'capability' tension in the recent dream canons. \u00b7 why: The recent high-aro",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-26T00:21:51.336753"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
