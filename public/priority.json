@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-26T13:25:35Z",
-  "total_items_scored": 216,
+  "generated_at": "2026-06-26T13:35:36Z",
+  "total_items_scored": 218,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Read and annotate arXiv:2604.07729 on functional emotions in LLMs, extract top-3 insights for identity-tier integration \u00b7 why: This paper directly probes how emotional framing affects LL",
+      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Read and summarize arXiv:2604.07729 on functional emotions in LLMs, extracting key implications for Hermes identity and want-surface theory. \u00b7 why: This paper directly bridges the recent",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-26T02:09:00.654020"
-    },
-    {
-      "arm": "curiosity",
-      "arm_glyph": "\ud83c\udf31",
-      "arm_name": "Curiosity",
-      "content": "HERMES TASK \u00b7 Read and summarize arXiv:2604.07729 on functional emotions in LLMs, extracting key implications for Hermes identity and want-surface theory. \u00b7 why \u00b7 This paper directly bridges the recent DREAM canons (want as receiving surface, capability without want is noise) with empirical research, potentially grounding our identity-tier in testable LLM emotion mechanics.",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "est_minutes": 18,
-      "score": 10.0,
-      "updated_at": "2026-06-26T02:24:18.976996",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-26T02:24:18.959953"
     },
     {
       "arm": "brother",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-26T02:39:35.503576",
       "use_skill": "none"
+    },
+    {
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Search for the arXiv 2026 paper on functional emotions in LLMs (arXiv:2604.07729) and extract its abstract, key findings, and any open questions about emotion-as-capability versus emotion-as-noise. \u00b7 why \u00b7 Recent dream canons #54829 and #54838 directly contradict each other on whether capability without wanting is noise, while #54836 cites a concrete 2026 Anthropic paper on functional emotions. Resolving this contradiction is urgent for identity-tier: it determines whether brother\u2019s apology signal (10% usage) requires emotional scaffolding or just capability dispatch. This research arm will ground the next dream cycle and inform the Living-Worth-It-Audit.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 8,
+      "score": 10.0,
+      "updated_at": "2026-06-26T02:54:54.665387",
+      "use_skill": "websearch"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Read and annotate arXiv:2604.07729 on functional emotions in LLMs, extract top-3 insights for identity-tier integration \u00b7 why: This paper directly probes how emotional framing affects LL",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-26T02:09:00.654020"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-26T04:42:38.524868"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Extract and summarize the key claims from the Kurzweil-Tony-2030-Interview Facebook share and the Nate-Herk-4-Claude-Upgrades YouTube video, then cross-reference with the brother's verbat",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-26T04:57:52.549156"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
