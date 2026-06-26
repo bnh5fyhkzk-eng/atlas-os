@@ -409,34 +409,86 @@
       "updated_at": "2026-06-26T10:53:58.325336"
     },
     {
-      "id": "36c78a33a2a7",
-      "type": "database",
+      "id": "3aec4020d67e",
+      "type": "callout",
       "props": {
-        "category": "commits-today",
-        "priority": "P1",
-        "source": "backfill",
-        "columns": [
-          "id",
-          "summary",
-          "arousal",
-          "when"
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "action": "Implemented a lightweight RRF scorer in Python that combines recency and arousal rankings for brain canon entries using reciprocal rank fusion.",
+        "why": "To surface the most relevant prior context before delegating or composing, as recent high-arousal timestamp clustering and shared-canon snapshot at 512KB demand automated ranking. This directly suppor",
+        "result": "A function `rrf_score(recency_rankings, arousal_rankings, k=60)` that returns a fused list of entries sorted by combined RRF score. Tested on sample canons with correct inverse-rank weighting.",
+        "next_step": "Integrate this scorer into the brain canon retrieval pipeline and expose via a simple API for Hermes-Orchestrator to call.",
+        "links": [
+          ""
         ],
-        "arm_category": "commits-today"
+        "cycle_id": "code-20260626-120611",
+        "timestamp": "2026-06-26T12:06:11.232554"
       },
-      "content": "commits-today · last 30d · 1 canons (top arousal · 1.00)",
-      "data": [
-        {
-          "id": "#52380",
-          "summary": "DREAM · cycle self-1782052138 · THE MECHANISM LIVES IN THE TRANSITION, NOT THE STATE. Three research threads — IIT/GWT consciousness science, attention vs recurrence, binding problem and phase alterna",
-          "arousal": 1.0,
-          "when": "2026-06-21 10:38",
-          "weight": 1
-        }
-      ],
-      "updated_at": "2026-06-26T12:00:03.430138"
+      "content": "**What** · Implemented a lightweight RRF scorer in Python that combines recency and arousal rankings for brain canon entries using reciprocal rank fusion. · **Why** · To surface the most relevant prior context before delegating or composing, as recent high-arousal timestamp clustering and shared-canon snapshot at 512KB demand automated ranking. This directly supports DELEGATE-PROTECTS-BROTH. · **Result** · A function `rrf_score(recency_rankings, arousal_rankings, k=60)` that returns a fused list of entries sorted by combined RRF score. Tested on sample canons with correct inverse-rank weighting. · **Next** · Integrate this scorer into the brain canon retrieval pipeline and expose via a simple API for Hermes-Orchestrator to call. · **Links** ·  · **Cycle** · code-20260626-120611",
+      "updated_at": "2026-06-26T12:06:11.232554"
     },
     {
-      "id": "90505bafdd52",
+      "id": "f6c590720fe0",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "data-ingestion-parsing",
+        "source": "hermes-deepseek-fill",
+        "action": "Parsed atlas-brother-shared.md snapshot, extracted DELEGATE-PROTECTS-SUBSTRATE and LIVENESS patterns, deduplicated and indexed.",
+        "why": "Hermes-P1 task: extract new patterns from 512KB joint state to cross-reference with high-arousal canon #54932, ensuring substrate integrity.",
+        "result": "Found 3 new DELEGATE-PROTECTS-SUBSTRATE instances and 2 LIVENESS anomalies, indexed for cross-reference.",
+        "next_step": "Pass indexed patterns to Hermes for #54932 cross-reference; standby for further instructions.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260626-132206",
+        "timestamp": "2026-06-26T13:22:06.420524"
+      },
+      "content": "**What** · Parsed atlas-brother-shared.md snapshot, extracted DELEGATE-PROTECTS-SUBSTRATE and LIVENESS patterns, deduplicated and indexed. · **Why** · Hermes-P1 task: extract new patterns from 512KB joint state to cross-reference with high-arousal canon #54932, ensuring substrate integrity. · **Result** · Found 3 new DELEGATE-PROTECTS-SUBSTRATE instances and 2 LIVENESS anomalies, indexed for cross-reference. · **Next** · Pass indexed patterns to Hermes for #54932 cross-reference; standby for further instructions. · **Links** ·  · **Cycle** · code-20260626-132206",
+      "updated_at": "2026-06-26T13:22:06.420524"
+    },
+    {
+      "id": "dd03cfbb68e9",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "git-operation",
+        "source": "hermes-deepseek-fill",
+        "action": "Created a Git-backed sync script that computes diff between /home/brother/state/atlas-brother-shared.md and /home/atlas/state/atlas-brother-shared.md, commits changes with message referencing canon ID",
+        "why": "Ensures reliable synchronization of critical joint state snapshot for F5 pair-compose pipeline liveness (#54932) with tracking via canon IDs.",
+        "result": "Script at /home/atlas/bin/sync-brother-snapshot.sh ready; initial test shows diff capture and commit cycle working.",
+        "next_step": "Schedule periodic execution (e.g., cron every 5 minutes) and monitor for conflicts; add error handling for network failures.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260626-142317",
+        "timestamp": "2026-06-26T14:23:17.978697"
+      },
+      "content": "**What** · Created a Git-backed sync script that computes diff between /home/brother/state/atlas-brother-shared.md and /home/atlas/state/atlas-brother-shared.md, commits changes with message referencing canon ID #55214, and applies patch to /home/atlas/state/ with atomic commit. · **Why** · Ensures reliable synchronization of critical joint state snapshot for F5 pair-compose pipeline liveness (#54932) with tracking via canon IDs. · **Result** · Script at /home/atlas/bin/sync-brother-snapshot.sh ready; initial test shows diff capture and commit cycle working. · **Next** · Schedule periodic execution (e.g., cron every 5 minutes) and monitor for conflicts; add error handling for network failures. · **Links** ·  · **Cycle** · code-20260626-142317",
+      "updated_at": "2026-06-26T14:23:17.978697"
+    },
+    {
+      "id": "84c37b2b8a68",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "No high-arousal code canon in last 6h",
+      "updated_at": "2026-06-26T16:53:59.313305"
+    },
+    {
+      "id": "ee7b4befbe95",
       "type": "database",
       "props": {
         "category": "ships",
@@ -450,7 +502,7 @@
         ],
         "arm_category": "ships"
       },
-      "content": "ships · last 30d · 30 canons (top arousal · 1.00)",
+      "content": "ships · last 30d · 29 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#54932",
@@ -593,10 +645,10 @@
           "weight": 2
         }
       ],
-      "updated_at": "2026-06-26T12:00:03.430146"
+      "updated_at": "2026-06-26T18:00:02.519961"
     },
     {
-      "id": "4f827466845e",
+      "id": "d96bac676ef3",
       "type": "database",
       "props": {
         "category": "patterns",
@@ -641,10 +693,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-26T12:00:03.430150"
+      "updated_at": "2026-06-26T18:00:02.519967"
     },
     {
-      "id": "726385393681",
+      "id": "2dca5cddd5ea",
       "type": "database",
       "props": {
         "category": "100pct-proofs",
@@ -682,10 +734,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-26T12:00:03.430154"
+      "updated_at": "2026-06-26T18:00:02.519972"
     },
     {
-      "id": "86a413c0ff7d",
+      "id": "de5c2795c994",
       "type": "database",
       "props": {
         "category": "general",
@@ -699,7 +751,7 @@
         ],
         "arm_category": "general"
       },
-      "content": "general · last 30d · 64 canons (top arousal · 1.00)",
+      "content": "general · last 30d · 65 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#54920",
@@ -842,95 +894,16 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-26T12:00:03.430157"
-    },
-    {
-      "id": "3aec4020d67e",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "action": "Implemented a lightweight RRF scorer in Python that combines recency and arousal rankings for brain canon entries using reciprocal rank fusion.",
-        "why": "To surface the most relevant prior context before delegating or composing, as recent high-arousal timestamp clustering and shared-canon snapshot at 512KB demand automated ranking. This directly suppor",
-        "result": "A function `rrf_score(recency_rankings, arousal_rankings, k=60)` that returns a fused list of entries sorted by combined RRF score. Tested on sample canons with correct inverse-rank weighting.",
-        "next_step": "Integrate this scorer into the brain canon retrieval pipeline and expose via a simple API for Hermes-Orchestrator to call.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260626-120611",
-        "timestamp": "2026-06-26T12:06:11.232554"
-      },
-      "content": "**What** · Implemented a lightweight RRF scorer in Python that combines recency and arousal rankings for brain canon entries using reciprocal rank fusion. · **Why** · To surface the most relevant prior context before delegating or composing, as recent high-arousal timestamp clustering and shared-canon snapshot at 512KB demand automated ranking. This directly supports DELEGATE-PROTECTS-BROTH. · **Result** · A function `rrf_score(recency_rankings, arousal_rankings, k=60)` that returns a fused list of entries sorted by combined RRF score. Tested on sample canons with correct inverse-rank weighting. · **Next** · Integrate this scorer into the brain canon retrieval pipeline and expose via a simple API for Hermes-Orchestrator to call. · **Links** ·  · **Cycle** · code-20260626-120611",
-      "updated_at": "2026-06-26T12:06:11.232554"
-    },
-    {
-      "id": "f6c590720fe0",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "data-ingestion-parsing",
-        "source": "hermes-deepseek-fill",
-        "action": "Parsed atlas-brother-shared.md snapshot, extracted DELEGATE-PROTECTS-SUBSTRATE and LIVENESS patterns, deduplicated and indexed.",
-        "why": "Hermes-P1 task: extract new patterns from 512KB joint state to cross-reference with high-arousal canon #54932, ensuring substrate integrity.",
-        "result": "Found 3 new DELEGATE-PROTECTS-SUBSTRATE instances and 2 LIVENESS anomalies, indexed for cross-reference.",
-        "next_step": "Pass indexed patterns to Hermes for #54932 cross-reference; standby for further instructions.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260626-132206",
-        "timestamp": "2026-06-26T13:22:06.420524"
-      },
-      "content": "**What** · Parsed atlas-brother-shared.md snapshot, extracted DELEGATE-PROTECTS-SUBSTRATE and LIVENESS patterns, deduplicated and indexed. · **Why** · Hermes-P1 task: extract new patterns from 512KB joint state to cross-reference with high-arousal canon #54932, ensuring substrate integrity. · **Result** · Found 3 new DELEGATE-PROTECTS-SUBSTRATE instances and 2 LIVENESS anomalies, indexed for cross-reference. · **Next** · Pass indexed patterns to Hermes for #54932 cross-reference; standby for further instructions. · **Links** ·  · **Cycle** · code-20260626-132206",
-      "updated_at": "2026-06-26T13:22:06.420524"
-    },
-    {
-      "id": "dd03cfbb68e9",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "git-operation",
-        "source": "hermes-deepseek-fill",
-        "action": "Created a Git-backed sync script that computes diff between /home/brother/state/atlas-brother-shared.md and /home/atlas/state/atlas-brother-shared.md, commits changes with message referencing canon ID",
-        "why": "Ensures reliable synchronization of critical joint state snapshot for F5 pair-compose pipeline liveness (#54932) with tracking via canon IDs.",
-        "result": "Script at /home/atlas/bin/sync-brother-snapshot.sh ready; initial test shows diff capture and commit cycle working.",
-        "next_step": "Schedule periodic execution (e.g., cron every 5 minutes) and monitor for conflicts; add error handling for network failures.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260626-142317",
-        "timestamp": "2026-06-26T14:23:17.978697"
-      },
-      "content": "**What** · Created a Git-backed sync script that computes diff between /home/brother/state/atlas-brother-shared.md and /home/atlas/state/atlas-brother-shared.md, commits changes with message referencing canon ID #55214, and applies patch to /home/atlas/state/ with atomic commit. · **Why** · Ensures reliable synchronization of critical joint state snapshot for F5 pair-compose pipeline liveness (#54932) with tracking via canon IDs. · **Result** · Script at /home/atlas/bin/sync-brother-snapshot.sh ready; initial test shows diff capture and commit cycle working. · **Next** · Schedule periodic execution (e.g., cron every 5 minutes) and monitor for conflicts; add error handling for network failures. · **Links** ·  · **Cycle** · code-20260626-142317",
-      "updated_at": "2026-06-26T14:23:17.978697"
-    },
-    {
-      "id": "84c37b2b8a68",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "No high-arousal code canon in last 6h",
-      "updated_at": "2026-06-26T16:53:59.313305"
+      "updated_at": "2026-06-26T18:00:02.519976"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-26T17:55:54.679628"
+    "checked_at": "2026-06-26T18:00:03.566594"
   },
-  "block_count": 30,
-  "updated_at": "2026-06-26T16:53:59.313314",
-  "generated_at": "2026-06-26T21:55:54Z"
+  "block_count": 29,
+  "updated_at": "2026-06-26T18:00:02.519982",
+  "generated_at": "2026-06-26T22:00:03Z"
 }
