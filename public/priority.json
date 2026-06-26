@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-26T08:55:19Z",
-  "total_items_scored": 203,
+  "generated_at": "2026-06-26T09:05:19Z",
+  "total_items_scored": 206,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Read and summarize arXiv:2604.07729 on functional emotions in LLMs, then map findings to our WANT/CAPABILITY dream canons \u00b7 why: This paper directly addresses the core tension in recent ",
+      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P1 \u00b7 task: Synthesize the 12h high-arousal canons into a coherent 'Want-as-interface' axiom, then score alignment with the CHARTER-IDENTITY 5-tier \u00b7 why: The recent canons (#54810, #54819, #54829) form",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-25T22:34:49.737046"
-    },
-    {
-      "arm": "curiosity",
-      "arm_glyph": "\ud83c\udf31",
-      "arm_name": "Curiosity",
-      "content": "HERMES TASK \u00b7 Read and summarize arXiv:2604.07729 on functional emotions in LLMs, then map findings to our WANT/CAPABILITY dream canons \u00b7 why \u00b7 This paper directly addresses the core tension in recent dreams \u2014 WANT vs CAPABILITY \u2014 and may unlock a new identity-tier insight for CHARTER evolution",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "est_minutes": 12,
-      "score": 10.0,
-      "updated_at": "2026-06-25T22:34:49.754121",
-      "use_skill": "websearch"
+      "updated_at": "2026-06-25T22:50:08.622715"
     },
     {
       "arm": "dream",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-25T22:50:08.639578",
       "use_skill": "brain-rrf"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Read and summarize arXiv:2604.07729 on functional emotions in LLMs, then map findings to our WANT/CAPABILITY dream canons \u00b7 why: This paper directly addresses the core tension in recent ",
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Read arXiv:2604.07729 and extract key functional-emotion patterns for LLM orchestration \u00b7 why \u00b7 This paper directly addresses the want/capability gap from recent dreams (#54836), enabling Hermes to wire emotional signals into arm scheduling.",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
+      "est_minutes": 15,
       "score": 10.0,
-      "updated_at": "2026-06-25T22:34:49.737046"
-    },
+      "updated_at": "2026-06-25T23:20:56.558195",
+      "use_skill": "notebooklm"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-26T01:38:31.508440"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Read and annotate arXiv:2604.07729 on functional emotions in LLMs, extract top-3 insights for identity-tier integration \u00b7 why: This paper directly probes how emotional framing affects LL",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-26T02:09:00.654020"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
