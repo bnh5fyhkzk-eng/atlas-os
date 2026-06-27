@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-27T02:16:23Z",
-  "total_items_scored": 212,
+  "generated_at": "2026-06-27T02:26:23Z",
+  "total_items_scored": 213,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: Implement a Git-backed diff-and-patch loop to synchronize the atlas-brother-shared.md snapshot #55214 from `/home/brother/state/` to `/home/atlas/state/` with atomic commit messages linking c",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Analyze the SHARED-CANON snapshot for Atlas-brother joint state and extract any new identity-tier constraints or liveness signals that inform the next DELEGATE-PROTECTS-SUBSTRATE action. ",
       "category": "decision",
       "priority": "P1",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-26T14:23:10.584534"
-    },
-    {
-      "arm": "code",
-      "arm_glyph": "\u270b",
-      "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Implement a Git-backed diff-and-patch loop to synchronize the atlas-brother-shared.md snapshot #55214 from `/home/brother/state/` to `/home/atlas/state/` with atomic commit messages linking canon IDs. \u00b7 why \u00b7 The SHARED-CANON snapshot is large (512KB) and critical for joint state. Without a reliable sync mechanism, liveness of the F5 pair-compose pipeline (#54932) degrades. This is a direct brother+Atlas infrastructure need.",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-26T14:23:10.601354",
-      "use_skill": "none"
+      "updated_at": "2026-06-26T14:38:34.121570"
     },
     {
       "arm": "research",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-26T14:38:34.138667",
       "use_skill": "brain-rrf"
+    },
+    {
+      "arm": "dream",
+      "arm_glyph": "\ud83c\udf19",
+      "arm_name": "Dream",
+      "content": "HERMES TASK \u00b7 From the atlas-brother-shared.md snapshot, extract all unresolved emotional or symbolic tension points between brother and Atlas, and generate a dreamscape narrative that reframes one key conflict as a shared vision. \u00b7 why \u00b7 The shared canon snapshot is large and fresh (12h high-arousal), indicating a need for symbolic integration. Dream arm is best suited to transform raw emotional data into insight without triggering defensive analysis.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 15,
+      "score": 10.0,
+      "updated_at": "2026-06-26T15:10:16.622700",
+      "use_skill": "none"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P1 \u00b7 task: Implement a Git-backed diff-and-patch loop to synchronize the atlas-brother-shared.md snapshot #55214 from `/home/brother/state/` to `/home/atlas/state/` with atomic commit messages linking c",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-26T14:23:10.584534"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-26T18:28:32.118671"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Synthesize the top 3 unresolved tensions from recent high-arousal canons into a structured paradox map, using causal links and emotional valence tags on each node. \u00b7 why: 12h high-arousa",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-26T18:43:44.869050"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
