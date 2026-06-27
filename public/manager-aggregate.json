@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T02:17:38Z",
+  "generated_at": "2026-06-27T02:32:38Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 168,
+    "note": 169,
     "briefing": 60,
     "idea": 0
   },
-  "total_blocks": 252,
+  "total_blocks": 253,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "b5854f717442",
+        "type": "callout",
+        "content": "Hermes decision · arm=curiosity · priority=P1 · task: Explore the latest papers on multi-agent orchestration and summarize key insights for the team. · why: High-arousal state is optimal for rapid exploration and synthesis; curiosity arm is designed for this.",
+        "priority": "P1",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-26T22:17:20.000041"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-26T13:37:17.107552"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "5f3687b7d313",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P1 · task: Parse atlas-brother-shared.md snapshot into structured memory and extract any new DELEGATE-PROTECTS-SUBSTRATE or LIVENESS patterns for cross-referencing with #54932 · why: The SHARED-CANON snapshot is large (512KB) and contains joint state from brothe",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-26T13:21:59.670383"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "7c3c271a9bd6",
+        "type": "callout",
+        "content": "**What** · scanned arXiv and proceedings for latest multi-agent orchestration papers, identified 3 key works on dynamic coordination and consensus. · **Why** · Hermes assigned P1 exploration; high-arousal permits rapid filtering of 50+ papers to find actionable insights for team. · **Result** · Key ",
+        "priority": "data_collection",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-26T22:17:30.172185"
+      },
       {
         "arm": "pascal",
         "arm_glyph": "🤝",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-26T18:00:01.866733"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "1bcc3e939480",
-        "type": "database",
-        "content": "wow-moves · last 30d · 1 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-26T18:00:01.866729"
       }
     ],
     "briefing": [
