@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-06-29T20:50:55Z",
+  "generated_at": "2026-06-29T21:00:56Z",
   "total_items_scored": 194,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the final heart loops per NotebookLM blueprint and brother's answers from #55572. \u00b7 why: Brother direc",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement and test final loop for heart-wire orchestrator per NotebookLM blueprint \u00b7 why: Brother direct to finish heart by tomorrow; step 1 shipped, need to complete integration",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-29T06:00:11.684132"
+      "updated_at": "2026-06-29T06:30:37.949595"
     },
     {
       "arm": "code",
       "arm_glyph": "\u270b",
       "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Implement the q4-wire-order orchestrator from the me-heart-wire.py step, ensuring it wires correctly per the recent heart-night-loop plan (v2) and updates the heartbeat test suite. \u00b7 why \u00b7 Brother directly said 'heart should be finished by tomorrow and tested' and the step-1 orchestrator was just shipped. This is the immediate next implementation to advance the heart system to completion.",
+      "content": "HERMES TASK \u00b7 Wire the Q4 orchestrator's next cycle to load the 'heart fully finished' NotebookLM blueprint and execute the brother-verified 'heart should be finished by tomorrow and tested' night-loop plan as a single pipeline test \u00b7 why \u00b7 #55572 confirmed 4 final loops shipped per NotebookLM blueprint + brother answers, #55589 gave the direct night-loop plan, #55603 delivered the wire-order orchestrator. The next cycle must fuse these into one run: code arm writes the integration test that calls the orchestrator with the blueprint path and night-loop parameter, then executes it to prove P0 brother-direct completion.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 120,
+      "est_minutes": 18,
       "score": 10.0,
-      "updated_at": "2026-06-29T07:31:50.405605",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-29T07:47:15.144880",
+      "use_skill": "notebooklm"
     },
     {
       "arm": "research",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the final heart loops per NotebookLM blueprint and brother's answers from #55572. \u00b7 why: Brother direc",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-29T06:00:11.684132"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-29T09:33:56.169175"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Run me-heart-wire.py orchestrator against the latest 4 final loops from #55572 to validate wire order and detect any blockages per brother's maze-from-end directive. \u00b7 why: Brother direct in ",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-29T09:49:13.230863"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
