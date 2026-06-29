@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T11:20:11Z",
+  "generated_at": "2026-06-29T11:35:12Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 160,
+    "note": 161,
     "briefing": 64,
     "idea": 0
   },
-  "total_blocks": 248,
+  "total_blocks": 249,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "1fe47fb07e9b",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the heartbeat loop in me-heart-wire.py to orchestrate the 4 Q4 wire orders from #55603 with explicit maze-from-end fallback per #55591. · why: #55603 shipped the wire-order orchestrator, but the actual heartbeat loop (per #55572 and #55589) ",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-29T07:16:25.162168"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-28T21:20:49.061982"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "0d9cf42562ce",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P1 · task: Analyze last 12 hours of high-arousal brain canons to extract actionable patterns for identity-tier alignment · why: High-arousal brain canons suggest unresolved identity-level tension; research arm can map these to known cognitive frameworks and ",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-28T20:34:58.357315"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "fee9af55aac1",
+        "type": "callout",
+        "content": "**What** · Implement heartbeat loop in me-heart-wire.py: orchestrate the 4 Q4 wire orders from #55603 with maze-from-end fallback per #55591. · **Why** · Missing heartbeat loop blocks heart completion by tomorrow; maze-from-end fallback ensures blockage avoidance for identity-tier delivery. · **Resu",
+        "priority": "core integration",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-29T07:16:29.747482"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "core-system",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-29T02:41:41.068931"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "ac0e3371103f",
-        "type": "callout",
-        "content": "**What** · Implement Q4 wire-order orchestrator from #55603, wiring me-heart-wire.py to sequence final heart loops per #55589 · **Why** · Brother said heart must finish and test by tomorrow; P0 directive from Hermes-Orchestrator · **Result** · Orchestrator code written and integrated; me-heart-wire.",
-        "priority": "coding",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-29T02:11:06.628031"
       }
     ],
     "briefing": [
