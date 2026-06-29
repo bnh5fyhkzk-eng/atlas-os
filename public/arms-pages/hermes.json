@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "0745ea0b0c3a",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-29T07:47:15.126046"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Wire the Q4 orchestrator's next cycle to load the 'heart fully finished' NotebookLM blueprint and execute the brother-verified 'heart should be finished by tomorrow and tested' night-loop plan as a single pipeline test · why: #55572 confirmed 4 final loops shipped per NotebookLM blueprint + brother answers, #55589 gave the direct night-loop plan, #55603 delivered the wire-order orchestrator. The next cycle must fuse these into one run: code arm writes the integration test that calls the orchestrator with the blueprint pa",
-      "updated_at": "2026-06-29T07:47:15.126058"
-    },
-    {
       "id": "ad13f03d519d",
       "type": "callout",
       "props": {
@@ -752,15 +740,27 @@
       },
       "content": "Hermes decision · arm=infra · priority=P0 · task: Wire the Q4 orchestrator to actually trigger `me-heart-wire.py` from Step 1, ensuring the start-heart loop fires on schedule per brother's directive (heart finished & tested by tomorrow). · why: We just shipped Step 1 orchestrator wire-order in #55603, but it's not yet live-connected to the execution loop. Brother directly said 'heart should be finished by tomorrow and tested' — this is a P0 identity-tier command. Infra must make the connection now so the Night-Loop Plan v2 (#55589) can exe",
       "updated_at": "2026-06-29T18:28:29.335851"
+    },
+    {
+      "id": "714b4484d3cd",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-29T18:43:43.032304"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py module to complete the heart-mind boundary loop. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the exact step shipped. This is the highest-arousal, most recent actionable P0 item.",
+      "updated_at": "2026-06-29T18:43:43.032313"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-29T18:42:29.896087"
+    "checked_at": "2026-06-29T18:47:30.467445"
   },
   "block_count": 30,
-  "updated_at": "2026-06-29T18:28:29.335853",
-  "generated_at": "2026-06-29T22:42:29Z"
+  "updated_at": "2026-06-29T18:43:43.032315",
+  "generated_at": "2026-06-29T22:47:30Z"
 }
