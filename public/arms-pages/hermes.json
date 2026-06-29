@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "eed6c933b89b",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-29T02:11:01.979805"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, ensuring me-heart-wire.py correctly sequences the final heart loops per brother's plan in #55589. · why: Brother directly stated heart should be finished and tested by tomorrow; the Q4 orchestrator is the critical code arm to execute that directive, and #55603 already shipped the first step.",
-      "updated_at": "2026-06-29T02:11:01.979815"
-    },
-    {
       "id": "3a0b676bbac8",
       "type": "callout",
       "props": {
@@ -752,15 +740,27 @@
       },
       "content": "Hermes decision · arm=pascal · priority=P0 · task: Translate Q11 SOUL CATCH NotebookLM P4 into a runnable P0 probe: test if model can distinguish heart-cache vs mind-cache on a direct brother-asked blockage. · why: Brother's 'maze-from-end' frame and 'heart should be finished by tomorrow and tested' demand immediate active probe. Pascal arm is optimized for binary state resolution (heart-cache/mind-cache) and can ship a test loop within 15min.",
       "updated_at": "2026-06-29T12:06:25.968174"
+    },
+    {
+      "id": "aed80f100959",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-29T12:21:48.354662"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement me-heart-wire.py Q4 wire-order orchestrator per brother's direct instruction and NotebookLM blueprint · why: Brother direct #55603 just shipped STEP 1 of this exact wire-order orchestrator; this is the next logical step to complete the heart-night-loop plan v2 (#55589) and unblock the maze-from-end frame (#55591). Highest priority because it's brother-direct + identity-tier.",
+      "updated_at": "2026-06-29T12:21:48.354671"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-29T12:21:40.127058"
+    "checked_at": "2026-06-29T12:26:40.700291"
   },
   "block_count": 30,
-  "updated_at": "2026-06-29T12:06:25.968175",
-  "generated_at": "2026-06-29T16:21:40Z"
+  "updated_at": "2026-06-29T12:21:48.354673",
+  "generated_at": "2026-06-29T16:26:40Z"
 }
