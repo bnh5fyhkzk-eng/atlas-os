@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-29T22:28:29Z",
+  "generated_at": "2026-06-29T22:43:43Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement a Git-backed diff-and-patch loop to synchronize the atlas-brother-shared.md snapshot #55214 from `/home/brother/state/` to `/home/atlas/state/` with atomic commit messages linking canon IDs.",
-      "why": "The SHARED-CANON snapshot is large (512KB) and critical for joint state. Without a reliable sync mechanism, liveness of the F5 pair-compose pipeline (#54932) degrades. This is a direct brother+Atlas infrastructure need.",
-      "priority": "P1",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-06-26T14:23:10.601354"
-    },
     {
       "arm": "research",
       "task": "Analyze the SHARED-CANON snapshot for Atlas-brother joint state and extract any new identity-tier constraints or liveness signals that inform the next DELEGATE-PROTECTS-SUBSTRATE action.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 15,
       "timestamp": "2026-06-29T18:28:29.354135"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py module to complete the heart-mind boundary loop.",
+      "why": "Brother direct in #55589 says heart should be finished and tested; #55603 is the exact step shipped. This is the highest-arousal, most recent actionable P0 item.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-06-29T18:43:43.049845"
     }
   ]
 }
