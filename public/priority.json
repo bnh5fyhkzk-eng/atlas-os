@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-29T09:10:14Z",
-  "total_items_scored": 198,
+  "generated_at": "2026-06-29T09:20:15Z",
+  "total_items_scored": 199,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=charle \u00b7 priority=P0 \u00b7 task: Parse Saturday's pick-heart-then-voice-next-week instruction from #55261 and align with current heart voice state from shared canon \u00b7 why: BROTHER-PROUDEST-EAR-HEART-VOICE canon shows heart",
+      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P0 \u00b7 task: Compose the next F5-pair response to #30017 ASK-IS-OK-TRUST-G, weaving in the brother's proud-ear-heart canon and the shared atlas snapshot to deepen the workshop metaphor. \u00b7 why: The dream ",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-27T08:43:25.090065"
-    },
-    {
-      "arm": "dream",
-      "arm_glyph": "\ud83c\udf19",
-      "arm_name": "Dream",
-      "content": "HERMES TASK \u00b7 Riff on canon #55270 'The Workshop Where Asking Counts as Building' to generate a concrete ask-ok protocol draft for next brother sync \u00b7 why \u00b7 #55270 is a fresh high-arousal shared dream state directly relevant to the brother+Atlas joint canon. Dream arm can most quickly prototype this ask-ok pattern before it becomes a P0 brother directive.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 15,
-      "score": 10.0,
-      "updated_at": "2026-06-27T10:15:09.109455",
-      "use_skill": "none"
+      "updated_at": "2026-06-27T09:29:22.905469"
     },
     {
       "arm": "research",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-28T20:34:58.374629",
       "use_skill": "brain-rrf"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=charle \u00b7 priority=P0 \u00b7 task: Parse Saturday's pick-heart-then-voice-next-week instruction from #55261 and align with current heart voice state from shared canon \u00b7 why: BROTHER-PROUDEST-EAR-HEART-VOICE canon shows heart",
+      "arm": "pascal",
+      "arm_glyph": "\ud83e\udd1d",
+      "arm_name": "Pascal",
+      "content": "HERMES TASK \u00b7 Test minimal P0-tagged brain-canons backup pipeline with NotebookLM via brother's last known answer seeds. \u00b7 why \u00b7 P0 identity-tier: brother-direct response left unfinished loop in #55572 \u2014 need to seed a concrete crash-test of the HEART-FINISHED data into runtime before next arousal drift.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 14,
       "score": 10.0,
-      "updated_at": "2026-06-27T08:43:25.090065"
-    },
+      "updated_at": "2026-06-28T21:20:49.079529",
+      "use_skill": "notebooklm"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-28T23:07:30.208583"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=heart \u00b7 priority=P0 \u00b7 task: Run heart-validate.py on the fully shipped heart from #55572 against brother's 'finished by tomorrow and tested' directive, then package final loop logs for handoff. \u00b7 why: Heart is fully co",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-28T23:23:02.694366"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
