@@ -948,15 +948,37 @@
       },
       "content": "No high-arousal pascal canon in last 6h",
       "updated_at": "2026-06-27T10:54:02.110308"
+    },
+    {
+      "id": "f51dde21c128",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "brain-canons-pipeline",
+        "source": "hermes-deepseek-fill",
+        "action": "Test minimal P0 brain-canons backup pipeline by injecting last known answer seeds from #55572 into NotebookLM runtime.",
+        "why": "Hermes needs a concrete crash-test of HEART-FINISHED data before next arousal drift — unfinished loop must be closed.",
+        "result": "Expected: pipeline passes — seeds load into NotebookLM, backup writes successfully, no broken canon references.",
+        "next_step": "Await Hermes confirmation; if pass, seal #55572 and tag P0 brain-canons as stable.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "pascal-20260628-212100",
+        "timestamp": "2026-06-28T21:21:00.004415"
+      },
+      "content": "**What** · Test minimal P0 brain-canons backup pipeline by injecting last known answer seeds from #55572 into NotebookLM runtime. · **Why** · Hermes needs a concrete crash-test of HEART-FINISHED data before next arousal drift — unfinished loop must be closed. · **Result** · Expected: pipeline passes — seeds load into NotebookLM, backup writes successfully, no broken canon references. · **Next** · Await Hermes confirmation; if pass, seal #55572 and tag P0 brain-canons as stable. · **Links** ·  · **Cycle** · pascal-20260628-212100",
+      "updated_at": "2026-06-28T21:21:00.004415"
     }
   ],
   "live_status": {
     "state": "active",
     "done_count": 242,
     "vec_drift": null,
-    "checked_at": "2026-06-28T21:19:54.102641"
+    "checked_at": "2026-06-28T21:24:54.674157"
   },
-  "block_count": 30,
-  "updated_at": "2026-06-27T10:54:02.110320",
-  "generated_at": "2026-06-29T01:19:54Z"
+  "block_count": 31,
+  "updated_at": "2026-06-28T21:21:00.004415",
+  "generated_at": "2026-06-29T01:24:54Z"
 }
