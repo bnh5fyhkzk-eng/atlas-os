@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-29T20:56:50Z",
+  "generated_at": "2026-06-29T21:12:06Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Parse atlas-brother-shared.md snapshot into structured memory and extract any new DELEGATE-PROTECTS-SUBSTRATE or LIVENESS patterns for cross-referencing with #54932",
-      "why": "The SHARED-CANON snapshot is large (512KB) and contains joint state from brother+Atlas; code arm can efficiently parse, deduplicate, and index this data, enabling the orchestrator to detect emergent patterns from the recent high-arousal canon #54932 and maintain substrate integrity.",
-      "priority": "P1",
-      "use_skill": "notebooklm",
-      "est_minutes": 12,
-      "timestamp": "2026-06-26T13:21:59.687522"
-    },
     {
       "arm": "research",
       "task": "Analyze the SHARED-CANON snapshot for emergent patterns in brother-Atlas joint state, focusing on identity-tier signals and substrate protection logic.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-06-29T16:56:50.146936"
+    },
+    {
+      "arm": "code",
+      "task": "Implement and ship the remaining 3 final loops of HEART per NotebookLM blueprint and brother's direct timeline (heart finished by tomorrow, tested).",
+      "why": "Brother explicitly stated 'heart should be finished by tomorrow and tested' \u2014 this is a P0 direct order. Code arm is already wired via #55603 q4 orchestrator and must execute the remaining loops now.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 120,
+      "timestamp": "2026-06-29T17:12:06.068477"
     }
   ]
 }

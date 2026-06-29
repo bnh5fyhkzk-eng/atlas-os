@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-29T21:10:56Z",
-  "total_items_scored": 194,
+  "generated_at": "2026-06-29T21:20:57Z",
+  "total_items_scored": 195,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement and test final loop for heart-wire orchestrator per NotebookLM blueprint \u00b7 why: Brother direct to finish heart by tomorrow; step 1 shipped, need to complete integration",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Build and test step-1 Q4 wire-order orchestrator from #55603 me-heart-wire.py, ensuring it aligns with the maze-from-end frame (#55591) and heart night-loop plan v2 (#55589) \u00b7 why: Code arm i",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-29T06:30:37.949595"
-    },
-    {
-      "arm": "code",
-      "arm_glyph": "\u270b",
-      "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Wire the Q4 orchestrator's next cycle to load the 'heart fully finished' NotebookLM blueprint and execute the brother-verified 'heart should be finished by tomorrow and tested' night-loop plan as a single pipeline test \u00b7 why \u00b7 #55572 confirmed 4 final loops shipped per NotebookLM blueprint + brother answers, #55589 gave the direct night-loop plan, #55603 delivered the wire-order orchestrator. The next cycle must fuse these into one run: code arm writes the integration test that calls the orchestrator with the blueprint path and night-loop parameter, then executes it to prove P0 brother-direct completion.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 18,
-      "score": 10.0,
-      "updated_at": "2026-06-29T07:47:15.144880",
-      "use_skill": "notebooklm"
+      "updated_at": "2026-06-29T07:01:00.887864"
     },
     {
       "arm": "research",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-29T08:02:37.475366",
       "use_skill": "brain-rrf"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement and test final loop for heart-wire orchestrator per NotebookLM blueprint \u00b7 why: Brother direct to finish heart by tomorrow; step 1 shipped, need to complete integration",
+      "arm": "code",
+      "arm_glyph": "\u270b",
+      "arm_name": "Code",
+      "content": "HERMES TASK \u00b7 Finalize and test the Q4 wire-order orchestrator for heart step 1 shipping, ensuring all loops are correctly ordered per brother's blueprint. \u00b7 why \u00b7 Brother direct (P0) task #55603 indicates step 1 shipped but the wire-order orchestrator needs completion; high arousal canon demands immediate code arm action.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-29T06:30:37.949595"
-    },
+      "updated_at": "2026-06-29T08:33:07.754835",
+      "use_skill": "none"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-29T09:49:13.230863"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement heart test script per brother's directive and maze-from-end frame \u00b7 why: Brother direct says heart should be finished and tested; latest canon ships Step 1; next immediate P0 action",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-29T10:34:52.379148"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
