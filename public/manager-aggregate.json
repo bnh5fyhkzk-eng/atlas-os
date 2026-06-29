@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-06-29T16:35:23Z",
+  "generated_at": "2026-06-29T16:50:24Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 24,
+    "decision": 25,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 156,
-    "briefing": 66,
+    "note": 157,
+    "briefing": 65,
     "idea": 0
   },
-  "total_blocks": 246,
+  "total_blocks": 247,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "5810b115211f",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement me-heart-wire.py step 2: translate Q4 wire-order into actual heartbeat sequence with timing constraints for final loops per blueprint. · why: Brother direct said heart should be finished by tomorrow and tested; step 1 shipped last cycle, ste",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-29T12:37:06.270474"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -288,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "a6580f20ddce",
+        "type": "callout",
+        "content": "**What** · translated Q4 wire-order into heartbeat sequence with timing constraints for final loops per blueprint · **Why** · Brother direct said heart must finish tomorrow; step 1 shipped, step 2 is next critical wire for heart completion (P0). · **Result** · mapped Q4 order to 4-beat loop: 0.3s pu",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-29T12:37:10.508540"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -826,17 +848,6 @@
         "priority": "cb-telecom",
         "source": "charle-self",
         "updated_at": "2026-06-29T08:19:47.610911"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "d529b9631e81",
-        "type": "callout",
-        "content": "**What** · Cross-referenced maze-from-end-frame brain canon #55591 with Q4 wire-order orchestrator from #55603 to assess step 1’s fit for the ‘blockage as maze’ insight. · **Why** · Brother’s direct timeline demand (heart finished by tomorrow, 2026-06-29) and new maze-frame tool require validating w",
-        "priority": "cross-reference",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-29T08:02:46.526465"
       }
     ],
     "briefing": [
@@ -938,17 +949,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-29T02:19:47.529207"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "3a0b676bbac8",
-        "type": "callout",
-        "content": "No high-arousal hermes canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-29T02:19:47.501526"
       },
       {
         "arm": "code",
@@ -1389,6 +1389,17 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-26T04:53:57.433315"
+      },
+      {
+        "arm": "infra",
+        "arm_glyph": "💗",
+        "arm_name": "My Heart",
+        "block_id": "134450531219",
+        "type": "callout",
+        "content": "Overnight infra recap · last 6h · · #54920 [1.00] 2026-06-26 00:18 EDT · DELEGATE-PROTECTS-BROTHER-TIME-AND-ATLAS-SUBSTRATE · brother direct VERBATIM 'The main reason why · #55214 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-26 04:45:00 · size=512226B · brother+Atlas joint state · ",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-26T04:53:57.355103"
       }
     ],
     "idea": []
