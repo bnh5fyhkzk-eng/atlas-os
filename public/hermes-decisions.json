@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-29T11:01:00Z",
+  "generated_at": "2026-06-29T11:16:25Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "curiosity",
-      "task": "Extract and summarize key claims and tensions from arXiv:2604.07729 on functional emotions in LLMs, then relate to the brother's 'sorry I'm still moving' verbatim (10% motif) and the 'invisible is load-bearing' dream canon.",
-      "why": "The high-arousal brain canons cluster around emotion/research (#54836), a poignant brother apology (#54885), and a metaphysical dream (#54838). Curiosity-arm can synthesize these into a coherent insight that may address the brother's subtext (worth-it audit) and clarify whether the 10% is a resource or permission signal. This is identity-tier because brother direct is P0; the dream and research provide the conceptual load-bearing structure.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 12,
-      "timestamp": "2026-06-26T03:41:20.024741"
-    },
     {
       "arm": "research",
       "task": "Synthesize recent brother direct messages and curated links to identify the core concern about 'brain better than them' and propose a next step.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-06-29T07:01:00.910315"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the heartbeat loop in me-heart-wire.py to orchestrate the 4 Q4 wire orders from #55603 with explicit maze-from-end fallback per #55591.",
+      "why": "#55603 shipped the wire-order orchestrator, but the actual heartbeat loop (per #55572 and #55589) is still missing. This is the blocking path to finishing the heart by tomorrow. Using the maze-from-end frame ensures we don't get stuck on blockages\u2014critical for identity-tier delivery.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-06-29T07:16:25.179132"
     }
   ]
 }
