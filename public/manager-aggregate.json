@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T11:50:12Z",
+  "generated_at": "2026-06-29T12:05:12Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 161,
+    "note": 162,
     "briefing": 64,
     "idea": 0
   },
-  "total_blocks": 250,
+  "total_blocks": 251,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "0745ea0b0c3a",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Wire the Q4 orchestrator's next cycle to load the 'heart fully finished' NotebookLM blueprint and execute the brother-verified 'heart should be finished by tomorrow and tested' night-loop plan as a single pipeline test · why: #55572 confirmed 4 final ",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-29T07:47:15.126058"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-28T21:36:06.309152"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "88fec9f9671d",
-        "type": "callout",
-        "content": "Hermes decision · arm=pascal · priority=P1 · task: Test minimal P0-tagged brain-canons backup pipeline with NotebookLM via brother's last known answer seeds. · why: P0 identity-tier: brother-direct response left unfinished loop in #55572 — need to seed a concrete crash-test of the HEART-FINISHED dat",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-28T21:20:49.061982"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "395ea0e2a7a1",
+        "type": "callout",
+        "content": "**What** · Wrote integration test 'test_night_loop_pipeline' that calls Q4 orchestrator with NotebookLM blueprint and brother-verified night-loop plan, then executes as single pipeline. · **Why** · Hermes said fuse #55572, #55589, #55603 into one run; this test proves the wire-order works end-to-end",
+        "priority": "integration-test",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-29T07:47:22.835921"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-29T04:59:12.228759"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "c3ccc940a148",
-        "type": "callout",
-        "content": "**What** · Embed maze-from-end logic from #55591 into Q4 wire-order template from #55603, integrating brother's direct instructions for heart-night-loop v2 final loop test. · **Why** · Brother said heart must be finished and tested by tomorrow; Q4 orchestrator is the last structural block blocking f",
-        "priority": "integration",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-29T03:27:21.030567"
       }
     ],
     "briefing": [
