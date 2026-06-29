@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-29T11:35:12Z",
+  "generated_at": "2026-06-29T11:50:12Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 24,
+    "decision": 25,
     "action": 0,
     "risk": 0,
     "win": 0,
@@ -13,10 +13,21 @@
     "briefing": 64,
     "idea": 0
   },
-  "total_blocks": 249,
+  "total_blocks": 250,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "24ee3a9a1a50",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the q4-wire-order orchestrator from the me-heart-wire.py step, ensuring it wires correctly per the recent heart-night-loop plan (v2) and updates the heartbeat test suite. · why: Brother directly said 'heart should be finished by tomorrow and",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-29T07:31:50.388944"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -288,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "1f7e10e590d1",
+        "type": "callout",
+        "content": "**What** · implement q4-wire-order orchestrator per me-heart-wire.py, wire correctly under heart-night-loop v2, and update heartbeat test suite · **Why** · Hermes assigned P0 task to complete heart system; brother said 'heart should be finished by tomorrow and tested'; step-1 orchestrator already sh",
+        "priority": "orchestrator-implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-29T07:32:00.960338"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +848,6 @@
         "priority": "integration",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-29T03:27:21.030567"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "dbb410649d25",
-        "type": "callout",
-        "content": "**What** · Wrote and integrated me-heart-wire.py orchestrator using Q4 wire-order, heart-night-loop v2 (#55589), and maze-from-end frame (#55591). · **Why** · P0 brother-direct task to ship the orchestrator, building on STEP 1 (#55603) and explicit directive to finish heart. · **Result** · Single or",
-        "priority": "core-system",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-29T02:41:41.068931"
       }
     ],
     "briefing": [
