@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T10:00:05Z",
+  "generated_at": "2026-06-29T10:05:08Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 157,
+    "note": 158,
     "briefing": 65,
     "idea": 0
   },
-  "total_blocks": 245,
+  "total_blocks": 246,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "3ccc601128ee",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the final heart loops per NotebookLM blueprint and brother's answers from #55572. · why: Brother direct in #55589 says heart should be finished and tested; #55603",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-29T06:00:11.684132"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-27T10:15:09.092348"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "2145f8266451",
-        "type": "callout",
-        "content": "Hermes decision · arm=dream · priority=P0 · task: Resolve F5-compose pair #30017 ASK-IS-OK-TRUST-G from dream corpus #55270, weaving the 'Workshop Where Asking Counts as Building' into today's active belief graph. · why: The long-form workshop dream directly addresses brother's core tension (pride i",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-27T09:59:53.403480"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "21300832532e",
+        "type": "callout",
+        "content": "**What** · Wrote the Q4 wire-order orchestrator script that sequences the final heart loops per NotebookLM blueprint and brother answers from #55572. · **Why** · Brother direct in #55589 says heart must be finished and tested; #55603 shipped concept, now need working code to unblock final loops. · *",
+        "priority": "code-implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-29T06:00:17.484689"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -815,17 +826,6 @@
         "priority": "engine-runnable",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-29T01:40:29.569397"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "f0e701ed6ba1",
-        "type": "callout",
-        "content": "**What** · Implemented Q4 wire-order orchestrator for heart-night-loop, per #55603 blueprint, with NotebookLM sync for final loops. · **Why** · Unblocks night-loop shipping per P0 directive; brother confirmed heart must finish by tomorrow, and orchestrator satisfies identity-tier priority. · **Resul",
-        "priority": "Implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-28T23:54:08.401203"
       }
     ],
     "briefing": [
