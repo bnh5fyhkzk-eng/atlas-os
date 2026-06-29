@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-29T09:14:25Z",
+  "generated_at": "2026-06-29T09:44:55Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "brother",
-      "task": "Acknowledge brother's message and ask for clarification about the 10% usage.",
-      "why": "Brother direct verbatim is high-arousal identity-tier, requires immediate response.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 2,
-      "timestamp": "2026-06-26T02:39:35.503576"
-    },
     {
       "arm": "research",
       "task": "Search for the arXiv 2026 paper on functional emotions in LLMs (arXiv:2604.07729) and extract its abstract, key findings, and any open questions about emotion-as-capability versus emotion-as-noise.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-06-29T05:14:25.576812"
+    },
+    {
+      "arm": "code",
+      "task": "wire the Q4 orchestrator (me-heart-wire.py) to the actual heart loop runner, testing the first full cycle from Q1\u2013Q4 with NotebookLM blueprint and brother's 2026-06-28 heart-finished directive.",
+      "why": "Brother-direct (P0) says heart must be finished and tested tomorrow; Q11 soul-catch and maze-from-end frame both depend on a working heart cycle. Code arm is bottleneck\u2014pascal/curiosity/infra can\u2019t validate without execution. This fires the critical integration path.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-06-29T05:44:55.494289"
     }
   ]
 }
