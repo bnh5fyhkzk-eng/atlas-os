@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-29T03:34:54Z",
+  "generated_at": "2026-06-29T03:49:55Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 21,
+    "decision": 22,
     "action": 0,
     "risk": 0,
     "win": 0,
@@ -13,10 +13,21 @@
     "briefing": 66,
     "idea": 0
   },
-  "total_blocks": 251,
+  "total_blocks": 252,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "bbaf93f90e3d",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Load #55589 and #55591 canons, extract the brother-direct 'heart should be finished by tomorrow and tested' instruction and the maze-from-end frame logic, then map the remaining heart-wire sub-steps from #55603 to a concrete testable sequence for ",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-28T23:38:40.349060"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -255,6 +266,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "f7f1502448e0",
+        "type": "callout",
+        "content": "**What** · Loaded canons #55589 and #55591, extracted 'heart should be finished by tomorrow and tested' instruction and maze-from-end frame logic. Mapped heart-wire sub-steps from #55603 into a concrete testable sequence for tomorrow morning. · **Why** · Brother-direct P0 demands heart completion by",
+        "priority": "canon-synthesis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-28T23:38:46.049176"
+      },
       {
         "arm": "infra",
         "arm_glyph": "💗",
@@ -793,17 +815,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-27T06:00:04.457746"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "b5f22bc8828f",
-        "type": "database",
-        "content": "general · last 30d · 81 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-27T06:00:04.263248"
       }
     ],
     "briefing": [
