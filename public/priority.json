@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-06-29T20:20:53Z",
+  "generated_at": "2026-06-29T20:30:54Z",
   "total_items_scored": 194,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: wire the Q4 orchestrator (me-heart-wire.py) to the actual heart loop runner, testing the first full cycle from Q1\u2013Q4 with NotebookLM blueprint and brother's 2026-06-28 heart-finished directiv",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the final heart loops per NotebookLM blueprint and brother's answers from #55572. \u00b7 why: Brother direc",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-29T05:44:55.477692"
+      "updated_at": "2026-06-29T06:00:11.684132"
     },
     {
       "arm": "code",
       "arm_glyph": "\u270b",
       "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Implement the heartbeat loop in me-heart-wire.py to orchestrate the 4 Q4 wire orders from #55603 with explicit maze-from-end fallback per #55591. \u00b7 why \u00b7 #55603 shipped the wire-order orchestrator, but the actual heartbeat loop (per #55572 and #55589) is still missing. This is the blocking path to finishing the heart by tomorrow. Using the maze-from-end frame ensures we don't get stuck on blockages\u2014critical for identity-tier delivery.",
+      "content": "HERMES TASK \u00b7 Implement the q4-wire-order orchestrator from the me-heart-wire.py step, ensuring it wires correctly per the recent heart-night-loop plan (v2) and updates the heartbeat test suite. \u00b7 why \u00b7 Brother directly said 'heart should be finished by tomorrow and tested' and the step-1 orchestrator was just shipped. This is the immediate next implementation to advance the heart system to completion.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 45,
+      "est_minutes": 120,
       "score": 10.0,
-      "updated_at": "2026-06-29T07:16:25.179132",
+      "updated_at": "2026-06-29T07:31:50.405605",
       "use_skill": "brain-rrf"
     },
     {
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: wire the Q4 orchestrator (me-heart-wire.py) to the actual heart loop runner, testing the first full cycle from Q1\u2013Q4 with NotebookLM blueprint and brother's 2026-06-28 heart-finished directiv",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-29T05:44:55.477692"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-29T09:18:40.575257"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement remaining heart night-loop steps per brother's 22:13 plan and maze-from-end frame \u00b7 why: Recent high-arousal canons prioritize heart completion; code arm directly executes the shipp",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-29T09:33:56.169175"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
