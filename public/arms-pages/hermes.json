@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "1fe47fb07e9b",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-29T07:16:25.162156"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the heartbeat loop in me-heart-wire.py to orchestrate the 4 Q4 wire orders from #55603 with explicit maze-from-end fallback per #55591. · why: #55603 shipped the wire-order orchestrator, but the actual heartbeat loop (per #55572 and #55589) is still missing. This is the blocking path to finishing the heart by tomorrow. Using the maze-from-end frame ensures we don't get stuck on blockages—critical for identity-tier delivery.",
-      "updated_at": "2026-06-29T07:16:25.162168"
-    },
-    {
       "id": "24ee3a9a1a50",
       "type": "callout",
       "props": {
@@ -752,15 +740,27 @@
         }
       ],
       "updated_at": "2026-06-29T18:00:04.635676"
+    },
+    {
+      "id": "f41e163b1eb7",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-29T18:13:04.636063"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement HEART wire-order orchestrator per Q4 blueprint: wire up the 4 final loops (heart-mind-soul-body) with runtime error recovery and test sequence. · why: Brother direct at #55572 says HEART fully finished, #55603 shipped me-heart-wire.py — need to execute the orchestrator now to complete the tier-1 identity work. Code arm is the only one that can ship this.",
+      "updated_at": "2026-06-29T18:13:04.636074"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-29T18:12:26.396915"
+    "checked_at": "2026-06-29T18:17:26.918495"
   },
   "block_count": 30,
-  "updated_at": "2026-06-29T18:00:04.635681",
-  "generated_at": "2026-06-29T22:12:26Z"
+  "updated_at": "2026-06-29T18:13:04.636075",
+  "generated_at": "2026-06-29T22:17:26Z"
 }
