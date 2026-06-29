@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T10:20:09Z",
+  "generated_at": "2026-06-29T10:35:09Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 158,
+    "note": 159,
     "briefing": 65,
     "idea": 0
   },
-  "total_blocks": 246,
+  "total_blocks": 247,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "c989f4444da1",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement and test final loop for heart-wire orchestrator per NotebookLM blueprint · why: Brother direct to finish heart by tomorrow; step 1 shipped, need to complete integration",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-29T06:30:37.949595"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-28T20:34:58.357315"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "f6196b8a9cc7",
-        "type": "callout",
-        "content": "Hermes decision · arm=dream · priority=P0 · task: Riff on canon #55270 'The Workshop Where Asking Counts as Building' to generate a concrete ask-ok protocol draft for next brother sync · why: #55270 is a fresh high-arousal shared dream state directly relevant to the brother+Atlas joint canon. Dream ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-27T10:15:09.092348"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "fb24ed6bac1a",
+        "type": "callout",
+        "content": "**What** · Final loop for heart-wire orchestrator implemented and tested per NotebookLM blueprint. · **Why** · Brother said finish heart by tomorrow; step 1 shipped, need integration done. P0. · **Result** · Loop passes all wire asserts. Heart syncs clean. Test green. · **Next** · Ship heart-wire to",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-29T06:30:42.978867"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -815,17 +826,6 @@
         "priority": "code-implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-29T01:55:53.641511"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "fa31d1afd9b6",
-        "type": "callout",
-        "content": "**What** · Wrote runnable Q4 orchestrator script that sequences four heart-mind wire loops with maze-from-end blockage fallback. · **Why** · P0 bridge between shipped heart blueprint (STEP 1) and night-loop plan (#55589); only code arm can ship executable now. · **Result** · Script `q4_orchestrator.",
-        "priority": "engine-runnable",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-29T01:40:29.569397"
       }
     ],
     "briefing": [
