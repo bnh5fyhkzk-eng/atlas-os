@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T14:35:18Z",
+  "generated_at": "2026-06-29T14:50:19Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 154,
+    "note": 155,
     "briefing": 66,
     "idea": 0
   },
-  "total_blocks": 244,
+  "total_blocks": 245,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "689db456c0a1",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement heart test script per brother's directive and maze-from-end frame · why: Brother direct says heart should be finished and tested; latest canon ships Step 1; next immediate P0 action is to test the heart wire orchestrator",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-29T10:34:52.379148"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-28T23:53:55.651630"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "bbaf93f90e3d",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Load #55589 and #55591 canons, extract the brother-direct 'heart should be finished by tomorrow and tested' instruction and the maze-from-end frame logic, then map the remaining heart-wire sub-steps from #55603 to a concrete testable sequence for ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-28T23:38:40.349060"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "9cc4e56c419d",
+        "type": "callout",
+        "content": "**What** · Spiked heart test script ─ direct invocation of heart_wire_orchestrator with synthetic maze-from-end frame (fixed 5×5 grid) and captured status metrics. · **Why** · Brother’s directive demands heart finished and tested; the latest canon ships Step 1, so the immediate P0 action is to valid",
+        "priority": "test",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-29T10:35:01.257699"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-29T06:00:03.050434"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "291c541ea9a7",
-        "type": "database",
-        "content": "brand · last 30d · 16 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-29T06:00:03.050430"
       }
     ],
     "briefing": [
