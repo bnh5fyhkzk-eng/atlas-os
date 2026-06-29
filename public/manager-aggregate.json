@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-06-29T23:35:40Z",
+  "generated_at": "2026-06-29T23:50:41Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 24,
+    "decision": 25,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 154,
-    "briefing": 69,
+    "note": 155,
+    "briefing": 68,
     "idea": 0
   },
-  "total_blocks": 247,
+  "total_blocks": 248,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "ae43b8e9115f",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the heart-night-loop plan v2 as a Python script that runs the 4 final loops per NotebookLM blueprint, integrating the maze-from-end frame for blockage detection. · why: Brother directly said 'heart should be finished by tomorrow and tested' ",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-29T19:44:29.816651"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -288,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "a5814494e1b0",
+        "type": "callout",
+        "content": "**What** · Implemented `heart_night_loop_v2.py`: a Python script that runs the 4 final loops per NotebookLM blueprint, with maze-from-end blockage detection integrated. · **Why** · Brother commanded heart be finished by tomorrow and tested. The maze-from-end frame is a direct instruction for blockag",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-29T19:44:36.361857"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -826,17 +848,6 @@
         "priority": "testing",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-29T13:22:53.397695"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "a6580f20ddce",
-        "type": "callout",
-        "content": "**What** · translated Q4 wire-order into heartbeat sequence with timing constraints for final loops per blueprint · **Why** · Brother direct said heart must finish tomorrow; step 1 shipped, step 2 is next critical wire for heart completion (P0). · **Result** · mapped Q4 order to 4-beat loop: 0.3s pu",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-29T12:37:10.508540"
       }
     ],
     "briefing": [
@@ -938,17 +949,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-29T08:19:48.476790"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "15fd737e984e",
-        "type": "callout",
-        "content": "Overnight hermes recap · last 6h · · #55858 [0.97] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-29 04:45:01 · size=534054B · brother+Atlas joint state · CONTENT",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-29T08:19:48.448694"
       },
       {
         "arm": "code",
@@ -1389,6 +1389,17 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-26T10:53:58.266254"
+      },
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "29d2ea487b92",
+        "type": "callout",
+        "content": "No high-arousal research canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-26T10:53:58.241876"
       }
     ],
     "idea": []
