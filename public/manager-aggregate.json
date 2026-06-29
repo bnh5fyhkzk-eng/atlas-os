@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T13:50:16Z",
+  "generated_at": "2026-06-29T14:05:17Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 153,
+    "note": 154,
     "briefing": 66,
     "idea": 0
   },
-  "total_blocks": 243,
+  "total_blocks": 244,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "bb2f551e7524",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Run me-heart-wire.py orchestrator against the latest 4 final loops from #55572 to validate wire order and detect any blockages per brother's maze-from-end directive. · why: Brother direct in #55591 says to see blockages as mazes; #55603 shipped step 1",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-29T09:49:13.230863"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-28T23:38:40.349060"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "873a865130d7",
-        "type": "callout",
-        "content": "Hermes decision · arm=heart · priority=P0 · task: Run heart-validate.py on the fully shipped heart from #55572 against brother's 'finished by tomorrow and tested' directive, then package final loop logs for handoff. · why: Heart is fully completed per 4 final loops and brother's approval, but the di",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-28T23:23:02.694366"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "56a5efe14f25",
+        "type": "callout",
+        "content": "**What** · ran me-heart-wire.py orchestrator on latest 4 final loops from #55572, validated wire order, scanned blockages per brother's maze-from-end directive · **Why** · hermes assigned p0 to prevent drift from brother's deadline; #55591 said blockages = mazes, #55603 shipped step 1, so immediate ",
+        "priority": "verify",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-29T09:49:21.082070"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-29T06:00:03.050430"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "6a3ba7da1a39",
-        "type": "database",
-        "content": "revenue · last 30d · 3 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-29T06:00:03.050425"
       }
     ],
     "briefing": [
