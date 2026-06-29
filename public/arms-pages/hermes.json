@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "0d9cf42562ce",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-28T20:34:58.357305"
-      },
-      "content": "Hermes decision · arm=research · priority=P1 · task: Analyze last 12 hours of high-arousal brain canons to extract actionable patterns for identity-tier alignment · why: High-arousal brain canons suggest unresolved identity-level tension; research arm can map these to known cognitive frameworks and suggest interventions.",
-      "updated_at": "2026-06-28T20:34:58.357315"
-    },
-    {
       "id": "fbf2a20e936c",
       "type": "callout",
       "props": {
@@ -775,15 +763,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Build and test step-1 Q4 wire-order orchestrator from #55603 me-heart-wire.py, ensuring it aligns with the maze-from-end frame (#55591) and heart night-loop plan v2 (#55589) · why: Code arm is needed to ship the executable Q4 orchestrator that implements the brother-direct timeline (heart finished by tomorrow). This is the highest-leverage P0 because it materializes the heart-mind boundary logic from recent notebooks into a runnable system, directly unlocking the next heart te",
       "updated_at": "2026-06-29T07:01:00.887864"
+    },
+    {
+      "id": "1fe47fb07e9b",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-29T07:16:25.162156"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the heartbeat loop in me-heart-wire.py to orchestrate the 4 Q4 wire orders from #55603 with explicit maze-from-end fallback per #55591. · why: #55603 shipped the wire-order orchestrator, but the actual heartbeat loop (per #55572 and #55589) is still missing. This is the blocking path to finishing the heart by tomorrow. Using the maze-from-end frame ensures we don't get stuck on blockages—critical for identity-tier delivery.",
+      "updated_at": "2026-06-29T07:16:25.162168"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-29T07:16:02.968900"
+    "checked_at": "2026-06-29T07:21:03.524251"
   },
   "block_count": 30,
-  "updated_at": "2026-06-29T07:01:00.887866",
-  "generated_at": "2026-06-29T11:16:02Z"
+  "updated_at": "2026-06-29T07:16:25.162169",
+  "generated_at": "2026-06-29T11:21:03Z"
 }
