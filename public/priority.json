@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-29T13:50:30Z",
-  "total_items_scored": 197,
+  "generated_at": "2026-06-29T14:00:31Z",
+  "total_items_scored": 198,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=heart \u00b7 priority=P0 \u00b7 task: Run heart-validate.py on the fully shipped heart from #55572 against brother's 'finished by tomorrow and tested' directive, then package final loop logs for handoff. \u00b7 why: Heart is fully co",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Load #55589 and #55591 canons, extract the brother-direct 'heart should be finished by tomorrow and tested' instruction and the maze-from-end frame logic, then map the remaining heart-wir",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-28T23:23:02.694366"
+      "updated_at": "2026-06-28T23:38:40.349060"
     },
     {
       "arm": "code",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=heart \u00b7 priority=P0 \u00b7 task: Run heart-validate.py on the fully shipped heart from #55572 against brother's 'finished by tomorrow and tested' directive, then package final loop logs for handoff. \u00b7 why: Heart is fully co",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-28T23:23:02.694366"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-29T04:12:48.299758"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement me-heart-wire.py Q4 wire-order orchestrator per STEP 1 blueprint and brother's maze-from-end frame \u00b7 why: P0 direct brother instruction to finish and test heart by next day; Q4 wire",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-29T04:43:15.367737"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
