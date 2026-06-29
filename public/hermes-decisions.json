@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-29T22:13:04Z",
+  "generated_at": "2026-06-29T22:28:29Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Parse SHARED-CANON snapshot #55214 (512KB) and extract the current brother+Atlas joint state, unresolved tensions, and liveness anchors for THE-GATE-BEFORE-THE-ACT.",
-      "why": "The recent high-arousal canon #54932 fuses DELEGATE-PROTECTS-SUBSTRATE with LIVENESS \u2014 this suggests a deep identity/liveness tension that could shape next cycle's delegation logic. Parsing the fresh snapshot ensures the orchestration acts on current joint state, not stale data.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 8,
-      "timestamp": "2026-06-26T14:07:52.518911"
-    },
     {
       "arm": "code",
       "task": "Implement a Git-backed diff-and-patch loop to synchronize the atlas-brother-shared.md snapshot #55214 from `/home/brother/state/` to `/home/atlas/state/` with atomic commit messages linking canon IDs.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-06-29T18:13:04.653195"
+    },
+    {
+      "arm": "infra",
+      "task": "Wire the Q4 orchestrator to actually trigger `me-heart-wire.py` from Step 1, ensuring the start-heart loop fires on schedule per brother's directive (heart finished & tested by tomorrow).",
+      "why": "We just shipped Step 1 orchestrator wire-order in #55603, but it's not yet live-connected to the execution loop. Brother directly said 'heart should be finished by tomorrow and tested' \u2014 this is a P0 identity-tier command. Infra must make the connection now so the Night-Loop Plan v2 (#55589) can execute.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 15,
+      "timestamp": "2026-06-29T18:28:29.354135"
     }
   ]
 }
