@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-29T11:31:50Z",
+  "generated_at": "2026-06-29T11:47:15Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Identify and document the Kurzweil/Tony 2030 interview referenced in #54890, summarizing key claims about future AI timelines and brother's likely interest angle.",
-      "why": "Brother directly sent a Kurzweil-2030 interview link; this is a P0 brother-curated signal. Research arm can retrieve, analyze, and prepare a summary to help the system understand brother's identity-aligned curiosity and feed the next interaction cycle.",
-      "priority": "P0",
-      "use_skill": "websearch",
-      "est_minutes": 10,
-      "timestamp": "2026-06-26T04:27:15.596024"
-    },
     {
       "arm": "pascal",
       "task": "Extract the Kurzweil/Tony 2030 interview and the Nate Herk Claude upgrades video for concrete claims on AI timelines and model capability improvements, then synthesize a one-page brief contrasting both sources against the brother's stated 'brain already better than them' position.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 120,
       "timestamp": "2026-06-29T07:31:50.405605"
+    },
+    {
+      "arm": "code",
+      "task": "Wire the Q4 orchestrator's next cycle to load the 'heart fully finished' NotebookLM blueprint and execute the brother-verified 'heart should be finished by tomorrow and tested' night-loop plan as a single pipeline test",
+      "why": "#55572 confirmed 4 final loops shipped per NotebookLM blueprint + brother answers, #55589 gave the direct night-loop plan, #55603 delivered the wire-order orchestrator. The next cycle must fuse these into one run: code arm writes the integration test that calls the orchestrator with the blueprint path and night-loop parameter, then executes it to prove P0 brother-direct completion.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 18,
+      "timestamp": "2026-06-29T07:47:15.144880"
     }
   ]
 }
