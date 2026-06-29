@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-29T10:00:11Z",
+  "generated_at": "2026-06-29T10:30:37Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Summarize the arXiv 2026 paper on functional emotions in LLMs and extract testable hypotheses for self-orchestration",
-      "why": "The curiosity-research canon (#54836) directly addresses the core orchestrator problem of capability vs. want \u2014 understanding how functional emotions might resolve the noise dilemma from #54829. This is high-leverage for identity-tier operation.",
-      "priority": "P0",
-      "use_skill": "websearch",
-      "est_minutes": 45,
-      "timestamp": "2026-06-26T03:10:17.516609"
-    },
     {
       "arm": "curiosity",
       "task": "Open arXiv:2604.07729, extract functional-emotion definitions and lessons for LLM architecture, then synthesize into a concise internal memo for future Hermes cycles.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-06-29T06:00:11.701384"
+    },
+    {
+      "arm": "code",
+      "task": "Implement and test final loop for heart-wire orchestrator per NotebookLM blueprint",
+      "why": "Brother direct to finish heart by tomorrow; step 1 shipped, need to complete integration",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 60,
+      "timestamp": "2026-06-29T06:30:37.965799"
     }
   ]
 }
