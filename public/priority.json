@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-29T21:30:58Z",
+  "generated_at": "2026-06-29T21:40:58Z",
   "total_items_scored": 195,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Build and test step-1 Q4 wire-order orchestrator from #55603 me-heart-wire.py, ensuring it aligns with the maze-from-end frame (#55591) and heart night-loop plan v2 (#55589) \u00b7 why: Code arm i",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the heartbeat loop in me-heart-wire.py to orchestrate the 4 Q4 wire orders from #55603 with explicit maze-from-end fallback per #55591. \u00b7 why: #55603 shipped the wire-order orchestr",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-29T07:01:00.887864"
+      "updated_at": "2026-06-29T07:16:25.162168"
     },
     {
       "arm": "code",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Build and test step-1 Q4 wire-order orchestrator from #55603 me-heart-wire.py, ensuring it aligns with the maze-from-end frame (#55591) and heart night-loop plan v2 (#55589) \u00b7 why: Code arm i",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-29T07:01:00.887864"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-29T10:34:52.379148"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Extract the Q4 wire-order from step-1 shipped me-heart-wire.py and integrate with the brother-direct 'heart should be finished by tomorrow and tested' timeline to produce the next wire (Step ",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-29T11:05:21.139181"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
