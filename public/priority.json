@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-29T14:30:33Z",
-  "total_items_scored": 198,
+  "generated_at": "2026-06-29T14:40:33Z",
+  "total_items_scored": 199,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Load #55589 and #55591 canons, extract the brother-direct 'heart should be finished by tomorrow and tested' instruction and the maze-from-end frame logic, then map the remaining heart-wir",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement and test Q4 wire-order orchestrator for heart-night-loop, per #55603 blueprint, ensuring final loops ship with NotebookLM synergy. \u00b7 why: Brother direct in #55589 says 'heart should",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-28T23:38:40.349060"
-    },
-    {
-      "arm": "code",
-      "arm_glyph": "\u270b",
-      "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Implement the Q4 wire-order orchestrator from #55603, ensuring me-heart-wire.py correctly sequences the final heart loops per brother's plan in #55589. \u00b7 why \u00b7 Brother directly stated heart should be finished and tested by tomorrow; the Q4 orchestrator is the critical code arm to execute that directive, and #55603 already shipped the first step.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-29T02:11:01.995923",
-      "use_skill": "none"
+      "updated_at": "2026-06-28T23:53:55.651630"
     },
     {
       "arm": "dream",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-29T02:26:16.666479",
       "use_skill": "brain-rrf"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Load #55589 and #55591 canons, extract the brother-direct 'heart should be finished by tomorrow and tested' instruction and the maze-from-end frame logic, then map the remaining heart-wir",
+      "arm": "code",
+      "arm_glyph": "\u270b",
+      "arm_name": "Code",
+      "content": "HERMES TASK \u00b7 Implement the core orchestrator as me-heart-wire.py per Q4 wire-order spec, integrating the heart-night-loop plan v2 from canon #55589 and maze-from-end frame #55591 \u00b7 why \u00b7 Code arm holds the P0 brother-direct task: Q4 wire-order orchestrator must be shipped now, building on the 'STEP 1 SHIPPED' canon (#55603) and the explicit brother directive from #55589 that heart should be finished and tested. This is the highest priority executable action to advance the HEART subsystem.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-28T23:38:40.349060"
-    },
+      "updated_at": "2026-06-29T02:41:35.582444",
+      "use_skill": "none"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-29T04:43:15.367737"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator per #55603 blueprint, ensuring heart-mind wire sequencing matches brother's maze-from-end frame. \u00b7 why: Brother direct #55589 and #55603 set P0 urgenc",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-29T04:59:07.352779"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
