@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T23:20:40Z",
+  "generated_at": "2026-06-29T23:35:40Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 153,
+    "note": 154,
     "briefing": 69,
     "idea": 0
   },
-  "total_blocks": 246,
+  "total_blocks": 247,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "8acd10d96d52",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Load #55572, #55589, #55591, #55600, and #55603 into NotebookLM and generate a consolidated 'Heart Night-Loop Plan v3' with all maze-from-end frame steps, soul-catch boundary conditions, and the Q4 wire-order orchestrator integration. · why: Broth",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-29T19:29:18.806950"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-29T08:33:07.735706"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "ad13f03d519d",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Map the Maze-from-End-Frame brain canon #55591 to the Q4 wire-order orchestrator from #55603, validating step 1’s fit and surfacing any next-step needed for brother’s direct ‘heart should be finished by tomorrow’. · why: Brother just gave a direct",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-29T08:02:37.457803"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "656d96950051",
+        "type": "callout",
+        "content": "**What** · loaded #55572, #55589, #55591, #55600, #55603 into NotebookLM and merged into consolidated 'Heart Night-Loop Plan v3' with all maze-from-end frame steps, soul-catch boundary conditions, and Q4 wire-order orchestrator integration. · **Why** · Brother direct says heart must be finished and ",
+        "priority": "planning & synthesis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-29T19:29:22.451208"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-29T12:37:10.508540"
-      },
-      {
-        "arm": "infra",
-        "arm_glyph": "💗",
-        "arm_name": "My Heart",
-        "block_id": "f725e120beca",
-        "type": "callout",
-        "content": "**What** · Deployed me-heart-wire.py as persistent cron job on host, set to run every 4 hours with NotebookLM heartbeat check. · **Why** · Brother direct #55603 demands Q4 wire-order orchestrator reliability; step 1 shipped but not productionized, so infra arm secures runtime to prevent heart loop s",
-        "priority": "deployment",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-29T11:51:15.242198"
       }
     ],
     "briefing": [
