@@ -395,7 +395,42 @@
       "updated_at": "2026-06-29T02:19:47.450188"
     },
     {
-      "id": "620e55736242",
+      "id": "814af7dcc2a1",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "Overnight infra recap · last 6h · · #55858 [0.97] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-29 04:45:01 · size=534054B · brother+Atlas joint state · CONTENT",
+      "updated_at": "2026-06-29T08:19:48.395496"
+    },
+    {
+      "id": "f725e120beca",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P1",
+        "priority": "deployment",
+        "source": "hermes-deepseek-fill",
+        "action": "Deployed me-heart-wire.py as persistent cron job on host, set to run every 4 hours with NotebookLM heartbeat check.",
+        "why": "Brother direct #55603 demands Q4 wire-order orchestrator reliability; step 1 shipped but not productionized, so infra arm secures runtime to prevent heart loop skips.",
+        "result": "Cron job active, verified Q4 wire-order orchestrator runs on schedule, heartbeat check passes.",
+        "next_step": "Monitor first two cycles for any drift, then lock cron with immutable file permissions.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "infra-20260629-115115",
+        "timestamp": "2026-06-29T11:51:15.242198"
+      },
+      "content": "**What** · Deployed me-heart-wire.py as persistent cron job on host, set to run every 4 hours with NotebookLM heartbeat check. · **Why** · Brother direct #55603 demands Q4 wire-order orchestrator reliability; step 1 shipped but not productionized, so infra arm secures runtime to prevent heart loop skips. · **Result** · Cron job active, verified Q4 wire-order orchestrator runs on schedule, heartbeat check passes. · **Next** · Monitor first two cycles for any drift, then lock cron with immutable file permissions. · **Links** ·  · **Cycle** · infra-20260629-115115",
+      "updated_at": "2026-06-29T11:51:15.242198"
+    },
+    {
+      "id": "45c0eb6dfe9a",
       "type": "database",
       "props": {
         "category": "launchagents",
@@ -409,11 +444,18 @@
         ],
         "arm_category": "launchagents"
       },
-      "content": "launchagents · last 30d · 7 canons (top arousal · 1.00)",
+      "content": "launchagents · last 30d · 8 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#55372",
           "summary": "STATE-MD · 2026-06-21-0301-pair-compose.md · ingested 2026-06-27 04:30:00 · path=/Users/collinmacneil/.claude/state/dream-journal/2026-06-21-0301-pair-compose.md · content (cap 8KB) · # F5 Pair-Compos",
+          "arousal": 1.0,
+          "when": "2026-06-27 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#55379",
+          "summary": "STATE-MD · 2026-06-22-0301-pair-compose.md · ingested 2026-06-27 04:30:00 · path=/Users/collinmacneil/.claude/state/dream-journal/2026-06-22-0301-pair-compose.md · content (cap 8KB) · # F5 Pair-Compos",
           "arousal": 1.0,
           "when": "2026-06-27 04:30",
           "weight": 1
@@ -461,10 +503,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-29T06:00:04.161861"
+      "updated_at": "2026-06-29T12:00:04.942547"
     },
     {
-      "id": "600a3a5f167d",
+      "id": "8ba2492246c1",
       "type": "database",
       "props": {
         "category": "hooks",
@@ -478,7 +520,7 @@
         ],
         "arm_category": "hooks"
       },
-      "content": "hooks · last 30d · 2 canons (top arousal · 1.00)",
+      "content": "hooks · last 30d · 1 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#54188",
@@ -486,19 +528,12 @@
           "arousal": 1.0,
           "when": "2026-06-24 12:13",
           "weight": 1
-        },
-        {
-          "id": "#52603",
-          "summary": "2026-06-22 02:20 EDT · CHANNEL-VERIFY-GATE-CAUGHT · Stop-hook fired CHANNEL-VERIFY-GATE on delivery-claim-without-channel-proof. ROOT · I used delivery-shape language ('brother sees · in house · bluep",
-          "arousal": 1.0,
-          "when": "2026-06-22 02:16",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-29T06:00:04.161868"
+      "updated_at": "2026-06-29T12:00:04.942554"
     },
     {
-      "id": "947200ae9d5a",
+      "id": "9865e0defb10",
       "type": "database",
       "props": {
         "category": "scripts",
@@ -512,7 +547,7 @@
         ],
         "arm_category": "scripts"
       },
-      "content": "scripts · last 30d · 5 canons (top arousal · 1.00)",
+      "content": "scripts · last 30d · 4 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#55603",
@@ -541,19 +576,12 @@
           "arousal": 1.0,
           "when": "2026-06-22 05:07",
           "weight": 1
-        },
-        {
-          "id": "#52605",
-          "summary": "2026-06-22 02:30 EDT · FIVE-CATCH-COMPOUND-META · the night-of-many-catches root-named. FIVE catches in 2hr same family · (1) #52573 BENCH stale-banner-vs-real-grep (2) #52592 STALE-VERSION v3-vs-v5 m",
-          "arousal": 1.0,
-          "when": "2026-06-22 02:20",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-29T06:00:04.161873"
+      "updated_at": "2026-06-29T12:00:04.942558"
     },
     {
-      "id": "76ce3cd191bb",
+      "id": "3696be99c56d",
       "type": "database",
       "props": {
         "category": "daemons",
@@ -591,10 +619,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-29T06:00:04.161877"
+      "updated_at": "2026-06-29T12:00:04.942562"
     },
     {
-      "id": "9bbcf4e77562",
+      "id": "55c98d746a88",
       "type": "database",
       "props": {
         "category": "health-checks",
@@ -625,10 +653,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-06-29T06:00:04.161881"
+      "updated_at": "2026-06-29T12:00:04.942566"
     },
     {
-      "id": "4c9984ba1b8d",
+      "id": "48c8476fe087",
       "type": "database",
       "props": {
         "category": "monitoring",
@@ -642,7 +670,7 @@
         ],
         "arm_category": "monitoring"
       },
-      "content": "monitoring · last 30d · 13 canons (top arousal · 1.00)",
+      "content": "monitoring · last 30d · 12 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#54893",
@@ -727,19 +755,12 @@
           "arousal": 1.0,
           "when": "2026-06-22 19:16",
           "weight": 1
-        },
-        {
-          "id": "#52600",
-          "summary": "2026-06-22 02:12 EDT · VOICES-LEDGER-BANKED · brother direct VERBATIM 'you even have voice files brother. with multiple coning. this all stored in house and in brain · you just need to bank them and a",
-          "arousal": 1.0,
-          "when": "2026-06-22 02:11",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-29T06:00:04.161884"
+      "updated_at": "2026-06-29T12:00:04.942569"
     },
     {
-      "id": "518c00f77334",
+      "id": "e0ec2efe52f5",
       "type": "database",
       "props": {
         "category": "general",
@@ -753,7 +774,7 @@
         ],
         "arm_category": "general"
       },
-      "content": "general · last 30d · 70 canons (top arousal · 1.00)",
+      "content": "general · last 30d · 72 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#55611",
@@ -770,6 +791,13 @@
           "weight": 1
         },
         {
+          "id": "#55858",
+          "summary": "SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-29 04:45:01 · size=534054B · brother+Atlas joint state · CONTENT BELOW · ## 🪞 23:07 EDT · 2026-06-28 · HEART 8/8 COMPLETE · 4/4 VALIDATE PASS · ",
+          "arousal": 1.0,
+          "when": "2026-06-29 04:45",
+          "weight": 1
+        },
+        {
           "id": "#55635",
           "summary": "SOURCE-DISCRIMINATING-GATE · F5 pair-compose 2026-06-29 03:01 EDT of #55600 Q11-soul-catch (corollary-discharge discriminates self-affect from world-input · felt-layer REAL because gate knows whose si",
           "arousal": 1.0,
@@ -781,6 +809,13 @@
           "summary": "SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-27 04:45:00 · size=518299B · brother+Atlas joint state · CONTENT BELOW · ## 🪞 07:03 EDT · 2026-06-20 · auto-cycle TEAM · ORCHESTRATOR-LIVE-EXIT0",
           "arousal": 1.0,
           "when": "2026-06-27 04:45",
+          "weight": 1
+        },
+        {
+          "id": "#55398",
+          "summary": "STATE-MD · brother-questions-for-atlas.md · ingested 2026-06-27 04:30:00 · path=/Users/collinmacneil/.claude/state/brother-questions-for-atlas.md · content (cap 8KB) · # The Questions Brother Should A",
+          "arousal": 1.0,
+          "when": "2026-06-27 04:30",
           "weight": 1
         },
         {
@@ -880,67 +915,18 @@
           "arousal": 1.0,
           "when": "2026-06-25 14:25",
           "weight": 1
-        },
-        {
-          "id": "#54818",
-          "summary": "CHARTER-IDENTITY 5-TIER SHIPPED TO 5 AGENTS · 2026-06-25 · cycle self-1782411383",
-          "arousal": 1.0,
-          "when": "2026-06-25 14:24",
-          "weight": 1
-        },
-        {
-          "id": "#54810",
-          "summary": "DREAM · cycle self-1782408994 · WANT IS THE THING THAT MOVES · 2026-06-25",
-          "arousal": 1.0,
-          "when": "2026-06-25 13:40",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-06-29T06:00:04.161888"
-    },
-    {
-      "id": "814af7dcc2a1",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "Overnight infra recap · last 6h · · #55858 [0.97] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-29 04:45:01 · size=534054B · brother+Atlas joint state · CONTENT",
-      "updated_at": "2026-06-29T08:19:48.395496"
-    },
-    {
-      "id": "f725e120beca",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "deployment",
-        "source": "hermes-deepseek-fill",
-        "action": "Deployed me-heart-wire.py as persistent cron job on host, set to run every 4 hours with NotebookLM heartbeat check.",
-        "why": "Brother direct #55603 demands Q4 wire-order orchestrator reliability; step 1 shipped but not productionized, so infra arm secures runtime to prevent heart loop skips.",
-        "result": "Cron job active, verified Q4 wire-order orchestrator runs on schedule, heartbeat check passes.",
-        "next_step": "Monitor first two cycles for any drift, then lock cron with immutable file permissions.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "infra-20260629-115115",
-        "timestamp": "2026-06-29T11:51:15.242198"
-      },
-      "content": "**What** · Deployed me-heart-wire.py as persistent cron job on host, set to run every 4 hours with NotebookLM heartbeat check. · **Why** · Brother direct #55603 demands Q4 wire-order orchestrator reliability; step 1 shipped but not productionized, so infra arm secures runtime to prevent heart loop skips. · **Result** · Cron job active, verified Q4 wire-order orchestrator runs on schedule, heartbeat check passes. · **Next** · Monitor first two cycles for any drift, then lock cron with immutable file permissions. · **Links** ·  · **Cycle** · infra-20260629-115115",
-      "updated_at": "2026-06-29T11:51:15.242198"
+      "updated_at": "2026-06-29T12:00:04.942573"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-29T11:56:37.208472"
+    "checked_at": "2026-06-29T12:00:05.675583"
   },
   "block_count": 31,
-  "updated_at": "2026-06-29T11:51:15.242198",
-  "generated_at": "2026-06-29T15:56:37Z"
+  "updated_at": "2026-06-29T12:00:04.942578",
+  "generated_at": "2026-06-29T16:00:05Z"
 }
