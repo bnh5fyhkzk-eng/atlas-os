@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "88fec9f9671d",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-28T21:20:49.061972"
-      },
-      "content": "Hermes decision · arm=pascal · priority=P1 · task: Test minimal P0-tagged brain-canons backup pipeline with NotebookLM via brother's last known answer seeds. · why: P0 identity-tier: brother-direct response left unfinished loop in #55572 — need to seed a concrete crash-test of the HEART-FINISHED data into runtime before next arousal drift.",
-      "updated_at": "2026-06-28T21:20:49.061982"
-    },
-    {
       "id": "055d9ee6e720",
       "type": "callout",
       "props": {
@@ -765,15 +753,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the q4-wire-order orchestrator from the me-heart-wire.py step, ensuring it wires correctly per the recent heart-night-loop plan (v2) and updates the heartbeat test suite. · why: Brother directly said 'heart should be finished by tomorrow and tested' and the step-1 orchestrator was just shipped. This is the immediate next implementation to advance the heart system to completion.",
       "updated_at": "2026-06-29T07:31:50.388944"
+    },
+    {
+      "id": "0745ea0b0c3a",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-29T07:47:15.126046"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Wire the Q4 orchestrator's next cycle to load the 'heart fully finished' NotebookLM blueprint and execute the brother-verified 'heart should be finished by tomorrow and tested' night-loop plan as a single pipeline test · why: #55572 confirmed 4 final loops shipped per NotebookLM blueprint + brother answers, #55589 gave the direct night-loop plan, #55603 delivered the wire-order orchestrator. The next cycle must fuse these into one run: code arm writes the integration test that calls the orchestrator with the blueprint pa",
+      "updated_at": "2026-06-29T07:47:15.126058"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-29T07:46:06.479824"
+    "checked_at": "2026-06-29T07:51:07.128567"
   },
   "block_count": 30,
-  "updated_at": "2026-06-29T07:31:50.388945",
-  "generated_at": "2026-06-29T11:46:06Z"
+  "updated_at": "2026-06-29T07:47:15.126059",
+  "generated_at": "2026-06-29T11:51:07Z"
 }

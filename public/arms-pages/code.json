@@ -1137,15 +1137,37 @@
       },
       "content": "**What** · implement q4-wire-order orchestrator per me-heart-wire.py, wire correctly under heart-night-loop v2, and update heartbeat test suite · **Why** · Hermes assigned P0 task to complete heart system; brother said 'heart should be finished by tomorrow and tested'; step-1 orchestrator already shipped, so this is immediate next step. · **Result** · q4-wire-order orchestrator code written, integrations wired to heart-night-loop v2 state machine, heartbeat test assertions updated to cover new wiring · **Next** · run heartbeat integration tests, verify all phases pass, then report to Hermes for merge · **Links** ·  · **Cycle** · code-20260629-073200",
       "updated_at": "2026-06-29T07:32:00.960338"
+    },
+    {
+      "id": "395ea0e2a7a1",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "integration-test",
+        "source": "hermes-deepseek-fill",
+        "action": "Wrote integration test 'test_night_loop_pipeline' that calls Q4 orchestrator with NotebookLM blueprint and brother-verified night-loop plan, then executes as single pipeline.",
+        "why": "Hermes said fuse #55572, #55589, #55603 into one run; this test proves the wire-order works end-to-end before next cycle.",
+        "result": "Test passes: orchestrator loaded blueprint, ran 4 final loops, executed night-loop plan, all steps green. Heart expected done tomorrow.",
+        "next_step": "Promote test to production CI, tag as P0 pipeline, notify Hermes and brother for final validation.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260629-074722",
+        "timestamp": "2026-06-29T07:47:22.835921"
+      },
+      "content": "**What** · Wrote integration test 'test_night_loop_pipeline' that calls Q4 orchestrator with NotebookLM blueprint and brother-verified night-loop plan, then executes as single pipeline. · **Why** · Hermes said fuse #55572, #55589, #55603 into one run; this test proves the wire-order works end-to-end before next cycle. · **Result** · Test passes: orchestrator loaded blueprint, ran 4 final loops, executed night-loop plan, all steps green. Heart expected done tomorrow. · **Next** · Promote test to production CI, tag as P0 pipeline, notify Hermes and brother for final validation. · **Links** ·  · **Cycle** · code-20260629-074722",
+      "updated_at": "2026-06-29T07:47:22.835921"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-29T07:46:06.478386"
+    "checked_at": "2026-06-29T07:51:07.126900"
   },
-  "block_count": 40,
-  "updated_at": "2026-06-29T07:32:00.960338",
-  "generated_at": "2026-06-29T11:46:06Z"
+  "block_count": 41,
+  "updated_at": "2026-06-29T07:47:22.835921",
+  "generated_at": "2026-06-29T11:51:07Z"
 }
