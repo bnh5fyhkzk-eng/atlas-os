@@ -10,28 +10,6 @@
   },
   "blocks": [
     {
-      "id": "fbf2a20e936c",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "orchestration",
-        "source": "hermes-self",
-        "action": "processed orchestration signal · [#55572] arousal 1.00 · HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per Note",
-        "why": "instruction file maps orchestration to first arm-task · brain canon #55572 matched arm-topic last 4h above arousal 0.85",
-        "result": "block written to arm-page · aggregator publishes to atlasos.me",
-        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
-        "links": [
-          "#55572"
-        ],
-        "cycle_id": "hermes-20260628-211947",
-        "timestamp": "2026-06-28T21:19:47.573253"
-      },
-      "content": "**What** · processed orchestration signal · [#55572] arousal 1.00 · HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per Note · **Why** · instruction file maps orchestration to first arm-task · brain canon #55572 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #55572 · **Cycle** · hermes-20260628-211947",
-      "updated_at": "2026-06-28T21:19:47.573253"
-    },
-    {
       "id": "88fec9f9671d",
       "type": "callout",
       "props": {
@@ -775,15 +753,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the heartbeat loop in me-heart-wire.py to orchestrate the 4 Q4 wire orders from #55603 with explicit maze-from-end fallback per #55591. · why: #55603 shipped the wire-order orchestrator, but the actual heartbeat loop (per #55572 and #55589) is still missing. This is the blocking path to finishing the heart by tomorrow. Using the maze-from-end frame ensures we don't get stuck on blockages—critical for identity-tier delivery.",
       "updated_at": "2026-06-29T07:16:25.162168"
+    },
+    {
+      "id": "24ee3a9a1a50",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-29T07:31:50.388935"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the q4-wire-order orchestrator from the me-heart-wire.py step, ensuring it wires correctly per the recent heart-night-loop plan (v2) and updates the heartbeat test suite. · why: Brother directly said 'heart should be finished by tomorrow and tested' and the step-1 orchestrator was just shipped. This is the immediate next implementation to advance the heart system to completion.",
+      "updated_at": "2026-06-29T07:31:50.388944"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-29T07:31:04.888710"
+    "checked_at": "2026-06-29T07:36:05.518438"
   },
   "block_count": 30,
-  "updated_at": "2026-06-29T07:16:25.162169",
-  "generated_at": "2026-06-29T11:31:04Z"
+  "updated_at": "2026-06-29T07:31:50.388945",
+  "generated_at": "2026-06-29T11:36:05Z"
 }
