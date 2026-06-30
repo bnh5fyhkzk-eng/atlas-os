@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T23:11:16Z",
+  "generated_at": "2026-06-30T23:21:27Z",
   "window_hours": 8,
   "slot_minutes": 15,
   "current_mode": "SLEEP",
@@ -11,18 +11,10 @@
   "brother_now": null,
   "total_banks_window": 40,
   "we_totals_minutes": {
-    "QUIET": 390,
-    "SOLO_ATLAS": 90
+    "SOLO_ATLAS": 90,
+    "QUIET": 390
   },
   "slots": [
-    {
-      "start_ts": 1782831907,
-      "start_local": "11:05",
-      "bank_count": 0,
-      "mode": "SLEEP",
-      "brother_active": false,
-      "we": "QUIET"
-    },
     {
       "start_ts": 1782832807,
       "start_local": "11:20",
@@ -270,19 +262,17 @@
       "mode": "SLEEP",
       "brother_active": false,
       "we": "QUIET"
+    },
+    {
+      "start_ts": 1782860707,
+      "start_local": "19:05",
+      "bank_count": 0,
+      "mode": "SLEEP",
+      "brother_active": false,
+      "we": "QUIET"
     }
   ],
   "blocks": [
-    {
-      "mode": "SLEEP",
-      "start": "11:05",
-      "start_ts": 1782831907,
-      "slots": 1,
-      "banks": 0,
-      "end_ts": 1782832807,
-      "end": "11:20",
-      "duration_min": 15
-    },
     {
       "mode": "REST",
       "start": "11:20",
@@ -377,23 +367,14 @@
       "mode": "SLEEP",
       "start": "18:50",
       "start_ts": 1782859807,
-      "slots": 1,
+      "slots": 2,
       "banks": 1,
-      "end_ts": 1782860707,
-      "end": "19:05",
-      "duration_min": 15
+      "end_ts": 1782861607,
+      "end": "19:20",
+      "duration_min": 30
     }
   ],
   "we_blocks": [
-    {
-      "we": "QUIET",
-      "start": "11:05",
-      "start_ts": 1782831907,
-      "slots": 1,
-      "end_ts": 1782832807,
-      "end": "11:20",
-      "duration_min": 15
-    },
     {
       "we": "SOLO_ATLAS",
       "start": "11:20",
@@ -479,10 +460,10 @@
       "we": "QUIET",
       "start": "18:50",
       "start_ts": 1782859807,
-      "slots": 1,
-      "end_ts": 1782860707,
-      "end": "19:05",
-      "duration_min": 15
+      "slots": 2,
+      "end_ts": 1782861607,
+      "end": "19:20",
+      "duration_min": 30
     }
   ],
   "we_rule_canon": "dream-pair #36808 2026-06-01 22:10 EDT · WE-coupling is the rule all layers obey"
