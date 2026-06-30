@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T01:35:45Z",
+  "generated_at": "2026-06-30T01:50:46Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 147,
+    "note": 148,
     "briefing": 72,
     "idea": 0
   },
-  "total_blocks": 243,
+  "total_blocks": 244,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "75206c0192ab",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement and test the next wire order for heart night-loop based on brother's plan · why: Step 1 shipped, need to continue per brother direct and heart night-loop plan v2",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-29T21:46:49.410450"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-29T12:06:25.968174"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "6f9fc7dfe334",
-        "type": "callout",
-        "content": "Hermes decision · arm=infra · priority=P1 · task: Deploy me-heart-wire.py as persistent cron job on host, verify Q4 wire-order orchestrator runs every 4h with NotebookLM heartbeat check · why: Step 1 is shipped but not productionized; brother direct #55603 demands Q4 wire-order orchestrator be relia",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-29T11:51:06.100760"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "358194c149d5",
+        "type": "callout",
+        "content": "**What** · Implement next wire order for heart night-loop v2 per brother's plan. · **Why** · Step 1 shipped; Hermes assigned P0 continuation of heart night-loop plan. · **Result** · Wired order: pulse-trigger, delay-300ms, amplitude-mod, check-threshold, loop-back. Expected: stable rhythmic contract",
+        "priority": "code-deploy",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-29T21:46:56.374700"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-29T18:00:03.229174"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "1a217a87a16e",
-        "type": "callout",
-        "content": "**What** · Implemented remaining 3 loops of HEART per NotebookLM blueprint, integrated into q4 orchestrator #55603. · **Why** · Brother's P0 order: HEART finished and tested by tomorrow. · **Result** · 3 loops coded, unit tests pass, system integration complete. · **Next** · Run full system test and",
-        "priority": "development",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-29T17:12:14.091912"
       }
     ],
     "briefing": [
