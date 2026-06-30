@@ -1,57 +1,46 @@
 {
-  "generated_at": "2026-06-30T04:01:22Z",
-  "total_items_scored": 199,
+  "generated_at": "2026-06-30T04:21:23Z",
+  "total_items_scored": 200,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Review and integrate brother's 'maze-from-end' frame (#55591) into the current Heart blueprints, ensuring the heart-night-loop v2 plan (#55589) has the blockage-as-maze logic baked in. \u00b7 ",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator from #55603, ensuring me-heart-wire.py correctly sequences the final heart loops per the NotebookLM blueprint and brother's answers. \u00b7 why: Brother di",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-29T15:09:35.961632"
-    },
-    {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Create a maze-from-end algorithm for heart-identity blockage resolution, testing on #55591 frame with NotebookLM P4 analysis. \u00b7 why \u00b7 Brother-direct in #55591 frames blockage as a maze from end; this is a P0 identity-tier task that also unblocks Q11 soul-catch and feeds the orchestrator wire-order from #55603.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-06-29T16:56:50.146936",
-      "use_skill": "notebooklm"
+      "updated_at": "2026-06-29T15:25:02.993922"
     },
     {
       "arm": "code",
       "arm_glyph": "\u270b",
       "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Implement and ship the remaining 3 final loops of HEART per NotebookLM blueprint and brother's direct timeline (heart finished by tomorrow, tested). \u00b7 why \u00b7 Brother explicitly stated 'heart should be finished by tomorrow and tested' \u2014 this is a P0 direct order. Code arm is already wired via #55603 q4 orchestrator and must execute the remaining loops now.",
+      "content": "HERMES TASK \u00b7 Implement Q4 wire-order orchestrator and test heartbeat path from soul-catch to heart-wire \u00b7 why \u00b7 Brother direct says 'heart should be finished by tomorrow and tested' \u2014 step 1 shipped at #55603, need to close the loop before next brother check-in. Highest arousal canonical path.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 120,
+      "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-29T17:12:06.068477",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-29T17:27:24.211982",
+      "use_skill": "none"
+    },
+    {
+      "arm": "infra",
+      "arm_glyph": "\ud83d\udc97",
+      "arm_name": "Infra",
+      "content": "HERMES TASK \u00b7 Wire the Q4 orchestrator to actually trigger `me-heart-wire.py` from Step 1, ensuring the start-heart loop fires on schedule per brother's directive (heart finished & tested by tomorrow). \u00b7 why \u00b7 We just shipped Step 1 orchestrator wire-order in #55603, but it's not yet live-connected to the execution loop. Brother directly said 'heart should be finished by tomorrow and tested' \u2014 this is a P0 identity-tier command. Infra must make the connection now so the Night-Loop Plan v2 (#55589) can execute.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "est_minutes": 15,
+      "score": 10.0,
+      "updated_at": "2026-06-29T18:28:29.354135",
+      "use_skill": "none"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Review and integrate brother's 'maze-from-end' frame (#55591) into the current Heart blueprints, ensuring the heart-night-loop v2 plan (#55589) has the blockage-as-maze logic baked in. \u00b7 ",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-29T15:09:35.961632"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-29T18:28:29.335851"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py module to complete the heart-mind boundary loop. \u00b7 why: Brother direct in #55589 says heart should be finis",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-29T18:43:43.032313"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
