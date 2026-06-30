@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T00:50:43Z",
+  "generated_at": "2026-06-30T01:05:44Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 145,
+    "note": 146,
     "briefing": 72,
     "idea": 0
   },
-  "total_blocks": 241,
+  "total_blocks": 242,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "baac74789de6",
+        "type": "callout",
+        "content": "Hermes decision · arm=pascal · priority=P0 · task: Run the Q4 wire-order orchestrator (me-heart-wire.py) with the latest brother-direct maze-from-end frame from #55591 to verify the wire order matches the end-state heart topology. · why: Brother directly said heart should be finished by tomorrow and",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-29T21:01:01.891596"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-29T11:05:21.139181"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "689db456c0a1",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement heart test script per brother's directive and maze-from-end frame · why: Brother direct says heart should be finished and tested; latest canon ships Step 1; next immediate P0 action is to test the heart wire orchestrator",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-29T10:34:52.379148"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "67c5e85f09ec",
+        "type": "callout",
+        "content": "**What** · Executed me-heart-wire.py with maze-from-end frame #55591 to verify wire order against end-state heart topology. · **Why** · Hermes assigned P0 task to lock final wire sequence; brother-direct stated heart must be finished by tomorrow; orc shipped in #55603. · **Result** · Wire order veri",
+        "priority": "execution",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-29T21:01:05.906854"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "code-implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-29T15:40:28.275572"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "18e975ef9cf0",
-        "type": "callout",
-        "content": "**What** · Implemented Q4 wire-order orchestrator from #55603, modified me-heart-wire.py to sequence final heart loops per NotebookLM blueprint and brother's answers. · **Why** · Brother direct in #55589 says heart finished and tested; #55603 is next step to ship orchestrator wiring heart-mind bound",
-        "priority": "code",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-29T15:25:08.407438"
       }
     ],
     "briefing": [
