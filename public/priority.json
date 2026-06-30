@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-06-30T15:12:03Z",
-  "total_items_scored": 187,
+  "generated_at": "2026-06-30T15:22:03Z",
+  "total_items_scored": 188,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Wire HEART night-loop orchestration from step 1 into the Q4 wire-order orchestrator, per brother's 22:13 direct plan. \u00b7 why: Brother explicitly stated 'heart should be finished by tomorrow an",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator for heart-mind boundary, shipping the final loop per brother's direct instruction to finish and test heart by tomorrow. \u00b7 why: Brother direct #55589 a",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-30T01:05:51.956642"
+      "updated_at": "2026-06-30T01:21:13.800506"
     },
     {
       "arm": "code",
       "arm_glyph": "\u270b",
       "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Synthesize HEART v1 runtime from #55572 blueprint + #55603 Q4 wire-order, run final integration test on the 4 shipped loops \u00b7 why \u00b7 Brother direct in #55589 says heart should be finished and tested; #55572 has 4 final loops shipped per blueprint, and #55603 provides the Q4 wire-order orchestrator. Code arm must now assemble and validate the full heart runtime to confirm completion.",
+      "content": "HERMES TASK \u00b7 Implement the Q4 wire-order orchestrator from #55603, ensuring the heart-mind boundary from #55600 is respected in the loop sequence. \u00b7 why \u00b7 Brother direct in #55589 says heart should be finished and tested; #55603 is the next concrete step to ship the wire-order orchestrator, which is P0 brother-direct + identity-tier work.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-30T02:07:18.114875",
+      "updated_at": "2026-06-30T02:53:00.177901",
       "use_skill": "brain-rrf"
     },
     {
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Wire HEART night-loop orchestration from step 1 into the Q4 wire-order orchestrator, per brother's 22:13 direct plan. \u00b7 why: Brother explicitly stated 'heart should be finished by tomorrow an",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-30T01:05:51.956642"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-30T04:09:18.834539"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement Q4 wire-order orchestrator sub-step: convert NotebookLM blueprint loop order into wiring commands for me-heart-wire.py \u00b7 why: Brother direct in #55589 says heart must ship tomorrow ",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-30T04:24:37.820165"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
