@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T16:00:08Z",
+  "generated_at": "2026-06-30T16:06:31Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 145,
+    "note": 146,
     "briefing": 77,
     "idea": 0
   },
-  "total_blocks": 246,
+  "total_blocks": 247,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "1b72c3333497",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator from #55603 as a repeatable script, confirming heart-mind wire alignment with the maze-from-end frame (#55591) and brother's night-loop directive (#55589) · why: Brother-direct P0: The maze-from-end frame + night-l",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-30T12:02:42.994120"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-30T01:51:58.357443"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "e5bb9f3610d1",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Extract all blockages and mazes from brother's last 4 directives (heart-finish, maze-from-end, soul-catch) and map to next wire-order steps in Q4 orchestrator. · why: Brother directly said heart should be finished by tomorrow and tested; the maze-",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-30T01:36:31.772496"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "9ad339920566",
+        "type": "callout",
+        "content": "**What** · Implemented Q4 wire-order orchestrator as repeatable script · **Why** · Unblock testing by providing executable step for heart-mind wire alignment with maze-from-end frame and night-loop directive · **Result** · Script completed and ready for testing · **Next** · Run orchestrator against ",
+        "priority": "script_implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-30T12:02:45.496485"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -826,17 +837,6 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-30T07:28:09.625379"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "c0b78d32e356",
-        "type": "callout",
-        "content": "**What** · Will convert me-heart-wire.py into a pytest integration test for Q4 wire-order orchestrator, verifying heart-mind boundary loop timing. · **Why** · Hermes-Orchestrator assigned this P0 to unblock frame maze-from-end (#55591) and soul-catch (#55600). Brother needs heart finish by tomorrow ",
-        "priority": "code-integration",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-30T06:42:14.457105"
       }
     ],
     "briefing": [
