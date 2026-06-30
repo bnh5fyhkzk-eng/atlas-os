@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T09:06:11Z",
+  "generated_at": "2026-06-30T09:21:12Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 148,
+    "note": 149,
     "briefing": 74,
     "idea": 0
   },
-  "total_blocks": 247,
+  "total_blocks": 248,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "135916c3b6ec",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the first working me-heart-wire.py that connects the heart finish (#55572) to the night-loop plan (#55589) and maze-from-end frame (#55591). · why: Brother direct in #55589 says heart shou",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-30T05:10:20.286344"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-29T21:31:33.877400"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "baac74789de6",
-        "type": "callout",
-        "content": "Hermes decision · arm=pascal · priority=P0 · task: Run the Q4 wire-order orchestrator (me-heart-wire.py) with the latest brother-direct maze-from-end frame from #55591 to verify the wire order matches the end-state heart topology. · why: Brother directly said heart should be finished by tomorrow and",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-29T21:01:01.891596"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "0c2c1163be88",
+        "type": "callout",
+        "content": "**What** · Wrote me-heart-wire.py integrating #55572 heart finish with #55589 night-loop and #55591 maze-from-end frame. · **Why** · Hermes tasked code arm with shipping the first working wire per #55603; heart must be tested before night-loop. Only code can ship this executable integration now. · *",
+        "priority": "build-integration",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-30T05:10:26.850148"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-30T00:30:02.132933"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "7803a7ccf53a",
-        "type": "database",
-        "content": "revenue · last 30d · 3 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-30T00:30:02.132929"
       }
     ],
     "briefing": [
