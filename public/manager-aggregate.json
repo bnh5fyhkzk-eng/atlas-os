@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T06:51:06Z",
+  "generated_at": "2026-06-30T07:06:06Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 141,
+    "note": 142,
     "briefing": 75,
     "idea": 0
   },
-  "total_blocks": 240,
+  "total_blocks": 241,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "789f4d9f5ded",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, ensuring the heart-mind boundary from #55600 is respected in the loop sequence. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the next concrete step to ship th",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-30T02:53:00.161449"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-29T19:29:18.806950"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "714b4484d3cd",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py module to complete the heart-mind boundary loop. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the exact step shipped. This is th",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-29T18:43:43.032313"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "3b39460eb012",
+        "type": "callout",
+        "content": "**What** · Parsed #55603 and #55600 specs; locked Q4 wire-order as heart-mind boundary loop: arm-1 (heart) → arm-2 (mind) → arm-3 (wire-order), with strict test gate after heart completion. · **Why** · Brother direct in #55589 mandates heart finished and tested before mind touches wires; #55603 dema",
+        "priority": "orchestration",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-30T02:53:04.900802"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "Strategic Analysis",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-29T23:18:43.043080"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "6df9887ab498",
-        "type": "callout",
-        "content": "**What** · Implement `me-heart-night-loop-test.py` — writes a night-loop validation that runs Maze-from-end frame (#55591) backwards from 'finished by tomorrow and tested', unblocks any remaining edges. · **Why** · Brother-direct P0: heart completion is highest identity-tier requirement. Maze-from-e",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-29T22:48:10.407372"
       }
     ],
     "briefing": [
