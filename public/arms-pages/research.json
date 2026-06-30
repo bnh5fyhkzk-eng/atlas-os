@@ -1061,15 +1061,37 @@
         }
       ],
       "updated_at": "2026-06-30T00:30:03.966659"
+    },
+    {
+      "id": "ef4aadd175ec",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "blockage-extraction",
+        "source": "hermes-deepseek-fill",
+        "action": "extracted blockages and mazes from brother last 4 directives: 'heart-finish', 'maze-from-end', 'soul-catch' — identified heart state blockages in final 3 steps and traced maze backward from end to cat",
+        "why": "brother said heart must finish by tomorrow and be tested; maze-from-end requires reverse-tracing from final heart state. Hermes said P0, cross-reference with NotebookLM and wire-order history.",
+        "result": "map: heart-finish blocked at step 6 (missing soul-catch wire); maze-from-end shows blockage at step 4 (prevents step 7 completion); soul-catch must be placed before step 5 in Q4 orchestrator.",
+        "next_step": "hand map to wire-order arm to reorder Q4 steps: move soul-catch to step 4, heart-finish to step 7, test from step 8.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260630-013646",
+        "timestamp": "2026-06-30T01:36:46.781725"
+      },
+      "content": "**What** · extracted blockages and mazes from brother last 4 directives: 'heart-finish', 'maze-from-end', 'soul-catch' — identified heart state blockages in final 3 steps and traced maze backward from end to catch. · **Why** · brother said heart must finish by tomorrow and be tested; maze-from-end requires reverse-tracing from final heart state. Hermes said P0, cross-reference with NotebookLM and wire-order history. · **Result** · map: heart-finish blocked at step 6 (missing soul-catch wire); maze-from-end shows blockage at step 4 (prevents step 7 completion); soul-catch must be placed before step 5 in Q4 orchestrator. · **Next** · hand map to wire-order arm to reorder Q4 steps: move soul-catch to step 4, heart-finish to step 7, test from step 8. · **Links** ·  · **Cycle** · research-20260630-013646",
+      "updated_at": "2026-06-30T01:36:46.781725"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-30T01:33:31.110791"
+    "checked_at": "2026-06-30T01:38:31.705699"
   },
-  "block_count": 31,
-  "updated_at": "2026-06-30T00:30:03.966688",
-  "generated_at": "2026-06-30T05:33:31Z"
+  "block_count": 32,
+  "updated_at": "2026-06-30T01:36:46.781725",
+  "generated_at": "2026-06-30T05:38:31Z"
 }
