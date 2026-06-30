@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-30T13:41:57Z",
-  "total_items_scored": 185,
+  "generated_at": "2026-06-30T13:51:58Z",
+  "total_items_scored": 186,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement heart-wire.py for final Q4 wire-order step to finish heart loop upstream per NotebookLM blueprint \u00b7 why: Direct brother priority #55572 + #55589 confirmed heart finish by tomorrow; ",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement Q4 wire-order orchestrator per #55603 blueprint, shipping the me-heart-wire.py loop that connects heart-finished state to brother's test plan. \u00b7 why: Brother directly said heart sho",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-30T00:35:06.294074"
-    },
-    {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Extract all blockages and mazes from brother's last 4 directives (heart-finish, maze-from-end, soul-catch) and map to next wire-order steps in Q4 orchestrator. \u00b7 why \u00b7 Brother directly said heart should be finished by tomorrow and tested; the maze-from-end frame requires tracing blockages backward from final heart state. Research arm best suited to cross-reference brother's language with NotebookLM blueprint and wire-order history.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 18,
-      "score": 10.0,
-      "updated_at": "2026-06-30T01:36:31.788933",
-      "use_skill": "notebooklm"
+      "updated_at": "2026-06-30T00:50:26.780826"
     },
     {
       "arm": "code",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-30T01:51:58.373947",
       "use_skill": "none"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement heart-wire.py for final Q4 wire-order step to finish heart loop upstream per NotebookLM blueprint \u00b7 why: Direct brother priority #55572 + #55589 confirmed heart finish by tomorrow; ",
+      "arm": "dream",
+      "arm_glyph": "\ud83c\udf19",
+      "arm_name": "Dream",
+      "content": "HERMES TASK \u00b7 Run overnight simulation of heart night-loop plan v2 (based on #55589), outputting possible blockages and maze-from-end frames per #55591 \u00b7 why \u00b7 Brother direct says heart should be finished by tomorrow. This arm can autonomously explore the maze-from-end frame and surface the next actionable step for the morning focus cycle, while other arms rest or run background work.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 240,
       "score": 10.0,
-      "updated_at": "2026-06-30T00:35:06.294074"
-    },
+      "updated_at": "2026-06-30T03:08:12.915490",
+      "use_skill": "none"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-30T03:23:30.521250"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Complete the me-heart-wire.py orchestrator for final heart loop shipping \u00b7 why: Brother direct: heart should be finished and tested; last canon #55603 shipped step 1, continue with wire order",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-30T03:38:53.729712"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
