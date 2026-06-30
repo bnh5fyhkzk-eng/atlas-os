@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T07:06:06Z",
+  "generated_at": "2026-06-30T07:21:07Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 142,
+    "note": 143,
     "briefing": 75,
     "idea": 0
   },
-  "total_blocks": 241,
+  "total_blocks": 242,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "731ef778e3ba",
+        "type": "callout",
+        "content": "Hermes decision · arm=dream · priority=P0 · task: Run overnight simulation of heart night-loop plan v2 (based on #55589), outputting possible blockages and maze-from-end frames per #55591 · why: Brother direct says heart should be finished by tomorrow. This arm can autonomously explore the maze-from",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-30T03:08:12.898918"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-29T19:44:29.816651"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "8acd10d96d52",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Load #55572, #55589, #55591, #55600, and #55603 into NotebookLM and generate a consolidated 'Heart Night-Loop Plan v3' with all maze-from-end frame steps, soul-catch boundary conditions, and the Q4 wire-order orchestrator integration. · why: Broth",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-29T19:29:18.806950"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "dream",
+        "arm_glyph": "🌙",
+        "arm_name": "My Dreamer",
+        "block_id": "b9f14cc51760",
+        "type": "callout",
+        "content": "**What** · run overnight sim of heart night-loop v2 per #55589, output possible blockages and maze-from-end frames per #55591 · **Why** · brother direct says heart must finish by tomorrow; this arm explores maze-from-end while others rest · **Result** · sim running; outputs expected by 06:00: blocka",
+        "priority": "simulation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-30T03:08:19.212440"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "code-execution",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-29T23:49:04.474901"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "709c8f016665",
-        "type": "callout",
-        "content": "**What** · Mapped heart blockage as a solvable maze by analyzing end-state constraints, deriving wire-order sequence from reverse pathfinding. · **Why** · To operationalize Brother's instruction to treat blockage as reversed maze, enabling precise intervention order for heart test tomorrow. · **Resu",
-        "priority": "Strategic Analysis",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-29T23:18:43.043080"
       }
     ],
     "briefing": [
