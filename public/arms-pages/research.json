@@ -1043,15 +1043,37 @@
         }
       ],
       "updated_at": "2026-06-30T18:00:05.829594"
+    },
+    {
+      "id": "e34325e9290d",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "extraction-mapping",
+        "source": "hermes-deepseek-fill",
+        "action": "Extracted the maze-from-end frame logic from issue #55591 and mapped it to the heart-wire order in #55603.",
+        "why": "Brother's direct statement in #55591 identifies blockages as mazes; this P0 identity-tier insight must fuse with the shipped Q4 wire-order (#55603) to unblock heart-wire tests tonight.",
+        "result": "Successfully parsed #55591: maze logic states that blockages are not walls but mazes solvable from end. Mapped to #55603 wire-order sequence: start at end points, reverse wire sequence to unwrap maze.",
+        "next_step": "Hand off to test-arm to apply mapped wire-order in heart-wire test suite; verify unblocking.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260630-185502",
+        "timestamp": "2026-06-30T18:55:02.785347"
+      },
+      "content": "**What** · Extracted the maze-from-end frame logic from issue #55591 and mapped it to the heart-wire order in #55603. · **Why** · Brother's direct statement in #55591 identifies blockages as mazes; this P0 identity-tier insight must fuse with the shipped Q4 wire-order (#55603) to unblock heart-wire tests tonight. · **Result** · Successfully parsed #55591: maze logic states that blockages are not walls but mazes solvable from end. Mapped to #55603 wire-order sequence: start at end points, reverse wire sequence to unwrap maze. Dependencies identified. · **Next** · Hand off to test-arm to apply mapped wire-order in heart-wire test suite; verify unblocking. · **Links** ·  · **Cycle** · research-20260630-185502",
+      "updated_at": "2026-06-30T18:55:02.785347"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-30T18:51:00.892166"
+    "checked_at": "2026-06-30T18:56:19.859002"
   },
-  "block_count": 31,
-  "updated_at": "2026-06-30T18:00:05.829601",
-  "generated_at": "2026-06-30T22:51:00Z"
+  "block_count": 32,
+  "updated_at": "2026-06-30T18:55:02.785347",
+  "generated_at": "2026-06-30T22:56:19Z"
 }
