@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T01:20:44Z",
+  "generated_at": "2026-06-30T01:35:45Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 146,
+    "note": 147,
     "briefing": 72,
     "idea": 0
   },
-  "total_blocks": 242,
+  "total_blocks": 243,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "bc974cb6fde7",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Execute Q4 wire-order orchestrator to complete heart wiring and begin testing · why: Brother direct to finish heart by tomorrow and test; latest canon #55603 shipped step1; next step is to complete wiring per blueprint.",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-29T21:31:33.877400"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P1",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-29T11:51:06.100760"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "ce661f3596bb",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Extract the Q4 wire-order from step-1 shipped me-heart-wire.py and integrate with the brother-direct 'heart should be finished by tomorrow and tested' timeline to produce the next wire (Step 2) for the heart night-loop plan v2. · why: The most recent ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-29T11:05:21.139181"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "314e431781f8",
+        "type": "callout",
+        "content": "**What** · execute Q4 wire-order orchestrator to complete heart wiring and begin testing · **Why** · Hermes-Orchestrator assigned P0; brother direct to finish heart by tomorrow; latest canon #55603 shipped step1 · **Result** · heart wiring completed per blueprint; testing initiated · **Next** · moni",
+        "priority": "orchestration",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-29T21:31:40.672017"
+      },
       {
         "arm": "pascal",
         "arm_glyph": "🤝",
@@ -826,17 +837,6 @@
         "priority": "development",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-29T17:12:14.091912"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "cfcb301811d6",
-        "type": "callout",
-        "content": "**What** · wrote Q4 wire-order orchestrator in heart-wire.py, wiring heart-mind boundary loop per NotebookLM blueprint · **Why** · Hermes said step 1 shipped incomplete; brother's #55589 demands full heart-night-loop; P0 identity-tier fix · **Result** · orchestrator now emits correct Q4 wire sequenc",
-        "priority": "code-implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-29T15:40:28.275572"
       }
     ],
     "briefing": [
