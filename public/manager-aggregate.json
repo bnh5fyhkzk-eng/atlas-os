@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T05:36:03Z",
+  "generated_at": "2026-06-30T05:51:03Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 159,
+    "note": 160,
     "briefing": 71,
     "idea": 0
   },
-  "total_blocks": 255,
+  "total_blocks": 256,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "e5bb9f3610d1",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Extract all blockages and mazes from brother's last 4 directives (heart-finish, maze-from-end, soul-catch) and map to next wire-order steps in Q4 orchestrator. · why: Brother directly said heart should be finished by tomorrow and tested; the maze-",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-30T01:36:31.772496"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-29T17:27:24.194437"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "55510d01c881",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement and ship the remaining 3 final loops of HEART per NotebookLM blueprint and brother's direct timeline (heart finished by tomorrow, tested). · why: Brother explicitly stated 'heart should be finished by tomorrow and tested' — this is a P0 dire",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-29T17:12:06.051841"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "ef4aadd175ec",
+        "type": "callout",
+        "content": "**What** · extracted blockages and mazes from brother last 4 directives: 'heart-finish', 'maze-from-end', 'soul-catch' — identified heart state blockages in final 3 steps and traced maze backward from end to catch. · **Why** · brother said heart must finish by tomorrow and be tested; maze-from-end r",
+        "priority": "blockage-extraction",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-30T01:36:46.781725"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "script deployment",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-29T22:32:54.140355"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "c26cccbf47d6",
-        "type": "callout",
-        "content": "**What** · Opened me-heart-wire.py, parsed Q4 wire-order from #55603, stubbed first working loop with orchestrator dispatch. · **Why** · #55589 demands heart finish tomorrow; #55603 is the exact next step to wire the heart loops into a shippable orchestrator. · **Result** · First loop tested locally",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-29T22:17:41.750867"
       }
     ],
     "briefing": [
