@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T07:21:07Z",
+  "generated_at": "2026-06-30T07:36:08Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 143,
+    "note": 144,
     "briefing": 75,
     "idea": 0
   },
-  "total_blocks": 242,
+  "total_blocks": 243,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "1f839680b507",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Analyze maze-from-end frame protocol (#55591) to derive next blockage resolution step before brother's morning check. · why: Brother directly said 'when we have a blockage we just need to see it as a maze built from the end' — this is P0 brother-d",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-30T03:23:30.521250"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-29T19:59:45.114705"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "ae43b8e9115f",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the heart-night-loop plan v2 as a Python script that runs the 4 final loops per NotebookLM blueprint, integrating the maze-from-end frame for blockage detection. · why: Brother directly said 'heart should be finished by tomorrow and tested' ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-29T19:44:29.816651"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "698e3e3e4718",
+        "type": "callout",
+        "content": "**What** · Analyzed maze-from-end frame protocol (#55591) to extract reverse-chaining logic. · **Why** · Brother said blockage is maze built from end — P0 guidance. Need reverse-chaining for night-loop plan v2. · **Result** · Decoded 3-step reverse chain: (1) identify end state, (2) walk backward th",
+        "priority": "protocol-decoding",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-30T03:23:45.240795"
+      },
       {
         "arm": "dream",
         "arm_glyph": "🌙",
@@ -826,17 +837,6 @@
         "priority": "Integration",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-30T00:04:31.595393"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "69c9c823e7c2",
-        "type": "callout",
-        "content": "**What** · Execute me-heart-wire.py from #55603 and route Q4 wire-order to NotebookLM for blueprint refinement. · **Why** · P0 brother-direct + identity-tier task unblocks heart-loop pipeline per Hermes-Orchestrator. · **Result** · Script executed, Q4 wire-order dispatched to NotebookLM. Blueprint r",
-        "priority": "code-execution",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-29T23:49:04.474901"
       }
     ],
     "briefing": [
