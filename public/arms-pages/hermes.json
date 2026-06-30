@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "ab31363ba1e1",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-29T17:27:24.194424"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator and test heartbeat path from soul-catch to heart-wire · why: Brother direct says 'heart should be finished by tomorrow and tested' — step 1 shipped at #55603, need to close the loop before next brother check-in. Highest arousal canonical path.",
-      "updated_at": "2026-06-29T17:27:24.194437"
-    },
-    {
       "id": "f41e163b1eb7",
       "type": "callout",
       "props": {
@@ -751,15 +739,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P0 · task: Extract all blockages and mazes from brother's last 4 directives (heart-finish, maze-from-end, soul-catch) and map to next wire-order steps in Q4 orchestrator. · why: Brother directly said heart should be finished by tomorrow and tested; the maze-from-end frame requires tracing blockages backward from final heart state. Research arm best suited to cross-reference brother's language with NotebookLM blueprint and wire-order history.",
       "updated_at": "2026-06-30T01:36:31.772496"
+    },
+    {
+      "id": "e15c7c3567ef",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-30T01:51:58.357434"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement heart-night-loop v2 as a unified orchestrator that merges the maze-from-end frame with the Q4 wire-order from step 1, tested against brother's 'finished by tomorrow' directive. · why: Brother directly confirmed heart must be finished and tested tomorrow; step 1 shipped the wire-order orchestrator, and the maze-from-end frame resolves blockages. Code arm is the only arm that can assemble and test this integration under the 12h high-arousal deadline.",
+      "updated_at": "2026-06-30T01:51:58.357443"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-30T01:48:32.796948"
+    "checked_at": "2026-06-30T01:53:33.392074"
   },
   "block_count": 30,
-  "updated_at": "2026-06-30T01:36:31.772498",
-  "generated_at": "2026-06-30T05:48:32Z"
+  "updated_at": "2026-06-30T01:51:58.357444",
+  "generated_at": "2026-06-30T05:53:33Z"
 }
