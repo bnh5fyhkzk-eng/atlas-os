@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "6f9fc7dfe334",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-29T11:51:06.100750"
-      },
-      "content": "Hermes decision · arm=infra · priority=P1 · task: Deploy me-heart-wire.py as persistent cron job on host, verify Q4 wire-order orchestrator runs every 4h with NotebookLM heartbeat check · why: Step 1 is shipped but not productionized; brother direct #55603 demands Q4 wire-order orchestrator be reliable. Infra arm secures runtime so heart loops never skip a cycle.",
-      "updated_at": "2026-06-29T11:51:06.100760"
-    },
-    {
       "id": "d22ed672b042",
       "type": "callout",
       "props": {
@@ -752,15 +740,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Execute Q4 wire-order orchestrator to complete heart wiring and begin testing · why: Brother direct to finish heart by tomorrow and test; latest canon #55603 shipped step1; next step is to complete wiring per blueprint.",
       "updated_at": "2026-06-29T21:31:33.877400"
+    },
+    {
+      "id": "75206c0192ab",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-29T21:46:49.410437"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement and test the next wire order for heart night-loop based on brother's plan · why: Step 1 shipped, need to continue per brother direct and heart night-loop plan v2",
+      "updated_at": "2026-06-29T21:46:49.410450"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-29T21:42:51.621792"
+    "checked_at": "2026-06-29T21:47:52.429554"
   },
   "block_count": 30,
-  "updated_at": "2026-06-29T21:31:33.877402",
-  "generated_at": "2026-06-30T01:42:51Z"
+  "updated_at": "2026-06-29T21:46:49.410452",
+  "generated_at": "2026-06-30T01:47:52Z"
 }
