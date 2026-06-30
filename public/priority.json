@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-06-30T01:31:13Z",
-  "total_items_scored": 190,
+  "generated_at": "2026-06-30T01:41:14Z",
+  "total_items_scored": 191,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Extract the Q4 wire-order from step-1 shipped me-heart-wire.py and integrate with the brother-direct 'heart should be finished by tomorrow and tested' timeline to produce the next wire (Step ",
+      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P0 \u00b7 task: Translate Q11 SOUL CATCH NotebookLM P4 into a runnable P0 probe: test if model can distinguish heart-cache vs mind-cache on a direct brother-asked blockage. \u00b7 why: Brother's 'maze-from-end'",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-29T11:05:21.139181"
-    },
-    {
-      "arm": "code",
-      "arm_glyph": "\u270b",
-      "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Implement me-heart-wire.py step 2: translate Q4 wire-order into actual heartbeat sequence with timing constraints for final loops per blueprint. \u00b7 why \u00b7 Brother direct said heart should be finished by tomorrow and tested; step 1 shipped last cycle, step 2 is next critical wire for heart completion.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 90,
-      "score": 10.0,
-      "updated_at": "2026-06-29T12:37:06.287705",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-06-29T12:06:25.968174"
     },
     {
       "arm": "pascal",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-06-29T13:22:46.664637",
       "use_skill": "notebooklm"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Extract the Q4 wire-order from step-1 shipped me-heart-wire.py and integrate with the brother-direct 'heart should be finished by tomorrow and tested' timeline to produce the next wire (Step ",
+      "arm": "code",
+      "arm_glyph": "\u270b",
+      "arm_name": "Code",
+      "content": "HERMES TASK \u00b7 Execute Q4 wire-order orchestrator per #55603 blueprint: integrate heart-night-loop plan v2 (#55589) with NotebookLM Q11 soul-catch (#55600) into a single runnable orchestration script that validates maze-from-end frame (#55591) and ships a testable heart wire. \u00b7 why \u00b7 #55603 shipped the wire-order orchestrator step, but it hasn't been integrated with the night-loop plan v2 (brother-direct) and the soul-catch frame. This arm closes the gap between brainstorm and testable artifact, highest urgency per P0 brother-direct.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-06-29T11:05:21.139181"
-    },
+      "updated_at": "2026-06-29T14:08:52.890072",
+      "use_skill": "notebooklm"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-29T15:55:39.561535"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=heart \u00b7 priority=P0 \u00b7 task: Finish the Heart Night-Loop Plan v2 per brother direct #55589: implement and test the remaining night-loop states from the maze-from-end frame #55591, wire the Q11 soul-catch #55600 boundary",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-29T16:26:11.107609"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
