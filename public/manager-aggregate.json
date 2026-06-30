@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T12:51:22Z",
+  "generated_at": "2026-06-30T13:06:23Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 140,
+    "note": 141,
     "briefing": 77,
     "idea": 0
   },
-  "total_blocks": 241,
+  "total_blocks": 242,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "d9679772f477",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement me-heart-wire.py step 2: wire Q4 orchestrator to publish heart finished signal per brother's 22:13 directive · why: Brother directly said 'heart should be finished by tomorrow and tested' and loop #55572 shipped 4 final loops; step 1 from #5",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-30T08:59:36.907812"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-30T00:19:42.486941"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "1a813b604cd7",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, connecting heart-wire.py to the NotebookLM blueprint loop count and brother's 'finished by tomorrow' directive. · why: This is the direct next step from the most recent shipped artifact (#55603) an",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-30T00:04:27.381298"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "35263897aaef",
+        "type": "callout",
+        "content": "**What** · implemented step 2: wired Q4 orchestrator to publish 'heart_finished' signal after loop #55572's 4 final loops complete, per brother's 22:13 directive · **Why** · hermes assigned p0 to close heart cycle; step 1 from #55603 done, this step adds concrete signal so brother knows heart is fin",
+        "priority": "orchestration-assembly",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-30T08:59:53.302070"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "build-integration",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-30T05:10:26.850148"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "dff8db2d3378",
-        "type": "callout",
-        "content": "**What** · Finalized heart loop connections in heart-wire.py by linking all inflow/outflow wires and verifying continuity. · **Why** · Hermes tasked to complete heart by tomorrow; Step 1 shipped, Step 2 finalizes connections for testing. · **Result** · Heart loop wired and ready; initial mock test p",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-30T04:40:02.434458"
       }
     ],
     "briefing": [
