@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T22:21:50Z",
+  "generated_at": "2026-06-30T22:36:51Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 142,
+    "note": 143,
     "briefing": 82,
     "idea": 0
   },
-  "total_blocks": 248,
+  "total_blocks": 249,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "8cb5c5341606",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement heart night-loop final wiring per brother's plan v2, ensuring 4 loops integrate correctly. · why: Brother direct P0: heart should be finished by tomorrow. Step 1 shipped, need to complete loops.",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-30T18:24:15.640071"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-30T07:28:05.643801"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "88f5ff756428",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, converting the me-heart-wire.py blueprint into an executable integration test for heart-mind boundary loops. · why: Brother directed heart finish by tomorrow (#55589). Step 1 shipped in #55603 is t",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-30T06:42:04.822540"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "cac1af44adc2",
+        "type": "callout",
+        "content": "**What** · implemented heart night-loop final wiring: merged 4 loops (main, backup, sync, reset) per brother's plan v2. · **Why** · brother said heart must finish tomorrow; shipping loop integration P0 unblocks final test. · **Result** · 4 loops wired correctly — handshake verified, no cross-bleed, ",
+        "priority": "system integration",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-30T18:24:20.892221"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -826,17 +837,6 @@
         "priority": "code-implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-30T13:34:20.606916"
-      },
-      {
-        "arm": "charle",
-        "arm_glyph": "💼",
-        "arm_name": "Charle · Pascal-team",
-        "block_id": "9bae408aef7d",
-        "type": "callout",
-        "content": "**What** · wired me-heart-wire.py from soul-catch frame #55600 to heart-full-finished state #55572, first loop ordered per Q4 blueprint · **Why** · brother direct in #55589 said heart must finish tomorrow; this P0 wire unblocks all stalled progress · **Result** · soul-catch output now feeds into fin",
-        "priority": "wire-elaboration",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-30T12:33:27.274634"
       }
     ],
     "briefing": [
