@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T00:35:43Z",
+  "generated_at": "2026-06-30T00:50:43Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 144,
+    "note": 145,
     "briefing": 72,
     "idea": 0
   },
-  "total_blocks": 240,
+  "total_blocks": 241,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "715ff670a1fc",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: launch heart-night-loop: wire Q4 orchestrator from step1 shipped into live night-cycle test with NotebookLM blueprint validation · why: brother direct at #55589 says heart should be finished and tested — #55603 just shipped the Q4 wire-order orchestra",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-29T20:45:41.269771"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-29T10:34:52.379148"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "bb2f551e7524",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Run me-heart-wire.py orchestrator against the latest 4 final loops from #55572 to validate wire order and detect any blockages per brother's maze-from-end directive. · why: Brother direct in #55591 says to see blockages as mazes; #55603 shipped step 1",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-29T09:49:13.230863"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "58a5df24c090",
+        "type": "callout",
+        "content": "**What** · launched heart-night-loop: wired Q4 orchestrator from step1 into live night-cycle test, validated with NotebookLM blueprints. · **Why** · P0 integration needed — #55603 just shipped the orchestrator, blueprint context hot from #55591 blockage-breaking pattern, brother at #55589 demands fi",
+        "priority": "integration / deployment",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-29T20:45:50.454511"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "code",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-29T15:25:08.407438"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "6d69b12691ac",
-        "type": "callout",
-        "content": "**What** · cross-referenced brother's maze-from-end frame (#55591) with NotebookLM blueprint and Q4 wire-order, then baked blockage-as-maze logic into heart-night-loop v2 plan (#55589) · **Why** · brother's P0 insight flips blockage from obstacle to maze solved from end — structural shift needed in ",
-        "priority": "cross-reference",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-29T15:09:44.446324"
       }
     ],
     "briefing": [
