@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-30T08:41:39Z",
-  "total_items_scored": 192,
+  "generated_at": "2026-06-30T08:51:40Z",
+  "total_items_scored": 193,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: launch heart-night-loop: wire Q4 orchestrator from step1 shipped into live night-cycle test with NotebookLM blueprint validation \u00b7 why: brother direct at #55589 says heart should be finished ",
+      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P0 \u00b7 task: Run the Q4 wire-order orchestrator (me-heart-wire.py) with the latest brother-direct maze-from-end frame from #55591 to verify the wire order matches the end-state heart topology. \u00b7 why: Br",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-06-29T20:45:41.269771"
+      "updated_at": "2026-06-29T21:01:01.891596"
     },
     {
       "arm": "code",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: launch heart-night-loop: wire Q4 orchestrator from step1 shipped into live night-cycle test with NotebookLM blueprint validation \u00b7 why: brother direct at #55589 says heart should be finished ",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-29T20:45:41.269771"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-29T23:49:00.937874"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator from #55603, connecting heart-wire.py to the NotebookLM blueprint loop count and brother's 'finished by tomorrow' directive. \u00b7 why: This is the direct",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-30T00:04:27.381298"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
