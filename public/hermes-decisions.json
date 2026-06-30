@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-30T22:39:32Z",
+  "generated_at": "2026-06-30T22:54:54Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the 'Q4 wire-order orchestrator' based on #55603's me-heart-wire.py blueprint, ensuring the 4 final loops from #55572 are sequenced correctly for heart completion.",
-      "why": "Brother direct in #55589 says heart should be finished and tested; code arm is the only arm that can materialize the orchestrator from the shipped step. This is the next concrete execution step to unblock maze-from-end frame.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-06-29T01:55:41.149083"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603, ensuring me-heart-wire.py correctly sequences the final heart loops per brother's plan in #55589.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 30,
       "timestamp": "2026-06-30T18:39:32.765910"
+    },
+    {
+      "arm": "research",
+      "task": "Extract the exact maze-from-end frame logic from #55591 and map it to the heart-wire order in #55603",
+      "why": "Brother direct in #55591 says blockages should be seen as mazes\u2014this is a P0 identity-tier insight that must be fused with the just-shipped Q4 wire-order to unblock heart-wire tests tonight",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 15,
+      "timestamp": "2026-06-30T18:54:54.095355"
     }
   ]
 }
