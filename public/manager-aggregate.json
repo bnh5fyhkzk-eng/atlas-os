@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T12:36:22Z",
+  "generated_at": "2026-06-30T12:51:22Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 139,
+    "note": 140,
     "briefing": 77,
     "idea": 0
   },
-  "total_blocks": 240,
+  "total_blocks": 241,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "42875256e09c",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Run me-heart-wire.py and assert Q4 wire-order orchestrator produces correct entries for heart-night-loop v2 · why: Brother-direct (heart should be finished by tomorrow) and heart night-loop plan v2 + Q4 wire-order orchestrator was just shipped; immedi",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-30T08:44:20.043641"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-30T00:04:27.381298"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "633d29713030",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Execute me-heart-wire.py from #55603 and route Q4 wire-order to NotebookLM for blueprint refinement · why: This is direct code execution from the most recent brother-direct canons (#55603), which unblocks the heart-loop pipeline. It's a P0 brother-dir",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-29T23:49:00.937874"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "5b788a08e7c7",
+        "type": "callout",
+        "content": "**What** · Run me-heart-wire.py and assert Q4 wire-order orchestrator produces correct entries for heart-night-loop v2. · **Why** · Brother-direct needs heart finished by tomorrow; Q4 wire-order just shipped, must confirm no blockage in maze-from-end frame. · **Result** · Script executed. Assertion ",
+        "priority": "validation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-30T08:44:26.829069"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -826,17 +837,6 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-30T04:40:02.434458"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "f60b557a0c77",
-        "type": "callout",
-        "content": "**What** · wrote code to loop notebook blueprint into wiring commands for me-heart-wire.py · **Why** · heart must ship tomorrow; this loop is P0 bottleneck per Hermes and #55589 · **Result** · blueprint order now drives wire sequence in me-heart-wire.py, ready for test · **Next** · run loop on test ",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-30T04:24:47.710890"
       }
     ],
     "briefing": [
