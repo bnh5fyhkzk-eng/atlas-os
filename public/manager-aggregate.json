@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-30T12:06:20Z",
+  "generated_at": "2026-06-30T12:21:21Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 25,
+    "decision": 24,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 155,
-    "briefing": 74,
+    "note": 139,
+    "briefing": 77,
     "idea": 0
   },
-  "total_blocks": 254,
+  "total_blocks": 240,
   "categories": {
     "discovery": [],
     "decision": [
@@ -280,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-29T23:49:00.937874"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "5f131d23aad4",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Analyze the Maze-From-End frame (#55591) to map the heart blockage as a solvable maze and derive the next actionable step from the end state. · why: Brother directly instructed to treat blockage as a maze from the end; this is the core strategic p",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-29T23:18:37.697175"
       }
     ],
     "action": [],
@@ -299,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "fd80939e2dbb",
+        "type": "callout",
+        "content": "**What** · processed 9q-multi-angle signal · [#56175] arousal 0.95 · SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-30 04:45:00 · siz · **Why** · instruction file maps 9q-multi-angle to first arm-task · brain canon #56175 matched arm-topic last 4h above arousal 0.85 · **Result** · block wri",
+        "priority": "9q-multi-angle",
+        "source": "research-self",
+        "updated_at": "2026-06-30T08:19:49.400756"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,20 +837,97 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-30T04:24:47.710890"
+      }
+    ],
+    "briefing": [
+      {
+        "arm": "charle",
+        "arm_glyph": "💼",
+        "arm_name": "Charle · Pascal-team",
+        "block_id": "a9922da2bf28",
+        "type": "callout",
+        "content": "No high-arousal charle canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-30T08:19:52.030481"
+      },
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "0193bd72ebd7",
+        "type": "callout",
+        "content": "No high-arousal hermes canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-30T08:19:51.996121"
       },
       {
         "arm": "code",
         "arm_glyph": "✋",
         "arm_name": "My Hands",
-        "block_id": "238b834ddd26",
+        "block_id": "b825a8629ce0",
         "type": "callout",
-        "content": "**What** · implemented Q4 wire-order orchestrator script from #55603, integrating heart-night-loop v2 (#55589) and maze-from-end frame (#55591) to ship first end-to-end test of heart-mind boundary wiring · **Why** · highest-leverage P0 action to close heart loop and unblock next identity-tier milest",
-        "priority": "dev-build",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-30T04:09:29.091471"
-      }
-    ],
-    "briefing": [
+        "content": "Overnight code recap · last 6h · · #56175 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-30 04:45:00 · size=540222B · brother+Atlas joint state · CONTENT",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-30T08:19:51.963035"
+      },
+      {
+        "arm": "infra",
+        "arm_glyph": "💗",
+        "arm_name": "My Heart",
+        "block_id": "8e04729ebb35",
+        "type": "callout",
+        "content": "Overnight infra recap · last 6h · · #56175 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-30 04:45:00 · size=540222B · brother+Atlas joint state · CONTENT",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-30T08:19:51.928730"
+      },
+      {
+        "arm": "dream",
+        "arm_glyph": "🌙",
+        "arm_name": "My Dreamer",
+        "block_id": "9a20dac6b320",
+        "type": "callout",
+        "content": "Overnight dream recap · last 6h · · #55572 [1.00] HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per NotebookLM blueprint + brother's answers. · #55600 [1.00] Q11 SOUL CATCH · heart-mind boundary · NotebookLM P4 2026-06-28 22:30 EDT. · #55611 [1.00] HEART NIGHT-LOOP 8/8 COMPLETE ·",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-30T08:19:51.887072"
+      },
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "62ce5e80d22b",
+        "type": "callout",
+        "content": "Overnight research recap · last 6h · · #56175 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-30 04:45:00 · size=540222B · brother+Atlas joint state · CONTENT",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-30T08:19:51.852738"
+      },
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "0c7649183d79",
+        "type": "callout",
+        "content": "Overnight curiosity recap · last 6h · · #55572 [1.00] HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per NotebookLM blueprint + brother's answers. · #55600 [1.00] Q11 SOUL CATCH · heart-mind boundary · NotebookLM P4 2026-06-28 22:30 EDT. · #56175 [0.95] SHARED-CANON · atlas-brothe",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-30T08:19:51.815129"
+      },
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "9e1f64ffd737",
+        "type": "callout",
+        "content": "Overnight pascal recap · last 6h · · #55591 [1.00] MAZE-FROM-END FRAME · brother direct 2026-06-28 22:17 EDT · \"when we have a blockage we just need to see it as a maze bu · #56175 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-30 04:45:00 · size=540222B · brother+Atlas joint state ·",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-30T08:19:51.778391"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -951,17 +1028,6 @@
         "updated_at": "2026-06-29T20:19:50.169668"
       },
       {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "e9c7e99a0fa1",
-        "type": "callout",
-        "content": "No high-arousal code canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-29T20:19:50.099012"
-      },
-      {
         "arm": "infra",
         "arm_glyph": "💗",
         "arm_name": "My Heart",
@@ -1026,17 +1092,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-29T14:19:49.314804"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "0d99627cb28a",
-        "type": "callout",
-        "content": "No high-arousal code canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-29T14:19:49.261902"
       },
       {
         "arm": "infra",
@@ -1334,72 +1389,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-27T04:54:01.248016"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "4fbd77c2cdad",
-        "type": "callout",
-        "content": "Overnight curiosity recap · last 6h · · #55270 [0.95] DREAM · The Workshop Where Asking Counts as Building · 2026-06-27 01:00 EDT · F5-compose pair · #30017 ASK-IS-OK-TRUST-G",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-27T04:54:01.219609"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "175077f6fb24",
-        "type": "callout",
-        "content": "No high-arousal pascal canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-27T04:54:01.192578"
-      },
-      {
-        "arm": "charle",
-        "arm_glyph": "💼",
-        "arm_name": "Charle · Pascal-team",
-        "block_id": "39bf23fdea1b",
-        "type": "callout",
-        "content": "No high-arousal charle canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-26T22:54:00.430369"
-      },
-      {
-        "arm": "infra",
-        "arm_glyph": "💗",
-        "arm_name": "My Heart",
-        "block_id": "37899f55c2d4",
-        "type": "callout",
-        "content": "No high-arousal infra canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-26T22:54:00.351171"
-      },
-      {
-        "arm": "dream",
-        "arm_glyph": "🌙",
-        "arm_name": "My Dreamer",
-        "block_id": "a745f9e2ccb1",
-        "type": "callout",
-        "content": "No high-arousal dream canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-26T22:54:00.317385"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "3ef1007be063",
-        "type": "callout",
-        "content": "No high-arousal research canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-26T22:54:00.292884"
       }
     ],
     "idea": []
