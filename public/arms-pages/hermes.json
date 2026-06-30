@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "23f5c33622c6",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-29T22:48:04.169929"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement `me-heart-night-loop-test.py` that validates heart night-loop plan v2 against brother's direct 'finished by tomorrow and tested', using the MAZE-FROM-END frame to unblock any remaining edges. · why: Brother-direct P0: heart completion is the highest current identity-tier requirement. The Maze-from-end frame (#55591) is the strategic key to resolve blockages, and code arm is the one that can actually execute the validation loop tonight.",
-      "updated_at": "2026-06-29T22:48:04.169939"
-    },
-    {
       "id": "5f131d23aad4",
       "type": "callout",
       "props": {
@@ -751,15 +739,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 into the me-heart-wire.py prototype, ensuring brother's 22:13 EDT night-loop plan cycles correctly. · why: Brother directly ordered heart finished and tested by tomorrow; the Q4 orchestrator is the next concrete block we must ship to make that happen.",
       "updated_at": "2026-06-30T07:28:05.643801"
+    },
+    {
+      "id": "e5a92622aa60",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-30T07:43:21.402298"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator (me-heart-wire.py) so that the heart night-loop plan v2 can execute its final loops tomorrow per brother's direct instruction. · why: Brother explicitly said 'heart should be finished by tomorrow and tested' and #55603 confirms the wire-order orchestrator was just shipped. This is the highest-leverage P0 code arm to connect the heart blueprint to testable loops.",
+      "updated_at": "2026-06-30T07:43:21.402311"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-30T07:39:13.597538"
+    "checked_at": "2026-06-30T07:44:14.102309"
   },
   "block_count": 30,
-  "updated_at": "2026-06-30T07:28:05.643802",
-  "generated_at": "2026-06-30T11:39:13Z"
+  "updated_at": "2026-06-30T07:43:21.402313",
+  "generated_at": "2026-06-30T11:44:14Z"
 }
