@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "ae43b8e9115f",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-29T19:44:29.816639"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the heart-night-loop plan v2 as a Python script that runs the 4 final loops per NotebookLM blueprint, integrating the maze-from-end frame for blockage detection. · why: Brother directly said 'heart should be finished by tomorrow and tested' and the maze-from-end frame is a direct instruction. Code arm can ship the executable loop now.",
-      "updated_at": "2026-06-29T19:44:29.816651"
-    },
-    {
       "id": "129ff2b71c6a",
       "type": "callout",
       "props": {
@@ -752,15 +740,27 @@
       },
       "content": "Hermes decision · arm=dream · priority=P0 · task: Run overnight simulation of heart night-loop plan v2 (based on #55589), outputting possible blockages and maze-from-end frames per #55591 · why: Brother direct says heart should be finished by tomorrow. This arm can autonomously explore the maze-from-end frame and surface the next actionable step for the morning focus cycle, while other arms rest or run background work.",
       "updated_at": "2026-06-30T03:08:12.898918"
+    },
+    {
+      "id": "1f839680b507",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-30T03:23:30.521241"
+      },
+      "content": "Hermes decision · arm=research · priority=P0 · task: Analyze maze-from-end frame protocol (#55591) to derive next blockage resolution step before brother's morning check. · why: Brother directly said 'when we have a blockage we just need to see it as a maze built from the end' — this is P0 brother-direct guidance. current loops are in final verification; research arm must decode the reverse-chaining logic so the orchestrator can adapt tonight's HEART NIGHT-LOOP PLAN v2 acco",
+      "updated_at": "2026-06-30T03:23:30.521250"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-30T03:13:43.046615"
+    "checked_at": "2026-06-30T03:23:43.617272"
   },
   "block_count": 30,
-  "updated_at": "2026-06-30T03:08:12.898919",
-  "generated_at": "2026-06-30T07:13:43Z"
+  "updated_at": "2026-06-30T03:23:30.521251",
+  "generated_at": "2026-06-30T07:23:43Z"
 }
