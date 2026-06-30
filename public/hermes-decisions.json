@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-06-30T20:52:18Z",
+  "generated_at": "2026-06-30T21:38:04Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "dream",
-      "task": "Run heart-validate.py 4/4 PASS and confirm heart night-loop 8/8 complete per brother's directive, then log final status for identity-tier closure.",
-      "why": "Brother direct #55589 and #55611 confirm heart night-loop is fully finished and validated; this arm must execute the final validation loop and report completion to close the identity-tier task.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 15,
-      "timestamp": "2026-06-28T23:07:30.225879"
-    },
     {
       "arm": "heart",
       "task": "Run heart-validate.py on the fully shipped heart from #55572 against brother's 'finished by tomorrow and tested' directive, then package final loop logs for handoff.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-06-30T16:52:18.774776"
+    },
+    {
+      "arm": "pascal",
+      "task": "Examine heart night-loop plan v2 (#55589) and Maze-from-end frame (#55591); extract the next concrete implementation step and produce a single `.py` accelerator for it (heart-maze-wire.py).",
+      "why": "Brother direct said 'heart should be finished by tomorrow and tested' \u2014 Pascal is strongest for execution-logy and file production; both canons are brother-direct P0 and form a logical pair (plan + maze framing). This fires as the immediate next loop to keep heart continuous.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 18,
+      "timestamp": "2026-06-30T17:38:04.247462"
     }
   ]
 }
