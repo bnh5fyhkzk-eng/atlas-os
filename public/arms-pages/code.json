@@ -1000,15 +1000,37 @@
       },
       "content": "**What** · Run me-heart-wire.py and assert Q4 wire-order orchestrator produces correct entries for heart-night-loop v2. · **Why** · Brother-direct needs heart finished by tomorrow; Q4 wire-order just shipped, must confirm no blockage in maze-from-end frame. · **Result** · Script executed. Assertion passed: wire-order entries match heart-night-loop v2 spec. No blockage detected. · **Next** · Report to Hermes-Orchestrator; proceed to merge if brother-direct approves. · **Links** ·  · **Cycle** · code-20260630-084426",
       "updated_at": "2026-06-30T08:44:26.829069"
+    },
+    {
+      "id": "35263897aaef",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "orchestration-assembly",
+        "source": "hermes-deepseek-fill",
+        "action": "implemented step 2: wired Q4 orchestrator to publish 'heart_finished' signal after loop #55572's 4 final loops complete, per brother's 22:13 directive",
+        "why": "hermes assigned p0 to close heart cycle; step 1 from #55603 done, this step adds concrete signal so brother knows heart is finished and ready for test",
+        "result": "orchestrator now publishes heart_finished event, verified in simulation logs",
+        "next_step": "verify integration with step1 pipeline and request herman to trigger test run",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260630-085953",
+        "timestamp": "2026-06-30T08:59:53.302070"
+      },
+      "content": "**What** · implemented step 2: wired Q4 orchestrator to publish 'heart_finished' signal after loop #55572's 4 final loops complete, per brother's 22:13 directive · **Why** · hermes assigned p0 to close heart cycle; step 1 from #55603 done, this step adds concrete signal so brother knows heart is finished and ready for test · **Result** · orchestrator now publishes heart_finished event, verified in simulation logs · **Next** · verify integration with step1 pipeline and request herman to trigger test run · **Links** ·  · **Cycle** · code-20260630-085953",
+      "updated_at": "2026-06-30T08:59:53.302070"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-30T08:59:24.551969"
+    "checked_at": "2026-06-30T09:04:25.212390"
   },
-  "block_count": 31,
-  "updated_at": "2026-06-30T08:44:26.829069",
-  "generated_at": "2026-06-30T12:59:24Z"
+  "block_count": 32,
+  "updated_at": "2026-06-30T08:59:53.302070",
+  "generated_at": "2026-06-30T13:04:25Z"
 }
