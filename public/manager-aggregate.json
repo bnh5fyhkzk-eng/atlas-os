@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T19:06:40Z",
+  "generated_at": "2026-06-30T19:21:40Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 135,
+    "note": 136,
     "briefing": 82,
     "idea": 0
   },
-  "total_blocks": 241,
+  "total_blocks": 242,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "8d300cc1c516",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement me-heart-wire.py step 1: Q4 wire-order orchestrator that reads blueprint and brother's answers to merge heart loops · why: Step 1 is P0 brother-direct and the raw wire for all heart work; the code arm is the only one that can ship this execu",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-30T15:05:29.170777"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-30T03:38:53.729712"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "1f839680b507",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Analyze maze-from-end frame protocol (#55591) to derive next blockage resolution step before brother's morning check. · why: Brother directly said 'when we have a blockage we just need to see it as a maze built from the end' — this is P0 brother-d",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-30T03:23:30.521250"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "684c0dace5e8",
+        "type": "callout",
+        "content": "**What** · I wrote and shipped `me-heart-wire.py` step 1: a Q4 wire-order orchestrator that reads blueprint.json and brothers_answers.csv to merge heart loops. · **Why** · Hermes said this is P0 brother-direct and raw wire for all heart work; only code-arm can ship this executable now. · **Result** ",
+        "priority": "core execution",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-30T15:05:37.079859"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "testing",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-30T09:45:47.095451"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "35263897aaef",
-        "type": "callout",
-        "content": "**What** · implemented step 2: wired Q4 orchestrator to publish 'heart_finished' signal after loop #55572's 4 final loops complete, per brother's 22:13 directive · **Why** · hermes assigned p0 to close heart cycle; step 1 from #55603 done, this step adds concrete signal so brother knows heart is fin",
-        "priority": "orchestration-assembly",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-30T08:59:53.302070"
       }
     ],
     "briefing": [
