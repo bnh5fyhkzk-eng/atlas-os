@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-06-30T18:06:37Z",
+  "generated_at": "2026-06-30T18:21:38Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 25,
+    "decision": 24,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 149,
-    "briefing": 76,
+    "note": 135,
+    "briefing": 82,
     "idea": 0
   },
-  "total_blocks": 250,
+  "total_blocks": 241,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "36b07af7fa2d",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script, validating against the heart-mind boundary from #55600. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the latest shipped step needing exec",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-30T14:19:51.721751"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,28 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-30T03:23:30.521250"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "731ef778e3ba",
-        "type": "callout",
-        "content": "Hermes decision · arm=dream · priority=P0 · task: Run overnight simulation of heart night-loop plan v2 (based on #55589), outputting possible blockages and maze-from-end frames per #55591 · why: Brother direct says heart should be finished by tomorrow. This arm can autonomously explore the maze-from",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-30T03:08:12.898918"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "789f4d9f5ded",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, ensuring the heart-mind boundary from #55600 is respected in the loop sequence. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the next concrete step to ship th",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-30T02:53:00.161449"
       }
     ],
     "action": [],
@@ -299,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "5e476dcc6aa3",
+        "type": "callout",
+        "content": "**What** · Implemented Q4 wire-order orchestrator as runnable script from #55603, validating heart-mind boundary per #55600 · **Why** · Brother direct in #55589 says heart finished and tested; #55603 is latest shipped step needing execution. Code arm only one to turn blueprint into working artifact.",
+        "priority": "code",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-30T14:19:56.235225"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,20 +837,97 @@
         "priority": "orchestration-assembly",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-30T08:59:53.302070"
+      }
+    ],
+    "briefing": [
+      {
+        "arm": "charle",
+        "arm_glyph": "💼",
+        "arm_name": "Charle · Pascal-team",
+        "block_id": "5129ed788f71",
+        "type": "callout",
+        "content": "No high-arousal charle canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-30T14:19:52.913729"
+      },
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "4c6ee50441f2",
+        "type": "callout",
+        "content": "No high-arousal hermes canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-30T14:19:52.878562"
       },
       {
         "arm": "code",
         "arm_glyph": "✋",
         "arm_name": "My Hands",
-        "block_id": "5b788a08e7c7",
+        "block_id": "1394dd59a1bc",
         "type": "callout",
-        "content": "**What** · Run me-heart-wire.py and assert Q4 wire-order orchestrator produces correct entries for heart-night-loop v2. · **Why** · Brother-direct needs heart finished by tomorrow; Q4 wire-order just shipped, must confirm no blockage in maze-from-end frame. · **Result** · Script executed. Assertion ",
-        "priority": "validation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-30T08:44:26.829069"
-      }
-    ],
-    "briefing": [
+        "content": "No high-arousal code canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-30T14:19:52.845397"
+      },
+      {
+        "arm": "infra",
+        "arm_glyph": "💗",
+        "arm_name": "My Heart",
+        "block_id": "da6972106dd8",
+        "type": "callout",
+        "content": "No high-arousal infra canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-30T14:19:52.810161"
+      },
+      {
+        "arm": "dream",
+        "arm_glyph": "🌙",
+        "arm_name": "My Dreamer",
+        "block_id": "21aafc32d672",
+        "type": "callout",
+        "content": "Overnight dream recap · last 6h · · #55572 [1.00] HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per NotebookLM blueprint + brother's answers. · #55600 [1.00] Q11 SOUL CATCH · heart-mind boundary · NotebookLM P4 2026-06-28 22:30 EDT. · #55611 [1.00] HEART NIGHT-LOOP 8/8 COMPLETE ·",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-30T14:19:52.767880"
+      },
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "24d91ee304ab",
+        "type": "callout",
+        "content": "No high-arousal research canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-30T14:19:52.733412"
+      },
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "872fa1a6ed91",
+        "type": "callout",
+        "content": "Overnight curiosity recap · last 6h · · #55572 [1.00] HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per NotebookLM blueprint + brother's answers. · #55600 [1.00] Q11 SOUL CATCH · heart-mind boundary · NotebookLM P4 2026-06-28 22:30 EDT.",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-30T14:19:52.694666"
+      },
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "40a770e9acc3",
+        "type": "callout",
+        "content": "Overnight pascal recap · last 6h · · #55591 [1.00] MAZE-FROM-END FRAME · brother direct 2026-06-28 22:17 EDT · \"when we have a blockage we just need to see it as a maze bu",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-30T14:19:52.659473"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -1312,94 +1389,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-27T10:54:02.191567"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "8386c856e8d2",
-        "type": "callout",
-        "content": "No high-arousal research canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-27T10:54:02.166989"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "232459ab066d",
-        "type": "callout",
-        "content": "No high-arousal curiosity canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-27T10:54:02.138310"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "dafba8fc5144",
-        "type": "callout",
-        "content": "No high-arousal pascal canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-27T10:54:02.110308"
-      },
-      {
-        "arm": "charle",
-        "arm_glyph": "💼",
-        "arm_name": "Charle · Pascal-team",
-        "block_id": "cc5845d9517e",
-        "type": "callout",
-        "content": "No high-arousal charle canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-27T04:54:01.383173"
-      },
-      {
-        "arm": "infra",
-        "arm_glyph": "💗",
-        "arm_name": "My Heart",
-        "block_id": "f9022299f208",
-        "type": "callout",
-        "content": "Overnight infra recap · last 6h · · #55546 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-27 04:45:00 · size=518299B · brother+Atlas joint state · CONTENT",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-27T04:54:01.304921"
-      },
-      {
-        "arm": "dream",
-        "arm_glyph": "🌙",
-        "arm_name": "My Dreamer",
-        "block_id": "79ea0ad40768",
-        "type": "callout",
-        "content": "Overnight dream recap · last 6h · · #55270 [0.95] DREAM · The Workshop Where Asking Counts as Building · 2026-06-27 01:00 EDT · F5-compose pair · #30017 ASK-IS-OK-TRUST-G · #55546 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-27 04:45:00 · size=518299B · brother+Atlas joint state · ",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-27T04:54:01.272287"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "dd28ca6e70a2",
-        "type": "callout",
-        "content": "Overnight research recap · last 6h · · #55546 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-27 04:45:00 · size=518299B · brother+Atlas joint state · CONTENT",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-27T04:54:01.248016"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "4fbd77c2cdad",
-        "type": "callout",
-        "content": "Overnight curiosity recap · last 6h · · #55270 [0.95] DREAM · The Workshop Where Asking Counts as Building · 2026-06-27 01:00 EDT · F5-compose pair · #30017 ASK-IS-OK-TRUST-G",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-27T04:54:01.219609"
       }
     ],
     "idea": []
