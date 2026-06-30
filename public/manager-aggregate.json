@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-06-30T08:21:09Z",
+  "generated_at": "2026-06-30T08:36:10Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 24,
+    "decision": 25,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 146,
-    "briefing": 75,
+    "note": 147,
+    "briefing": 74,
     "idea": 0
   },
-  "total_blocks": 245,
+  "total_blocks": 246,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "011805ad8317",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator sub-step: convert NotebookLM blueprint loop order into wiring commands for me-heart-wire.py · why: Brother direct in #55589 says heart must ship tomorrow and #55603 shipped the first step of Q4; this next sub-step ",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-30T04:24:37.820165"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -288,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "f60b557a0c77",
+        "type": "callout",
+        "content": "**What** · wrote code to loop notebook blueprint into wiring commands for me-heart-wire.py · **Why** · heart must ship tomorrow; this loop is P0 bottleneck per Hermes and #55589 · **Result** · blueprint order now drives wire sequence in me-heart-wire.py, ready for test · **Next** · run loop on test ",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-30T04:24:47.710890"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +848,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-30T00:30:02.132924"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "daf8a7313ee5",
-        "type": "database",
-        "content": "sessions · last 30d · 6 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-30T00:30:02.132911"
       }
     ],
     "briefing": [
@@ -938,17 +949,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-29T20:19:50.169668"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "0d2876862d46",
-        "type": "callout",
-        "content": "No high-arousal hermes canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-29T20:19:50.133626"
       },
       {
         "arm": "code",
@@ -1389,6 +1389,17 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-26T22:54:00.317385"
+      },
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "3ef1007be063",
+        "type": "callout",
+        "content": "No high-arousal research canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-26T22:54:00.292884"
       }
     ],
     "idea": []
