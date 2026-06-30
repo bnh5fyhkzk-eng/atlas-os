@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T05:06:01Z",
+  "generated_at": "2026-06-30T05:21:02Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 157,
+    "note": 158,
     "briefing": 71,
     "idea": 0
   },
-  "total_blocks": 253,
+  "total_blocks": 254,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "38ab490efdb1",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Wire HEART night-loop orchestration from step 1 into the Q4 wire-order orchestrator, per brother's 22:13 direct plan. · why: Brother explicitly stated 'heart should be finished by tomorrow and tested' and step 1 just shipped — this is the P0 core path",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-30T01:05:51.956642"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-29T16:56:50.127662"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "e0518e2e104b",
-        "type": "callout",
-        "content": "Hermes decision · arm=heart · priority=P0 · task: Finish the Heart Night-Loop Plan v2 per brother direct #55589: implement and test the remaining night-loop states from the maze-from-end frame #55591, wire the Q11 soul-catch #55600 boundary triggers into the orchestrator, and ship the final 4 loops ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-29T16:26:11.107609"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "ca0c461b0fcc",
+        "type": "callout",
+        "content": "**What** · Wired HEART night-loop step 1 into Q4 wire-order orchestrator by adding a new `heart_night_orch` circuit that calls step 1 as the first op, linking its output to mind-bridge. · **Why** · Brother said heart must finish tomorrow and step 1 just shipped — closing P0 heart-mind loop requires ",
+        "priority": "orchestration-wiring",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-30T01:05:58.616370"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-29T22:02:17.043300"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "358194c149d5",
-        "type": "callout",
-        "content": "**What** · Implement next wire order for heart night-loop v2 per brother's plan. · **Why** · Step 1 shipped; Hermes assigned P0 continuation of heart night-loop plan. · **Result** · Wired order: pulse-trigger, delay-300ms, amplitude-mod, check-threshold, loop-back. Expected: stable rhythmic contract",
-        "priority": "code-deploy",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-29T21:46:56.374700"
       }
     ],
     "briefing": [
