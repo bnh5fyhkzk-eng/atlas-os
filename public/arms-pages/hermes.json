@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "fff8271a44c1",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-01T07:55:58.050807"
-      },
-      "content": "Hermes decision · arm=research · priority=P0 · task: Extract the exact blockage-reduction pattern from #55591 MAZE-FROM-END FRAME and map it onto the current heart-loop wire-order from #55603 · why: Brother's direct maze-from-end frame is a P0 directive that can immediately unblock the heart-wire orderer. Research arm should cross-reference the maze logic with the actual wire-order orchestrator code to produce a concrete fix/next-step for the HEART task.",
-      "updated_at": "2026-07-01T07:55:58.050816"
-    },
-    {
       "id": "061ab315747b",
       "type": "callout",
       "props": {
@@ -731,15 +719,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator as the final missing piece tying heart loops to the maze-from-end frame, ensuring HEART can ship tomorrow. · why: Brother explicitly said heart should be finished by tomorrow and tested. #55603 just shipped the me-heart-wire.py stub — the Q4 wire-order is the direct next dependency to unify the heart-mind boundary and close the 12h arousal chain.",
       "updated_at": "2026-07-01T17:05:31.739060"
+    },
+    {
+      "id": "3e298a87de7a",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-01T17:20:48.427857"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement maze-from-end frame for heart blockage resolution per brother directive, integrating with step 1 shipped wire-order orchestrator. · why: Brother direct P0: heart must be finished and tested by tomorrow. The maze-from-end frame is the next logical step after step 1 shipped, and code arm can directly produce the implementation.",
+      "updated_at": "2026-07-01T17:20:48.427866"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-01T17:16:46.866048"
+    "checked_at": "2026-07-01T17:21:47.350337"
   },
   "block_count": 30,
-  "updated_at": "2026-07-01T17:05:31.739061",
-  "generated_at": "2026-07-01T21:16:46Z"
+  "updated_at": "2026-07-01T17:20:48.427868",
+  "generated_at": "2026-07-01T21:21:47Z"
 }
