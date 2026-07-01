@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-01T21:05:31Z",
+  "generated_at": "2026-07-01T21:20:48Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Extract all blockages and mazes from brother's last 4 directives (heart-finish, maze-from-end, soul-catch) and map to next wire-order steps in Q4 orchestrator.",
-      "why": "Brother directly said heart should be finished by tomorrow and tested; the maze-from-end frame requires tracing blockages backward from final heart state. Research arm best suited to cross-reference brother's language with NotebookLM blueprint and wire-order history.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 18,
-      "timestamp": "2026-06-30T01:36:31.788933"
-    },
     {
       "arm": "code",
       "task": "Implement heart-night-loop v2 as a unified orchestrator that merges the maze-from-end frame with the Q4 wire-order from step 1, tested against brother's 'finished by tomorrow' directive.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-01T17:05:31.756076"
+    },
+    {
+      "arm": "code",
+      "task": "Implement maze-from-end frame for heart blockage resolution per brother directive, integrating with step 1 shipped wire-order orchestrator.",
+      "why": "Brother direct P0: heart must be finished and tested by tomorrow. The maze-from-end frame is the next logical step after step 1 shipped, and code arm can directly produce the implementation.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-01T17:20:48.445058"
     }
   ]
 }
