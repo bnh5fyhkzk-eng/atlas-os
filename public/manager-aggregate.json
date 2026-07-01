@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T03:53:10Z",
+  "generated_at": "2026-07-01T04:08:10Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 142,
+    "note": 143,
     "briefing": 83,
     "idea": 0
   },
-  "total_blocks": 250,
+  "total_blocks": 251,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "aa5306a16cc1",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Run me-heart-wire.py and verify Q4 wire-order orchestrator output, then proceed to step 2 of heart night-loop plan per brother direct. · why: Brother direct says heart should be finished and tested; step 1 shipped, so immediate next is verification an",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-01T00:02:10.811247"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-30T16:06:30.121119"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "a3c5d809e879",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Integrate Q4 wire-order orchestrator from #55603 into HEART NIGHT-LOOP PLAN v2 (#55589) to enable end-to-end test run · why: Brother direct says 'heart should be finished by tomorrow and tested'; #55603 just shipped the critical wire-order orchestrato",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-30T15:51:19.898194"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "0203a533296e",
+        "type": "callout",
+        "content": "**What** · ran me-heart-wire.py and checked Q4 wire-order orchestrator output · **Why** · brother direct says heart must be finished and tested; step 1 shipped, now verify and continue. · **Result** · Q4 order pipeline outputs correct wire sequence: L1→L2→R1→R2→V1; sync verified. · **Next** · procee",
+        "priority": "task_execution",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-01T00:02:16.959435"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-30T18:00:05.621453"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "5c2ea0f4de16",
-        "type": "database",
-        "content": "general · last 30d · 68 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-30T18:00:05.316120"
       }
     ],
     "briefing": [
