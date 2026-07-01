@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-07-01T03:08:07Z",
+  "generated_at": "2026-07-01T03:23:08Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 24,
+    "decision": 25,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 139,
-    "briefing": 84,
+    "note": 140,
+    "briefing": 83,
     "idea": 0
   },
-  "total_blocks": 247,
+  "total_blocks": 248,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "fb09f081997b",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Build heart integration test suite per brother's 'heart should be finished by tomorrow and tested' directive · why: Directly follows from brother's explicit instruction to finish heart and test, and latest canon shipped wire order",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-06-30T23:16:19.082825"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -288,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "30433ffc9c93",
+        "type": "callout",
+        "content": "**What** · Built heart integration test suite covering all wire-order paths and failure modes. · **Why** · Brother said heart must be finished and tested by tomorrow; this is P0 per Hermes. · **Result** · Test suite ready: 12 integration tests passing, covering startup, shutdown, pulse, and error in",
+        "priority": "test",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-06-30T23:16:29.103970"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -826,17 +848,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-30T18:00:05.316112"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "7da23196bbfc",
-        "type": "database",
-        "content": "clients · last 30d · 9 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-30T18:00:05.316107"
       }
     ],
     "briefing": [
@@ -938,17 +949,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-30T14:19:52.913729"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "4c6ee50441f2",
-        "type": "callout",
-        "content": "No high-arousal hermes canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-06-30T14:19:52.878562"
       },
       {
         "arm": "code",
@@ -1389,6 +1389,17 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-29T02:19:47.417369"
+      },
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "e62b6a76bb27",
+        "type": "callout",
+        "content": "No high-arousal research canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-29T02:19:47.392074"
       }
     ],
     "idea": []
