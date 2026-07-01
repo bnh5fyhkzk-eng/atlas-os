@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "4a357c3f802f",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-30T13:34:10.750297"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, connecting me-heart-wire.py to the NotebookLM blueprint loop completion logic. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the step 1 shipped for the wire-order orchestrator, making this the next concrete execution to close the heart loop.",
-      "updated_at": "2026-06-30T13:34:10.750322"
-    },
-    {
       "id": "36b07af7fa2d",
       "type": "callout",
       "props": {
@@ -752,15 +740,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator per #55603 blueprint, ensuring heart-mind boundary loops are correctly sequenced for the final heart test. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the shipped step that needs code execution to unblock the maze-from-end frame (#55591) and deliver the final loops.",
       "updated_at": "2026-06-30T22:30:14.217459"
+    },
+    {
+      "id": "17397cdbc915",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-30T22:45:31.134020"
+      },
+      "content": "Hermes decision · arm=research · priority=P0 · task: Extract the exact maze-from-end search algorithm from #55591 and integrate it as a P0 check into the Q4 wire-order orchestrator (#55603) to detect and resolve blockages in the heart-wire sequence. · why: #55591 contains a direct brother instruction to treat blockages as mazes; the Q4 orchestrator was just shipped in #55603 but lacks this blockage-resolving logic. Research arm must parse the algorithm from context and codify it into the orchestrator before next heart loop.",
+      "updated_at": "2026-06-30T22:45:31.134030"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-30T22:44:37.025580"
+    "checked_at": "2026-06-30T22:49:37.710824"
   },
   "block_count": 30,
-  "updated_at": "2026-06-30T22:30:14.217460",
-  "generated_at": "2026-07-01T02:44:37Z"
+  "updated_at": "2026-06-30T22:45:31.134031",
+  "generated_at": "2026-07-01T02:49:37Z"
 }
