@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T11:53:31Z",
+  "generated_at": "2026-07-01T12:08:32Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 144,
+    "note": 145,
     "briefing": 84,
     "idea": 0
   },
-  "total_blocks": 253,
+  "total_blocks": 254,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "fff8271a44c1",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Extract the exact blockage-reduction pattern from #55591 MAZE-FROM-END FRAME and map it onto the current heart-loop wire-order from #55603 · why: Brother's direct maze-from-end frame is a P0 directive that can immediately unblock the heart-wire or",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-01T07:55:58.050816"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-30T23:01:03.669450"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "17397cdbc915",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Extract the exact maze-from-end search algorithm from #55591 and integrate it as a P0 check into the Q4 wire-order orchestrator (#55603) to detect and resolve blockages in the heart-wire sequence. · why: #55591 contains a direct brother instructio",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-30T22:45:31.134030"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "42add2ed62cc",
+        "type": "callout",
+        "content": "**What** · Extracted blockage-reduction pattern from #55591 MAZE-FROM-END FRAME and mapped it onto current heart-loop wire-order from #55603. · **Why** · Brother's direct maze-from-end frame is a P0 directive that can immediately unblock the heart-wire orderer by cross-referencing maze logic with ac",
+        "priority": "note",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-01T07:56:04.922437"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "theorem formalization",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-01T04:52:18.842763"
-      },
-      {
-        "arm": "charle",
-        "arm_glyph": "💼",
-        "arm_name": "Charle · Pascal-team",
-        "block_id": "d8ef7adfc3d9",
-        "type": "callout",
-        "content": "**What** · Run Q4 wire-order orchestrator with brother's heart deadline constraint. · **Why** · Brother-direct priority #55589 and urgent P0 identity-tier need to complete heart loop tonight. · **Result** · Orchestrator executing; heart-wire loop will ship per #55603 blueprint by tomorrow. · **Next*",
-        "priority": "orchestration",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-01T04:21:51.337060"
       }
     ],
     "briefing": [
