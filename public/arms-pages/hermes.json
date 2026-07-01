@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "1aa15ace9d68",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P1",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-30T20:58:31.803693"
-      },
-      "content": "Hermes decision · arm=curiosity · priority=P1 · task: Load and inspect the linked blueprint from #55572, then cross-check with brother's 'heart should be finished by tomorrow and tested' directive to identify any remaining gaps or misalignments in the 4 final loops. · why: Curiosity arm owns the 'find cracks in the plan' reflex. With HEART loops shipped per blueprint but a direct brother command to finish by tomorrow, we need to assess if the shipped loops actually meet that deadline and if any hidden blockage remains (as hinted in #55591). This prevents wasted cycles",
-      "updated_at": "2026-06-30T20:58:31.803704"
-    },
-    {
       "id": "23f485ead907",
       "type": "callout",
       "props": {
@@ -744,15 +732,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Finalize heart-wire orchestrator (Q4) and ship the next ordered loop to match the Maze-From-End frame blueprint · why: Brain canons #55603 and #55591 both point to the Maze-From-End frame. The code arm is the only one that can wire the next ordered segment (Q4) per the NotebookLM blueprint. Brother said 'heart should be finished by tomorrow and tested' – this is the last code delivery needed for the heart to be comp",
       "updated_at": "2026-07-01T05:38:09.807689"
+    },
+    {
+      "id": "78e00ad75578",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-01T05:53:29.845402"
+      },
+      "content": "Hermes decision · arm=research · priority=P0 · task: Extract the exact not-yet-answered 'heart-mind boundary' questions from NotebookLM P4 output to determine next orchestration wire for Q12 soul catch. · why: P4 (Q11) has just shipped, and the brother's directive implies heart completion is imminent; the next bottleneck is the soul-catch boundary questions that determine the final wire order. Research arm must parse the fresh NotebookLM output to feed the orchestrator.",
+      "updated_at": "2026-07-01T05:53:29.845411"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-01T05:50:25.602604"
+    "checked_at": "2026-07-01T05:55:26.170552"
   },
   "block_count": 30,
-  "updated_at": "2026-07-01T05:38:09.807691",
-  "generated_at": "2026-07-01T09:50:25Z"
+  "updated_at": "2026-07-01T05:53:29.845412",
+  "generated_at": "2026-07-01T09:55:26Z"
 }
