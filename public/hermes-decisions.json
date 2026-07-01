@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-01T18:02:36Z",
+  "generated_at": "2026-07-01T18:17:46Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement `me-heart-night-loop-test.py` that validates heart night-loop plan v2 against brother's direct 'finished by tomorrow and tested', using the MAZE-FROM-END frame to unblock any remaining edges.",
-      "why": "Brother-direct P0: heart completion is the highest current identity-tier requirement. The Maze-from-end frame (#55591) is the strategic key to resolve blockages, and code arm is the one that can actually execute the validation loop tonight.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 35,
-      "timestamp": "2026-06-29T22:48:04.188009"
-    },
     {
       "arm": "research",
       "task": "Analyze the Maze-From-End frame (#55591) to map the heart blockage as a solvable maze and derive the next actionable step from the end state.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 60,
       "timestamp": "2026-07-01T14:02:36.437758"
+    },
+    {
+      "arm": "curiosity",
+      "task": "Run Maze-From-End frame on the heart-mind blockage in #55591: map the 'blockage as maze' from the end state backward, using brother's direct guidance, and output the path as a wire-order patch for me-heart-wire.py.",
+      "why": "Brother directly flagged the maze-from-end frame in #55591 as the method to resolve a blockage. This is a P0 brother-direct task that feeds immediately into the heart wire orchestrator (#55603), completing the \u2018heart finished and tested\u2019 directive from #55589.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 35,
+      "timestamp": "2026-07-01T14:17:46.954974"
     }
   ]
 }
