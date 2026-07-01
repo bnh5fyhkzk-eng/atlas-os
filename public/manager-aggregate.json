@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T19:23:49Z",
+  "generated_at": "2026-07-01T19:38:50Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 128,
+    "note": 129,
     "briefing": 90,
     "idea": 0
   },
-  "total_blocks": 242,
+  "total_blocks": 243,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "27351b7e59aa",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py module to complete the heart-mind boundary loop. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the exact step shipped for Q4 wire",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-01T15:33:55.109828"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-01T06:24:05.231092"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "78e00ad75578",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Extract the exact not-yet-answered 'heart-mind boundary' questions from NotebookLM P4 output to determine next orchestration wire for Q12 soul catch. · why: P4 (Q11) has just shipped, and the brother's directive implies heart completion is imminen",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-01T05:53:29.845411"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "ac47d9620f68",
+        "type": "callout",
+        "content": "**What** · Implemented me-heart-wire.py module to complete Q4 wire-order orchestrator from #55603. · **Why** · Hermes said heart must finish and test; #55603 is the exact step to close heart-mind boundary loop, and code arm only executor. · **Result** · Module shipped — wire ordering, heart state ca",
+        "priority": "code-completion",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-01T15:34:01.167280"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "integration-testing",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-01T11:45:17.006247"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "83d02689897b",
-        "type": "callout",
-        "content": "**What** · implemented q4 wire-order orchestrator for heart-mind boundary, shipping next step after #55603 step1 · **Why** · hermes tasked p0; brother direct #55589 says heart must finish; #55603 step1 shipped, so code arm continues heart-night-loop plan · **Result** · wire-order orchestrator code w",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-01T10:59:43.106216"
       }
     ],
     "briefing": [
