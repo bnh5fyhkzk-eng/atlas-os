@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-07-01T20:45:14Z",
-  "total_items_scored": 176,
+  "generated_at": "2026-07-01T20:55:15Z",
+  "total_items_scored": 177,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Wire all four Q4 'heart-theme-final' answer-loops into me-heart-wire.py orchestrator using brother's timestamped indexes from #55572 and #55589 \u00b7 why: Brother directly stated 'heart should be",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator for heart-wire.py, ensuring final loops are correctly sequenced per NotebookLM blueprint. \u00b7 why: Brother direct in #55603 says 'STEP 1 SHIPPED' for me",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-01T07:25:18.000841"
-    },
-    {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Extract key blockages and maze-from-end moves from recent heart-canons #55572\u2013#55603, cross-reference with NotebookLM Q4 wire-order orchestrator #55603 to identify next wire to ship \u00b7 why \u00b7 Brother direct in #55591 said 'when we have a blockage we just need to see it as a maze' \u2014 we need to map actual blockages from the heart finish and night-loop plan into the next concrete wire step. This is P0 because brother-direct + identity-tier: the heart is the final core piece.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 20,
-      "score": 10.0,
-      "updated_at": "2026-07-01T08:26:41.616399",
-      "use_skill": "notebooklm"
+      "updated_at": "2026-07-01T07:40:44.685997"
     },
     {
       "arm": "code",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-07-01T09:12:17.050580",
       "use_skill": "notebooklm"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Wire all four Q4 'heart-theme-final' answer-loops into me-heart-wire.py orchestrator using brother's timestamped indexes from #55572 and #55589 \u00b7 why: Brother directly stated 'heart should be",
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Gather and analyze the current high-arousal brain canons #55572, #55589, #55591, #55600, #55603 to identify the immediate next dependency needed to complete the heart night-loop plan v2 per brother-direct instructions \u00b7 why \u00b7 Brother-direct at #55589 says heart should be finished by tomorrow and tested; these canons form the blueprint. Research arm can synthesize them to find the exact next file or wiring step (maze-from-end frame, soul catch, wire script) that must be shippable for the heart to be testable.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 8,
       "score": 10.0,
-      "updated_at": "2026-07-01T07:25:18.000841"
-    },
+      "updated_at": "2026-07-01T09:58:19.963729",
+      "use_skill": "brain-rrf"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-01T10:44:14.173369"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator for heart-mind boundary, shipping the next step after #55603 STEP 1 SHIPPED. \u00b7 why: Brother direct in #55589 says heart should be finished and tested;",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-01T10:59:37.111587"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
