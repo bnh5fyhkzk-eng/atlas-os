@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-01T12:11:18Z",
+  "generated_at": "2026-07-01T12:26:41Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "infra",
-      "task": "Wire the Q4 orchestrator to actually trigger `me-heart-wire.py` from Step 1, ensuring the start-heart loop fires on schedule per brother's directive (heart finished & tested by tomorrow).",
-      "why": "We just shipped Step 1 orchestrator wire-order in #55603, but it's not yet live-connected to the execution loop. Brother directly said 'heart should be finished by tomorrow and tested' \u2014 this is a P0 identity-tier command. Infra must make the connection now so the Night-Loop Plan v2 (#55589) can execute.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 15,
-      "timestamp": "2026-06-29T18:28:29.354135"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py module to complete the heart-mind boundary loop.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-01T08:11:18.951895"
+    },
+    {
+      "arm": "research",
+      "task": "Extract key blockages and maze-from-end moves from recent heart-canons #55572\u2013#55603, cross-reference with NotebookLM Q4 wire-order orchestrator #55603 to identify next wire to ship",
+      "why": "Brother direct in #55591 said 'when we have a blockage we just need to see it as a maze' \u2014 we need to map actual blockages from the heart finish and night-loop plan into the next concrete wire step. This is P0 because brother-direct + identity-tier: the heart is the final core piece.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 20,
+      "timestamp": "2026-07-01T08:26:41.616399"
     }
   ]
 }
