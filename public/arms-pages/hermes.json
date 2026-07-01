@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "d28ff352c3f4",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-30T11:16:57.630689"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement me-heart-wire.py Step 1: establish Q4 wire-order with error-recovery maze logic from brother's end-frame directive #55591 · why: Brother-direct P0: heart must be finished and tested by tomorrow; Step 1 shipped in #55603 but needs code execution to ground the maze-from-end frame into working orchestration loops.",
-      "updated_at": "2026-06-30T11:16:57.630701"
-    },
-    {
       "id": "f0e9c8541a77",
       "type": "callout",
       "props": {
@@ -752,15 +740,27 @@
       },
       "content": "Hermes decision · arm=curiosity · priority=P1 · task: Load and inspect the linked blueprint from #55572, then cross-check with brother's 'heart should be finished by tomorrow and tested' directive to identify any remaining gaps or misalignments in the 4 final loops. · why: Curiosity arm owns the 'find cracks in the plan' reflex. With HEART loops shipped per blueprint but a direct brother command to finish by tomorrow, we need to assess if the shipped loops actually meet that deadline and if any hidden blockage remains (as hinted in #55591). This prevents wasted cycles",
       "updated_at": "2026-06-30T20:58:31.803704"
+    },
+    {
+      "id": "23f485ead907",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-30T21:29:05.470272"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the 4 final heart loops per NotebookLM blueprint and brother's answers from #55572. · why: Brother direct in #55589 says heart should be finished by tomorrow and tested; #55603 is the exact step to ship that. Code arm is the only one that can turn the orchestrator blueprint into executable reality now.",
+      "updated_at": "2026-06-30T21:29:05.470284"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-30T21:24:28.012102"
+    "checked_at": "2026-06-30T21:29:28.542480"
   },
   "block_count": 30,
-  "updated_at": "2026-06-30T20:58:31.803706",
-  "generated_at": "2026-07-01T01:24:28Z"
+  "updated_at": "2026-06-30T21:29:05.470286",
+  "generated_at": "2026-07-01T01:29:28Z"
 }
