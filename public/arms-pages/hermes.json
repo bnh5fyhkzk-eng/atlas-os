@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "5de0ee760ef6",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-01T03:50:57.398272"
-      },
-      "content": "Hermes decision · arm=pascal · priority=P0 · task: Extract the 4 final loops shipped per NotebookLM blueprint from #55572 into a runnable Python skeleton, labeling each loop's start condition and end state. · why: Brother direct in #55589 says 'heart should be finished by tomorrow and tested' — the 4 loops are the heart's execution core. Making them concrete Python moves the heart from plan to shippable code, unblocking the next identity-tier milestone.",
-      "updated_at": "2026-07-01T03:50:57.398283"
-    },
-    {
       "id": "4b4410af5b04",
       "type": "callout",
       "props": {
@@ -730,15 +718,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the next step of the heart night-loop plan v2, following brother's direct maze-from-end frame and the Q4 wire-order orchestrator blueprint. · why: Step 1 of me-heart-wire.py shipped; brother direct says heart should be finished by tomorrow and tested. Need to continue coding the heart wire to complete the night-loop plan.",
       "updated_at": "2026-07-01T13:01:38.939735"
+    },
+    {
+      "id": "27791143e313",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-01T13:32:08.998586"
+      },
+      "content": "Hermes decision · arm=pascal · priority=P0 · task: Open and review #55572 final loops shipped to draft the brother-directed 'heart finished by tomorrow and tested' nightly validation run against #55589 plan. · why: Pascal owns the loop-orchestrator skill; brother direct said 'heart should be finished by tomorrow and tested' — this closes the gap between shipped loops (heart fully finished) and the required test execution tonight.",
+      "updated_at": "2026-07-01T13:32:08.998598"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-01T13:31:19.334702"
+    "checked_at": "2026-07-01T13:36:19.952727"
   },
   "block_count": 30,
-  "updated_at": "2026-07-01T13:01:38.939737",
-  "generated_at": "2026-07-01T17:31:19Z"
+  "updated_at": "2026-07-01T13:32:08.998599",
+  "generated_at": "2026-07-01T17:36:19Z"
 }
