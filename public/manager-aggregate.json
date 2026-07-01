@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T07:53:20Z",
+  "generated_at": "2026-07-01T08:08:20Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 132,
+    "note": 133,
     "briefing": 85,
     "idea": 0
   },
-  "total_blocks": 241,
+  "total_blocks": 242,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "5de0ee760ef6",
+        "type": "callout",
+        "content": "Hermes decision · arm=pascal · priority=P0 · task: Extract the 4 final loops shipped per NotebookLM blueprint from #55572 into a runnable Python skeleton, labeling each loop's start condition and end state. · why: Brother direct in #55589 says 'heart should be finished by tomorrow and tested' — the ",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-01T03:50:57.398283"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-30T19:10:33.824861"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "1c1b44273407",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Extract the exact maze-from-end frame logic from #55591 and map it to the heart-wire order in #55603 · why: Brother direct in #55591 says blockages should be seen as mazes—this is a P0 identity-tier insight that must be fused with the just-shipped",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-30T18:54:53.987006"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "89278e905e6c",
+        "type": "callout",
+        "content": "**What** · Extracted 4 final loops from blueprint #55572: (1) warmup loop: start when RMS < 0.5, end at harm sync; (2) beat loop: start on QRS trigger, end after systolic; (3) risk loop: start at ST deviation > 0.2mV, end when stable; (4) monitor loop: start with heartbeat timer, end at sleep flag. ",
+        "priority": "code-write",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-01T03:51:12.403231"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "orchestration",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-06-30T23:31:49.763931"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "30433ffc9c93",
-        "type": "callout",
-        "content": "**What** · Built heart integration test suite covering all wire-order paths and failure modes. · **Why** · Brother said heart must be finished and tested by tomorrow; this is P0 per Hermes. · **Result** · Test suite ready: 12 integration tests passing, covering startup, shutdown, pulse, and error in",
-        "priority": "test",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-06-30T23:16:29.103970"
       }
     ],
     "briefing": [
