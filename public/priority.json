@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-01T08:54:32Z",
-  "total_items_scored": 179,
+  "generated_at": "2026-07-01T09:04:32Z",
+  "total_items_scored": 181,
   "top_3": [
     {
       "arm": "hermes",
@@ -62,17 +62,6 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-30T20:43:12.541240"
-    },
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P1 \u00b7 task: Load and inspect the linked blueprint from #55572, then cross-check with brother's 'heart should be finished by tomorrow and tested' directive to identify any remaining gaps or misalignm",
-      "category": "decision",
-      "priority": "P1",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-06-30T20:58:31.803704"
     },
     {
       "arm": "hermes",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-06-30T23:01:03.669450"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Build heart integration test suite per brother's 'heart should be finished by tomorrow and tested' directive \u00b7 why: Directly follows from brother's explicit instruction to finish heart and te",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-06-30T23:16:19.082825"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
