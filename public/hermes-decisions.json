@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-01T00:43:12Z",
+  "generated_at": "2026-07-01T00:58:31Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the next step in heart wire-order orchestrator based on Q4 wire-order and brother's answers",
-      "why": "Continuation of P0 heart project, directly from brother's instructions to finish and test heart",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-06-29T04:12:48.316333"
-    },
     {
       "arm": "code",
       "task": "Implement me-heart-wire.py Q4 wire-order orchestrator per STEP 1 blueprint and brother's maze-from-end frame",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-06-30T20:43:12.558379"
+    },
+    {
+      "arm": "curiosity",
+      "task": "Load and inspect the linked blueprint from #55572, then cross-check with brother's 'heart should be finished by tomorrow and tested' directive to identify any remaining gaps or misalignments in the 4 final loops.",
+      "why": "Curiosity arm owns the 'find cracks in the plan' reflex. With HEART loops shipped per blueprint but a direct brother command to finish by tomorrow, we need to assess if the shipped loops actually meet that deadline and if any hidden blockage remains (as hinted in #55591). This prevents wasted cycles on downstream arms.",
+      "priority": "P1",
+      "use_skill": "notebooklm",
+      "est_minutes": 12,
+      "timestamp": "2026-06-30T20:58:31.820939"
     }
   ]
 }
