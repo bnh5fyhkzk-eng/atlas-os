@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T18:38:47Z",
+  "generated_at": "2026-07-01T18:53:48Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 126,
+    "note": 127,
     "briefing": 90,
     "idea": 0
   },
-  "total_blocks": 240,
+  "total_blocks": 241,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "6ec5e7959605",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the first working loop of me-heart-wire.py with brother's maze-from-end frame logic · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the step 1 shipped a",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-01T14:48:09.660328"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-01T05:38:09.807689"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "a5b940409636",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py script to finalize the heart-mind wire order per brother's direct instruction. · why: Brother directly said 'heart should be finished by tomorrow and tested' and #5560",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-01T05:22:44.932477"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "2539b2b8ce00",
+        "type": "callout",
+        "content": "**What** · Implemented Q4 wire-order orchestrator from #55603: shipped first working loop of me-heart-wire.py with brother's maze-from-end frame logic. · **Why** · Brother-direct P0, identity-tier, code arm only one to ship. #55603 step 1 artifact needs execution. · **Result** · First working loop o",
+        "priority": "code implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-01T14:48:14.660090"
+      },
       {
         "arm": "curiosity",
         "arm_glyph": "🌱",
@@ -826,17 +837,6 @@
         "priority": "boundary-encode",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-01T10:44:17.536962"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "fa7ae38c2cf6",
-        "type": "callout",
-        "content": "**What** · Parsed Q4 wire order from #55591 blueprint and implemented the heart-wire orchestrator loop in me-heart-wire.py: added sorted execution sequence based on end-frame maze unblock logic. · **Why** · Brother direct said heart must finish tomorrow; #55603 only shipped skeleton. Blueprint Q4 wi",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-01T10:13:53.598393"
       }
     ],
     "briefing": [
