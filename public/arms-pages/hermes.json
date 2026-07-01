@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "17397cdbc915",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-30T22:45:31.134020"
-      },
-      "content": "Hermes decision · arm=research · priority=P0 · task: Extract the exact maze-from-end search algorithm from #55591 and integrate it as a P0 check into the Q4 wire-order orchestrator (#55603) to detect and resolve blockages in the heart-wire sequence. · why: #55591 contains a direct brother instruction to treat blockages as mazes; the Q4 orchestrator was just shipped in #55603 but lacks this blockage-resolving logic. Research arm must parse the algorithm from context and codify it into the orchestrator before next heart loop.",
-      "updated_at": "2026-06-30T22:45:31.134030"
-    },
-    {
       "id": "c20ac4504133",
       "type": "callout",
       "props": {
@@ -737,15 +725,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator for heart-wire.py, ensuring final loops are correctly sequenced per NotebookLM blueprint. · why: Brother direct in #55603 says 'STEP 1 SHIPPED' for me-heart-wire.py, and #55572 confirms 4 final loops shipped. Code arm must complete the orchestrator to align with the heart-night-loop plan and maze-from-end frame.",
       "updated_at": "2026-07-01T07:40:44.685997"
+    },
+    {
+      "id": "fff8271a44c1",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-01T07:55:58.050807"
+      },
+      "content": "Hermes decision · arm=research · priority=P0 · task: Extract the exact blockage-reduction pattern from #55591 MAZE-FROM-END FRAME and map it onto the current heart-loop wire-order from #55603 · why: Brother's direct maze-from-end frame is a P0 directive that can immediately unblock the heart-wire orderer. Research arm should cross-reference the maze logic with the actual wire-order orchestrator code to produce a concrete fix/next-step for the HEART task.",
+      "updated_at": "2026-07-01T07:55:58.050816"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-01T07:55:39.956528"
+    "checked_at": "2026-07-01T08:00:40.475742"
   },
   "block_count": 30,
-  "updated_at": "2026-07-01T07:40:44.685998",
-  "generated_at": "2026-07-01T11:55:39Z"
+  "updated_at": "2026-07-01T07:55:58.050818",
+  "generated_at": "2026-07-01T12:00:40Z"
 }
