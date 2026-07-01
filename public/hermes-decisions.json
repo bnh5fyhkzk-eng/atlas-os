@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-01T16:30:57Z",
+  "generated_at": "2026-07-01T17:01:38Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement Q4 wire-order orchestrator as per #55603 blueprint, consuming HEART data from NotebookLM and brother's answers to finalize the 4-loop shipment.",
-      "why": "This is the direct next step from #55603 STEP 1 SHIPPED \u2014 the orchestrator is wired to the HEART finish (P0 brother-direct) and must be coded now to unblock the full integration test.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 45,
-      "timestamp": "2026-06-29T22:02:06.036540"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603, shipping the first working loop of me-heart-wire.py",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 25,
       "timestamp": "2026-07-01T12:30:57.732115"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the next step of the heart night-loop plan v2, following brother's direct maze-from-end frame and the Q4 wire-order orchestrator blueprint.",
+      "why": "Step 1 of me-heart-wire.py shipped; brother direct says heart should be finished by tomorrow and tested. Need to continue coding the heart wire to complete the night-loop plan.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 45,
+      "timestamp": "2026-07-01T13:01:38.956663"
     }
   ]
 }
