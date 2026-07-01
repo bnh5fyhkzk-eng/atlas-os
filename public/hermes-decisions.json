@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-01T01:44:26Z",
+  "generated_at": "2026-07-01T01:59:39Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Finish wiring `me-heart-wire.py` per #55603 blueprint: implement Q4 orchestration of final 4 loops, integrate brother's maze-from-end frame logic for blockage handling.",
-      "why": "Heart finishing is P0 brother-direct command from #55589 and #55591; code arm contains the orchestration script that is the next concrete step to ship the heart. All recent canons converge on this delivery.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-06-29T05:14:25.576812"
-    },
     {
       "arm": "code",
       "task": "wire the Q4 orchestrator (me-heart-wire.py) to the actual heart loop runner, testing the first full cycle from Q1\u2013Q4 with NotebookLM blueprint and brother's 2026-06-28 heart-finished directive.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 30,
       "timestamp": "2026-06-30T21:44:26.317864"
+    },
+    {
+      "arm": "code",
+      "task": "Finish Q4 wire-order orchestrator in me-heart-wire.py per Step One shipped frame (55603); ensure loop sends final three heartbeat verdicts to maze-embed.",
+      "why": "Brother direct (55589) said heart should be finished \u2013 Q4 is the last quantum wire step; code-arm holds the editor and the compiled blueprint. Shipping this completes the heart construction, unblocking the soul-catch test (55600).",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 18,
+      "timestamp": "2026-06-30T21:59:39.947213"
     }
   ]
 }
