@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "36b07af7fa2d",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-06-30T14:19:51.721738"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script, validating against the heart-mind boundary from #55600. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the latest shipped step needing execution. Code arm is the only one that can turn the wire-order blueprint into a working artifact.",
-      "updated_at": "2026-06-30T14:19:51.721751"
-    },
-    {
       "id": "4c6ee50441f2",
       "type": "callout",
       "props": {
@@ -752,15 +740,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P0 · task: Extract the exact maze-from-end search algorithm from #55591 and integrate it as a P0 check into the Q4 wire-order orchestrator (#55603) to detect and resolve blockages in the heart-wire sequence. · why: #55591 contains a direct brother instruction to treat blockages as mazes; the Q4 orchestrator was just shipped in #55603 but lacks this blockage-resolving logic. Research arm must parse the algorithm from context and codify it into the orchestrator before next heart loop.",
       "updated_at": "2026-06-30T22:45:31.134030"
+    },
+    {
+      "id": "c20ac4504133",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-06-30T23:01:03.669439"
+      },
+      "content": "Hermes decision · arm=research · priority=P0 · task: Analyze Q11 SOUL CATCH heart-mind boundary implementation from NotebookLM P4 to finalize the wire-order for the sub-soul protocol · why: Brain canon #55600 (Q11 SOUL CATCH) is a direct brother reference at the heart-mind boundary, critical to completing the HEART NIGHT-LOOP PLAN v2 (#55589) before tomorrow’s deadline. Research arm can map this against the existing maze-from-end frame (#55591) to unblock the next orchestration step.",
+      "updated_at": "2026-06-30T23:01:03.669450"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-06-30T22:59:38.825978"
+    "checked_at": "2026-06-30T23:04:39.390570"
   },
   "block_count": 30,
-  "updated_at": "2026-06-30T22:45:31.134031",
-  "generated_at": "2026-07-01T02:59:38Z"
+  "updated_at": "2026-06-30T23:01:03.669451",
+  "generated_at": "2026-07-01T03:04:39Z"
 }
