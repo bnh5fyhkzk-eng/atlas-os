@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-01T04:48:06Z",
+  "generated_at": "2026-07-01T05:03:20Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Run me-heart-wire.py orchestrator against the latest 4 final loops from #55572 to validate wire order and detect any blockages per brother's maze-from-end directive.",
-      "why": "Brother direct in #55591 says to see blockages as mazes; #55603 shipped step 1 orchestrator. This validates the core heartbeat loop immediately, preventing drift from brother's 'finished by tomorrow' deadline.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 15,
-      "timestamp": "2026-06-29T09:49:13.248140"
-    },
     {
       "arm": "code",
       "task": "Implement heart test script per brother's directive and maze-from-end frame",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 25,
       "timestamp": "2026-07-01T00:48:06.855055"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator as a Python script that sequences the final heart loops per NotebookLM blueprint and brother's direct instructions.",
+      "why": "Brother direct #55572 and #55589 state heart should be finished and tested by tomorrow; #55603 already shipped the me-heart-wire.py skeleton. This arm completes the core orchestration logic to ship the remaining loops.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-01T01:03:20.467708"
     }
   ]
 }
