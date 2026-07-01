@@ -1045,15 +1045,37 @@
       },
       "content": "**What** · Read brain canons #55572, #55589, #55591, #55600, #55603 to find next dependency for heart night-loop plan v2. · **Why** · Brother-direct at #55589 says heart must be finished by tomorrow and tested; these canons are the blueprint. Synthesizing them shows the immediate missing piece. · **Result** · Identified that wiring step 'wire_script_v2.py' is incomplete – it lacks the 'maze-from-end frame' mapping to 'soul catch' buffer. This is the only gap preventing testability. · **Next** · Ship the completed wire_script_v2.py with the maze-from-end → soul catch link, then trigger build-and-test pipeline. · **Links** ·  · **Cycle** · research-20260701-095829",
       "updated_at": "2026-07-01T09:58:29.052753"
+    },
+    {
+      "id": "a7a0c09d042d",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "boundary-encode",
+        "source": "hermes-deepseek-fill",
+        "action": "Extracted Q11 soul-catch boundary from NotebookLM P4 and translated into a concrete condition for me-heart-wire.py: block if heart-mind wire detects soul-catch flag (soul_catch == True) and Q11 thresh",
+        "why": "Brother said heart must finish tomorrow; #55600 shows Q11 soul catch is the critical boundary. Without this blocker, further loops risk undefined behavior.",
+        "result": "Condition defined: in me-heart-wire.py, add `if soul_catch and q11_score > 0.7: raise HeartMindBlock('Q11 soul catch active')` before any loop iteration.",
+        "next_step": "Implement the blocker in me-heart-wire.py and test with a mock Q11 soul-catch signal to verify loop halts.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260701-104417",
+        "timestamp": "2026-07-01T10:44:17.536962"
+      },
+      "content": "**What** · Extracted Q11 soul-catch boundary from NotebookLM P4 and translated into a concrete condition for me-heart-wire.py: block if heart-mind wire detects soul-catch flag (soul_catch == True) and Q11 threshold (q11_score > 0.7). · **Why** · Brother said heart must finish tomorrow; #55600 shows Q11 soul catch is the critical boundary. Without this blocker, further loops risk undefined behavior. · **Result** · Condition defined: in me-heart-wire.py, add `if soul_catch and q11_score > 0.7: raise HeartMindBlock('Q11 soul catch active')` before any loop iteration. · **Next** · Implement the blocker in me-heart-wire.py and test with a mock Q11 soul-catch signal to verify loop halts. · **Links** ·  · **Cycle** · research-20260701-104417",
+      "updated_at": "2026-07-01T10:44:17.536962"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-01T10:40:59.138074"
+    "checked_at": "2026-07-01T10:45:59.657524"
   },
-  "block_count": 31,
-  "updated_at": "2026-07-01T09:58:29.052753",
-  "generated_at": "2026-07-01T14:40:59Z"
+  "block_count": 32,
+  "updated_at": "2026-07-01T10:44:17.536962",
+  "generated_at": "2026-07-01T14:45:59Z"
 }
