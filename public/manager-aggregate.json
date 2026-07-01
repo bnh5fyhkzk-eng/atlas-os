@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T04:08:10Z",
+  "generated_at": "2026-07-01T04:23:11Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 143,
+    "note": 144,
     "briefing": 83,
     "idea": 0
   },
-  "total_blocks": 251,
+  "total_blocks": 252,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "6be81996561b",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement and test the heart night-loop plan v2 per brother's direct instructions, focusing on maze-from-end frame to resolve blockages and ensure heart testing by deadline. · why: Brother directly instructed to finish heart by tomorrow and test; step",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-01T00:17:26.924002"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-06-30T16:21:48.895263"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "df615e4cdfd9",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the first working version of me-heart-wire.py to connect heart loops to NotebookLM blueprint · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the exact n",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-30T16:06:30.121119"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "445e99255f7c",
+        "type": "callout",
+        "content": "**What** · Implemented heart night-loop plan v2: patched maze-from-end resolver to clear blockages, wired end-to-end test harness, and ran first integration pass. · **Why** · Brother’s direct P0 order: finish heart by tomorrow and test. Step 1 shipped, now maze-from-end frame was blocking completion",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-01T00:17:32.384215"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-06-30T18:00:05.621461"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "d2d6c1c1de19",
-        "type": "database",
-        "content": "youtube-watches · last 30d · 7 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-06-30T18:00:05.621453"
       }
     ],
     "briefing": [
