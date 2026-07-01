@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-01T07:35:33Z",
+  "generated_at": "2026-07-01T07:50:57Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "pascal",
-      "task": "Translate Q11 SOUL CATCH NotebookLM P4 into a runnable P0 probe: test if model can distinguish heart-cache vs mind-cache on a direct brother-asked blockage.",
-      "why": "Brother's 'maze-from-end' frame and 'heart should be finished by tomorrow and tested' demand immediate active probe. Pascal arm is optimized for binary state resolution (heart-cache/mind-cache) and can ship a test loop within 15min.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 15,
-      "timestamp": "2026-06-29T12:06:25.985338"
-    },
     {
       "arm": "code",
       "task": "Implement me-heart-wire.py Q4 wire-order orchestrator per brother's direct instruction and NotebookLM blueprint",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-01T03:35:33.368934"
+    },
+    {
+      "arm": "pascal",
+      "task": "Extract the 4 final loops shipped per NotebookLM blueprint from #55572 into a runnable Python skeleton, labeling each loop's start condition and end state.",
+      "why": "Brother direct in #55589 says 'heart should be finished by tomorrow and tested' \u2014 the 4 loops are the heart's execution core. Making them concrete Python moves the heart from plan to shippable code, unblocking the next identity-tier milestone.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 18,
+      "timestamp": "2026-07-01T03:50:57.416737"
     }
   ]
 }
