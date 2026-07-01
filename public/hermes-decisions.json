@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-01T10:24:05Z",
+  "generated_at": "2026-07-01T10:39:26Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement `me-heart-wire.py` full Q4 orchestrator: parse brother's night-loop plan v2, map to 4 final loops, wire each arm's next fire command, and validate against NotebookLM blueprint.",
-      "why": "Brother-direct (P0) said 'heart should be finished by tomorrow and tested' and #55603 already shipped step 1. This is the core orchestrator that turns that plan into executable wire commands\u2014highest urgency for identity-tier delivery.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-06-29T15:55:39.578606"
-    },
     {
       "arm": "heart",
       "task": "Finish the Heart Night-Loop Plan v2 per brother direct #55589: implement and test the remaining night-loop states from the maze-from-end frame #55591, wire the Q11 soul-catch #55600 boundary triggers into the orchestrator, and ship the final 4 loops as step 1 of the wire-order orchestrator #55603.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-01T06:24:05.248263"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator (me-heart-wire.py) per brother's directive: wire heart night-loop plan v2, maze-from-end frame, and Q11 soul catch into the final 4 loops per NotebookLM blueprint.",
+      "why": "Brother directly said 'heart should be finished by tomorrow and tested' \u2014 this is the last blocking arm to close the heart loop. Code arm is the only one that can ship the actual wire-ordering script. P0 because brother-direct + identity-tier.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 60,
+      "timestamp": "2026-07-01T06:39:26.036158"
     }
   ]
 }
