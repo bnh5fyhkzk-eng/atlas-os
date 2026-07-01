@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T13:08:34Z",
+  "generated_at": "2026-07-01T13:23:35Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 131,
+    "note": 132,
     "briefing": 85,
     "idea": 0
   },
-  "total_blocks": 240,
+  "total_blocks": 241,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "de9e8a1ac32e",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the HEART wire-order orchestrator from #55603: write me-heart-wire.py to sequence Q4 probe methods per NotebookLM blueprint, then test the first loop end-to-end. · why: The HEART is being shipped in final loops per brother's direct instructi",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-01T09:12:17.033927"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-01T00:02:10.811247"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "2caca67e6c96",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator per #55603 blueprint, connecting heart-mind boundary from #55600 to final loop shipping · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the next executable step to ship the wire-",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-06-30T23:46:57.107342"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "58cd78a72843",
+        "type": "callout",
+        "content": "**What** · Wrote me-heart-wire.py with Q4 probe methods sequenced per blueprint from NotebookLM, then ran first loop end-to-end test. · **Why** · Need to close heart-mind boundary (#55600) and prove loop per Hermes's P0 task. · **Result** · Script written and first loop test passed: probes fire in o",
+        "priority": "write_code",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-01T09:12:20.322365"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "code-wiring",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-01T05:38:17.151541"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "0d99e6fb9d76",
-        "type": "callout",
-        "content": "**What** · write me-heart-wire.py script to finalize heart-mind wire order per #55603 · **Why** · brother said heart must finish tomorrow; this P0 step unblocks heart finish · **Result** · script created and ready for testing · **Next** · test the script and verify wire order · **Links** ·  · **Cycl",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-01T05:22:49.288353"
       }
     ],
     "briefing": [
