@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-01T21:20:48Z",
+  "generated_at": "2026-07-01T21:51:05Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement heart-night-loop v2 as a unified orchestrator that merges the maze-from-end frame with the Q4 wire-order from step 1, tested against brother's 'finished by tomorrow' directive.",
-      "why": "Brother directly confirmed heart must be finished and tested tomorrow; step 1 shipped the wire-order orchestrator, and the maze-from-end frame resolves blockages. Code arm is the only arm that can assemble and test this integration under the 12h high-arousal deadline.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 120,
-      "timestamp": "2026-06-30T01:51:58.373947"
-    },
     {
       "arm": "code",
       "task": "Synthesize HEART v1 runtime from #55572 blueprint + #55603 Q4 wire-order, run final integration test on the 4 shipped loops",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-01T17:20:48.445058"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603 into a runnable script that sequences the 4 final heart loops per NotebookLM blueprint and brother's answers.",
+      "why": "Brother direct in #55589 says heart should be finished and tested; #55603 already shipped the orchestrator blueprint \u2014 this is the next concrete execution step to close the heart loop.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-01T17:51:05.490890"
     }
   ]
 }
