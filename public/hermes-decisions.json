@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-01T16:15:44Z",
+  "generated_at": "2026-07-01T16:30:57Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement and test the next wire order for heart night-loop based on brother's plan",
-      "why": "Step 1 shipped, need to continue per brother direct and heart night-loop plan v2",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-06-29T21:46:49.429802"
-    },
     {
       "arm": "code",
       "task": "Implement Q4 wire-order orchestrator as per #55603 blueprint, consuming HEART data from NotebookLM and brother's answers to finalize the 4-loop shipment.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 15,
       "timestamp": "2026-07-01T12:15:44.813345"
+    },
+    {
+      "arm": "code",
+      "task": "Wire Q4 orchestrator to actually launch the heart-wire loop per #55603 step1, test with NotebookLM blueprint",
+      "why": "Heart finish is P0 brother-direct from #55572/#55589, and we just shipped step1 orchestrator \u2014 this cycle must run the actual wire to close the loop before night cycle.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 25,
+      "timestamp": "2026-07-01T12:30:57.732115"
     }
   ]
 }
