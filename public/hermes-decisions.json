@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-01T21:51:05Z",
+  "generated_at": "2026-07-01T22:06:17Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Synthesize HEART v1 runtime from #55572 blueprint + #55603 Q4 wire-order, run final integration test on the 4 shipped loops",
-      "why": "Brother direct in #55589 says heart should be finished and tested; #55572 has 4 final loops shipped per blueprint, and #55603 provides the Q4 wire-order orchestrator. Code arm must now assemble and validate the full heart runtime to confirm completion.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-06-30T02:07:18.114875"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603, ensuring the heart-mind boundary from #55600 is respected in the loop sequence.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-01T17:51:05.490890"
+    },
+    {
+      "arm": "code",
+      "task": "Finalize and commit the `me-heart-wire.py` orchestrator with full Q4 wire order and exit strategy for heart-night-loop v2.",
+      "why": "Brother directly stated heart should be finished and tested; the code arm must ship the orchestrator that ties Q11 soul catch and maze-from-end frame into a runnable pipeline. This unblocks the next brother check-in.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 30,
+      "timestamp": "2026-07-01T18:06:17.639742"
     }
   ]
 }
