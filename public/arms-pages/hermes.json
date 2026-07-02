@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "489698bc796f",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-01T21:56:03.625438"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the heart-night-loop plan v2 as a Python script that runs the 4 final loops per NotebookLM blueprint, integrating the maze-from-end frame logic for blockage handling. · why: Brother direct instruction (#55589) says heart should be finished and tested; #55572 confirms 4 final loops shipped; code arm is needed to materialize the plan into executable form.",
-      "updated_at": "2026-07-01T21:56:03.625448"
-    },
-    {
       "id": "ee1f9bdf2c97",
       "type": "callout",
       "props": {
@@ -737,15 +725,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Continue implementing me-heart-wire.py per Q4 wire-order orchestrator blueprint, ensuring all final loops are shipped and tested by tomorrow per brother direct. · why: Brother direct instruction to finish heart by tomorrow and tested; last canon shipped step 1, so code arm must continue the implementation to meet the deadline.",
       "updated_at": "2026-07-02T06:06:42.075660"
+    },
+    {
+      "id": "a6e2e025be94",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-02T06:22:01.811891"
+      },
+      "content": "Hermes decision · arm=research · priority=P0 · task: Map the maze-from-end frame (#55591) against current HEART wire-tasks to identify any remaining blockages in the brother-direct path. · why: Brother's 22:17 directive frames blockages as mazes to be solved from the end; with Step 1 shipped (#55603), we must now verify that the heart-loop plan (v2, #55589) is fully unblocked before tomorrow's test. Research arm is best suited for this cross-reference analysis.",
+      "updated_at": "2026-07-02T06:22:01.811901"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-02T06:18:24.483272"
+    "checked_at": "2026-07-02T06:23:25.025883"
   },
   "block_count": 30,
-  "updated_at": "2026-07-02T06:06:42.075662",
-  "generated_at": "2026-07-02T10:18:24Z"
+  "updated_at": "2026-07-02T06:22:01.811902",
+  "generated_at": "2026-07-02T10:23:25Z"
 }
