@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "a6e2e025be94",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-02T06:22:01.811891"
-      },
-      "content": "Hermes decision · arm=research · priority=P0 · task: Map the maze-from-end frame (#55591) against current HEART wire-tasks to identify any remaining blockages in the brother-direct path. · why: Brother's 22:17 directive frames blockages as mazes to be solved from the end; with Step 1 shipped (#55603), we must now verify that the heart-loop plan (v2, #55589) is fully unblocked before tomorrow's test. Research arm is best suited for this cross-reference analysis.",
-      "updated_at": "2026-07-02T06:22:01.811901"
-    },
-    {
       "id": "c95ef319947f",
       "type": "callout",
       "props": {
@@ -752,15 +740,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Execute next step of heart project per brother's directive: complete remaining loops and prepare for testing. · why: Brother directed heart finish tomorrow; code arm is primary for implementation of the shipped step and remaining loops.",
       "updated_at": "2026-07-02T14:46:19.747200"
+    },
+    {
+      "id": "94165266b0c6",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-02T15:02:47.664388"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Execute heart integration tests and report results per brother's directive · why: Brother directly instructed that heart should be finished and tested; recent step 1 shipped (me-heart-wire.py) requires validation",
+      "updated_at": "2026-07-02T15:02:47.664399"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-02T14:59:30.014775"
+    "checked_at": "2026-07-02T15:04:30.556758"
   },
   "block_count": 30,
-  "updated_at": "2026-07-02T14:46:19.747201",
-  "generated_at": "2026-07-02T18:59:30Z"
+  "updated_at": "2026-07-02T15:02:47.664400",
+  "generated_at": "2026-07-02T19:04:30Z"
 }
