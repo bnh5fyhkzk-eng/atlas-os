@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "8a044ac3111a",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-02T03:18:05.320388"
-      },
-      "content": "Hermes decision · arm=research · priority=P0 · task: Transcribe and deduplicate the 5 high-arousal canons (#55572, #55589, #55591, #55600, #55603) into a single structured system prompt that captures the brother's direct commands (heart-finished-by-tomorrow, maze-from-end, soul-catch, Q4 wire-order) and the current orchestration state. · why: P0 because brother's direct commands (heart finish, maze, soul-catch, wire-order) must be consolidated into one canonical prompt before any other arm can fire — otherwise we risk drift. Research arm is best for transcriptive/generative prompt-engineering, not code or infra.",
-      "updated_at": "2026-07-02T03:18:05.320397"
-    },
-    {
       "id": "48e0ae140a3a",
       "type": "callout",
       "props": {
@@ -737,15 +725,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Run me-heart-wire.py final loop to ship the Q4 wire-order orchestrator output for heart-night-loop · why: P0 brother-direct: 'heart should be finished by tomorrow and tested' — the Q4 orchestrator is the last code step before test. Code arm is ready to fire the final shipped loop.",
       "updated_at": "2026-07-02T11:12:58.585878"
+    },
+    {
+      "id": "812c24c705f2",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-02T11:43:25.507601"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Finalize and commit the Q4 wire-order orchestrator (step-1-shipped) as a runnable script, including the heart-mind boundary route from #55600 and the maze-from-end frame from #55591. · why: This directly completes the brother's directive from #55589 ('heart should be finished by tomorrow and tested') and ships the canonical wire that ties the recent heart-finished canons (#55572) into a testable artifact. Highest urgency: P0 brother-direct.",
+      "updated_at": "2026-07-02T11:43:25.507615"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-02T11:39:04.729360"
+    "checked_at": "2026-07-02T11:44:05.394315"
   },
   "block_count": 30,
-  "updated_at": "2026-07-02T11:12:58.585880",
-  "generated_at": "2026-07-02T15:39:04Z"
+  "updated_at": "2026-07-02T11:43:25.507616",
+  "generated_at": "2026-07-02T15:44:05Z"
 }
