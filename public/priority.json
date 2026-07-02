@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-07-02T02:25:33Z",
-  "total_items_scored": 172,
+  "generated_at": "2026-07-02T02:35:34Z",
+  "total_items_scored": 173,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement step 2 of heart-wire.py: wire ordering from Q4 orchestrator. \u00b7 why: Brother directive to finish heart by tomorrow; step 1 shipped in #55603, continue with step 2.",
+      "content": "Hermes decision \u00b7 arm=curiosity \u00b7 priority=P0 \u00b7 task: Run Maze-From-End frame on the heart-mind blockage in #55591: map the 'blockage as maze' from the end state backward, using brother's direct guidance, and output the path as a wire-order",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-01T14:02:36.420797"
+      "updated_at": "2026-07-01T14:17:46.938229"
     },
     {
       "arm": "code",
       "arm_glyph": "\u270b",
       "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py module to complete the heart-mind boundary loop. \u00b7 why \u00b7 Brother direct in #55589 says heart should be finished and tested; #55603 is the exact step shipped for Q4 wire-order, and code arm is the only one that can execute this. This is the next concrete action to close the heart loop.",
+      "content": "HERMES TASK \u00b7 Run the me-heart-wire.py orchestrator on the shipped step 1 to verify heart output and begin step 2 integration. \u00b7 why \u00b7 Brother direct that heart should be finished and tested; step 1 shipped; need to verify and proceed.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 45,
+      "est_minutes": 30,
       "score": 10.0,
-      "updated_at": "2026-07-01T15:33:55.126717",
+      "updated_at": "2026-07-01T15:49:12.114021",
       "use_skill": "none"
     },
     {
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement step 2 of heart-wire.py: wire ordering from Q4 orchestrator. \u00b7 why: Brother directive to finish heart by tomorrow; step 1 shipped in #55603, continue with step 2.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-07-01T14:02:36.420797"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-01T17:05:31.739060"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement maze-from-end frame for heart blockage resolution per brother directive, integrating with step 1 shipped wire-order orchestrator. \u00b7 why: Brother direct P0: heart must be finished an",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-01T17:20:48.427866"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
