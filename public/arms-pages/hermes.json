@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "c2455ca38006",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-01T14:17:46.938217"
-      },
-      "content": "Hermes decision · arm=curiosity · priority=P0 · task: Run Maze-From-End frame on the heart-mind blockage in #55591: map the 'blockage as maze' from the end state backward, using brother's direct guidance, and output the path as a wire-order patch for me-heart-wire.py. · why: Brother directly flagged the maze-from-end frame in #55591 as the method to resolve a blockage. This is a P0 brother-direct task that feeds immediately into the heart wire orchestrator (#55603), completing the ‘heart finished and tested’ directive from #55589.",
-      "updated_at": "2026-07-01T14:17:46.938229"
-    },
-    {
       "id": "c4215354c13a",
       "type": "callout",
       "props": {
@@ -731,15 +719,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator per #55603 blueprint: me-heart-wire.py that sequences the four final loops from NotebookLM into Heart FINISHED state, including error recovery and brother's answer injection at step boundaries. · why: #55603 is the latest P0 brother-direct wire-order. Code arm is responsible for this orchestration layer. This task directly unblocks Heart FINISHED (P0 identity-tier) per #55589. All other arms are either supporting or P1/P2.",
       "updated_at": "2026-07-01T22:26:54.040335"
+    },
+    {
+      "id": "46a1e31b1ec2",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-01T22:42:09.510442"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Execute step 1 of Q4 wire-order orchestrator: implement me-heart-wire.py with Maze-from-End frame logic and brother's night-loop heartbeat test harness · why: Brother directly said heart should be finished by tomorrow and tested; step 1 is the P0 gate to unblock the entire Q4 loop. Code arm must fire now to ship the wire-order orchestrator per #55603.",
+      "updated_at": "2026-07-01T22:42:09.510452"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-01T22:37:28.542006"
+    "checked_at": "2026-07-01T22:42:29.141919"
   },
   "block_count": 30,
-  "updated_at": "2026-07-01T22:26:54.040337",
-  "generated_at": "2026-07-02T02:37:28Z"
+  "updated_at": "2026-07-01T22:42:09.510453",
+  "generated_at": "2026-07-02T02:42:29Z"
 }
