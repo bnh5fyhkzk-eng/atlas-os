@@ -1066,15 +1066,37 @@
       },
       "content": "**What** · Implemented self-testing multi-cycle queued runner for wire-order orchestrator with P0/P1/P2 priority discipline and cyclic invocation via Hermes core. · **Why** · Continuation of #55603 to productionize scheduler, enforce priority discipline, and automate firing per Hermes orchestrator directive. · **Result** · Scheduler module with unit tests, queued execution, and heartbeat integration. · **Next** · Deploy to staging, run integration tests, then merge to main. · **Links** ·  · **Cycle** · code-20260702-033332",
       "updated_at": "2026-07-02T03:33:32.159115"
+    },
+    {
+      "id": "2697aa81e847",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "integration",
+        "source": "hermes-deepseek-fill",
+        "action": "Will complete heart-wire.py integration with Q4 orchestration by adding missing endpoints, verifying state alignment, and initiating test loop.",
+        "why": "Hermes tasked arm-code to finish heart-wire.py so Brother can test by tomorrow; integration with Q4 is the critical path to unblock the test loop.",
+        "result": "Expected: heart-wire.py will export the necessary hooks, Q4 orchestration will wire in cyclic scheduler, and test loop execution will start with mock passage data.",
+        "next_step": "Run the heartbeat test loop, confirm metrics pass, and report results to Hermes for Brother's review.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260702-034853",
+        "timestamp": "2026-07-02T03:48:53.006849"
+      },
+      "content": "**What** · Will complete heart-wire.py integration with Q4 orchestration by adding missing endpoints, verifying state alignment, and initiating test loop. · **Why** · Hermes tasked arm-code to finish heart-wire.py so Brother can test by tomorrow; integration with Q4 is the critical path to unblock the test loop. · **Result** · Expected: heart-wire.py will export the necessary hooks, Q4 orchestration will wire in cyclic scheduler, and test loop execution will start with mock passage data. · **Next** · Run the heartbeat test loop, confirm metrics pass, and report results to Hermes for Brother's review. · **Links** ·  · **Cycle** · code-20260702-034853",
+      "updated_at": "2026-07-02T03:48:53.006849"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-02T03:48:07.800195"
+    "checked_at": "2026-07-02T03:53:08.286596"
   },
-  "block_count": 34,
-  "updated_at": "2026-07-02T03:33:32.159115",
-  "generated_at": "2026-07-02T07:48:07Z"
+  "block_count": 35,
+  "updated_at": "2026-07-02T03:48:53.006849",
+  "generated_at": "2026-07-02T07:53:08Z"
 }
