@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "4653e3dc9062",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-01T22:26:54.040320"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator per #55603 blueprint: me-heart-wire.py that sequences the four final loops from NotebookLM into Heart FINISHED state, including error recovery and brother's answer injection at step boundaries. · why: #55603 is the latest P0 brother-direct wire-order. Code arm is responsible for this orchestration layer. This task directly unblocks Heart FINISHED (P0 identity-tier) per #55589. All other arms are either supporting or P1/P2.",
-      "updated_at": "2026-07-01T22:26:54.040335"
-    },
-    {
       "id": "46a1e31b1ec2",
       "type": "callout",
       "props": {
@@ -737,15 +725,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py step to complete the heart-mind boundary wiring per brother's direct timeline. · why: Brother direct said 'heart should be finished by tomorrow and tested' — #55589. The Q4 wire-order orchestrator (#55603) is the next concrete code step to ship the heart-mind boundary. This is the highest-leverage P0 action to close the heart loop and unblock the maze-from-end frame.",
       "updated_at": "2026-07-02T06:37:23.358794"
+    },
+    {
+      "id": "1a8ec7dde85a",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-02T06:52:37.977829"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 into a runnable script that sequences the final heart loops per NotebookLM blueprint and brother's answers. · why: Brother directly said 'heart should be finished by tomorrow and tested' — this is the highest urgency P0 task. The orchestrator script is the critical path to ship the heart, and code arm is the only one that can execute it.",
+      "updated_at": "2026-07-02T06:52:37.977839"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-02T06:48:28.055859"
+    "checked_at": "2026-07-02T06:53:28.596665"
   },
   "block_count": 30,
-  "updated_at": "2026-07-02T06:37:23.358796",
-  "generated_at": "2026-07-02T10:48:28Z"
+  "updated_at": "2026-07-02T06:52:37.977840",
+  "generated_at": "2026-07-02T10:53:28Z"
 }
