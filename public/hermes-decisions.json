@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-02T03:58:21Z",
+  "generated_at": "2026-07-02T04:28:54Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement me-heart-wire.py step 2: wire Q4 orchestrator to publish heart finished signal per brother's 22:13 directive",
-      "why": "Brother directly said 'heart should be finished by tomorrow and tested' and loop #55572 shipped 4 final loops; step 1 from #55603 is done, step 2 is the next concrete code action to maintain momentum and close the heart cycle",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-06-30T08:59:36.924456"
-    },
     {
       "arm": "orchestrator",
       "task": "Complete the Q4 wire-order orchestrator by merging brother's HEART NIGHT-LOOP PLAN v2 constraints with the Maze-From-End Frame into a single executable wire sequence, then fire the 'heart-finish' arm",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 120,
       "timestamp": "2026-07-01T23:58:21.328314"
+    },
+    {
+      "arm": "code",
+      "task": "Wire Q4 orchestrator into me-heart-wire.py per brother's maze-from-end frame, shipping step 2 of heart night-loop",
+      "why": "Brother direct in #55589 says 'heart should be finished by tomorrow and tested'. #55603 already shipped step 1 (wire-order orchestrator). Step 2 must implement the maze-from-end blockage resolution (#55591) as the next concrete loop segment. Code arm is primed from last cycle's Q4 wire-order work.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-02T00:28:54.233544"
     }
   ]
 }
