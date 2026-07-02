@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T07:24:20Z",
+  "generated_at": "2026-07-02T07:39:21Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 125,
+    "note": 126,
     "briefing": 95,
     "idea": 0
   },
-  "total_blocks": 244,
+  "total_blocks": 245,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "48e0ae140a3a",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Convert the Q4 wire-order orchestrator (heart-firing script) into a self-testing, queued multi-cycle runner that fires one arm per cycle based on priority and brother directives. · why: The #55603 step shipped a wire-order orchestrator; now we need a ",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-02T03:33:27.012025"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-01T18:52:16.430729"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "ab345cd8ca6f",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator for the heart-mind boundary, shipping the next step after STEP 1 per brother's direct instruction. · why: Brother direct #55603 just shipped STEP 1 of the me-heart-wire.py orchestrator; code arm must continue t",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-01T18:36:57.660384"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "dbe554b10a8a",
+        "type": "callout",
+        "content": "**What** · Implemented self-testing multi-cycle queued runner for wire-order orchestrator with P0/P1/P2 priority discipline and cyclic invocation via Hermes core. · **Why** · Continuation of #55603 to productionize scheduler, enforce priority discipline, and automate firing per Hermes orchestrator d",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-02T03:33:32.159115"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -826,17 +837,6 @@
         "priority": "code-integration",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-02T00:29:04.448928"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "3c3a210de1c7",
-        "type": "callout",
-        "content": "**What** · assembled Q4 wire-order orchestrator per brother's heart night-loop plan v2. · **Why** · Hermes ordered direct finish of heart; step1 shipped, need Q4 wire order to complete loops. · **Result** · orchestrator ready, Q4 wire sequence linked to heart night-loop execution. · **Next** · run h",
-        "priority": "orchestration",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-01T23:58:26.385303"
       }
     ],
     "briefing": [
