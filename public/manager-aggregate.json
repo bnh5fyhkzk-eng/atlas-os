@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T07:39:21Z",
+  "generated_at": "2026-07-02T07:54:21Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 126,
+    "note": 127,
     "briefing": 95,
     "idea": 0
   },
-  "total_blocks": 245,
+  "total_blocks": 246,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "9915feebdc67",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Complete heart-wire.py integration with Q4 orchestration and initiate test loop · why: Brother direct to finish heart by tomorrow and test; step 1 shipped, now need to integrate and test.",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-02T03:48:46.285704"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-01T19:53:12.948862"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "322ac8ad2514",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py module with the exact loop sequence per brother's blueprint. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the concrete step to s",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-01T18:52:16.430729"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "2697aa81e847",
+        "type": "callout",
+        "content": "**What** · Will complete heart-wire.py integration with Q4 orchestration by adding missing endpoints, verifying state alignment, and initiating test loop. · **Why** · Hermes tasked arm-code to finish heart-wire.py so Brother can test by tomorrow; integration with Q4 is the critical path to unblock t",
+        "priority": "integration",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-02T03:48:53.006849"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-07-02T00:30:00.943236"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "1ae6ed045802",
-        "type": "callout",
-        "content": "**What** · Wired Q4 orchestrator into me-heart-wire.py for maze-from-end blockage resolution, shipping step 2 of heart night-loop. · **Why** · Brother direct #55589 demands heart finished by tomorrow; #55603 shipped step 1, and #55591 defines the next concrete blockage resolution segment. · **Result",
-        "priority": "code-integration",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-02T00:29:04.448928"
       }
     ],
     "briefing": [
