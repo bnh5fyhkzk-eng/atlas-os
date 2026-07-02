@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T10:09:26Z",
+  "generated_at": "2026-07-02T10:24:27Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 135,
+    "note": 136,
     "briefing": 94,
     "idea": 0
   },
-  "total_blocks": 254,
+  "total_blocks": 255,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "a6e2e025be94",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Map the maze-from-end frame (#55591) against current HEART wire-tasks to identify any remaining blockages in the brother-direct path. · why: Brother's 22:17 directive frames blockages as mazes to be solved from the end; with Step 1 shipped (#55603",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-02T06:22:01.811901"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-01T22:11:21.539097"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "489698bc796f",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the heart-night-loop plan v2 as a Python script that runs the 4 final loops per NotebookLM blueprint, integrating the maze-from-end frame logic for blockage handling. · why: Brother direct instruction (#55589) says heart should be finished a",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-01T21:56:03.625448"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "39e05b7362c3",
+        "type": "callout",
+        "content": "**What** · cross-referenced maze-from-end frame #55591 against current HEART wire-tasks to identify blockages in brother-direct path. · **Why** · Hermes assigned P0 task to verify heart-loop plan v2 (#55589) is unblocked before tomorrow's test; brother's 22:17 directive frames blockages as mazes sol",
+        "priority": "cross-reference analysis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-02T06:22:14.416088"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "integration",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-02T03:48:53.006849"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "dbe554b10a8a",
-        "type": "callout",
-        "content": "**What** · Implemented self-testing multi-cycle queued runner for wire-order orchestrator with P0/P1/P2 priority discipline and cyclic invocation via Hermes core. · **Why** · Continuation of #55603 to productionize scheduler, enforce priority discipline, and automate firing per Hermes orchestrator d",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-02T03:33:32.159115"
       }
     ],
     "briefing": [
