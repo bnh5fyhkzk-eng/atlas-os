@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "27791143e313",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-01T13:32:08.998586"
-      },
-      "content": "Hermes decision · arm=pascal · priority=P0 · task: Open and review #55572 final loops shipped to draft the brother-directed 'heart finished by tomorrow and tested' nightly validation run against #55589 plan. · why: Pascal owns the loop-orchestrator skill; brother direct said 'heart should be finished by tomorrow and tested' — this closes the gap between shipped loops (heart fully finished) and the required test execution tonight.",
-      "updated_at": "2026-07-01T13:32:08.998598"
-    },
-    {
       "id": "af25c62f295f",
       "type": "callout",
       "props": {
@@ -731,15 +719,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the heart-night-loop plan v2 as a Python script that runs the 4 final loops per NotebookLM blueprint, integrating the maze-from-end frame logic for blockage handling. · why: Brother direct instruction (#55589) says heart should be finished and tested; #55572 confirms 4 final loops shipped; code arm is needed to materialize the plan into executable form.",
       "updated_at": "2026-07-01T21:56:03.625448"
+    },
+    {
+      "id": "ee1f9bdf2c97",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-01T22:11:21.539073"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, integrating the heart-night-loop plan v2 and maze-from-end frame into the me-heart-wire.py script. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the shipped step that needs code execution to close the loop. This is the highest-arousal, most recent actionable canon.",
+      "updated_at": "2026-07-01T22:11:21.539097"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-01T22:07:24.939120"
+    "checked_at": "2026-07-01T22:12:25.506845"
   },
   "block_count": 30,
-  "updated_at": "2026-07-01T21:56:03.625450",
-  "generated_at": "2026-07-02T02:07:24Z"
+  "updated_at": "2026-07-01T22:11:21.539099",
+  "generated_at": "2026-07-02T02:12:25Z"
 }
