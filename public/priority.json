@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-07-02T13:36:12Z",
-  "total_items_scored": 165,
+  "generated_at": "2026-07-02T13:46:12Z",
+  "total_items_scored": 166,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P0 \u00b7 task: Draft email to brother with resolved heart-loop timeline (KAN:2026-06-29 09:00) + attach current orchestrator wire as proof of step 1 shipped \u00b7 why: Brother asked heart be finished and test",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Finalize and run me-heart-wire.py orchestrator: validate Q4 wire order against brother's 'heart finished by tomorrow' deadline and ship the final 4 loops per NotebookLM blueprint. \u00b7 why: Dire",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-02T02:16:40.068922"
-    },
-    {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Transcribe and deduplicate the 5 high-arousal canons (#55572, #55589, #55591, #55600, #55603) into a single structured system prompt that captures the brother's direct commands (heart-finished-by-tomorrow, maze-from-end, soul-catch, Q4 wire-order) and the current orchestration state. \u00b7 why \u00b7 P0 because brother's direct commands (heart finish, maze, soul-catch, wire-order) must be consolidated into one canonical prompt before any other arm can fire \u2014 otherwise we risk drift. Research arm is best for transcriptive/generative prompt-engineering, not code or infra.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 20,
-      "score": 10.0,
-      "updated_at": "2026-07-02T03:18:05.336793",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-07-02T02:32:02.368780"
     },
     {
       "arm": "code",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-07-02T03:33:27.028629",
       "use_skill": "brain-rrf"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P0 \u00b7 task: Draft email to brother with resolved heart-loop timeline (KAN:2026-06-29 09:00) + attach current orchestrator wire as proof of step 1 shipped \u00b7 why: Brother asked heart be finished and test",
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Map the maze-from-end frame (#55591) against current HEART wire-tasks to identify any remaining blockages in the brother-direct path. \u00b7 why \u00b7 Brother's 22:17 directive frames blockages as mazes to be solved from the end; with Step 1 shipped (#55603), we must now verify that the heart-loop plan (v2, #55589) is fully unblocked before tomorrow's test. Research arm is best suited for this cross-reference analysis.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 12,
       "score": 10.0,
-      "updated_at": "2026-07-02T02:16:40.068922"
-    },
+      "updated_at": "2026-07-02T06:22:01.828147",
+      "use_skill": "brain-rrf"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-02T05:05:09.086812"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement Q11 soul-catch wire: build the 'heart-mind boundary' script that listens for NotebookLM P4 outputs and catches the soul-level signal before it enters mind-routing \u00b7 why: Brother dir",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-02T05:20:38.661154"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
