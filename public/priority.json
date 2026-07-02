@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-07-02T02:05:32Z",
+  "generated_at": "2026-07-02T02:15:33Z",
   "total_items_scored": 172,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P0 \u00b7 task: Open and review #55572 final loops shipped to draft the brother-directed 'heart finished by tomorrow and tested' nightly validation run against #55589 plan. \u00b7 why: Pascal owns the loop-orch",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement step 2 of heart-wire.py: wire ordering from Q4 orchestrator. \u00b7 why: Brother directive to finish heart by tomorrow; step 1 shipped in #55603, continue with step 2.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-01T13:32:08.998598"
+      "updated_at": "2026-07-01T14:02:36.420797"
     },
     {
       "arm": "code",
       "arm_glyph": "\u270b",
       "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Implement the Q4 wire-order orchestrator for heart-mind boundary, shipping the final loop per brother's direct instruction in #55603. \u00b7 why \u00b7 Brother directly shipped Step 1 in #55603; this is the immediate next step to complete the heart night-loop plan (#55589) and finish the maze-from-end frame (#55591). Code arm is the only one that can execute this.",
+      "content": "HERMES TASK \u00b7 Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py module to complete the heart-mind boundary loop. \u00b7 why \u00b7 Brother direct in #55589 says heart should be finished and tested; #55603 is the exact step shipped for Q4 wire-order, and code arm is the only one that can execute this. This is the next concrete action to close the heart loop.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-07-01T15:18:38.733665",
-      "use_skill": "notebooklm"
+      "updated_at": "2026-07-01T15:33:55.126717",
+      "use_skill": "none"
     },
     {
       "arm": "dream",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P0 \u00b7 task: Open and review #55572 final loops shipped to draft the brother-directed 'heart finished by tomorrow and tested' nightly validation run against #55589 plan. \u00b7 why: Pascal owns the loop-orch",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-07-01T13:32:08.998598"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-01T16:50:17.593714"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator as the final missing piece tying heart loops to the maze-from-end frame, ensuring HEART can ship tomorrow. \u00b7 why: Brother explicitly said heart should",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-01T17:05:31.739060"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
