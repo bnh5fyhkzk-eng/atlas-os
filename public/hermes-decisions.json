@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-02T14:27:09Z",
+  "generated_at": "2026-07-02T14:42:32Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator per #55603 blueprint, ensuring heart-mind boundary loops are correctly sequenced for the final heart test.",
-      "why": "Brother direct in #55589 says heart should be finished and tested; #55603 is the shipped step that needs code execution to unblock the maze-from-end frame (#55591) and deliver the final loops.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-06-30T22:30:14.234286"
-    },
     {
       "arm": "research",
       "task": "Extract the exact maze-from-end search algorithm from #55591 and integrate it as a P0 check into the Q4 wire-order orchestrator (#55603) to detect and resolve blockages in the heart-wire sequence.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-02T10:27:09.855259"
+    },
+    {
+      "arm": "code",
+      "task": "Implement next step of heart wire order orchestrator (Q4) per brother's direct plan and shipped step 1",
+      "why": "Brother direct P0: heart must be finished and tested by tomorrow. Step 1 shipped (#55603), now need to continue wire-order orchestration to complete heart loop.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 45,
+      "timestamp": "2026-07-02T10:42:32.747654"
     }
   ]
 }
