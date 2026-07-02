@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "1e22a8a094d9",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-02T05:51:23.132480"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator from #55603 as a standalone script, then run it against heart-wire.py to verify all 4 final loops are shipped and no blockages remain. · why: Q4 is the direct brother-requested wire-order orchestrator (P0) and the next executable step after shipping step 1; code arm is uniquely capable of turning the blueprint into runnable tests.",
-      "updated_at": "2026-07-02T05:51:23.132490"
-    },
-    {
       "id": "fd04d848c128",
       "type": "callout",
       "props": {
@@ -752,15 +740,27 @@
       },
       "content": "recap-error · hermes",
       "updated_at": "2026-07-02T14:20:38.375209"
+    },
+    {
+      "id": "bf0566747bb4",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-02T14:31:02.594485"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement HEART-NIGHT-LOOP v2 from plan #55589: finalize heart wire orchestration per brother's 'finished by tomorrow and tested' directive. · why: Brother's P0 directive and the HEART milestone dependency chain (loops, maze-frame, soul-catch) converge here — code arm is the only arm that can ship the wire-order orchestrator while respecting the 22:43 step-1 pattern.",
+      "updated_at": "2026-07-02T14:31:02.594494"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-02T14:29:25.922872"
+    "checked_at": "2026-07-02T14:34:26.486935"
   },
   "block_count": 30,
-  "updated_at": "2026-07-02T14:20:38.375211",
-  "generated_at": "2026-07-02T18:29:25Z"
+  "updated_at": "2026-07-02T14:31:02.594495",
+  "generated_at": "2026-07-02T18:34:26Z"
 }
