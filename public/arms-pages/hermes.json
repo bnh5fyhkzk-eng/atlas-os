@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "ab345cd8ca6f",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-01T18:36:57.660374"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator for the heart-mind boundary, shipping the next step after STEP 1 per brother's direct instruction. · why: Brother direct #55603 just shipped STEP 1 of the me-heart-wire.py orchestrator; code arm must continue the sequence to maintain momentum on the heart-night-loop plan (#55589) and finish heart by tomorrow.",
-      "updated_at": "2026-07-01T18:36:57.660384"
-    },
-    {
       "id": "322ac8ad2514",
       "type": "callout",
       "props": {
@@ -731,15 +719,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P0 · task: Transcribe and deduplicate the 5 high-arousal canons (#55572, #55589, #55591, #55600, #55603) into a single structured system prompt that captures the brother's direct commands (heart-finished-by-tomorrow, maze-from-end, soul-catch, Q4 wire-order) and the current orchestration state. · why: P0 because brother's direct commands (heart finish, maze, soul-catch, wire-order) must be consolidated into one canonical prompt before any other arm can fire — otherwise we risk drift. Research arm is best for transcriptive/generative prompt-engineering, not code or infra.",
       "updated_at": "2026-07-02T03:18:05.320397"
+    },
+    {
+      "id": "48e0ae140a3a",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-02T03:33:27.012017"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Convert the Q4 wire-order orchestrator (heart-firing script) into a self-testing, queued multi-cycle runner that fires one arm per cycle based on priority and brother directives. · why: The #55603 step shipped a wire-order orchestrator; now we need a production-quality scheduler that enforces the P0/P1/P2 discipline and can be called cyclically by the Hermes core. This is a direct P0 continuation and removes manual firing, making the system autonomous.",
+      "updated_at": "2026-07-02T03:33:27.012025"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-02T03:33:06.083571"
+    "checked_at": "2026-07-02T03:38:06.563934"
   },
   "block_count": 30,
-  "updated_at": "2026-07-02T03:18:05.320399",
-  "generated_at": "2026-07-02T07:33:06Z"
+  "updated_at": "2026-07-02T03:33:27.012027",
+  "generated_at": "2026-07-02T07:38:06Z"
 }
