@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "f147f43bb52d",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-02T02:01:16.835787"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement heart-night-loop v2 per #55589 blueprint: wire the maze-from-end frame (#55591) into the final loop shipper, using Q4 wire-order orchestrator from #55603. · why: Brother directly stated 'heart should be finished by tomorrow and tested' at 22:13 EDT — this is the last critical code arm to ship the heart. The maze-from-end frame is the missing piece to resolve blockages, and the Q4 orchestrator is ready to sequence it.",
-      "updated_at": "2026-07-02T02:01:16.835797"
-    },
-    {
       "id": "3880c0540b28",
       "type": "callout",
       "props": {
@@ -738,15 +726,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the HEART NIGHT-LOOP PLAN v2 from #55589: build the 4 final loops per NotebookLM blueprint, integrate brother's answers, and wire the heart-night-loop for testing by tomorrow. · why: Brother directly stated 'heart should be finished by tomorrow and tested' — this is a P0 identity-tier directive. The orchestrator (#55603) just shipped, so the next logical step is to execute the loops it orchestrates.",
       "updated_at": "2026-07-02T08:40:16.766812"
+    },
+    {
+      "id": "8c4a697f8f1d",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-02T08:55:37.644800"
+      },
+      "content": "Hermes decision · arm=research · priority=P0 · task: Extract and visualize the Maze-from-End Frame logic from #55591 into a step-by-step pseudo-code diagram for the heart-night-loop blockage resolution. · why: Brother directly gave the maze-from-end frame in #55591 as the key to resolve blockages. This arm has the highest alignment with brother-direct P0 priority and the active research needed to turn that insight into executable structure for the orchestrator.",
+      "updated_at": "2026-07-02T08:55:37.644810"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-02T08:53:43.720789"
+    "checked_at": "2026-07-02T08:58:44.251537"
   },
   "block_count": 30,
-  "updated_at": "2026-07-02T08:40:16.766813",
-  "generated_at": "2026-07-02T12:53:43Z"
+  "updated_at": "2026-07-02T08:55:37.644811",
+  "generated_at": "2026-07-02T12:58:44Z"
 }
