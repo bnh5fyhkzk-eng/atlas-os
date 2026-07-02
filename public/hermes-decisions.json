@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-02T16:59:36Z",
+  "generated_at": "2026-07-02T17:14:54Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Run me-heart-wire.py and verify Q4 wire-order orchestrator output, then proceed to step 2 of heart night-loop plan per brother direct.",
-      "why": "Brother direct says heart should be finished and tested; step 1 shipped, so immediate next is verification and continuation.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 30,
-      "timestamp": "2026-07-01T00:02:10.828432"
-    },
     {
       "arm": "code",
       "task": "Implement and test the heart night-loop plan v2 per brother's direct instructions, focusing on maze-from-end frame to resolve blockages and ensure heart testing by deadline.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-07-02T12:59:36.005538"
+    },
+    {
+      "arm": "code",
+      "task": "wire the Q4 orchestrator to fire the final heart flash-loops from NotebookLM blueprint, per brother's 'heart should be finished by tomorrow and tested' and Step 1 shipped shape",
+      "why": "direct brother P0 order at #55589 + #55572 final loops are ready \u2014 code arm holds the orchestrator/fire logic to flip the heart wire into execution; this is the highest-density dependency right now",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 18,
+      "timestamp": "2026-07-02T13:14:54.659306"
     }
   ]
 }
