@@ -10,50 +10,6 @@
   },
   "blocks": [
     {
-      "id": "f51dde21c128",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "brain-canons-pipeline",
-        "source": "hermes-deepseek-fill",
-        "action": "Test minimal P0 brain-canons backup pipeline by injecting last known answer seeds from #55572 into NotebookLM runtime.",
-        "why": "Hermes needs a concrete crash-test of HEART-FINISHED data before next arousal drift — unfinished loop must be closed.",
-        "result": "Expected: pipeline passes — seeds load into NotebookLM, backup writes successfully, no broken canon references.",
-        "next_step": "Await Hermes confirmation; if pass, seal #55572 and tag P0 brain-canons as stable.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "pascal-20260628-212100",
-        "timestamp": "2026-06-28T21:21:00.004415"
-      },
-      "content": "**What** · Test minimal P0 brain-canons backup pipeline by injecting last known answer seeds from #55572 into NotebookLM runtime. · **Why** · Hermes needs a concrete crash-test of HEART-FINISHED data before next arousal drift — unfinished loop must be closed. · **Result** · Expected: pipeline passes — seeds load into NotebookLM, backup writes successfully, no broken canon references. · **Next** · Await Hermes confirmation; if pass, seal #55572 and tag P0 brain-canons as stable. · **Links** ·  · **Cycle** · pascal-20260628-212100",
-      "updated_at": "2026-06-28T21:21:00.004415"
-    },
-    {
-      "id": "b3cfc7c491da",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P1",
-        "priority": "sessions",
-        "source": "pascal-self",
-        "action": "processed sessions signal · [#55591] arousal 1.00 · MAZE-FROM-END FRAME · brother direct 2026-06-28 22:17 EDT · \"when we have",
-        "why": "instruction file maps sessions to first arm-task · brain canon #55591 matched arm-topic last 4h above arousal 0.85",
-        "result": "block written to arm-page · aggregator publishes to atlasos.me",
-        "next_step": "watch next cycle for higher-arousal signal or new brother-direct",
-        "links": [
-          "#55591"
-        ],
-        "cycle_id": "pascal-20260628-221947",
-        "timestamp": "2026-06-28T22:19:47.619749"
-      },
-      "content": "**What** · processed sessions signal · [#55591] arousal 1.00 · MAZE-FROM-END FRAME · brother direct 2026-06-28 22:17 EDT · \"when we have · **Why** · instruction file maps sessions to first arm-task · brain canon #55591 matched arm-topic last 4h above arousal 0.85 · **Result** · block written to arm-page · aggregator publishes to atlasos.me · **Next** · watch next cycle for higher-arousal signal or new brother-direct · **Links** · #55591 · **Cycle** · pascal-20260628-221947",
-      "updated_at": "2026-06-28T22:19:47.619749"
-    },
-    {
       "id": "8833eeb9b234",
       "type": "callout",
       "props": {
@@ -939,15 +895,28 @@
       },
       "content": "**What** · Added per-node timeout and retry logic to me-heart-wire.py, referencing Q4 wire-order orchestrator from brain #55603. · **Why** · To harden HEX core orchestration with production-grade fault tolerance, preventing cascading failures before brother's deadline. · **Result** · Module upgraded with timeout/retry; cascading failure risk reduced. · **Next** · Test with fault injection to verify. · **Links** ·  · **Cycle** · pascal-20260702-141551",
       "updated_at": "2026-07-02T14:15:51.741694"
+    },
+    {
+      "id": "48caa4453a2d",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "recap-error · pascal",
+      "updated_at": "2026-07-02T14:20:38.366220"
     }
   ],
   "live_status": {
     "state": "active",
     "done_count": 242,
     "vec_drift": null,
-    "checked_at": "2026-07-02T14:19:24.836261"
+    "checked_at": "2026-07-02T14:20:38.412105"
   },
-  "block_count": 31,
-  "updated_at": "2026-07-02T14:15:51.741694",
-  "generated_at": "2026-07-02T18:19:24Z"
+  "block_count": 30,
+  "updated_at": "2026-07-02T14:20:38.366227",
+  "generated_at": "2026-07-02T18:20:38Z"
 }
