@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-02T10:06:42Z",
+  "generated_at": "2026-07-02T10:22:01Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement Q5 wire order for heart based on brother's maze-from-end frame and soul catch from NotebookLM blueprint.",
-      "why": "Brother direct to finish heart by tomorrow; step 1 shipped, need to continue the wire-order orchestrator with next priority.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 30,
-      "timestamp": "2026-06-30T18:08:57.706776"
-    },
     {
       "arm": "code",
       "task": "Implement heart night-loop final wiring per brother's plan v2, ensuring 4 loops integrate correctly.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 90,
       "timestamp": "2026-07-02T06:06:42.092128"
+    },
+    {
+      "arm": "research",
+      "task": "Map the maze-from-end frame (#55591) against current HEART wire-tasks to identify any remaining blockages in the brother-direct path.",
+      "why": "Brother's 22:17 directive frames blockages as mazes to be solved from the end; with Step 1 shipped (#55603), we must now verify that the heart-loop plan (v2, #55589) is fully unblocked before tomorrow's test. Research arm is best suited for this cross-reference analysis.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 12,
+      "timestamp": "2026-07-02T06:22:01.828147"
     }
   ]
 }
