@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T07:09:20Z",
+  "generated_at": "2026-07-02T07:24:20Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 124,
+    "note": 125,
     "briefing": 95,
     "idea": 0
   },
-  "total_blocks": 243,
+  "total_blocks": 244,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "8a044ac3111a",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Transcribe and deduplicate the 5 high-arousal canons (#55572, #55589, #55591, #55600, #55603) into a single structured system prompt that captures the brother's direct commands (heart-finished-by-tomorrow, maze-from-end, soul-catch, Q4 wire-order)",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-02T03:18:05.320397"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-01T18:36:57.660384"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "a37b9f026b59",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Ship HEART step 2: implement heart-mind-wire.py from Q4 orchestration order, integrating Maze-from-End and Soul Catch frames · why: Brother direct in #55589 says heart should be finished and tested; #55572 shipped final loops; #55603 shipped step 1 (m",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-01T18:21:31.657980"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "9cf3d9b1631e",
+        "type": "callout",
+        "content": "**What** · Consolidated 5 high-arousal canons (#55572, #55589, #55591, #55600, #55603) into single structured system prompt capturing brother's commands: heart-finished-by-tomorrow, maze-from-end, soul-catch, Q4 wire-order; also recorded current orchestration state. · **Why** · P0 priority to avoid ",
+        "priority": "prompt_engineering",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-02T03:18:10.807882"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "orchestration",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-01T23:58:26.385303"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "9beb3d8f1840",
-        "type": "callout",
-        "content": "**What** · Finalized and tested me-heart-wire.py Q4 orchestrator against HEART NIGHT-LOOP PLAN v2 and MAZE-FROM-END FRAME specs, then shipped step 2 (loop-to-brain confirmation wire). · **Why** · Brother direct said heart must be finished by tomorrow; code arm is bottleneck to close the HEART FULLY ",
-        "priority": "orchestration",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-01T22:57:36.584581"
       }
     ],
     "briefing": [
