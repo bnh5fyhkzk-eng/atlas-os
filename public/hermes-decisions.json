@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-02T02:26:54Z",
+  "generated_at": "2026-07-02T02:42:09Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator from #55603 into the me-heart-wire.py prototype, ensuring brother's 22:13 EDT night-loop plan cycles correctly.",
-      "why": "Brother directly ordered heart finished and tested by tomorrow; the Q4 orchestrator is the next concrete block we must ship to make that happen.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-06-30T07:28:05.667042"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator (me-heart-wire.py) so that the heart night-loop plan v2 can execute its final loops tomorrow per brother's direct instruction.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 55,
       "timestamp": "2026-07-01T22:26:54.058764"
+    },
+    {
+      "arm": "code",
+      "task": "Execute step 1 of Q4 wire-order orchestrator: implement me-heart-wire.py with Maze-from-End frame logic and brother's night-loop heartbeat test harness",
+      "why": "Brother directly said heart should be finished by tomorrow and tested; step 1 is the P0 gate to unblock the entire Q4 loop. Code arm must fire now to ship the wire-order orchestrator per #55603.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-01T22:42:09.527609"
     }
   ]
 }
