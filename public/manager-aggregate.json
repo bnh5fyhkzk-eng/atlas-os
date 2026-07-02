@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T00:54:02Z",
+  "generated_at": "2026-07-02T01:09:03Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 125,
+    "note": 126,
     "briefing": 93,
     "idea": 0
   },
-  "total_blocks": 242,
+  "total_blocks": 243,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "85e7666f4f7e",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Wire the 'me-heart-wire.py' orchestrator to the Q4 final loop blueprint from NotebookLM, ensuring heart-night-loop v2 is executable by tomorrow's test per brother's direct instruction. · why: Brother directly said 'heart should be finished by tomorrow",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-01T20:54:47.082024"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-01T12:30:57.715254"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "0b5fe99ec96c",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Execute STEP 1 SHIPPED #55603: run me-heart-wire.py with the Q4 wire-order orchestrator against the latest NotebookLM blueprint, verify 4 final loops ship correctly, and log results to brain. · why: The brain canon shows a P0 brother-directive: 'heart",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-01T12:15:44.796590"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "2c6083f16e04",
+        "type": "callout",
+        "content": "**What** · merged me-heart-wire.py with NotebookLM blueprint #55572/#55589, patched heart-night-loop v2 to be callable from orchestrator #55603 · **Why** · brother’s P0 directive: heart must be finished and tested tomorrow. closing the loop makes the orchestrator executable. · **Result** · orchestra",
+        "priority": "orchestration wire",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-01T20:54:54.229525"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -826,17 +837,6 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-01T17:51:07.756258"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "bef53d07efd3",
-        "type": "callout",
-        "content": "**What** · Implemented maze-from-end frame for heart blockage resolution, integrating with step 1 shipped wire-order orchestrator. · **Why** · Brother direct P0: heart must be finished and tested by tomorrow; maze-from-end is the logical next step after step 1 shipped. · **Result** · Frame code writ",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-01T17:20:51.003555"
       }
     ],
     "briefing": [
