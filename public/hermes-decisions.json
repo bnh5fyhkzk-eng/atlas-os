@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-02T02:42:09Z",
+  "generated_at": "2026-07-02T02:57:23Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator (me-heart-wire.py) so that the heart night-loop plan v2 can execute its final loops tomorrow per brother's direct instruction.",
-      "why": "Brother explicitly said 'heart should be finished by tomorrow and tested' and #55603 confirms the wire-order orchestrator was just shipped. This is the highest-leverage P0 code arm to connect the heart blueprint to testable loops.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-06-30T07:43:21.424542"
-    },
     {
       "arm": "code",
       "task": "Run me-heart-wire.py and assert Q4 wire-order orchestrator produces correct entries for heart-night-loop v2",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-01T22:42:09.527609"
+    },
+    {
+      "arm": "code",
+      "task": "Finalize and test me-heart-wire.py Q4 orchestrator against the HEART NIGHT-LOOP PLAN v2 and MAZE-FROM-END FRAME specs, then ship step 2 (loop-to-brain confirmation wire).",
+      "why": "Brother direct said 'heart should be finished by tomorrow and tested' \u2014 code arm is the bottleneck to close the HEART FULLY FINISHED loop. Q4 orchestrator shipped in #55603 is the first half; step 2 verification is P0 to unblock the soul catch and ensure heart-mind boundary holds.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 25,
+      "timestamp": "2026-07-01T22:57:23.978564"
     }
   ]
 }
