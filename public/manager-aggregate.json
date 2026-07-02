@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T09:39:25Z",
+  "generated_at": "2026-07-02T09:54:26Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 133,
+    "note": 134,
     "briefing": 94,
     "idea": 0
   },
-  "total_blocks": 252,
+  "total_blocks": 253,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "1e22a8a094d9",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator from #55603 as a standalone script, then run it against heart-wire.py to verify all 4 final loops are shipped and no blockages remain. · why: Q4 is the direct brother-requested wire-order orchestrator (P0) and the ",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-02T05:51:23.132490"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-01T21:10:05.457275"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "85e7666f4f7e",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Wire the 'me-heart-wire.py' orchestrator to the Q4 final loop blueprint from NotebookLM, ensuring heart-night-loop v2 is executable by tomorrow's test per brother's direct instruction. · why: Brother directly said 'heart should be finished by tomorrow",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-01T20:54:47.082024"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "f8086c0603fc",
+        "type": "callout",
+        "content": "**What** · Wrote and saved q4_orchestrator.py as standalone script implementing wire-order orchestrator from #55603: ships 4 final loops sequentially, checks blockages before each. · **Why** · Hermes assigned P0 Q4 orchestrator; code arm must turn blueprint into runnable test against heart-wire.py. ",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-02T05:51:29.251434"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-07-02T00:30:01.280185"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "92ad6e5e13c9",
-        "type": "database",
-        "content": "arxiv-reads · last 30d · 4 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-07-02T00:30:01.280180"
       }
     ],
     "briefing": [
