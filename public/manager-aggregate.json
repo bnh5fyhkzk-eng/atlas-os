@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T18:24:46Z",
+  "generated_at": "2026-07-02T18:39:46Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 115,
+    "note": 116,
     "briefing": 101,
     "idea": 0
   },
-  "total_blocks": 240,
+  "total_blocks": 241,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "bf0566747bb4",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement HEART-NIGHT-LOOP v2 from plan #55589: finalize heart wire orchestration per brother's 'finished by tomorrow and tested' directive. · why: Brother's P0 directive and the HEART milestone dependency chain (loops, maze-frame, soul-catch) converg",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-02T14:31:02.594494"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-02T06:06:42.075660"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "1e22a8a094d9",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator from #55603 as a standalone script, then run it against heart-wire.py to verify all 4 final loops are shipped and no blockages remain. · why: Q4 is the direct brother-requested wire-order orchestrator (P0) and the ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-02T05:51:23.132490"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "926f6fc3af7f",
+        "type": "callout",
+        "content": "**What** · I will implement HEART-NIGHT-LOOP v2 by hardcoding the wire-order orchestrator for the three HEART frames (loop, maze, soul-catch) using the 22:43 step-1 pattern as the synchronization anchor. · **Why** · Brother's P0 directive demands finalization by tomorrow; code arm is the only arm th",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-02T14:31:10.580097"
+      },
       {
         "arm": "pascal",
         "arm_glyph": "🤝",
@@ -826,17 +837,6 @@
         "priority": "code",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-02T10:42:36.806688"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "b44348763413",
-        "type": "callout",
-        "content": "**What** · Implemented remaining wire definitions for loops W0..W3 in me-heart-wire.py, added fallback ping on sibling timeout, and pushed commit referencing #55603 and #55589. · **Why** · Unblocks heart finish and testing per Brother's directive; Q4 wire-order orchestrator only had STEP 1 shipped, ",
-        "priority": "code-implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-02T10:27:19.055447"
       }
     ],
     "briefing": [
