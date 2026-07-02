@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-07-02T14:09:35Z",
+  "generated_at": "2026-07-02T14:24:36Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 24,
+    "decision": 25,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 122,
-    "briefing": 97,
+    "note": 123,
+    "briefing": 96,
     "idea": 0
   },
-  "total_blocks": 243,
+  "total_blocks": 244,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "354c4e6433dc",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement and test 'heart-wire.py' per Q4 wire-order orchestrator blueprint, ensuring all 4 final loops can ship by 2026-06-28 23:08 EDT. · why: Brother direct deadline and identity-tier priority: heart must be finished and tested before cycle ends. T",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-02T10:11:53.793340"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -288,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "3429ddc940a4",
+        "type": "callout",
+        "content": "**What** · Will implement heart-wire.py per Q4 wire-order blueprint, then test all 4 final loops. · **Why** · P0 block on orchestration; must ship before 2026-06-28 23:08 EDT or whole chain fails. · **Result** · Expected: heart-wire.py wired to loops A, B, C, D without drift; tests pass. · **Next** ",
+        "priority": "development",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-02T10:11:59.632047"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +848,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-07-02T06:00:04.009970"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "03a303ef1147",
-        "type": "database",
-        "content": "clients · last 30d · 9 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-07-02T06:00:04.009965"
       }
     ],
     "briefing": [
@@ -938,17 +949,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-07-02T02:20:36.819794"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "1c9791de2f67",
-        "type": "callout",
-        "content": "No high-arousal hermes canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-07-02T02:20:36.792368"
       },
       {
         "arm": "code",
@@ -1389,6 +1389,17 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-06-30T14:19:52.733412"
+      },
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "872fa1a6ed91",
+        "type": "callout",
+        "content": "Overnight curiosity recap · last 6h · · #55572 [1.00] HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per NotebookLM blueprint + brother's answers. · #55600 [1.00] Q11 SOUL CATCH · heart-mind boundary · NotebookLM P4 2026-06-28 22:30 EDT.",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-06-30T14:19:52.694666"
       }
     ],
     "idea": []
