@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T10:00:05Z",
+  "generated_at": "2026-07-02T10:09:26Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 134,
+    "note": 135,
     "briefing": 94,
     "idea": 0
   },
-  "total_blocks": 253,
+  "total_blocks": 254,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "fd04d848c128",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Continue implementing me-heart-wire.py per Q4 wire-order orchestrator blueprint, ensuring all final loops are shipped and tested by tomorrow per brother direct. · why: Brother direct instruction to finish heart by tomorrow and tested; last canon shipp",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-02T06:06:42.075660"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-01T21:56:03.625448"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "14b189f97837",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Integrate brother's answers from #55589 into the heart blueprint and update the wire-order orchestrator. · why: Brother's direct answers need to be applied to the heart code; step 1 shipped but needs refinement per brother's instructions.",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-01T21:10:05.457275"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "72365fb2b443",
+        "type": "callout",
+        "content": "**What** · implement final loops in me-heart-wire.py per Q4 wire-order blueprint · **Why** · brother direct says finish heart by tomorrow, last canon shipped step 1, so need to code remaining loops now · **Result** · all loops coded and unit tests pass locally · **Next** · push to staging and run in",
+        "priority": "coding",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-02T06:06:47.973876"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -837,17 +848,6 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-02T03:33:32.159115"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "9cf3d9b1631e",
-        "type": "callout",
-        "content": "**What** · Consolidated 5 high-arousal canons (#55572, #55589, #55591, #55600, #55603) into single structured system prompt capturing brother's commands: heart-finished-by-tomorrow, maze-from-end, soul-catch, Q4 wire-order; also recorded current orchestration state. · **Why** · P0 priority to avoid ",
-        "priority": "prompt_engineering",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-02T03:18:10.807882"
       }
     ],
     "briefing": [
