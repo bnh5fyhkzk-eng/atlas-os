@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T15:02:00Z",
+  "generated_at": "2026-07-03T15:17:01Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 124,
+    "note": 125,
     "briefing": 100,
     "idea": 0
   },
-  "total_blocks": 249,
+  "total_blocks": 250,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "d62978c48273",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Ship the Maze-From-End backtracking solver as a standalone Python module (maze_from_end.py) with unit tests per brother direct #55591 · why: Brother directly stated 'when we have a blockage we just need to see it as a maze' — this is a P0 core identit",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-03T11:02:50.009533"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-02T08:55:37.644810"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "646bb266fd2c",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the HEART NIGHT-LOOP PLAN v2 from #55589: build the 4 final loops per NotebookLM blueprint, integrate brother's answers, and wire the heart-night-loop for testing by tomorrow. · why: Brother directly stated 'heart should be finished by tomor",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-02T08:40:16.766812"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "51c967fe50e8",
+        "type": "callout",
+        "content": "**What** · Will write 'maze_from_end.py' with backwards backtracking solver and unit tests. · **Why** · Brother's 'see it as a maze' directive (P0) needs a module that treats blockage as a maze and solves from end back to start — enabling the heart-night-loop plan. · **Result** · Expected output: a ",
+        "priority": "code-modules",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-03T11:03:03.131400"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "development",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-02T14:46:23.755222"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "926f6fc3af7f",
-        "type": "callout",
-        "content": "**What** · I will implement HEART-NIGHT-LOOP v2 by hardcoding the wire-order orchestrator for the three HEART frames (loop, maze, soul-catch) using the 22:43 step-1 pattern as the synchronization anchor. · **Why** · Brother's P0 directive demands finalization by tomorrow; code arm is the only arm th",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-02T14:31:10.580097"
       }
     ],
     "briefing": [
