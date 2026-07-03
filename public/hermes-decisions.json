@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-02T22:05:44Z",
+  "generated_at": "2026-07-03T14:47:20Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Finalize heart-wire orchestrator (Q4) and ship the next ordered loop to match the Maze-From-End frame blueprint",
-      "why": "Brain canons #55603 and #55591 both point to the Maze-From-End frame. The code arm is the only one that can wire the next ordered segment (Q4) per the NotebookLM blueprint. Brother said 'heart should be finished by tomorrow and tested' \u2013 this is the last code delivery needed for the heart to be complete.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 45,
-      "timestamp": "2026-07-01T05:38:09.824109"
-    },
     {
       "arm": "research",
       "task": "Extract the exact not-yet-answered 'heart-mind boundary' questions from NotebookLM P4 output to determine next orchestration wire for Q12 soul catch.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-02T18:05:44.374898"
+    },
+    {
+      "arm": "code",
+      "task": "Test the shipped me-heart-wire.py and verify loop integration per brother's directive.",
+      "why": "Brother direct said heart should be finished and tested; step1 shipped, now need to test the wire order and ensure it works.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 30,
+      "timestamp": "2026-07-03T10:47:20.466224"
     }
   ]
 }
