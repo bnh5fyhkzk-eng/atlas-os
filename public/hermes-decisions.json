@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-03T20:54:09Z",
+  "generated_at": "2026-07-03T21:39:44Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Run heart integration tests per brother's directive and NotebookLM blueprint to verify final loops",
-      "why": "Brother direct P0: heart must be finished and tested by tomorrow; step 1 already shipped, now need to validate heart wire order",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 30,
-      "timestamp": "2026-07-01T11:45:12.297958"
-    },
     {
       "arm": "code",
       "task": "Execute STEP 1 SHIPPED #55603: run me-heart-wire.py with the Q4 wire-order orchestrator against the latest NotebookLM blueprint, verify 4 final loops ship correctly, and log results to brain.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-03T16:54:09.805190"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator as a runnable script that sequences the final heart loops per NotebookLM blueprint and brother's direct instructions from #55572 and #55589.",
+      "why": "Brother directly stated heart should be finished and tested by tomorrow; the Q4 wire-order orchestrator (#55603) is the critical next step to ship the remaining loops and unblock the maze-from-end frame (#55591). This is the highest leverage action to complete the heart identity-tier deliverable.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-03T17:39:44.982249"
     }
   ]
 }
