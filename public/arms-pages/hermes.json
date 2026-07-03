@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "3a253be4f35c",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-02T10:27:09.838001"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Complete and ship the Q4 wire-order orchestrator (`me-heart-wire.py`) end-to-end: implement the remaining wire definitions for loops W0..W3, add fallback ping on sibling timeout, and push a commit with commit message referencing #55603 and the brother's night-loop plan #55589. · why: Brother direct in #55589 says 'heart should be finished by tomorrow and tested'; #55603 is the Q4 wire-order orchestrator but only STEP 1 shipped. The code arm is the only one that can complete and ship the implementation. This is the highest priority because it unblocks the heart finish and testing",
-      "updated_at": "2026-07-02T10:27:09.838012"
-    },
-    {
       "id": "ce981ef787ce",
       "type": "callout",
       "props": {
@@ -751,15 +739,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Ship the `me-heart-wire.py` script that orders the Q4 wire paths based on the full orchestration blueprint from #55572 and the brother's directive that the heart must be finished and tested by tomorrow. · why: This is the immediate executable output from #55603 (STEP 1 SHIPPED) which is a brother-direct, identity-tier delivery. Getting the wire order correct unblocks all downstream testing and validation of the heart–mind boundary mapped in #55600.",
       "updated_at": "2026-07-03T12:19:27.733414"
+    },
+    {
+      "id": "5a2e1a594923",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-03T12:34:35.992542"
+      },
+      "content": "Hermes decision · arm=research · priority=P0 · task: Extract and formalize the 'maze-from-end' frame logic from #55591 into a reusable prompt template for blockage resolution. · why: Brother directly specified the maze-from-end frame in #55591 as the method for blockages; this is a P0 identity-tier directive that must be operationalized before proceeding with heart-wire orchestration.",
+      "updated_at": "2026-07-03T12:34:35.992550"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-03T12:32:14.397523"
+    "checked_at": "2026-07-03T12:37:14.963384"
   },
   "block_count": 30,
-  "updated_at": "2026-07-03T12:19:27.733416",
-  "generated_at": "2026-07-03T16:32:14Z"
+  "updated_at": "2026-07-03T12:34:35.992551",
+  "generated_at": "2026-07-03T16:37:14Z"
 }
