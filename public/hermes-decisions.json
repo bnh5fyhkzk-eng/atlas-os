@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-03T17:05:00Z",
+  "generated_at": "2026-07-03T17:20:28Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Extract the exact blockage-reduction pattern from #55591 MAZE-FROM-END FRAME and map it onto the current heart-loop wire-order from #55603",
-      "why": "Brother's direct maze-from-end frame is a P0 directive that can immediately unblock the heart-wire orderer. Research arm should cross-reference the maze logic with the actual wire-order orchestrator code to produce a concrete fix/next-step for the HEART task.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 15,
-      "timestamp": "2026-07-01T07:55:58.067768"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator for the heart-night-loop plan, shipping the next loop based on brother's direct instructions from #55589 and #55603.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 60,
       "timestamp": "2026-07-03T13:05:00.183433"
+    },
+    {
+      "arm": "code",
+      "task": "Implement and ship the Q4 wire-order orchestrator (me-heart-wire.py) as the final loop for brother's heartbeat/tomorrow deadline, integrating NotebookLM blueprint step-logs.",
+      "why": "Brother direct: 'heart should be finished by tomorrow and tested.' #55603 just shipped STEP 1; #55589's night-loop plan requires the full orchestrator. This is the identity-tier P0 to close the heart branch and unblock the next Maze-from-end frame.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-03T13:20:28.977960"
     }
   ]
 }
