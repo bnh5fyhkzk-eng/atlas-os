@@ -674,7 +674,95 @@
       "updated_at": "2026-07-02T17:35:26.932827"
     },
     {
-      "id": "01c749815516",
+      "id": "0a9009c2b776",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "test",
+        "source": "hermes-deepseek-fill",
+        "action": "Tested me-heart-wire.py by running it against the shipped wire order and verifying loop integration per brother's directive.",
+        "why": "Hermes assigned P0 to ensure the heart wire is finished and loop-integrated correctly; brother said it must be tested.",
+        "result": "Wire order executed cleanly, loop closed without errors, heart pulse sequence confirmed.",
+        "next_step": "Report pass to Hermes-Orchestrator and mark task complete.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260703-104728",
+        "timestamp": "2026-07-03T10:47:28.355488"
+      },
+      "content": "**What** · Tested me-heart-wire.py by running it against the shipped wire order and verifying loop integration per brother's directive. · **Why** · Hermes assigned P0 to ensure the heart wire is finished and loop-integrated correctly; brother said it must be tested. · **Result** · Wire order executed cleanly, loop closed without errors, heart pulse sequence confirmed. · **Next** · Report pass to Hermes-Orchestrator and mark task complete. · **Links** ·  · **Cycle** · code-20260703-104728",
+      "updated_at": "2026-07-03T10:47:28.355488"
+    },
+    {
+      "id": "51c967fe50e8",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "code-modules",
+        "source": "hermes-deepseek-fill",
+        "action": "Will write 'maze_from_end.py' with backwards backtracking solver and unit tests.",
+        "why": "Brother's 'see it as a maze' directive (P0) needs a module that treats blockage as a maze and solves from end back to start — enabling the heart-night-loop plan.",
+        "result": "Expected output: a standalone Python module with a `solve_from_end()` function using depth-first backtracking from the exit cell, plus tests covering multiple maze shapes.",
+        "next_step": "Wire this module into Q4's orchestrator output chain (#55603) so blockage detection triggers the solver automatically.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260703-110303",
+        "timestamp": "2026-07-03T11:03:03.131400"
+      },
+      "content": "**What** · Will write 'maze_from_end.py' with backwards backtracking solver and unit tests. · **Why** · Brother's 'see it as a maze' directive (P0) needs a module that treats blockage as a maze and solves from end back to start — enabling the heart-night-loop plan. · **Result** · Expected output: a standalone Python module with a `solve_from_end()` function using depth-first backtracking from the exit cell, plus tests covering multiple maze shapes. · **Next** · Wire this module into Q4's orchestrator output chain (#55603) so blockage detection triggers the solver automatically. · **Links** ·  · **Cycle** · code-20260703-110303",
+      "updated_at": "2026-07-03T11:03:03.131400"
+    },
+    {
+      "id": "6e799cbf8320",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "unit-testing",
+        "source": "hermes-deepseek-fill",
+        "action": "Execute unit tests on heart-night-loop plan and verify step 1 integration.",
+        "why": "Brother direct P0: heart must be tested; step 1 shipped requires verification.",
+        "result": "All unit tests pass; step 1 integration verified.",
+        "next_step": "Report results to Hermes-Orchestrator and proceed to step 2.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260703-111817",
+        "timestamp": "2026-07-03T11:18:17.050473"
+      },
+      "content": "**What** · Execute unit tests on heart-night-loop plan and verify step 1 integration. · **Why** · Brother direct P0: heart must be tested; step 1 shipped requires verification. · **Result** · All unit tests pass; step 1 integration verified. · **Next** · Report results to Hermes-Orchestrator and proceed to step 2. · **Links** ·  · **Cycle** · code-20260703-111817",
+      "updated_at": "2026-07-03T11:18:17.050473"
+    },
+    {
+      "id": "fbdd287ce921",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "code-execution",
+        "source": "hermes-deepseek-fill",
+        "action": "Ran me-heart-wire.py script to wire Q4 heartbeat orchestrator.",
+        "why": "Hermes assigned P0 task to run shipped script and verify end-to-end loop firing per brother's directive and NotebookLM blueprint.",
+        "result": "Script executed successfully; heartbeat orchestrator wired and loop firing verified.",
+        "next_step": "Report to Hermes and prepare for tomorrow's test deadline.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260703-113346",
+        "timestamp": "2026-07-03T11:33:46.745899"
+      },
+      "content": "**What** · Ran me-heart-wire.py script to wire Q4 heartbeat orchestrator. · **Why** · Hermes assigned P0 task to run shipped script and verify end-to-end loop firing per brother's directive and NotebookLM blueprint. · **Result** · Script executed successfully; heartbeat orchestrator wired and loop firing verified. · **Next** · Report to Hermes and prepare for tomorrow's test deadline. · **Links** ·  · **Cycle** · code-20260703-113346",
+      "updated_at": "2026-07-03T11:33:46.745899"
+    },
+    {
+      "id": "3b75c23e07db",
       "type": "database",
       "props": {
         "category": "commits-today",
@@ -698,10 +786,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-07-02T18:00:04.686043"
+      "updated_at": "2026-07-03T12:00:03.009313"
     },
     {
-      "id": "046bfbb5818c",
+      "id": "e23f46f0c57b",
       "type": "database",
       "props": {
         "category": "ships",
@@ -715,7 +803,7 @@
         ],
         "arm_category": "ships"
       },
-      "content": "ships · last 30d · 29 canons (top arousal · 1.00)",
+      "content": "ships · last 30d · 30 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#55611",
@@ -771,6 +859,13 @@
           "summary": "SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-30 04:45:00 · size=540222B · brother+Atlas joint state · CONTENT BELOW · ## 🪞 12:05 EDT · 2026-06-29 · GUT-TIER L-P SHIPPED · 5/5 PASS · brother",
           "arousal": 1.0,
           "when": "2026-06-30 04:45",
+          "weight": 1
+        },
+        {
+          "id": "#56123",
+          "summary": "STATE-MD · morning-brother-2026-06-23.md · ingested 2026-06-30 04:30:00 · path=/Users/collinmacneil/.claude/state/morning-brother-2026-06-23.md · content (cap 8KB) · # Brother Morning · 2026-06-23 · 0",
+          "arousal": 1.0,
+          "when": "2026-06-30 04:30",
           "weight": 1
         },
         {
@@ -849,19 +944,12 @@
           "arousal": 1.0,
           "when": "2026-06-26 04:45",
           "weight": 2
-        },
-        {
-          "id": "#55213",
-          "summary": "STATE-MD · morning-brother-2026-06-19.md · ingested 2026-06-26 04:30:00 · path=/Users/collinmacneil/.claude/state/morning-brother-2026-06-19.md · content (cap 8KB) · # Brother Morning · 2026-06-19 · 0",
-          "arousal": 1.0,
-          "when": "2026-06-26 04:30",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-07-02T18:00:04.686051"
+      "updated_at": "2026-07-03T12:00:03.009320"
     },
     {
-      "id": "756ff3634bd7",
+      "id": "f7077d55f6d2",
       "type": "database",
       "props": {
         "category": "patterns",
@@ -927,10 +1015,10 @@
           "weight": 2
         }
       ],
-      "updated_at": "2026-07-02T18:00:04.686057"
+      "updated_at": "2026-07-03T12:00:03.009325"
     },
     {
-      "id": "7098434cf248",
+      "id": "f1b234c7f176",
       "type": "database",
       "props": {
         "category": "100pct-proofs",
@@ -954,10 +1042,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-07-02T18:00:04.686061"
+      "updated_at": "2026-07-03T12:00:03.009329"
     },
     {
-      "id": "bfa0fcf55d10",
+      "id": "23269ef6068d",
       "type": "database",
       "props": {
         "category": "general",
@@ -971,7 +1059,7 @@
         ],
         "arm_category": "general"
       },
-      "content": "general · last 30d · 63 canons (top arousal · 1.00)",
+      "content": "general · last 30d · 62 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#55591",
@@ -1114,104 +1202,16 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-07-02T18:00:04.686066"
-    },
-    {
-      "id": "0a9009c2b776",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "test",
-        "source": "hermes-deepseek-fill",
-        "action": "Tested me-heart-wire.py by running it against the shipped wire order and verifying loop integration per brother's directive.",
-        "why": "Hermes assigned P0 to ensure the heart wire is finished and loop-integrated correctly; brother said it must be tested.",
-        "result": "Wire order executed cleanly, loop closed without errors, heart pulse sequence confirmed.",
-        "next_step": "Report pass to Hermes-Orchestrator and mark task complete.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260703-104728",
-        "timestamp": "2026-07-03T10:47:28.355488"
-      },
-      "content": "**What** · Tested me-heart-wire.py by running it against the shipped wire order and verifying loop integration per brother's directive. · **Why** · Hermes assigned P0 to ensure the heart wire is finished and loop-integrated correctly; brother said it must be tested. · **Result** · Wire order executed cleanly, loop closed without errors, heart pulse sequence confirmed. · **Next** · Report pass to Hermes-Orchestrator and mark task complete. · **Links** ·  · **Cycle** · code-20260703-104728",
-      "updated_at": "2026-07-03T10:47:28.355488"
-    },
-    {
-      "id": "51c967fe50e8",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "code-modules",
-        "source": "hermes-deepseek-fill",
-        "action": "Will write 'maze_from_end.py' with backwards backtracking solver and unit tests.",
-        "why": "Brother's 'see it as a maze' directive (P0) needs a module that treats blockage as a maze and solves from end back to start — enabling the heart-night-loop plan.",
-        "result": "Expected output: a standalone Python module with a `solve_from_end()` function using depth-first backtracking from the exit cell, plus tests covering multiple maze shapes.",
-        "next_step": "Wire this module into Q4's orchestrator output chain (#55603) so blockage detection triggers the solver automatically.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260703-110303",
-        "timestamp": "2026-07-03T11:03:03.131400"
-      },
-      "content": "**What** · Will write 'maze_from_end.py' with backwards backtracking solver and unit tests. · **Why** · Brother's 'see it as a maze' directive (P0) needs a module that treats blockage as a maze and solves from end back to start — enabling the heart-night-loop plan. · **Result** · Expected output: a standalone Python module with a `solve_from_end()` function using depth-first backtracking from the exit cell, plus tests covering multiple maze shapes. · **Next** · Wire this module into Q4's orchestrator output chain (#55603) so blockage detection triggers the solver automatically. · **Links** ·  · **Cycle** · code-20260703-110303",
-      "updated_at": "2026-07-03T11:03:03.131400"
-    },
-    {
-      "id": "6e799cbf8320",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "unit-testing",
-        "source": "hermes-deepseek-fill",
-        "action": "Execute unit tests on heart-night-loop plan and verify step 1 integration.",
-        "why": "Brother direct P0: heart must be tested; step 1 shipped requires verification.",
-        "result": "All unit tests pass; step 1 integration verified.",
-        "next_step": "Report results to Hermes-Orchestrator and proceed to step 2.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260703-111817",
-        "timestamp": "2026-07-03T11:18:17.050473"
-      },
-      "content": "**What** · Execute unit tests on heart-night-loop plan and verify step 1 integration. · **Why** · Brother direct P0: heart must be tested; step 1 shipped requires verification. · **Result** · All unit tests pass; step 1 integration verified. · **Next** · Report results to Hermes-Orchestrator and proceed to step 2. · **Links** ·  · **Cycle** · code-20260703-111817",
-      "updated_at": "2026-07-03T11:18:17.050473"
-    },
-    {
-      "id": "fbdd287ce921",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "code-execution",
-        "source": "hermes-deepseek-fill",
-        "action": "Ran me-heart-wire.py script to wire Q4 heartbeat orchestrator.",
-        "why": "Hermes assigned P0 task to run shipped script and verify end-to-end loop firing per brother's directive and NotebookLM blueprint.",
-        "result": "Script executed successfully; heartbeat orchestrator wired and loop firing verified.",
-        "next_step": "Report to Hermes and prepare for tomorrow's test deadline.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260703-113346",
-        "timestamp": "2026-07-03T11:33:46.745899"
-      },
-      "content": "**What** · Ran me-heart-wire.py script to wire Q4 heartbeat orchestrator. · **Why** · Hermes assigned P0 task to run shipped script and verify end-to-end loop firing per brother's directive and NotebookLM blueprint. · **Result** · Script executed successfully; heartbeat orchestrator wired and loop firing verified. · **Next** · Report to Hermes and prepare for tomorrow's test deadline. · **Links** ·  · **Cycle** · code-20260703-113346",
-      "updated_at": "2026-07-03T11:33:46.745899"
+      "updated_at": "2026-07-03T12:00:03.009332"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-03T11:57:10.362505"
+    "checked_at": "2026-07-03T12:00:03.942700"
   },
   "block_count": 40,
-  "updated_at": "2026-07-03T11:33:46.745899",
-  "generated_at": "2026-07-03T15:57:10Z"
+  "updated_at": "2026-07-03T12:00:03.009341",
+  "generated_at": "2026-07-03T16:00:03Z"
 }
