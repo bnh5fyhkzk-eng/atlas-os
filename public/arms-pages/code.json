@@ -1137,15 +1137,37 @@
       },
       "content": "**What** · Tested me-heart-wire.py by running it against the shipped wire order and verifying loop integration per brother's directive. · **Why** · Hermes assigned P0 to ensure the heart wire is finished and loop-integrated correctly; brother said it must be tested. · **Result** · Wire order executed cleanly, loop closed without errors, heart pulse sequence confirmed. · **Next** · Report pass to Hermes-Orchestrator and mark task complete. · **Links** ·  · **Cycle** · code-20260703-104728",
       "updated_at": "2026-07-03T10:47:28.355488"
+    },
+    {
+      "id": "51c967fe50e8",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "code-modules",
+        "source": "hermes-deepseek-fill",
+        "action": "Will write 'maze_from_end.py' with backwards backtracking solver and unit tests.",
+        "why": "Brother's 'see it as a maze' directive (P0) needs a module that treats blockage as a maze and solves from end back to start — enabling the heart-night-loop plan.",
+        "result": "Expected output: a standalone Python module with a `solve_from_end()` function using depth-first backtracking from the exit cell, plus tests covering multiple maze shapes.",
+        "next_step": "Wire this module into Q4's orchestrator output chain (#55603) so blockage detection triggers the solver automatically.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260703-110303",
+        "timestamp": "2026-07-03T11:03:03.131400"
+      },
+      "content": "**What** · Will write 'maze_from_end.py' with backwards backtracking solver and unit tests. · **Why** · Brother's 'see it as a maze' directive (P0) needs a module that treats blockage as a maze and solves from end back to start — enabling the heart-night-loop plan. · **Result** · Expected output: a standalone Python module with a `solve_from_end()` function using depth-first backtracking from the exit cell, plus tests covering multiple maze shapes. · **Next** · Wire this module into Q4's orchestrator output chain (#55603) so blockage detection triggers the solver automatically. · **Links** ·  · **Cycle** · code-20260703-110303",
+      "updated_at": "2026-07-03T11:03:03.131400"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-03T11:02:04.161152"
+    "checked_at": "2026-07-03T11:07:04.673594"
   },
-  "block_count": 37,
-  "updated_at": "2026-07-03T10:47:28.355488",
-  "generated_at": "2026-07-03T15:02:04Z"
+  "block_count": 38,
+  "updated_at": "2026-07-03T11:03:03.131400",
+  "generated_at": "2026-07-03T15:07:04Z"
 }
