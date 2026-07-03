@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "8c4a697f8f1d",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-02T08:55:37.644800"
-      },
-      "content": "Hermes decision · arm=research · priority=P0 · task: Extract and visualize the Maze-from-End Frame logic from #55591 into a step-by-step pseudo-code diagram for the heart-night-loop blockage resolution. · why: Brother directly gave the maze-from-end frame in #55591 as the key to resolve blockages. This arm has the highest alignment with brother-direct P0 priority and the active research needed to turn that insight into executable structure for the orchestrator.",
-      "updated_at": "2026-07-02T08:55:37.644810"
-    },
-    {
       "id": "0a7a9d5b8a62",
       "type": "callout",
       "props": {
@@ -758,15 +746,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Ship the Maze-From-End backtracking solver as a standalone Python module (maze_from_end.py) with unit tests per brother direct #55591 · why: Brother directly stated 'when we have a blockage we just need to see it as a maze' — this is a P0 core identity-tier directive that enables the heart-night-loop plan (#55589). The code arm is ready, wire-order orchestrator (#55603) just shipped Q4, and this translates the abstract maze frame into ex",
       "updated_at": "2026-07-03T11:02:50.009533"
+    },
+    {
+      "id": "a8be632c4abe",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-03T11:18:12.753012"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Execute unit tests on heart-night-loop plan per brother direct and verify step 1 integration · why: Brother direct P0: heart must be tested; step 1 shipped requires verification",
+      "updated_at": "2026-07-03T11:18:12.753023"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-03T11:17:05.735145"
+    "checked_at": "2026-07-03T11:22:06.377051"
   },
   "block_count": 30,
-  "updated_at": "2026-07-03T11:02:50.009534",
-  "generated_at": "2026-07-03T15:17:05Z"
+  "updated_at": "2026-07-03T11:18:12.753024",
+  "generated_at": "2026-07-03T15:22:06Z"
 }
