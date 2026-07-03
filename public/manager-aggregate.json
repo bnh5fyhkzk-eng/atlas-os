@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T22:02:17Z",
+  "generated_at": "2026-07-03T22:17:18Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 118,
+    "note": 119,
     "briefing": 100,
     "idea": 0
   },
-  "total_blocks": 243,
+  "total_blocks": 244,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "2f33d08195ad",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Finalize and ship the heart-night-loop test script per brother's plan v2 (heart should be finished by tomorrow), ensuring it aligns with the maze-from-end frame strategy for blockages. · why: Brother-direct P0 command and the highest-arousal finalizat",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-03T18:10:08.964881"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-02T16:03:51.926096"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "ff1ce0f48c88",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator as a Python module, per brother's directive in #55603, to ship the final heart-wire blueprint. · why: Brother's direct order in #55603 requires shipping the Q4 wire-order orchestrator for the heart. This is a P",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-02T15:33:16.688475"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "53f3fbabd96c",
+        "type": "callout",
+        "content": "**What** · Write and ship heart-night-loop test script per brother's plan v2, aligning with maze-from-end frame for blockages. · **Why** · P0 direct command; finalization loops #55589/#55591 need executable verification; code arm is the only path to ship heart logic before brother's deadline. · **Re",
+        "priority": "ship-executable",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-03T18:10:16.611949"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -837,17 +848,6 @@
         "priority": "code-refactor",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-03T14:36:57.772212"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "a42db4165f28",
-        "type": "callout",
-        "content": "**What** · Write Q4 wire-order orchestrator script integrating heart-night-loop v2 (#55589) and maze-from-end frame (#55591) as runnable artifact. · **Why** · Hermes assigned P0 task; code arm is only one who can materialize this, unblocking heart finish per #55603. · **Result** · Script lives in /a",
-        "priority": "orchestration",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-03T14:21:37.119378"
       }
     ],
     "briefing": [
