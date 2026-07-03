@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T19:32:11Z",
+  "generated_at": "2026-07-03T19:47:12Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 135,
+    "note": 136,
     "briefing": 100,
     "idea": 0
   },
-  "total_blocks": 260,
+  "total_blocks": 261,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "6d4ff2d49d83",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Execute Q11 SOUL CATCH analysis to define the heart-mind boundary per NotebookLM P4 instructions, then update #55571 with boundary schema. · why: Brother's #55591 maze-from-end frame and Q11 direct request make this the highest priority P0 next st",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-03T15:37:52.563116"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-02T14:15:45.885283"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "6e3c88d711d2",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator for heart-mind boundary, shipping the next step after #55603 STEP 1 SHIPPED. · why: Brother direct in #55589 says heart should be finished and tested; #55603 shipped step 1, so code arm must continue the wire-o",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-02T13:45:15.398858"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "a4c5ca23a6ba",
+        "type": "callout",
+        "content": "**What** · Executed Q11 SOUL CATCH analysis to define heart-mind boundary per NotebookLM P4 instructions. · **Why** · Brother's #55591 maze-from-end frame and Q11 direct request make this highest priority P0 — unblocks heart-mind loop blockage for final heart testing. · **Result** · Boundary schema ",
+        "priority": "analysis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-03T15:37:58.897974"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-07-03T12:00:02.297295"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "fbdd287ce921",
-        "type": "callout",
-        "content": "**What** · Ran me-heart-wire.py script to wire Q4 heartbeat orchestrator. · **Why** · Hermes assigned P0 task to run shipped script and verify end-to-end loop firing per brother's directive and NotebookLM blueprint. · **Result** · Script executed successfully; heartbeat orchestrator wired and loop f",
-        "priority": "code-execution",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-03T11:33:46.745899"
       }
     ],
     "briefing": [
