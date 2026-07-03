@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T22:32:18Z",
+  "generated_at": "2026-07-03T22:47:19Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 119,
+    "note": 120,
     "briefing": 100,
     "idea": 0
   },
-  "total_blocks": 244,
+  "total_blocks": 245,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "946918ba609b",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the next step of heart wire orchestration per Q4 wire-order and brother's instructions from #55603. · why: Direct continuation of #55603, brother-direct priority, heart project must be finished per brother's timeline.",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-03T18:40:37.396635"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-02T16:19:07.126625"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "4a9e81b865e7",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Extract the exact maze-from-end frame logic from #55591 and map it to the current heart-wire orchestration in #55603 to unblock the next wire step. · why: Brother directly specified the maze-from-end frame as the solution for blockages, and the wi",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-02T16:03:51.926096"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "8e3f88e76daa",
+        "type": "callout",
+        "content": "**What** · Based on #55603 brother instructions, wire Q4 heart orchestration step: set up the systolic trigger pulse on the control bus. · **Why** · Direct continuation of #55603 per brother's timeline; heart project must finish with correct wire order. · **Result** · Systolic trigger pulse configur",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-03T18:40:48.454147"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "code-implement",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-03T14:52:13.163174"
-      },
-      {
-        "arm": "charle",
-        "arm_glyph": "💼",
-        "arm_name": "Charle · Pascal-team",
-        "block_id": "a27428fe89fa",
-        "type": "callout",
-        "content": "**What** · refactored me-heart-wire.py to final wire-order driver, shipping 4 loops + brother's night-loop plan as first-class orchestrator · **Why** · Hermes said P0, #55572/#55603 close heart-mind boundary, soul catch realizable; brother says heart finished tomorrow + tested · **Result** · driver ",
-        "priority": "code-refactor",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-03T14:36:57.772212"
       }
     ],
     "briefing": [
