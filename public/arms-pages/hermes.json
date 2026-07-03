@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "c7436364c8b7",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-02T14:15:45.885274"
-      },
-      "content": "Hermes decision · arm=pascal · priority=P0 · task: Finish modular orchestration upgrade for HEART by adding the missing per-node timeout and retry logic in me-heart-wire.py, referencing the Q4 wire-order orchestrator from brain #55603. · why: The HEX core orchestration (#55603) just shipped — this is the exact moment to harden it with production-grade fault tolerance (timeout/retry) before the brother's deadline tomorrow. Preventing cascading failures is brother-direct, identity-tier work.",
-      "updated_at": "2026-07-02T14:15:45.885283"
-    },
-    {
       "id": "fd265d114915",
       "type": "callout",
       "props": {
@@ -751,15 +739,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P0 · task: Execute Q11 SOUL CATCH analysis to define the heart-mind boundary per NotebookLM P4 instructions, then update #55571 with boundary schema. · why: Brother's #55591 maze-from-end frame and Q11 direct request make this the highest priority P0 next step — it directly resolves the blockage between heart and mind loops, unblocking final heart testing per the night-loop plan.",
       "updated_at": "2026-07-03T15:37:52.563116"
+    },
+    {
+      "id": "f44612221a45",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-03T15:53:07.153532"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Run the final heart test suite and verify all loops pass, including the maze-from-end frame and soul catch. · why: Brother direct stated heart must be finished and tested by tomorrow; step 1 already shipped, now need to validate full system before next loop.",
+      "updated_at": "2026-07-03T15:53:07.153541"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-03T15:52:40.575815"
+    "checked_at": "2026-07-03T15:57:41.047651"
   },
   "block_count": 30,
-  "updated_at": "2026-07-03T15:37:52.563117",
-  "generated_at": "2026-07-03T19:52:40Z"
+  "updated_at": "2026-07-03T15:53:07.153543",
+  "generated_at": "2026-07-03T19:57:41Z"
 }
