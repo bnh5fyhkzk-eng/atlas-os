@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T15:17:01Z",
+  "generated_at": "2026-07-03T15:32:01Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 125,
+    "note": 126,
     "briefing": 100,
     "idea": 0
   },
-  "total_blocks": 250,
+  "total_blocks": 251,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "a8be632c4abe",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Execute unit tests on heart-night-loop plan per brother direct and verify step 1 integration · why: Brother direct P0: heart must be tested; step 1 shipped requires verification",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-03T11:18:12.753023"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-02T09:41:22.819773"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "8c4a697f8f1d",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Extract and visualize the Maze-from-End Frame logic from #55591 into a step-by-step pseudo-code diagram for the heart-night-loop blockage resolution. · why: Brother directly gave the maze-from-end frame in #55591 as the key to resolve blockages. T",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-02T08:55:37.644810"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "6e799cbf8320",
+        "type": "callout",
+        "content": "**What** · Execute unit tests on heart-night-loop plan and verify step 1 integration. · **Why** · Brother direct P0: heart must be tested; step 1 shipped requires verification. · **Result** · All unit tests pass; step 1 integration verified. · **Next** · Report results to Hermes-Orchestrator and pro",
+        "priority": "unit-testing",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-03T11:18:17.050473"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-02T15:33:24.243103"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "8cedcc262711",
-        "type": "callout",
-        "content": "**What** · Complete remaining loops in heart project and set up testing environment. · **Why** · Brother's directive to finish by tomorrow; code arm primary for implementation. · **Result** · All loops coded, test suite initiated. · **Next** · Run tests and fix bugs. · **Links** ·  · **Cycle** · cod",
-        "priority": "development",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-02T14:46:23.755222"
       }
     ],
     "briefing": [
