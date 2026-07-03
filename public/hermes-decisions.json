@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-03T14:47:20Z",
+  "generated_at": "2026-07-03T15:02:50Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Extract the exact not-yet-answered 'heart-mind boundary' questions from NotebookLM P4 output to determine next orchestration wire for Q12 soul catch.",
-      "why": "P4 (Q11) has just shipped, and the brother's directive implies heart completion is imminent; the next bottleneck is the soul-catch boundary questions that determine the final wire order. Research arm must parse the fresh NotebookLM output to feed the orchestrator.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 12,
-      "timestamp": "2026-07-01T05:53:29.862056"
-    },
     {
       "arm": "code",
       "task": "Implement Q4 wire-order orchestrator from step 1 shipped (me-heart-wire.py) into runnable end-to-end test with brother's heart-night-loop plan v2",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 30,
       "timestamp": "2026-07-03T10:47:20.466224"
+    },
+    {
+      "arm": "code",
+      "task": "Ship the Maze-From-End backtracking solver as a standalone Python module (maze_from_end.py) with unit tests per brother direct #55591",
+      "why": "Brother directly stated 'when we have a blockage we just need to see it as a maze' \u2014 this is a P0 core identity-tier directive that enables the heart-night-loop plan (#55589). The code arm is ready, wire-order orchestrator (#55603) just shipped Q4, and this translates the abstract maze frame into executable logic for immediate testing.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-03T11:02:50.026949"
     }
   ]
 }
