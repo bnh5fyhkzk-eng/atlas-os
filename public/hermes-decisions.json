@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-03T16:19:27Z",
+  "generated_at": "2026-07-03T16:34:36Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Wire all four Q4 'heart-theme-final' answer-loops into me-heart-wire.py orchestrator using brother's timestamped indexes from #55572 and #55589",
-      "why": "Brother directly stated 'heart should be finished by tomorrow and tested' at 22:13, and your latest step (#55603) shipped only the first loop. The remaining three loops must be orchestrated now to complete the heart-finish P0 directive.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 18,
-      "timestamp": "2026-07-01T07:25:18.017604"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator for heart-wire.py, ensuring final loops are correctly sequenced per NotebookLM blueprint.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-03T12:19:27.750689"
+    },
+    {
+      "arm": "research",
+      "task": "Extract and formalize the 'maze-from-end' frame logic from #55591 into a reusable prompt template for blockage resolution.",
+      "why": "Brother directly specified the maze-from-end frame in #55591 as the method for blockages; this is a P0 identity-tier directive that must be operationalized before proceeding with heart-wire orchestration.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 18,
+      "timestamp": "2026-07-03T12:34:36.008764"
     }
   ]
 }
