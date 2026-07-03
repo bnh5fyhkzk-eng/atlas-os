@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-07-03T20:27:19Z",
-  "total_items_scored": 161,
+  "generated_at": "2026-07-03T20:37:20Z",
+  "total_items_scored": 162,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement HEART-NIGHT-LOOP v2 from plan #55589: finalize heart wire orchestration per brother's 'finished by tomorrow and tested' directive. \u00b7 why: Brother's P0 directive and the HEART milest",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Execute next step of heart project per brother's directive: complete remaining loops and prepare for testing. \u00b7 why: Brother directed heart finish tomorrow; code arm is primary for implementa",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-02T14:31:02.594494"
+      "updated_at": "2026-07-02T14:46:19.747200"
     },
     {
       "arm": "code",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement HEART-NIGHT-LOOP v2 from plan #55589: finalize heart wire orchestration per brother's 'finished by tomorrow and tested' directive. \u00b7 why: Brother's P0 directive and the HEART milest",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-07-02T14:31:02.594494"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-02T18:05:44.357367"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Test the shipped me-heart-wire.py and verify loop integration per brother's directive. \u00b7 why: Brother direct said heart should be finished and tested; step1 shipped, now need to test the wire",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-03T10:47:20.448579"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
