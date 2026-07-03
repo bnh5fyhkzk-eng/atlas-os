@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T16:32:04Z",
+  "generated_at": "2026-07-03T16:47:04Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -17,6 +17,17 @@
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "5a2e1a594923",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Extract and formalize the 'maze-from-end' frame logic from #55591 into a reusable prompt template for blockage resolution. · why: Brother directly specified the maze-from-end frame in #55591 as the method for blockages; this is a P0 identity-tier ",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-03T12:34:35.992550"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-02T10:42:32.730807"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "3a253be4f35c",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Complete and ship the Q4 wire-order orchestrator (`me-heart-wire.py`) end-to-end: implement the remaining wire definitions for loops W0..W3, add fallback ping on sibling timeout, and push a commit with commit message referencing #55603 and the brother",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-02T10:27:09.838012"
       }
     ],
     "action": [],
