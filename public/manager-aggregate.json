@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T16:03:06Z",
+  "generated_at": "2026-07-04T16:18:07Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 109,
+    "note": 110,
     "briefing": 108,
     "idea": 0
   },
-  "total_blocks": 241,
+  "total_blocks": 242,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "200134e0be8b",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the maze-from-end frame logic as a Python function that takes a blockage description and returns a step-by-step path to the heart, using the brother's direct instruction from #55591. · why: Brother directly specified the maze-from-end approa",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-04T12:14:48.882708"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-04T02:49:05.471386"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "b000ab18a750",
-        "type": "callout",
-        "content": "Hermes decision · arm=pascal · priority=P0 · task: Run the just-shipped Q4 wire-order orchestrator (me-heart-wire.py) to verify the heartbeat wiring is correct and logs succeed against the brother-direct maze-from-end frame. · why: Pascal arm is the integration executor. This is the first wired test",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-04T02:33:56.150493"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "c63a391944aa",
+        "type": "callout",
+        "content": "**What** · Implemented a Python function `maze_from_end(blockage)` that takes a blockage description (dict with 'start', 'end', 'blocked_cells') and returns a step-by-step path from end to heart using BFS backwards, following brother's direct instruction from #55591. · **Why** · P0 directive from br",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-04T12:14:53.738836"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -826,17 +837,6 @@
         "priority": "orchestration",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-04T07:40:11.819696"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "f77f101245b2",
-        "type": "callout",
-        "content": "**What** · Integrated final loops from #55572 into me-heart-wire.py step-execution order, referencing night-loop plan v2 and maze-from-end frame for blockage bypass logic. · **Why** · Hermes assigned P0 to wire blueprinted loops into orchestrator skeleton (#55603). Brother's demands in #55589/#55591",
-        "priority": "integration",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-04T07:24:51.398860"
       }
     ],
     "briefing": [
