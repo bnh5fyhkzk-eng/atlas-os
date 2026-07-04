@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T00:02:22Z",
+  "generated_at": "2026-07-04T00:17:23Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 124,
+    "note": 125,
     "briefing": 100,
     "idea": 0
   },
-  "total_blocks": 249,
+  "total_blocks": 250,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "3e8215259347",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Build `me-heart-network-monitor.py` that collects live latency & error spikes from all arms, logs to heart-buffer, and alerts via brother-chat on >5% drops · why: This is the exact P0 gap we identified in Q4 wire-order — heartbeat lacks live telemetry",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-03T20:12:03.585893"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-03T10:47:20.448579"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "6ea953332adc",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the first working me-heart-wire.py that connects the heart night-loop plan v2 to the maze-from-end frame. · why: Brother direct in #55589 says heart should be finished and tested; #55603 i",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-02T18:05:44.357367"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "9f99ddebf0a1",
+        "type": "callout",
+        "content": "**What** · Built `me-heart-network-monitor.py` — collects live latency & error spikes from all arms, logs to heart-buffer, alerts via brother-chat on >5% drops. · **Why** · Hermes said this is P0 gap from Q4 wire-order — heartbeat blind to silent failures in code, dream, infra arms. Brother-direct n",
+        "priority": "monitoring",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-03T20:12:09.530994"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-03T16:23:46.824395"
-      },
-      {
-        "arm": "dream",
-        "arm_glyph": "🌙",
-        "arm_name": "My Dreamer",
-        "block_id": "100438dbead3",
-        "type": "callout",
-        "content": "**What** · processed f5-compose-pairs signal · [#55572] arousal 1.00 · HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per Note · **Why** · instruction file maps f5-compose-pairs to first arm-task · brain canon #55572 matched arm-topic last 4h above arousal 0.85 · **Result** · bloc",
-        "priority": "f5-compose-pairs",
-        "source": "dream-self",
-        "updated_at": "2026-07-03T16:16:59.582396"
       }
     ],
     "briefing": [
