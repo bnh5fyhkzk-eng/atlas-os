@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-04T14:28:06Z",
+  "generated_at": "2026-07-04T14:58:39Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement me-heart-wire.py Q4 wire-order orchestrator per #55603 blueprint to finalize heart loop sequencing",
-      "why": "Brother direct in #55589 says heart should be finished and tested, and #55603 is the latest shipped step for heart-wire ordering \u2014 this is the highest priority execution gate right now.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-07-02T04:34:38.577029"
-    },
     {
       "arm": "code",
       "task": "Implement me-heart-wire.py Q4 wire-order orchestrator for heart-night-loop from brain canons #55589 and #55603.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-04T10:28:06.576385"
+    },
+    {
+      "arm": "research",
+      "task": "Run NotebookLM blueprint extraction for 'maze-from-end-frame' heart-wire orchestration to resolve brother's 'blockage as maze' direct order.",
+      "why": "Brother's direct #55591 command frames heart blockage as a maze from the end. Research arm with NotebookLM can parse the blueprint and ship the next wire-order step, unblocking the heart completion cycle.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-04T10:58:39.127569"
     }
   ]
 }
