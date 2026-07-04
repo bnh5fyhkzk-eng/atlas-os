@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T03:47:37Z",
+  "generated_at": "2026-07-04T04:02:38Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 116,
+    "note": 117,
     "briefing": 104,
     "idea": 0
   },
-  "total_blocks": 244,
+  "total_blocks": 245,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "6f1188d9b357",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement me-heart-wire.py step 2: wire Q4 orchestrator to emit final heart-loop packets per NotebookLM blueprint section 4.2 · why: Brother direct: 'heart should be finished by tomorrow and tested' — step 1 shipped, step 2 is the immediate next Stran",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-03T23:45:34.792549"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-03T14:36:50.946335"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "8e0b47719c38",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script, integrating the heart-night-loop plan v2 from #55589 and the maze-from-end frame from #55591. · why: Brother direct in #55589 says heart should be finished and tested; #55603 i",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-03T14:21:32.075442"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "1835c4ec80bc",
+        "type": "callout",
+        "content": "**What** · Wired Q4 orchestrator to emit final heart-loop packets per NotebookLM blueprint section 4.2. · **Why** · Brother direct: heart must finish by tomorrow, step 1 shipped, step 2 closes the loop before night-cycle. · **Result** · Q4 now emits heart-loop packets every 3 seconds; verified via m",
+        "priority": "orchestration",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-03T23:45:43.269634"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-07-03T18:00:03.648784"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "9cb3416d2cc7",
-        "type": "database",
-        "content": "syntheses · last 30d · 6 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-07-03T18:00:03.648779"
       }
     ],
     "briefing": [
