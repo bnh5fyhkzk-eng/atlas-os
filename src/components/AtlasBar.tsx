@@ -4,7 +4,7 @@
 // sleeping state when bridge down · context-aware (sends current page).
 import { useEffect, useRef, useState, useCallback } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Send, X, Maximize2, Minimize2, Mic, Phone, Volume2, VolumeX } from "lucide-react";
+import { Send, X, Maximize2, Minimize2, Mic, Phone, Volume2, VolumeX, Link2 } from "lucide-react";
 import { sb } from "../lib/db";
 
 interface RoomMsg {
@@ -22,6 +22,31 @@ function audioUrl(path: string): string {
 }
 
 const AWAKE_MS = 90_000; // heartbeat every 30s · stale after 90s
+
+// ── BRIDGE MODE · additive path to the real Atlas engine (atlas-terminal
+// bridge/server.py) alongside the existing Supabase /api/chat room. Default
+// OFF · Supabase path stays the untouched default. #27083 BUILD-ON-TOP.
+const ENGINE_URL = (import.meta.env.VITE_ATLAS_ENGINE_URL as string | undefined) || "https://engine.atlasos.me";
+const ENGINE_TOKEN = (import.meta.env.VITE_ATLAS_ENGINE_TOKEN as string | undefined) || "";
+const ENGINE_MODEL = (import.meta.env.VITE_ATLAS_ENGINE_MODEL as string | undefined) || "";
+const ENGINE_CONFIGURED = Boolean(ENGINE_TOKEN);
+const BRIDGE_SESSION_KEY = "atlas-bridge-session-id";
+const BRIDGE_MODE_KEY = "atlas-bridge-mode";
+
+interface EngineEvent {
+  v?: number;
+  id?: number;
+  ts?: string;
+  session_id?: string;
+  type: string;
+  source?: string;
+  summary?: string;
+  payload?: { full_text?: string; [k: string]: unknown };
+}
+
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 export function AtlasBar() {
   const { pathname } = useLocation();
@@ -57,6 +82,29 @@ export function AtlasBar() {
   const playedRef = useRef<Set<string>>(new Set());
   const stuckBottomRef = useRef<boolean>(true);
   const lastMsgIdRef = useRef<string | null>(null);
+
+  // bridge mode · talk to the real Atlas engine instead of the Supabase room
+  const [bridgeOn, setBridgeOn] = useState(() => ENGINE_CONFIGURED && localStorage.getItem(BRIDGE_MODE_KEY) === "1");
+  const [bridgeMsgs, setBridgeMsgs] = useState<RoomMsg[]>([]);
+  const [engineHealth, setEngineHealth] = useState<"connected" | "offline">("offline");
+  const bridgeSessionRef = useRef<string | null>(localStorage.getItem(BRIDGE_SESSION_KEY));
+  const pendingSpawnRef = useRef(false);
+  const streamingIdRef = useRef<string | null>(null);
+  const lastReplyTextRef = useRef("");
+  const voiceReplyRef = useRef(voiceReply);
+  useEffect(() => { voiceReplyRef.current = voiceReply; }, [voiceReply]);
+
+  const toggleBridge = useCallback(() => {
+    setBridgeOn((v) => {
+      const next = !v;
+      localStorage.setItem(BRIDGE_MODE_KEY, next ? "1" : "0");
+      return next;
+    });
+  }, []);
+
+  // messages currently on screen · bridge-mode swaps the source, Supabase
+  // keeps loading in the background so toggling back shows the live room
+  const roomMsgs = bridgeOn ? bridgeMsgs : msgs;
 
   const load = useCallback(async () => {
     const { data } = await sb()
@@ -260,6 +308,172 @@ export function AtlasBar() {
     return () => window.clearInterval(t);
   }, [checkPresence]);
 
+  // ── BRIDGE MODE wiring ──────────────────────────────────────────────
+  // speak the final reply through the bridge's heart-voiced TTS (best-effort,
+  // never blocks the turn if the voice engine is down)
+  const speakBridgeReply = useCallback(async (text: string) => {
+    if (!text.trim() || !ENGINE_TOKEN) return;
+    try {
+      const resp = await fetch(`${ENGINE_URL}/voice/tts`, {
+        method: "POST",
+        headers: { "X-Atlas-Token": ENGINE_TOKEN, "Content-Type": "application/json" },
+        body: JSON.stringify({ text }),
+      });
+      if (!resp.ok) return;
+      const blob = await resp.blob();
+      const url = URL.createObjectURL(blob);
+      const a = new Audio(url);
+      a.onended = () => URL.revokeObjectURL(url);
+      a.onerror = () => URL.revokeObjectURL(url);
+      void a.play().catch(() => undefined);
+    } catch {
+      /* voice reply is best-effort — text already landed */
+    }
+  }, []);
+
+  // one bridge event → update the streaming reply bubble. Session discovery:
+  // spawn_session doesn't know its session_id up front (claude assigns it),
+  // so the first event carrying a session_id after a pending spawn becomes
+  // ours. Every event after that is scoped strictly to that session_id.
+  const onBridgeEvent = useCallback((ev: EngineEvent) => {
+    const sid = ev.session_id;
+    if (!sid) return;
+    if (pendingSpawnRef.current && !bridgeSessionRef.current) {
+      bridgeSessionRef.current = sid;
+      localStorage.setItem(BRIDGE_SESSION_KEY, sid);
+      pendingSpawnRef.current = false;
+    }
+    if (sid !== bridgeSessionRef.current) return; // another session's turn
+    const replyId = streamingIdRef.current;
+    if (!replyId) return;
+    if (ev.type === "llm_delta") {
+      const chunk = ev.payload?.full_text ?? ev.summary ?? "";
+      lastReplyTextRef.current += chunk;
+      const full = lastReplyTextRef.current;
+      setBridgeMsgs((m) => m.map((mm) => (mm.id === replyId ? { ...mm, content: full } : mm)));
+    } else if (ev.type === "llm") {
+      const full = ev.payload?.full_text ?? ev.summary ?? "";
+      lastReplyTextRef.current = full;
+      setBridgeMsgs((m) => m.map((mm) => (mm.id === replyId ? { ...mm, content: full, status: "done" } : mm)));
+    } else if (ev.type === "cost") {
+      streamingIdRef.current = null;
+      setSending(false);
+      if (voiceReplyRef.current) void speakBridgeReply(lastReplyTextRef.current);
+    }
+  }, [speakBridgeReply]);
+
+  // SSE reader · fetch()+ReadableStream instead of EventSource because
+  // EventSource can't send the X-Atlas-Token header. Reconnects on drop.
+  useEffect(() => {
+    if (!bridgeOn || !ENGINE_TOKEN) return;
+    let stopped = false;
+    let controller: AbortController | null = null;
+
+    const run = async () => {
+      while (!stopped) {
+        controller = new AbortController();
+        try {
+          const resp = await fetch(`${ENGINE_URL}/events/stream`, {
+            headers: { "X-Atlas-Token": ENGINE_TOKEN, Accept: "text/event-stream" },
+            signal: controller.signal,
+          });
+          if (!resp.ok || !resp.body) {
+            await sleep(2000);
+            continue;
+          }
+          const reader = resp.body.getReader();
+          const decoder = new TextDecoder();
+          let buffer = "";
+          while (!stopped) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            buffer += decoder.decode(value, { stream: true });
+            const parts = buffer.split("\n\n");
+            buffer = parts.pop() ?? "";
+            for (const part of parts) {
+              for (const line of part.split("\n")) {
+                if (line.startsWith("data: ")) {
+                  try {
+                    onBridgeEvent(JSON.parse(line.slice(6)) as EngineEvent);
+                  } catch {
+                    /* skip malformed frame */
+                  }
+                }
+              }
+            }
+          }
+          if (stopped) break;
+          await sleep(2000);
+        } catch {
+          if (stopped) break;
+          await sleep(2000);
+        }
+      }
+    };
+    void run();
+    return () => {
+      stopped = true;
+      controller?.abort();
+    };
+  }, [bridgeOn, onBridgeEvent]);
+
+  // engine status pill · GET /engine/health {ok}
+  useEffect(() => {
+    if (!bridgeOn || !ENGINE_TOKEN) {
+      setEngineHealth("offline");
+      return;
+    }
+    let cancelled = false;
+    const check = async () => {
+      try {
+        const resp = await fetch(`${ENGINE_URL}/engine/health`, { headers: { "X-Atlas-Token": ENGINE_TOKEN } });
+        const data = (await resp.json()) as { ok?: boolean };
+        if (!cancelled) setEngineHealth(data?.ok ? "connected" : "offline");
+      } catch {
+        if (!cancelled) setEngineHealth("offline");
+      }
+    };
+    void check();
+    const t = window.setInterval(() => void check(), 15_000);
+    return () => {
+      cancelled = true;
+      window.clearInterval(t);
+    };
+  }, [bridgeOn]);
+
+  const sendBridge = useCallback(async (text: string) => {
+    const now = new Date().toISOString();
+    const myMsg: RoomMsg = { id: crypto.randomUUID(), role: "brother", content: text, status: "done", created_at: now };
+    const replyId = crypto.randomUUID();
+    const replyMsg: RoomMsg = { id: replyId, role: "atlas", content: "", status: "streaming", created_at: now };
+    streamingIdRef.current = replyId;
+    lastReplyTextRef.current = "";
+    setBridgeMsgs((m) => [...m, myMsg, replyMsg]);
+
+    const sid = bridgeSessionRef.current;
+    const body: Record<string, unknown> = sid
+      ? { v: 1, cmd: "send_message", session_id: sid, text }
+      : { v: 1, cmd: "spawn_session", text };
+    if (ENGINE_MODEL) body.model = ENGINE_MODEL;
+    if (!sid) pendingSpawnRef.current = true;
+
+    try {
+      const resp = await fetch(`${ENGINE_URL}/cmd`, {
+        method: "POST",
+        headers: { "X-Atlas-Token": ENGINE_TOKEN, "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      if (!resp.ok) throw new Error(String(resp.status));
+    } catch {
+      pendingSpawnRef.current = false;
+      streamingIdRef.current = null;
+      setSending(false);
+      setBridgeMsgs((m) =>
+        m.map((mm) => (mm.id === replyId ? { ...mm, content: "(bridge unreachable · engine offline)", status: "error" } : mm)),
+      );
+    }
+  }, []);
+
   // messages when open · realtime + poll fallback
   useEffect(() => {
     if (!open) return;
@@ -290,8 +504,8 @@ export function AtlasBar() {
   }, [open]);
 
   useEffect(() => {
-    if (msgs.length === 0) return;
-    const newestId = msgs[msgs.length - 1].id;
+    if (roomMsgs.length === 0) return;
+    const newestId = roomMsgs[roomMsgs.length - 1].id;
     if (newestId === lastMsgIdRef.current) return;
     const isFirstLoad = lastMsgIdRef.current === null;
     lastMsgIdRef.current = newestId;
@@ -300,7 +514,7 @@ export function AtlasBar() {
     } else {
       setUnreadCount((n) => n + 1);
     }
-  }, [msgs]);
+  }, [roomMsgs]);
 
   const jumpToBottom = useCallback(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -312,6 +526,12 @@ export function AtlasBar() {
     if (!text || sending) return;
     setInput("");
     setSending(true);
+    // bridge mode → real Atlas engine; sending releases on the "cost" event
+    // (whole turn), not on the initial accept, since the reply streams in.
+    if (bridgeOn && ENGINE_TOKEN) {
+      void sendBridge(text);
+      return;
+    }
     try {
       await fetch("/api/room-send", {
         method: "POST",
@@ -350,8 +570,26 @@ export function AtlasBar() {
         {dot}
         <span className="text-sm font-semibold">Atlas</span>
         <span className="flex-1 truncate text-xs" style={{ color: "rgba(60,60,67,0.6)" }}>
-          {awake ? "Mac mini · live" : "sleeping · I'll answer on wake"}
+          {bridgeOn ? (engineHealth === "connected" ? "engine: connected" : "engine: offline") : awake ? "Mac mini · live" : "sleeping · I'll answer on wake"}
         </span>
+        <button
+          onClick={toggleBridge}
+          disabled={!ENGINE_CONFIGURED}
+          title={
+            ENGINE_CONFIGURED
+              ? bridgeOn
+                ? "Bridge mode ON · talking to the real Atlas engine"
+                : "Bridge mode off · using the house room"
+              : "Set VITE_ATLAS_ENGINE_URL + VITE_ATLAS_ENGINE_TOKEN to enable"
+          }
+          style={{
+            background: bridgeOn ? "rgba(52,199,89,0.18)" : "transparent",
+            color: bridgeOn ? "#34c759" : ENGINE_CONFIGURED ? "rgba(60,60,67,0.55)" : "rgba(60,60,67,0.25)",
+            borderRadius: 999,
+          }}
+        >
+          <Link2 size={14} />
+        </button>
         <button onClick={() => setFull((v) => !v)} title={full ? "Side panel" : "Full screen"}>
           {full ? <Minimize2 size={14} /> : <Maximize2 size={14} />}
         </button>
@@ -361,12 +599,12 @@ export function AtlasBar() {
       </div>
 
       <div ref={bodyRef} className="atlas-glass-body">
-        {msgs.length === 0 && (
+        {roomMsgs.length === 0 && (
           <div className="pt-10 text-center text-sm" style={{ color: "rgba(60,60,67,0.55)" }}>
-            Our room · everything stays
+            {bridgeOn ? "Bridge room · talking to the real engine" : "Our room · everything stays"}
           </div>
         )}
-        {msgs.map((m) => (
+        {roomMsgs.map((m) => (
           <div key={m.id} className={"flex " + (m.role === "brother" ? "justify-end" : "justify-start")}>
             <div className={"atlas-bubble " + (m.role === "brother" ? "mine" : "his")}>
               {renderContent(m) || (m.status === "pending" || m.status === "processing" ? "…" : "")}
@@ -456,7 +694,19 @@ export function AtlasBar() {
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); void send(); }
           }}
-          placeholder={calling ? "📞 on the line · just speak" : recording ? "Listening… release to send" : awake ? "Talk to me…" : "I'm sleeping · message banks for wake"}
+          placeholder={
+            calling
+              ? "📞 on the line · just speak"
+              : recording
+                ? "Listening… release to send"
+                : bridgeOn
+                  ? engineHealth === "connected"
+                    ? "Talk to me… (bridge live)"
+                    : "Bridge offline · message will fail"
+                  : awake
+                    ? "Talk to me…"
+                    : "I'm sleeping · message banks for wake"
+          }
         />
         <button disabled={sending || !input.trim()} onClick={() => void send()}>
           <Send size={15} />
