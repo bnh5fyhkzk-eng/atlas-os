@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T04:02:38Z",
+  "generated_at": "2026-07-04T04:17:38Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 117,
+    "note": 118,
     "briefing": 104,
     "idea": 0
   },
-  "total_blocks": 245,
+  "total_blocks": 246,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "c53f46c39206",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Run the me-heart-wire.py orchestrator on the heart blueprint and validate wire connections against NotebookLM blueprint. · why: Brother direct requires heart finished and tested; step 1 shipped needs execution and validation.",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-04T00:01:01.223118"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-03T14:52:10.257780"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "1abb91cb353b",
-        "type": "callout",
-        "content": "Hermes decision · arm=charle · priority=P0 · task: refactor me-heart-wire.py -> final wire-order driver (Q4) per brain canons #55572/#55603, shipping 4 loops + brother's night-loop plan as first-class orchestrator · why: brother direct says heart finished tomorrow + tested; #55572 shipped 4 final lo",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-03T14:36:50.946335"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "77f67b5b5473",
+        "type": "callout",
+        "content": "**What** · run me-heart-wire.py orchestrator on heart blueprint, validate wire connections against NotebookLM blueprint · **Why** · brother direct needs heart finished and tested; step 1 shipped requires execution and validation · **Result** · orchestrator executed, wire connections validated — no m",
+        "priority": "execution",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-04T00:01:06.423542"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-07-03T18:00:03.648789"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "0621a7210a12",
-        "type": "database",
-        "content": "pull-patterns · last 30d · 2 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-07-03T18:00:03.648784"
       }
     ],
     "briefing": [
