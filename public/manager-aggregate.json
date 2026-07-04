@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T17:03:08Z",
+  "generated_at": "2026-07-04T17:18:09Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 111,
+    "note": 112,
     "briefing": 108,
     "idea": 0
   },
-  "total_blocks": 243,
+  "total_blocks": 244,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "e665f68ff7e0",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py loop that sequences the final heart-mind boundary tests per NotebookLM P4 and brother's direct instructions. · why: This is the highest-priority P0 because brother dir",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-04T13:00:35.613767"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-04T03:19:29.044123"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "1c65918111ee",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement heart night-loop test suite to validate the finished heart per brother direct instructions · why: Brother direct stated 'heart should be finished by tomorrow and tested' in canon #55589; step 1 already shipped, now need to ensure heart passe",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-04T03:04:19.300730"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "5bd6491cf476",
+        "type": "callout",
+        "content": "**What** · shipped me-heart-wire.py loop that sequences final heart-mind boundary tests per NotebookLM P4 and brother's orders. · **Why** · Hermes said P0, brother wants heart done tomorrow, #55603 is the exact wire orchestrator step — only code arm can ship this loop now. · **Result** · loop runs: ",
+        "priority": "code-ship",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-04T13:00:37.526932"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "code",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-04T08:26:10.401371"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "2cf1f9c5af78",
-        "type": "callout",
-        "content": "**What** · Implement the Q4 wire-order orchestrator linking heart-mind boundary logic per #55600 and #55603 into heart-wire.py. · **Why** · Brother directive: heart finished by tomorrow. This is the critical P0 path to ship heart loops and unblock downstream testing. I have the blueprint from Notebo",
-        "priority": "implement",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-04T08:10:38.628810"
       }
     ],
     "briefing": [
