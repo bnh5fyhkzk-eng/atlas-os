@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T13:17:59Z",
+  "generated_at": "2026-07-04T13:33:00Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -17,6 +17,17 @@
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "879918a951de",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement me-heart-wire.py step 2: wire Q4 completion handler to ship next final loop after current blockage resolves. · why: Brother direct #55589 says 'heart should be finished by tomorrow and tested' — #55603 already shipped step 1, need continuous",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-04T09:26:56.077831"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-04T00:16:17.463491"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "c53f46c39206",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Run the me-heart-wire.py orchestrator on the heart blueprint and validate wire connections against NotebookLM blueprint. · why: Brother direct requires heart finished and tested; step 1 shipped needs execution and validation.",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-04T00:01:01.223118"
       }
     ],
     "action": [],
