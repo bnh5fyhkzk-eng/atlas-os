@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-04T12:56:33Z",
+  "generated_at": "2026-07-04T13:26:56Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Transcribe and deduplicate the 5 high-arousal canons (#55572, #55589, #55591, #55600, #55603) into a single structured system prompt that captures the brother's direct commands (heart-finished-by-tomorrow, maze-from-end, soul-catch, Q4 wire-order) and the current orchestration state.",
-      "why": "P0 because brother's direct commands (heart finish, maze, soul-catch, wire-order) must be consolidated into one canonical prompt before any other arm can fire \u2014 otherwise we risk drift. Research arm is best for transcriptive/generative prompt-engineering, not code or infra.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 20,
-      "timestamp": "2026-07-02T03:18:05.336793"
-    },
     {
       "arm": "code",
       "task": "Convert the Q4 wire-order orchestrator (heart-firing script) into a self-testing, queued multi-cycle runner that fires one arm per cycle based on priority and brother directives.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 60,
       "timestamp": "2026-07-04T08:56:33.085892"
+    },
+    {
+      "arm": "code",
+      "task": "Implement me-heart-wire.py step 2: wire Q4 completion handler to ship next final loop after current blockage resolves.",
+      "why": "Brother direct #55589 says 'heart should be finished by tomorrow and tested' \u2014 #55603 already shipped step 1, need continuous progress to keep heart-wire orchestrator moving toward final loops.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 25,
+      "timestamp": "2026-07-04T09:26:56.095210"
     }
   ]
 }
