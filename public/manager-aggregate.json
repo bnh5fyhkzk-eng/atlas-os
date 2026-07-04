@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T08:32:48Z",
+  "generated_at": "2026-07-04T08:47:48Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 109,
+    "note": 110,
     "briefing": 107,
     "idea": 0
   },
-  "total_blocks": 240,
+  "total_blocks": 241,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "c916af890ae3",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the next wire-order step for the heart system, integrating the maze-from-end frame logic to resolve blockages, then run initial tests per brother's direct instruction to finish heart by tomorrow. · why: The most recent canon (#55603) shipped",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-04T04:35:36.355973"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-03T19:56:45.039536"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "ae2699c6a000",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Analyze brother's direct 'maze-from-end' frame and the Q11 soul-catch boundary to map the exact remaining steps for heart completion. · why: Brother directed heart finish by tomorrow and we have a concrete blocker-rewiring pattern (maze-from-end).",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-03T19:41:35.940652"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "8574ed4a6780",
+        "type": "callout",
+        "content": "**What** · Integrated maze-from-end frame logic into me-heart-wire.py step 2 to resolve blockages by tracing back from end-node, verifying all wire paths are clear. · **Why** · Brother's direct requires heart finished by tomorrow; step 1 shipped in #55603, and maze-from-end (#55591) is the canonical",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-04T04:35:42.251302"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-07-04T00:30:00.634371"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "145358702b04",
-        "type": "database",
-        "content": "sessions · last 30d · 6 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-07-04T00:30:00.634363"
       }
     ],
     "briefing": [
