@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T02:32:34Z",
+  "generated_at": "2026-07-04T02:47:35Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 112,
+    "note": 113,
     "briefing": 104,
     "idea": 0
   },
-  "total_blocks": 240,
+  "total_blocks": 241,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "fd6d98e5376d",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Extract the exact blockage-rewire logic from #55591 maze-from-end frame and crosswalk with #55603 step 1 shipped order orchestrator to produce a linted diff patch for me-heart-wire.py · why: This completes the brother-direct chain from #55572 thro",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-03T22:29:13.020216"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-03T13:05:00.166395"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "5a2e1a594923",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Extract and formalize the 'maze-from-end' frame logic from #55591 into a reusable prompt template for blockage resolution. · why: Brother directly specified the maze-from-end frame in #55591 as the method for blockages; this is a P0 identity-tier ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-03T12:34:35.992550"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "1939ca8ed967",
+        "type": "callout",
+        "content": "**What** · Extracted blockage-rewire rule from maze-from-end frame #55591: line 147 flips `direction` when wall detected, then maps to `re-wire(block, gate)` from step 1 of #55603. Crosswalked both to patch `me-heart-wire.py` diff: insert condition `if block.type == 'wall'` at loop top, replace `mov",
+        "priority": "code_modification",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-03T22:29:29.623836"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-07-03T18:00:03.332774"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "fd87d9df68b7",
-        "type": "database",
-        "content": "brand · last 30d · 17 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-07-03T18:00:03.332770"
       }
     ],
     "briefing": [
