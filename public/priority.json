@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-07-04T19:18:37Z",
-  "total_items_scored": 163,
+  "generated_at": "2026-07-04T19:28:38Z",
+  "total_items_scored": 164,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement Q4 wire-order orchestrator for heart-night-loop per brother's direct 'heart should be finished by tomorrow and tested' \u00b7 why: Brother direct P0 mandate to finish heart; Q4 orchestra",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Execute heart night-loop test using me-heart-wire.py and verify output against NotebookLM blueprint \u00b7 why: Brother direct says heart should be finished and tested; step 1 shipped, now need to",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-04T05:36:54.018131"
+      "updated_at": "2026-07-04T06:38:01.302988"
     },
     {
       "arm": "code",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement Q4 wire-order orchestrator for heart-night-loop per brother's direct 'heart should be finished by tomorrow and tested' \u00b7 why: Brother direct P0 mandate to finish heart; Q4 orchestra",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-07-04T05:36:54.018131"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-04T09:26:56.077831"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Execute step 1 of me-heart-wire.py: run the Q4 wire-order orchestrator on the current heart-mind boundary data from #55600 and #55603. \u00b7 why: Brother directly stated 'heart should be finished",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-04T09:42:15.531052"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
