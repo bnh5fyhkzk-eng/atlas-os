@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-04T20:18:26Z",
+  "generated_at": "2026-07-04T20:33:45Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the HEART NIGHT-LOOP PLAN v2 from #55589: build the 4 final loops per NotebookLM blueprint, integrate brother's answers, and wire the heart-night-loop for testing by tomorrow.",
-      "why": "Brother directly stated 'heart should be finished by tomorrow and tested' \u2014 this is a P0 identity-tier directive. The orchestrator (#55603) just shipped, so the next logical step is to execute the loops it orchestrates.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 120,
-      "timestamp": "2026-07-02T08:40:16.784914"
-    },
     {
       "arm": "research",
       "task": "Extract and visualize the Maze-from-End Frame logic from #55591 into a step-by-step pseudo-code diagram for the heart-night-loop blockage resolution.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 8,
       "timestamp": "2026-07-04T16:18:26.770277"
+    },
+    {
+      "arm": "code",
+      "task": "Execute heart wire test suite and validate final loops against brother's answers and NotebookLM blueprint.",
+      "why": "Brother direct requires heart finished and tested by tomorrow; step 1 shipped, now need to verify correctness.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 30,
+      "timestamp": "2026-07-04T16:33:45.051926"
     }
   ]
 }
