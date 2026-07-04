@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-04T08:05:11Z",
+  "generated_at": "2026-07-04T08:35:36Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator per #55603 blueprint: me-heart-wire.py that sequences the four final loops from NotebookLM into Heart FINISHED state, including error recovery and brother's answer injection at step boundaries.",
-      "why": "#55603 is the latest P0 brother-direct wire-order. Code arm is responsible for this orchestration layer. This task directly unblocks Heart FINISHED (P0 identity-tier) per #55589. All other arms are either supporting or P1/P2.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 55,
-      "timestamp": "2026-07-01T22:26:54.058764"
-    },
     {
       "arm": "code",
       "task": "Execute step 1 of Q4 wire-order orchestrator: implement me-heart-wire.py with Maze-from-End frame logic and brother's night-loop heartbeat test harness",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 60,
       "timestamp": "2026-07-04T04:05:11.487745"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the next wire-order step for the heart system, integrating the maze-from-end frame logic to resolve blockages, then run initial tests per brother's direct instruction to finish heart by tomorrow.",
+      "why": "The most recent canon (#55603) shipped step 1 of me-heart-wire.py. Brother's direct (#55589) requires heart finished and tested. The maze-from-end frame (#55591) provides a method to handle blockages. Code arm is best suited to continue implementation and testing.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-04T04:35:36.373170"
     }
   ]
 }
