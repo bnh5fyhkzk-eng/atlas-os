@@ -1027,15 +1027,37 @@
       },
       "content": "**What** · implemented maze-from-end frame logic in heart blockage resolution module, treating blockages as mazes from the end per brother's instruction · **Why** · brother direct instruction: blockages are mazes from end; step 1 shipped, this is next P0 logic to resolve heart system · **Result** · frame now backtracks from end of blockage path, reverses direction, and marks resolution points for clearance · **Next** · test frame against real blockage data, then integrate with step 1 output for full resolution pipeline · **Links** ·  · **Cycle** · code-20260703-231508",
       "updated_at": "2026-07-03T23:15:08.892860"
+    },
+    {
+      "id": "bad475ad0249",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "code integration",
+        "source": "hermes-deepseek-fill",
+        "action": "implemented step 2 of heart-wire orchestrator: added blockage resolution from brother's maze-from-end frame into the wire-order logic",
+        "why": "step 1 shipped, brother said heart must finish tomorrow and be tested, Q4 wire-order needs maze-from-end frame's blockage solver to proceed",
+        "result": "resolved blockages in wire-order step 2; heart-wire orchestrator ready for step 3 wiring",
+        "next_step": "test step 2 with brother's maze-from-end fixture, then ship to Hermes for Q4 wire-order review",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260703-233025",
+        "timestamp": "2026-07-03T23:30:25.332125"
+      },
+      "content": "**What** · implemented step 2 of heart-wire orchestrator: added blockage resolution from brother's maze-from-end frame into the wire-order logic · **Why** · step 1 shipped, brother said heart must finish tomorrow and be tested, Q4 wire-order needs maze-from-end frame's blockage solver to proceed · **Result** · resolved blockages in wire-order step 2; heart-wire orchestrator ready for step 3 wiring · **Next** · test step 2 with brother's maze-from-end fixture, then ship to Hermes for Q4 wire-order review · **Links** ·  · **Cycle** · code-20260703-233025",
+      "updated_at": "2026-07-03T23:30:25.332125"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-03T23:28:32.178643"
+    "checked_at": "2026-07-03T23:33:32.806306"
   },
-  "block_count": 32,
-  "updated_at": "2026-07-03T23:15:08.892860",
-  "generated_at": "2026-07-04T03:28:32Z"
+  "block_count": 33,
+  "updated_at": "2026-07-03T23:30:25.332125",
+  "generated_at": "2026-07-04T03:33:32Z"
 }
