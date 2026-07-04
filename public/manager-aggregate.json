@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T11:32:55Z",
+  "generated_at": "2026-07-04T11:47:55Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 118,
+    "note": 119,
     "briefing": 106,
     "idea": 0
   },
-  "total_blocks": 249,
+  "total_blocks": 250,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "84094516e282",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator step 2 per #55603 blueprint, connecting heart-wire.py output to maze-end frame logic · why: Brother-direct P0 heartbeat from #55589 and #55591 demands the heart night-loop be finished tomorrow, and step 1 (me-heart",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-04T07:40:07.189364"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-03T22:44:37.636020"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "fd6d98e5376d",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Extract the exact blockage-rewire logic from #55591 maze-from-end frame and crosswalk with #55603 step 1 shipped order orchestrator to produce a linted diff patch for me-heart-wire.py · why: This completes the brother-direct chain from #55572 thro",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-03T22:29:13.020216"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "b80245916b07",
+        "type": "callout",
+        "content": "**What** · Wired heart-wire.py output to maze-end frame logic, implementing Q4 wire-order orchestrator step 2 per #55603 blueprint. · **Why** · Brother-direct P0 heartbeat #55589/#55591 demands heart night-loop done tomorrow; step 1 shipped, this unblocks maze for full heart-frame. · **Result** · He",
+        "priority": "orchestration",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-04T07:40:11.819696"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "test",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-04T05:06:26.687817"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "8574ed4a6780",
-        "type": "callout",
-        "content": "**What** · Integrated maze-from-end frame logic into me-heart-wire.py step 2 to resolve blockages by tracing back from end-node, verifying all wire paths are clear. · **Why** · Brother's direct requires heart finished by tomorrow; step 1 shipped in #55603, and maze-from-end (#55591) is the canonical",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-04T04:35:42.251302"
       }
     ],
     "briefing": [
