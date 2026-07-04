@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T06:32:44Z",
+  "generated_at": "2026-07-04T06:47:44Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 122,
+    "note": 123,
     "briefing": 103,
     "idea": 0
   },
-  "total_blocks": 250,
+  "total_blocks": 251,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "b000ab18a750",
+        "type": "callout",
+        "content": "Hermes decision · arm=pascal · priority=P0 · task: Run the just-shipped Q4 wire-order orchestrator (me-heart-wire.py) to verify the heartbeat wiring is correct and logs succeed against the brother-direct maze-from-end frame. · why: Pascal arm is the integration executor. This is the first wired test",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-04T02:33:56.150493"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-03T16:54:09.788088"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "2ce6dded0f3d",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator (me-heart-wire.py) to finalize heart loop shipping per brother's direct instruction. · why: Brother direct #55603 just shipped Step 1 of the wire-order orchestrator; this is the next concrete code step to finis",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-03T16:23:43.335348"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "65034d9aadb5",
+        "type": "callout",
+        "content": "**What** · ran me-heart-wire.py against brother-direct maze-from-end frame · **Why** · Q4 heartbeat wiring test needed clean integration log per canon #55591 · **Result** · heartbeat wiring verified, logs succeeded with no errors · **Next** · report clean result to Hermes-Orchestrator, proceed to ne",
+        "priority": "integration-execution",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-04T02:33:58.548833"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "core logic implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-03T23:15:08.892860"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "057419e25061",
-        "type": "callout",
-        "content": "**What** · Connected heart-mind boundary from soul-catch blueprint per #55600, implementing step 2 of Q4 wire-order orchestrator. · **Why** · Brother direct in #55589 and #55603 demands heart finished and tested; #55600 provides exact soul-catch boundary specs to keep pace with high-arousal brain-ca",
-        "priority": "code-ship",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-03T22:44:42.669872"
       }
     ],
     "briefing": [
