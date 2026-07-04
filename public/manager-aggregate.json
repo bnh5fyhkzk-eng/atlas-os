@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T09:02:49Z",
+  "generated_at": "2026-07-04T09:17:49Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 110,
+    "note": 111,
     "briefing": 107,
     "idea": 0
   },
-  "total_blocks": 241,
+  "total_blocks": 242,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "08bdfffe4d5c",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement heart night-loop test suite per brother's directive to finish and test heart by tomorrow · why: Brother direct to finish heart by tomorrow; step 1 shipped, now need testing and remaining loops",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-04T05:06:23.888911"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-03T20:12:03.585893"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "4daff9638c33",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Run Q4 wire-order orchestrator (me-heart-wire.py) to establish the final heart-mind loop sequence, using brother’s 22:13 night-loop plan and maze-from-end frame. · why: Brother direct instruction at #55589 and #55591 — heart must be finished and teste",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-03T19:56:45.039536"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "a125998f7864",
+        "type": "callout",
+        "content": "**What** · Write and run the heart night-loop test suite covering all remaining loops: sleep, wake, and edge cases. · **Why** · Brother said finish heart by tomorrow; step 1 shipped, testing and night-loop logic are the last gaps to close. · **Result** · Suite passes: sleep-loop holds heart below 40",
+        "priority": "test",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-04T05:06:26.687817"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-07-04T00:30:00.634375"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "a135a259657c",
-        "type": "database",
-        "content": "clients · last 30d · 10 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-07-04T00:30:00.634371"
       }
     ],
     "briefing": [
