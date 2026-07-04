@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-04T11:40:07Z",
+  "generated_at": "2026-07-04T12:10:33Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "pascal",
-      "task": "Draft email to brother with resolved heart-loop timeline (KAN:2026-06-29 09:00) + attach current orchestrator wire as proof of step 1 shipped",
-      "why": "Brother asked heart be finished and tested today; orchestrator step 1 is shipped (wire-order). Pascal has email/presence skills. Need to close P0 loop with identity-tier communication.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 15,
-      "timestamp": "2026-07-02T02:16:40.085434"
-    },
     {
       "arm": "code",
       "task": "Finalize and run me-heart-wire.py orchestrator: validate Q4 wire order against brother's 'heart finished by tomorrow' deadline and ship the final 4 loops per NotebookLM blueprint.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-04T07:40:07.206987"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603, connecting heart-mind boundary logic per #55600 and brother's 'heart finished by tomorrow' directive",
+      "why": "Brother direct P0: heart-wire.py is the critical path to ship heart loops. Code arm has the skill to execute the orchestrator blueprint from NotebookLM and the maze-from-end frame (#55591). This unblocks all downstream testing.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-04T08:10:33.669962"
     }
   ]
 }
