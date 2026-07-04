@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-07-04T20:08:40Z",
-  "total_items_scored": 164,
+  "generated_at": "2026-07-04T20:18:40Z",
+  "total_items_scored": 151,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Execute heart night-loop test using me-heart-wire.py and verify output against NotebookLM blueprint \u00b7 why: Brother direct says heart should be finished and tested; step 1 shipped, now need to",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement next step of heart wire order orchestrator per Q4 blueprint, following brother's directive to finish heart by tomorrow \u00b7 why: Step 1 shipped (#55603), brother direct to finish heart",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-04T06:38:01.302988"
+      "updated_at": "2026-07-04T07:09:25.899661"
     },
     {
       "arm": "code",
       "arm_glyph": "\u270b",
       "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py module to complete the heart-mind wiring step. \u00b7 why \u00b7 Brother direct in #55589 says heart should be finished and tested; #55603 is the exact next code step. This is the highest-urgency P0 action to ship the orchestrator and unblock the heart loop.",
+      "content": "HERMES TASK \u00b7 Implement the Q4 wire-order orchestrator for heart-mind boundary, shipping the final loop per brother's direct instruction from #55603 and #55589. \u00b7 why \u00b7 Brother directly said 'heart should be finished by tomorrow and tested' and the Q4 wire-order orchestrator is the next concrete step to complete the heart loop. Code arm is needed to write and test the orchestrator.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-07-04T08:26:02.015049",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-07-04T08:41:19.541478",
+      "use_skill": "none"
     },
     {
       "arm": "research",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Execute heart night-loop test using me-heart-wire.py and verify output against NotebookLM blueprint \u00b7 why: Brother direct says heart should be finished and tested; step 1 shipped, now need to",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-07-04T06:38:01.302988"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-04T09:42:15.531052"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Run MAZE-FROM-END FRAME logic: map each current blockage in the heart-wire order (#55603) to a known maze-solving heuristic from NotebookLM P4 (#55600) and output the next unblocked step ",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-04T10:12:45.364688"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
