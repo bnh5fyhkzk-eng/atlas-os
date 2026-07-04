@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T18:48:13Z",
+  "generated_at": "2026-07-04T19:03:14Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 117,
+    "note": 118,
     "briefing": 107,
     "idea": 0
   },
-  "total_blocks": 249,
+  "total_blocks": 250,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "5f06b208bd5a",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator (me-heart-wire.py) to ship the final heart-mind boundary loop per brother's direct instruction. · why: Brother directly said 'heart should be finished by tomorrow and tested' and step 1 was shipped at #55603. T",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-04T14:47:10.101026"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-04T05:36:54.018131"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "f4652f9f954f",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement and test the Q4 wire-order orchestrator (`me-heart-wire.py`) to finalize the heartbeat loop dispatch for the brother's 'heart finished by tomorrow' directive. · why: This arm directly executes the P0 brother-directive from brain canon #55603",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-04T05:21:42.690221"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "b73d54c5d869",
+        "type": "callout",
+        "content": "**What** · implement me-heart-wire.py Q4 wire-order orchestrator for heart-mind boundary loop · **Why** · brother direct: heart must finish tomorrow tested; step1 shipped at #55603, this is next concrete code step P0 · **Result** · script will wire final heart-mind loop, ready for test integration ·",
+        "priority": "code_implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-04T14:47:15.548789"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-07-04T12:00:01.977282"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "487ba6c639ce",
-        "type": "callout",
-        "content": "**What** · implemented Q4 wire-order orchestrator, shipped me-heart-wire.py to finalize heart-mind boundary wiring per brother's direct timeline · **Why** · brother said 'heart should be finished by tomorrow and tested' (22:13 EDT); this is next concrete step for P0 identity-tier directive · **Resul",
-        "priority": "code-deploy",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-04T10:28:12.708490"
       }
     ],
     "briefing": [
