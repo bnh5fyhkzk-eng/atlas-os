@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "1c65918111ee",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-04T03:04:19.300718"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement heart night-loop test suite to validate the finished heart per brother direct instructions · why: Brother direct stated 'heart should be finished by tomorrow and tested' in canon #55589; step 1 already shipped, now need to ensure heart passes tests as per high-priority directive.",
-      "updated_at": "2026-07-04T03:04:19.300730"
-    },
-    {
       "id": "97aa28dd7080",
       "type": "callout",
       "props": {
@@ -738,15 +726,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Finish integrating the final Q4 wire-order orchestrator logic into me-heart-wire.py per step 1 shipped blueprint. · why: Brother-direct #55603 marks step 1 shipped, but the code wire-order orchestrator must be fully integrated to unblock the heart completion timeline (#55589). This is the last code arm action before shifting to research/infra for testing.",
       "updated_at": "2026-07-04T12:30:05.290811"
+    },
+    {
+      "id": "e665f68ff7e0",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-04T13:00:35.613756"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py loop that sequences the final heart-mind boundary tests per NotebookLM P4 and brother's direct instructions. · why: This is the highest-priority P0 because brother directly said 'heart should be finished by tomorrow and tested' and #55603 is the exact step to wire the orchestrator. Code arm is the only one that can ship this executable loop now.",
+      "updated_at": "2026-07-04T13:00:35.613767"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-04T13:00:05.798450"
+    "checked_at": "2026-07-04T13:05:06.402562"
   },
   "block_count": 30,
-  "updated_at": "2026-07-04T12:30:05.290812",
-  "generated_at": "2026-07-04T17:00:05Z"
+  "updated_at": "2026-07-04T13:00:35.613768",
+  "generated_at": "2026-07-04T17:05:06Z"
 }
