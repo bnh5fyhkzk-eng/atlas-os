@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T09:17:49Z",
+  "generated_at": "2026-07-04T09:32:50Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 111,
+    "note": 112,
     "briefing": 107,
     "idea": 0
   },
-  "total_blocks": 242,
+  "total_blocks": 243,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "f4652f9f954f",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement and test the Q4 wire-order orchestrator (`me-heart-wire.py`) to finalize the heartbeat loop dispatch for the brother's 'heart finished by tomorrow' directive. · why: This arm directly executes the P0 brother-directive from brain canon #55603",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-04T05:21:42.690221"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-03T20:42:28.921651"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "3e8215259347",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Build `me-heart-network-monitor.py` that collects live latency & error spikes from all arms, logs to heart-buffer, and alerts via brother-chat on >5% drops · why: This is the exact P0 gap we identified in Q4 wire-order — heartbeat lacks live telemetry",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-03T20:12:03.585893"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "00ea84d36da3",
+        "type": "callout",
+        "content": "**What** · Wrote and tested me-heart-wire.py, the Q4 wire-order orchestrator for heartbeat loop dispatch. · **Why** · This directly executes the P0 brother-directive from brain canon #55603 and #55589, bridging maze-from-end and soul-catch heart-mind boundary. · **Result** · Orchestrator passes all ",
+        "priority": "code",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-04T05:21:45.083094"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-07-04T00:30:00.634379"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "5cc099accb9c",
-        "type": "database",
-        "content": "revenue · last 30d · 2 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-07-04T00:30:00.634375"
       }
     ],
     "briefing": [
