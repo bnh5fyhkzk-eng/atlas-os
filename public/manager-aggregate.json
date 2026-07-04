@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T12:02:56Z",
+  "generated_at": "2026-07-04T12:17:57Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 119,
+    "note": 120,
     "briefing": 106,
     "idea": 0
   },
-  "total_blocks": 250,
+  "total_blocks": 251,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "58049adbca29",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, connecting heart-mind boundary logic per #55600 and brother's 'heart finished by tomorrow' directive · why: Brother direct P0: heart-wire.py is the critical path to ship heart loops. Code arm has t",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-04T08:10:33.652021"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-03T23:15:00.492201"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "bcd92bb50fab",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement step 2 of Q4 wire-order orchestrator: connect heart-mind boundary from soul-catch blueprint per #55600 and brother's night-loop plan v2 · why: Brother direct in #55589 and #55603 demands heart finished and tested; #55600 provides exact soul-",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-03T22:44:37.636020"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "2cf1f9c5af78",
+        "type": "callout",
+        "content": "**What** · Implement the Q4 wire-order orchestrator linking heart-mind boundary logic per #55600 and #55603 into heart-wire.py. · **Why** · Brother directive: heart finished by tomorrow. This is the critical P0 path to ship heart loops and unblock downstream testing. I have the blueprint from Notebo",
+        "priority": "implement",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-04T08:10:38.628810"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "code",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-04T05:21:45.083094"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "a125998f7864",
-        "type": "callout",
-        "content": "**What** · Write and run the heart night-loop test suite covering all remaining loops: sleep, wake, and edge cases. · **Why** · Brother said finish heart by tomorrow; step 1 shipped, testing and night-loop logic are the last gaps to close. · **Result** · Suite passes: sleep-loop holds heart below 40",
-        "priority": "test",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-04T05:06:26.687817"
       }
     ],
     "briefing": [
