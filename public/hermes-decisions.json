@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-04T13:42:15Z",
+  "generated_at": "2026-07-04T14:12:45Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Complete heart-wire.py integration with Q4 orchestration and initiate test loop",
-      "why": "Brother direct to finish heart by tomorrow and test; step 1 shipped, now need to integrate and test.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-07-02T03:48:46.301924"
-    },
     {
       "arm": "code",
       "task": "Implement Q4 wire-order from #55603: me-heart-wire.py; integrate NotebookLM blueprint final loops from #55572; add brother's direct 'heart finished by tomorrow' constraint from #55589.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-04T09:42:15.548624"
+    },
+    {
+      "arm": "research",
+      "task": "Run MAZE-FROM-END FRAME logic: map each current blockage in the heart-wire order (#55603) to a known maze-solving heuristic from NotebookLM P4 (#55600) and output the next unblocked step for #55572 final shutdown",
+      "why": "Brother-direct #55591 says to treat blockage as maze-from-end. Research arm can synthesize the block-to-heuristic mapping using notebooklm context, producing the concrete next move for the orchestrator to fire. This unblocks the heart finish per P0 deadline.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 4,
+      "timestamp": "2026-07-04T10:12:45.382197"
     }
   ]
 }
