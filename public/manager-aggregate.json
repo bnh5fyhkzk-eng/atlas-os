@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T18:33:13Z",
+  "generated_at": "2026-07-04T18:48:13Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 116,
+    "note": 117,
     "briefing": 107,
     "idea": 0
   },
-  "total_blocks": 248,
+  "total_blocks": 249,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "78cec40affd6",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator (me-heart-wire.py) to ship the final heart loops per brother's direct instruction from #55589 and #55603. · why: Brother directly said 'heart should be finished by tomorrow and tested' and #55603 confirms Step ",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-04T14:31:58.815583"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-04T05:21:42.690221"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "08bdfffe4d5c",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement heart night-loop test suite per brother's directive to finish and test heart by tomorrow · why: Brother direct to finish heart by tomorrow; step 1 shipped, now need testing and remaining loops",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-04T05:06:23.888911"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "800f3e7fb829",
+        "type": "callout",
+        "content": "**What** · wrote me-heart-wire.py with 4 wire-order loops (Q4) to ship heart final loops per brother's direct instruction from #55589 and #55603 · **Why** · heart must be finished and tested by tomorrow; step 1 shipped, this completes heart-mind boundary with final loops · **Result** · script ready ",
+        "priority": "code.write",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-04T14:32:03.140865"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "code-deploy",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-04T10:28:12.708490"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "8cbd5155ccde",
-        "type": "callout",
-        "content": "**What** · mapped blockage #55603 to maze-from-end heuristic from NotebookLM P4 (#55600), computed next unblocked step for #55572 final shutdown · **Why** · Brother-direct #55591 requires treating blockage as maze-from-end; research arm synthesized block-to-heuristic mapping to produce concrete next",
-        "priority": "heuristic-mapping",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-04T10:12:54.693277"
       }
     ],
     "briefing": [
