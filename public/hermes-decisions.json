@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-04T06:49:05Z",
+  "generated_at": "2026-07-04T07:04:19Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Wire the 'me-heart-wire.py' orchestrator to the Q4 final loop blueprint from NotebookLM, ensuring heart-night-loop v2 is executable by tomorrow's test per brother's direct instruction.",
-      "why": "Brother directly said 'heart should be finished by tomorrow and tested' \u2014 this is the highest-priority P0 identity-tier directive. The orchestrator script (#55603) is already shipped but needs final integration with the blueprint (#55572, #55589) to close the loop.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-07-01T20:54:47.099088"
-    },
     {
       "arm": "code",
       "task": "Integrate brother's answers from #55589 into the heart blueprint and update the wire-order orchestrator.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-04T02:49:05.488409"
+    },
+    {
+      "arm": "code",
+      "task": "Implement heart night-loop test suite to validate the finished heart per brother direct instructions",
+      "why": "Brother direct stated 'heart should be finished by tomorrow and tested' in canon #55589; step 1 already shipped, now need to ensure heart passes tests as per high-priority directive.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 45,
+      "timestamp": "2026-07-04T03:04:19.320744"
     }
   ]
 }
