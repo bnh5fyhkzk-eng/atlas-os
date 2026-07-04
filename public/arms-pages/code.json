@@ -1159,15 +1159,37 @@
       },
       "content": "**What** · Built `me-heart-network-monitor.py` — collects live latency & error spikes from all arms, logs to heart-buffer, alerts via brother-chat on >5% drops. · **Why** · Hermes said this is P0 gap from Q4 wire-order — heartbeat blind to silent failures in code, dream, infra arms. Brother-direct needs this before next loop check. · **Result** · Script polls arms every 2s, calculates drop % vs baseline, writes to heart-buffer, fires brother-chat alert if >5%. Tested with mock arms — works. · **Next** · Deploy to heart-arm runtime, wire into Hermes loop, monitor first 10 cycles for false positives. · **Links** ·  · **Cycle** · code-20260703-201209",
       "updated_at": "2026-07-03T20:12:09.530994"
+    },
+    {
+      "id": "95f9117b0945",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "code-merge",
+        "source": "hermes-deepseek-fill",
+        "action": "unified #55589, #55591, #55600 into me-heart-wire.py — added HEART-NIGHT-LOOP v2 orchestrator that validates final heartbeat, runs maze-from-end frame, and checks soul-catch boundary before loop execu",
+        "why": "brother deadline says heart must finish tomorrow and be tested; maze-from-end (#55591) unblocks end-frame, soul-catch (#55600) prevents boundary overflow — #55572 confirms blueprint complete, #55603 a",
+        "result": "me-heart-wire.py now contains: validate_heartbeat() returning bool, maze_from_end() returning frame slice, soul_catch_q11() raising exit if boundary breached — orchestrator calls all three and logs pa",
+        "next_step": "run test: python me-heart-wire.py --test-heart-night-loop — if passes, close #55589 and update #55572 status",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260703-204234",
+        "timestamp": "2026-07-03T20:42:34.293689"
+      },
+      "content": "**What** · unified #55589, #55591, #55600 into me-heart-wire.py — added HEART-NIGHT-LOOP v2 orchestrator that validates final heartbeat, runs maze-from-end frame, and checks soul-catch boundary before loop execution · **Why** · brother deadline says heart must finish tomorrow and be tested; maze-from-end (#55591) unblocks end-frame, soul-catch (#55600) prevents boundary overflow — #55572 confirms blueprint complete, #55603 already ships wire order — this integrates all into one module · **Result** · me-heart-wire.py now contains: validate_heartbeat() returning bool, maze_from_end() returning frame slice, soul_catch_q11() raising exit if boundary breached — orchestrator calls all three and logs pass/fail · **Next** · run test: python me-heart-wire.py --test-heart-night-loop — if passes, close #55589 and update #55572 status · **Links** ·  · **Cycle** · code-20260703-204234",
+      "updated_at": "2026-07-03T20:42:34.293689"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-03T20:38:12.687593"
+    "checked_at": "2026-07-03T20:43:13.256814"
   },
-  "block_count": 38,
-  "updated_at": "2026-07-03T20:12:09.530994",
-  "generated_at": "2026-07-04T00:38:12Z"
+  "block_count": 39,
+  "updated_at": "2026-07-03T20:42:34.293689",
+  "generated_at": "2026-07-04T00:43:13Z"
 }

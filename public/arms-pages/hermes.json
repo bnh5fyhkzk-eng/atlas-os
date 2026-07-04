@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "97fa24f565d4",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-03T10:47:20.448569"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Test the shipped me-heart-wire.py and verify loop integration per brother's directive. · why: Brother direct said heart should be finished and tested; step1 shipped, now need to test the wire order and ensure it works.",
-      "updated_at": "2026-07-03T10:47:20.448579"
-    },
-    {
       "id": "d62978c48273",
       "type": "callout",
       "props": {
@@ -723,15 +711,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Build `me-heart-network-monitor.py` that collects live latency & error spikes from all arms, logs to heart-buffer, and alerts via brother-chat on >5% drops · why: This is the exact P0 gap we identified in Q4 wire-order — heartbeat lacks live telemetry to know when code, dream, or infra arms are failing silently. Brother-direct requires this before next loop check.",
       "updated_at": "2026-07-03T20:12:03.585893"
+    },
+    {
+      "id": "25a03c3f4edb",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-03T20:42:28.921641"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the HEART-NIGHT-LOOP v2 orchestrator that validates and executes final heartbeat loops per #55589 brother's deadline ('heart should be finished by tomorrow and tested'), integrating the Maze-from-end frame from #55591 and Q11 soul-catch check from #55600 into the me-heart-wire.py module sh · why: #55572 confirms heart fully finished blueprint; #55589 adds direct brother urgency for completion+test; #55591 provides the maze-from-end blockage resolution method; #55600 gives the crucial soul-catch boundary check; #55603 already shipped the wire-order orchestrator. Code arm must now unify these ",
+      "updated_at": "2026-07-03T20:42:28.921651"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-03T20:38:12.688748"
+    "checked_at": "2026-07-03T20:43:13.258252"
   },
   "block_count": 30,
-  "updated_at": "2026-07-03T20:12:03.585894",
-  "generated_at": "2026-07-04T00:38:12Z"
+  "updated_at": "2026-07-03T20:42:28.921653",
+  "generated_at": "2026-07-04T00:43:13Z"
 }
