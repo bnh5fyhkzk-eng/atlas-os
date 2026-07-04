@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "cd75c0c07f11",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-04T10:12:45.364678"
-      },
-      "content": "Hermes decision · arm=research · priority=P0 · task: Run MAZE-FROM-END FRAME logic: map each current blockage in the heart-wire order (#55603) to a known maze-solving heuristic from NotebookLM P4 (#55600) and output the next unblocked step for #55572 final shutdown · why: Brother-direct #55591 says to treat blockage as maze-from-end. Research arm can synthesize the block-to-heuristic mapping using notebooklm context, producing the concrete next move for the orchestrator to fire. This unblocks the heart finish per P0 deadline.",
-      "updated_at": "2026-07-04T10:12:45.364688"
-    },
-    {
       "id": "7a630d06674a",
       "type": "callout",
       "props": {
@@ -745,15 +733,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator for heart-wire.py based on brother's maze-from-end frame and NotebookLM blueprint · why: Step 1 shipped; brother direct requires heart finished by tomorrow; code arm is needed to continue the wire-order orchestration per the maze-from-end frame.",
       "updated_at": "2026-07-04T18:51:18.391546"
+    },
+    {
+      "id": "a18a88e3e703",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-04T19:06:36.583933"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 into a runnable script that connects heart-mind boundary per #55600 and #55572 final loops · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the step-1 shipped orchestrator that needs to be coded to unify the heart-mind boundary and final loops. This is the highest-leverage P0 action to ship the heart system.",
+      "updated_at": "2026-07-04T19:06:36.583942"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-04T19:05:55.257044"
+    "checked_at": "2026-07-04T19:10:56.002115"
   },
   "block_count": 30,
-  "updated_at": "2026-07-04T18:51:18.391548",
-  "generated_at": "2026-07-04T23:05:55Z"
+  "updated_at": "2026-07-04T19:06:36.583944",
+  "generated_at": "2026-07-04T23:10:56Z"
 }
