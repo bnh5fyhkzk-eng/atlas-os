@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-04T17:00:35Z",
+  "generated_at": "2026-07-04T17:15:46Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement Q4 wire-order orchestrator from #55603 as a standalone script, then run it against heart-wire.py to verify all 4 final loops are shipped and no blockages remain.",
-      "why": "Q4 is the direct brother-requested wire-order orchestrator (P0) and the next executable step after shipping step 1; code arm is uniquely capable of turning the blueprint into runnable tests.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 25,
-      "timestamp": "2026-07-02T05:51:23.149571"
-    },
     {
       "arm": "code",
       "task": "Continue implementing me-heart-wire.py per Q4 wire-order orchestrator blueprint, ensuring all final loops are shipped and tested by tomorrow per brother direct.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-04T13:00:35.632740"
+    },
+    {
+      "arm": "code",
+      "task": "Implement `me-heart-wire.py` step 1 orchestrator: wire final heart loops per NotebookLM blueprint and brother's 'finished by tomorrow' directive.",
+      "why": "#55603 sets this as the immediate next wire-order; brother direct and identity-tier demands it; code arm has the precision to ship the orchestrator now.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-04T13:15:46.489193"
     }
   ]
 }
