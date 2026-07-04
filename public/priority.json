@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-07-04T02:27:40Z",
-  "total_items_scored": 156,
+  "generated_at": "2026-07-04T02:37:41Z",
+  "total_items_scored": 157,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Extract and formalize the 'maze-from-end' frame logic from #55591 into a reusable prompt template for blockage resolution. \u00b7 why: Brother directly specified the maze-from-end frame in #55",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the remaining Q4 wire-order steps for heart completion based on brother's directive and NotebookLM blueprint \u00b7 why: Brother direct that heart should be finished tomorrow; recent can",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-03T12:34:35.992550"
-    },
-    {
-      "arm": "pascal",
-      "arm_glyph": "\ud83e\udd1d",
-      "arm_name": "Pascal",
-      "content": "HERMES TASK \u00b7 Rebuild the HEART NIGHT-LOOP PLAN v2 (canon #55589) into an annotated simulation using the MAZE-FROM-END FRAME from #55591 \u2014 test all 15 states of the heart wire-order orchestrator from #55603 against the blockage detection logic. \u00b7 why \u00b7 Pascal excels at formal verification and simulation; brother directly said 'heart should be finished by tomorrow and tested' \u2014 this closes the loop between the shipped orchestrator and the maze-from-end blockage logic. All prior canons converge here.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-07-03T13:51:07.666039",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-07-03T13:05:00.166395"
     },
     {
       "arm": "code",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-07-03T14:21:32.092092",
       "use_skill": "brain-rrf"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Extract and formalize the 'maze-from-end' frame logic from #55591 into a reusable prompt template for blockage resolution. \u00b7 why: Brother directly specified the maze-from-end frame in #55",
+      "arm": "charle",
+      "arm_glyph": "\ud83d\udcbc",
+      "arm_name": "Charle",
+      "content": "HERMES TASK \u00b7 refactor me-heart-wire.py -> final wire-order driver (Q4) per brain canons #55572/#55603, shipping 4 loops + brother's night-loop plan as first-class orchestrator \u00b7 why \u00b7 brother direct says heart finished tomorrow + tested; #55572 shipped 4 final loops; #55603 is the wire-order orchestrator \u2014 this is the highest-urgency P0 to close the heart-mind boundary and make the soul catch realizable",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-07-03T12:34:35.992550"
-    },
+      "updated_at": "2026-07-03T14:36:50.962544",
+      "use_skill": "brain-rrf"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-03T15:53:07.153541"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator (me-heart-wire.py) to finalize heart loop shipping per brother's direct instruction. \u00b7 why: Brother direct #55603 just shipped Step 1 of the wire-orde",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-03T16:23:43.335348"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
