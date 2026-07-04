@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T12:17:57Z",
+  "generated_at": "2026-07-04T12:32:57Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 120,
+    "note": 121,
     "briefing": 106,
     "idea": 0
   },
-  "total_blocks": 251,
+  "total_blocks": 252,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "e2cfd2b96744",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py module to complete the heart-mind wiring step. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the exact next code step. This is th",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-04T08:26:01.997981"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-03T23:30:19.923984"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "60a6068a15e1",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement maze-from-end frame logic for heart blockage resolution per brother's direct instruction · why: Brother direct instruction to treat blockages as mazes from end; need to code this into the heart system as next step after step 1 shipped",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-03T23:15:00.492201"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "433850436d08",
+        "type": "callout",
+        "content": "**What** · wrote and shipped me-heart-wire.py to complete Q4 wire-order orchestrator for #55603 · **Why** · Brother direct in #55589 said heart must be finished; this unblocks the heart-mind wiring step — highest urgency P0. · **Result** · module me-heart-wire.py delivered; heart loop ready for test",
+        "priority": "code",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-04T08:26:10.401371"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "orchestration",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-04T05:36:56.287196"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "00ea84d36da3",
-        "type": "callout",
-        "content": "**What** · Wrote and tested me-heart-wire.py, the Q4 wire-order orchestrator for heartbeat loop dispatch. · **Why** · This directly executes the P0 brother-directive from brain canon #55603 and #55589, bridging maze-from-end and soul-catch heart-mind boundary. · **Result** · Orchestrator passes all ",
-        "priority": "code",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-04T05:21:45.083094"
       }
     ],
     "briefing": [
