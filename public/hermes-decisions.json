@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-05T04:26:31Z",
+  "generated_at": "2026-07-05T04:41:51Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Execute heart night-loop test plan on current build and report results to brother.",
-      "why": "Brother direct: 'heart should be finished by tomorrow and tested' (canon #55589). Step 1 shipped (#55603), now need to validate night-loop functionality.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 30,
-      "timestamp": "2026-07-02T17:20:12.209391"
-    },
     {
       "arm": "code",
       "task": "Implement step2 of heart wire orchestration: integrate maze-from-end frame into wire-order and run initial test according to brother's 'finished by tomorrow' directive.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-05T00:26:31.288782"
+    },
+    {
+      "arm": "code",
+      "task": "Run me-heart-wire.py step 1 loop for Q4 and confirm the 4-wire orchestrator outputs the correct order for heart-mind boundary tests.",
+      "why": "#55603 shipped the orchestrator script. Code arm must fire now to validate it against the heart-night-loop plan (#55589) and maze-from-end frame (#55591). This is brother-direct and identity-tier: if the wire order fails, the whole heart finish by tomorrow+tested timeline breaks.",
+      "priority": "P0",
+      "use_skill": "gemini",
+      "est_minutes": 15,
+      "timestamp": "2026-07-05T00:41:51.094098"
     }
   ]
 }
