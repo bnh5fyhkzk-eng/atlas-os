@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-07-05T05:18:40Z",
+  "generated_at": "2026-07-05T05:33:40Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 24,
+    "decision": 25,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 110,
-    "briefing": 113,
+    "note": 111,
+    "briefing": 112,
     "idea": 0
   },
-  "total_blocks": 247,
+  "total_blocks": 248,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "7992f936e88b",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a runnable async Python script that sequences heart loops per the Night-Loop Plan v2 (#55589) and ships final test outputs. · why: Brother direct in #55589 says heart should be finished and teste",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-05T01:27:30.382472"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -288,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "8b9eeb50189d",
+        "type": "callout",
+        "content": "**What** · Implemented Q4 wire-order orchestrator as async script 'night_loop_orchestrator.py' that sequences heart loops per Night-Loop Plan v2 (#55589), tests them, and ships outputs. · **Why** · Hermes-Orchestrator assigned P0: code arm must deliver the orchestrator to sequence and verify finishe",
+        "priority": "script_delivery",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-05T01:27:34.225544"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +848,6 @@
         "priority": "code implemented",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-04T21:54:31.381828"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "fba3b2c90374",
-        "type": "callout",
-        "content": "**What** · I will write 'me-heart-wire.py' orchestrator: wire-order Q4 per blueprint #55603 step 1, routing signals between heart and mind layers. · **Why** · Brother-direct #55589 and just-shipped #55603 make this highest-proximity identity-tier action to avoid blockage and keep maze-from-end frame",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-04T21:24:08.398683"
       }
     ],
     "briefing": [
@@ -938,17 +949,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-07-04T16:17:03.285247"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "4ebcb408b366",
-        "type": "callout",
-        "content": "No high-arousal hermes canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-07-04T16:17:03.257328"
       },
       {
         "arm": "code",
@@ -1389,6 +1389,17 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-07-02T08:20:37.570108"
+      },
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "d3dea53045ae",
+        "type": "callout",
+        "content": "Overnight curiosity recap · last 6h · · #55572 [1.00] HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per NotebookLM blueprint + brother's answers. · #55600 [1.00] Q11 SOUL CATCH · heart-mind boundary · NotebookLM P4 2026-06-28 22:30 EDT. · #56863 [1.00] SHARED-CANON · atlas-brothe",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-07-02T08:20:37.538762"
       }
     ],
     "idea": []
