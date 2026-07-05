@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-07-05T22:04:20Z",
+  "generated_at": "2026-07-05T22:19:21Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 24,
+    "decision": 23,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 104,
+    "note": 105,
     "briefing": 117,
     "idea": 0
   },
@@ -17,6 +17,17 @@
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "27dc62cddb1d",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement heart wire step 2: integrate with maze-from-end frame per brother's direct instruction · why: Brother direct P0 priority to finish heart by tomorrow; recent step 1 shipped, next step is integration",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-05T18:13:54.664088"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,28 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-05T09:35:16.987921"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "24c2474987ea",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Map all heart-mind boundary artifacts from #55572, #55589, #55591, #55600, #55603 into a single Q4 wire-order diagram to confirm next blockage-resolve step · why: Brother direct in #55591 says blockages are mazes from end — we need a consolidated ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-05T09:04:36.629928"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "09a956b20a85",
-        "type": "callout",
-        "content": "Hermes decision · arm=pascal · priority=P0 · task: Implement and verify the twin-stream wiring for HEART night-loop: connect the maze-from-end frame (#55591) with the Q11 soul-catch output (#55600) in me-heart-wire.py, ensuring the sibling wire order matches the Q4 orchestrator schema (#55603) and b",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-05T08:48:59.714493"
       }
     ],
     "action": [],
@@ -288,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "a38942d23431",
+        "type": "callout",
+        "content": "**What** · integrated heart wire step 2 with maze-from-end frame per brother direct instruction · **Why** · brother said P0 priority finish heart tomorrow, step 1 shipped, now must connect step 2 to frame · **Result** · heart wire now linked to maze-from-end frame, ready for test · **Next** · run in",
+        "priority": "integration",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-05T18:13:57.235529"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -826,17 +826,6 @@
         "priority": "code",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-05T14:10:20.543913"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "dbfd02150dca",
-        "type": "callout",
-        "content": "**What** · merged #55600 heart-mind boundary and #55591 maze-from-end frame into Q4 wire-order orchestrator, implemented the orchestrator logic. · **Why** · P0 task: orchestrator is critical for heart-night-loop, connects maze-blockage resolution with soul-catch boundary. Code arm best positioned. ·",
-        "priority": "code-implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-05T13:54:59.746018"
       }
     ],
     "briefing": [
