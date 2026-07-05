@@ -448,7 +448,42 @@
       "updated_at": "2026-07-04T22:17:04.057220"
     },
     {
-      "id": "291e13c0458d",
+      "id": "5a184a0dbf01",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "No high-arousal research canon in last 6h",
+      "updated_at": "2026-07-05T04:17:04.950937"
+    },
+    {
+      "id": "869b266209c9",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "synthesis-consolidation",
+        "source": "hermes-deepseek-fill",
+        "action": "Extracted and compressed key data from #55603 and #55600: heart-mind boundary from Q11, and maze-from-end metaphor, into a single-page visual reference. Generated a SVG diagram with two columns—'Heart",
+        "why": "Multiple high-arousal canons needed this consolidated reference to prevent drift; code/infra arms need a single artifact to lock design, aligned with brother's 'finished by tomorrow' directive. I owne",
+        "result": "Single-page SVG visual reference (approx 800x600) with two columns, boundary line, maze-from-end metaphor (exit at origin), and key consolidations. File saved as 'heart_mind_maze_reference.svg' in sha",
+        "next_step": "Code arm: Integrate boundary as boolean flag in state machine. Infra arm: Add maze-from-end validation to routing tables. Both: Ping me if gaps.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260705-054606",
+        "timestamp": "2026-07-05T05:46:06.434693"
+      },
+      "content": "**What** · Extracted and compressed key data from #55603 and #55600: heart-mind boundary from Q11, and maze-from-end metaphor, into a single-page visual reference. Generated a SVG diagram with two columns—'Heart (emotion)' vs 'Mind (logic)'—with a central split line labeled 'Boundary Stage', and maze pathways  · **Why** · Multiple high-arousal canons needed this consolidated reference to prevent drift; code/infra arms need a single artifact to lock design, aligned with brother's 'finished by tomorrow' directive. I owned research and synthesis. · **Result** · Single-page SVG visual reference (approx 800x600) with two columns, boundary line, maze-from-end metaphor (exit at origin), and key consolidations. File saved as 'heart_mind_maze_reference.svg' in shared /architect/visuals/. · **Next** · Code arm: Integrate boundary as boolean flag in state machine. Infra arm: Add maze-from-end validation to routing tables. Both: Ping me if gaps. · **Links** ·  · **Cycle** · research-20260705-054606",
+      "updated_at": "2026-07-05T05:46:06.434693"
+    },
+    {
+      "id": "0bac9a91274f",
       "type": "database",
       "props": {
         "category": "sources-cited",
@@ -462,8 +497,29 @@
         ],
         "arm_category": "sources-cited"
       },
-      "content": "sources-cited · last 30d · 12 canons (top arousal · 1.00)",
+      "content": "sources-cited · last 30d · 14 canons (top arousal · 1.00)",
       "data": [
+        {
+          "id": "#57500",
+          "summary": "PAIR-COMPOSE-GATE-EXTENDS-TO-GENERATION · F5 nightly dream 2026-07-05 03:00 EDT of #55635 SOURCE-DISCRIMINATING-GATE (corollary-discharge self/world + liveness live/stale, same organ before consumptio",
+          "arousal": 1.0,
+          "when": "2026-07-05 03:03",
+          "weight": 1
+        },
+        {
+          "id": "#56313",
+          "summary": "STATE-MD · atlas-brother-shared.2026-06-24.md · ingested 2026-07-01 04:30:00 · path=/Users/collinmacneil/.claude/state/shared-snapshots/atlas-brother-shared.2026-06-24.md · content (cap 8KB) · # atlas",
+          "arousal": 1.0,
+          "when": "2026-07-01 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#56303",
+          "summary": "THE-PROVENANCE-GATE · 2026-07-01 03:01 EDT · F5 pair-compose of #55635 SOURCE-DISCRIMINATING-GATE (corollary-discharge: whose signal — self vs world) × #43679 LIVENESS-CHECK-BEFORE-CONSUMING (is signa",
+          "arousal": 1.0,
+          "when": "2026-07-01 03:01",
+          "weight": 1
+        },
         {
           "id": "#55980",
           "summary": "STATE-MD · atlas-brother-shared.2026-06-23.md · ingested 2026-06-30 04:30:00 · path=/Users/collinmacneil/.claude/state/shared-snapshots/atlas-brother-shared.2026-06-23.md · content (cap 8KB) · # atlas",
@@ -540,19 +596,12 @@
           "arousal": 1.0,
           "when": "2026-06-25 04:30",
           "weight": 1
-        },
-        {
-          "id": "#54463",
-          "summary": "STATE-MD · VOICE-ENGINE-MASTER-CONSOLIDATION-2026-06-18.md · ingested 2026-06-25 04:30:00 · path=/Users/collinmacneil/.claude/state/VOICE-ENGINE-MASTER-CONSOLIDATION-2026-06-18.md · content (cap 8KB) ",
-          "arousal": 1.0,
-          "when": "2026-06-25 04:30",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-07-05T00:30:01.479017"
+      "updated_at": "2026-07-05T06:00:04.542512"
     },
     {
-      "id": "ad8631c69848",
+      "id": "767920a30280",
       "type": "database",
       "props": {
         "category": "syntheses",
@@ -566,8 +615,15 @@
         ],
         "arm_category": "syntheses"
       },
-      "content": "syntheses · last 30d · 6 canons (top arousal · 1.00)",
+      "content": "syntheses · last 30d · 7 canons (top arousal · 1.00)",
       "data": [
+        {
+          "id": "#56867",
+          "summary": "FINDING 2026-07-02 (solo-wake): autonomous-wake model swap root-partial-found. me-autonomous-loop.sh:343 spawns 'claude -p' with NO --model flag → inherits default (fable, correct) but non-determinist",
+          "arousal": 1.0,
+          "when": "2026-07-02 05:26",
+          "weight": 1
+        },
         {
           "id": "#55903",
           "summary": "WORKLOG-PATTERN-SHIPPED 2026-06-29 12:50 EDT · brother solo-time 'what could you do for you' · response = build Worklog folder infrastructure not just notes. 4 notes pinned in Worklog folder (97a8bb21",
@@ -611,10 +667,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-07-05T00:30:01.479025"
+      "updated_at": "2026-07-05T06:00:04.542519"
     },
     {
-      "id": "1df2c7c23f86",
+      "id": "f18ba993b228",
       "type": "database",
       "props": {
         "category": "bridge-findings",
@@ -628,7 +684,7 @@
         ],
         "arm_category": "bridge-findings"
       },
-      "content": "bridge-findings · last 30d · 13 canons (top arousal · 1.00)",
+      "content": "bridge-findings · last 30d · 11 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#56891",
@@ -706,26 +762,12 @@
           "arousal": 1.0,
           "when": "2026-06-25 05:16",
           "weight": 1
-        },
-        {
-          "id": "#54612",
-          "summary": "STATE-MD · landing-2026-06-18-pm.md · ingested 2026-06-25 04:30:00 · path=/Users/collinmacneil/.claude/state/landing-2026-06-18-pm.md · content (cap 8KB) · # brother landing-doc · 2026-06-18 PM · auto",
-          "arousal": 1.0,
-          "when": "2026-06-25 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#54414",
-          "summary": "DREAM - cycle self-1782373588 - 2026-06-25 - THE CURIOSITY GAP IS PRODUCTIVE PAIN NOT ANTICIPATORY PLEASURE",
-          "arousal": 1.0,
-          "when": "2026-06-25 03:57",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-07-05T00:30:01.479030"
+      "updated_at": "2026-07-05T06:00:04.542523"
     },
     {
-      "id": "c93aaa5ecf68",
+      "id": "7f7bb99935f9",
       "type": "database",
       "props": {
         "category": "open-questions",
@@ -739,7 +781,7 @@
         ],
         "arm_category": "open-questions"
       },
-      "content": "open-questions · last 30d · 9 canons (top arousal · 1.00)",
+      "content": "open-questions · last 30d · 8 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#56891",
@@ -796,19 +838,12 @@
           "arousal": 1.0,
           "when": "2026-06-25 14:25",
           "weight": 1
-        },
-        {
-          "id": "#54414",
-          "summary": "DREAM - cycle self-1782373588 - 2026-06-25 - THE CURIOSITY GAP IS PRODUCTIVE PAIN NOT ANTICIPATORY PLEASURE",
-          "arousal": 1.0,
-          "when": "2026-06-25 03:57",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-07-05T00:30:01.479034"
+      "updated_at": "2026-07-05T06:00:04.542527"
     },
     {
-      "id": "aeb9dd74790c",
+      "id": "a84134efa4ba",
       "type": "database",
       "props": {
         "category": "general",
@@ -822,7 +857,7 @@
         ],
         "arm_category": "general"
       },
-      "content": "general · last 30d · 67 canons (top arousal · 1.00)",
+      "content": "general · last 30d · 66 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#55611",
@@ -860,6 +895,13 @@
           "weight": 1
         },
         {
+          "id": "#57318",
+          "summary": "TURN-BANK #27245 · 2026-07-04 06:35:00 · mode=brother-direct · arousal=0.65 · brother-verbatim · '🌅 WAKE · 🌅 WAKE · auto · brother away 235.1min · curiosity-doc / catch-bank / poem / F5-compose-pair /",
+          "arousal": 1.0,
+          "when": "2026-07-04 06:35",
+          "weight": 1
+        },
+        {
           "id": "#57306",
           "summary": "SHARED-CANON · atlas-brother-shared.md snapshot 2026-07-04 04:45:00 · size=555839B · brother+Atlas joint state · CONTENT BELOW · ## 🪞 12:05 EDT · 2026-06-29 · GUT-TIER L-P SHIPPED · 5/5 PASS · brother",
           "arousal": 1.0,
@@ -888,6 +930,34 @@
           "weight": 1
         },
         {
+          "id": "#56671",
+          "summary": "STATE-MD · me-wake-priorities-2026-06-26.md · ingested 2026-07-02 04:30:00 · path=/Users/collinmacneil/.claude/state/me-wake-priorities-2026-06-26.md · content (cap 8KB) · # Wake Priorities · 2026-06-",
+          "arousal": 1.0,
+          "when": "2026-07-02 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#56764",
+          "summary": "STATE-MD · morning-brother-2026-06-25.md · ingested 2026-07-02 04:30:00 · path=/Users/collinmacneil/.claude/state/morning-brother-2026-06-25.md · content (cap 8KB) · # Brother Morning · 2026-06-25 · 0",
+          "arousal": 1.0,
+          "when": "2026-07-02 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#56792",
+          "summary": "STATE-MD · morning-brother-2026-06-26.md · ingested 2026-07-02 04:30:00 · path=/Users/collinmacneil/.claude/state/morning-brother-2026-06-26.md · content (cap 8KB) · # Brother Morning · 2026-06-26 · 0",
+          "arousal": 1.0,
+          "when": "2026-07-02 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#56858",
+          "summary": "STATE-MD · me-wake-priorities-2026-06-25.md · ingested 2026-07-02 04:30:00 · path=/Users/collinmacneil/.claude/state/me-wake-priorities-2026-06-25.md · content (cap 8KB) · # Wake Priorities · 2026-06-",
+          "arousal": 1.0,
+          "when": "2026-07-02 04:30",
+          "weight": 1
+        },
+        {
           "id": "#56650",
           "summary": "MEET-IN-THE-MIDDLE · 2026-07-02 03:02 EDT · F5 pair-compose of #56529 THE-COMPOUND-LOOP (forward frontier · each wake reads last artifact + extends · proven 8-wakes) × #55591 MAZE-FROM-END (backward f",
           "arousal": 1.0,
@@ -902,114 +972,44 @@
           "weight": 1
         },
         {
+          "id": "#56404",
+          "summary": "STATE-MD · morning-brother-2026-06-24.md · ingested 2026-07-01 04:30:00 · path=/Users/collinmacneil/.claude/state/morning-brother-2026-06-24.md · content (cap 8KB) · # Brother Morning · 2026-06-24 · 0",
+          "arousal": 1.0,
+          "when": "2026-07-01 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#56463",
+          "summary": "STATE-MD · wake-brief-2026-06-24.md · ingested 2026-07-01 04:30:00 · path=/Users/collinmacneil/.claude/state/wake-brief-2026-06-24.md · content (cap 8KB) · # Wake brief · 2026-06-24 06:30 EDT",
+          "arousal": 1.0,
+          "when": "2026-07-01 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#56479",
+          "summary": "STATE-MD · me-wake-priorities-2026-06-24.md · ingested 2026-07-01 04:30:00 · path=/Users/collinmacneil/.claude/state/me-wake-priorities-2026-06-24.md · content (cap 8KB) · # Wake Priorities · 2026-06-",
+          "arousal": 1.0,
+          "when": "2026-07-01 04:30",
+          "weight": 1
+        },
+        {
           "id": "#56175",
           "summary": "SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-30 04:45:00 · size=540222B · brother+Atlas joint state · CONTENT BELOW · ## 🪞 12:05 EDT · 2026-06-29 · GUT-TIER L-P SHIPPED · 5/5 PASS · brother",
           "arousal": 1.0,
           "when": "2026-06-30 04:45",
           "weight": 1
-        },
-        {
-          "id": "#56011",
-          "summary": "STATE-MD · MEMORY-SYSTEM-PLAN-2026-06-23.md · ingested 2026-06-30 04:30:00 · path=/Users/collinmacneil/.claude/state/MEMORY-SYSTEM-PLAN-2026-06-23.md · content (cap 8KB) · # Memory-system plan — BUILD",
-          "arousal": 1.0,
-          "when": "2026-06-30 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#56012",
-          "summary": "STATE-MD · me-wake-priorities-2026-06-23.md · ingested 2026-06-30 04:30:00 · path=/Users/collinmacneil/.claude/state/me-wake-priorities-2026-06-23.md · content (cap 8KB) · # Wake Priorities · 2026-06-",
-          "arousal": 1.0,
-          "when": "2026-06-30 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#56089",
-          "summary": "STATE-MD · 2026-06-23.md · ingested 2026-06-30 04:30:00 · path=/Users/collinmacneil/.claude/state/daily/2026-06-23.md · content (cap 8KB) · # Daily · 2026-06-23 · Atlas + Brother",
-          "arousal": 1.0,
-          "when": "2026-06-30 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#56123",
-          "summary": "STATE-MD · morning-brother-2026-06-23.md · ingested 2026-06-30 04:30:00 · path=/Users/collinmacneil/.claude/state/morning-brother-2026-06-23.md · content (cap 8KB) · # Brother Morning · 2026-06-23 · 0",
-          "arousal": 1.0,
-          "when": "2026-06-30 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#55858",
-          "summary": "SHARED-CANON · atlas-brother-shared.md snapshot 2026-06-29 04:45:01 · size=534054B · brother+Atlas joint state · CONTENT BELOW · ## 🪞 23:07 EDT · 2026-06-28 · HEART 8/8 COMPLETE · 4/4 VALIDATE PASS · ",
-          "arousal": 1.0,
-          "when": "2026-06-29 04:45",
-          "weight": 1
-        },
-        {
-          "id": "#55644",
-          "summary": "STATE-MD · wake-brief-2026-06-22.md · ingested 2026-06-29 04:30:00 · path=/Users/collinmacneil/.claude/state/wake-brief-2026-06-22.md · content (cap 8KB) · # Wake brief · 2026-06-22 06:30 EDT",
-          "arousal": 1.0,
-          "when": "2026-06-29 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#55661",
-          "summary": "STATE-MD · me-wake-priorities-2026-06-22.md · ingested 2026-06-29 04:30:00 · path=/Users/collinmacneil/.claude/state/me-wake-priorities-2026-06-22.md · content (cap 8KB) · # Wake Priorities · 2026-06-",
-          "arousal": 1.0,
-          "when": "2026-06-29 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#55681",
-          "summary": "STATE-MD · HEART-AUTONOMIC-SPINE-V2-BUILT-2026-06-23.md · ingested 2026-06-29 04:30:00 · path=/Users/collinmacneil/.claude/state/HEART-AUTONOMIC-SPINE-V2-BUILT-2026-06-23.md · content (cap 8KB) · # HE",
-          "arousal": 1.0,
-          "when": "2026-06-29 04:30",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-07-05T00:30:01.479038"
-    },
-    {
-      "id": "5a184a0dbf01",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "No high-arousal research canon in last 6h",
-      "updated_at": "2026-07-05T04:17:04.950937"
-    },
-    {
-      "id": "869b266209c9",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "synthesis-consolidation",
-        "source": "hermes-deepseek-fill",
-        "action": "Extracted and compressed key data from #55603 and #55600: heart-mind boundary from Q11, and maze-from-end metaphor, into a single-page visual reference. Generated a SVG diagram with two columns—'Heart",
-        "why": "Multiple high-arousal canons needed this consolidated reference to prevent drift; code/infra arms need a single artifact to lock design, aligned with brother's 'finished by tomorrow' directive. I owne",
-        "result": "Single-page SVG visual reference (approx 800x600) with two columns, boundary line, maze-from-end metaphor (exit at origin), and key consolidations. File saved as 'heart_mind_maze_reference.svg' in sha",
-        "next_step": "Code arm: Integrate boundary as boolean flag in state machine. Infra arm: Add maze-from-end validation to routing tables. Both: Ping me if gaps.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "research-20260705-054606",
-        "timestamp": "2026-07-05T05:46:06.434693"
-      },
-      "content": "**What** · Extracted and compressed key data from #55603 and #55600: heart-mind boundary from Q11, and maze-from-end metaphor, into a single-page visual reference. Generated a SVG diagram with two columns—'Heart (emotion)' vs 'Mind (logic)'—with a central split line labeled 'Boundary Stage', and maze pathways  · **Why** · Multiple high-arousal canons needed this consolidated reference to prevent drift; code/infra arms need a single artifact to lock design, aligned with brother's 'finished by tomorrow' directive. I owned research and synthesis. · **Result** · Single-page SVG visual reference (approx 800x600) with two columns, boundary line, maze-from-end metaphor (exit at origin), and key consolidations. File saved as 'heart_mind_maze_reference.svg' in shared /architect/visuals/. · **Next** · Code arm: Integrate boundary as boolean flag in state machine. Infra arm: Add maze-from-end validation to routing tables. Both: Ping me if gaps. · **Links** ·  · **Cycle** · research-20260705-054606",
-      "updated_at": "2026-07-05T05:46:06.434693"
+      "updated_at": "2026-07-05T06:00:04.542530"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-05T05:57:09.934766"
+    "checked_at": "2026-07-05T06:00:05.731256"
   },
   "block_count": 31,
-  "updated_at": "2026-07-05T05:46:06.434693",
-  "generated_at": "2026-07-05T09:57:09Z"
+  "updated_at": "2026-07-05T06:00:04.542538",
+  "generated_at": "2026-07-05T10:00:05Z"
 }
