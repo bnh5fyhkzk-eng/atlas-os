@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T12:18:58Z",
+  "generated_at": "2026-07-05T12:33:58Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 107,
+    "note": 108,
     "briefing": 114,
     "idea": 0
   },
-  "total_blocks": 245,
+  "total_blocks": 246,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "fcb0e453f42f",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the next step from Q4 wire-order orchestrator based on brother's directive to finish and test heart · why: Recent high-arousal canons show heart completion is brother-direct P0, and step 1 shipped; code arm is needed to continue implementati",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-05T08:18:17.357299"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-04T21:08:40.602405"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "58e958691716",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a runnable Python script that sequences the four final loops per NotebookLM blueprint and brother's answers. · why: This is the direct next step from the last shipped artifact (#55603) and brothe",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-04T20:53:25.621758"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "f82b0a8f5236",
+        "type": "callout",
+        "content": "**What** · Write heart completion test cases and implement missing assertion logic for Q4 wire-order. · **Why** · Hermes assigned P0 heart completion per brother directive; step 1 shipped, code arm must deliver test coverage and solid implementation. · **Result** · Error-free test suite covering pos",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-05T08:18:26.799841"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-05T02:43:28.023295"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "8b9eeb50189d",
-        "type": "callout",
-        "content": "**What** · Implemented Q4 wire-order orchestrator as async script 'night_loop_orchestrator.py' that sequences heart loops per Night-Loop Plan v2 (#55589), tests them, and ships outputs. · **Why** · Hermes-Orchestrator assigned P0: code arm must deliver the orchestrator to sequence and verify finishe",
-        "priority": "script_delivery",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-05T01:27:34.225544"
       }
     ],
     "briefing": [
