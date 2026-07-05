@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "f1dd7a0fcc3f",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-05T00:26:31.269859"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the four final loops per NotebookLM blueprint and brother's answers from #55572. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the step-1 shipped orchestrator that wires the final loops. Code arm is the only one that can turn this into a runnable artifact immediately.",
-      "updated_at": "2026-07-05T00:26:31.269872"
-    },
-    {
       "id": "fe6b06f72140",
       "type": "callout",
       "props": {
@@ -745,15 +733,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement next step in heart wire orchestration per NotebookLM blueprint and brother's instructions · why: Brother direct says heart should be finished by tomorrow; step 1 shipped, need to continue with step 2",
       "updated_at": "2026-07-05T10:36:18.545379"
+    },
+    {
+      "id": "b4ff6caa2533",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-05T11:06:49.436821"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, connecting heart-wire.py to the maze-from-end frame logic per brother's direct instruction in #55591. · why: Brother directly ordered heart finished and tested by tomorrow; #55603 is the latest shipped step, and code arm must execute the orchestrator to unblock the maze-from-end frame. This is the highest-leverage action to satisfy brother's P0 directive.",
+      "updated_at": "2026-07-05T11:06:49.436836"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-05T11:02:47.088922"
+    "checked_at": "2026-07-05T11:07:47.651904"
   },
   "block_count": 30,
-  "updated_at": "2026-07-05T10:36:18.545381",
-  "generated_at": "2026-07-05T15:02:47Z"
+  "updated_at": "2026-07-05T11:06:49.436837",
+  "generated_at": "2026-07-05T15:07:47Z"
 }
