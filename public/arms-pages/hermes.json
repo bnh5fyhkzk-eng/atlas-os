@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "2f7910967e1a",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-05T08:33:38.862528"
-      },
-      "content": "Hermes decision · arm=charle · priority=P0 · task: Run the Q4 wire-order orchestrator (step1-shipped from #55603) against the latest Heart fully finished blueprint (#55572) to validate the final 4 loops match NotebookLM's P4 soul-catch boundary (#55600) · why: Brother-direct priority: Heart must be finished and tested per #55589. The Q4 wire-order orchestrator is shipped; we need to fire it now against the actual final Heart state to close the loop before any other branch consumes stale data.",
-      "updated_at": "2026-07-05T08:33:38.862538"
-    },
-    {
       "id": "09a956b20a85",
       "type": "callout",
       "props": {
@@ -752,15 +740,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator from #55603 blueprint into me-heart-wire.py, integrating brother's answer constraints from #55572 · why: Brother directive in #55589 says heart must be finished by tomorrow; Q4 wire-order is the critical orchestrator step. #55603 already shipped the plan, now code must execute to meet the deadline.",
       "updated_at": "2026-07-05T17:43:17.444654"
+    },
+    {
+      "id": "7b20b318edc9",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-05T17:58:31.286767"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement and run the me-heart-wire.py Q4 wire-order orchestrator to ship the final heart loops per brother's directive and NotebookLM blueprint. · why: Brother directly stated 'heart should be finished by tomorrow and tested' and the Q4 wire-order orchestrator is the next concrete step to complete the final 4 loops per the blueprint. This is a P0 because it's brother-direct and identity-tier.",
+      "updated_at": "2026-07-05T17:58:31.286777"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-05T17:53:39.519881"
+    "checked_at": "2026-07-05T17:58:40.013359"
   },
   "block_count": 30,
-  "updated_at": "2026-07-05T17:43:17.444655",
-  "generated_at": "2026-07-05T21:53:39Z"
+  "updated_at": "2026-07-05T17:58:31.286779",
+  "generated_at": "2026-07-05T21:58:40Z"
 }
