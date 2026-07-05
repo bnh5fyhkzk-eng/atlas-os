@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-07-04T23:48:26Z",
+  "generated_at": "2026-07-05T00:03:27Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 24,
+    "decision": 25,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 113,
-    "briefing": 109,
+    "note": 114,
+    "briefing": 108,
     "idea": 0
   },
-  "total_blocks": 246,
+  "total_blocks": 247,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "09b061a08091",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement maze-from-end pathfinding for heart blockage resolution based on brother's direct instruction and step 1 shipped · why: Brother direct: heart should be finished by tomorrow and tested; step 1 shipped (me-heart-wire.py) needs follow-up with m",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-04T19:52:16.294250"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -288,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "eb0aa72e9198",
+        "type": "callout",
+        "content": "**What** · implemented maze-from-end pathfinding in me-heart-wire.py per brother's directive and #55591 · **Why** · step 1 shipped; heart blockage resolution requires reverse pathfinding from end to start for P0 priority · **Result** · patched me-heart-wire.py with backward BFS from exit, marking bl",
+        "priority": "code-implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-04T19:52:24.351400"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +848,6 @@
         "priority": "code_implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-04T14:47:15.548789"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "800f3e7fb829",
-        "type": "callout",
-        "content": "**What** · wrote me-heart-wire.py with 4 wire-order loops (Q4) to ship heart final loops per brother's direct instruction from #55589 and #55603 · **Why** · heart must be finished and tested by tomorrow; step 1 shipped, this completes heart-mind boundary with final loops · **Result** · script ready ",
-        "priority": "code.write",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-04T14:32:03.140865"
       }
     ],
     "briefing": [
@@ -938,17 +949,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-07-04T10:17:02.445410"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "7a630d06674a",
-        "type": "callout",
-        "content": "No high-arousal hermes canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-07-04T10:17:02.417182"
       },
       {
         "arm": "code",
@@ -1389,6 +1389,17 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-07-02T02:20:36.683049"
+      },
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "f080cbd77509",
+        "type": "callout",
+        "content": "Overnight curiosity recap · last 6h · · #55572 [1.00] HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per NotebookLM blueprint + brother's answers. · #55600 [1.00] Q11 SOUL CATCH · heart-mind boundary · NotebookLM P4 2026-06-28 22:30 EDT.",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-07-02T02:20:36.654595"
       }
     ],
     "idea": []
