@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-05T04:41:51Z",
+  "generated_at": "2026-07-05T04:57:10Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement step2 of heart wire orchestration: integrate maze-from-end frame into wire-order and run initial test according to brother's 'finished by tomorrow' directive.",
-      "why": "Brother direct says heart should be finished by tomorrow and tested; step1 just shipped, so next logical P0 action is to code the integration of the maze frame into the wire order orchestrator and run tests.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-07-02T17:35:24.148743"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603, shipping the first working me-heart-wire.py that connects the heart night-loop plan v2 to the maze-from-end frame.",
@@ -901,6 +892,15 @@
       "use_skill": "gemini",
       "est_minutes": 15,
       "timestamp": "2026-07-05T00:41:51.094098"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator (me-heart-wire.py) to ship the next step of the heart loop per brother's direct instruction.",
+      "why": "Brother directly said 'heart should be finished by tomorrow and tested' and step 1 was shipped at #55603. This is the immediate next executable step to maintain momentum on the P0 heart completion chain.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-05T00:57:10.461241"
     }
   ]
 }
