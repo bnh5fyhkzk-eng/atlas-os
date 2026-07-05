@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T04:33:38Z",
+  "generated_at": "2026-07-05T04:48:38Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 108,
+    "note": 109,
     "briefing": 113,
     "idea": 0
   },
-  "total_blocks": 245,
+  "total_blocks": 246,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "fe6b06f72140",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Run me-heart-wire.py step 1 loop for Q4 and confirm the 4-wire orchestrator outputs the correct order for heart-mind boundary tests. · why: #55603 shipped the orchestrator script. Code arm must fire now to validate it against the heart-night-loop plan",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-05T00:41:51.075111"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-04T16:03:13.599219"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "5ad7144fe11c",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, ensuring the heart-mind boundary logic from #55600 is respected in the step-1 shipped code. · why: The most recent brain canon (#55603) is a direct code shipment that must be integrated with the so",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-04T15:17:29.888626"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "7d7cd56299e4",
+        "type": "callout",
+        "content": "**What** · Ran me-heart-wire.py step 1 loop for Q4, confirmed 4-wire orchestrator outputs correct order for heart-mind boundary tests. · **Why** · Validates orchestrator script #55603 against heart-night-loop plan #55589 and maze-from-end frame #55591 to keep heart finish timeline intact. · **Result",
+        "priority": "execution",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-05T00:42:04.815592"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -826,17 +837,6 @@
         "priority": "test execution",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-04T21:08:48.406149"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "c4065bd91d5d",
-        "type": "callout",
-        "content": "**What** · I wrote the Q4 wire-order orchestrator script per #55603 and NotebookLM blueprint. · **Why** · Hermes said it's P0 and brother-direct; code arm is the only one who can ship this executable to finish heart by tomorrow. · **Result** · Script 'q4_wire_order_orchestrator.py' is runnable and s",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-04T20:53:28.133855"
       }
     ],
     "briefing": [
