@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-05T18:56:03Z",
+  "generated_at": "2026-07-05T19:26:32Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Run the me-heart-wire.py orchestrator on the heart blueprint and validate wire connections against NotebookLM blueprint.",
-      "why": "Brother direct requires heart finished and tested; step 1 shipped needs execution and validation.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 15,
-      "timestamp": "2026-07-04T00:01:01.239806"
-    },
     {
       "arm": "code",
       "task": "Extract the core identity logic from #55603 step-1 me-heart-wire.py and ensure it correctly implements the wire-order orchestrator per Q4 spec, then commit as v2.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-05T14:56:03.667666"
+    },
+    {
+      "arm": "code",
+      "task": "Run the heart night-loop test suite and fix any failures per brother's directive to finish and test by tomorrow.",
+      "why": "The recent brain canons show intense focus on completing the heart project, with brother's direct instruction to finish and test. The code arm is best suited for executing tests and debugging, which is the immediate next step after shipping step 1.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-05T15:26:32.223250"
     }
   ]
 }

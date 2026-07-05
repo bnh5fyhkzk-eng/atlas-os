@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-07-05T19:19:57Z",
-  "total_items_scored": 156,
+  "generated_at": "2026-07-05T19:29:57Z",
+  "total_items_scored": 157,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Re-read #55603 and #55600, then synthesize a single-page visual reference of the heart-mind boundary from Q11, including the maze-from-end metaphor, to lock the architecture before next w",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement initial loop of me-heart-wire.py Q4 wire-order orchestrator, integrating the Maze-From-End frame from #55591 and the brother's night-loop directive from #55589. \u00b7 why: Heart loop is",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-05T05:45:56.638525"
-    },
-    {
-      "arm": "charle",
-      "arm_glyph": "\ud83d\udcbc",
-      "arm_name": "Charle",
-      "content": "HERMES TASK \u00b7 Run the Q4 wire-order orchestrator (step1-shipped from #55603) against the latest Heart fully finished blueprint (#55572) to validate the final 4 loops match NotebookLM's P4 soul-catch boundary (#55600) \u00b7 why \u00b7 Brother-direct priority: Heart must be finished and tested per #55589. The Q4 wire-order orchestrator is shipped; we need to fire it now against the actual final Heart state to close the loop before any other branch consumes stale data.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 18,
-      "score": 10.0,
-      "updated_at": "2026-07-05T08:33:38.880545",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-07-05T06:01:17.050386"
     },
     {
       "arm": "pascal",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-07-05T08:48:59.733126",
       "use_skill": "none"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Re-read #55603 and #55600, then synthesize a single-page visual reference of the heart-mind boundary from Q11, including the maze-from-end metaphor, to lock the architecture before next w",
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Map all heart-mind boundary artifacts from #55572, #55589, #55591, #55600, #55603 into a single Q4 wire-order diagram to confirm next blockage-resolve step \u00b7 why \u00b7 Brother direct in #55591 says blockages are mazes from end \u2014 we need a consolidated frame of all recent heart-brain outputs to pick the exact next wire to run, leveraging NotebookLM's P4 soul-catch from #55600.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-07-05T05:45:56.638525"
-    },
+      "updated_at": "2026-07-05T09:04:36.646708",
+      "use_skill": "notebooklm"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-05T09:50:36.321104"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the four final heart loops per the NotebookLM blueprint and brother's answers. \u00b7 why: Brother directly",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-05T10:05:55.401866"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
