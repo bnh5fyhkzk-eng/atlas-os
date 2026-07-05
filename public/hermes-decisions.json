@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-05T12:18:17Z",
+  "generated_at": "2026-07-05T12:33:38Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Run the final heart test suite and verify all loops pass, including the maze-from-end frame and soul catch.",
-      "why": "Brother direct stated heart must be finished and tested by tomorrow; step 1 already shipped, now need to validate full system before next loop.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 30,
-      "timestamp": "2026-07-03T15:53:07.170906"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator (me-heart-wire.py) to finalize heart loop shipping per brother's direct instruction.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 30,
       "timestamp": "2026-07-05T08:18:17.375657"
+    },
+    {
+      "arm": "charle",
+      "task": "Run the Q4 wire-order orchestrator (step1-shipped from #55603) against the latest Heart fully finished blueprint (#55572) to validate the final 4 loops match NotebookLM's P4 soul-catch boundary (#55600)",
+      "why": "Brother-direct priority: Heart must be finished and tested per #55589. The Q4 wire-order orchestrator is shipped; we need to fire it now against the actual final Heart state to close the loop before any other branch consumes stale data.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 18,
+      "timestamp": "2026-07-05T08:33:38.880545"
     }
   ]
 }
