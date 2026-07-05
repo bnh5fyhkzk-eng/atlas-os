@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T14:34:03Z",
+  "generated_at": "2026-07-05T14:49:03Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 102,
+    "note": 103,
     "briefing": 114,
     "idea": 0
   },
-  "total_blocks": 240,
+  "total_blocks": 241,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "df8f5f6f32eb",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement next step in heart wire orchestration per NotebookLM blueprint and brother's instructions · why: Brother direct says heart should be finished by tomorrow; step 1 shipped, need to continue with step 2",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-05T10:36:18.545379"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-05T00:26:31.269872"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "f4611d0be0a3",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator me-heart-wire.py using NotebookLM blueprint, ensuring brother's 'heart finished by tomorrow and tested' directive is met via final loop shipping · why: Direct brother's P0 urgency (#55589, #55603) and NotebookLM bl",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-05T00:11:14.018375"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "79c967e3967e",
+        "type": "callout",
+        "content": "**What** · Implement step 2 of heart wire orchestration: integrate heart rate data pipeline with dashboard module per NotebookLM blueprint. · **Why** · Brother direct says heart should be finished by tomorrow; step 1 shipped, need to continue with step 2. Priority P0. · **Result** · Expected: heart ",
+        "priority": "code-implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-05T10:36:27.032730"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-07-05T06:00:04.048931"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "b49eef32fee7",
-        "type": "database",
-        "content": "sessions · last 30d · 6 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-07-05T06:00:04.048923"
       }
     ],
     "briefing": [
