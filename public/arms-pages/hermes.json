@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "09b061a08091",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-04T19:52:16.294242"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement maze-from-end pathfinding for heart blockage resolution based on brother's direct instruction and step 1 shipped · why: Brother direct: heart should be finished by tomorrow and tested; step 1 shipped (me-heart-wire.py) needs follow-up with maze-from-end logic per #55591",
-      "updated_at": "2026-07-04T19:52:16.294250"
-    },
-    {
       "id": "a4ab819199cf",
       "type": "callout",
       "props": {
@@ -745,15 +733,27 @@
         }
       ],
       "updated_at": "2026-07-05T06:00:05.474047"
+    },
+    {
+      "id": "ad7919415e18",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-05T06:01:17.050376"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement initial loop of me-heart-wire.py Q4 wire-order orchestrator, integrating the Maze-From-End frame from #55591 and the brother's night-loop directive from #55589. · why: Heart loop is now fully specified (blueprint + brother direct answer) and ready for code execution. #55603 shipped step 1 as orchestrator stub; next cycle must wire the concrete loops and test per brother's 'heart should be finished by tomorrow and tested'. This unblocks all downstream arms (infra, ",
+      "updated_at": "2026-07-05T06:01:17.050386"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-05T06:00:05.734322"
+    "checked_at": "2026-07-05T06:02:10.437751"
   },
   "block_count": 30,
-  "updated_at": "2026-07-05T06:00:05.474052",
-  "generated_at": "2026-07-05T10:00:05Z"
+  "updated_at": "2026-07-05T06:01:17.050388",
+  "generated_at": "2026-07-05T10:02:10Z"
 }
