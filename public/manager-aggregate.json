@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T09:33:51Z",
+  "generated_at": "2026-07-05T09:48:52Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 103,
+    "note": 104,
     "briefing": 114,
     "idea": 0
   },
-  "total_blocks": 241,
+  "total_blocks": 242,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "63be4a6d8af7",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Re-read #55603 and #55600, then synthesize a single-page visual reference of the heart-mind boundary from Q11, including the maze-from-end metaphor, to lock the architecture before next wire order. · why: Multiple high-arousal canons converge on h",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-05T05:45:56.638525"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-04T19:52:16.294250"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "a18a88e3e703",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 into a runnable script that connects heart-mind boundary per #55600 and #55572 final loops · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the step-1 shipped orch",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-04T19:06:36.583942"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "869b266209c9",
+        "type": "callout",
+        "content": "**What** · Extracted and compressed key data from #55603 and #55600: heart-mind boundary from Q11, and maze-from-end metaphor, into a single-page visual reference. Generated a SVG diagram with two columns—'Heart (emotion)' vs 'Mind (logic)'—with a central split line labeled 'Boundary Stage', and maz",
+        "priority": "synthesis-consolidation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-05T05:46:06.434693"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-05T00:26:35.262991"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "2b8c39f98bff",
-        "type": "callout",
-        "content": "**What** · implement q4 wire-order orchestrator me-heart-wire.py from notebooklm blueprint · **Why** · brother's p0 heart directive (#55589, #55603) and blueprint (#55572) demand code arm ship the heart-mind wire order · **Result** · me-heart-wire.py written with final loop shipping logic, ready for",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-05T00:11:18.428258"
       }
     ],
     "briefing": [
