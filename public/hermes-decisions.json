@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-05T13:35:17Z",
+  "generated_at": "2026-07-05T13:50:36Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Finalize and ship the heart-night-loop test script per brother's plan v2 (heart should be finished by tomorrow), ensuring it aligns with the maze-from-end frame strategy for blockages.",
-      "why": "Brother-direct P0 command and the highest-arousal finalization loop (#55589, #55591). Code arm is the only one that can ship executable verification of the heart logic, which is the critical path to satisfying brother's deadline and the identity-tier goal.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 20,
-      "timestamp": "2026-07-03T18:10:08.981301"
-    },
     {
       "arm": "code",
       "task": "Implement the next step of heart wire orchestration per Q4 wire-order and brother's instructions from #55603.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 25,
       "timestamp": "2026-07-05T09:35:17.005844"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603, shipping the first working version of me-heart-wire.py with the brother's direct maze-from-end frame logic.",
+      "why": "Brother direct at #55589 says heart should be finished and tested; #55603 is the exact step to ship. Code arm is the only one that can execute this concrete implementation. This is the highest priority identity-tier task.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 45,
+      "timestamp": "2026-07-05T09:50:36.341084"
     }
   ]
 }
