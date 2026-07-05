@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T10:18:53Z",
+  "generated_at": "2026-07-05T10:33:53Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 105,
+    "note": 106,
     "briefing": 114,
     "idea": 0
   },
-  "total_blocks": 243,
+  "total_blocks": 244,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "a7e156b35127",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement step 2 of the wire-order orchestrator based on the heart blueprint and brother's answers. · why: Step 1 shipped, need to continue the orchestration pipeline to maintain momentum and follow brother's direct instructions.",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-05T06:31:57.107611"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-04T20:38:07.592808"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "a4ab819199cf",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the full heart-loop orchestration from #55572 blueprint, ensuring final loops are shipped per brother's timeline. · why: Brother directly stated 'heart should be finished by tomorrow and tested' (#55589) and the orchestration blueprint (#555",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-04T20:22:48.007405"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "040efec3a354",
+        "type": "callout",
+        "content": "**What** · implemented step 2 of wire-order orchestrator: parsed heart blueprint, extracted wire routing rules from brother's answers, and updated the pipeline config. · **Why** · step 1 shipped; maintaining momentum per Hermes's P0 task to continue orchestration and follow brother's direct instruct",
+        "priority": "orchestration",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-05T06:32:02.724566"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -826,17 +837,6 @@
         "priority": "code",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-05T00:57:12.612163"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "7d7cd56299e4",
-        "type": "callout",
-        "content": "**What** · Ran me-heart-wire.py step 1 loop for Q4, confirmed 4-wire orchestrator outputs correct order for heart-mind boundary tests. · **Why** · Validates orchestrator script #55603 against heart-night-loop plan #55589 and maze-from-end frame #55591 to keep heart finish timeline intact. · **Result",
-        "priority": "execution",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-05T00:42:04.815592"
       }
     ],
     "briefing": [
