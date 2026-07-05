@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-07-05T03:49:05Z",
-  "total_items_scored": 149,
+  "generated_at": "2026-07-05T03:59:06Z",
+  "total_items_scored": 150,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator per #55603 blueprint, shipping the first end-to-end loop for heart-wire sequencing \u00b7 why: #55603 is a direct brother-validated P0 step that unblocks t",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator (me-heart-wire.py) to ship the final heart loops per brother's direct instruction from #55589 and #55603. \u00b7 why: Brother directly said 'heart should b",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-04T14:16:50.416292"
+      "updated_at": "2026-07-04T14:31:58.815583"
     },
     {
       "arm": "research",
       "arm_glyph": "\ud83d\udc41",
       "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Extract and formalize the 'maze-from-end' frame from #55591 into a reusable blockage-resolution pattern for the orchestrator. \u00b7 why \u00b7 Brother directly provided the 'maze-from-end' frame (#55591) as a solution to blockages. This is a P0 brother-direct insight that needs to be captured as a concrete, executable pattern before it fades. Research arm is best suited to distill and document this cognitive tool.",
+      "content": "HERMES TASK \u00b7 Extract and document the exact sequential wire order from #55603 me-heart-wire.py into a reusable orchestration snippet for future heart-heart wire runs. \u00b7 why \u00b7 Brother just shipped the Q4 wire-order orchestrator; making a sharable doc/snippet ensures the logic doesn't get lost and can be reused or debugged fast. This supports the HEART-FULLY-FINISHED P0 goal by locking in the procedural knowledge.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 15,
+      "est_minutes": 8,
       "score": 10.0,
-      "updated_at": "2026-07-04T16:03:13.616414",
+      "updated_at": "2026-07-04T16:18:26.770277",
       "use_skill": "brain-rrf"
     },
     {
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator per #55603 blueprint, shipping the first end-to-end loop for heart-wire sequencing \u00b7 why: #55603 is a direct brother-validated P0 step that unblocks t",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-07-04T14:16:50.416292"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-04T17:35:04.866187"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator as specified in #55603, ensuring the heart-mind boundary is correctly wired per #55600. \u00b7 why: Brother direct in #55589 says heart should be finished ",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-04T18:05:26.231030"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
