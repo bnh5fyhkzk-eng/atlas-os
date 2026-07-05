@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-07-05T03:09:03Z",
-  "total_items_scored": 148,
+  "generated_at": "2026-07-05T03:19:04Z",
+  "total_items_scored": 149,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator (me-heart-wire.py) to ship the final loops per NotebookLM blueprint and brother's answers. \u00b7 why: Brother direct #55572 and #55589 state heart must be",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator per #55603 blueprint, shipping the first end-to-end loop for heart-wire sequencing \u00b7 why: #55603 is a direct brother-validated P0 step that unblocks t",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-04T14:01:32.019843"
-    },
-    {
-      "arm": "code",
-      "arm_glyph": "\u270b",
-      "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Implement the Q4 wire-order orchestrator from #55603, ensuring the heart-mind boundary logic from #55600 is respected in the step-1 shipped code. \u00b7 why \u00b7 The most recent brain canon (#55603) is a direct code shipment that must be integrated with the soul-catch boundary logic (#55600) to avoid blocking the heart-night-loop plan (#55589). This is a P0 brother-direct task.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-07-04T15:17:29.914271",
-      "use_skill": "notebooklm"
+      "updated_at": "2026-07-04T14:16:50.416292"
     },
     {
       "arm": "research",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-07-04T16:03:13.616414",
       "use_skill": "brain-rrf"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator (me-heart-wire.py) to ship the final loops per NotebookLM blueprint and brother's answers. \u00b7 why: Brother direct #55572 and #55589 state heart must be",
+      "arm": "code",
+      "arm_glyph": "\u270b",
+      "arm_name": "Code",
+      "content": "HERMES TASK \u00b7 Execute heart wire test suite and validate final loops against brother's answers and NotebookLM blueprint. \u00b7 why \u00b7 Brother direct requires heart finished and tested by tomorrow; step 1 shipped, now need to verify correctness.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 30,
       "score": 10.0,
-      "updated_at": "2026-07-04T14:01:32.019843"
-    },
+      "updated_at": "2026-07-04T16:33:45.051926",
+      "use_skill": "notebooklm"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-04T17:19:45.154997"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P1 \u00b7 task: Ingest and map the 6 recent high-arousal canons (#55572 through #55603) into a single timeline + dependency graph for heart-mind boundary resolution \u00b7 why: These canons all orbit the hear",
+      "category": "decision",
+      "priority": "P1",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-04T17:35:04.866187"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
