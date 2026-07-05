@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "3a2659a6ab2f",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-04T21:08:40.602396"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Run the heart night-loop test suite and verify all 4 final loops pass. · why: Brother direct: heart should be finished and tested. Step 1 shipped, now need to validate the night-loop plan v2 and maze-from-end frame integration.",
-      "updated_at": "2026-07-04T21:08:40.602405"
-    },
-    {
       "id": "5574a03b29c5",
       "type": "callout",
       "props": {
@@ -745,15 +733,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the next step from Q4 wire-order orchestrator based on brother's directive to finish and test heart · why: Recent high-arousal canons show heart completion is brother-direct P0, and step 1 shipped; code arm is needed to continue implementation and testing",
       "updated_at": "2026-07-05T08:18:17.357299"
+    },
+    {
+      "id": "2f7910967e1a",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-05T08:33:38.862528"
+      },
+      "content": "Hermes decision · arm=charle · priority=P0 · task: Run the Q4 wire-order orchestrator (step1-shipped from #55603) against the latest Heart fully finished blueprint (#55572) to validate the final 4 loops match NotebookLM's P4 soul-catch boundary (#55600) · why: Brother-direct priority: Heart must be finished and tested per #55589. The Q4 wire-order orchestrator is shipped; we need to fire it now against the actual final Heart state to close the loop before any other branch consumes stale data.",
+      "updated_at": "2026-07-05T08:33:38.862538"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-05T08:32:29.308937"
+    "checked_at": "2026-07-05T08:37:29.868182"
   },
   "block_count": 30,
-  "updated_at": "2026-07-05T08:18:17.357301",
-  "generated_at": "2026-07-05T12:32:29Z"
+  "updated_at": "2026-07-05T08:33:38.862540",
+  "generated_at": "2026-07-05T12:37:29Z"
 }
