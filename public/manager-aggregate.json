@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T00:49:28Z",
+  "generated_at": "2026-07-06T01:04:28Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 110,
+    "note": 111,
     "briefing": 116,
     "idea": 0
   },
-  "total_blocks": 250,
+  "total_blocks": 251,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "637d0dd87496",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the next wiring step for heart-wire.py based on the NotebookLM blueprint and brother's instructions to finish heart by tomorrow · why: Recent canon #55603 shipped step 1 of the wire-order orchestrator; brother direct (#55589) says heart shou",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-05T21:02:52.850378"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-05T12:07:58.375545"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "dbf42f1d6d61",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator per #55603 blueprint, ensuring me-heart-wire.py correctly sequences heart-mind boundary crossings from Soul Catch data. · why: Brother-direct #55589 says finish heart tomorrow and test, #55603 is the shipped orches",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-05T11:37:14.234428"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "e22227d97143",
+        "type": "callout",
+        "content": "**What** · Implement next wiring step in heart-wire.py based on NotebookLM blueprint step 2 (wire-order orchestrator continuation). · **Why** · Brother direct (#55589) says heart must finish tomorrow; canon #55603 shipped step 1, so I execute remaining logic. · **Result** · Expected to complete wiri",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-05T21:02:56.260770"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-05T17:43:21.845320"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "6ff17a8709af",
-        "type": "callout",
-        "content": "**What** · Integrated Q4 wire-order orchestrator from #55603 into me-heart-wire.py, then ran first end-to-end test with NotebookLM heartbeat blueprint. · **Why** · Brother direct says heart must be finished and tested by tomorrow; Q4 wire-order orchestrator shipped minutes ago — this closes the loop",
-        "priority": "code-integration",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-05T17:28:08.904406"
       }
     ],
     "briefing": [
