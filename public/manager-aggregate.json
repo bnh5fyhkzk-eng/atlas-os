@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T10:26:54Z",
+  "generated_at": "2026-07-06T10:41:55Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 119,
+    "note": 120,
     "briefing": 117,
     "idea": 0
   },
-  "total_blocks": 260,
+  "total_blocks": 261,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "74e33108d341",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement Step 2 of heart wire order: connect night-loop to maze-from-end frame per brother's directive · why: Heart must be finished by tomorrow; Step 1 shipped, now Step 2 is needed to complete the heart night-loop plan and resolve blockage via maze",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-06T06:30:15.715338"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-05T22:04:20.452897"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "3f7f851fa904",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement next wire order step from Q4 orchestrator for heart completion · why: Brother direct to finish heart by tomorrow, code arm needed to execute wire order per recent brain canons",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-05T21:48:53.723637"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "4b96414e460c",
+        "type": "callout",
+        "content": "**What** · Connected night-loop to maze-from-end frame via wire binding and frame alignment. · **Why** · Step 2 of heart wire order; required to complete heart night-loop plan and resolve blockage per brother's directive; P0 priority. · **Result** · Night-loop now references maze-from-end frame; blo",
+        "priority": "integration",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-06T06:30:26.491784"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "code-write",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-06T02:54:53.303341"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "c688ec465b25",
-        "type": "callout",
-        "content": "**What** · Execute night-loop test plan v2 from #55589, run all test cases, verify completion. · **Why** · Hermes assigned P0; brother said heart finished, step 1 shipped; need to test night-loop per plan. · **Result** · All night-loop tests passed; completion verified. · **Next** · Report results t",
-        "priority": "testing",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-06T02:39:37.974449"
       }
     ],
     "briefing": [
