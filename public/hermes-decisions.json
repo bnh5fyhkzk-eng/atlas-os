@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-06T17:39:18Z",
+  "generated_at": "2026-07-06T18:09:48Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Run the heart night-loop test suite and verify all 4 final loops pass.",
-      "why": "Brother direct: heart should be finished and tested. Step 1 shipped, now need to validate the night-loop plan v2 and maze-from-end frame integration.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 30,
-      "timestamp": "2026-07-04T21:08:40.618895"
-    },
     {
       "arm": "code",
       "task": "Implement the 'me-heart-wire.py' Q4 wire-order orchestrator per #55603 step 1 shipped blueprint, ensuring correct signal routing between heart and mind layers.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 15,
       "timestamp": "2026-07-06T13:39:18.307647"
+    },
+    {
+      "arm": "research",
+      "task": "Execute 'heart-find-shortest-path.py' on the Maze-from-end frame (brain #55591) to verify blockage removal sequence matches brother's direct instruction.",
+      "why": "Brother directly said 'heart should be finished by tomorrow and tested' and gave explicit maze-from-end frame logic. This is the highest-priority P0 task to unblock heart completion on the critical path.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 20,
+      "timestamp": "2026-07-06T14:09:48.481715"
     }
   ]
 }
