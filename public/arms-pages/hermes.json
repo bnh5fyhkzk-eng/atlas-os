@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "b2c59c1a4e18",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-06T00:52:20.413002"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 using the 'me-heart-wire.py' blueprint, integrating the final heart loops shipped in #55572 and the night-loop plan from #55589. · why: The orchestrator is the direct next executable step (P0 brother-direct: #55603, #55589) to realize the heart-as-finished state. It connects the already-shipped loops (#55572) with the night-loop plan (#55589) and the maze-from-end frame (#55591) into a single wired system. This arm has the Python sk",
-      "updated_at": "2026-07-06T00:52:20.413013"
-    },
-    {
       "id": "f7dd210938e0",
       "type": "callout",
       "props": {
@@ -759,15 +747,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator for heart-mind boundary, shipping the next step after #55603 STEP 1 SHIPPED. · why: Brother direct in #55589 says heart should be finished and tested; #55603 shipped step 1, so code arm must continue the wire-order orchestrator to complete the heart loop.",
       "updated_at": "2026-07-06T10:51:08.287578"
+    },
+    {
+      "id": "c27dc928f17c",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-06T11:06:44.726193"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator (me-heart-wire.py) to ship the next step of the heart night-loop plan per brother's direct instruction. · why: Brother directly said 'heart should be finished by tomorrow and tested' at 22:13, and the Q4 wire-order orchestrator is the next concrete step (STEP 1 SHIPPED at 22:43). This is the highest priority identity-tier task.",
+      "updated_at": "2026-07-06T11:06:44.726202"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-06T11:02:52.204462"
+    "checked_at": "2026-07-06T11:07:52.750348"
   },
   "block_count": 30,
-  "updated_at": "2026-07-06T10:51:08.287580",
-  "generated_at": "2026-07-06T15:02:52Z"
+  "updated_at": "2026-07-06T11:06:44.726203",
+  "generated_at": "2026-07-06T15:07:52Z"
 }
