@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T06:34:40Z",
+  "generated_at": "2026-07-06T06:49:40Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 110,
+    "note": 111,
     "briefing": 117,
     "idea": 0
   },
-  "total_blocks": 251,
+  "total_blocks": 252,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "d9fd92209757",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Execute heart night-loop test plan v2 from #55589 and verify completion · why: Brother direct said heart should be finished and tested; step 1 shipped, now need to test night-loop per plan",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-06T02:39:28.090011"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-05T18:29:10.735237"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "27dc62cddb1d",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement heart wire step 2: integrate with maze-from-end frame per brother's direct instruction · why: Brother direct P0 priority to finish heart by tomorrow; recent step 1 shipped, next step is integration",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-05T18:13:54.664088"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "c688ec465b25",
+        "type": "callout",
+        "content": "**What** · Execute night-loop test plan v2 from #55589, run all test cases, verify completion. · **Why** · Hermes assigned P0; brother said heart finished, step 1 shipped; need to test night-loop per plan. · **Result** · All night-loop tests passed; completion verified. · **Next** · Report results t",
+        "priority": "testing",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-06T02:39:37.974449"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "implement",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-05T23:35:50.716714"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "4516a6abd1c5",
-        "type": "callout",
-        "content": "**What** · Wrote me-heart-wire.py implementing Q4 wire-order orchestrator for the final heart loop, per brother's direct instruction. · **Why** · Brother said heart must be finished and tested by tomorrow; step 1 already shipped, this is the next concrete code step to complete the heart-mind boundar",
-        "priority": "code",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-05T23:20:33.982677"
       }
     ],
     "briefing": [
