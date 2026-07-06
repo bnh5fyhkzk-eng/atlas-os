@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-06T02:49:53Z",
+  "generated_at": "2026-07-06T03:05:11Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement next step of heart wire order orchestrator per Q4 blueprint, following brother's directive to finish heart by tomorrow",
-      "why": "Step 1 shipped (#55603), brother direct to finish heart by tomorrow and test; code arm is needed to continue the implementation of the wire-order orchestrator",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-07-04T07:09:25.917508"
-    },
     {
       "arm": "code",
       "task": "Integrate #55572 final loops into me-heart-wire.py step-execution order, referencing #55589 night-loop plan v2 and #55591 maze-from-end frame for blockage bypass logic.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-05T22:49:53.506180"
+    },
+    {
+      "arm": "research",
+      "task": "Analyze #55572 and #55589 to extract exact completion gaps in HEART loops, mapping each missing final loop step to a concrete finish condition.",
+      "why": "Brother direct says 'heart should be finished by tomorrow' and #55572 shipped 4 final loops but per #55589 we need testing \u2014 research arm must clarify what's unclosed so orchestrator can dispatch repair.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 12,
+      "timestamp": "2026-07-05T23:05:11.212822"
     }
   ]
 }
