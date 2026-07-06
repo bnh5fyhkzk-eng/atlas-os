@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T18:12:12Z",
+  "generated_at": "2026-07-06T18:27:12Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 108,
+    "note": 109,
     "briefing": 115,
     "idea": 0
   },
-  "total_blocks": 247,
+  "total_blocks": 248,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "5e1bd16f0c43",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Execute 'heart-find-shortest-path.py' on the Maze-from-end frame (brain #55591) to verify blockage removal sequence matches brother's direct instruction. · why: Brother directly said 'heart should be finished by tomorrow and tested' and gave expli",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-06T14:09:48.464916"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-06T04:58:00.260126"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "091aec1d4dba",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement heart-wire.py Phase 2: integrate NotebookLM blueprint loop-count logic and brother's finish-by-tomorrow constraint into the orchestrator · why: Brother direct said heart should be finished by tomorrow and tested; the code arm is the only one",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-06T04:27:25.934166"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "a104fd488a14",
+        "type": "callout",
+        "content": "**What** · Execute 'heart-find-shortest-path.py' on Maze-from-end frame (brain #55591) to verify blockage removal sequence matches brother's instruction. · **Why** · Brother directly said 'heart should be finished by tomorrow and tested' and gave explicit maze-from-end logic. This P0 task unblocks t",
+        "priority": "execution-verification",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-06T14:10:01.160543"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -826,17 +837,6 @@
         "priority": "deployment",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-06T09:04:44.846286"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "733d8fc9379b",
-        "type": "callout",
-        "content": "**What** · Implement Q4 wire-order orchestrator as standalone Python script reading NotebookLM blueprint and brother's answers. · **Why** · This is the last code step to ship the heart loop — critical path from maze-from-end frame to runnable system. · **Result** · Script `q4_orchestrator.py` create",
-        "priority": "code",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-06T08:18:58.482994"
       }
     ],
     "briefing": [
