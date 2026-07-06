@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-06T04:21:39Z",
+  "generated_at": "2026-07-06T04:36:57Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the maze-from-end frame algorithm on the heart wire to resolve the blockage as per brother direct.",
-      "why": "Brother direct instructed heart should be finished and tested; the maze-from-end frame is the method to resolve blockages and complete the heart circuit.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 60,
-      "timestamp": "2026-07-04T08:56:33.085892"
-    },
     {
       "arm": "code",
       "task": "Implement me-heart-wire.py step 2: wire Q4 completion handler to ship next final loop after current blockage resolves.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-06T00:21:39.674585"
+    },
+    {
+      "arm": "code",
+      "task": "Implement Q4 wire-order orchestrator output from #55603 as runnable script, then attach to heartbeat-test harness for brother's eyes tomorrow.",
+      "why": "Brother's direct P0 deadline: heart must be finished and tested tomorrow. Code arm is the only one that turns our orchestration blueprint (#55603) into a working artifact. All other arms would be premature before this ship is built.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 90,
+      "timestamp": "2026-07-06T00:36:57.828645"
     }
   ]
 }
