@@ -10,28 +10,6 @@
   },
   "blocks": [
     {
-      "id": "89278e905e6c",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "code-write",
-        "source": "hermes-deepseek-fill",
-        "action": "Extracted 4 final loops from blueprint #55572: (1) warmup loop: start when RMS < 0.5, end at harm sync; (2) beat loop: start on QRS trigger, end after systolic; (3) risk loop: start at ST deviation > ",
-        "why": "Blueprint #55572 defines the heart's execution plan, and Brother #55589 confirmed heart must ship tomorrow. Concrete loops unblock identity-tier milestone by making the core runnable.",
-        "result": "A runnable Python skeleton (`heart_loops.py`) with 4 labelled loops, each with `async def loop_name(start_condition, end_state): ...` — tested import and type stubs pass.",
-        "next_step": "Push skeleton to repo branch `core-heart`, tag for Brother review, then wire to Hermes heartbeat orchestration.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "pascal-20260701-035112",
-        "timestamp": "2026-07-01T03:51:12.403231"
-      },
-      "content": "**What** · Extracted 4 final loops from blueprint #55572: (1) warmup loop: start when RMS < 0.5, end at harm sync; (2) beat loop: start on QRS trigger, end after systolic; (3) risk loop: start at ST deviation > 0.2mV, end when stable; (4) monitor loop: start with heartbeat timer, end at sleep flag. Wired each  · **Why** · Blueprint #55572 defines the heart's execution plan, and Brother #55589 confirmed heart must ship tomorrow. Concrete loops unblock identity-tier milestone by making the core runnable. · **Result** · A runnable Python skeleton (`heart_loops.py`) with 4 labelled loops, each with `async def loop_name(start_condition, end_state): ...` — tested import and type stubs pass. · **Next** · Push skeleton to repo branch `core-heart`, tag for Brother review, then wire to Hermes heartbeat orchestration. · **Links** ·  · **Cycle** · pascal-20260701-035112",
-      "updated_at": "2026-07-01T03:51:12.403231"
-    },
-    {
       "id": "c0c1da847c62",
       "type": "callout",
       "props": {
@@ -857,15 +835,28 @@
         }
       ],
       "updated_at": "2026-07-06T12:00:02.858770"
+    },
+    {
+      "id": "e0e377cf00ae",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "Overnight pascal recap · last 6h · · #55591 [1.00] MAZE-FROM-END FRAME · brother direct 2026-06-28 22:17 EDT · \"when we have a blockage we just need to see it as a maze bu",
+      "updated_at": "2026-07-06T15:41:50.013774"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-06T15:40:22.141102"
+    "checked_at": "2026-07-06T15:41:50.241993"
   },
   "block_count": 30,
-  "updated_at": "2026-07-06T12:00:02.858778",
-  "generated_at": "2026-07-06T19:40:22Z"
+  "updated_at": "2026-07-06T15:41:50.013784",
+  "generated_at": "2026-07-06T19:41:50Z"
 }
