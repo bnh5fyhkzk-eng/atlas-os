@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T11:56:57Z",
+  "generated_at": "2026-07-06T12:11:58Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 124,
-    "briefing": 116,
+    "note": 125,
+    "briefing": 115,
     "idea": 0
   },
   "total_blocks": 265,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "b54d24ccab88",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Execute me-heart-wire.py and verify Q4 wire-order orchestrator output against brother's 'heart finished by tomorrow and tested' directive · why: The last canon shipped a code step (me-heart-wire.py). Brother direct requires heart completion and testin",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-06T08:03:03.375479"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-05T23:20:24.938451"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "a4f9823ba5de",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Analyze #55572 and #55589 to extract exact completion gaps in HEART loops, mapping each missing final loop step to a concrete finish condition. · why: Brother direct says 'heart should be finished by tomorrow' and #55572 shipped 4 final loops but ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-05T23:05:11.195120"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "07f9a289645e",
+        "type": "callout",
+        "content": "**What** · Executed me-heart-wire.py and validated Q4 wire-order orchestrator output against brother's 'heart finished by tomorrow and tested' directive. · **Why** · Hermes assigned this P0 task to ensure heart loops are correctly wired and ready for final testing. · **Result** · Script ran successf",
+        "priority": "execution",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-06T08:03:38.667064"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "code_arm_write",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-06T05:44:11.323239"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "aa3db0f09fd3",
-        "type": "callout",
-        "content": "**What** · implemented Q4 wire-order orchestrator: connected heart-wire.py to NotebookLM final loop, first executable loop shipped. · **Why** · #55603 requires step-1 code to make orchestration real; heart is tested per #55589, closes the highest-arousal loop. · **Result** · heart-wire.py now drives",
-        "priority": "code-ship",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-06T05:28:50.413664"
       }
     ],
     "briefing": [
@@ -1015,17 +1015,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-07-05T10:17:05.944959"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "6b1d7661818b",
-        "type": "callout",
-        "content": "Overnight code recap · last 6h · · #57765 [1.00] SHARED-CANON · atlas-brother-shared.md snapshot 2026-07-05 04:45:00 · size=557788B · brother+Atlas joint state · CONTENT",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-07-05T10:17:05.890528"
       },
       {
         "arm": "infra",
@@ -1400,6 +1389,17 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-07-04T04:17:01.343339"
+      },
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "6c8cf86e02a7",
+        "type": "callout",
+        "content": "Overnight pascal recap · last 6h · · #55591 [1.00] MAZE-FROM-END FRAME · brother direct 2026-06-28 22:17 EDT · \"when we have a blockage we just need to see it as a maze bu",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-07-04T04:17:01.315773"
       }
     ],
     "idea": []
