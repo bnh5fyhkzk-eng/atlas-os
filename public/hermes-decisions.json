@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-06T11:46:50Z",
+  "generated_at": "2026-07-06T12:03:03Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Execute heart wire test suite and validate final loops against brother's answers and NotebookLM blueprint.",
-      "why": "Brother direct requires heart finished and tested by tomorrow; step 1 shipped, now need to verify correctness.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 30,
-      "timestamp": "2026-07-04T16:33:45.051926"
-    },
     {
       "arm": "code",
       "task": "Complete 'me-heart-wire.py' Q4 wire-order orchestrator per #55603 shipped blueprint, ensuring final loop alignment with brother's 'heart should be finished by tomorrow' directive.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-07-06T07:46:50.388142"
+    },
+    {
+      "arm": "code",
+      "task": "Execute me-heart-wire.py and verify Q4 wire-order orchestrator output against brother's 'heart finished by tomorrow and tested' directive",
+      "why": "The last canon shipped a code step (me-heart-wire.py). Brother direct requires heart completion and testing. This arm will run the script and validate the output, ensuring the heart loops are correctly wired and ready for final testing.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 20,
+      "timestamp": "2026-07-06T08:03:03.392065"
     }
   ]
 }
