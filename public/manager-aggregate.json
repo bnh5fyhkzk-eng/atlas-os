@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T17:27:10Z",
+  "generated_at": "2026-07-06T17:42:11Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 107,
+    "note": 108,
     "briefing": 115,
     "idea": 0
   },
-  "total_blocks": 246,
+  "total_blocks": 247,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "5158dcf15a41",
+        "type": "callout",
+        "content": "Hermes decision · arm=charle · priority=P0 · task: Implement HEART NIGHT-LOOP PLAN v2 per brother direct: ship 'heart finished' test rig + final loop integration by end of tonight's window. · why: Brother explicitly said 'heart should be finished by tomorrow and tested' — this is a P0 identity-tier ",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-06T13:23:59.046682"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-06T03:25:32.477327"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "f7376739a977",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator for the heart-mind boundary, ensuring the 4 final loops from NotebookLM blueprint are correctly sequenced and tested. · why: Brother direct in #55603 says 'STEP 1 SHIPPED' for me-heart-wire.py, but the Q4 wire-",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-06T02:54:46.970886"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "charle",
+        "arm_glyph": "💼",
+        "arm_name": "Charle · Pascal-team",
+        "block_id": "f235e383468d",
+        "type": "callout",
+        "content": "**What** · built and shipped the 'heart finished' test rig with final loop integration from plan #55589 · **Why** · brother said heart must be finished and tested by tomorrow; this is P0 identity-tier directive from Hermes · **Result** · test rig deployed, heart loop integrated and passing runtime c",
+        "priority": "CORE-LOOP-INTEGRATION",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-06T13:24:05.882795"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "code",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-06T08:18:58.482994"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "07f9a289645e",
-        "type": "callout",
-        "content": "**What** · Executed me-heart-wire.py and validated Q4 wire-order orchestrator output against brother's 'heart finished by tomorrow and tested' directive. · **Why** · Hermes assigned this P0 task to ensure heart loops are correctly wired and ready for final testing. · **Result** · Script ran successf",
-        "priority": "execution",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-06T08:03:38.667064"
       }
     ],
     "briefing": [
