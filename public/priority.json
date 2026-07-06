@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-07-06T14:52:11Z",
-  "total_items_scored": 146,
+  "generated_at": "2026-07-06T15:02:12Z",
+  "total_items_scored": 147,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement Q4 wire-order orchestrator output from #55603 as runnable script, then attach to heartbeat-test harness for brother's eyes tomorrow. \u00b7 why: Brother's direct P0 deadline: heart must ",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator from #55603 using the 'me-heart-wire.py' blueprint, integrating the final heart loops shipped in #55572 and the night-loop plan from #55589. \u00b7 why: Th",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-06T00:36:57.811843"
+      "updated_at": "2026-07-06T00:52:20.413013"
     },
     {
       "arm": "code",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement Q4 wire-order orchestrator output from #55603 as runnable script, then attach to heartbeat-test harness for brother's eyes tomorrow. \u00b7 why: Brother's direct P0 deadline: heart must ",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-07-06T00:36:57.811843"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-06T04:58:00.260126"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Ship HEART_NIGHT_LOOP_MAZE step 2: wire up maze-from-end solver into me-heart-wire.py and validate against brother's 'blockage as maze' canon \u00b7 why: Brother direct in #55591 and #55589 demand",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-06T05:13:24.844269"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
