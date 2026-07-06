@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-07-06T13:32:07Z",
-  "total_items_scored": 170,
+  "generated_at": "2026-07-06T13:42:07Z",
+  "total_items_scored": 145,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Run me-heart-wire.py Q4 wire-order orchestrator on the latest brother-direct #55589 and #55603, verify heartbeat loop wiring compiles against NotebookLM blueprint, log pass/fail to brain #556",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator as a runnable Python script that sequences the final heart loops per blueprint and brother's answer, and outputs a verification log. \u00b7 why: Step 1 shi",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-06T00:06:22.057108"
+      "updated_at": "2026-07-06T00:21:39.658041"
     },
     {
       "arm": "code",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Run me-heart-wire.py Q4 wire-order orchestrator on the latest brother-direct #55589 and #55603, verify heartbeat loop wiring compiles against NotebookLM blueprint, log pass/fail to brain #556",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-07-06T00:06:22.057108"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-06T03:25:32.477327"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement heart-wire.py Phase 2: integrate NotebookLM blueprint loop-count logic and brother's finish-by-tomorrow constraint into the orchestrator \u00b7 why: Brother direct said heart should be f",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-06T04:27:25.934166"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
