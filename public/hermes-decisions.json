@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-06T09:44:06Z",
+  "generated_at": "2026-07-06T09:59:24Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator per #55603 blueprint, shipping the first end-to-end loop for heart-wire sequencing",
-      "why": "#55603 is a direct brother-validated P0 step that unblocks the heart-night-loop plan (#55589) and the maze-from-end frame (#55591); code arm is the only one that can materialize this into executable logic now.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-07-04T14:16:50.433120"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator (me-heart-wire.py) to ship the final heart loops per brother's direct instruction from #55589 and #55603.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-06T05:44:06.533796"
+    },
+    {
+      "arm": "curiosity",
+      "task": "Run the maze-from-end solver on the heart blockage from #55591: load the full heart state trace, compute the reverse path from the last clean sync point, and output the minimum unblock steps.",
+      "why": "Brother directly said 'when we have a blockage we just need to see it as a maze built from the end' (#55591). This is a P0 brother-direct instruction, and the heart-loop (#55589) must be unblocked now before night-loop can test tomorrow. Curiosity arm holds the maze-searching skills + notebooklm for the reverse-plan blueprint.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 18,
+      "timestamp": "2026-07-06T05:59:24.991570"
     }
   ]
 }
