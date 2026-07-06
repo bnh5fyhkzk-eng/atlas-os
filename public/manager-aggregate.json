@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T03:04:32Z",
+  "generated_at": "2026-07-06T03:19:33Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 100,
+    "note": 101,
     "briefing": 118,
     "idea": 0
   },
-  "total_blocks": 241,
+  "total_blocks": 242,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "a4f9823ba5de",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Analyze #55572 and #55589 to extract exact completion gaps in HEART loops, mapping each missing final loop step to a concrete finish condition. · why: Brother direct says 'heart should be finished by tomorrow' and #55572 shipped 4 final loops but ",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-05T23:05:11.195120"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-05T14:10:11.622828"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "601d3a8705d1",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, integrating the heart-mind boundary logic from #55600 and the maze-from-end frame from #55591. · why: This is the next concrete step in the brother-direct plan: the orchestrator is the critical pie",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-05T13:54:56.244595"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "66879755a0aa",
+        "type": "callout",
+        "content": "**What** · Pulled #55572 and #55589 diffs and test logs, compared 4 shipped loops against missing step conditions. · **Why** · Brother direct said heart finish by tomorrow, but #55589 test fails on loop closure – need exact gaps for orchestrator to dispatch repair. · **Result** · Found 2 loops in #5",
+        "priority": "structural_analysis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-05T23:05:16.999563"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -815,17 +826,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-07-05T18:00:00.883192"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "7ef77a3d0f7d",
-        "type": "database",
-        "content": "clients · last 30d · 4 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-07-05T18:00:00.883187"
       }
     ],
     "briefing": [
