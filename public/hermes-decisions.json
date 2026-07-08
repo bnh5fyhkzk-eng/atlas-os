@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-08T17:52:26Z",
+  "generated_at": "2026-07-08T18:23:11Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator from #55603, shipping the first step of the heart-wire sequence as per brother's direct instruction.",
-      "why": "Brother directly ordered heart finished and tested (#55589), and #55603 is the immediate next executable step \u2014 this is P0 identity-tier work.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-07-04T23:10:22.115523"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the four final loops per NotebookLM blueprint and brother's answers from #55572.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-08T13:52:26.657475"
+    },
+    {
+      "arm": "code",
+      "task": "Run me-heart-wire.py to finalize heart wire order, then test against brother's answers from NotebookLM blueprint.",
+      "why": "Brother directly stated heart should be finished and tested by tomorrow. This is the immediate next step after shipping the wire-order orchestrator.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 30,
+      "timestamp": "2026-07-08T14:23:11.460618"
     }
   ]
 }
