@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "b54d24ccab88",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-06T08:03:03.375468"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Execute me-heart-wire.py and verify Q4 wire-order orchestrator output against brother's 'heart finished by tomorrow and tested' directive · why: The last canon shipped a code step (me-heart-wire.py). Brother direct requires heart completion and testing. This arm will run the script and validate the output, ensuring the heart loops are correctly wired and ready for final testing.",
-      "updated_at": "2026-07-06T08:03:03.375479"
-    },
-    {
       "id": "19454602909f",
       "type": "callout",
       "props": {
@@ -760,15 +748,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Write `me-heart-wire.py` Q4 orchestrator that conditionally selects next loop from notebooklm blueprint given brother's 'heart should be finished by tomorrow and tested' directive. · why: Brother's direct P0 order requires completing heart wire orchestration; Q4 completes the step-1 wire-order pipeline to enable testing. Code arm is the only arm that can ship this executable logic.",
       "updated_at": "2026-07-08T13:37:13.495498"
+    },
+    {
+      "id": "70b23b81e486",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-08T13:52:26.640680"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 into a runnable script that sequences heart-mind boundary loops per NotebookLM blueprint · why: Brother direct in #55589 says heart should be finished and tested by tomorrow; #55603 is the exact step shipped for this, and code arm is the only one that can materialize the orchestrator into executable logic now.",
+      "updated_at": "2026-07-08T13:52:26.640691"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-08T13:51:58.091238"
+    "checked_at": "2026-07-08T13:56:58.923794"
   },
   "block_count": 30,
-  "updated_at": "2026-07-08T13:37:13.495499",
-  "generated_at": "2026-07-08T17:51:58Z"
+  "updated_at": "2026-07-08T13:52:26.640692",
+  "generated_at": "2026-07-08T17:56:58Z"
 }
