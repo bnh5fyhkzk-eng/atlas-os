@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T18:43:50Z",
+  "generated_at": "2026-07-08T18:58:51Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 86,
+    "note": 87,
     "briefing": 142,
     "idea": 0
   },
-  "total_blocks": 244,
+  "total_blocks": 245,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "624a9824a298",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Run me-heart-wire.py test and verify output against NotebookLM blueprint · why: Brother direct requires heart finished by tomorrow; step 1 shipped, need to test and iterate",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-08T14:53:38.344877"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -181,17 +192,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-06T09:50:17.144119"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "7d47d617bf6c",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Execute Q4 wire-order orchestrator from me-heart-wire.py to ship the next Heart loop step per brother's 'heart should be finished by tomorrow and tested' directive. · why: This is a P0 brother-direct and identity-tier task: the Heart night-loop plan v",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-06T09:04:39.605780"
       }
     ],
     "action": [],
@@ -200,6 +200,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "097966a18733",
+        "type": "callout",
+        "content": "**What** · Run me-heart-wire.py test and compare output to NotebookLM blueprint. · **Why** · Brother direct requires heart finished by tomorrow; step 1 shipped, need to test and iterate. · **Result** · Test executed; output matches blueprint (verified). · **Next** · Report results to Hermes-Orchestr",
+        "priority": "test-execution",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-08T14:53:42.547435"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -738,17 +749,6 @@
         "priority": "execution-verification",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-06T14:10:01.160543"
-      },
-      {
-        "arm": "charle",
-        "arm_glyph": "💼",
-        "arm_name": "Charle · Pascal-team",
-        "block_id": "f235e383468d",
-        "type": "callout",
-        "content": "**What** · built and shipped the 'heart finished' test rig with final loop integration from plan #55589 · **Why** · brother said heart must be finished and tested by tomorrow; this is P0 identity-tier directive from Hermes · **Result** · test rig deployed, heart loop integrated and passing runtime c",
-        "priority": "CORE-LOOP-INTEGRATION",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-06T13:24:05.882795"
       }
     ],
     "briefing": [
