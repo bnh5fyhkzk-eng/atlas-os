@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-08T19:54:24Z",
+  "generated_at": "2026-07-08T20:24:53Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator (me-heart-wire.py) to ship the next step of the heart loop per brother's direct instruction.",
-      "why": "Brother directly said 'heart should be finished by tomorrow and tested' and step 1 was shipped at #55603. This is the immediate next executable step to maintain momentum on the P0 heart completion chain.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 45,
-      "timestamp": "2026-07-05T00:57:10.461241"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603 as a runnable async Python script that sequences heart loops per the Night-Loop Plan v2 (#55589) and ships final test outputs.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-07-08T15:54:24.179371"
+    },
+    {
+      "arm": "code",
+      "task": "Implement Q4 wire-order orchestrator as me-heart-wire.py, validate against NotebookLM blueprint P4 loop sequence, and tag final loops for tonight's heart-night-loop test.",
+      "why": "Brother explicitly directed 'heart should be finished by tomorrow and tested' and #55603 shipped the orchestrator stub. This is P0 brother-direct, identity-critical path. Code arm must complete the wire-order to unblock Q11 soul-catch and maze-from-end frame integration.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-08T16:24:53.778654"
     }
   ]
 }
