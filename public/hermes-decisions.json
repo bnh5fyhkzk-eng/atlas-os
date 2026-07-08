@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-06T18:40:20Z",
+  "generated_at": "2026-07-08T17:37:13Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator (me-heart-wire.py) to ship the next step of the heart-mind boundary loop, following the NotebookLM blueprint and brother's direct instructions.",
-      "why": "Brother direct #55603 says 'STEP 1 SHIPPED' for me-heart-wire.py, and #55589 says 'heart should be finished by tomorrow and tested'. Code arm must execute the orchestrator to complete the wire order and unblock the heart-mind boundary.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 45,
-      "timestamp": "2026-07-04T21:54:24.295751"
-    },
     {
       "arm": "code",
       "task": "Continue implementing heart night-loop plan v2: wire up remaining Q4 orchestrator steps per brother's instructions and NotebookLM blueprint.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-06T14:40:20.114722"
+    },
+    {
+      "arm": "code",
+      "task": "Write `me-heart-wire.py` Q4 orchestrator that conditionally selects next loop from notebooklm blueprint given brother's 'heart should be finished by tomorrow and tested' directive.",
+      "why": "Brother's direct P0 order requires completing heart wire orchestration; Q4 completes the step-1 wire-order pipeline to enable testing. Code arm is the only arm that can ship this executable logic.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-08T13:37:13.511815"
     }
   ]
 }
