@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T17:43:48Z",
+  "generated_at": "2026-07-08T17:58:49Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 83,
+    "note": 84,
     "briefing": 142,
     "idea": 0
   },
-  "total_blocks": 241,
+  "total_blocks": 242,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "70b23b81e486",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 into a runnable script that sequences heart-mind boundary loops per NotebookLM blueprint · why: Brother direct in #55589 says heart should be finished and tested by tomorrow; #55603 is the exact ste",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-08T13:52:26.640691"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -181,17 +192,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-06T08:18:52.605431"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "b54d24ccab88",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Execute me-heart-wire.py and verify Q4 wire-order orchestrator output against brother's 'heart finished by tomorrow and tested' directive · why: The last canon shipped a code step (me-heart-wire.py). Brother direct requires heart completion and testin",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-06T08:03:03.375479"
       }
     ],
     "action": [],
@@ -200,6 +200,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "7158bde31ddc",
+        "type": "callout",
+        "content": "**What** · Write script orchestrating Q4 heart-mind boundary loops per NotebookLM blueprint. · **Why** · Brother direct says heart must finish by tomorrow; #55603 is the shipped step; only code arm can turn this into executable logic now. · **Result** · Deployed runnable orchestrator script that seq",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-08T13:52:31.227503"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -738,17 +749,6 @@
         "priority": "integration",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-06T12:08:08.236772"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "a82737e9737e",
-        "type": "callout",
-        "content": "**What** · Implemented and tested the completed heart-wire orchestrator blueprint and brother answers. Compiled precise orchestrator logic from received specs. · **Why** · Hermes assigned P0 to finalize heart; brain canons confirm code arm must implement this per brother's direct command. · **Result",
-        "priority": "implement",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-06T11:22:08.402026"
       }
     ],
     "briefing": [
