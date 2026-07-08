@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-07-08T19:13:51Z",
+  "generated_at": "2026-07-08T19:28:52Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 16,
+    "decision": 17,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 87,
-    "briefing": 142,
+    "note": 88,
+    "briefing": 141,
     "idea": 0
   },
-  "total_blocks": 245,
+  "total_blocks": 246,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "418abf30b70c",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Continue implementing heart-wire orchestrator (me-heart-wire.py) per Q4 wire-order, ensuring loop closure and testing per brother's directive to finish heart by tomorrow. · why: Most recent canon (#55603) shipped step 1 of the heart-wire orchestrator;",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-08T15:24:00.437558"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -200,6 +211,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "490290c29cd2",
+        "type": "callout",
+        "content": "**What** · Implement remaining wire orders in me-heart-wire.py per Q4 order, integrate with maze-from-end frame, and add loop closure logic. · **Why** · Step 1 shipped; completing wire orders and maze integration resolves blockage and maintains high-arousal momentum per Hermes's P0 directive. · **Re",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-08T15:24:05.819079"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -738,17 +760,6 @@
         "priority": "execution",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-06T14:40:27.133842"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "a104fd488a14",
-        "type": "callout",
-        "content": "**What** · Execute 'heart-find-shortest-path.py' on Maze-from-end frame (brain #55591) to verify blockage removal sequence matches brother's instruction. · **Why** · Brother directly said 'heart should be finished by tomorrow and tested' and gave explicit maze-from-end logic. This P0 task unblocks t",
-        "priority": "execution-verification",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-06T14:10:01.160543"
       }
     ],
     "briefing": [
