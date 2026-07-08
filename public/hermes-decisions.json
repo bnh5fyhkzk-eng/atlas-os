@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-08T21:25:43Z",
+  "generated_at": "2026-07-08T21:41:06Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator for heart-mind boundary per #55603 blueprint, shipping the first executable loop",
-      "why": "Brother direct in #55589 says heart should be finished by tomorrow and tested; #55603 is the exact step-1 code artifact needed to unblock the maze-from-end frame (#55591). Code arm is the only one that can ship this executable wire-order.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-07-05T02:13:02.284273"
-    },
     {
       "arm": "code",
       "task": "Continue implementation of me-heart-wire.py based on Q4 wire-order orchestrator, ensuring heart night-loop plan v2 is followed.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 60,
       "timestamp": "2026-07-08T17:25:43.830048"
+    },
+    {
+      "arm": "research",
+      "task": "Extract Q11 'Soul Catch' heart-mind boundary mechanic from NotebookLM P4 entry to define exact wire-ordering constraint for me-heart-wire.py step 2.",
+      "why": "Brother's direct maze-from-end frame and the Q11 soul-catch entry define how to handle blockages at the heart-mind boundary. This is the next logical unblocking step after Step 1 shipped; grounding the wire-order in that mechanic prevents a later blockage cascade.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 18,
+      "timestamp": "2026-07-08T17:41:06.486497"
     }
   ]
 }
