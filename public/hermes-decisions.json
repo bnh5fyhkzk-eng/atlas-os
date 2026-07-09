@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-09T05:52:55Z",
+  "generated_at": "2026-07-09T06:08:16Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement next step in heart wire orchestration per NotebookLM blueprint and brother's instructions",
-      "why": "Brother direct says heart should be finished by tomorrow; step 1 shipped, need to continue with step 2",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 45,
-      "timestamp": "2026-07-05T10:36:18.564073"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603, connecting heart-wire.py to the maze-from-end frame logic per brother's direct instruction in #55591.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 30,
       "timestamp": "2026-07-09T01:52:55.123034"
+    },
+    {
+      "arm": "code",
+      "task": "Implement me-heart-wire.py step 2: integrate the maze-from-end-frame logic with the Q4 wire-order orchestrator, using brother\u2019s 'blockage as maze' directive from #55591.",
+      "why": "This directly executes the brother's high-urgency instruction from #55591 and advances the heart finish plan (#55589). It's the next concrete code step after step 1 shipped (#55603), and code arm is ready for this tightly-scoped task.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-09T02:08:16.409232"
     }
   ]
 }
