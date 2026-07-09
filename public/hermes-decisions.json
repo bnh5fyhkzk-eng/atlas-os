@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-09T19:37:18Z",
+  "generated_at": "2026-07-09T19:54:06Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement Q4 wire-order orchestrator step2: connect HEART_NIGHT_LOOP_PLAN v2 to MAZE-FROM-END-FRAME solver and ship as runnable test",
-      "why": "Brother direct at #55589 says heart should be finished by tomorrow and tested; #55591 defines the maze-from-end strategy for blockages; #55603 shipped step1 of wire-order, so step2 must follow to keep P0 momentum. This arm is most efficient for wiring code and running tests.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-07-05T18:29:10.751861"
-    },
     {
       "arm": "research",
       "task": "Scrape and index the 6 most recent brother-direct brain canons (#55572-#55603) into NotebookLM to build a unified HEART + MAZE + SOUL-CATCH knowledge base, then generate a cross-reference summary for the orchestrator.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-09T15:37:18.452074"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator for me-heart-wire.py, shipping the next loop per brother's directive and NotebookLM blueprint.",
+      "why": "Brother directly said 'heart should be finished by tomorrow and tested' and #55603 already shipped step 1; this is the next concrete code action to complete the heart-mind boundary wire order, highest urgency.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 45,
+      "timestamp": "2026-07-09T15:54:06.089034"
     }
   ]
 }
