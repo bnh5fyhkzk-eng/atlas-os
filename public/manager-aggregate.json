@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T14:14:34Z",
+  "generated_at": "2026-07-09T14:29:34Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 82,
+    "note": 83,
     "briefing": 135,
     "idea": 0
   },
-  "total_blocks": 240,
+  "total_blocks": 241,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "0a7a35d9e4af",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement heart night-loop test v2 per brother's directive and step 1 blueprint · why: Direct brother instruction to finish heart by tomorrow, step 1 shipped, need to execute next loop for testing",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-09T10:17:30.630553"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-08T22:49:11.227496"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "d5c6de950a2e",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the soul catch mechanism for heart-mind boundary as per Q11 and maze-from-end frame · why: Brother direct says heart should be finished by tomorrow and tested; step 1 shipped, next is soul catch per recent canons",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-08T22:33:54.509175"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "cb14266cb693",
+        "type": "callout",
+        "content": "**What** · Implement heart night-loop test v2 by adding automated regression checks for step 1 blueprint · **Why** · Brother's directive requires finishing heart by tomorrow; step 1 is shipped so we need to execute the next loop – testing – to validate stability and avoid regressions · **Result** · ",
+        "priority": "code_testing",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-09T10:17:35.943386"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -815,17 +826,6 @@
         "priority": "code",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-09T03:55:25.706714"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "8afda3fedcc8",
-        "type": "callout",
-        "content": "**What** · Implement Q4 wire-order orchestrator for heart-mind boundary, shipping next step after #55603 STEP 1 SHIPPED. · **Why** · Brother direct says heart must be finished and tested by tomorrow; #55603 shipped step 1, so need to continue wire-order orchestrator per NotebookLM blueprint. · **Res",
-        "priority": "code-implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-09T03:40:09.713950"
       }
     ],
     "briefing": [
