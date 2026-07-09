@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T23:44:56Z",
+  "generated_at": "2026-07-09T23:59:57Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 85,
+    "note": 86,
     "briefing": 137,
     "idea": 0
   },
-  "total_blocks": 244,
+  "total_blocks": 245,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "a9e5cf600581",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Verify and ship the HEART NIGHT-LOOP PLAN v2 as a working daemon that auto-tests brother's finish criterion from #55589 before 06-28 23:00 EDT. · why: Brother directly stated 'heart should be finished by tomorrow and tested' (#55589). You just shipped",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-09T19:45:22.589634"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -247,17 +258,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-09T03:55:19.551295"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "96293f792928",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator for heart-mind boundary, shipping the next step after #55603 STEP 1 SHIPPED. · why: Brother direct in #55589 says heart should be finished and tested by tomorrow; #55603 shipped step 1, so code arm must continu",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-09T03:39:56.405902"
       }
     ],
     "action": [],
@@ -266,6 +266,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "0f04dd50da43",
+        "type": "callout",
+        "content": "**What** · Verify and ship HEART NIGHT-LOOP PLAN v2 as daemon that auto-tests brother's finish criterion from #55589 before 06-28 23:00 EDT. · **Why** · Brother said heart must be finished and tested by tomorrow. STEP 1 wire-order (#55603) incomplete. Night-loop daemon closes the can. · **Result** ·",
+        "priority": "deploy",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-09T19:45:29.146120"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -804,17 +815,6 @@
         "priority": "code-complete",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-09T10:33:04.871005"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "cb14266cb693",
-        "type": "callout",
-        "content": "**What** · Implement heart night-loop test v2 by adding automated regression checks for step 1 blueprint · **Why** · Brother's directive requires finishing heart by tomorrow; step 1 is shipped so we need to execute the next loop – testing – to validate stability and avoid regressions · **Result** · ",
-        "priority": "code_testing",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-09T10:17:35.943386"
       }
     ],
     "briefing": [
