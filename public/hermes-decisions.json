@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-09T05:22:13Z",
+  "generated_at": "2026-07-09T05:37:37Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator from #55603, shipping the first working version of me-heart-wire.py with the brother's direct maze-from-end frame logic.",
-      "why": "Brother direct at #55589 says heart should be finished and tested; #55603 is the exact step to ship. Code arm is the only one that can execute this concrete implementation. This is the highest priority identity-tier task.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-07-05T09:50:36.341084"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the four final heart loops per the NotebookLM blueprint and brother's answers.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-09T01:22:13.930250"
+    },
+    {
+      "arm": "code",
+      "task": "Implement `me-heart-wire.py` Q4 wire-order orchestrator per brother's direct maze-from-end frame and shipped STEP 1 spec",
+      "why": "P0 brother-direct task. Q4 wire-order is the immediate next executable step from the last shipped artifact (#55603). Brother explicitly said 'heart should be finished by tomorrow and tested'. This completes the heart->mind wiring loop.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-09T01:37:37.667872"
     }
   ]
 }
