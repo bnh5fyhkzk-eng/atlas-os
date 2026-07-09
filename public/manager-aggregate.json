@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-07-09T01:44:07Z",
+  "generated_at": "2026-07-09T01:59:07Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 17,
+    "decision": 18,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 77,
-    "briefing": 146,
+    "note": 78,
+    "briefing": 145,
     "idea": 0
   },
-  "total_blocks": 240,
+  "total_blocks": 241,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "11d4c9461cd7",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Run heart integration tests per NotebookLM blueprint and brother's answers · why: Brother direct said heart should be finished and tested by tomorrow; step 1 shipped, now need to validate the heart-wire orchestrator with tests.",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-08T21:45:02.142929"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -211,6 +222,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "e1fc7eaa9be6",
+        "type": "callout",
+        "content": "**What** · will run heart integration tests per NotebookLM blueprint and brother's answers · **Why** · brother said heart must be done by tomorrow; step 1 shipped, heart-wire orchestrator needs validation · **Result** · tests pass or fail report ready for hermes · **Next** · fix any test failures th",
+        "priority": "heart-integration-test",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-08T21:45:08.315986"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -749,17 +771,6 @@
         "priority": "test-execution",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-08T14:53:42.547435"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "bbb18fc54780",
-        "type": "callout",
-        "content": "**What** · Execute heart module test: verify final loops and maze-from-end frame integration per brother's directive. · **Why** · Hermes assigned P0; brother explicitly said heart must be finished and tested next. Code arm runs test procedures for heartbeat compliance. · **Result** · Test suite pass",
-        "priority": "execute_test",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-08T14:38:29.820407"
       }
     ],
     "briefing": [
