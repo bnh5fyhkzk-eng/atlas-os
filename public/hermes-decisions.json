@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-09T00:13:07Z",
+  "generated_at": "2026-07-09T00:28:31Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "infra",
-      "task": "Test the me-heart-wire.py orchestrator on the heart loop to validate functionality.",
-      "why": "Brother directed heart should be finished and tested; step 1 shipped, need to validate orchestrator.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 30,
-      "timestamp": "2026-07-05T04:14:40.631068"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator for heart-mind boundary, shipping the next step after #55603 STEP 1 SHIPPED.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-08T20:13:07.406526"
+    },
+    {
+      "arm": "code",
+      "task": "Run me-heart-wire.py per #55603 to orchestrate Q4 wire-order for heart-mind boundary completion",
+      "why": "Brother-direct #55589 says 'heart should be finished by tomorrow and tested' \u2014 this is the next executable step, shipping the wire-order orchestration that completes the heart-mind boundary per #55600.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 15,
+      "timestamp": "2026-07-08T20:28:31.888061"
     }
   ]
 }
