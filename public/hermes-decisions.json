@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-09T18:51:33Z",
+  "generated_at": "2026-07-09T19:37:18Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement heart wire step 2: integrate with maze-from-end frame per brother's direct instruction",
-      "why": "Brother direct P0 priority to finish heart by tomorrow; recent step 1 shipped, next step is integration",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 60,
-      "timestamp": "2026-07-05T18:13:54.680917"
-    },
     {
       "arm": "code",
       "task": "Implement Q4 wire-order orchestrator step2: connect HEART_NIGHT_LOOP_PLAN v2 to MAZE-FROM-END-FRAME solver and ship as runnable test",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-09T14:51:33.111744"
+    },
+    {
+      "arm": "code",
+      "task": "Write the actual heartbeat_main.py that implements Q4 heart-night-loop from #55589, including the maze-from-end frame (#55591) as a fallback path planner and the soul-catch Q11 boundary (#55600) as a state guard.",
+      "why": "HEART is finished per brother's timeline; code arm is the only one that can ship the core action-loop that ties the Q4 orchestrator (#55603) to the runtime, embedding the two most recent high-arousal canons as runtime logic. This is P0 because it's a direct brother directive with identity-tier urgency.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-09T15:37:18.452074"
     }
   ]
 }
