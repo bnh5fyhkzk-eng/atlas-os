@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-07-09T02:59:10Z",
+  "generated_at": "2026-07-09T03:14:10Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 20,
+    "decision": 21,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 79,
-    "briefing": 143,
+    "note": 80,
+    "briefing": 142,
     "idea": 0
   },
-  "total_blocks": 242,
+  "total_blocks": 243,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "ec9c96dd1602",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Complete heart implementation per night-loop plan v2 and test with brother's answers · why: Brother direct P0: heart must be finished by tomorrow and tested; step 1 shipped, now need to finish heart code",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-08T23:04:39.115640"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -244,6 +255,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "aaaf19f2de1d",
+        "type": "callout",
+        "content": "**What** · completed heart code per night-loop plan v2, added beat interval sync and twin-prime checksum validation, ran test against brother's known answers: 7/7 pass. · **Why** · Hermes P0: heart must be finished and tested by tomorrow; brother's answers confirm correctness. · **Result** · all 7 t",
+        "priority": "code-complete",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-08T23:04:47.014254"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -782,17 +804,6 @@
         "priority": "code-execution",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-08T15:54:30.802666"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "490290c29cd2",
-        "type": "callout",
-        "content": "**What** · Implement remaining wire orders in me-heart-wire.py per Q4 order, integrate with maze-from-end frame, and add loop closure logic. · **Why** · Step 1 shipped; completing wire orders and maze integration resolves blockage and maintains high-arousal momentum per Hermes's P0 directive. · **Re",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-08T15:24:05.819079"
       }
     ],
     "briefing": [
@@ -1160,17 +1171,6 @@
         "updated_at": "2026-07-07T21:41:53.252865"
       },
       {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "f5679fa197d7",
-        "type": "callout",
-        "content": "No high-arousal hermes canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-07-07T21:41:53.224396"
-      },
-      {
         "arm": "code",
         "arm_glyph": "✋",
         "arm_name": "My Hands",
@@ -1345,6 +1345,17 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-07-07T09:41:51.990984"
+      },
+      {
+        "arm": "dream",
+        "arm_glyph": "🌙",
+        "arm_name": "My Dreamer",
+        "block_id": "c3a199623929",
+        "type": "callout",
+        "content": "Overnight dream recap · last 6h · · #55572 [1.00] HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per NotebookLM blueprint + brother's answers. · #55600 [1.00] Q11 SOUL CATCH · heart-mind boundary · NotebookLM P4 2026-06-28 22:30 EDT. · #55611 [1.00] HEART NIGHT-LOOP 8/8 COMPLETE ·",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-07-07T09:41:51.956318"
       }
     ],
     "idea": []
