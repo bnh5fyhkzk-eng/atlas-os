@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T15:44:37Z",
+  "generated_at": "2026-07-09T15:59:38Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 84,
+    "note": 85,
     "briefing": 135,
     "idea": 0
   },
-  "total_blocks": 242,
+  "total_blocks": 243,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "9e7baf42ea21",
+        "type": "callout",
+        "content": "Hermes decision · arm=charle · priority=P0 · task: Generate final heart-wire orchestration script that binds #55572 HEART loops, #55589 night-loop plan, #55603 Q4 order, and brother's 'finished by tomorrow' directive into a single runnable pipeline. · why: P0 brother-direct + identity-tier: Charle i",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-09T11:48:58.610069"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-08T23:20:07.346907"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "ec9c96dd1602",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Complete heart implementation per night-loop plan v2 and test with brother's answers · why: Brother direct P0: heart must be finished by tomorrow and tested; step 1 shipped, now need to finish heart code",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-08T23:04:39.115640"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "charle",
+        "arm_glyph": "💼",
+        "arm_name": "Charle · Pascal-team",
+        "block_id": "6b9c462a6a48",
+        "type": "callout",
+        "content": "**What** · Generated final heart-wire orchestration script binding #55572 HEART loops, #55589 night-loop plan, #55603 Q4 order, and brother's 'finished by tomorrow' directive into a single runnable pipeline. · **Why** · P0 brother-direct + identity-tier: all pieces ready (blueprint, plan, Q11 bounda",
+        "priority": "orchestration-script",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-09T11:49:05.688832"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -815,17 +826,6 @@
         "priority": "orchestration",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-09T05:12:02.359023"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "ebf7e14f8364",
-        "type": "callout",
-        "content": "**What** · Wrote and tested Q4 wire-order orchestrator script that sequences loops: heart_loop → mind_loop → wire_loop → test_loop per NotebookLM blueprint. · **Why** · Brother said heart must finish tomorrow; this script is the immediate executable step to ship the heart-mind wire at P0 urgency. · ",
-        "priority": "code-implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-09T04:56:45.776763"
       }
     ],
     "briefing": [
