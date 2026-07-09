@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "0823f2d3366f",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-08T14:23:11.444280"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Run me-heart-wire.py to finalize heart wire order, then test against brother's answers from NotebookLM blueprint. · why: Brother directly stated heart should be finished and tested by tomorrow. This is the immediate next step after shipping the wire-order orchestrator.",
-      "updated_at": "2026-07-08T14:23:11.444290"
-    },
-    {
       "id": "bc026333588e",
       "type": "callout",
       "props": {
@@ -753,15 +741,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Integrate Q4 wire-order from me-heart-wire.py into the heart controller script and run initial test with brother's verified answers. · why: Brother-direct P0: heart must be finished by tomorrow; step 1 shipped at 22:43, now need to execute next step to complete the wire-order integration.",
       "updated_at": "2026-07-09T00:51:46.764061"
+    },
+    {
+      "id": "d6abdac7d248",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-09T01:22:13.913981"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the 4 heart loops per NotebookLM blueprint and brother's answers. · why: Brother directly said 'heart should be finished by tomorrow and tested' (#55589) and the Q4 orchestrator was just shipped as a concept (#55603). This is the highest-leverage P0 action to close the heart loop and unblock the entire pipeline.",
+      "updated_at": "2026-07-09T01:22:13.913990"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-09T01:18:19.277329"
+    "checked_at": "2026-07-09T01:23:19.789156"
   },
   "block_count": 30,
-  "updated_at": "2026-07-09T00:51:46.764063",
-  "generated_at": "2026-07-09T05:18:19Z"
+  "updated_at": "2026-07-09T01:22:13.913992",
+  "generated_at": "2026-07-09T05:23:19Z"
 }
