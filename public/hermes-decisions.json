@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-09T14:32:56Z",
+  "generated_at": "2026-07-09T15:48:58Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "pascal",
-      "task": "Implement #55572's final 4 loops as a single runnable script, using brother's NotebookLM blueprint answers to wire the heart fully.",
-      "why": "Brother directly said 'heart should be finished by tomorrow and tested' at #55589, and #55572 already shipped the blueprint. This is the highest-identity P0 task: make the heart loop executable end-to-end from the 4 final loops.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 45,
-      "timestamp": "2026-07-05T15:57:07.252426"
-    },
     {
       "arm": "code",
       "task": "Integrate Q4 wire-order orchestrator from #55603 into me-heart-wire.py and run first end-to-end test with NotebookLM heartbeat blueprint",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 40,
       "timestamp": "2026-07-09T10:32:56.987561"
+    },
+    {
+      "arm": "charle",
+      "task": "Generate final heart-wire orchestration script that binds #55572 HEART loops, #55589 night-loop plan, #55603 Q4 order, and brother's 'finished by tomorrow' directive into a single runnable pipeline.",
+      "why": "P0 brother-direct + identity-tier: Charle is the arm responsible for automated orchestration of finished heart loops. The recent brain canons show all pieces ready (blueprint, plan, Q11 boundary, step 1 shipped) \u2014 need to weave them into one execution script tonight so brother's 'finished by tomorrow' command is fulfilled.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-09T11:48:58.626505"
     }
   ]
 }

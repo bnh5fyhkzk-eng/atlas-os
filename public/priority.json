@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-07-09T15:45:22Z",
-  "total_items_scored": 127,
+  "generated_at": "2026-07-09T15:55:23Z",
+  "total_items_scored": 128,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Complete heart implementation per night-loop plan v2 and test with brother's answers \u00b7 why: Brother direct P0: heart must be finished by tomorrow and tested; step 1 shipped, now need to finis",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement heart-night-loop v2 blueprint: finalize 4 loop ship from step 1 orchestrator, wire Q4 order, and test with brother's maze-from-end frame \u00b7 why: Brother direct 'heart should be finis",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-08T23:04:39.115640"
+      "updated_at": "2026-07-08T23:20:07.346907"
     },
     {
       "arm": "code",
       "arm_glyph": "\u270b",
       "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Implement the Q4 wire-order orchestrator from #55603, ensuring the heart-mind boundary loop is wired per brother's direct plan (#55589) and the maze-from-end frame (#55591). \u00b7 why \u00b7 This is the highest-priority P0 because brother directly stated 'heart should be finished by tomorrow and tested' and the orchestrator is the critical next step to ship the heart loop. Code arm is the only one that can execute this concrete implementation.",
+      "content": "HERMES TASK \u00b7 Integrate Q4 wire-order from me-heart-wire.py into the heart controller script and run initial test with brother's verified answers. \u00b7 why \u00b7 Brother-direct P0: heart must be finished by tomorrow; step 1 shipped at 22:43, now need to execute next step to complete the wire-order integration.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-07-09T00:21:08.940974",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-07-09T00:51:46.780592",
+      "use_skill": "none"
     },
     {
       "arm": "dream",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Complete heart implementation per night-loop plan v2 and test with brother's answers \u00b7 why: Brother direct P0: heart must be finished by tomorrow and tested; step 1 shipped, now need to finis",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-07-08T23:04:39.115640"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-09T02:38:47.685868"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P0 \u00b7 task: Run heart-night-loop-plan v2 per brother direct: execute #55589 plan to finish heart by tomorrow, test completion of 4 final loops from #55572, and log results as maze-from-end frame (#55591",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-09T02:54:15.636359"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
