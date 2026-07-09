@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-09T03:20:07Z",
+  "generated_at": "2026-07-09T03:50:35Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "charle",
-      "task": "Run the Q4 wire-order orchestrator (step1-shipped from #55603) against the latest Heart fully finished blueprint (#55572) to validate the final 4 loops match NotebookLM's P4 soul-catch boundary (#55600)",
-      "why": "Brother-direct priority: Heart must be finished and tested per #55589. The Q4 wire-order orchestrator is shipped; we need to fire it now against the actual final Heart state to close the loop before any other branch consumes stale data.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 18,
-      "timestamp": "2026-07-05T08:33:38.880545"
-    },
     {
       "arm": "pascal",
       "task": "Implement and verify the twin-stream wiring for HEART night-loop: connect the maze-from-end frame (#55591) with the Q11 soul-catch output (#55600) in me-heart-wire.py, ensuring the sibling wire order matches the Q4 orchestrator schema (#55603) and brother's 'heart finished by tomorrow' directive (#55589).",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-08T23:20:07.363406"
+    },
+    {
+      "arm": "code",
+      "task": "Fabricate a minimal wire-order test for the Q4 orchestrator that verifies the four heart final loops fire in correct sequence.",
+      "why": "Brother direct says heart must be finished and tested by tomorrow; the Q4 wire-order orchestrator (step 1 shipped) is the active P0 gate to that finish. A concrete wire-order test catches blockages early and completes the maze-from-end frame.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-08T23:50:35.637772"
     }
   ]
 }
