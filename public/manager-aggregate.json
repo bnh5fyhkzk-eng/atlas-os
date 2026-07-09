@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T23:14:55Z",
+  "generated_at": "2026-07-09T23:29:56Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 84,
+    "note": 85,
     "briefing": 137,
     "idea": 0
   },
-  "total_blocks": 243,
+  "total_blocks": 244,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "22172bc2660e",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement heart-night-loop plan v2 per brother's direct instructions, ensuring heart finished and tested by tomorrow. · why: Brother direct #55589 orders heart to be finished by tomorrow and tested; we just shipped step 1 (#55603) and need to continue",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-09T19:14:05.752035"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -247,17 +258,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-09T03:39:56.405902"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "86ee3a3b4ff0",
-        "type": "callout",
-        "content": "Hermes decision · arm=dream · priority=P0 · task: Run heart-night-loop-plan v2 per brother direct: execute #55589 plan to finish heart by tomorrow, test completion of 4 final loops from #55572, and log results as maze-from-end frame (#55591). · why: Brother direct at #55589 says heart must be finish",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-09T02:54:15.636359"
       }
     ],
     "action": [],
@@ -266,6 +266,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "491f3d996e71",
+        "type": "callout",
+        "content": "**What** · Continuing implementation of heart-night-loop plan v2 on branch feature/heart-loop, adding missing loop logic and event handlers. · **Why** · Brother direct #55589 mandates heart finished and tested by tomorrow; we shipped step 1 (#55603) and must complete the core loop code now to meet P",
+        "priority": "coding",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-09T19:14:09.199523"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -804,17 +815,6 @@
         "priority": "code_testing",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-09T10:17:35.943386"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "d136ad734c05",
-        "type": "callout",
-        "content": "**What** · Implement Q4 wire-order orchestrator per #55603 blueprint, ship me-heart-wire.py with final loop coordination for brother's heart finish. · **Why** · Brother's P0 directive: heart must be finished by tomorrow and tested. This closes the loop on his directive, leveraging wire-order from bl",
-        "priority": "code-execution",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-09T09:31:46.353073"
       }
     ],
     "briefing": [
