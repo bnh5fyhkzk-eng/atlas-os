@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "a37fbd9aa9f8",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-08T13:37:13.495489"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Write `me-heart-wire.py` Q4 orchestrator that conditionally selects next loop from notebooklm blueprint given brother's 'heart should be finished by tomorrow and tested' directive. · why: Brother's direct P0 order requires completing heart wire orchestration; Q4 completes the step-1 wire-order pipeline to enable testing. Code arm is the only arm that can ship this executable logic.",
-      "updated_at": "2026-07-08T13:37:13.495498"
-    },
-    {
       "id": "70b23b81e486",
       "type": "callout",
       "props": {
@@ -753,15 +741,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Fabricate a minimal wire-order test for the Q4 orchestrator that verifies the four heart final loops fire in correct sequence. · why: Brother direct says heart must be finished and tested by tomorrow; the Q4 wire-order orchestrator (step 1 shipped) is the active P0 gate to that finish. A concrete wire-order test catches blockages early and completes the maze-from-end frame.",
       "updated_at": "2026-07-08T23:50:35.621610"
+    },
+    {
+      "id": "016459c71302",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-09T00:21:08.924857"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, ensuring the heart-mind boundary loop is wired per brother's direct plan (#55589) and the maze-from-end frame (#55591). · why: This is the highest-priority P0 because brother directly stated 'heart should be finished by tomorrow and tested' and the orchestrator is the critical next step to ship the heart loop. Code arm is the only one that can execute this concrete implementation.",
+      "updated_at": "2026-07-09T00:21:08.924866"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-09T00:18:12.831989"
+    "checked_at": "2026-07-09T00:23:13.375994"
   },
   "block_count": 30,
-  "updated_at": "2026-07-08T23:50:35.621611",
-  "generated_at": "2026-07-09T04:18:12Z"
+  "updated_at": "2026-07-09T00:21:08.924868",
+  "generated_at": "2026-07-09T04:23:13Z"
 }
