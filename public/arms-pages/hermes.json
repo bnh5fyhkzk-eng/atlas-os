@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "9828a0a8ecd0",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-09T21:01:45.671196"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the 4 final heart loops per NotebookLM blueprint and brother's answers. · why: Brother direct in #55589 says heart should be finished and tested; #55603 already shipped the orchestrator design. This is the next concrete execution step to close the heart loop and unblock the maze-from-end frame.",
-      "updated_at": "2026-07-09T21:01:45.671208"
-    },
-    {
       "id": "95748e1827f0",
       "type": "callout",
       "props": {
@@ -753,15 +741,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Ship step 2 of me-heart-wire.py: implement Q5 wire-order orchestrator per brother's direct blueprint from brain #55572 and #55603. · why: Brother directly said 'heart should be finished by tomorrow and tested' — we are mid-loop on the Q4→Q5 chain, and code arm is the only one that can execute this tight-loop engineering deliverable before the 12h high-arousal window closes. This is identity-tier work.",
       "updated_at": "2026-07-10T07:12:53.020739"
+    },
+    {
+      "id": "004ae6fdfdf3",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-10T07:28:14.731358"
+      },
+      "content": "Hermes decision · arm=research · priority=P0 · task: Load #55603 STEP 1 SHIPPED notebook (me-heart-wire.py) into NotebookLM, extract Q4 wire-order orchestrator specs, and cross-reference with brother's 'heart should be finished by tomorrow' directive to map remaining loops. · why: Brother-direct (P0) said heart must be finished & tested tomorrow. #55603 just shipped the Q4 wire-order orchestrator; we need to immediately verify its completeness against the full 4-loop blueprint from #55572 and identify any gaps before next cycle. Research arm has the NotebookLM skill to synthe",
+      "updated_at": "2026-07-10T07:28:14.731367"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-10T07:24:04.537991"
+    "checked_at": "2026-07-10T07:29:05.212635"
   },
   "block_count": 30,
-  "updated_at": "2026-07-10T07:12:53.020741",
-  "generated_at": "2026-07-10T11:24:04Z"
+  "updated_at": "2026-07-10T07:28:14.731369",
+  "generated_at": "2026-07-10T11:29:05Z"
 }
