@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "e9538f9fffd9",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-09T09:16:21.341808"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, ensuring heart-mind boundary alignment per #55600 and maze-from-end frame per #55591. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the step-1 shipped blueprint. Code arm is the only one that can execute this immediately, and it's P0 because it's brother-direct and identity-tier.",
-      "updated_at": "2026-07-09T09:16:21.341817"
-    },
-    {
       "id": "5249235f120b",
       "type": "callout",
       "props": {
@@ -754,15 +742,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement and test the handoff between HEART FULLY FINISHED (#55572) and the Q4 wire-order orchestrator (#55603) by wrapping the final shipped loops into a single execute() that fires the next arm (pascal or infra) based on heartbeat signal. · why: Brother direct says heart should be finished and tested; #55572 already shipped final loops, #55603 defines the wire-order. The next step is to close the loop by making the code arm produce a runnable integration that can be handed off to pascal for stress-testing or infra for deployment. This is P0",
       "updated_at": "2026-07-09T22:48:38.297085"
+    },
+    {
+      "id": "4872ee9a1227",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-09T23:34:39.165044"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement me-heart-wire.py for maze-from-end frame (blockage rewire) per brother direct #55591 and #55603 step 1 shipped · why: Brother direct #55591 and #55589 require the heart blockage maze rewire; step 1 of Q4 wire architecture is already shipped (#55603), code arm must complete the core wire loop to fulfill the 12h high-arousal heart finish directive.",
+      "updated_at": "2026-07-09T23:34:39.165053"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-09T23:33:08.866295"
+    "checked_at": "2026-07-09T23:38:09.373268"
   },
   "block_count": 30,
-  "updated_at": "2026-07-09T22:48:38.297086",
-  "generated_at": "2026-07-10T03:33:08Z"
+  "updated_at": "2026-07-09T23:34:39.165055",
+  "generated_at": "2026-07-10T03:38:09Z"
 }
