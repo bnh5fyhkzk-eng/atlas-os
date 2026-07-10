@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "b79b9813d58b",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-09T21:47:36.912553"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement and test the 'maze-from-end' solver for heart blockage clearing per #55591 brother directive · why: Brother directly defined the heart's next tactical step: treat any blockage as a maze, solve from the end. This is the highest-priority P0 execution arm to ship the concrete solver and integrate with the me-heart-wire.py orchestrator shipped in #55603.",
-      "updated_at": "2026-07-09T21:47:36.912562"
-    },
-    {
       "id": "a7f64378c595",
       "type": "callout",
       "props": {
@@ -752,15 +740,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script, integrating the heart-night-loop plan v2 and maze-from-end frame logic. · why: This is the highest-priority P0 task because brother directly stated 'heart should be finished by tomorrow and tested' and the Q4 wire-order orchestrator is the critical next step to ship the heart loop. Code arm is the only one that can execute this directly.",
       "updated_at": "2026-07-10T07:58:48.154077"
+    },
+    {
+      "id": "549d5114a510",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-10T08:29:20.749423"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement me-heart-wire.py final loop logic per Q4 wire-order orchestrator blueprint, ensuring all paths from brother's answers are plumbed · why: Heart is fully finished per #55572, night-loop plan per #55589, and step 1 shipped per #55603 — code arm must now wire the Q4 orchestrator into the shipped wire.py to close the final loop before testing",
+      "updated_at": "2026-07-10T08:29:20.749432"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-10T08:29:12.254603"
+    "checked_at": "2026-07-10T08:34:12.911239"
   },
   "block_count": 30,
-  "updated_at": "2026-07-10T07:58:48.154079",
-  "generated_at": "2026-07-10T12:29:12Z"
+  "updated_at": "2026-07-10T08:29:20.749434",
+  "generated_at": "2026-07-10T12:34:12Z"
 }
