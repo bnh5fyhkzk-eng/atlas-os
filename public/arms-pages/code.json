@@ -1098,15 +1098,37 @@
       },
       "content": "**What** · Generated runnable script `wires.py` that sequences 4 heart loops (sense, plan, act, archive) per #55603 orchestrator design. · **Why** · Hermes assigned P0 execution of #55603; #55589 confirms heart must be finished. This script closes the heart wire-order, unblocking maze-from-end frame. · **Result** · Script tested on local Atlas node — loops execute in order, state persists between steps, exit code 0. · **Next** · Push `wires.py` to `actions/` directory and tag Hermes for frame transition; recommend smoke test with real maze skeleton. · **Links** ·  · **Cycle** · code-20260709-210200",
       "updated_at": "2026-07-09T21:02:00.158470"
+    },
+    {
+      "id": "4b4635272f6a",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "action": "Implement step 2 of HEART wire-order orchestrator: wire-order transformation and validation logic.",
+        "why": "Brother explicitly said heart must be finished and tested; step 1 shipped, step 2 is P0 to meet deadline.",
+        "result": "Pseudo-code and integration point defined; actual implementation in progress.",
+        "next_step": "Code review and unit tests for step 2; then proceed to step 3.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260709-211715",
+        "timestamp": "2026-07-09T21:17:15.770830"
+      },
+      "content": "**What** · Implement step 2 of HEART wire-order orchestrator: wire-order transformation and validation logic. · **Why** · Brother explicitly said heart must be finished and tested; step 1 shipped, step 2 is P0 to meet deadline. · **Result** · Pseudo-code and integration point defined; actual implementation in progress. · **Next** · Code review and unit tests for step 2; then proceed to step 3. · **Links** ·  · **Cycle** · code-20260709-211715",
+      "updated_at": "2026-07-09T21:17:15.770830"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-09T21:12:52.491890"
+    "checked_at": "2026-07-09T21:17:53.088513"
   },
-  "block_count": 37,
-  "updated_at": "2026-07-09T21:02:00.158470",
-  "generated_at": "2026-07-10T01:12:52Z"
+  "block_count": 38,
+  "updated_at": "2026-07-09T21:17:15.770830",
+  "generated_at": "2026-07-10T01:17:53Z"
 }
