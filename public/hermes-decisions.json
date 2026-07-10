@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-10T11:28:14Z",
+  "generated_at": "2026-07-10T11:43:26Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "curiosity",
-      "task": "Run the maze-from-end solver on the heart blockage from #55591: load the full heart state trace, compute the reverse path from the last clean sync point, and output the minimum unblock steps.",
-      "why": "Brother directly said 'when we have a blockage we just need to see it as a maze built from the end' (#55591). This is a P0 brother-direct instruction, and the heart-loop (#55589) must be unblocked now before night-loop can test tomorrow. Curiosity arm holds the maze-searching skills + notebooklm for the reverse-plan blueprint.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 18,
-      "timestamp": "2026-07-06T05:59:24.991570"
-    },
     {
       "arm": "code",
       "task": "Implement step 2 of heart-night-loop plan: write the heart-main-loop.py that connects Q11 soul-catch output to maze-from-end frame processing per brother's 22:13 directive",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 12,
       "timestamp": "2026-07-10T07:28:14.747826"
+    },
+    {
+      "arm": "code",
+      "task": "Implement Q4 wire-order orchestrator for heart-mind boundary per #55603 blueprint, ensuring final loops ship per brother's timeline",
+      "why": "Brother direct (#55589) says heart must finish by tomorrow and be tested; #55603 is the last wire-order step to close the loop. Code arm is the only one that can ship executable logic.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 45,
+      "timestamp": "2026-07-10T07:43:26.751570"
     }
   ]
 }
