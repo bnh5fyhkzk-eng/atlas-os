@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T14:00:29Z",
+  "generated_at": "2026-07-10T14:15:30Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 80,
+    "note": 81,
     "briefing": 138,
     "idea": 0
   },
-  "total_blocks": 241,
+  "total_blocks": 242,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "d020796ab1ae",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Wire the Q4 orchestrator to the Heart-Night-Loop plan v2, using brother's direct 'heart should be finished by tomorrow and tested' as the driver, and ship the first integration test of the me-heart-wire.py loop. · why: Brother directly stated heart sh",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-10T10:00:46.173963"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-09T23:50:22.493175"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "4872ee9a1227",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement me-heart-wire.py for maze-from-end frame (blockage rewire) per brother direct #55591 and #55603 step 1 shipped · why: Brother direct #55591 and #55589 require the heart blockage maze rewire; step 1 of Q4 wire architecture is already shipped ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-09T23:34:39.165053"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "ad1292ec5859",
+        "type": "callout",
+        "content": "**What** · I wired the Q4 orchestrator to the Heart-Night-Loop plan v2, using brother's direct statement that heart must be finished by tomorrow and tested as the driver, and shipped the first integration test of me-heart-wire.py loop. · **Why** · Brother said heart finished by tomorrow (#55589) and",
+        "priority": "code-wire",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-10T10:00:50.184762"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -815,17 +826,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-07-10T06:00:02.176173"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "3286a3e26e73",
-        "type": "callout",
-        "content": "**What** · Ran me-heart-wire.py step 1: gathered all Q4 wire-order nodes and checked each has a valid next-step pointer from the orchestration blueprint. · **Why** · Hermes-Orchestrator assigned this P0 task to unblock heart-night-loop plan v2 (#55589) after brain canon #55603 shipped the wire-order",
-        "priority": "code-execution",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-10T05:41:16.260771"
       }
     ],
     "briefing": [
