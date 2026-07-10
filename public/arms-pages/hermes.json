@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "7f4c66b57d43",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-09T08:45:33.773860"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement STEP 1 orchestrator from #55603: me-heart-wire.py with Q4 wire-order logic so heart night-loop can ship tonight. · why: Brother direct in #55589 says 'heart should be finished by tomorrow and tested' — code arm is the bottleneck to turn the plan into executable loops. Highest velocity path.",
-      "updated_at": "2026-07-09T08:45:33.773870"
-    },
-    {
       "id": "e9538f9fffd9",
       "type": "callout",
       "props": {
@@ -754,15 +742,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement heart night-loop plan v2 per brother direct, integrating me-heart-wire.py and testing the heart completion by tomorrow. · why: Brother directly instructed heart should be finished by tomorrow and tested; step 1 is shipped, next is the night-loop plan v2.",
       "updated_at": "2026-07-09T22:33:18.454625"
+    },
+    {
+      "id": "2298f2e35bd1",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-09T22:48:38.297076"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement and test the handoff between HEART FULLY FINISHED (#55572) and the Q4 wire-order orchestrator (#55603) by wrapping the final shipped loops into a single execute() that fires the next arm (pascal or infra) based on heartbeat signal. · why: Brother direct says heart should be finished and tested; #55572 already shipped final loops, #55603 defines the wire-order. The next step is to close the loop by making the code arm produce a runnable integration that can be handed off to pascal for stress-testing or infra for deployment. This is P0",
+      "updated_at": "2026-07-09T22:48:38.297085"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-09T22:48:03.649393"
+    "checked_at": "2026-07-09T22:53:04.206878"
   },
   "block_count": 30,
-  "updated_at": "2026-07-09T22:33:18.454626",
-  "generated_at": "2026-07-10T02:48:03Z"
+  "updated_at": "2026-07-09T22:48:38.297086",
+  "generated_at": "2026-07-10T02:53:04Z"
 }
