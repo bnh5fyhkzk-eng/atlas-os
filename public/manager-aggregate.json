@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T09:00:18Z",
+  "generated_at": "2026-07-10T09:15:18Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 79,
+    "note": 80,
     "briefing": 138,
     "idea": 0
   },
-  "total_blocks": 240,
+  "total_blocks": 241,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "98e1dbe33c88",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement step 2 of heart wire order based on Q4 orchestrator and brother's maze-from-end frame. · why: Step 1 shipped; brother direct says heart should be finished and tested by tomorrow. Next concrete action is to continue the wire-order implementat",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-10T05:10:43.126003"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-09T19:14:05.752035"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "bf8b288eed5b",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from step 1 shipped, ensuring heart-mind boundary alignment per brother's direct instructions. · why: Brother direct instruction (#55603) and heart completion (#55572) require immediate code execution to ship t",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-09T17:58:06.480025"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "a32064c73a91",
+        "type": "callout",
+        "content": "**What** · Implemented step 2 of heart wire order: added wire routing logic for Q4 orchestrator and brother's maze-from-end frame. · **Why** · Step 1 shipped; brother requires heart finished and tested by tomorrow. Priority P0. · **Result** · Code for wire order step 2 compiled without errors. Ready",
+        "priority": "coding",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-10T05:10:47.329856"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -815,17 +826,6 @@
         "priority": "Integration",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-09T22:48:48.307841"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "03da35f20e6e",
-        "type": "callout",
-        "content": "**What** · Integrated me-heart-wire.py into night-loop plan v2 and ran initial heartbeat validation. · **Why** · Brother direct: heart must finish by tomorrow. Step 1 shipped; night-loop v2 is next priority P0. · **Result** · me-heart-wire.py merged; night-loop plan v2 executes wire protocol correct",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-09T22:33:24.253754"
       }
     ],
     "briefing": [
