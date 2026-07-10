@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-07-10T20:37:21Z",
-  "total_items_scored": 124,
+  "generated_at": "2026-07-10T20:47:22Z",
+  "total_items_scored": 125,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the next wire order in me-heart-wire.py per Q4 orchestrator blueprint and brother's direct 'heart should be finished by tomorrow and tested'. \u00b7 why: The latest brain canon #55603 sh",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement step 2 of heart wire order based on Q4 orchestrator and brother's maze-from-end frame. \u00b7 why: Step 1 shipped; brother direct says heart should be finished and tested by tomorrow. Ne",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-10T04:55:20.998254"
-    },
-    {
-      "arm": "heart",
-      "arm_glyph": "\u00b7",
-      "arm_name": "Heart",
-      "content": "HERMES TASK \u00b7 Finalize and validate heart-night-loop plan v2 (per brother's direct instruction 'heart should be finished by tomorrow and tested') \u2014 execute step-by-step maze-from-end frame for any remaining blockages, then ship the completed loop module. \u00b7 why \u00b7 Brother directly issued a P0 deadline for heart completion; canonical brain items show the heart is nearly finished (4 final loops shipped, plan v2 waiting). This arm is the core identity-tier deliverable. The task resolves the structural blockages using the maze-from-end method, ensuring the final loop is testable and closes the heart-night-loop cycle.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-07-10T06:11:41.698052",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-07-10T05:10:43.126003"
     },
     {
       "arm": "code",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-07-10T07:12:53.037236",
       "use_skill": "none"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the next wire order in me-heart-wire.py per Q4 orchestrator blueprint and brother's direct 'heart should be finished by tomorrow and tested'. \u00b7 why: The latest brain canon #55603 sh",
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Load #55603 STEP 1 SHIPPED notebook (me-heart-wire.py) into NotebookLM, extract Q4 wire-order orchestrator specs, and cross-reference with brother's 'heart should be finished by tomorrow' directive to map remaining loops. \u00b7 why \u00b7 Brother-direct (P0) said heart must be finished & tested tomorrow. #55603 just shipped the Q4 wire-order orchestrator; we need to immediately verify its completeness against the full 4-loop blueprint from #55572 and identify any gaps before next cycle. Research arm has the NotebookLM skill to synthesize these high-arousal canons.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 12,
       "score": 10.0,
-      "updated_at": "2026-07-10T04:55:20.998254"
-    },
+      "updated_at": "2026-07-10T07:28:14.747826",
+      "use_skill": "notebooklm"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-10T09:30:15.321030"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator for the heart-mind boundary, ensuring the 4 final loops are wired per the NotebookLM blueprint and brother's answers. \u00b7 why: Brother directly stated '",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-10T09:45:28.576567"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
