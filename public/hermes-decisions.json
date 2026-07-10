@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-10T02:33:18Z",
+  "generated_at": "2026-07-10T02:48:38Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Analyze #55572 and #55589 to extract exact completion gaps in HEART loops, mapping each missing final loop step to a concrete finish condition.",
-      "why": "Brother direct says 'heart should be finished by tomorrow' and #55572 shipped 4 final loops but per #55589 we need testing \u2014 research arm must clarify what's unclosed so orchestrator can dispatch repair.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 12,
-      "timestamp": "2026-07-05T23:05:11.212822"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator (me-heart-wire.py) to ship the final heart loop per brother's direct instruction.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 120,
       "timestamp": "2026-07-09T22:33:18.470845"
+    },
+    {
+      "arm": "code",
+      "task": "Implement and test the handoff between HEART FULLY FINISHED (#55572) and the Q4 wire-order orchestrator (#55603) by wrapping the final shipped loops into a single execute() that fires the next arm (pascal or infra) based on heartbeat signal.",
+      "why": "Brother direct says heart should be finished and tested; #55572 already shipped final loops, #55603 defines the wire-order. The next step is to close the loop by making the code arm produce a runnable integration that can be handed off to pascal for stress-testing or infra for deployment. This is P0 because brother direct unblocks the entire pipeline.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 15,
+      "timestamp": "2026-07-09T22:48:38.313207"
     }
   ]
 }
