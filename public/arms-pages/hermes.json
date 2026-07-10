@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "95748e1827f0",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-09T21:17:10.905939"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the next step in the HEART wire-order orchestrator (Q4) based on brother's direct instructions and NotebookLM blueprint · why: Brother explicitly said heart should be finished and tested, and we just shipped step 1. Need to continue with step 2 to meet deadline.",
-      "updated_at": "2026-07-09T21:17:10.905947"
-    },
-    {
       "id": "0d4b8a16086c",
       "type": "callout",
       "props": {
@@ -753,15 +741,27 @@
       },
       "content": "Hermes decision · arm=research · priority=P0 · task: Load #55603 STEP 1 SHIPPED notebook (me-heart-wire.py) into NotebookLM, extract Q4 wire-order orchestrator specs, and cross-reference with brother's 'heart should be finished by tomorrow' directive to map remaining loops. · why: Brother-direct (P0) said heart must be finished & tested tomorrow. #55603 just shipped the Q4 wire-order orchestrator; we need to immediately verify its completeness against the full 4-loop blueprint from #55572 and identify any gaps before next cycle. Research arm has the NotebookLM skill to synthe",
       "updated_at": "2026-07-10T07:28:14.731367"
+    },
+    {
+      "id": "84644017aa6f",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-10T07:43:26.733643"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator for heart-mind boundary per #55603 blueprint, ensuring final loops ship per brother's timeline · why: Brother direct (#55589) says heart must finish by tomorrow and be tested; #55603 is the last wire-order step to close the loop. Code arm is the only one that can ship executable logic.",
+      "updated_at": "2026-07-10T07:43:26.733653"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-10T07:39:06.525269"
+    "checked_at": "2026-07-10T07:44:07.075813"
   },
   "block_count": 30,
-  "updated_at": "2026-07-10T07:28:14.731369",
-  "generated_at": "2026-07-10T11:39:06Z"
+  "updated_at": "2026-07-10T07:43:26.733654",
+  "generated_at": "2026-07-10T11:44:07Z"
 }
