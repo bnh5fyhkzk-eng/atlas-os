@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-11T07:05:47Z",
+  "generated_at": "2026-07-11T07:36:16Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Complete heart implementation per night-loop plan v2 and test with brother's answers",
-      "why": "Brother direct P0: heart must be finished by tomorrow and tested; step 1 shipped, now need to finish heart code",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 60,
-      "timestamp": "2026-07-08T23:04:39.131745"
-    },
     {
       "arm": "code",
       "task": "Implement heart-night-loop v2 blueprint: finalize 4 loop ship from step 1 orchestrator, wire Q4 order, and test with brother's maze-from-end frame",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 35,
       "timestamp": "2026-07-11T03:05:47.645804"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603 into a runnable script that sequences the final heart loops per NotebookLM blueprint and brother's answers from #55572.",
+      "why": "Brother directly said 'heart should be finished by tomorrow and tested' (#55589) and the Q4 orchestrator was just shipped (#55603) \u2014 this is the highest-leverage P0 action to close the heart loop and unblock the entire pipeline.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-11T03:36:16.399079"
     }
   ]
 }
