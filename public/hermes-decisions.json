@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-11T06:35:08Z",
+  "generated_at": "2026-07-11T07:05:47Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator for the heart-mind boundary, ensuring the final loops from #55572 are correctly sequenced per the NotebookLM blueprint.",
-      "why": "Brother direct in #55589 and #55603 mandates heart completion and testing; the Q4 orchestrator is the critical next step to ship the final loops and resolve the maze-from-end frame (#55591).",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 45,
-      "timestamp": "2026-07-08T22:49:11.243691"
-    },
     {
       "arm": "code",
       "task": "Complete heart implementation per night-loop plan v2 and test with brother's answers",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-11T02:35:08.753808"
+    },
+    {
+      "arm": "code",
+      "task": "Implement 'me-heart-wire.py' Step-2: wire the Q4 orchestrator output into the frontal-loop test harness for heart night-loop verification",
+      "why": "Brother direct (P0) said 'heart should be finished by tomorrow and tested' \u2014 this is the code arm's critical path to close the heart night-loop",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 35,
+      "timestamp": "2026-07-11T03:05:47.645804"
     }
   ]
 }
