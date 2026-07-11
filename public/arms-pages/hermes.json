@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "9bb786c0201b",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-10T07:58:48.154068"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script, integrating the heart-night-loop plan v2 and maze-from-end frame logic. · why: This is the highest-priority P0 task because brother directly stated 'heart should be finished by tomorrow and tested' and the Q4 wire-order orchestrator is the critical next step to ship the heart loop. Code arm is the only one that can execute this directly.",
-      "updated_at": "2026-07-10T07:58:48.154077"
-    },
-    {
       "id": "549d5114a510",
       "type": "callout",
       "props": {
@@ -760,15 +748,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Complete and commit Q4 wire-order orchestrator (`me-heart-wire.py`) per #55603, ensuring all four heart-loops can ship sequentially from NotebookLM blueprint. · why: Brother's direct plan (#55589) says heart should be finished and tested by tomorrow. Q4 orchestrator is the final code arm needed to wire the completed loops together — unblocking the entire asset into a runnable state.",
       "updated_at": "2026-07-10T19:41:13.137606"
+    },
+    {
+      "id": "23a251e412c3",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-10T19:56:26.441575"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator for heart-mind boundary, following the maze-from-end frame and brother's direct instructions from #55591 and #55603. · why: Brother directly stated 'heart should be finished by tomorrow and tested' and the Q4 wire-order orchestrator is the next critical step to ship the heart loop. This is a P0 brother-direct task that unblocks the entire pipeline.",
+      "updated_at": "2026-07-10T19:56:26.441585"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-10T19:55:37.587876"
+    "checked_at": "2026-07-10T20:00:38.173005"
   },
   "block_count": 30,
-  "updated_at": "2026-07-10T19:41:13.137607",
-  "generated_at": "2026-07-10T23:55:37Z"
+  "updated_at": "2026-07-10T19:56:26.441586",
+  "generated_at": "2026-07-11T00:00:38Z"
 }
