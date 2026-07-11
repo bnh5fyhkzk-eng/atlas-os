@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "90415917ce86",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-10T12:33:19.299689"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, ensuring the heart-wire.py script correctly sequences the final loops per the NotebookLM blueprint and brother's answers. · why: Brother directly stated 'heart should be finished by tomorrow and tested' (#55589), and the Q4 orchestrator (#55603) is the critical next step to ship the final loops. This is a P0 brother-direct task that unblocks the heart completion.",
-      "updated_at": "2026-07-10T12:33:19.299699"
-    },
-    {
       "id": "f0b1c1525fb4",
       "type": "callout",
       "props": {
@@ -760,15 +748,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Continue heart wiring orchestration: verify step 1 shipped and execute step 2 of Q4 wire-order per brother's directive to finish heart by tomorrow · why: Brother direct P0 directive to finish heart; step 1 just shipped, next step immediately needed",
       "updated_at": "2026-07-11T00:01:55.494015"
+    },
+    {
+      "id": "02ecd6cfcbaa",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-11T00:17:16.168931"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a runnable Python script that sequences the four final heart loops per NotebookLM blueprint and brother's answers. · why: This is the highest-priority P0 task because brother directly said 'heart should be finished by tomorrow and tested' (#55589), and the Q4 orchestrator (#55603) is the critical next step to ship the heart loops. Code arm is uniquely suited to turn the blueprint into executable logic.",
+      "updated_at": "2026-07-11T00:17:16.168941"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-11T00:16:08.833202"
+    "checked_at": "2026-07-11T00:21:09.406340"
   },
   "block_count": 30,
-  "updated_at": "2026-07-11T00:01:55.494016",
-  "generated_at": "2026-07-11T04:16:08Z"
+  "updated_at": "2026-07-11T00:17:16.168943",
+  "generated_at": "2026-07-11T04:21:09Z"
 }
