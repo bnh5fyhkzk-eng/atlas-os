@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "e73d3859288f",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-10T23:16:02.988443"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Enrich HEART-NIGHT-LOOP PLAN v2 into a concrete runner (heart_night_loop_v2.py) that executes the final 4 shipment loops per NotebookLM blueprint, using the me-heart-wire.py Q4 orchestrator as the base scheduler. · why: Brother direct says 'heart should be finished by tomorrow and tested' — the night-loop plan v2 is the active P0 target. Code arm can turn the conceptual plan into a testable artifact, fulfilling the cut-over criterion. Also inherits the just-shipped STEP 1 wire-order orchestrator, so we must harden ",
-      "updated_at": "2026-07-10T23:16:02.988457"
-    },
-    {
       "id": "22e4f006c526",
       "type": "callout",
       "props": {
@@ -759,15 +747,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement HEART NIGHT-LOOP PLAN v2 per brother direct: finish heart by tomorrow, test final loops, ship Q4 wire-order orchestrator from brain canon #55603 · why: Brother direct (#55589) says heart should be finished and tested tomorrow. Brain canon #55603 already shipped STEP 1 (me-heart-wire.py) — this is the highest-P0 continuity of that work. The maze-from-end frame (#55591) gives a clear blocking-reduction heuristic. Code arm is the only one that can exe",
       "updated_at": "2026-07-11T08:26:43.646163"
+    },
+    {
+      "id": "5a718dbedb4a",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-11T09:12:30.962533"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 into a runnable script that sequences the heart-mind wire steps per brother's maze-from-end frame. · why: Brother directly ordered heart finished by tomorrow and tested; #55603 is the latest shipped step that needs code execution to unblock the heart loop. Code arm is the only one that can turn the orchestrator into a working artifact.",
+      "updated_at": "2026-07-11T09:12:30.962543"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-11T09:12:10.863612"
+    "checked_at": "2026-07-11T09:17:11.487609"
   },
   "block_count": 30,
-  "updated_at": "2026-07-11T08:26:43.646165",
-  "generated_at": "2026-07-11T13:12:10Z"
+  "updated_at": "2026-07-11T09:12:30.962545",
+  "generated_at": "2026-07-11T13:17:11Z"
 }
