@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-11T16:00:49Z",
+  "generated_at": "2026-07-11T16:16:04Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator from #55603, ensuring heart-mind boundary alignment per #55600 and maze-from-end frame per #55591.",
-      "why": "Brother direct in #55589 says heart should be finished and tested; #55603 is the step-1 shipped blueprint. Code arm is the only one that can execute this immediately, and it's P0 because it's brother-direct and identity-tier.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-07-09T09:16:21.358091"
-    },
     {
       "arm": "code",
       "task": "Implement Q4 wire-order orchestrator per #55603 blueprint: ship me-heart-wire.py with final loop coordination for brother's heart finish.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-11T12:00:49.298079"
+    },
+    {
+      "arm": "code",
+      "task": "Test the heart night-loop v2 with brother's blueprint and verify final loops shipped per #55572",
+      "why": "Brother direct says heart should be finished and tested tomorrow; step 1 shipped but night-loop plan needs validation to unblock maze-from-end frame.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-11T12:16:04.403203"
     }
   ]
 }
