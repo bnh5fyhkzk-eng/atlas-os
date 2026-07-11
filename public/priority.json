@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-07-11T09:08:09Z",
-  "total_items_scored": 124,
+  "generated_at": "2026-07-11T09:18:09Z",
+  "total_items_scored": 125,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement me-heart-wire.py final loop orchestration per Q4 wire-order from #55603 and the brother's 'finished by tomorrow' directive in #55589 \u00b7 why: Brother directly stated heart should be f",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Complete and commit Q4 wire-order orchestrator (`me-heart-wire.py`) per #55603, ensuring all four heart-loops can ship sequentially from NotebookLM blueprint. \u00b7 why: Brother's direct plan (#5",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-10T18:55:31.397661"
+      "updated_at": "2026-07-10T19:41:13.137606"
     },
     {
       "arm": "code",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement me-heart-wire.py final loop orchestration per Q4 wire-order from #55603 and the brother's 'finished by tomorrow' directive in #55589 \u00b7 why: Brother directly stated heart should be f",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-07-10T18:55:31.397661"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-10T23:31:27.502176"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Continue heart wiring orchestration: verify step 1 shipped and execute step 2 of Q4 wire-order per brother's directive to finish heart by tomorrow \u00b7 why: Brother direct P0 directive to finish",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-11T00:01:55.494015"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
