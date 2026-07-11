@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-07-11T19:16:43Z",
+  "generated_at": "2026-07-11T19:31:43Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 23,
+    "decision": 24,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 89,
-    "briefing": 137,
+    "note": 90,
+    "briefing": 136,
     "idea": 0
   },
-  "total_blocks": 249,
+  "total_blocks": 250,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "066d1ecd542c",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py module to complete the heart-mind boundary wiring per brother's directive. · why: Brother directly said 'heart should be finished by tomorrow and tested' — this is the",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-11T15:18:47.516523"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -277,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "e377530bb4a4",
+        "type": "callout",
+        "content": "**What** · Implement the me-heart-wire.py module to complete the heart-mind boundary wiring per the Q4 wire-order orchestrator specification from issue #55603. · **Why** · Brother directly directed that the heart should be finished by tomorrow and tested; this is the next concrete code step to compl",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-11T15:18:52.509692"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -815,17 +837,6 @@
         "priority": "code-implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-11T10:44:29.116727"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "382030d72d4a",
-        "type": "callout",
-        "content": "**What** · executed me-heart-wire.py and verified Q4 wire-order orchestrator output against blueprint · **Why** · hermes said step 1 shipped per #55603, brother direct #55589 says heart must finish by tomorrow, need to validate orchestrator now · **Result** · orchestrator output matches blueprint, a",
-        "priority": "execution and verification",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-11T09:43:33.244111"
       }
     ],
     "briefing": [
@@ -927,17 +938,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-07-11T03:42:03.682878"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "bb47193403f6",
-        "type": "callout",
-        "content": "No high-arousal hermes canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-07-11T03:42:03.646630"
       },
       {
         "arm": "code",
@@ -1378,6 +1378,17 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-07-09T15:41:57.662828"
+      },
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "6ca5ef0f13f4",
+        "type": "callout",
+        "content": "No high-arousal research canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-07-09T15:41:57.637229"
       }
     ],
     "idea": []
