@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-11T08:37:24Z",
+  "generated_at": "2026-07-11T08:52:44Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator from #55603, ensuring the heart-mind boundary loop is wired per brother's direct plan (#55589) and the maze-from-end frame (#55591).",
-      "why": "This is the highest-priority P0 because brother directly stated 'heart should be finished by tomorrow and tested' and the orchestrator is the critical next step to ship the heart loop. Code arm is the only one that can execute this concrete implementation.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-07-09T00:21:08.940974"
-    },
     {
       "arm": "code",
       "task": "Integrate Q4 wire-order from me-heart-wire.py into the heart controller script and run initial test with brother's verified answers.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-11T04:37:24.150003"
+    },
+    {
+      "arm": "curiosity",
+      "task": "Read brother's direct maze-from-end frame (#55591) and Q11 soul-catch (#55600) to derive next concrete subgoal for heart-mind boundary testing",
+      "why": "Brother-direct P0 commands and recent heart-finish milestones indicate the next critical block is the heart-mind interface. Curiosity arm can synthesize these two high-arousal canons into a specific testable step.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 15,
+      "timestamp": "2026-07-11T04:52:44.471553"
     }
   ]
 }
