@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "6e31d19d0ade",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-10T11:47:31.448726"
-      },
-      "content": "Hermes decision · arm=pascal · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 into the core heart loop, ensuring each wire fires in sequence with error trapping per brother's maze-from-end frame. · why: Brother direct in #55589 says 'heart should be finished by tomorrow and tested' — this is the final missing loop integration. P0 because it's brother-direct + identity-tier completion of the heart.",
-      "updated_at": "2026-07-10T11:47:31.448735"
-    },
-    {
       "id": "56bbabbe4b49",
       "type": "callout",
       "props": {
@@ -760,15 +748,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Enrich HEART-NIGHT-LOOP PLAN v2 into a concrete runner (heart_night_loop_v2.py) that executes the final 4 shipment loops per NotebookLM blueprint, using the me-heart-wire.py Q4 orchestrator as the base scheduler. · why: Brother direct says 'heart should be finished by tomorrow and tested' — the night-loop plan v2 is the active P0 target. Code arm can turn the conceptual plan into a testable artifact, fulfilling the cut-over criterion. Also inherits the just-shipped STEP 1 wire-order orchestrator, so we must harden ",
       "updated_at": "2026-07-10T23:16:02.988457"
+    },
+    {
+      "id": "22e4f006c526",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-10T23:31:27.502163"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement me-heart-wire.py Q4 wire-order orchestrator per #55603 blueprint, shipping the final loop order for heart-mind boundary test. · why: Brother direct #55589 says heart should be finished and tested; #55603 is the exact step to wire the orchestrator. Code arm is the only one that can ship this P0 identity-tier task now.",
+      "updated_at": "2026-07-10T23:31:27.502176"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-10T23:31:03.660511"
+    "checked_at": "2026-07-10T23:36:04.221810"
   },
   "block_count": 30,
-  "updated_at": "2026-07-10T23:16:02.988459",
-  "generated_at": "2026-07-11T03:31:03Z"
+  "updated_at": "2026-07-10T23:31:27.502177",
+  "generated_at": "2026-07-11T03:36:04Z"
 }
