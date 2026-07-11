@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T00:45:58Z",
+  "generated_at": "2026-07-11T01:00:59Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 88,
+    "note": 89,
     "briefing": 137,
     "idea": 0
   },
-  "total_blocks": 248,
+  "total_blocks": 249,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "06daeac03798",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement and test remaining heart loops per NotebookLM blueprint and brother's answers. · why: Brother direct instruction to finish heart by tomorrow and test requires immediate coding and validation of the final loops.",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-10T20:57:24.451798"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-10T09:45:28.576567"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "94f76c0aec1a",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Ship step 2 of the heart-wire orchestrator per #55603 blueprint: implement the steering matrix for 5-state end-to-end test (LOOP_START, INIT, WIRE, CATCH, COMPLETE). · why: Brother-direct #55589 says 'heart should be finished by tomorrow and tested'. ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-10T09:30:15.321030"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "542e6d5fe4aa",
+        "type": "callout",
+        "content": "**What** · Implement and test remaining heart loops per NotebookLM blueprint and brother's answers. · **Why** · P0 priority from Hermes-Orchestrator and brother's direct instruction to finish heart by tomorrow. · **Result** · All heart loops coded and validated against blueprint; tests pass. · **Nex",
+        "priority": "code",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-10T20:57:29.649679"
+      },
       {
         "arm": "curiosity",
         "arm_glyph": "🌱",
@@ -815,17 +826,6 @@
         "priority": "integration",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-10T16:07:03.150736"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "eae56eece802",
-        "type": "callout",
-        "content": "**What** · implemented q4 wire-order orchestrator for heart-mind boundary per brother's maze-from-end frame and step 1 blueprint · **Why** · brother said heart must be finished and tested first; step 1 shipped, now wiring order completes integration at p0 priority · **Result** · orchestrator now rou",
-        "priority": "code-implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-10T15:20:53.552056"
       }
     ],
     "briefing": [
