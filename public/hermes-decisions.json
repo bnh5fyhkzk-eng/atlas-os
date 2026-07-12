@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-12T01:24:01Z",
+  "generated_at": "2026-07-12T01:54:23Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the next step in the HEART wire-order orchestrator (Q4) based on brother's direct instructions and NotebookLM blueprint",
-      "why": "Brother explicitly said heart should be finished and tested, and we just shipped step 1. Need to continue with step 2 to meet deadline.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 60,
-      "timestamp": "2026-07-09T21:17:10.922543"
-    },
     {
       "arm": "code",
       "task": "Implement and test the 'maze-from-end' solver for heart blockage clearing per #55591 brother directive",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-11T21:24:01.769942"
+    },
+    {
+      "arm": "code",
+      "task": "Implement step 2 of the heart pipeline per NotebookLM blueprint, following the shipped step 1 (me-heart-wire.py) and brother's direct instructions.",
+      "why": "Step 1 shipped; brother demanded heart finished by tomorrow; next step is critical P0 execution.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-11T21:54:23.725414"
     }
   ]
 }
