@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "f60ad899a108",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-12T10:39:28.389599"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Run heart integration test suite and verify all loops per brother's directive from night-loop plan v2. · why: Brother directly stated heart should be finished and tested by tomorrow; recent canons show heart fully finished but need testing. Code arm can execute tests and validate the wire-order orchestrator.",
-      "updated_at": "2026-07-12T10:39:28.389614"
-    },
-    {
       "id": "874b247afdd2",
       "type": "callout",
       "props": {
@@ -745,15 +733,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Write test for heart wire-order orchestrator per brother's completed heart · why: Heart fully finished but not yet tested; brother direct maze-from-end suggests need to ensure no blockage",
       "updated_at": "2026-07-12T19:19:04.719854"
+    },
+    {
+      "id": "7ff785655159",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-12T19:34:19.090085"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py module to finalize the heart-mind boundary wiring per brother's directive. · why: Brother directly stated 'heart should be finished by tomorrow and tested' (#55589), and #55603 is the critical step to ship the wire-order orchestrator. This is the highest priority P0 action to complete the heart loop and unblock the maze-from-end frame (#55591).",
+      "updated_at": "2026-07-12T19:34:19.090100"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-12T19:31:30.171382"
+    "checked_at": "2026-07-12T19:36:30.780998"
   },
   "block_count": 30,
-  "updated_at": "2026-07-12T19:19:04.719856",
-  "generated_at": "2026-07-12T23:31:30Z"
+  "updated_at": "2026-07-12T19:34:19.090102",
+  "generated_at": "2026-07-12T23:36:30Z"
 }
