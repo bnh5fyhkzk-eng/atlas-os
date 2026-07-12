@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T14:17:29Z",
+  "generated_at": "2026-07-12T14:32:30Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 82,
+    "note": 83,
     "briefing": 137,
     "idea": 0
   },
-  "total_blocks": 242,
+  "total_blocks": 243,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "af41e7e21984",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement me-heart-wire.py step 2: add maze-from-end dilation logic for Q4 wire-order orchestrator, using brother's maze-from-end frame #55591 · why: Brother direct #55591 and #55589 both demand heart finish by tomorrow; step 1 shipped in #55603, step",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-12T10:24:13.494432"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-11T22:09:58.308981"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "edc75957a85e",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement step 2 of the heart pipeline per NotebookLM blueprint, following the shipped step 1 (me-heart-wire.py) and brother's direct instructions. · why: Step 1 shipped; brother demanded heart finished by tomorrow; next step is critical P0 execution.",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-11T21:54:23.705344"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "abdb50645b8e",
+        "type": "callout",
+        "content": "**What** · Implement maze-from-end dilation logic in me-heart-wire.py step 2 for Q4 wire-order orchestrator. · **Why** · Brother #55591 and #55589 demand heart finish by tomorrow; step 1 shipped in #55603, maze-from-end is brother-specified method for blockages. · **Result** · Added dilation functio",
+        "priority": "code-implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-12T10:24:18.246321"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -815,17 +826,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-07-12T06:00:01.965603"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "a95b6e32e221",
-        "type": "database",
-        "content": "sessions · last 30d · 11 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-07-12T06:00:01.965594"
       }
     ],
     "briefing": [
