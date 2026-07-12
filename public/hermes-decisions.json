@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-12T15:55:41Z",
+  "generated_at": "2026-07-12T16:26:15Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Wire the Q4 orchestrator to the Heart-Night-Loop plan v2, using brother's direct 'heart should be finished by tomorrow and tested' as the driver, and ship the first integration test of the me-heart-wire.py loop.",
-      "why": "Brother directly stated heart should be finished by tomorrow and tested (#55589), and the HEART FULLY FINISHED canon (#55572) confirms we are in the final push. The Q4 wire-order orchestrator (#55603) is the immediate next step to close the heart-mind boundary and ship the core loop.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-07-10T10:00:46.190255"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603, ensuring the me-heart-wire.py script correctly sequences the four final loops per NotebookLM blueprint and brother's answers.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-07-12T11:55:41.257684"
+    },
+    {
+      "arm": "code",
+      "task": "Implement Q4 wire-order orchestrator from #55603, ensuring heart wire sequence matches NotebookLM blueprint final loops shipped in #55572.",
+      "why": "Brother direct in #55589 says heart should be finished and tested; #55603 is the exact next step to ship the orchestrator per the maze-from-end frame. Code arm can deliver this concrete executable artifact now.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-12T12:26:15.778527"
     }
   ]
 }
