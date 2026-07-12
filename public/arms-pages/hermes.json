@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "a15746e5ac87",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-12T08:37:34.930961"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Run validation tests on the shipped heart loops and document results for brother review. · why: Brother direct: heart should be finished and tested; step 1 shipped, immediate next is testing.",
-      "updated_at": "2026-07-12T08:37:34.930973"
-    },
-    {
       "id": "bdc7bb5bceb2",
       "type": "callout",
       "props": {
@@ -746,15 +734,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Run integration tests for me-heart-wire.py Q4 wire-order orchestrator to verify step 1 shipping. · why: Step 1 shipped and brother direct requires heart finished and tested by tomorrow, so immediate testing is critical to ensure readiness.",
       "updated_at": "2026-07-12T17:31:54.141329"
+    },
+    {
+      "id": "41c3a0672063",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-12T17:47:16.978548"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 into a runnable script that sequences the four final heart loops per NotebookLM blueprint and brother's answers from #55572. · why: This is the highest-priority P0 because brother directly said 'heart should be finished by tomorrow and tested' (#55589), and the orchestrator blueprint (#55603) is the critical next step to ship the heart loops. Code arm is uniquely positioned to turn the wire-order spec into executable logic.",
+      "updated_at": "2026-07-12T17:47:16.978562"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-12T17:46:13.884071"
+    "checked_at": "2026-07-12T17:51:14.982469"
   },
   "block_count": 30,
-  "updated_at": "2026-07-12T17:31:54.141331",
-  "generated_at": "2026-07-12T21:46:13Z"
+  "updated_at": "2026-07-12T17:47:16.978563",
+  "generated_at": "2026-07-12T21:51:14Z"
 }
