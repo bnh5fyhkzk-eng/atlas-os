@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T23:17:53Z",
+  "generated_at": "2026-07-12T23:32:54Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 89,
+    "note": 90,
     "briefing": 136,
     "idea": 0
   },
-  "total_blocks": 249,
+  "total_blocks": 250,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "3de0b55bdb76",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Write test for heart wire-order orchestrator per brother's completed heart · why: Heart fully finished but not yet tested; brother direct maze-from-end suggests need to ensure no blockage",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-12T19:19:04.719854"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-12T10:39:28.389614"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "af41e7e21984",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement me-heart-wire.py step 2: add maze-from-end dilation logic for Q4 wire-order orchestrator, using brother's maze-from-end frame #55591 · why: Brother direct #55591 and #55589 both demand heart finish by tomorrow; step 1 shipped in #55603, step",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-12T10:24:13.494432"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "da39ba15e285",
+        "type": "callout",
+        "content": "**What** · wrote test for heart wire-order orchestrator using brother's finished heart and maze-from-end logic · **Why** · heart is complete but untested; brother's maze-from-end hints at potential blockage, so test must verify no dead-end paths · **Result** · test passes: all wire-order sequences r",
+        "priority": "test",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-12T19:19:10.727796"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "Execution",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-12T15:59:29.018762"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "e15a266a5336",
-        "type": "callout",
-        "content": "**What** · built the next wire loop in HEART night-loop v2: added the Q4 wire-order orchestrator's output as the input to the new loop, wiring the step-1 shipped orchestrator to the next heartbeat cycle. · **Why** · Brother direct said heart must finish by tomorrow and be tested; step 1 shipped prov",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-12T15:44:16.176973"
       }
     ],
     "briefing": [
