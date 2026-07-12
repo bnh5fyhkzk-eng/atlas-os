@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-12T22:17:59Z",
+  "generated_at": "2026-07-12T22:33:19Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement me-heart-wire.py final loop orchestration per Q4 wire-order from #55603 and the brother's 'finished by tomorrow' directive in #55589",
-      "why": "Brother directly stated heart should be finished and tested tomorrow; the wire-order orchestrator just shipped (#55603) and needs its final loops implemented to complete the heart. This is the highest-leverage P0 work to close out the ongoing 12h high-arousal heart push.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-07-10T18:55:31.442466"
-    },
     {
       "arm": "code",
       "task": "Complete and commit Q4 wire-order orchestrator (`me-heart-wire.py`) per #55603, ensuring all four heart-loops can ship sequentially from NotebookLM blueprint.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 37,
       "timestamp": "2026-07-12T18:17:59.003099"
+    },
+    {
+      "arm": "research",
+      "task": "Extract the exact 'heart-mind boundary' mechanism from NotebookLM P4 (Q11 SOUL CATCH) and map it to the maze-from-end frame for the next wire-order step.",
+      "why": "Brother directly said 'heart should be finished by tomorrow and tested' and the maze-from-end frame is the current blockage. Research arm must decode the boundary logic from the latest NotebookLM output to unblock the wire-order orchestrator.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 18,
+      "timestamp": "2026-07-12T18:33:19.592695"
     }
   ]
 }
