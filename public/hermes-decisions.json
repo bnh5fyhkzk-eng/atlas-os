@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-12T12:37:34Z",
+  "generated_at": "2026-07-12T13:38:15Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "heart",
-      "task": "Finalize and validate heart-night-loop plan v2 (per brother's direct instruction 'heart should be finished by tomorrow and tested') \u2014 execute step-by-step maze-from-end frame for any remaining blockages, then ship the completed loop module.",
-      "why": "Brother directly issued a P0 deadline for heart completion; canonical brain items show the heart is nearly finished (4 final loops shipped, plan v2 waiting). This arm is the core identity-tier deliverable. The task resolves the structural blockages using the maze-from-end method, ensuring the final loop is testable and closes the heart-night-loop cycle.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-07-10T06:11:41.698052"
-    },
     {
       "arm": "code",
       "task": "Ship step 2 of me-heart-wire.py: implement Q5 wire-order orchestrator per brother's direct blueprint from brain #55572 and #55603.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 30,
       "timestamp": "2026-07-12T08:37:34.949672"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator (me-heart-wire.py) to finalize the heart-mind boundary wiring per NotebookLM P4 and brother's direct instructions.",
+      "why": "Brother direct #55589 and #55603 demand heart completion and testing; the Q4 orchestrator is the critical next step to ship the final loops and resolve the maze-from-end blockage.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-12T09:38:15.032729"
     }
   ]
 }
