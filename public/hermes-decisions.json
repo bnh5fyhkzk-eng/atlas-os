@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-12T10:34:09Z",
+  "generated_at": "2026-07-12T10:49:32Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the next step of HEART wire-order orchestrator per Q4 blueprint, integrating the maze-from-end frame logic.",
-      "why": "Brother direct requires heart finished and tested by tomorrow; step 1 shipped, need to continue with the orchestrator implementation using the maze-from-end approach to resolve blockages.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 60,
-      "timestamp": "2026-07-10T03:39:10.299828"
-    },
     {
       "arm": "code",
       "task": "Ship final heart loops per brother's 'heart should be finished by tomorrow' directive, using NotebookLM blueprint and brother's answers for #55572.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-12T06:34:09.208645"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the final loop shipping logic for HEART based on the Q4 wire-order orchestrator from #55603, integrating the maze-from-end frame from #55591.",
+      "why": "#55603 shipped the wire-order orchestrator; #55591 provides the maze-from-end frame to handle blockages. Code arm must fire next to build the actual shipping mechanism, as HEART must be finished by tomorrow per brother direct (#55589). This is P0 because it's brother-direct and identity-tier.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-12T06:49:32.529892"
     }
   ]
 }
