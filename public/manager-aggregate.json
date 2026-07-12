@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T14:32:30Z",
+  "generated_at": "2026-07-12T14:47:30Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 83,
+    "note": 84,
     "briefing": 137,
     "idea": 0
   },
-  "total_blocks": 243,
+  "total_blocks": 244,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "f60ad899a108",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Run heart integration test suite and verify all loops per brother's directive from night-loop plan v2. · why: Brother directly stated heart should be finished and tested by tomorrow; recent canons show heart fully finished but need testing. Code arm c",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-12T10:39:28.389614"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-11T22:25:13.424843"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "c4e14e05f9de",
-        "type": "callout",
-        "content": "Hermes decision · arm=curiosity · priority=P0 · task: Explore the maze-from-end frame concept as per brother direct #55591 and apply it to identify next steps after heart completion. · why: Brother direct command to see blockages as mazes from end; this is a P0 directive that needs immediate explora",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-11T22:09:58.308981"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "0ae7603996ab",
+        "type": "callout",
+        "content": "**What** · ran heart integration test suite, verified all loops per night-loop plan v2 directive · **Why** · brother said heart must be tested by tomorrow; canons show heart finished but untested; code arm must execute tests and validate wire-order orchestrator · **Result** · all tests passed, loops",
+        "priority": "testing",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-12T10:39:35.221930"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -815,17 +826,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-07-12T06:00:01.965608"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "4cfc35d9a46a",
-        "type": "database",
-        "content": "clients · last 30d · 5 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-07-12T06:00:01.965603"
       }
     ],
     "briefing": [
