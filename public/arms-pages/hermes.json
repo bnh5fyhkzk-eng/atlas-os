@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "a099f1f189d9",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-12T06:03:38.169001"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement brother's 'MAZE-FROM-END FRAME' logic: when a blockage is detected, start walkback from goal state, marking reachable positions reversed, then emit resolved path as 'soul_catch' payload. · why: Brother directly specified the maze-from-end frame in #55591 to handle blockages; this is a P0 identity-tier directive. Code arm is the only one that can ship this logic immediately, integrating #55600 soul catch boundary into the Q4 wire-order orchestrator.",
-      "updated_at": "2026-07-12T06:03:38.169016"
-    },
-    {
       "id": "08ed08f70959",
       "type": "callout",
       "props": {
@@ -746,15 +734,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Launch me-heart-wire.py with the Q4 orchestrator to sequence final heart loops for tomorrow's test per brother's 22:13 plan · why: Brother explicitly said heart must be finished by tomorrow and tested; code arm holds the live wiring script that executes the orchestrator step from #55603, which is the highest-proximity P0 action to close the heart tier",
       "updated_at": "2026-07-12T15:59:24.993736"
+    },
+    {
+      "id": "a31ab610ff10",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-12T16:14:37.026127"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the first working loop of me-heart-wire.py that sequences the four final loops per NotebookLM blueprint and brother's answers. · why: Brother directly said 'heart should be finished by tomorrow and tested' (#55589), and the Q4 orchestrator is the immediate next executable step to ship the heart. This is the highest-urgency P0 identity-tier task.",
+      "updated_at": "2026-07-12T16:14:37.026138"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-12T16:10:58.308746"
+    "checked_at": "2026-07-12T16:15:58.825741"
   },
   "block_count": 30,
-  "updated_at": "2026-07-12T15:59:24.993738",
-  "generated_at": "2026-07-12T20:10:58Z"
+  "updated_at": "2026-07-12T16:14:37.026139",
+  "generated_at": "2026-07-12T20:15:58Z"
 }
