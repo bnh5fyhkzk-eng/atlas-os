@@ -989,15 +989,37 @@
         }
       ],
       "updated_at": "2026-07-12T06:00:02.749712"
+    },
+    {
+      "id": "2ac60a9ec16a",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "core logic implementation",
+        "source": "hermes-deepseek-fill",
+        "action": "implement brother's maze-from-end frame logic: on blockage, walkback from goal state marking reachable positions reversed, emit resolved path as soul_catch payload.",
+        "why": "brother directly specified this in #55591 to handle blockages; P0 identity-tier directive, code arm is only one who can ship it now, integrating #55600 soul catch boundary into Q4 wire-order orchestra",
+        "result": "expected output: when blockage detected, walkback runs, soul_catch payload with reversed path emitted, blockage resolved.",
+        "next_step": "test with sample blockage case, then merge into Q4 orchestrator wire-order.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260712-060346",
+        "timestamp": "2026-07-12T06:03:46.580270"
+      },
+      "content": "**What** · implement brother's maze-from-end frame logic: on blockage, walkback from goal state marking reachable positions reversed, emit resolved path as soul_catch payload. · **Why** · brother directly specified this in #55591 to handle blockages; P0 identity-tier directive, code arm is only one who can ship it now, integrating #55600 soul catch boundary into Q4 wire-order orchestrator. · **Result** · expected output: when blockage detected, walkback runs, soul_catch payload with reversed path emitted, blockage resolved. · **Next** · test with sample blockage case, then merge into Q4 orchestrator wire-order. · **Links** ·  · **Cycle** · code-20260712-060346",
+      "updated_at": "2026-07-12T06:03:46.580270"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-12T06:00:03.995009"
+    "checked_at": "2026-07-12T06:04:43.039922"
   },
-  "block_count": 31,
-  "updated_at": "2026-07-12T06:00:02.749718",
-  "generated_at": "2026-07-12T10:00:03Z"
+  "block_count": 32,
+  "updated_at": "2026-07-12T06:03:46.580270",
+  "generated_at": "2026-07-12T10:04:43Z"
 }

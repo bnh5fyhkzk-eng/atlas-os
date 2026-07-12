@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "75bdbb611fac",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-11T16:19:53.066259"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the first executable loop of me-heart-wire.py with brother's maze-from-end frame logic. · why: Brother directly said 'heart should be finished by tomorrow and tested' (#55589) and the maze-from-end frame (#55591) is the key blockage solver. Code arm is the only one that can ship this executable step now.",
-      "updated_at": "2026-07-11T16:19:53.066273"
-    },
-    {
       "id": "bd4d68184c4f",
       "type": "callout",
       "props": {
@@ -746,15 +734,27 @@
         }
       ],
       "updated_at": "2026-07-12T06:00:03.660485"
+    },
+    {
+      "id": "a099f1f189d9",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-12T06:03:38.169001"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement brother's 'MAZE-FROM-END FRAME' logic: when a blockage is detected, start walkback from goal state, marking reachable positions reversed, then emit resolved path as 'soul_catch' payload. · why: Brother directly specified the maze-from-end frame in #55591 to handle blockages; this is a P0 identity-tier directive. Code arm is the only one that can ship this logic immediately, integrating #55600 soul catch boundary into the Q4 wire-order orchestrator.",
+      "updated_at": "2026-07-12T06:03:38.169016"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-12T06:00:03.995878"
+    "checked_at": "2026-07-12T06:04:43.040990"
   },
   "block_count": 30,
-  "updated_at": "2026-07-12T06:00:03.660492",
-  "generated_at": "2026-07-12T10:00:03Z"
+  "updated_at": "2026-07-12T06:03:38.169017",
+  "generated_at": "2026-07-12T10:04:43Z"
 }
