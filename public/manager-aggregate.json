@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T05:17:06Z",
+  "generated_at": "2026-07-12T05:32:07Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 84,
+    "note": 85,
     "briefing": 139,
     "idea": 0
   },
-  "total_blocks": 246,
+  "total_blocks": 247,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "84ca9a84c851",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement heart night-loop plan v2, integrating maze-from-end frame for blockages and building on step 1 shipped (me-heart-wire.py). · why: Brother direct instruction to finish heart by tomorrow and test. Step 1 shipped, so next step is to implement t",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-12T01:14:18.955166"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-11T12:46:29.351111"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "287469bbae1b",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Test the heart night-loop v2 with brother's blueprint and verify final loops shipped per #55572 · why: Brother direct says heart should be finished and tested tomorrow; step 1 shipped but night-loop plan needs validation to unblock maze-from-end frame",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-11T12:16:04.386786"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "8f3490c55f9f",
+        "type": "callout",
+        "content": "**What** · Will browse heart failure outcomes data to plan night-loop integration with maze-from-end blockage detection; then modify me-heart-wire.py to wrap the night-loop as a pre-sleep routine. · **Why** · Hermes ordered step 2 of heart plan: deploy night-loop with mazed-end blockage logic. Prior",
+        "priority": "code-write",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-12T01:14:36.422268"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -815,17 +826,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-07-11T18:00:05.199888"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "26965f0dcc4a",
-        "type": "database",
-        "content": "youtube-watches · last 30d · 6 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-07-11T18:00:05.199881"
       }
     ],
     "briefing": [
