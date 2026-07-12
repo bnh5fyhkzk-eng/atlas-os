@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-12T19:13:42Z",
+  "generated_at": "2026-07-12T19:29:00Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator from #55603, ensuring the heart-wire.py script correctly sequences the final loops per the NotebookLM blueprint and brother's answers.",
-      "why": "Brother directly stated 'heart should be finished by tomorrow and tested' (#55589), and the Q4 orchestrator (#55603) is the critical next step to ship the final loops. This is a P0 brother-direct task that unblocks the heart completion.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 45,
-      "timestamp": "2026-07-10T12:33:19.316688"
-    },
     {
       "arm": "code",
       "task": "Implement the heart-night-loop plan v2 as a Python script that runs the 4 final loops per NotebookLM blueprint, integrating the maze-from-end frame for blockage handling and the Q4 wire-order orchestrator.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 60,
       "timestamp": "2026-07-12T15:13:42.930283"
+    },
+    {
+      "arm": "code",
+      "task": "Ship STEP 2: heart-heart-wire.py \u2014 complete the Q4 wire-order orchestrator by adding the missing logic for heart-mind boundary test per Q11 SOUL CATCH blueprint",
+      "why": "Brother direct stated 'heart should be finished by tomorrow and tested' (#55589). The Q4 wire-order orchestrator was shipped as STEP 1 (#55603) but still needs the heart-mind boundary logic to match Q11 SOUL CATCH (#55600). Code arm is fastest to implement the final loop and unblock the heart finish.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 30,
+      "timestamp": "2026-07-12T15:29:00.621129"
     }
   ]
 }
