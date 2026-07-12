@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "08ed08f70959",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-12T06:34:09.188241"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Merge me-heart-wire.py step 1 output into Heart-Loop integration test; confirm final 4 heart loops execute without stall in NotebookLM simulation. · why: Brother direct (#55589) says heart should be finished and tested. Code arm just shipped step 1 wire-order orchestrator (#55603). The highest leverage P0 action now is to close the heart integration test — if loops stall, we iterate now; if not, identity tier advances.",
-      "updated_at": "2026-07-12T06:34:09.188254"
-    },
-    {
       "id": "72b4b85781e9",
       "type": "callout",
       "props": {
@@ -746,15 +734,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the first working loop of me-heart-wire.py that sequences the four final loops per NotebookLM blueprint and brother's answers. · why: Brother directly said 'heart should be finished by tomorrow and tested' (#55589), and the Q4 orchestrator is the immediate next executable step to ship the heart. This is the highest-urgency P0 identity-tier task.",
       "updated_at": "2026-07-12T16:14:37.026138"
+    },
+    {
+      "id": "a9262530af4b",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-12T16:29:56.242966"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, ensuring the heart-mind boundary is correctly wired per NotebookLM P4 and brother's maze-from-end frame. · why: Brother directly ordered heart completion and testing by tomorrow; the Q4 wire-order orchestrator is the next critical step to ship the heart loops. Code arm is the only one that can execute this.",
+      "updated_at": "2026-07-12T16:29:56.242984"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-12T16:26:00.410600"
+    "checked_at": "2026-07-12T16:31:01.069271"
   },
   "block_count": 30,
-  "updated_at": "2026-07-12T16:14:37.026139",
-  "generated_at": "2026-07-12T20:26:00Z"
+  "updated_at": "2026-07-12T16:29:56.242985",
+  "generated_at": "2026-07-12T20:31:01Z"
 }
