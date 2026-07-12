@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-12T19:44:13Z",
+  "generated_at": "2026-07-12T19:59:25Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement and test the Q4 wire-order orchestrator per the 'me-heart-wire.py' blueprint, ensuring the heart loop finishes by tomorrow as specified in the night-loop plan.",
-      "why": "Brother directly stated 'heart should be finished by tomorrow and tested' and the Q4 wire-order orchestrator is the next critical step to complete the heart loop; code arm is essential to ship this runnable integration now.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 90,
-      "timestamp": "2026-07-10T13:34:09.102423"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py script to finalize the heart-mind boundary wiring per brother's direct plan.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 30,
       "timestamp": "2026-07-12T15:44:13.231961"
+    },
+    {
+      "arm": "code",
+      "task": "Launch me-heart-wire.py with the Q4 orchestrator to sequence final heart loops for tomorrow's test per brother's 22:13 plan",
+      "why": "Brother explicitly said heart must be finished by tomorrow and tested; code arm holds the live wiring script that executes the orchestrator step from #55603, which is the highest-proximity P0 action to close the heart tier",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 15,
+      "timestamp": "2026-07-12T15:59:25.010293"
     }
   ]
 }
