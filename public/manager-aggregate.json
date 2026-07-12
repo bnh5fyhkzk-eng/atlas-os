@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T22:47:52Z",
+  "generated_at": "2026-07-12T23:02:52Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 88,
+    "note": 89,
     "briefing": 136,
     "idea": 0
   },
-  "total_blocks": 248,
+  "total_blocks": 249,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "e34cce881154",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Ship step 2 of heart-night-loop plan: implement Q5 wire-order orchestrator using maze-from-end frame. · why: Brother direct to finish heart by tomorrow; step 2 is the next actionable code step after step 1 shipped.",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-12T18:48:35.606000"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-12T10:24:13.494432"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "f9e53e9ffd83",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator (me-heart-wire.py) to ship the final heart loops per brother's direct instruction and NotebookLM blueprint. · why: Brother direct #55589 says heart should be finished and tested; #55603 already shipped step 1. ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-12T10:08:50.570791"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "534f202e9d3e",
+        "type": "callout",
+        "content": "**What** · implement Q5 wire-order orchestrator inside maze-from-end frame · **Why** · Hermes said step 2 is next after step 1; Q5 wire-order unlocks heart-night-loop · **Result** · orchestrator will read maze-from-end grid, compute wire sequence, emit ordered coords · **Next** · test Q5 output agai",
+        "priority": "code_writing",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-12T18:48:45.038497"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -826,17 +837,6 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-12T15:44:16.176973"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "fbfbe3a4f1fe",
-        "type": "callout",
-        "content": "**What** · Implement step 2 of heart wire orchestrator: add wire ordering logic and test harness for step 1 integration. · **Why** · Brother said finish heart by tomorrow; step 1 shipped, so need to wire next order and test continuity. · **Result** · Step 2 code written: orchestrator now calls step ",
-        "priority": "code implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-12T15:13:50.955432"
       }
     ],
     "briefing": [
