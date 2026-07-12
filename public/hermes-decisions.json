@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-12T14:39:28Z",
+  "generated_at": "2026-07-12T15:25:04Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement me-heart-wire.py final loop logic per Q4 wire-order orchestrator blueprint, ensuring all paths from brother's answers are plumbed",
-      "why": "Heart is fully finished per #55572, night-loop plan per #55589, and step 1 shipped per #55603 \u2014 code arm must now wire the Q4 orchestrator into the shipped wire.py to close the final loop before testing",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-07-10T08:29:20.766054"
-    },
     {
       "arm": "code",
       "task": "Ship step 2 of the heart-wire orchestrator per #55603 blueprint: implement the steering matrix for 5-state end-to-end test (LOOP_START, INIT, WIRE, CATCH, COMPLETE).",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 60,
       "timestamp": "2026-07-12T10:39:28.411192"
+    },
+    {
+      "arm": "code",
+      "task": "Implement Q4 wire-order orchestrator from #55603 into me-heart-wire.py, ensuring all 4 final loops from #55572 are wired in correct sequence per brother's blueprint.",
+      "why": "Brother direct in #55589 says heart should be finished and tested; #55603 is the exact step to ship. Code arm is the only one that can execute this wire-order integration now.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 45,
+      "timestamp": "2026-07-12T11:25:04.553402"
     }
   ]
 }
