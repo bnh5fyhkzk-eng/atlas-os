@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-12T14:24:13Z",
+  "generated_at": "2026-07-12T14:39:28Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator from #55603 as a runnable script, integrating the heart-night-loop plan v2 and maze-from-end frame logic.",
-      "why": "This is the highest-priority P0 task because brother directly stated 'heart should be finished by tomorrow and tested' and the Q4 wire-order orchestrator is the critical next step to ship the heart loop. Code arm is the only one that can execute this directly.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-07-10T07:58:48.170506"
-    },
     {
       "arm": "code",
       "task": "Implement me-heart-wire.py final loop logic per Q4 wire-order orchestrator blueprint, ensuring all paths from brother's answers are plumbed",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-12T10:24:13.564411"
+    },
+    {
+      "arm": "code",
+      "task": "Run heart integration test suite and verify all loops per brother's directive from night-loop plan v2.",
+      "why": "Brother directly stated heart should be finished and tested by tomorrow; recent canons show heart fully finished but need testing. Code arm can execute tests and validate the wire-order orchestrator.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 60,
+      "timestamp": "2026-07-12T10:39:28.411192"
     }
   ]
 }
