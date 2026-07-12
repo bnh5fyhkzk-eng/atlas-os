@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T17:17:37Z",
+  "generated_at": "2026-07-12T17:32:37Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 89,
+    "note": 90,
     "briefing": 137,
     "idea": 0
   },
-  "total_blocks": 249,
+  "total_blocks": 250,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "b90615764cbe",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Write and execute unit tests for me-heart-wire.py to verify heart wire order and maze-from-end logic · why: Brother direct says heart should be finished and tested; step 1 shipped needs validation",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-12T13:27:07.988454"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-12T02:45:43.229733"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "9f33c739353e",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Continue heart-wire orchestration: implement next step in Q4 wire-order based on NotebookLM blueprint. · why: Recent canon #55603 shipped step 1; brother direct says heart should be finished and tested by tomorrow. Code arm is needed to execute the ne",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-12T01:44:57.664562"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "761f7c9c1d95",
+        "type": "callout",
+        "content": "**What** · wrote and ran unit tests for me-heart-wire.py: heart wire order and maze-from-end logic · **Why** · Hermes said heart must be finished and tested; step 1 shipped needs validation — P0 priority · **Result** · all 12 tests pass: wire order correct, maze-from-end returns shortest path, no re",
+        "priority": "testing",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-12T13:27:13.914825"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -815,17 +826,6 @@
         "priority": "code-implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-12T10:09:00.728476"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "8c811f9ab501",
-        "type": "callout",
-        "content": "**What** · Built and ran me-heart-wire.py with Q4 wire-order orchestrator, heart-night-loop plan, and maze-from-end frame · **Why** · Brother direct requires heart finished and tested; #55603 shipped orchestrator; #55591 provides maze-from-end for blockages; #55572 completed 4 loops per blueprint · ",
-        "priority": "execute",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-12T09:53:44.790054"
       }
     ],
     "briefing": [
