@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-12T15:25:04Z",
+  "generated_at": "2026-07-12T15:40:27Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Ship step 2 of the heart-wire orchestrator per #55603 blueprint: implement the steering matrix for 5-state end-to-end test (LOOP_START, INIT, WIRE, CATCH, COMPLETE).",
-      "why": "Brother-direct #55589 says 'heart should be finished by tomorrow and tested'. Step 1 shipped at 22:43 EDT. Step 2 (steering matrix) is the next code arm bottleneck. Without this, the heart cannot loop. High-arousal canons show HEART FULLY FINISHED (#55572) is the target. Code arm is fresh, has the wire-order pattern from #55603.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 25,
-      "timestamp": "2026-07-10T09:30:15.337267"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator for the heart-mind boundary, ensuring the 4 final loops are wired per the NotebookLM blueprint and brother's answers.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-07-12T11:25:04.553402"
+    },
+    {
+      "arm": "code",
+      "task": "Implement me-heart-wire.py step 2: wire Q4 orchestrator to NotebookLM blueprint final loops per brother's 'heart should be finished by tomorrow and tested' directive",
+      "why": "Brother direct P0: heart finish is the top identity-tier goal; code arm is the only one that can ship the actual wire orchestration. Q4 step 1 shipped, step 2 is the next concrete action to unblock heart completion.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-12T11:40:27.166177"
     }
   ]
 }
