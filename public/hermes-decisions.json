@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-12T01:54:23Z",
+  "generated_at": "2026-07-12T02:09:58Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement and test the 'maze-from-end' solver for heart blockage clearing per #55591 brother directive",
-      "why": "Brother directly defined the heart's next tactical step: treat any blockage as a maze, solve from the end. This is the highest-priority P0 execution arm to ship the concrete solver and integrate with the me-heart-wire.py orchestrator shipped in #55603.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-07-09T21:47:36.928640"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the four final loops per NotebookLM blueprint and brother's answers.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-11T21:54:23.725414"
+    },
+    {
+      "arm": "curiosity",
+      "task": "Explore the maze-from-end frame concept as per brother direct #55591 and apply it to identify next steps after heart completion.",
+      "why": "Brother direct command to see blockages as mazes from end; this is a P0 directive that needs immediate exploration to guide the night-loop plan and align with the heart-mind boundary work.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 30,
+      "timestamp": "2026-07-11T22:09:58.328394"
     }
   ]
 }
