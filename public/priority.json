@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-07-12T20:30:17Z",
-  "total_items_scored": 126,
+  "generated_at": "2026-07-12T20:40:17Z",
+  "total_items_scored": 127,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Merge me-heart-wire.py step 1 output into Heart-Loop integration test; confirm final 4 heart loops execute without stall in NotebookLM simulation. \u00b7 why: Brother direct (#55589) says heart sh",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the final loop shipping logic for HEART based on the Q4 wire-order orchestrator from #55603, integrating the maze-from-end frame from #55591. \u00b7 why: #55603 shipped the wire-order or",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-12T06:34:09.188254"
+      "updated_at": "2026-07-12T06:49:32.511026"
     },
     {
       "arm": "code",
@@ -34,22 +34,11 @@
       "category": "launchagents",
       "priority": "P1",
       "source": "backfill",
-      "score": 9.25,
+      "score": 9.16,
       "updated_at": "2026-07-12T12:00:05.056083"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Merge me-heart-wire.py step 1 output into Heart-Loop integration test; confirm final 4 heart loops execute without stall in NotebookLM simulation. \u00b7 why: Brother direct (#55589) says heart sh",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-07-12T06:34:09.188254"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -148,6 +137,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-12T10:24:13.494432"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Run heart integration test suite and verify all loops per brother's directive from night-loop plan v2. \u00b7 why: Brother directly stated heart should be finished and tested by tomorrow; recent c",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-12T10:39:28.389614"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
