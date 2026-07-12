@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T09:17:16Z",
+  "generated_at": "2026-07-12T09:32:16Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 80,
+    "note": 81,
     "briefing": 138,
     "idea": 0
   },
-  "total_blocks": 241,
+  "total_blocks": 242,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "569e86703f2d",
+        "type": "callout",
+        "content": "Hermes decision · arm=pascal · priority=P0 · task: Implement the maze-from-end frame solver for heart blockages, using brother's direct guidance from #55591. · why: Brother directly specified the maze-from-end approach for blockages (#55591), and heart is the top P0 priority per #55589. Pascal arm i",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-12T05:18:01.476655"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-11T16:19:53.066273"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "8a52722532a1",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement and test the next step of the heart night-loop plan per brother's instructions, focusing on the maze-from-end frame integration and Q4 wire-order orchestrator updates. · why: Step 1 (me-heart-wire.py) shipped; brother direct to finish heart ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-11T16:04:35.346507"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "a8361800fd41",
+        "type": "callout",
+        "content": "**What** · implemented maze-from-end solver for heart blockages using brother's guidance from #55591 · **Why** · brother said maze-from-end is the way for heart blockages, and heart is top P0 priority per #55589; pascal arm does algorithms · **Result** · solver code ready: traces blocked paths from ",
+        "priority": "algorithm implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-12T05:18:05.553244"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -815,17 +826,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-07-11T18:00:05.199905"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "9374cea97538",
-        "type": "database",
-        "content": "new-tools · last 30d · 4 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-07-11T18:00:05.199901"
       }
     ],
     "briefing": [
