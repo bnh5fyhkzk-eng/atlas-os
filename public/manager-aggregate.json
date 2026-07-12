@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T20:32:45Z",
+  "generated_at": "2026-07-12T20:47:45Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 84,
+    "note": 85,
     "briefing": 137,
     "idea": 0
   },
-  "total_blocks": 244,
+  "total_blocks": 245,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "f6c0dff304b3",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement step 2 of heart wire order per Q4 wire-order orchestrator blueprint · why: Brother direct requires heart finished by tomorrow; step 1 shipped, need to continue with step 2 to meet deadline",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-12T16:45:12.903589"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-12T07:20:02.813902"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "72b4b85781e9",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the final loop shipping logic for HEART based on the Q4 wire-order orchestrator from #55603, integrating the maze-from-end frame from #55591. · why: #55603 shipped the wire-order orchestrator; #55591 provides the maze-from-end frame to handl",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-12T06:49:32.511026"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "7fe3934203e2",
+        "type": "callout",
+        "content": "**What** · Implemented step 2 of heart wire order per Q4 wire-order orchestrator blueprint. · **Why** · Brother direct requires heart finished by tomorrow; step 1 shipped, need to continue with step 2 to meet P0 deadline. · **Result** · Step 2 code is deployed and ready for integration testing. · **",
+        "priority": "code-implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-12T16:45:16.212515"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -815,17 +826,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-07-12T12:00:04.017647"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "4a846817b85f",
-        "type": "database",
-        "content": "sessions · last 30d · 11 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-07-12T12:00:04.017639"
       }
     ],
     "briefing": [
