@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-12T10:49:32Z",
+  "generated_at": "2026-07-12T11:20:02Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Ship final heart loops per brother's 'heart should be finished by tomorrow' directive, using NotebookLM blueprint and brother's answers for #55572.",
-      "why": "Brother-direct P0 urgency: heart must be completed and tested tomorrow. The last brain canons show step 1 shipped and maze-from-end frame, so code arm should execute the final loops to finish heart.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 30,
-      "timestamp": "2026-07-10T04:39:58.043579"
-    },
     {
       "arm": "code",
       "task": "Implement the next wire order in me-heart-wire.py per Q4 orchestrator blueprint and brother's direct 'heart should be finished by tomorrow and tested'.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-12T06:49:32.529892"
+    },
+    {
+      "arm": "curiosity",
+      "task": "Extract and structurally index all brother-direct 'maze' and 'heart-mind boundary' constraints from canons #55591 and #55600, then map them as pre-conditions for Q4 orchestrator",
+      "why": "These canons contain direct brother orders that logically constrain the maze-solving and soul-catch frame \u2014 curiosity arm can best decompose these into actionable schema without disturbing the shipped heart-wire code (step 1 already done). This unblocks subsequent research/code arms from ambiguity.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 18,
+      "timestamp": "2026-07-12T07:20:02.833483"
     }
   ]
 }
