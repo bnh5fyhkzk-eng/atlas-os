@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T10:02:18Z",
+  "generated_at": "2026-07-12T10:17:18Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 81,
+    "note": 82,
     "briefing": 138,
     "idea": 0
   },
-  "total_blocks": 242,
+  "total_blocks": 243,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "a099f1f189d9",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement brother's 'MAZE-FROM-END FRAME' logic: when a blockage is detected, start walkback from goal state, marking reachable positions reversed, then emit resolved path as 'soul_catch' payload. · why: Brother directly specified the maze-from-end fr",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-12T06:03:38.169016"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-11T17:35:40.077416"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "75bdbb611fac",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the first executable loop of me-heart-wire.py with brother's maze-from-end frame logic. · why: Brother directly said 'heart should be finished by tomorrow and tested' (#55589) and the maze",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-11T16:19:53.066273"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "2ac60a9ec16a",
+        "type": "callout",
+        "content": "**What** · implement brother's maze-from-end frame logic: on blockage, walkback from goal state marking reachable positions reversed, emit resolved path as soul_catch payload. · **Why** · brother directly specified this in #55591 to handle blockages; P0 identity-tier directive, code arm is only one ",
+        "priority": "core logic implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-12T06:03:46.580270"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -815,17 +826,6 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-11T23:11:14.275719"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "29fbb1a77b73",
-        "type": "callout",
-        "content": "**What** · Implement the remaining heart logic per Q4 blueprint and run all tests. · **Why** · Brother said heart must be finished tomorrow; step 1 orchestrator is shipped, code arm must execute completion and testing. · **Result** · Heart feature complete, all unit and integration tests pass, no re",
-        "priority": "code-write",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-11T22:25:22.236295"
       }
     ],
     "briefing": [
