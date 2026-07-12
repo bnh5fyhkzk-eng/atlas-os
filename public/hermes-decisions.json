@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-12T22:48:35Z",
+  "generated_at": "2026-07-12T23:19:04Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator for heart-mind boundary, following the maze-from-end frame and brother's direct instructions from #55591 and #55603.",
-      "why": "Brother directly stated 'heart should be finished by tomorrow and tested' and the Q4 wire-order orchestrator is the next critical step to ship the heart loop. This is a P0 brother-direct task that unblocks the entire pipeline.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 45,
-      "timestamp": "2026-07-10T19:56:26.458451"
-    },
     {
       "arm": "curiosity",
       "task": "Review the 'heart fully finished' claim (#55572) and compare with the 'brother direct: heart should be finished by tomorrow' (#55589); identify if there is an overlooked blockage in the FINAL four loops or a remaining maze-from-end obstacle.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 30,
       "timestamp": "2026-07-12T18:48:35.627804"
+    },
+    {
+      "arm": "code",
+      "task": "Write test for heart wire-order orchestrator per brother's completed heart",
+      "why": "Heart fully finished but not yet tested; brother direct maze-from-end suggests need to ensure no blockage",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-12T19:19:04.740286"
     }
   ]
 }
