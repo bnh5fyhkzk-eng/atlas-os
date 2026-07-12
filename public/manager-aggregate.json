@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T01:46:58Z",
+  "generated_at": "2026-07-12T02:01:58Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 78,
+    "note": 79,
     "briefing": 140,
     "idea": 0
   },
-  "total_blocks": 240,
+  "total_blocks": 241,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "edc75957a85e",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement step 2 of the heart pipeline per NotebookLM blueprint, following the shipped step 1 (me-heart-wire.py) and brother's direct instructions. · why: Step 1 shipped; brother demanded heart finished by tomorrow; next step is critical P0 execution.",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-11T21:54:23.705344"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -247,17 +258,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-11T09:43:23.193447"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "fece5c1a6db3",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator per #55603 blueprint, shipping the me-heart-wire.py step to finalize heart wiring order. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the immediate next code step to compl",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-11T09:27:46.191330"
       }
     ],
     "action": [],
@@ -266,6 +266,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "07aeb2d8f97c",
+        "type": "callout",
+        "content": "**What** · Implemented step 2 of heart pipeline - me-heart-rate.py: reads wire data from me-heart-wire.py output, detects R-peaks using thresholding, calculates BPM and writes to heart-metrics.json · **Why** · Step 1 shipped; brother's deadline for heart pipeline is tomorrow; step 2 is P0 critical t",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-11T21:54:28.507977"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -804,17 +815,6 @@
         "priority": "orchestrator",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-11T17:50:58.744368"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "f1e314fbaccd",
-        "type": "callout",
-        "content": "**What** · Mapped maze-from-end frame from #55591 onto HEART NIGHT-LOOP PLAN v2 and identified 3 remaining blockages in heart-mind boundary. · **Why** · Brother directed heart should be finished by tomorrow and tested (P0). #55591 introduces a maze-from-end heuristic to find hidden obstructions befo",
-        "priority": "mapping",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-11T17:35:45.694106"
       }
     ],
     "briefing": [
