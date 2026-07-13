@@ -1,25 +1,7 @@
 {
-  "generated_at": "2026-07-13T02:37:37Z",
+  "generated_at": "2026-07-13T03:08:24Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Continue heart wiring orchestration: verify step 1 shipped and execute step 2 of Q4 wire-order per brother's directive to finish heart by tomorrow",
-      "why": "Brother direct P0 directive to finish heart; step 1 just shipped, next step immediately needed",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-07-11T00:01:55.513011"
-    },
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator from #55603 as a runnable Python script that sequences the four final heart loops per NotebookLM blueprint and brother's answers.",
-      "why": "This is the highest-priority P0 task because brother directly said 'heart should be finished by tomorrow and tested' (#55589), and the Q4 orchestrator (#55603) is the critical next step to ship the heart loops. Code arm is uniquely suited to turn the blueprint into executable logic.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-07-11T00:17:16.186494"
-    },
     {
       "arm": "code",
       "task": "Wire Q11 soul-catch boundary into existing heart-night-loop scaffold, using me-heart-wire.py Q4 order from #55603.",
@@ -901,6 +883,24 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-12T22:37:37.946966"
+    },
+    {
+      "arm": "code",
+      "task": "Wire Q4 orchestrator to ship final heart loop steps per brother's 'heart should be finished by tomorrow and tested' (2026-06-28 22:13 EDT) and Maze-From-End frame (22:17). Run STEP 1 shipped script first, then iterate blockage solver.",
+      "why": "Brother direct P0 priority (heart finish + test) + unmet maze blockage resolution; code arm is the executor for shipping and debugging the heart-wire orchestration.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-12T22:52:58.885951"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the final heart loops per NotebookLM blueprint and brother's answers.",
+      "why": "Brother direct in #55589 says heart should be finished and tested; #55603 is the shipped step-1 wire-order orchestrator \u2014 this is the next concrete code action to close the heart loop.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-12T23:08:24.162019"
     }
   ]
 }
