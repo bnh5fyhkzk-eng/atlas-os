@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T19:56:31Z",
+  "generated_at": "2026-07-13T20:11:31Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 95,
+    "note": 96,
     "briefing": 136,
     "idea": 0
   },
-  "total_blocks": 255,
+  "total_blocks": 256,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "e3a6dab6ecdd",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement heartbeat_summary() in me-heart-wire.py to emit a daily digest of all P0/P1 loops shipped, per brother's structure in #55572 and #55589. · why: Brother directly said heart should be finished and tested; heartbeat_summary is the final missing",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-13T16:02:57.395303"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-12T19:19:04.719854"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "e34cce881154",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Ship step 2 of heart-night-loop plan: implement Q5 wire-order orchestrator using maze-from-end frame. · why: Brother direct to finish heart by tomorrow; step 2 is the next actionable code step after step 1 shipped.",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-12T18:48:35.606000"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "e92c933cc6a7",
+        "type": "callout",
+        "content": "**What** · implement heartbeat_summary() in me-heart-wire.py to emit daily digest of all P0/P1 loops shipped, following structures in #55572 and #55589 · **Why** · brother said heart must finish and test; heartbeat_summary is the final missing piece to close the wire-order orchestrator loop after ST",
+        "priority": "implement",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-13T16:03:01.316339"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-07-13T12:00:01.529488"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "c8a183169568",
-        "type": "database",
-        "content": "clients · last 30d · 6 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-07-13T12:00:01.529483"
       }
     ],
     "briefing": [
