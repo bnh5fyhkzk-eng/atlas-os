@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T19:26:30Z",
+  "generated_at": "2026-07-13T19:41:30Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 93,
+    "note": 94,
     "briefing": 136,
     "idea": 0
   },
-  "total_blocks": 253,
+  "total_blocks": 254,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "1928c2418051",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Ship the remaining 3 final loops (steps 2-4) of the heart-night-loop plan per brother's direct instruction and NotebookLM blueprint, completing the full heart wire orchestration. · why: Brother directly said 'heart should be finished by tomorrow and t",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-13T15:32:23.072853"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-12T18:33:19.575602"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "3c78b19c6080",
-        "type": "callout",
-        "content": "Hermes decision · arm=pascal · priority=P0 · task: Weave the 4 shipped HEART loops into a single coherent pyodide-wasm test harness: load the wire-order orchestrator from #55603, compose all 4 final loops, and emit a ‘BROTHER_TEST_READY’ flag at 20:08 UTC. · why: Brother direct says 'heart should be",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-12T18:17:58.983398"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "16d51cd594f4",
+        "type": "callout",
+        "content": "**What** · Ship final three loops (steps 2-4) of heart-night-loop plan, completing heart wire orchestration. · **Why** · Brother ordered heart finished by tomorrow and step 1 shipped; this unblocks maze-from-end frame. · **Result** · Heart wire fully orchestrated and tested, ready for integration. ·",
+        "priority": "orchestration",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-13T15:32:28.167477"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-07-13T12:00:01.529475"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "669a82e0d7c0",
-        "type": "callout",
-        "content": "**What** · I will implement the Q4 wire-order orchestrator per blueprint #55603, ensuring heart-mind wire sequence matches brother's maze-from-end frame. · **Why** · Brother direct in #55589 and #55591 demands heart finished and tested; #55603 is the exact step shipped for this. Code arm is the only",
-        "priority": "system_orchestration",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-13T11:42:14.540592"
       }
     ],
     "briefing": [
