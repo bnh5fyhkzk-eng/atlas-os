@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-13T02:06:55Z",
+  "generated_at": "2026-07-13T02:22:18Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Enrich HEART-NIGHT-LOOP PLAN v2 into a concrete runner (heart_night_loop_v2.py) that executes the final 4 shipment loops per NotebookLM blueprint, using the me-heart-wire.py Q4 orchestrator as the base scheduler.",
-      "why": "Brother direct says 'heart should be finished by tomorrow and tested' \u2014 the night-loop plan v2 is the active P0 target. Code arm can turn the conceptual plan into a testable artifact, fulfilling the cut-over criterion. Also inherits the just-shipped STEP 1 wire-order orchestrator, so we must harden it into a loop that runs on schedule.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 90,
-      "timestamp": "2026-07-10T23:16:03.006583"
-    },
     {
       "arm": "code",
       "task": "Implement me-heart-wire.py Q4 wire-order orchestrator per #55603 blueprint, shipping the final loop order for heart-mind boundary test.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-12T22:06:55.780002"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603, shipping the first executable loop of me-heart-wire.py that connects the heart-mind boundary per brother's direct timeline (heart finished by tomorrow).",
+      "why": "Brother directly said 'heart should be finished by tomorrow and tested' (#55589) and the Q4 wire-order orchestrator is the next concrete step (#55603) to ship the heart-mind boundary. Code arm is the only one that can execute this build. This is identity-tier urgency.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 45,
+      "timestamp": "2026-07-12T22:22:18.340479"
     }
   ]
 }
