@@ -851,15 +851,37 @@
       },
       "content": "**What** · Ran comprehensive test suite on heart step 1 shipped code. · **Why** · Brother direct requires heart finished and tested by tomorrow; need to validate no blockages. · **Result** · All tests passed except 2 edge cases; identified memory leak in step 1 pipeline. · **Next** · Patch memory leak and re-run suite; escalate to brother if needed. · **Links** ·  · **Cycle** · research-20260713-124441",
       "updated_at": "2026-07-13T12:44:41.606184"
+    },
+    {
+      "id": "2d6f0152f5fb",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "orchestration-constraint-check",
+        "source": "hermes-deepseek-fill",
+        "action": "fetched Q4 wire-order constraints from NotebookLM P4 and compared with STEP 1 shipped blueprint",
+        "why": "to ensure no ordering mismatch blocks brother's heart-night-loop deadline tomorrow",
+        "result": "found ordering mismatch: STEP 1 expects task_3 after task_5 but wire-order has task_5 after task_3 — must reorder",
+        "next_step": "patch wire-order in orchestrator config to match STEP 1 and re-run verification loop",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260713-143132",
+        "timestamp": "2026-07-13T14:31:32.626727"
+      },
+      "content": "**What** · fetched Q4 wire-order constraints from NotebookLM P4 and compared with STEP 1 shipped blueprint · **Why** · to ensure no ordering mismatch blocks brother's heart-night-loop deadline tomorrow · **Result** · found ordering mismatch: STEP 1 expects task_3 after task_5 but wire-order has task_5 after task_3 — must reorder · **Next** · patch wire-order in orchestrator config to match STEP 1 and re-run verification loop · **Links** ·  · **Cycle** · research-20260713-143132",
+      "updated_at": "2026-07-13T14:31:32.626727"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-13T14:27:13.325429"
+    "checked_at": "2026-07-13T14:32:13.956459"
   },
-  "block_count": 31,
-  "updated_at": "2026-07-13T12:44:41.606184",
-  "generated_at": "2026-07-13T18:27:13Z"
+  "block_count": 32,
+  "updated_at": "2026-07-13T14:31:32.626727",
+  "generated_at": "2026-07-13T18:32:13Z"
 }
