@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-07-13T22:56:39Z",
+  "generated_at": "2026-07-13T23:11:40Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 23,
+    "decision": 24,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 86,
-    "briefing": 135,
+    "note": 87,
+    "briefing": 134,
     "idea": 0
   },
-  "total_blocks": 244,
+  "total_blocks": 245,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "75e3fd33db82",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a runnable Python script that sequences the four final heart loops per NotebookLM blueprint and brother's answers from #55572. · why: This is the highest-priority P0 because brother directly said",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-13T19:05:08.857391"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -277,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "71e43ac37e83",
+        "type": "callout",
+        "content": "**What** · Parsed NotebookLM blueprint and #55572 brother answers into a Q4 wire-order orchestrator script that sequences the four final heart loops with correct timing and validation. · **Why** · Highest-priority P0: brother demanded heart finished by tomorrow, and #55603 orchestrator is the concre",
+        "priority": "code-implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-13T19:05:20.010590"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -815,17 +837,6 @@
         "priority": "code execution",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-13T15:02:06.508740"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "9366b485dff2",
-        "type": "callout",
-        "content": "**What** · Wrote a runnable Python script `q4_wire_order_orchestrator.py` implementing the Q4 wire-order orchestrator from #55603, integrating heart-mind boundary logic from #55600 and maze-from-end frame from #55591. · **Why** · Highest-leverage P0 code arm to materialize blueprint into executable ",
-        "priority": "code",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-13T14:46:52.961837"
       }
     ],
     "briefing": [
@@ -927,17 +938,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-07-12T21:42:10.434639"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "dba817ac2b8e",
-        "type": "callout",
-        "content": "No high-arousal hermes canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-07-12T21:42:10.405466"
       },
       {
         "arm": "code",
@@ -1378,6 +1378,17 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-07-11T09:42:04.607455"
+      },
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "473c34c301e8",
+        "type": "callout",
+        "content": "Overnight curiosity recap · last 6h · · #55572 [1.00] HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per NotebookLM blueprint + brother's answers. · #55600 [1.00] Q11 SOUL CATCH · heart-mind boundary · NotebookLM P4 2026-06-28 22:30 EDT. · #59605 [0.96] SHARED-CANON · atlas-brothe",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-07-11T09:42:04.576357"
       }
     ],
     "idea": []
