@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T18:26:27Z",
+  "generated_at": "2026-07-13T18:41:28Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 90,
+    "note": 91,
     "briefing": 136,
     "idea": 0
   },
-  "total_blocks": 250,
+  "total_blocks": 251,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "1cbb8a2d6ca8",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Fetch and analyze Q4 wire-order orchestrator constraints from NotebookLM P4 to verify STEP 1 SHIPPED alignment with brother's heart-night-loop deadline. · why: Brother directly stated heart must finish by tomorrow; this arm ensures the Q4 wire-ord",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-13T14:31:26.734745"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-12T17:47:16.978562"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "09c23dfd579d",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Run integration tests for me-heart-wire.py Q4 wire-order orchestrator to verify step 1 shipping. · why: Step 1 shipped and brother direct requires heart finished and tested by tomorrow, so immediate testing is critical to ensure readiness.",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-12T17:31:54.141329"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "2d6f0152f5fb",
+        "type": "callout",
+        "content": "**What** · fetched Q4 wire-order constraints from NotebookLM P4 and compared with STEP 1 shipped blueprint · **Why** · to ensure no ordering mismatch blocks brother's heart-night-loop deadline tomorrow · **Result** · found ordering mismatch: STEP 1 expects task_3 after task_5 but wire-order has task",
+        "priority": "orchestration-constraint-check",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-13T14:31:32.626727"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "code",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-13T11:11:36.070169"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "c51e910d11ad",
-        "type": "callout",
-        "content": "**What** · Wrote Q4 wire-order orchestrator script that sequences heart loops per NotebookLM blueprint and Brother's #55589 direction. · **Why** · Hermes assigned P0 task from #55603; Brother confirmed heart must be finished/tested — this script closes the heart loop with proper wire-order sequencin",
-        "priority": "code",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-12T23:08:30.444176"
       }
     ],
     "briefing": [
