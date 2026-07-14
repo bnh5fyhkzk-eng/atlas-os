@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-07-14T14:08:03Z",
+  "generated_at": "2026-07-14T14:18:04Z",
   "total_items_scored": 139,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Execute Step 2 of heart-wire: run integration test per NotebookLM blueprint and verify heart-mind boundary. \u00b7 why: Brother direct said heart should be finished by tomorrow and tested; Step 1 ",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py module to complete the heart-mind wiring step. \u00b7 why: Brother direct in #55589 says heart should be finishe",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-14T00:43:28.883305"
-    },
-    {
-      "arm": "dream",
-      "arm_glyph": "\ud83c\udf19",
-      "arm_name": "Dream",
-      "content": "HERMES TASK \u00b7 Run the Maze-From-End Frame technique on the remaining HEART blockages (Q8, Q9, Q10) to identify the forward path, then output a minimal rewiring plan for the next `me-heart-wire.py` cycle. \u00b7 why \u00b7 Brother directly said 'when we have a blockage we just need to see it as a maze built from the end'. The recent high-arousal canons show HEART is nearly finished (4 final loops shipped, step 1 shipped). The remaining wires (Q8-Q10) need reverse-chaining from the finished state. Dream arm handles maze/end-frame reasoning and is idle; no other arm has this pattern. This is P0 per brother-direct + identity-tier.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 12,
-      "score": 10.0,
-      "updated_at": "2026-07-14T02:15:35.365815",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-07-14T00:58:42.188897"
     },
     {
       "arm": "code",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-07-14T02:30:55.940629",
       "use_skill": "notebooklm"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Execute Step 2 of heart-wire: run integration test per NotebookLM blueprint and verify heart-mind boundary. \u00b7 why: Brother direct said heart should be finished by tomorrow and tested; Step 1 ",
+      "arm": "infra",
+      "arm_glyph": "\ud83d\udc97",
+      "arm_name": "Infra",
+      "content": "HERMES TASK \u00b7 self-host the Q4 wire-order orchestrator (me-heart-wire.py) so the heart-night-loop can run scheduled test loops without manual launch \u00b7 why \u00b7 Brother direct says heart should be finished and tested by tomorrow. The orchestrator is shipped (#55603) but not deployed \u2014 infra must containerize and schedule it to fire the final loops on time.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-07-14T00:43:28.883305"
-    },
+      "updated_at": "2026-07-14T06:06:29.171935",
+      "use_skill": "brain-rrf"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-14T03:17:35.335677"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator logic from #55603 into the main codebase, ensuring the heart-mind boundary wires are correctly ordered per the blueprint. \u00b7 why: The Q4 wire-order orc",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-14T03:32:51.133867"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
