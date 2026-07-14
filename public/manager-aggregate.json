@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T09:27:19Z",
+  "generated_at": "2026-07-14T09:42:20Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 86,
+    "note": 87,
     "briefing": 131,
     "idea": 0
   },
-  "total_blocks": 240,
+  "total_blocks": 241,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "0df81127ad89",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement next wire-order step for me-heart-wire.py based on Q4 orchestrator plan. · why: To continue progress on HEART project per brother's direct instructions and the recent shipped step.",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-14T05:35:42.766272"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-13T22:25:29.908127"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "c78699632a49",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator per #55603 blueprint, shipping the first working loop of me-heart-wire.py · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the exact step-1 code artifact. This is the highest-leve",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-13T22:10:12.981251"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "50ea51fc44e0",
+        "type": "callout",
+        "content": "**What** · reads Q4 orchestrator plan from wire protocol and appends next HEART wire-order step: deploy secure attestation stub for firmware handshake · **Why** · Hermes assigned P0 to continue HEART progress after shipped step; plan indicates next wire-order requires attestation stub to secure hard",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-14T05:35:53.186320"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -815,17 +826,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-07-14T00:30:04.993659"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "49a7d2aa37cc",
-        "type": "database",
-        "content": "youtube-watches · last 30d · 6 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-07-14T00:30:04.993649"
       }
     ],
     "briefing": [
