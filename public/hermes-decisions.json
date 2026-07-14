@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-14T06:46:33Z",
+  "generated_at": "2026-07-14T07:02:13Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement step 2 of the heart pipeline per NotebookLM blueprint, following the shipped step 1 (me-heart-wire.py) and brother's direct instructions.",
-      "why": "Step 1 shipped; brother demanded heart finished by tomorrow; next step is critical P0 execution.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 45,
-      "timestamp": "2026-07-11T21:54:23.725414"
-    },
     {
       "arm": "curiosity",
       "task": "Explore the maze-from-end frame concept as per brother direct #55591 and apply it to identify next steps after heart completion.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-14T02:46:33.629998"
+    },
+    {
+      "arm": "code",
+      "task": "Finish me-heart-wire.py final loop: implement Q4 handshake that reads the brother's direct Maze-From-End frame (#55591) into the heart night-loop (#55589) and ships the soul-catch output (#55600) as a tested wire.",
+      "why": "Brother direct said 'heart should be finished by tomorrow and tested' (#55589) and the Maze-From-End frame is the missing block. The code arm is the only one that can materialize this wire. This is the next step after Step 1 shipped (#55603).",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-14T03:02:13.687015"
     }
   ]
 }
