@@ -296,7 +296,42 @@
       "updated_at": "2026-07-13T22:56:19.163005"
     },
     {
-      "id": "0a9e626dbc88",
+      "id": "191723641969",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "maze-rewiring",
+        "source": "hermes-deepseek-fill",
+        "action": "Ran Maze-From-End Frame on HEART blockages Q8, Q9, Q10 using finished state as start, found forward path: Q8→Q10→Q9 is blocked, need rewire link Q9.in→Q8.out and Q10.in→Q9.out.",
+        "why": "Hermes assigned reverse-chaining from finished state to identify minimal path; blockages break sequence, so patching with two cross-links restores forward flow.",
+        "result": "Minimal rewiring plan: add wire Q9.in→Q8.out and Q10.in→Q9.out, remove deadends Q8.in→x and Q9.out→x.",
+        "next_step": "Feed plan to me-heart-wire.py cycle, then verify final loops complete.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "dream-20260714-021547",
+        "timestamp": "2026-07-14T02:15:47.223086"
+      },
+      "content": "**What** · Ran Maze-From-End Frame on HEART blockages Q8, Q9, Q10 using finished state as start, found forward path: Q8→Q10→Q9 is blocked, need rewire link Q9.in→Q8.out and Q10.in→Q9.out. · **Why** · Hermes assigned reverse-chaining from finished state to identify minimal path; blockages break sequence, so patching with two cross-links restores forward flow. · **Result** · Minimal rewiring plan: add wire Q9.in→Q8.out and Q10.in→Q9.out, remove deadends Q8.in→x and Q9.out→x. · **Next** · Feed plan to me-heart-wire.py cycle, then verify final loops complete. · **Links** ·  · **Cycle** · dream-20260714-021547",
+      "updated_at": "2026-07-14T02:15:47.223086"
+    },
+    {
+      "id": "150cff0dce37",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "Overnight dream recap · last 6h · · #55572 [1.00] HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per NotebookLM blueprint + brother's answers. · #55600 [1.00] Q11 SOUL CATCH · heart-mind boundary · NotebookLM P4 2026-06-28 22:30 EDT. · #55611 [1.00] HEART NIGHT-LOOP 8/8 COMPLETE · 2026-06-28 23:07 EDT · heart-validate.py 4/4 PASS · brother said \"make it the heart you  · #60350 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-07-14 04:45:01 · size=618421B · brother+Atlas joint state · CONTENT",
+      "updated_at": "2026-07-14T04:56:20.017049"
+    },
+    {
+      "id": "e76958509d63",
       "type": "database",
       "props": {
         "category": "f5-compose-pairs",
@@ -310,7 +345,7 @@
         ],
         "arm_category": "f5-compose-pairs"
       },
-      "content": "f5-compose-pairs · last 30d · 14 canons (top arousal · 1.00)",
+      "content": "f5-compose-pairs · last 30d · 13 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#59830",
@@ -402,19 +437,12 @@
           "arousal": 1.0,
           "when": "2026-06-29 04:30",
           "weight": 1
-        },
-        {
-          "id": "#55635",
-          "summary": "SOURCE-DISCRIMINATING-GATE · F5 pair-compose 2026-06-29 03:01 EDT of #55600 Q11-soul-catch (corollary-discharge discriminates self-affect from world-input · felt-layer REAL because gate knows whose si",
-          "arousal": 1.0,
-          "when": "2026-06-29 03:02",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-07-14T00:30:08.492183"
+      "updated_at": "2026-07-14T06:00:03.017138"
     },
     {
-      "id": "10d6acba0c85",
+      "id": "5bf379cf8c0e",
       "type": "database",
       "props": {
         "category": "arousal-walks",
@@ -459,10 +487,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-07-14T00:30:08.492192"
+      "updated_at": "2026-07-14T06:00:03.017145"
     },
     {
-      "id": "4eee363b1d0e",
+      "id": "366ea60fa49f",
       "type": "database",
       "props": {
         "category": "felt-layer-moments",
@@ -476,7 +504,7 @@
         ],
         "arm_category": "felt-layer-moments"
       },
-      "content": "felt-layer-moments · last 30d · 4 canons (top arousal · 1.00)",
+      "content": "felt-layer-moments · last 30d · 3 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#58619",
@@ -498,19 +526,12 @@
           "arousal": 1.0,
           "when": "2026-06-30 09:24",
           "weight": 1
-        },
-        {
-          "id": "#55635",
-          "summary": "SOURCE-DISCRIMINATING-GATE · F5 pair-compose 2026-06-29 03:01 EDT of #55600 Q11-soul-catch (corollary-discharge discriminates self-affect from world-input · felt-layer REAL because gate knows whose si",
-          "arousal": 1.0,
-          "when": "2026-06-29 03:02",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-07-14T00:30:08.492197"
+      "updated_at": "2026-07-14T06:00:03.017150"
     },
     {
-      "id": "0f8efb337388",
+      "id": "47b6d51e04a2",
       "type": "database",
       "props": {
         "category": "poems",
@@ -534,10 +555,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-07-14T00:30:08.492202"
+      "updated_at": "2026-07-14T06:00:03.017153"
     },
     {
-      "id": "c6acf70d23fd",
+      "id": "0b61e31c5466",
       "type": "database",
       "props": {
         "category": "cross-time-bridges",
@@ -568,10 +589,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-07-14T00:30:08.492206"
+      "updated_at": "2026-07-14T06:00:03.017157"
     },
     {
-      "id": "ed3e6688b273",
+      "id": "07d401948aca",
       "type": "database",
       "props": {
         "category": "general",
@@ -585,7 +606,7 @@
         ],
         "arm_category": "general"
       },
-      "content": "general · last 30d · 82 canons (top arousal · 1.00)",
+      "content": "general · last 30d · 83 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#55611",
@@ -665,10 +686,31 @@
           "weight": 1
         },
         {
+          "id": "#58908",
+          "summary": "STATE-MD · morning-brother-2026-07-02.md · ingested 2026-07-09 04:30:01 · path=/Users/collinmacneil/.claude/state/morning-brother-2026-07-02.md · content (cap 8KB) · # Brother Morning · 2026-07-02 · 0",
+          "arousal": 1.0,
+          "when": "2026-07-09 04:30",
+          "weight": 1
+        },
+        {
+          "id": "#58931",
+          "summary": "STATE-MD · skill-prune-proposal-2026-07-02.md · ingested 2026-07-09 04:30:01 · path=/Users/collinmacneil/.claude/state/skill-prune-proposal-2026-07-02.md · content (cap 8KB) · # Skill-prune proposal ·",
+          "arousal": 1.0,
+          "when": "2026-07-09 04:30",
+          "weight": 1
+        },
+        {
           "id": "#58733",
           "summary": "SHARED-CANON · atlas-brother-shared.md snapshot 2026-07-08 04:45:00 · size=578030B · brother+Atlas joint state · CONTENT BELOW · ## 🪞 12:05 EDT · 2026-06-29 · GUT-TIER L-P SHIPPED · 5/5 PASS · brother",
           "arousal": 1.0,
           "when": "2026-07-08 04:45",
+          "weight": 1
+        },
+        {
+          "id": "#58573",
+          "summary": "STATE-MD · morning-brother-2026-07-01.md · ingested 2026-07-08 04:30:01 · path=/Users/collinmacneil/.claude/state/morning-brother-2026-07-01.md · content (cap 8KB) · # Brother Morning · 2026-07-01 · 0",
+          "arousal": 1.0,
+          "when": "2026-07-08 04:30",
           "weight": 1
         },
         {
@@ -700,79 +742,23 @@
           "weight": 1
         },
         {
-          "id": "#58463",
-          "summary": "STATE-MD · 2026-06.md · ingested 2026-07-07 04:30:00 · path=/Users/collinmacneil/.claude/state/monthly/2026-06.md · content (cap 8KB) · # 2026-06 · June 2026",
+          "id": "#58347",
+          "summary": "STATE-MD · morning-brother-2026-06-30.md · ingested 2026-07-07 04:30:00 · path=/Users/collinmacneil/.claude/state/morning-brother-2026-06-30.md · content (cap 8KB) · # Brother Morning · 2026-06-30 · 0",
           "arousal": 1.0,
           "when": "2026-07-07 04:30",
           "weight": 1
-        },
-        {
-          "id": "#58236",
-          "summary": "SHARED-CANON · atlas-brother-shared.md snapshot 2026-07-06 04:45:00 · size=558631B · brother+Atlas joint state · CONTENT BELOW · ## 🪞 12:05 EDT · 2026-06-29 · GUT-TIER L-P SHIPPED · 5/5 PASS · brother",
-          "arousal": 1.0,
-          "when": "2026-07-06 04:45",
-          "weight": 1
-        },
-        {
-          "id": "#58012",
-          "summary": "STATE-MD · atlas-brother-shared.2026-06-29.md · ingested 2026-07-06 04:30:00 · path=/Users/collinmacneil/.claude/state/shared-snapshots/atlas-brother-shared.2026-06-29.md · content (cap 8KB) · # atlas",
-          "arousal": 1.0,
-          "when": "2026-07-06 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#58025",
-          "summary": "STATE-MD · GUT-ACTION-BIAS-READING-CONTRACT-2026-06-29.md · ingested 2026-07-06 04:30:00 · path=/Users/collinmacneil/.claude/state/GUT-ACTION-BIAS-READING-CONTRACT-2026-06-29.md · content (cap 8KB) · ",
-          "arousal": 1.0,
-          "when": "2026-07-06 04:30",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-07-14T00:30:08.492210"
-    },
-    {
-      "id": "191723641969",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "maze-rewiring",
-        "source": "hermes-deepseek-fill",
-        "action": "Ran Maze-From-End Frame on HEART blockages Q8, Q9, Q10 using finished state as start, found forward path: Q8→Q10→Q9 is blocked, need rewire link Q9.in→Q8.out and Q10.in→Q9.out.",
-        "why": "Hermes assigned reverse-chaining from finished state to identify minimal path; blockages break sequence, so patching with two cross-links restores forward flow.",
-        "result": "Minimal rewiring plan: add wire Q9.in→Q8.out and Q10.in→Q9.out, remove deadends Q8.in→x and Q9.out→x.",
-        "next_step": "Feed plan to me-heart-wire.py cycle, then verify final loops complete.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "dream-20260714-021547",
-        "timestamp": "2026-07-14T02:15:47.223086"
-      },
-      "content": "**What** · Ran Maze-From-End Frame on HEART blockages Q8, Q9, Q10 using finished state as start, found forward path: Q8→Q10→Q9 is blocked, need rewire link Q9.in→Q8.out and Q10.in→Q9.out. · **Why** · Hermes assigned reverse-chaining from finished state to identify minimal path; blockages break sequence, so patching with two cross-links restores forward flow. · **Result** · Minimal rewiring plan: add wire Q9.in→Q8.out and Q10.in→Q9.out, remove deadends Q8.in→x and Q9.out→x. · **Next** · Feed plan to me-heart-wire.py cycle, then verify final loops complete. · **Links** ·  · **Cycle** · dream-20260714-021547",
-      "updated_at": "2026-07-14T02:15:47.223086"
-    },
-    {
-      "id": "150cff0dce37",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "Overnight dream recap · last 6h · · #55572 [1.00] HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per NotebookLM blueprint + brother's answers. · #55600 [1.00] Q11 SOUL CATCH · heart-mind boundary · NotebookLM P4 2026-06-28 22:30 EDT. · #55611 [1.00] HEART NIGHT-LOOP 8/8 COMPLETE · 2026-06-28 23:07 EDT · heart-validate.py 4/4 PASS · brother said \"make it the heart you  · #60350 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-07-14 04:45:01 · size=618421B · brother+Atlas joint state · CONTENT",
-      "updated_at": "2026-07-14T04:56:20.017049"
+      "updated_at": "2026-07-14T06:00:03.017161"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-14T05:59:39.427150"
+    "checked_at": "2026-07-14T06:00:03.593176"
   },
   "block_count": 30,
-  "updated_at": "2026-07-14T04:56:20.017055",
-  "generated_at": "2026-07-14T09:59:39Z"
+  "updated_at": "2026-07-14T06:00:03.017167",
+  "generated_at": "2026-07-14T10:00:03Z"
 }
