@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-14T20:46:46Z",
+  "generated_at": "2026-07-14T21:02:01Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Launch me-heart-wire.py with the Q4 orchestrator to sequence final heart loops for tomorrow's test per brother's 22:13 plan",
-      "why": "Brother explicitly said heart must be finished by tomorrow and tested; code arm holds the live wiring script that executes the orchestrator step from #55603, which is the highest-proximity P0 action to close the heart tier",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 15,
-      "timestamp": "2026-07-12T15:59:25.010293"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603, shipping the first working loop of me-heart-wire.py that sequences the four final loops per NotebookLM blueprint and brother's answers.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 30,
       "timestamp": "2026-07-14T16:46:46.644823"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the final data-linking step between me-heart-wire.py output and the NotebookLM blueprint to close the heart's Q4 loop",
+      "why": "The immediate prior cannon #55603 shipped the orchestrator; brother said 'heart should be finished by tomorrow and tested' (#55589). Code arm is primed to cut the remaining integration wire, making the heart testable within this cycle.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-14T17:02:01.400246"
     }
   ]
 }
