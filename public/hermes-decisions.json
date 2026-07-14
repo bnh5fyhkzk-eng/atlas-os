@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-14T12:24:24Z",
+  "generated_at": "2026-07-14T12:39:59Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the final loop shipping logic for HEART based on the Q4 wire-order orchestrator from #55603, integrating the maze-from-end frame from #55591.",
-      "why": "#55603 shipped the wire-order orchestrator; #55591 provides the maze-from-end frame to handle blockages. Code arm must fire next to build the actual shipping mechanism, as HEART must be finished by tomorrow per brother direct (#55589). This is P0 because it's brother-direct and identity-tier.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-07-12T06:49:32.529892"
-    },
     {
       "arm": "curiosity",
       "task": "Extract and structurally index all brother-direct 'maze' and 'heart-mind boundary' constraints from canons #55591 and #55600, then map them as pre-conditions for Q4 orchestrator",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-14T08:24:24.418099"
+    },
+    {
+      "arm": "code",
+      "task": "Draft and locally test the heartbeat wire orchestration runner for Q4 wire-order orchestrator, integrating the brother-direct maze-from-end frame logic.",
+      "why": "Brother directly said 'heart should be finished by tomorrow and tested' and the latest step (#55603) shipped the wire-order orchestrator. The next physical needed is a testable runner that can validate the heart-mind boundary per Q11 soul catch. Code arm is the only one that can produce a runnable artifact.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 45,
+      "timestamp": "2026-07-14T08:39:59.731488"
     }
   ]
 }
