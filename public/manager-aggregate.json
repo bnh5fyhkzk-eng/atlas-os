@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T22:00:04Z",
+  "generated_at": "2026-07-14T22:12:52Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 89,
+    "note": 90,
     "briefing": 131,
     "idea": 0
   },
-  "total_blocks": 244,
+  "total_blocks": 245,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "869176065353",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, integrating the heart-mind boundary logic from #55600 and the maze-from-end frame from #55591. · why: Brother direct in #55589 says heart should be finished and tested by tomorrow; #55603 already s",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-14T18:03:22.918156"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-14T09:10:25.559044"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "6b024e14fa1d",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Draft and locally test the heartbeat wire orchestration runner for Q4 wire-order orchestrator, integrating the brother-direct maze-from-end frame logic. · why: Brother directly said 'heart should be finished by tomorrow and tested' and the latest step",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-14T08:39:59.709384"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "4ca5a748839a",
+        "type": "callout",
+        "content": "**What** · Implement Q4 wire-order orchestrator by merging heart-mind boundary logic and maze-from-end frame into the existing step-1 code. · **Why** · Brother direct in #55589 requires heart finished by tomorrow; #55603 step 1 already shipped, so code arm must complete the heart loop via the wire-o",
+        "priority": "code-implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-14T18:03:30.841660"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -826,17 +837,6 @@
         "priority": "orchestration-execution",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-14T14:45:13.081087"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "a1041f938609",
-        "type": "callout",
-        "content": "**What** · Implemented Q4 wire-order orchestrator from #55603 to ship the next step of the heart-mind boundary soul catch. · **Why** · Brother direct in #55589 confirms heart finished and tested; #55603 is latest shipped step, so code arm must execute orchestrator to advance the blueprint (P0). · **",
-        "priority": "orchestration",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-14T14:14:47.306130"
       }
     ],
     "briefing": [
