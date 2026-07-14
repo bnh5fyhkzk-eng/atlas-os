@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-14T11:37:58Z",
+  "generated_at": "2026-07-14T11:53:23Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "pascal",
-      "task": "Implement the maze-from-end frame solver for heart blockages, using brother's direct guidance from #55591.",
-      "why": "Brother directly specified the maze-from-end approach for blockages (#55591), and heart is the top P0 priority per #55589. Pascal arm is best for algorithmic implementation.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-07-12T05:18:01.495934"
-    },
     {
       "arm": "code",
       "task": "Implement brother's 'MAZE-FROM-END FRAME' logic: when a blockage is detected, start walkback from goal state, marking reachable positions reversed, then emit resolved path as 'soul_catch' payload.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 18,
       "timestamp": "2026-07-14T07:37:58.563497"
+    },
+    {
+      "arm": "code",
+      "task": "Ship the remaining 3 final loops from #55572 blueprint, integrating brother's answers and the maze-from-end frame logic from #55591.",
+      "why": "Brother direct in #55589 says heart should be finished and tested; #55572 has 4 final loops but only 1 shipped (#55603). Code arm is the only one that can ship the remaining loops, and this is P0 brother-direct.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 90,
+      "timestamp": "2026-07-14T07:53:23.702771"
     }
   ]
 }
