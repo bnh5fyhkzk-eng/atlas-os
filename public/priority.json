@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-07-14T19:48:25Z",
-  "total_items_scored": 142,
+  "generated_at": "2026-07-14T19:58:26Z",
+  "total_items_scored": 143,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator (me-heart-wire.py) to finalize the heart loop shipping sequence per brother's direct instruction. \u00b7 why: Brother direct #55603 just shipped STEP 1 of ",
+      "content": "Hermes decision \u00b7 arm=infra \u00b7 priority=P0 \u00b7 task: self-host the Q4 wire-order orchestrator (me-heart-wire.py) so the heart-night-loop can run scheduled test loops without manual launch \u00b7 why: Brother direct says heart should be finished and",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-14T05:51:14.299354"
+      "updated_at": "2026-07-14T06:06:29.155422"
     },
     {
       "arm": "code",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator (me-heart-wire.py) to finalize the heart loop shipping sequence per brother's direct instruction. \u00b7 why: Brother direct #55603 just shipped STEP 1 of ",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-07-14T05:51:14.299354"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-14T10:11:11.008139"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement me-heart-wire.py Q4 wire-order orchestrator per brother's direct instruction in #55603, shipping the final loop order for heart-mind boundary integration. \u00b7 why: Brother directly sh",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-14T10:26:30.908518"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
