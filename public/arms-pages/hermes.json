@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "f7a3c73b88c9",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-13T22:56:07.678446"
-      },
-      "content": "Hermes decision · arm=infra · priority=P0 · task: Stand up Docker swarm endpoint for heart-night-loop v2 per brother's 'finished by tomorrow' directive – host Q4 wire order orchestrator me-heart-wire.py as persistent service, expose health check on port 8457 · why: Brother directly stated 'heart should be finished by tomorrow and tested'; heart-night-loop v2 is the critical path. infra arm owns deployment reliability. Without live endpoint, code arm has no platform to ship final loops.",
-      "updated_at": "2026-07-13T22:56:07.678456"
-    },
-    {
       "id": "4f5ae1ede9c5",
       "type": "callout",
       "props": {
@@ -731,15 +719,27 @@
       },
       "content": "Hermes decision · arm=infra · priority=P0 · task: self-host the Q4 wire-order orchestrator (me-heart-wire.py) so the heart-night-loop can run scheduled test loops without manual launch · why: Brother direct says heart should be finished and tested by tomorrow. The orchestrator is shipped (#55603) but not deployed — infra must containerize and schedule it to fire the final loops on time.",
       "updated_at": "2026-07-14T06:06:29.155422"
+    },
+    {
+      "id": "9858a1739c1f",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-14T06:52:14.971595"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the first working version of me-heart-wire.py to establish the heart-mind boundary loop. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the concrete step to ship the orchestrator that wires Q4, which is the next critical piece after the heart night-loop plan. This is the highest priority active focus item.",
+      "updated_at": "2026-07-14T06:52:14.971603"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-14T06:49:45.238627"
+    "checked_at": "2026-07-14T06:54:45.830985"
   },
   "block_count": 30,
-  "updated_at": "2026-07-14T06:06:29.155423",
-  "generated_at": "2026-07-14T10:49:45Z"
+  "updated_at": "2026-07-14T06:52:14.971604",
+  "generated_at": "2026-07-14T10:54:45Z"
 }
