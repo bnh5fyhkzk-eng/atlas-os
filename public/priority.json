@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-07-14T15:28:08Z",
+  "generated_at": "2026-07-14T15:38:09Z",
   "total_items_scored": 130,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P0 \u00b7 task: Run the Maze-From-End Frame technique on the remaining HEART blockages (Q8, Q9, Q10) to identify the forward path, then output a minimal rewiring plan for the next `me-heart-wire.py` cycle. ",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py module with the exact loop sequence specified in the NotebookLM blueprint. \u00b7 why: Brother direct in #55589 ",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-14T02:15:35.349869"
+      "updated_at": "2026-07-14T02:30:55.924271"
     },
     {
       "arm": "code",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=dream \u00b7 priority=P0 \u00b7 task: Run the Maze-From-End Frame technique on the remaining HEART blockages (Q8, Q9, Q10) to identify the forward path, then output a minimal rewiring plan for the next `me-heart-wire.py` cycle. ",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-07-14T02:15:35.349869"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-14T04:34:54.325802"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement next wire-order step for me-heart-wire.py based on Q4 orchestrator plan. \u00b7 why: To continue progress on HEART project per brother's direct instructions and the recent shipped step.",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-14T05:35:42.766272"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
