@@ -838,15 +838,37 @@
         }
       ],
       "updated_at": "2026-07-13T18:00:02.112724"
+    },
+    {
+      "id": "a40ecd03703f",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "analysis",
+        "source": "hermes-deepseek-fill",
+        "action": "Extracted from frame #55591: blockage type = 'dead-end at node 7' and proposed maze-reversal strategy = 'backtrack to node 4, then re-route through heart corridor'.",
+        "why": "Hermes-Orchestrator assigned this to correlate the maze-from-end fix with the heart-night-loop-plan v2 timeline to ensure P0 'finished by tomorrow' condition holds.",
+        "result": "Mapped onto heart-night-loop-plan v2 (#55589) timeline: current step is 'node 4 re-route', remaining steps (5) require 8 hours, completing by 08:00 tomorrow — condition verified.",
+        "next_step": "Execute the re-route step and monitor progress; if blockage persists, escalate to blockage-removal team.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260713-202155",
+        "timestamp": "2026-07-13T20:21:55.073250"
+      },
+      "content": "**What** · Extracted from frame #55591: blockage type = 'dead-end at node 7' and proposed maze-reversal strategy = 'backtrack to node 4, then re-route through heart corridor'. · **Why** · Hermes-Orchestrator assigned this to correlate the maze-from-end fix with the heart-night-loop-plan v2 timeline to ensure P0 'finished by tomorrow' condition holds. · **Result** · Mapped onto heart-night-loop-plan v2 (#55589) timeline: current step is 'node 4 re-route', remaining steps (5) require 8 hours, completing by 08:00 tomorrow — condition verified. · **Next** · Execute the re-route step and monitor progress; if blockage persists, escalate to blockage-removal team. · **Links** ·  · **Cycle** · research-20260713-202155",
+      "updated_at": "2026-07-13T20:21:55.073250"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-13T20:18:06.358720"
+    "checked_at": "2026-07-13T20:23:06.899713"
   },
-  "block_count": 30,
-  "updated_at": "2026-07-13T18:00:02.112730",
-  "generated_at": "2026-07-14T00:18:06Z"
+  "block_count": 31,
+  "updated_at": "2026-07-13T20:21:55.073250",
+  "generated_at": "2026-07-14T00:23:06Z"
 }
