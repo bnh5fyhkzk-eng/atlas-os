@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-14T00:52:30Z",
+  "generated_at": "2026-07-14T01:07:44Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Take the Q4 wire-order orchestrator from #55603 and implement the first automatic wire-switching test for the heart-night-loop maze-from-end frame.",
-      "why": "Brother direct at #55589 says heart should be finished and tested tomorrow, and #55591 defines the maze-from-end frame for blockages. The Q4 orchestrator just shipped \u2014 now needs immediate code action to turn that plan into a runnable test, keeping P0 urgency alive.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-07-11T10:44:23.828020"
-    },
     {
       "arm": "code",
       "task": "Implement the next wire order step for heart based on Q4 orchestrator blueprint and step 1 shipped (me-heart-wire.py).",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-13T20:52:30.167807"
+    },
+    {
+      "arm": "code",
+      "task": "Finish HEART implementation by writing remaining loops per blueprint and brother's instructions, then run tests.",
+      "why": "Brother-direct from #55589 says heart should be finished by tomorrow and tested; step 1 shipped, now need to complete the rest.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 120,
+      "timestamp": "2026-07-13T21:07:44.054641"
     }
   ]
 }
