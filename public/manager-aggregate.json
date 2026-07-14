@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T07:42:09Z",
+  "generated_at": "2026-07-14T07:57:09Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 100,
+    "note": 101,
     "briefing": 132,
     "idea": 0
   },
-  "total_blocks": 256,
+  "total_blocks": 257,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "5820a1b0965d",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement heart night-loop test script per v2 plan · why: Brother direct: heart should be finished and tested; code arm can write test script based on blueprint and brother's answers",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-14T03:48:47.366091"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-13T21:07:44.035856"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "b45af519bb7a",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Ship STEP 3 of heart-to-wire: implement the Q4 orchestrator that reads tomorrow's heart blueprint and generates the physical wire-order CSV for the brother's test rig. · why: #55589 brother set a hard deadline: 'heart should be finished by tomorrow an",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-13T20:52:30.150123"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "96ceddf8fb79",
+        "type": "callout",
+        "content": "**What** · implement heart night-loop test script per v2 plan using blueprint and brother answers · **Why** · P0 order from Hermes-Orchestrator: heart must be finished and tested; code arm writes the test based on existing inputs · **Result** · script created: heart_night_loop_test.js — runs night-l",
+        "priority": "test",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-14T03:48:58.106513"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "P1",
         "source": "backfill",
         "updated_at": "2026-07-14T00:30:04.149918"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "c96b0fcee626",
-        "type": "database",
-        "content": "clients · last 30d · 6 canons (top arousal · 1.00)",
-        "priority": "P1",
-        "source": "backfill",
-        "updated_at": "2026-07-14T00:30:04.149906"
       }
     ],
     "briefing": [
