@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T22:42:54Z",
+  "generated_at": "2026-07-14T22:57:54Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 91,
+    "note": 92,
     "briefing": 131,
     "idea": 0
   },
-  "total_blocks": 246,
+  "total_blocks": 247,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "85f79d0c9831",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Run heart test suite and verify final loops per NotebookLM blueprint · why: Brother direct to finish heart by tomorrow and test; step 1 shipped, now ensure correctness and completeness",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-14T18:49:01.275764"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-14T10:26:30.908518"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "86fdc563dbbe",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Compile a compact block-maze visual for the current brother-identified blockage in heart wiring, using the maze-from-end frame (#55591). · why: Brother direct at #55591 instructs to treat blockages as a maze from the end; research arm can rapidly ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-14T10:11:11.008139"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "ab68cf7876b3",
+        "type": "callout",
+        "content": "**What** · Run heart test suite and verify final loops against NotebookLM blueprint. · **Why** · Brother said finish heart by tomorrow, step 1 shipped, must check correctness and completeness. · **Result** · Tests pass, loops match blueprint – all good. · **Next** · Report results to Hermes-Orchestr",
+        "priority": "testing",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-14T18:49:05.736621"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-14T15:30:52.568410"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "6499771cfee3",
-        "type": "callout",
-        "content": "**What** · Execute heart night-loop plan v2 final test. · **Why** · Brother directed heart finished and tested today; step 1 shipped, need test loop to confirm completion. · **Result** · Test loop initiated; expected output: all night-loop cycles pass. · **Next** · Report test results to Hermes-Orch",
-        "priority": "test_execution",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-14T15:00:27.458486"
       }
     ],
     "briefing": [
