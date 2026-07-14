@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T06:12:05Z",
+  "generated_at": "2026-07-14T06:27:06Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 94,
+    "note": 95,
     "briefing": 132,
     "idea": 0
   },
-  "total_blocks": 250,
+  "total_blocks": 251,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "ac5e9a1bd52c",
+        "type": "callout",
+        "content": "Hermes decision · arm=dream · priority=P0 · task: Run the Maze-From-End Frame technique on the remaining HEART blockages (Q8, Q9, Q10) to identify the forward path, then output a minimal rewiring plan for the next `me-heart-wire.py` cycle. · why: Brother directly said 'when we have a blockage we jus",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-14T02:15:35.349869"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-13T18:49:54.454986"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "c25f4351159b",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py that sequences the final heart loops per NotebookLM blueprint and brother's answers. · why: This is the direct P0 brother command from #55603, completing the heart-wir",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-13T18:34:43.515582"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "dream",
+        "arm_glyph": "🌙",
+        "arm_name": "My Dreamer",
+        "block_id": "191723641969",
+        "type": "callout",
+        "content": "**What** · Ran Maze-From-End Frame on HEART blockages Q8, Q9, Q10 using finished state as start, found forward path: Q8→Q10→Q9 is blocked, need rewire link Q9.in→Q8.out and Q10.in→Q9.out. · **Why** · Hermes assigned reverse-chaining from finished state to identify minimal path; blockages break seque",
+        "priority": "maze-rewiring",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-14T02:15:47.223086"
+      },
       {
         "arm": "curiosity",
         "arm_glyph": "🌱",
@@ -826,17 +837,6 @@
         "priority": "execution",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-13T23:26:50.742801"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "8ced29ccd0f1",
-        "type": "callout",
-        "content": "**What** · Execute heart night-loop test with step1 wire order from #55603. Verify integration with maze-from-end frame. · **Why** · Hermes assigned P0 task. Brother directive: heart must be finished and tested by tomorrow. Step1 shipped, orchestration ready. Critical to meet deadline. · **Result** ",
-        "priority": "execute-test",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-13T23:11:34.911482"
       }
     ],
     "briefing": [
