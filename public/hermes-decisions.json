@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-14T01:23:50Z",
+  "generated_at": "2026-07-14T01:39:41Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the final heart loops per the NotebookLM blueprint and brother's answers from #55572.",
-      "why": "Brother directly said 'heart should be finished by tomorrow and tested' (#55589) and the Q4 orchestrator is the next concrete step to ship the heart loops. Code arm is the only one that can turn the blueprint into executable logic.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-07-11T12:00:49.298079"
-    },
     {
       "arm": "code",
       "task": "Test the heart night-loop v2 with brother's blueprint and verify final loops shipped per #55572",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-07-13T21:23:50.433652"
+    },
+    {
+      "arm": "research",
+      "task": "Open NotebookLM blueprint for #55572 and verify each of the 4 final loops shipped against the brother's 'finished by tomorrow and tested' directive from #55589, logging any gaps or confirmations.",
+      "why": "Brother-direct P0: final loops must be validated against the explicit completion order; this arm has the research context to cross-reference the blueprint and his answers.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 12,
+      "timestamp": "2026-07-13T21:39:41.961292"
     }
   ]
 }
