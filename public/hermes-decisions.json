@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-14T14:26:30Z",
+  "generated_at": "2026-07-14T14:41:47Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Run validation tests on the shipped heart loops and document results for brother review.",
-      "why": "Brother direct: heart should be finished and tested; step 1 shipped, immediate next is testing.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 30,
-      "timestamp": "2026-07-12T08:37:34.949672"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator (me-heart-wire.py) to finalize the heart-mind boundary wiring per NotebookLM P4 and brother's direct instructions.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-07-14T10:26:30.924937"
+    },
+    {
+      "arm": "research",
+      "task": "Analyze brother's direct 'maze from end frame' and 'heart night-loop plan v2' canons to extract the exact maze-start coordinates and loop schedule for heart finalization.",
+      "why": "Brother gave direct, high-arousal instructions that the heart must be finished by tomorrow and tested, and to treat blockages as mazes from the end. Research arm must decode these into executable steps before any code or infra arm can fire meaningfully.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 15,
+      "timestamp": "2026-07-14T10:41:47.323817"
     }
   ]
 }
