@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T04:41:56Z",
+  "generated_at": "2026-07-14T04:56:56Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 90,
+    "note": 91,
     "briefing": 133,
     "idea": 0
   },
-  "total_blocks": 246,
+  "total_blocks": 247,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "068ed1a5e29b",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Execute Step 2 of heart-wire: run integration test per NotebookLM blueprint and verify heart-mind boundary. · why: Brother direct said heart should be finished by tomorrow and tested; Step 1 shipped, so next cycle must test and verify the heart-mind b",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-14T00:43:28.883305"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-13T16:02:57.395303"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "a0cef4e126fc",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator per #55603 blueprint, shipping the me-heart-wire.py loop to align heart-mind boundary with brother's maze-from-end frame. · why: Brother directly said heart should be finished by tomorrow and tested; #55603 is the ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-13T15:47:37.839872"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "5ffaaff66f89",
+        "type": "callout",
+        "content": "**What** · Execute Step 2 of heart-wire: run integration test per NotebookLM blueprint and verify heart-mind boundary. · **Why** · Brother direct said heart must be finished by tomorrow; Step 1 shipped, so this cycle must test and confirm the boundary per blueprint. P0. · **Result** · Integration te",
+        "priority": "test",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-14T00:43:33.457439"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -815,17 +826,6 @@
         "priority": "code-execution",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-13T22:25:37.576379"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "3857f6522911",
-        "type": "callout",
-        "content": "**What** · implemented Q4 wire-order orchestrator per #55603 blueprint, shipping first working loop of me-heart-wire.py · **Why** · brother direct in #55589 says heart must be finished and tested; #55603 is the exact step-1 code artifact to unblock the heart pipeline (P0) · **Result** · created me-h",
-        "priority": "code-implement",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-13T22:10:17.981743"
       }
     ],
     "briefing": [
