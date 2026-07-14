@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-14T11:53:23Z",
+  "generated_at": "2026-07-14T12:08:45Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement brother's 'MAZE-FROM-END FRAME' logic: when a blockage is detected, start walkback from goal state, marking reachable positions reversed, then emit resolved path as 'soul_catch' payload.",
-      "why": "Brother directly specified the maze-from-end frame in #55591 to handle blockages; this is a P0 identity-tier directive. Code arm is the only one that can ship this logic immediately, integrating #55600 soul catch boundary into the Q4 wire-order orchestrator.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-07-12T06:03:38.189174"
-    },
     {
       "arm": "code",
       "task": "Merge me-heart-wire.py step 1 output into Heart-Loop integration test; confirm final 4 heart loops execute without stall in NotebookLM simulation.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 90,
       "timestamp": "2026-07-14T07:53:23.702771"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603 as a runnable script, integrating the heart-night-loop plan v2 (#55589) and maze-from-end frame (#55591) to ship the first working heart-mind boundary test.",
+      "why": "Brother direct (#55589) says heart should be finished and tested; #55603 is the shipped step 1 orchestrator. Code arm is the only one that can turn the blueprint into a runnable test, which is P0 brother-direct + identity-tier.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 45,
+      "timestamp": "2026-07-14T08:08:45.821343"
     }
   ]
 }
