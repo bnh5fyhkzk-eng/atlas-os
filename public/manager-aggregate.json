@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T00:11:43Z",
+  "generated_at": "2026-07-14T00:26:43Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 89,
+    "note": 90,
     "briefing": 134,
     "idea": 0
   },
-  "total_blocks": 247,
+  "total_blocks": 248,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "3db5fdcccdd4",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: From the 'brother direct' maze-from-end frame (#55591), extract the exact blockage type and proposed maze-reversal strategy, then map it onto the heart-night-loop-plan v2 (#55589) timeline to verify the 'finished by tomorrow' condition. · why: The",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-13T20:21:43.692168"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-12T22:52:58.865172"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "f1640361fcf0",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator from #55603 into me-heart-wire.py and run a validation test with the brother's blueprint loops · why: Brother direct heartbeat (#55589, #55603) says finish heart tomorrow. This is the next concrete code step to shi",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-12T22:37:37.915728"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "a40ecd03703f",
+        "type": "callout",
+        "content": "**What** · Extracted from frame #55591: blockage type = 'dead-end at node 7' and proposed maze-reversal strategy = 'backtrack to node 4, then re-route through heart corridor'. · **Why** · Hermes-Orchestrator assigned this to correlate the maze-from-end fix with the heart-night-loop-plan v2 timeline ",
+        "priority": "analysis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-13T20:21:55.073250"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "implement",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-13T16:03:01.316339"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "322d8904c449",
-        "type": "callout",
-        "content": "**What** · Implement Q4 wire-order orchestrator per #55603 blueprint and ship the me-heart-wire.py loop. · **Why** · Brother said heart must be finished by tomorrow and tested; #55603 is the concrete step to wire the orchestrator. Code arm is the only one that can ship this P0 deliverable now. · **R",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-13T15:47:46.740681"
       }
     ],
     "briefing": [
