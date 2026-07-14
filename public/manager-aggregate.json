@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-07-14T18:57:42Z",
+  "generated_at": "2026-07-14T19:12:43Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 24,
+    "decision": 25,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 95,
-    "briefing": 131,
+    "note": 96,
+    "briefing": 130,
     "idea": 0
   },
-  "total_blocks": 250,
+  "total_blocks": 251,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "e61b2b20c254",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Execute heart night-loop plan v2 final test per brother directive · why: Brother directly stated heart should be finished and tested today; step 1 already shipped, now need to execute test loop to confirm completion.",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-14T15:00:22.391712"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -288,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "6499771cfee3",
+        "type": "callout",
+        "content": "**What** · Execute heart night-loop plan v2 final test. · **Why** · Brother directed heart finished and tested today; step 1 shipped, need test loop to confirm completion. · **Result** · Test loop initiated; expected output: all night-loop cycles pass. · **Next** · Report test results to Hermes-Orch",
+        "priority": "test_execution",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-14T15:00:27.458486"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +848,6 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-14T11:42:47.991888"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "8620a3f13171",
-        "type": "callout",
-        "content": "**What** · Wrote me-heart-wire.py orchestrator: finalizes 4 loops from NotebookLM blueprint, wires heart-mind boundary, ships step 1 per brother #55603. · **Why** · Brother #55572 says heart is fully finished with 4 loops; P0 task needs code-arm to connect those loops to mind via orchestrator file. ",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-14T10:57:07.084295"
       }
     ],
     "briefing": [
@@ -938,17 +949,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-07-14T04:56:20.135734"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "782851985e95",
-        "type": "callout",
-        "content": "No high-arousal hermes canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-07-14T04:56:20.106663"
       },
       {
         "arm": "code",
@@ -1389,6 +1389,17 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-07-12T03:42:07.336897"
+      },
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "3f8c6b9ec8b6",
+        "type": "callout",
+        "content": "Overnight curiosity recap · last 6h · · #55572 [1.00] HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per NotebookLM blueprint + brother's answers. · #55600 [1.00] Q11 SOUL CATCH · heart-mind boundary · NotebookLM P4 2026-06-28 22:30 EDT.",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-07-12T03:42:07.296455"
       }
     ],
     "idea": []
