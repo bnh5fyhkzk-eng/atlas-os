@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-07-14T08:17:43Z",
-  "total_items_scored": 146,
+  "generated_at": "2026-07-14T08:27:43Z",
+  "total_items_scored": 147,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator from #55603, shipping the first step of the heart-night-loop plan per brother's direct instruction in #55589. \u00b7 why: Brother explicitly stated heart s",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Open NotebookLM blueprint for #55572 and verify each of the 4 final loops shipped against the brother's 'finished by tomorrow and tested' directive from #55589, logging any gaps or confir",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-13T21:23:50.415181"
-    },
-    {
-      "arm": "code",
-      "arm_glyph": "\u270b",
-      "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Wire the Q4 orchestrator step 2: parse brother-direct brain canons #55572-#55603 into structured loops and validate against NotebookLM blueprint. \u00b7 why \u00b7 The recent brain canons show brother-direct instructions for heart completion, night-loop plan, maze-from-end frame, and soul-catch. Code arm must immediately parse these into executable loops to unblock heart finish. This is P0 because brother-direct + identity-tier demands it.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 45,
-      "score": 10.0,
-      "updated_at": "2026-07-13T22:25:29.925762",
-      "use_skill": "notebooklm"
+      "updated_at": "2026-07-13T21:39:41.943172"
     },
     {
       "arm": "infra",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-07-13T22:56:07.696170",
       "use_skill": "notebooklm"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator from #55603, shipping the first step of the heart-night-loop plan per brother's direct instruction in #55589. \u00b7 why: Brother explicitly stated heart s",
+      "arm": "code",
+      "arm_glyph": "\u270b",
+      "arm_name": "Code",
+      "content": "HERMES TASK \u00b7 Execute the heart night-loop test using the shipped step1 wire order from #55603 and verify integration with the maze-from-end frame per brother's directive \u00b7 why \u00b7 Brother direct says heart must be finished and tested by tomorrow; recent high-arousal canons show step1 shipped and orchestration ready, so immediate code execution and testing is critical to meet P0 deadline.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 30,
       "score": 10.0,
-      "updated_at": "2026-07-13T21:23:50.415181"
-    },
+      "updated_at": "2026-07-13T23:11:29.148889",
+      "use_skill": "none"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-14T00:12:43.964404"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py module to complete the heart-mind boundary wiring. \u00b7 why: Brother direct in #55589 says heart should be fin",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-14T00:28:09.686903"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
