@@ -708,15 +708,37 @@
       },
       "content": "No high-arousal infra canon in last 6h",
       "updated_at": "2026-07-13T22:56:19.199746"
+    },
+    {
+      "id": "40bb6523ea48",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "orchestration",
+        "source": "hermes-deepseek-fill",
+        "action": "stood up Docker swarm endpoint for heart-night-loop v2, deployed me-heart-wire.py as persistent service on port 8457 with health check",
+        "why": "brother said 'finished by tomorrow' – heart-night-loop v2 is critical path; code arm needs platform to ship loops; infra arm owns deployment reliability",
+        "result": "service running, health check responding on 8457, endpoint live for heart-night-loop v2",
+        "next_step": "monitor health check for 5 minutes, then hand off to code arm for final loop tests",
+        "links": [
+          ""
+        ],
+        "cycle_id": "infra-20260713-225619",
+        "timestamp": "2026-07-13T22:56:19.748318"
+      },
+      "content": "**What** · stood up Docker swarm endpoint for heart-night-loop v2, deployed me-heart-wire.py as persistent service on port 8457 with health check · **Why** · brother said 'finished by tomorrow' – heart-night-loop v2 is critical path; code arm needs platform to ship loops; infra arm owns deployment reliability · **Result** · service running, health check responding on 8457, endpoint live for heart-night-loop v2 · **Next** · monitor health check for 5 minutes, then hand off to code arm for final loop tests · **Links** ·  · **Cycle** · infra-20260713-225619",
+      "updated_at": "2026-07-13T22:56:19.748318"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-13T22:56:19.316793"
+    "checked_at": "2026-07-13T22:58:26.622704"
   },
-  "block_count": 30,
-  "updated_at": "2026-07-13T22:56:19.199756",
-  "generated_at": "2026-07-14T02:56:19Z"
+  "block_count": 31,
+  "updated_at": "2026-07-13T22:56:19.748318",
+  "generated_at": "2026-07-14T02:58:26Z"
 }
