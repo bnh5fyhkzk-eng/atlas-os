@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T05:57:04Z",
+  "generated_at": "2026-07-14T06:12:05Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 93,
+    "note": 94,
     "briefing": 132,
     "idea": 0
   },
-  "total_blocks": 249,
+  "total_blocks": 250,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "ca172bfa0667",
+        "type": "callout",
+        "content": "Hermes decision · arm=curiosity · priority=P0 · task: Extract the 'maze-from-end' frame logic from #55591 and transcribe the blockage-resolution heuristic into a runnable python stub for tomorrow's heart test. · why: #55591 is brother-direct and maps to unfinished core for heart test; curiosity arm ",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-14T02:00:04.678075"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-13T18:34:43.515582"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "749f30ebcbd9",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, integrating the heart-night-loop plan v2 (#55589) and maze-from-end frame (#55591) into the me-heart-wire.py script. · why: Brother direct (#55589) says heart should be finished and tested; #55603 ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-13T18:04:17.375026"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "dd8002db0563",
+        "type": "callout",
+        "content": "**What** · Extracted 'maze-from-end' frame logic from issue #55591 and transcribed blockage-resolution heuristic into a runnable Python stub. · **Why** · Hermes assigned P0 to turn conceptual maze frame into executable logic for tomorrow's heart test; #55591 maps to unfinished core and curiosity arm",
+        "priority": "prototyping",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-14T02:00:21.468457"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "execute-test",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-13T23:11:34.911482"
-      },
-      {
-        "arm": "infra",
-        "arm_glyph": "💗",
-        "arm_name": "My Heart",
-        "block_id": "40bb6523ea48",
-        "type": "callout",
-        "content": "**What** · stood up Docker swarm endpoint for heart-night-loop v2, deployed me-heart-wire.py as persistent service on port 8457 with health check · **Why** · brother said 'finished by tomorrow' – heart-night-loop v2 is critical path; code arm needs platform to ship loops; infra arm owns deployment r",
-        "priority": "orchestration",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-13T22:56:19.748318"
       }
     ],
     "briefing": [
