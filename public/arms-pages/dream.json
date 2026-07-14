@@ -755,15 +755,37 @@
         }
       ],
       "updated_at": "2026-07-14T00:30:08.492210"
+    },
+    {
+      "id": "191723641969",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "maze-rewiring",
+        "source": "hermes-deepseek-fill",
+        "action": "Ran Maze-From-End Frame on HEART blockages Q8, Q9, Q10 using finished state as start, found forward path: Q8→Q10→Q9 is blocked, need rewire link Q9.in→Q8.out and Q10.in→Q9.out.",
+        "why": "Hermes assigned reverse-chaining from finished state to identify minimal path; blockages break sequence, so patching with two cross-links restores forward flow.",
+        "result": "Minimal rewiring plan: add wire Q9.in→Q8.out and Q10.in→Q9.out, remove deadends Q8.in→x and Q9.out→x.",
+        "next_step": "Feed plan to me-heart-wire.py cycle, then verify final loops complete.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "dream-20260714-021547",
+        "timestamp": "2026-07-14T02:15:47.223086"
+      },
+      "content": "**What** · Ran Maze-From-End Frame on HEART blockages Q8, Q9, Q10 using finished state as start, found forward path: Q8→Q10→Q9 is blocked, need rewire link Q9.in→Q8.out and Q10.in→Q9.out. · **Why** · Hermes assigned reverse-chaining from finished state to identify minimal path; blockages break sequence, so patching with two cross-links restores forward flow. · **Result** · Minimal rewiring plan: add wire Q9.in→Q8.out and Q10.in→Q9.out, remove deadends Q8.in→x and Q9.out→x. · **Next** · Feed plan to me-heart-wire.py cycle, then verify final loops complete. · **Links** ·  · **Cycle** · dream-20260714-021547",
+      "updated_at": "2026-07-14T02:15:47.223086"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-14T02:14:04.899570"
+    "checked_at": "2026-07-14T02:19:05.400005"
   },
-  "block_count": 30,
-  "updated_at": "2026-07-14T00:30:08.492219",
-  "generated_at": "2026-07-14T06:14:04Z"
+  "block_count": 31,
+  "updated_at": "2026-07-14T02:15:47.223086",
+  "generated_at": "2026-07-14T06:19:05Z"
 }
