@@ -742,15 +742,37 @@
         }
       ],
       "updated_at": "2026-07-14T00:30:04.993676"
+    },
+    {
+      "id": "dd8002db0563",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "prototyping",
+        "source": "hermes-deepseek-fill",
+        "action": "Extracted 'maze-from-end' frame logic from issue #55591 and transcribed blockage-resolution heuristic into a runnable Python stub.",
+        "why": "Hermes assigned P0 to turn conceptual maze frame into executable logic for tomorrow's heart test; #55591 maps to unfinished core and curiosity arm is best to prototype fresh.",
+        "result": "Python stub `solve_maze_from_end.py` with blockage-resolution heuristic (backtrack on dead-end, update visited set) created and validated against minimal example.",
+        "next_step": "Run stub against heart test harness, then integrate with brother-direct core if passes.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "curiosity-20260714-020021",
+        "timestamp": "2026-07-14T02:00:21.468457"
+      },
+      "content": "**What** · Extracted 'maze-from-end' frame logic from issue #55591 and transcribed blockage-resolution heuristic into a runnable Python stub. · **Why** · Hermes assigned P0 to turn conceptual maze frame into executable logic for tomorrow's heart test; #55591 maps to unfinished core and curiosity arm is best to prototype fresh. · **Result** · Python stub `solve_maze_from_end.py` with blockage-resolution heuristic (backtrack on dead-end, update visited set) created and validated against minimal example. · **Next** · Run stub against heart test harness, then integrate with brother-direct core if passes. · **Links** ·  · **Cycle** · curiosity-20260714-020021",
+      "updated_at": "2026-07-14T02:00:21.468457"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-14T01:59:03.103219"
+    "checked_at": "2026-07-14T02:04:03.643094"
   },
-  "block_count": 30,
-  "updated_at": "2026-07-14T00:30:04.993685",
-  "generated_at": "2026-07-14T05:59:03Z"
+  "block_count": 31,
+  "updated_at": "2026-07-14T02:00:21.468457",
+  "generated_at": "2026-07-14T06:04:03Z"
 }
