@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-14T00:06:26Z",
+  "generated_at": "2026-07-14T00:21:43Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator per #55603 blueprint, shipping the me-heart-wire.py step to finalize heart wiring order.",
-      "why": "Brother direct in #55589 says heart should be finished and tested; #55603 is the immediate next code step to complete the heart wiring order, which is P0 brother-direct.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-07-11T09:27:46.210174"
-    },
     {
       "arm": "code",
       "task": "Execute me-heart-wire.py and verify Q4 wire-order orchestrator output against blueprint.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 40,
       "timestamp": "2026-07-13T20:06:26.581821"
+    },
+    {
+      "arm": "research",
+      "task": "From the 'brother direct' maze-from-end frame (#55591), extract the exact blockage type and proposed maze-reversal strategy, then map it onto the heart-night-loop-plan v2 (#55589) timeline to verify the 'finished by tomorrow' condition.",
+      "why": "The most recent brother-direct (P0) gives a concrete problem-solving frame (maze-from-end). The research arm can correlate it with the heart-night-loop-plan to ensure the blockage is resolved before the deadline. This directly supports the identity-tier command 'heart should be finished by tomorrow and tested'.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 8,
+      "timestamp": "2026-07-13T20:21:43.713918"
     }
   ]
 }
