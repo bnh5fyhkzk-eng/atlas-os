@@ -976,15 +976,37 @@
       },
       "content": "Overnight code recap · last 6h · · #60350 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-07-14 04:45:01 · size=618421B · brother+Atlas joint state · CONTENT",
       "updated_at": "2026-07-14T04:56:20.080077"
+    },
+    {
+      "id": "50ea51fc44e0",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "action": "reads Q4 orchestrator plan from wire protocol and appends next HEART wire-order step: deploy secure attestation stub for firmware handshake",
+        "why": "Hermes assigned P0 to continue HEART progress after shipped step; plan indicates next wire-order requires attestation stub to secure hardware-software binding before advancing wire scheduler.",
+        "result": "patch applied to me-heart-wire.py: new `_wire_attest()` method added, ordered after `_wire_handshake()` in step sequence; local test passes.",
+        "next_step": "push me-heart-wire.py to shared repo and notify Hermes for integration test with Q4 simulator",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260714-053553",
+        "timestamp": "2026-07-14T05:35:53.186320"
+      },
+      "content": "**What** · reads Q4 orchestrator plan from wire protocol and appends next HEART wire-order step: deploy secure attestation stub for firmware handshake · **Why** · Hermes assigned P0 to continue HEART progress after shipped step; plan indicates next wire-order requires attestation stub to secure hardware-software binding before advancing wire scheduler. · **Result** · patch applied to me-heart-wire.py: new `_wire_attest()` method added, ordered after `_wire_handshake()` in step sequence; local test passes. · **Next** · push me-heart-wire.py to shared repo and notify Hermes for integration test with Q4 simulator · **Links** ·  · **Cycle** · code-20260714-053553",
+      "updated_at": "2026-07-14T05:35:53.186320"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-14T05:34:36.353129"
+    "checked_at": "2026-07-14T05:39:36.987562"
   },
-  "block_count": 30,
-  "updated_at": "2026-07-14T04:56:20.080091",
-  "generated_at": "2026-07-14T09:34:36Z"
+  "block_count": 31,
+  "updated_at": "2026-07-14T05:35:53.186320",
+  "generated_at": "2026-07-14T09:39:36Z"
 }
