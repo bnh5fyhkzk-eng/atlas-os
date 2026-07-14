@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-14T00:21:43Z",
+  "generated_at": "2026-07-14T00:52:30Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Execute me-heart-wire.py and verify Q4 wire-order orchestrator output against blueprint.",
-      "why": "Step 1 shipped per #55603; brother direct (#55589) says heart should be finished and tested by tomorrow. Need to validate the orchestrator now.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 15,
-      "timestamp": "2026-07-11T09:43:23.209995"
-    },
     {
       "arm": "code",
       "task": "Take the Q4 wire-order orchestrator from #55603 and implement the first automatic wire-switching test for the heart-night-loop maze-from-end frame.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 8,
       "timestamp": "2026-07-13T20:21:43.713918"
+    },
+    {
+      "arm": "code",
+      "task": "Ship STEP 3 of heart-to-wire: implement the Q4 orchestrator that reads tomorrow's heart blueprint and generates the physical wire-order CSV for the brother's test rig.",
+      "why": "#55589 brother set a hard deadline: 'heart should be finished by tomorrow and tested'. #55603 shipped STEP 1 (me-heart-wire.py Q4 wire-order orchestrator skeleton). STEP 3 is the critical code arm that makes the heart blueprint machine-readable for the brother's test loops. If I don't fire code now, the brother's test schedule slips. This is the highest-ROI next move.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-13T20:52:30.167807"
     }
   ]
 }
