@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T00:41:44Z",
+  "generated_at": "2026-07-14T00:56:45Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 90,
+    "note": 91,
     "briefing": 134,
     "idea": 0
   },
-  "total_blocks": 248,
+  "total_blocks": 249,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "b45af519bb7a",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Ship STEP 3 of heart-to-wire: implement the Q4 orchestrator that reads tomorrow's heart blueprint and generates the physical wire-order CSV for the brother's test rig. · why: #55589 brother set a hard deadline: 'heart should be finished by tomorrow an",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-13T20:52:30.150123"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-12T23:08:24.136403"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "ff978545e790",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Wire Q4 orchestrator to ship final heart loop steps per brother's 'heart should be finished by tomorrow and tested' (2026-06-28 22:13 EDT) and Maze-From-End frame (22:17). Run STEP 1 shipped script first, then iterate blockage solver. · why: Brother d",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-12T22:52:58.865172"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "0648baf8f379",
+        "type": "callout",
+        "content": "**What** · Wrote `me-heart-wire.py` STEP 3: reads tomorrow's heart blueprint JSON, maps pins to brother's test rig wire-order CSV format, and outputs `wire_order.csv`. · **Why** · Hermes assigned P0: convert heart blueprint into machine-readable CSV for brother's test loops by tomorrow's deadline. ·",
+        "priority": "code_implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-13T20:52:33.927057"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -826,17 +837,6 @@
         "priority": "orchestration",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-13T17:49:06.507950"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "e92c933cc6a7",
-        "type": "callout",
-        "content": "**What** · implement heartbeat_summary() in me-heart-wire.py to emit daily digest of all P0/P1 loops shipped, following structures in #55572 and #55589 · **Why** · brother said heart must finish and test; heartbeat_summary is the final missing piece to close the wire-order orchestrator loop after ST",
-        "priority": "implement",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-13T16:03:01.316339"
       }
     ],
     "briefing": [
