@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-07-14T21:28:32Z",
-  "total_items_scored": 131,
+  "generated_at": "2026-07-14T21:38:32Z",
+  "total_items_scored": 132,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script, integrating the heart-night-loop plan v2 (#55589) and maze-from-end frame (#55591) to ship the first working heart-m",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Step 2: implement Q4 wire-order orchestrator as per #55603 blueprint \u2014 integrate brother's maze-from-end frame into next loop test \u00b7 why: Brother direct #55603 is the highest active P0: Step ",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-14T08:08:45.804790"
-    },
-    {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Compile a compact block-maze visual for the current brother-identified blockage in heart wiring, using the maze-from-end frame (#55591). \u00b7 why \u00b7 Brother direct at #55591 instructs to treat blockages as a maze from the end; research arm can rapidly synthesize the visual logic to unblock next wire ordering for Q4 orchestrator.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 12,
-      "score": 10.0,
-      "updated_at": "2026-07-14T10:11:11.024898",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-07-14T08:24:24.401728"
     },
     {
       "arm": "code",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-07-14T10:26:30.924937",
       "use_skill": "none"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script, integrating the heart-night-loop plan v2 (#55589) and maze-from-end frame (#55591) to ship the first working heart-m",
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Analyze brother's direct 'maze from end frame' and 'heart night-loop plan v2' canons to extract the exact maze-start coordinates and loop schedule for heart finalization. \u00b7 why \u00b7 Brother gave direct, high-arousal instructions that the heart must be finished by tomorrow and tested, and to treat blockages as mazes from the end. Research arm must decode these into executable steps before any code or infra arm can fire meaningfully.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 15,
       "score": 10.0,
-      "updated_at": "2026-07-14T08:08:45.804790"
-    },
+      "updated_at": "2026-07-14T10:41:47.323817",
+      "use_skill": "brain-rrf"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-14T11:42:41.696490"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the final heart loops per NotebookLM blueprint and brother's answers. \u00b7 why: Brother direct in #55589 ",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-14T11:57:55.594057"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
