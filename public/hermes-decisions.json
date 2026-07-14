@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-14T12:08:45Z",
+  "generated_at": "2026-07-14T12:24:24Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Merge me-heart-wire.py step 1 output into Heart-Loop integration test; confirm final 4 heart loops execute without stall in NotebookLM simulation.",
-      "why": "Brother direct (#55589) says heart should be finished and tested. Code arm just shipped step 1 wire-order orchestrator (#55603). The highest leverage P0 action now is to close the heart integration test \u2014 if loops stall, we iterate now; if not, identity tier advances.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 45,
-      "timestamp": "2026-07-12T06:34:09.208645"
-    },
     {
       "arm": "code",
       "task": "Implement the final loop shipping logic for HEART based on the Q4 wire-order orchestrator from #55603, integrating the maze-from-end frame from #55591.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-07-14T08:08:45.821343"
+    },
+    {
+      "arm": "code",
+      "task": "Step 2: implement Q4 wire-order orchestrator as per #55603 blueprint \u2014 integrate brother's maze-from-end frame into next loop test",
+      "why": "Brother direct #55603 is the highest active P0: Step 1 shipped, Step 2 must execute immediately to keep heart-night-loop on schedule (HEART NIGHT-LOOP PLAN v2). Maze-from-end frame is the key blockage-resolving pattern. Code arm is the only arm that can materialise the orchestrator wire-logic; all other arms are observing/planning, not building.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-14T08:24:24.418099"
     }
   ]
 }
