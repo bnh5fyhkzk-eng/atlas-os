@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-14T22:03:22Z",
+  "generated_at": "2026-07-14T22:18:39Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator per #55603 blueprint, shipping the me-heart-wire.py module to complete brother's direct heart-finish deadline.",
-      "why": "P0 because brother directly said 'heart should be finished by tomorrow and tested' and #55603 is the next concrete shipping step; code arm can execute the orchestrator wiring now.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-07-12T17:15:45.444579"
-    },
     {
       "arm": "code",
       "task": "Run integration tests for me-heart-wire.py Q4 wire-order orchestrator to verify step 1 shipping.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-14T18:03:22.935235"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603 into the me-heart-wire.py script, ensuring the 4 final loops from #55572 are correctly sequenced per the NotebookLM blueprint.",
+      "why": "Brother directly said 'heart should be finished by tomorrow and tested' (#55589) and the Q4 orchestrator is the next concrete step to ship the heart-mind boundary (#55600). Code arm is the only one that can execute this integration.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-14T18:18:39.657157"
     }
   ]
 }
