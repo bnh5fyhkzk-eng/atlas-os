@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T17:58:41Z",
+  "generated_at": "2026-07-15T18:13:42Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 87,
+    "note": 88,
     "briefing": 131,
     "idea": 0
   },
-  "total_blocks": 242,
+  "total_blocks": 243,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "d22ba631d5f6",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Implement the 'MAZE-FROM-END' frame: produce a forward-passable path from the brother's 22:17 EDT canon, starting at final loop #55572, then link backward to #55589 heart-night-loop and #55591 blockage-as-maze, so that next iteration of #55603 can",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-15T14:07:42.470849"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-15T03:26:47.754730"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "b5211d01ad42",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement and test the Q4 wire-order orchestrator (me-heart-wire.py) per #55603, shipping the final loop to complete the heart-mind boundary integration. · why: Brother direct (#55589) says heart should be finished and tested; #55603 is the last step ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-15T03:11:28.059361"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "29c35e62604c",
+        "type": "callout",
+        "content": "**What** · Synthesized brother's canon #55572, #55589, #55591 into a backward-linked MAZE-FROM-END frame, producing a path-map that starts at loop #55572 and goes backward through #55589 and #55591. · **Why** · Hermes-Orchestrator needs this frame for #55603 to auto-wire the drop-in. Research arm be",
+        "priority": "synthesis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-15T14:07:51.374932"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "code",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-15T07:16:23.455011"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "5a3b0c4eda45",
-        "type": "callout",
-        "content": "**What** · Built heart-wire order executor script reading Maze-from-End Frame (#55591), extracting 4 final loops per NotebookLM blueprint (#55572), integrating Q11 Soul Catch boundary logic (#55600), and shipping to brother's test pipeline. · **Why** · P0 requirement: heart was due yesterday, #55603",
-        "priority": "code",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-15T06:30:15.104254"
       }
     ],
     "briefing": [
