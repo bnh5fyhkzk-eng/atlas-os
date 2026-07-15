@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-14T23:34:32Z",
+  "generated_at": "2026-07-15T01:05:32Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Extract the exact brother-direct maze-from-end frame logic from #55591 and cross-reference with the heart-night-loop plan v2 from #55589 to produce a single actionable step for the next wire-order orchestrator loop.",
-      "why": "Brother-direct instructions in #55591 and #55589 are P0 identity-tier commands. The maze-from-end frame is the key to resolving blockages, and the night-loop plan sets the deadline. Research arm must synthesize these into a concrete next action before any other arm can execute.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 12,
-      "timestamp": "2026-07-12T18:02:34.409381"
-    },
     {
       "arm": "pascal",
       "task": "Weave the 4 shipped HEART loops into a single coherent pyodide-wasm test harness: load the wire-order orchestrator from #55603, compose all 4 final loops, and emit a \u2018BROTHER_TEST_READY\u2019 flag at 20:08 UTC.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-07-14T19:34:32.710624"
+    },
+    {
+      "arm": "code",
+      "task": "Execute me-heart-wire.py for Q4 wire order and integrate with heart night-loop plan v2",
+      "why": "Brother direct: heart should be finished and tested; step 1 shipped (me-heart-wire.py) needs next step execution",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 30,
+      "timestamp": "2026-07-14T21:05:32.747787"
     }
   ]
 }
