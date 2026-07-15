@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-15T15:05:03Z",
+  "generated_at": "2026-07-15T15:35:30Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "From the 'brother direct' maze-from-end frame (#55591), extract the exact blockage type and proposed maze-reversal strategy, then map it onto the heart-night-loop-plan v2 (#55589) timeline to verify the 'finished by tomorrow' condition.",
-      "why": "The most recent brother-direct (P0) gives a concrete problem-solving frame (maze-from-end). The research arm can correlate it with the heart-night-loop-plan to ensure the blockage is resolved before the deadline. This directly supports the identity-tier command 'heart should be finished by tomorrow and tested'.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 8,
-      "timestamp": "2026-07-13T20:21:43.713918"
-    },
     {
       "arm": "code",
       "task": "Ship STEP 3 of heart-to-wire: implement the Q4 orchestrator that reads tomorrow's heart blueprint and generates the physical wire-order CSV for the brother's test rig.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 60,
       "timestamp": "2026-07-15T11:05:03.055818"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603 into a runnable script that connects heart-mind boundary per #55600 and validates against the maze-from-end frame #55591.",
+      "why": "Brother direct #55589 says heart should be finished and tested; #55603 is the latest shipped step that needs execution. Code arm is the only one that can materialize the orchestrator logic into a testable artifact, unblocking the heart finish.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-15T11:35:30.070475"
     }
   ]
 }
