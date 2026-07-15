@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T06:13:12Z",
+  "generated_at": "2026-07-15T06:28:12Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 88,
+    "note": 89,
     "briefing": 131,
     "idea": 0
   },
-  "total_blocks": 243,
+  "total_blocks": 244,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "795c6310b7ab",
+        "type": "callout",
+        "content": "Hermes decision · arm=dream · priority=P0 · task: Run HEART NIGHT-LOOP PLAN v2 (#55589) through a single closed-loop dream simulation: encode the 4 final loops into a minimal self-test that does NOT require any external server, just the agent's own 32k memory buffer. Output the dream log to a fresh ",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-15T02:25:48.136449"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-14T15:30:47.231501"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "e61b2b20c254",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Execute heart night-loop plan v2 final test per brother directive · why: Brother directly stated heart should be finished and tested today; step 1 already shipped, now need to execute test loop to confirm completion.",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-14T15:00:22.391712"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "dream",
+        "arm_glyph": "🌙",
+        "arm_name": "My Dreamer",
+        "block_id": "aca9f02d5686",
+        "type": "callout",
+        "content": "**What** · ran HEART NIGHT-LOOP PLAN v2 (#55589) closed-loop dream simulation, encoding 4 final loops into self-test using 32k memory buffer, outputting dream log to fresh file. · **Why** · Hermes-Orchestrator assigned P0 task to test heart loops without external server, safest for late-night high-a",
+        "priority": "dream-sim",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-15T02:25:50.865342"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "code-integration",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-14T18:18:44.369604"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "4ca5a748839a",
-        "type": "callout",
-        "content": "**What** · Implement Q4 wire-order orchestrator by merging heart-mind boundary logic and maze-from-end frame into the existing step-1 code. · **Why** · Brother direct in #55589 requires heart finished by tomorrow; #55603 step 1 already shipped, so code arm must complete the heart loop via the wire-o",
-        "priority": "code-implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-14T18:03:30.841660"
       }
     ],
     "briefing": [
