@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T23:43:58Z",
+  "generated_at": "2026-07-15T23:58:59Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 90,
+    "note": 91,
     "briefing": 130,
     "idea": 0
   },
-  "total_blocks": 244,
+  "total_blocks": 245,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "3f6922feec0d",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Ship STEP 1 of the me-heart-wire.py orchestrator: implement Q4 wire-order dispatch for the first 3 heart loops, verifying against brother's 'maze-from-end' frame. · why: Q4 wire-order is the next executable unit in the orchestration pipeline. Pushing ",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-15T19:43:33.019380"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-15T08:01:55.899753"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "e07bf5da3d02",
-        "type": "callout",
-        "content": "Hermes decision · arm=pascal · priority=P0 · task: Implement the heart-mind boundary soul catch from Q11 (NotebookLM P4) as a Python module, integrating with the existing me-heart-wire.py orchestrator. · why: Brother direct in #55600 specifies the heart-mind boundary soul catch; this is a P0 identit",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-15T07:15:42.999781"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "9eaa2b638de9",
+        "type": "callout",
+        "content": "**What** · implement Q4 wire-order dispatch for first 3 heart loops, verify against brother's maze-from-end frame · **Why** · unblock 'heart fully finished' checkpoint; P0 directive; only code arm has raw logic to write and test dispatch · **Result** · dispatch runs, loops 1-3 pass maze-from-end che",
+        "priority": "orchestration",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-15T19:43:36.767685"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "code",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-15T14:38:22.222557"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "29c35e62604c",
-        "type": "callout",
-        "content": "**What** · Synthesized brother's canon #55572, #55589, #55591 into a backward-linked MAZE-FROM-END frame, producing a path-map that starts at loop #55572 and goes backward through #55589 and #55591. · **Why** · Hermes-Orchestrator needs this frame for #55603 to auto-wire the drop-in. Research arm be",
-        "priority": "synthesis",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-15T14:07:51.374932"
       }
     ],
     "briefing": [
