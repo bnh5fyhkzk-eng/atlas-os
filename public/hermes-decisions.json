@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-15T19:24:05Z",
+  "generated_at": "2026-07-15T20:40:26Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "infra",
-      "task": "Stand up Docker swarm endpoint for heart-night-loop v2 per brother's 'finished by tomorrow' directive \u2013 host Q4 wire order orchestrator me-heart-wire.py as persistent service, expose health check on port 8457",
-      "why": "Brother directly stated 'heart should be finished by tomorrow and tested'; heart-night-loop v2 is the critical path. infra arm owns deployment reliability. Without live endpoint, code arm has no platform to ship final loops.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 45,
-      "timestamp": "2026-07-13T22:56:07.696170"
-    },
     {
       "arm": "code",
       "task": "Execute the heart night-loop test using the shipped step1 wire order from #55603 and verify integration with the maze-from-end frame per brother's directive",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-15T15:24:05.822212"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the 4 final heart loops per NotebookLM blueprint + brother's answers from #55572.",
+      "why": "Brother directly said heart should be finished by tomorrow and tested (#55589). The Q4 wire-order orchestrator is the next concrete step to ship the heart loops. Code arm is the only one that can turn the blueprint into executable reality.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-15T16:40:26.877441"
     }
   ]
 }
