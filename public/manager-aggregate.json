@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T02:13:02Z",
+  "generated_at": "2026-07-15T02:28:02Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 95,
+    "note": 96,
     "briefing": 130,
     "idea": 0
   },
-  "total_blocks": 250,
+  "total_blocks": 251,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "1c3311c29399",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement heart night-loop v2: integrate Q4 wire-order orchestrator with maze-from-end frame logic · why: Brother directed heart finished by tomorrow and tested; last shipped step #55603 is the Q4 wire-order orchestrator, so next is to combine it with",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-14T22:21:59.750080"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-14T11:42:41.696490"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "33095accfe4a",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Analyze the maze-from-end frame logic from #55591 and map it to the heart-mind boundary architecture from #55600 for identifying and resolving blockages · why: Brother direct instruction on maze-from-end frame (#55591) combined with the soul catch",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-14T11:27:26.407991"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "3d846c8b677e",
+        "type": "callout",
+        "content": "**What** · integrated Q4 wire-order orchestrator with maze-from-end frame logic in heart night-loop v2 · **Why** · Hermes assigned P0: combine shipped step #55603 (Q4 orchestrator) with frame #55591 (maze-from-end) to complete night-loop plan #55589 · **Result** · merged wire-order routing into reve",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-14T22:22:06.518645"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "integration",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-14T17:17:23.780522"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "2fb353cb0a80",
-        "type": "callout",
-        "content": "**What** · Write the code to connect me-heart-wire.py output to NotebookLM blueprint, linking the heart's Q4 data flow. · **Why** · Hermes tasked to close Q4 loop; prior orchestator shipped, need final wire to make heart testable this cycle. · **Result** · Integration wire cut – heart's output feeds",
-        "priority": "integration",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-14T17:02:07.425531"
       }
     ],
     "briefing": [
