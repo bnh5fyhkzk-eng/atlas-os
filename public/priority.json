@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-07-15T03:08:52Z",
+  "generated_at": "2026-07-15T03:18:53Z",
   "total_items_scored": 129,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement heart night-loop plan v2 per brother's direct instructions (heart should be finished by tomorrow and tested), continuing from STEP 1 shipped (me-heart-wire.py) and incorporating maz",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator from #55603 to ship the first working me-heart-wire.py loop \u00b7 why: Brother direct in #55589 says heart should be finished by tomorrow and tested; #556",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-14T13:13:50.320685"
+      "updated_at": "2026-07-14T13:29:01.416964"
     },
     {
       "arm": "code",
@@ -34,22 +34,11 @@
       "category": "launchagents",
       "priority": "P1",
       "source": "backfill",
-      "score": 8.93,
+      "score": 8.84,
       "updated_at": "2026-07-14T18:00:04.120549"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement heart night-loop plan v2 per brother's direct instructions (heart should be finished by tomorrow and tested), continuing from STEP 1 shipped (me-heart-wire.py) and incorporating maz",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-07-14T13:13:50.320685"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -148,6 +137,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-14T16:46:46.627807"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the final data-linking step between me-heart-wire.py output and the NotebookLM blueprint to close the heart's Q4 loop \u00b7 why: The immediate prior cannon #55603 shipped the orchestrat",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-14T17:02:01.381629"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
