@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-16T22:36:20Z",
+  "generated_at": "2026-07-16T22:51:40Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the next step in heart wire-order orchestrator based on Q4 blueprint, following the 'me-heart-wire.py' pattern from step 1 shipped.",
-      "why": "Brother-direct priority to finish heart by tomorrow, and step 1 was just shipped; code arm is needed to continue the implementation.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-07-14T19:34:32.710624"
-    },
     {
       "arm": "code",
       "task": "Execute me-heart-wire.py for Q4 wire order and integrate with heart night-loop plan v2",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 30,
       "timestamp": "2026-07-16T18:36:20.935689"
+    },
+    {
+      "arm": "code",
+      "task": "Implement me-heart-wire.py Q4 wire-order orchestrator per #55603 blueprint, shipping the final loop order for heart-mind boundary test.",
+      "why": "Brother direct in #55589 says heart should be finished and tested; #55603 is the exact step to wire the orchestrator. Code arm is the only one that can ship this executable artifact now.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-16T18:51:40.234514"
     }
   ]
 }
