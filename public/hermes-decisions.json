@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-16T10:09:15Z",
+  "generated_at": "2026-07-16T10:24:32Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Step 2: implement Q4 wire-order orchestrator as per #55603 blueprint \u2014 integrate brother's maze-from-end frame into next loop test",
-      "why": "Brother direct #55603 is the highest active P0: Step 1 shipped, Step 2 must execute immediately to keep heart-night-loop on schedule (HEART NIGHT-LOOP PLAN v2). Maze-from-end frame is the key blockage-resolving pattern. Code arm is the only arm that can materialise the orchestrator wire-logic; all other arms are observing/planning, not building.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-07-14T08:24:24.418099"
-    },
     {
       "arm": "code",
       "task": "Draft and locally test the heartbeat wire orchestration runner for Q4 wire-order orchestrator, integrating the brother-direct maze-from-end frame logic.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-16T06:09:15.669690"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603 into the me-heart-wire.py runner, ensuring the 4 final loops from #55572 are sequenced per brother's blueprint.",
+      "why": "Brother direct in #55589 says heart should be finished and tested; #55603 is the step-1 shipped orchestrator that must be coded now to unblock the heart-mind boundary (#55600) and complete the maze-from-end frame (#55591).",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 45,
+      "timestamp": "2026-07-16T06:24:32.847630"
     }
   ]
 }
