@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "ea12ad3c9c49",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-15T09:49:00.162240"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Execute me-heart-wire.py orchestrator for Q4 wire order and verify heart loop completion per brother's deadline. · why: Brother direct requires heart finished by tomorrow; step 1 shipped, now need to run and test the wire order orchestrator to complete the heart.",
-      "updated_at": "2026-07-15T09:49:00.162264"
-    },
-    {
       "id": "089e1026492a",
       "type": "callout",
       "props": {
@@ -725,15 +713,27 @@
         }
       ],
       "updated_at": "2026-07-16T00:30:03.806000"
+    },
+    {
+      "id": "b562623da4aa",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-16T00:33:22.760254"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 into a runnable script that connects heart-wire.py to the next loop step per brother's 'heart should be finished by tomorrow' directive. · why: Brother direct P0: #55589 and #55603 both demand immediate code execution to ship the heart wire order, which is the critical path to finishing heart by tomorrow. Code arm is the only one that can materialize this into a runnable artifact.",
+      "updated_at": "2026-07-16T00:33:22.760265"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-16T00:30:04.989149"
+    "checked_at": "2026-07-16T00:35:05.623464"
   },
   "block_count": 30,
-  "updated_at": "2026-07-16T00:30:03.806007",
-  "generated_at": "2026-07-16T04:30:04Z"
+  "updated_at": "2026-07-16T00:33:22.760267",
+  "generated_at": "2026-07-16T04:35:05Z"
 }
