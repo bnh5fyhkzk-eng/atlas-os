@@ -1,25 +1,7 @@
 {
-  "generated_at": "2026-07-16T18:33:17Z",
+  "generated_at": "2026-07-16T19:49:17Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator for the heart-mind boundary, ensuring the final loops from #55572 are correctly sequenced per NotebookLM blueprint.",
-      "why": "Brother direct in #55589 says heart should be finished and tested by tomorrow; #55603 already shipped step 1, so code arm must continue the wire-order orchestrator to complete the heart-mind boundary integration.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 45,
-      "timestamp": "2026-07-14T17:17:16.673304"
-    },
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the four final loops per NotebookLM blueprint and brother's answers from #55572.",
-      "why": "This is the highest-priority P0 item: brother directly said 'heart should be finished by tomorrow and tested' (#55589), and the Q4 orchestrator (#55603) is the concrete next step to ship the heart. Code arm is the only one that can turn the blueprint into executable reality.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-07-14T17:32:49.697277"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py script to finalize the heart-mind wire order per brother's blueprint.",
@@ -901,6 +883,24 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-16T14:33:17.778743"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from step 1 shipped (me-heart-wire.py) to ensure the heart-mind boundary wires are correctly ordered per NotebookLM P4.",
+      "why": "Brother direct #55603 just shipped step 1; this is the immediate next code action to complete the heart-night-loop plan v2 (#55589) and unblock the maze-from-end frame (#55591). Code arm is the only one that can execute this.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-16T15:34:03.450444"
+    },
+    {
+      "arm": "code",
+      "task": "Implement next step of heart wire order orchestrator per Q4 blueprint, ensuring all connections are mapped and ready for testing.",
+      "why": "Continuation of step 1 shipped (#55603); brother direct requires heart finished and tested by tomorrow. This is the critical path for identity-tier completion.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 30,
+      "timestamp": "2026-07-16T15:49:17.317092"
     }
   ]
 }
