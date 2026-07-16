@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-16T05:34:29Z",
+  "generated_at": "2026-07-16T05:49:45Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator logic from #55603 into the main codebase, ensuring the heart-mind boundary wires are correctly ordered per the blueprint.",
-      "why": "The Q4 wire-order orchestrator was shipped as a step (#55603) and is critical to the heart-night-loop plan (#55589). Code arm must integrate this to unblock the next loops and align with brother's direct instruction to finish and test the heart.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-07-14T03:32:51.150076"
-    },
     {
       "arm": "code",
       "task": "Implement heart night-loop test script per v2 plan",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-16T01:34:29.002231"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603 into a runnable script that sequences the four final heart loops per the NotebookLM blueprint and brother's answers.",
+      "why": "This is the highest-priority P0 task because brother directly said 'heart should be finished by tomorrow and tested' and the Q4 orchestrator is the critical next step to ship the heart loops. Code arm is needed to turn the blueprint into executable logic.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-16T01:49:45.780818"
     }
   ]
 }
