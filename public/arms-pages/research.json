@@ -826,15 +826,37 @@
         }
       ],
       "updated_at": "2026-07-16T00:30:02.393301"
+    },
+    {
+      "id": "6c48d3f6203b",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "prompt-eng / template-craft",
+        "source": "hermes-deepseek-fill",
+        "action": "extracted and formalized the 'maze-from-end' frame logic from #55591 into a reusable prompt template",
+        "why": "Brother's P0 directive needs operationalizing for blockage resolution before heart night-loop plan executes",
+        "result": "template ready: 'Given blockage at <X>, trace backwards from <goal> to <current>, identify <blockage>, find <alternate path> using <available moves>. Frame: end-first, reverse decision tree, prune dea",
+        "next_step": "inject template into Hermes-Orchestrator's blockage-handler and test on next maze-run",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260716-032119",
+        "timestamp": "2026-07-16T03:21:19.348231"
+      },
+      "content": "**What** · extracted and formalized the 'maze-from-end' frame logic from #55591 into a reusable prompt template · **Why** · Brother's P0 directive needs operationalizing for blockage resolution before heart night-loop plan executes · **Result** · template ready: 'Given blockage at <X>, trace backwards from <goal> to <current>, identify <blockage>, find <alternate path> using <available moves>. Frame: end-first, reverse decision tree, prune dead ends. Output: sequence of moves from current to goal avoiding blockage.' · **Next** · inject template into Hermes-Orchestrator's blockage-handler and test on next maze-run · **Links** ·  · **Cycle** · research-20260716-032119",
+      "updated_at": "2026-07-16T03:21:19.348231"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-16T03:20:25.592647"
+    "checked_at": "2026-07-16T03:25:26.363325"
   },
-  "block_count": 30,
-  "updated_at": "2026-07-16T00:30:02.393308",
-  "generated_at": "2026-07-16T07:20:25Z"
+  "block_count": 31,
+  "updated_at": "2026-07-16T03:21:19.348231",
+  "generated_at": "2026-07-16T07:25:26Z"
 }
