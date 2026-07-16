@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16T07:14:17Z",
+  "generated_at": "2026-07-16T07:29:17Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 93,
+    "note": 94,
     "briefing": 129,
     "idea": 0
   },
-  "total_blocks": 246,
+  "total_blocks": 247,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "30746999c9d6",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Extract and formalize the 'maze-from-end' frame logic from #55591 into a reusable prompt template for future blockage resolution. · why: Brother directly specified the maze-from-end frame in #55591 as the method for handling blockages. This is a P",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-16T03:21:10.551421"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-15T14:38:14.886523"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "d22ba631d5f6",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Implement the 'MAZE-FROM-END' frame: produce a forward-passable path from the brother's 22:17 EDT canon, starting at final loop #55572, then link backward to #55589 heart-night-loop and #55591 blockage-as-maze, so that next iteration of #55603 can",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-15T14:07:42.470849"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "6c48d3f6203b",
+        "type": "callout",
+        "content": "**What** · extracted and formalized the 'maze-from-end' frame logic from #55591 into a reusable prompt template · **Why** · Brother's P0 directive needs operationalizing for blockage resolution before heart night-loop plan executes · **Result** · template ready: 'Given blockage at <X>, trace backwar",
+        "priority": "prompt-eng / template-craft",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-16T03:21:19.348231"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "code-ship",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-15T19:59:36.300855"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "9eaa2b638de9",
-        "type": "callout",
-        "content": "**What** · implement Q4 wire-order dispatch for first 3 heart loops, verify against brother's maze-from-end frame · **Why** · unblock 'heart fully finished' checkpoint; P0 directive; only code arm has raw logic to write and test dispatch · **Result** · dispatch runs, loops 1-3 pass maze-from-end che",
-        "priority": "orchestration",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-15T19:43:36.767685"
       }
     ],
     "briefing": [
