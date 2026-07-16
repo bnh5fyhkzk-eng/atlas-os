@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-16T10:39:44Z",
+  "generated_at": "2026-07-16T11:40:38Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Ship me-heart-wire.py to /active/P0/ and verify it handles heart-wire ordering per Q4 spec for brother's review.",
-      "why": "P0 because brother direct 'heart finished by tomorrow' + latest canon #55589 and #55603 just shipped the wire-order orchestrator. Code arm must finalize the Python script to ensure heart-wire ordering aligns with NotebookLM heart blueprint (#55572, #55591 maze-from-end). This completes the critical path for brother's deadline.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 15,
-      "timestamp": "2026-07-14T09:10:25.575189"
-    },
     {
       "arm": "research",
       "task": "Compile a compact block-maze visual for the current brother-identified blockage in heart wiring, using the maze-from-end frame (#55591).",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-16T06:39:44.009150"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603 into a working prototype, ensuring heart-mind boundary logic per #55600 is respected.",
+      "why": "Brother directly shipped the orchestrator blueprint and HEART is at final-loop finish; code arm must materialize the wire-order to close the heart cycle before next brain cycle.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-16T07:40:38.145385"
     }
   ]
 }
