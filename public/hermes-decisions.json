@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-16T20:50:00Z",
+  "generated_at": "2026-07-16T21:35:34Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator from #55603, integrating the heart-mind boundary logic from #55600 and the maze-from-end frame from #55591.",
-      "why": "Brother direct in #55589 says heart should be finished and tested by tomorrow; #55603 already shipped step 1, so code arm must continue the wire-order orchestrator to complete the heart loop. This is the highest priority P0 because it's brother-direct and identity-tier.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-07-14T18:03:22.935235"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603 into the me-heart-wire.py script, ensuring the 4 final loops from #55572 are correctly sequenced per the NotebookLM blueprint.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-16T16:50:00.580917"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603 into a runnable script that sequences the 4 final heart loops per NotebookLM blueprint and brother's answers from #55572.",
+      "why": "This is the highest-priority P0 because brother directly said 'heart should be finished by tomorrow and tested' (#55589) and the Q4 orchestrator (#55603) is the critical next step to ship the heart loops. Code arm is needed to turn the blueprint into executable reality.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-16T17:35:34.456499"
     }
   ]
 }
