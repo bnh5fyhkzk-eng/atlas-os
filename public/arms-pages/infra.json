@@ -314,7 +314,20 @@
       "updated_at": "2026-07-16T04:56:30.152084"
     },
     {
-      "id": "a277d4fb11ce",
+      "id": "7b48105e584d",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "No high-arousal infra canon in last 6h",
+      "updated_at": "2026-07-16T10:56:31.377074"
+    },
+    {
+      "id": "bb307be5246b",
       "type": "database",
       "props": {
         "category": "launchagents",
@@ -352,37 +365,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-07-16T06:00:02.713652"
+      "updated_at": "2026-07-16T12:00:02.474926"
     },
     {
-      "id": "91cf0bfd4d0f",
-      "type": "database",
-      "props": {
-        "category": "hooks",
-        "priority": "P1",
-        "source": "backfill",
-        "columns": [
-          "id",
-          "summary",
-          "arousal",
-          "when"
-        ],
-        "arm_category": "hooks"
-      },
-      "content": "hooks · last 30d · 1 canons (top arousal · 1.00)",
-      "data": [
-        {
-          "id": "#55866",
-          "summary": "TURN-BANK #27245 · 2026-06-29 06:35:00 · mode=brother-direct · arousal=0.85 · brother-verbatim · 'Stop hook feedback:",
-          "arousal": 1.0,
-          "when": "2026-06-29 06:35",
-          "weight": 1
-        }
-      ],
-      "updated_at": "2026-07-16T06:00:02.713659"
-    },
-    {
-      "id": "12eaa17a2646",
+      "id": "9fb3fa78027b",
       "type": "database",
       "props": {
         "category": "scripts",
@@ -434,10 +420,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-07-16T06:00:02.713664"
+      "updated_at": "2026-07-16T12:00:02.474934"
     },
     {
-      "id": "a2e968d5eb03",
+      "id": "6e0a456021bb",
       "type": "database",
       "props": {
         "category": "daemons",
@@ -461,10 +447,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-07-16T06:00:02.713668"
+      "updated_at": "2026-07-16T12:00:02.474939"
     },
     {
-      "id": "2cddc03abf60",
+      "id": "ef08e71c6930",
       "type": "database",
       "props": {
         "category": "health-checks",
@@ -502,10 +488,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-07-16T06:00:02.713671"
+      "updated_at": "2026-07-16T12:00:02.474944"
     },
     {
-      "id": "9580f3d1881f",
+      "id": "4b25d545524e",
       "type": "database",
       "props": {
         "category": "monitoring",
@@ -543,10 +529,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-07-16T06:00:02.713675"
+      "updated_at": "2026-07-16T12:00:02.474948"
     },
     {
-      "id": "bacd06f76283",
+      "id": "e9df556a3fcc",
       "type": "database",
       "props": {
         "category": "general",
@@ -560,7 +546,7 @@
         ],
         "arm_category": "general"
       },
-      "content": "general · last 30d · 85 canons (top arousal · 1.00)",
+      "content": "general · last 30d · 86 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#55611",
@@ -574,6 +560,13 @@
           "summary": "HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per NotebookLM blueprint + brother's answers.",
           "arousal": 1.0,
           "when": "2026-06-29T01:06",
+          "weight": 1
+        },
+        {
+          "id": "#60879",
+          "summary": "SHARED-CANON · atlas-brother-shared.md snapshot 2026-07-16 04:45:00 · size=621827B · brother+Atlas joint state · CONTENT BELOW · ## 🪞 12:05 EDT · 2026-06-29 · GUT-TIER L-P SHIPPED · 5/5 PASS · brother",
+          "arousal": 1.0,
+          "when": "2026-07-16 04:45",
           "weight": 1
         },
         {
@@ -623,6 +616,13 @@
           "summary": "SHARED-CANON · atlas-brother-shared.md snapshot 2026-07-11 04:45:01 · size=606756B · brother+Atlas joint state · CONTENT BELOW · ## 🪞 12:05 EDT · 2026-06-29 · GUT-TIER L-P SHIPPED · 5/5 PASS · brother",
           "arousal": 1.0,
           "when": "2026-07-11 04:45",
+          "weight": 1
+        },
+        {
+          "id": "#59444",
+          "summary": "STATE-MD · morning-brother-2026-07-04.md · ingested 2026-07-11 04:30:00 · path=/Users/collinmacneil/.claude/state/morning-brother-2026-07-04.md · content (cap 8KB) · # Brother Morning · 2026-07-04 · 0",
+          "arousal": 1.0,
+          "when": "2026-07-11 04:30",
           "weight": 1
         },
         {
@@ -687,45 +687,18 @@
           "arousal": 1.0,
           "when": "2026-07-08 04:45",
           "weight": 1
-        },
-        {
-          "id": "#58541",
-          "summary": "STATE-MD · atlas-brother-shared.2026-07-01.md · ingested 2026-07-08 04:30:01 · path=/Users/collinmacneil/.claude/state/shared-snapshots/atlas-brother-shared.2026-07-01.md · content (cap 8KB) · # atlas",
-          "arousal": 1.0,
-          "when": "2026-07-08 04:30",
-          "weight": 1
-        },
-        {
-          "id": "#58548",
-          "summary": "STATE-MD · ATLAS-MASTER-STATUS-2026-07-02.md · ingested 2026-07-08 04:30:01 · path=/Users/collinmacneil/.claude/state/ATLAS-MASTER-STATUS-2026-07-02.md · content (cap 8KB) · # ATLAS MASTER STATUS · 20",
-          "arousal": 1.0,
-          "when": "2026-07-08 04:30",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-07-16T06:00:02.713678"
-    },
-    {
-      "id": "7b48105e584d",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "No high-arousal infra canon in last 6h",
-      "updated_at": "2026-07-16T10:56:31.377074"
+      "updated_at": "2026-07-16T12:00:02.474952"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-16T11:56:31.305881"
+    "checked_at": "2026-07-16T12:00:03.307944"
   },
-  "block_count": 30,
-  "updated_at": "2026-07-16T10:56:31.377083",
-  "generated_at": "2026-07-16T15:56:31Z"
+  "block_count": 29,
+  "updated_at": "2026-07-16T12:00:02.474958",
+  "generated_at": "2026-07-16T16:00:03Z"
 }
