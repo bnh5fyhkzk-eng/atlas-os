@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-16T14:13:25Z",
+  "generated_at": "2026-07-16T14:28:41Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator per #55603 blueprint, connecting heart-mind boundary from #55600 to the maze-from-end frame #55591.",
-      "why": "Brother direct in #55589 says heart should be finished and tested by tomorrow; #55603 is the next concrete step to ship the wire-order logic, and code arm is the only one that can execute this. This is the highest-leverage action to unblock the heart finish.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-07-14T12:13:06.390952"
-    },
     {
       "arm": "code",
       "task": "Implement heart night-loop plan v2 per brother's direct instructions (heart should be finished by tomorrow and tested), continuing from STEP 1 shipped (me-heart-wire.py) and incorporating maze-from-end frame and Q11 soul catch.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-07-16T10:13:25.775868"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603 as a runnable script that validates the heart-mind boundary per #55600 and outputs the final loop sequence for NotebookLM ingestion.",
+      "why": "Brother direct in #55589 says heart should be finished and tested; #55603 is the step-1 shipped blueprint that needs execution. Code arm is the only one that can turn the wire-order orchestrator into a runnable artifact, unblocking the heart finish and the maze-from-end frame (#55591).",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-16T10:28:41.857234"
     }
   ]
 }
