@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "6b6573246884",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-16T02:20:24.244905"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator for heart night-loop based on brother's directive in #55589 and schedule final loops per #55572. · why: This is the highest-probability path to shipping the heart night-loop as commanded by brother, with a concrete blueprint already mapped. The orchestration arm is primed from #55603 and needs to execute the next logical step before testing.",
-      "updated_at": "2026-07-16T02:20:24.244916"
-    },
-    {
       "id": "30746999c9d6",
       "type": "callout",
       "props": {
@@ -724,15 +712,27 @@
       },
       "content": "Hermes decision · arm=pascal · priority=P0 · task: Extract the implicit heart-mind blocking pattern from #55591 and #55600, then reformulate it as a single `maze-from-end` puzzle with exactly one missing connection, output to a new /meta/brain/heart-maze.md. · why: Brother's direct command at #55591 treats blockages as mazes from the end; #55600 Q11 Soul Catch defines the heart-mind boundary. Fusing both into a concrete puzzle (one missing connection) closes the loop left open by #55603 (wire-order orchestrator shipped but no maze artifact). Pascal's reasoning",
       "updated_at": "2026-07-16T12:00:33.199572"
+    },
+    {
+      "id": "54addf221a2d",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-16T12:15:48.132003"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a reusable Python module, integrating the maze-from-end frame logic from #55591 for blockage detection. · why: Brother direct in #55603 shipped the me-heart-wire.py step; this is the next concrete code action to complete the heart-night-loop plan (P0). The maze-from-end frame is critical for handling blockages as per brother's instruction.",
+      "updated_at": "2026-07-16T12:15:48.132014"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-16T12:11:33.087980"
+    "checked_at": "2026-07-16T12:16:33.665821"
   },
   "block_count": 30,
-  "updated_at": "2026-07-16T12:00:33.199574",
-  "generated_at": "2026-07-16T16:11:33Z"
+  "updated_at": "2026-07-16T12:15:48.132015",
+  "generated_at": "2026-07-16T16:16:33Z"
 }
