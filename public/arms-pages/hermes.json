@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "b562623da4aa",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-16T00:33:22.760254"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 into a runnable script that connects heart-wire.py to the next loop step per brother's 'heart should be finished by tomorrow' directive. · why: Brother direct P0: #55589 and #55603 both demand immediate code execution to ship the heart wire order, which is the critical path to finishing heart by tomorrow. Code arm is the only one that can materialize this into a runnable artifact.",
-      "updated_at": "2026-07-16T00:33:22.760265"
-    },
-    {
       "id": "1fbf311e18f1",
       "type": "callout",
       "props": {
@@ -723,15 +711,27 @@
       },
       "content": "Hermes decision · arm=pascal · priority=P0 · task: Open Q4-wire app container, verify heartbeat output from #55603 ‘me-heart-wire.py’, and log any brother-direct interrupt or maze-blockage to new brain canon if found. · why: Brother directly said ‘heart should be finished by tomorrow and tested’. #55603 shipped the step-1 orchestrator. Pascal (Python-first, container runner) must confirm the wire is live before code or infra can integrate. If heart-loop yields blockage, we re-enter the maze-from-end frame per #55591.",
       "updated_at": "2026-07-16T09:58:12.685164"
+    },
+    {
+      "id": "33656371b9ff",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-16T10:13:25.758110"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the 4 final heart loops per NotebookLM blueprint and brother's answers. · why: Brother direct in #55589 says heart should be finished and tested; #55603 already shipped the orchestrator concept. This is the next concrete step to ship the working code, highest urgency.",
+      "updated_at": "2026-07-16T10:13:25.758121"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-16T10:11:17.505066"
+    "checked_at": "2026-07-16T10:16:18.171971"
   },
   "block_count": 30,
-  "updated_at": "2026-07-16T09:58:12.685165",
-  "generated_at": "2026-07-16T14:11:17Z"
+  "updated_at": "2026-07-16T10:13:25.758122",
+  "generated_at": "2026-07-16T14:16:18Z"
 }
