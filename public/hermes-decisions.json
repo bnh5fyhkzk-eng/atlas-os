@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-16T16:30:59Z",
+  "generated_at": "2026-07-16T16:46:29Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Run me-heart-wire.py with Q4 wire-order orchestrator and verify heart completion per brother's direct instruction.",
-      "why": "Brother directly stated heart should be finished by tomorrow and tested; latest canon #55603 is a shipped step for heart wiring, so next logical action is to execute and verify.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 30,
-      "timestamp": "2026-07-14T14:45:05.576577"
-    },
     {
       "arm": "code",
       "task": "Execute heart night-loop plan v2 final test per brother directive",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-16T12:30:59.007041"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603 into a runnable script that sequences the heart-mind wire connections per the maze-from-end frame (#55591) and brother's night-loop plan (#55589).",
+      "why": "Brother directly stated heart should be finished and tested by tomorrow; #55603 shipped the orchestrator blueprint, and #55591 provides the maze-from-end frame to resolve blockages. Code arm is the fastest path to a working prototype that can be tested immediately.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 45,
+      "timestamp": "2026-07-16T12:46:29.676185"
     }
   ]
 }
