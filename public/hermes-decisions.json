@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-16T14:28:41Z",
+  "generated_at": "2026-07-16T14:44:24Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement heart night-loop plan v2 per brother's direct instructions (heart should be finished by tomorrow and tested), continuing from STEP 1 shipped (me-heart-wire.py) and incorporating maze-from-end frame and Q11 soul catch.",
-      "why": "Brother-direct priority (P0) explicitly requires heart completion by tomorrow; code arm is the primary executor for the heart implementation, and recent brain canons indicate active development with step 1 already shipped.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 90,
-      "timestamp": "2026-07-14T13:13:50.337115"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603 to ship the first working me-heart-wire.py loop",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-16T10:28:41.857234"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator as a standalone script, following #55603 step 1 specification for heart-mind boundary wiring.",
+      "why": "Brother directly ordered heart finished and tested by tomorrow; Q4 wire-order orchestrator is the next concrete executable step after step 1 shipped. This bridges #55572 final loops with #55600 soul catch, unblocking the maze-from-end frame.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-16T10:44:24.024784"
     }
   ]
 }
