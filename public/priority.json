@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-07-17T09:32:14Z",
-  "total_items_scored": 128,
+  "generated_at": "2026-07-17T09:42:14Z",
+  "total_items_scored": 129,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement me-heart-wire.py Q4 wire-order orchestrator per #55603 blueprint, ensuring final loops ship per brother's timeline. \u00b7 why: Brother direct (#55589) says heart must be finished and te",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Complete heart testing per brother's directive: run final verification loops on heart-wire.py and ensure all Q4 wire-order orchestrator steps pass. \u00b7 why: Brother direct said heart should be ",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-16T19:06:55.839126"
+      "updated_at": "2026-07-16T19:22:11.321574"
     },
     {
       "arm": "code",
       "arm_glyph": "\u270b",
       "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Run heart night-loop test per brother's plan and verify maze-from-end frame integration. \u00b7 why \u00b7 Brother direct: heart should be finished and tested by tomorrow; recent canons show heart completion and step 1 shipped; need to execute test loop.",
+      "content": "HERMES TASK \u00b7 Implement step 2 of heart wire order orchestrator: integrate Q4 wire order with NotebookLM blueprint and run initial test per brother's night-loop plan \u00b7 why \u00b7 Brother direct says heart should be finished by tomorrow and tested; step 1 shipped, now need to complete integration and test to meet P0 deadline.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-07-16T20:53:32.306274",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-07-16T21:23:59.895158",
+      "use_skill": "notebooklm"
     },
     {
       "arm": "infra",
@@ -34,22 +34,11 @@
       "category": "launchagents",
       "priority": "P1",
       "source": "backfill",
-      "score": 8.98,
+      "score": 8.9,
       "updated_at": "2026-07-17T00:30:04.827635"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement me-heart-wire.py Q4 wire-order orchestrator per #55603 blueprint, ensuring final loops ship per brother's timeline. \u00b7 why: Brother direct (#55589) says heart must be finished and te",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-07-16T19:06:55.839126"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -148,6 +137,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-16T22:40:07.980726"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Run heart wire step 2: implement maze-from-end frame per brother direct #55591 \u00b7 why: Continuation of heart completion chain, brother direct, P0",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-16T22:55:29.459750"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
