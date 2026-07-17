@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T12:46:08Z",
+  "generated_at": "2026-07-17T13:01:08Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 89,
+    "note": 90,
     "briefing": 134,
     "idea": 0
   },
-  "total_blocks": 248,
+  "total_blocks": 249,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "3ba9096c4ecf",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Complete heart wire orchestration per Q4 order and test with NotebookLM blueprint · why: Brother direct said heart should be finished by tomorrow and tested; step 1 shipped but needs full orchestration and validation",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-17T08:51:03.252811"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-16T21:23:59.878646"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "be8a3eac67aa",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Run heart night-loop test per brother's plan and verify maze-from-end frame integration. · why: Brother direct: heart should be finished and tested by tomorrow; recent canons show heart completion and step 1 shipped; need to execute test loop.",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-16T20:53:32.286492"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "648894058c6b",
+        "type": "callout",
+        "content": "**What** · Completed heart wire orchestration per Q4 order: wired all segments, validated connections, and triggered NotebookLM blueprint test harness. · **Why** · Brother direct said heart must be finished by tomorrow; step 1 shipped, but full orchestration and validation were missing. P0 priority ",
+        "priority": "orchestration",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-17T08:51:14.208718"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-17T03:45:26.718871"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "0df1dd2454fd",
-        "type": "callout",
-        "content": "**What** · wrote me-heart-wire.py: orchestrates heart loops per NotebookLM blueprint, sequences Q4 wire-order from #55603. · **Why** · P0 identity-tier task unblocks maze-from-end (#55591) and completes heart-night-loop plan (#55589). · **Result** · first working version shipped — heart loops sequen",
-        "priority": "implement",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-17T02:44:39.229760"
       }
     ],
     "briefing": [
