@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-17T01:23:59Z",
+  "generated_at": "2026-07-17T01:54:33Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the next heart loop per Night-Loop Plan v2, using the shipped wire-order orchestrator from #55603 to connect the maze-from-end frame",
-      "why": "Brother direct says heart should be finished tomorrow and tested; the wire-order orchestrator is shipped, so next is to implement the loop integration.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 45,
-      "timestamp": "2026-07-14T23:53:47.792398"
-    },
     {
       "arm": "research",
       "task": "Extract the exact heart-mind boundary definition from NotebookLM P4 (Q11 SOUL CATCH) and cross-reference with brother's 'maze-from-end' frame to produce a single-sentence boundary rule.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-16T21:23:59.895158"
+    },
+    {
+      "arm": "code",
+      "task": "Run the me-heart-wire.py test suite and verify Q4 wire order against NotebookLM blueprint.",
+      "why": "Brother direct: heart should be finished and tested. Step 1 shipped, now need to validate the wire order orchestrator before proceeding.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 30,
+      "timestamp": "2026-07-16T21:54:33.509262"
     }
   ]
 }
