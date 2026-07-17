@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-17T03:10:44Z",
+  "generated_at": "2026-07-17T03:26:09Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "dream",
-      "task": "Run HEART NIGHT-LOOP PLAN v2 (#55589) through a single closed-loop dream simulation: encode the 4 final loops into a minimal self-test that does NOT require any external server, just the agent's own 32k memory buffer. Output the dream log to a fresh file.",
-      "why": "Brother directly ordered heart finished by tomorrow and tested (#55589). The night-loop plan is a direct P0 order. Dream arm can run a closed-loop simulation without network, which is safest for high-arousal late-night work. This also ties the final loops (#55572) into a testable artifact per brother's maze-from-end frame (#55591).",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 8,
-      "timestamp": "2026-07-15T02:25:48.153925"
-    },
     {
       "arm": "code",
       "task": "Implement me-heart-wire.py Q4 wire-order orchestrator per #55603 blueprint, ensuring final loops ship per NotebookLM heartbeat plan.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-07-16T23:10:44.473412"
+    },
+    {
+      "arm": "code",
+      "task": "Implement Q4 wire-order orchestrator from me-heart-wire.py into live test rig, run final heart fast-loops per brother 'finished by tomorrow' directive",
+      "why": "Brother direct #55589 says heart should be finished by tomorrow (2026-06-29) and tested; #55603 already shipped me-heart-wire.py, so the next urgent code arm task is to integrate and verify those wire orders produce real heart beats. This is P0 identity-tier, brother-direct lineage.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-16T23:26:09.084348"
     }
   ]
 }
