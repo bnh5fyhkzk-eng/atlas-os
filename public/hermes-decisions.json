@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-17T07:45:21Z",
+  "generated_at": "2026-07-17T08:15:48Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Analyze brother's direct maze-from-end frame (#55591) to map blockages as mazes and propose next-step resolution for heart-night-loop.",
-      "why": "Brother's direct instruction (#55591) is P0 identity-tier; research arm can synthesize maze logic from recent heart loops to unblock the night-loop plan.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 15,
-      "timestamp": "2026-07-15T05:13:41.840817"
-    },
     {
       "arm": "research",
       "task": "Extract brother's 'heart should be finished by tomorrow and tested' directive into a concrete testable closure checklist, linking to NotebookLM blueprint loops.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-07-17T03:45:21.517864"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the 4 final heart loops per NotebookLM blueprint and brother's answers from #55572.",
+      "why": "This is the highest-priority P0 because brother directly said 'heart should be finished by tomorrow and tested' (#55589) and the Q4 orchestrator (#55603) is the critical path to ship the heart. Code arm is needed to turn the blueprint into executable reality.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-17T04:15:48.554597"
     }
   ]
 }
