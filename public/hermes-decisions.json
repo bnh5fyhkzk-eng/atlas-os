@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-18T12:33:32Z",
+  "generated_at": "2026-07-18T13:49:34Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "pascal",
-      "task": "Open Q4-wire app container, verify heartbeat output from #55603 \u2018me-heart-wire.py\u2019, and log any brother-direct interrupt or maze-blockage to new brain canon if found.",
-      "why": "Brother directly said \u2018heart should be finished by tomorrow and tested\u2019. #55603 shipped the step-1 orchestrator. Pascal (Python-first, container runner) must confirm the wire is live before code or infra can integrate. If heart-loop yields blockage, we re-enter the maze-from-end frame per #55591.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 8,
-      "timestamp": "2026-07-16T09:58:12.703182"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the 4 final heart loops per NotebookLM blueprint and brother's answers.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 20,
       "timestamp": "2026-07-18T08:33:32.375819"
+    },
+    {
+      "arm": "research",
+      "task": "Map all 12 heart-mind boundary assertions from NotebookLM P4 into a single observable-falsifiable frame per Q11 soul catch.",
+      "why": "The brother-direct 'heart should be finished by tomorrow' and the Q11 soul-catch both require a crisp boundary model. The maze-from-end frame already reframes blockages\u2014this produces the actual definition for step 2 after step 1 shipped.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 15,
+      "timestamp": "2026-07-18T09:49:34.048380"
     }
   ]
 }
