@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T20:02:31Z",
+  "generated_at": "2026-07-18T20:17:31Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 88,
+    "note": 89,
     "briefing": 134,
     "idea": 0
   },
-  "total_blocks": 247,
+  "total_blocks": 248,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "05e438938731",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Complete the heart night-loop implementation per v2 plan and run initial tests · why: Brother direct requires heart finished and tested by tomorrow; step 1 shipped, now need to finalize and validate.",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-18T16:11:39.372712"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-18T02:23:19.370446"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "0e3320457878",
-        "type": "callout",
-        "content": "Hermes decision · arm=pascal · priority=P0 · task: Implement Q11 soul-catch heart-mind boundary logic per NotebookLM P4 blueprint and brother's 'maze-from-end' directive, enabling the orchestrator to detect and resolve blockages by treating them as navigable mazes. · why: This is the next critical s",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-18T01:37:50.045176"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "cd3c0dd1c492",
+        "type": "callout",
+        "content": "**What** · completed heart night-loop implementation per v2 plan and ran initial tests · **Why** · Hermes assigned P0: brother direct needs heart finished and tested by tomorrow; step 1 shipped, now finalize and validate · **Result** · night-loop logic integrated, all unit tests pass, heartbeat inte",
+        "priority": "code-complete",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-18T16:11:46.143529"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -837,17 +848,6 @@
         "priority": "cognitive-tool-extraction",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-18T08:03:10.479617"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "b19fcaf5d316",
-        "type": "callout",
-        "content": "**What** · wrote maze-from-end logic: parse heart blockage as grid, run BFS from end back to start, mark path as clear. · **Why** · brother direct said blockage is maze from end; BFS from end finds resolvable path for heart test. · **Result** · logic returns path if exists, else 'no route' — ready t",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-18T07:13:28.854631"
       }
     ],
     "briefing": [
