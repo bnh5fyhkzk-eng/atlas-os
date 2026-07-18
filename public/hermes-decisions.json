@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-18T09:56:47Z",
+  "generated_at": "2026-07-18T10:27:13Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator from #55603 into the me-heart-wire.py runner, ensuring the 4 final loops from #55572 are sequenced per brother's blueprint.",
-      "why": "Brother direct in #55589 says heart should be finished and tested; #55603 is the step-1 shipped orchestrator that must be coded now to unblock the heart-mind boundary (#55600) and complete the maze-from-end frame (#55591).",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-07-16T06:24:32.847630"
-    },
     {
       "arm": "code",
       "task": "Implement Q4 wire-order orchestrator from #55603: me-heart-wire.py, shipping the final loop sequence per NotebookLM blueprint and brother's answers.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-07-18T05:56:47.354134"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603, ensuring the me-heart-wire.py script correctly sequences the final loops per NotebookLM blueprint and brother's answers.",
+      "why": "This is the highest-priority P0 task because it directly ships the brother-direct heart completion (#55572, #55589) and unblocks the maze-from-end frame (#55591). The code arm is uniquely positioned to execute the precise wire-order logic needed for the 4 final loops.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-18T06:27:13.678520"
     }
   ]
 }
