@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "26ac82cee31f",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-17T11:23:13.784006"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Test heart with sample inputs and verify outputs · why: Brother direct said heart should be finished and tested; step 1 shipped, now need to validate.",
-      "updated_at": "2026-07-17T11:23:13.784021"
-    },
-    {
       "id": "82e3f8669ad8",
       "type": "callout",
       "props": {
@@ -702,15 +690,27 @@
         }
       ],
       "updated_at": "2026-07-18T00:30:05.741542"
+    },
+    {
+      "id": "72ad08d4ae47",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-18T00:36:31.912962"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py loop that sequences the final heart-mind boundary tests per brother's direct plan. · why: Brother directly ordered heart finished and tested by tomorrow (#55589), and the Q4 wire-order orchestrator (#55603) is the next concrete step to ship the maze-from-end frame (#55591) and complete the heart-mind boundary (#55600). Code arm is the only one that can execute this build.",
+      "updated_at": "2026-07-18T00:36:31.912976"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-18T00:32:08.537502"
+    "checked_at": "2026-07-18T00:37:09.100561"
   },
   "block_count": 30,
-  "updated_at": "2026-07-18T00:30:05.741549",
-  "generated_at": "2026-07-18T04:32:08Z"
+  "updated_at": "2026-07-18T00:36:31.912978",
+  "generated_at": "2026-07-18T04:37:09Z"
 }
