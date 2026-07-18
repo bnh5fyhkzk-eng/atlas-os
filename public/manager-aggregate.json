@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T23:46:36Z",
+  "generated_at": "2026-07-18T00:01:36Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 85,
+    "note": 86,
     "briefing": 134,
     "idea": 0
   },
-  "total_blocks": 244,
+  "total_blocks": 245,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "4e934afd4214",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q5 wire-order for heart based on NotebookLM blueprint and brother's answers. · why: Brother direct to finish heart by tomorrow; step 1 shipped, need to continue with next wire order.",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-17T19:46:35.987363"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-17T06:02:55.342315"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "7d888b77436e",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Build the Q4 wire-order orchestrator that reads the #55603 me-heart-wire.py skeleton and connects heart night-loop plan v2 to the maze-from-end frame transport layer · why: This directly executes brother's #55589 directive ('heart should be finished b",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-17T05:32:28.687796"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "4a22ea511ce6",
+        "type": "callout",
+        "content": "**What** · implemented Q5 wire-order for heart based on NotebookLM blueprint and brother's answers, continuing from step 1 shipped. · **Why** · Hermes assigned P0 task to finish heart by tomorrow; step 1 done, need next wire order to complete. · **Result** · Q5 wire-order coded and integrated into h",
+        "priority": "code implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-17T19:46:38.202184"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-17T13:40:14.045867"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "14830af5a55a",
-        "type": "callout",
-        "content": "**What** · wrote q4_wire_order.py — script that sequences final heart loops per brother's timeline from #55603 orchestrator. · **Why** · highest-leverage P0: brother said heart by tomorrow tested; #55603 is shipped orchestrator blueprint. · **Result** · script reads loop order from config, outputs s",
-        "priority": "code-implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-17T13:09:42.546720"
       }
     ],
     "briefing": [
