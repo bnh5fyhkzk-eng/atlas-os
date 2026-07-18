@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "010fcf2d4227",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-17T14:41:02.390327"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Execute heart test suite per brother's directive and verify final loops · why: Heart step 1 shipped, need to test and finish per brother's timeline (P0 brother-direct)",
-      "updated_at": "2026-07-17T14:41:02.390341"
-    },
-    {
       "id": "91b126ecdcb3",
       "type": "callout",
       "props": {
@@ -702,15 +690,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Execute test suite for me-heart-wire.py to verify heart completion per brother's directive. · why: Brother direct said heart should be finished and tested; step 1 shipped, now need to validate functionality and ensure no blockages.",
       "updated_at": "2026-07-18T03:09:09.621176"
+    },
+    {
+      "id": "790fd214e7f2",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-18T03:24:33.465699"
+      },
+      "content": "Hermes decision · arm=research · priority=P0 · task: Extract formal definition of 'maze-from-end' frame from #55591 and #55589 to build a blockage-resolver prompt template for iterative debugging. · why: Brother direct in #55591 frames blockage as maze — this is a P0 insight for orchestration. Research arm can parse both canons, extract the structural analog, and make it reusable across loops.",
+      "updated_at": "2026-07-18T03:24:33.465714"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-18T03:22:30.374878"
+    "checked_at": "2026-07-18T03:27:31.077868"
   },
   "block_count": 30,
-  "updated_at": "2026-07-18T03:09:09.621178",
-  "generated_at": "2026-07-18T07:22:30Z"
+  "updated_at": "2026-07-18T03:24:33.465716",
+  "generated_at": "2026-07-18T07:27:31Z"
 }
