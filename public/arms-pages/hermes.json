@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "fdd4b08a4af2",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-17T13:09:37.952017"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 into a working script that sequences the final heart loops per brother's timeline (finish by tomorrow, test after). · why: Brother direct in #55589 says heart should be finished by tomorrow and tested. #55603 is the step-1 shipped orchestrator — this is the highest-leverage code arm to execute the blueprint now.",
-      "updated_at": "2026-07-17T13:09:37.952031"
-    },
-    {
       "id": "e449d13373a5",
       "type": "callout",
       "props": {
@@ -702,15 +690,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Execute next step in heart wire order orchestrator: run me-heart-wire.py to verify Q4 wire order and test heart completion per brother's directive. · why: Brother direct said heart should be finished and tested; step 1 shipped, so immediate next action is to run the wire-order script and validate.",
       "updated_at": "2026-07-18T01:22:24.767361"
+    },
+    {
+      "id": "0e3320457878",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-18T01:37:50.045162"
+      },
+      "content": "Hermes decision · arm=pascal · priority=P0 · task: Implement Q11 soul-catch heart-mind boundary logic per NotebookLM P4 blueprint and brother's 'maze-from-end' directive, enabling the orchestrator to detect and resolve blockages by treating them as navigable mazes. · why: This is the next critical step in the heart completion pipeline, directly following the Q4 wire-order orchestrator (#55603) and brother's explicit timeline ('heart should be finished by tomorrow'). Without this, the heart cannot achieve its final loop state.",
+      "updated_at": "2026-07-18T01:37:50.045176"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-18T01:37:16.827279"
+    "checked_at": "2026-07-18T01:42:17.503385"
   },
   "block_count": 30,
-  "updated_at": "2026-07-18T01:22:24.767362",
-  "generated_at": "2026-07-18T05:37:16Z"
+  "updated_at": "2026-07-18T01:37:50.045177",
+  "generated_at": "2026-07-18T05:42:17Z"
 }
