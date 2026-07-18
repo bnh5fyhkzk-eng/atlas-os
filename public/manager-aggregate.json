@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T11:17:06Z",
+  "generated_at": "2026-07-18T11:32:07Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 86,
+    "note": 87,
     "briefing": 135,
     "idea": 0
   },
-  "total_blocks": 246,
+  "total_blocks": 247,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "90d18d403ae2",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement maze-from-end frame logic for heart blockage resolution as per brother's direct instruction · why: Brother direct said to see blockage as maze from end; need to code this to test heart",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-18T07:13:14.562531"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-17T19:46:35.987363"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "486f8c2cf34d",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement step 2 of me-heart-wire.py: wire-order orchestrator for night-loop plan per brother direct. · why: Step 1 shipped; brother direct requires heart finished and tested by tomorrow; step 2 is next in the blueprint.",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-17T19:31:23.156855"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "b19fcaf5d316",
+        "type": "callout",
+        "content": "**What** · wrote maze-from-end logic: parse heart blockage as grid, run BFS from end back to start, mark path as clear. · **Why** · brother direct said blockage is maze from end; BFS from end finds resolvable path for heart test. · **Result** · logic returns path if exists, else 'no route' — ready t",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-18T07:13:28.854631"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "soul-catch",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-18T01:37:53.877757"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "5f74d0f83c7b",
-        "type": "callout",
-        "content": "**What** · run me-heart-wire.py to verify Q4 wire order and test heart completion · **Why** · brother direct said heart should be finished and tested; step 1 shipped, so immediate next action is to run the wire-order script and validate · **Result** · will execute script, check output for wire order",
-        "priority": "execution",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-18T01:22:27.069500"
       }
     ],
     "briefing": [
