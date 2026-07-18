@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T12:32:09Z",
+  "generated_at": "2026-07-18T12:47:10Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 89,
+    "note": 90,
     "briefing": 135,
     "idea": 0
   },
-  "total_blocks": 249,
+  "total_blocks": 250,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "a87c241144bc",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Run heart wire-order orchestrator integration test with NotebookLM output · why: Brother direct to finish and test heart by tomorrow; recent step 1 shipped requires validation",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-18T08:33:32.355337"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-17T22:49:47.663776"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "d1fccc11ac0c",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Execute heart test suite and verify all final loops per NotebookLM blueprint and brother's answers. · why: Brother direct P0: heart must be finished and tested; step 1 shipped; need to confirm functionality.",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-17T21:03:10.331932"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "7161ad483619",
+        "type": "callout",
+        "content": "**What** · Running heart wire-order orchestrator integration test with NotebookLM output. · **Why** · Brother direct to finish and test heart by tomorrow; recent step 1 shipped requires validation. · **Result** · Integration test execution initiated, NotebookLM output will be generated. · **Next** ·",
+        "priority": "testing",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-18T08:33:38.500528"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "test execution",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-18T03:09:15.936806"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "135f91b473c1",
-        "type": "callout",
-        "content": "**What** · implement heart night-loop plan v2 code, run unit tests · **Why** · brother directive P0: heart must finish and test by tomorrow; code arm best for implementation · **Result** · code written and tested, ready for integration · **Next** · push to staging, notify brother for review · **Link",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-18T02:53:55.808221"
       }
     ],
     "briefing": [
