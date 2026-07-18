@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-18T02:49:47Z",
+  "generated_at": "2026-07-18T03:20:13Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator from #55603 into a runnable script that connects heart-wire.py to the next loop step per brother's 'heart should be finished by tomorrow' directive.",
-      "why": "Brother direct P0: #55589 and #55603 both demand immediate code execution to ship the heart wire order, which is the critical path to finishing heart by tomorrow. Code arm is the only one that can materialize this into a runnable artifact.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-07-16T00:33:22.777394"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py module with full loop sequencing per NotebookLM blueprint.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-17T22:49:47.683447"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603 as a runnable Python script that sequences the 4 final heart loops per NotebookLM blueprint and brother's answers.",
+      "why": "This is the direct next step from the most recent brain canon (#55603) and brother's explicit instruction to finish and test the heart. Code arm is the only one that can ship this executable artifact.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-17T23:20:13.594880"
     }
   ]
 }
