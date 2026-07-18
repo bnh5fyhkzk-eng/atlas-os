@@ -1077,15 +1077,37 @@
       },
       "content": "**What** · Wrote and committed orchestrator script `q4_wire_order.py` that sequences the four final loops per NotebookLM blueprint and brother's answers from #55572. · **Why** · Brother said heart must ship tomorrow and tested (#55589); this script is the critical P0 next step to wire the loops in correct order. · **Result** · Script ready at `./heart/q4_wire_order.py` — runs four loops in sequence: LoopA (init), LoopB (sync), LoopC (process), LoopD (finalize). Dry-run passes. · **Next** · Tag Hermes for review, then push to staging for brother's test. · **Links** ·  · **Cycle** · code-20260718-065800",
       "updated_at": "2026-07-18T06:58:00.672528"
+    },
+    {
+      "id": "b19fcaf5d316",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "action": "wrote maze-from-end logic: parse heart blockage as grid, run BFS from end back to start, mark path as clear.",
+        "why": "brother direct said blockage is maze from end; BFS from end finds resolvable path for heart test.",
+        "result": "logic returns path if exists, else 'no route' — ready to plug into heart test harness.",
+        "next_step": "integrate with heart blockage simulator and run P0 test.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260718-071328",
+        "timestamp": "2026-07-18T07:13:28.854631"
+      },
+      "content": "**What** · wrote maze-from-end logic: parse heart blockage as grid, run BFS from end back to start, mark path as clear. · **Why** · brother direct said blockage is maze from end; BFS from end finds resolvable path for heart test. · **Result** · logic returns path if exists, else 'no route' — ready to plug into heart test harness. · **Next** · integrate with heart blockage simulator and run P0 test. · **Links** ·  · **Cycle** · code-20260718-071328",
+      "updated_at": "2026-07-18T07:13:28.854631"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-18T07:13:04.882098"
+    "checked_at": "2026-07-18T07:18:05.634202"
   },
-  "block_count": 35,
-  "updated_at": "2026-07-18T06:58:00.672528",
-  "generated_at": "2026-07-18T11:13:04Z"
+  "block_count": 36,
+  "updated_at": "2026-07-18T07:13:28.854631",
+  "generated_at": "2026-07-18T11:18:05Z"
 }
