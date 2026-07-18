@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-07-18T19:55:26Z",
-  "total_items_scored": 132,
+  "generated_at": "2026-07-18T20:05:27Z",
+  "total_items_scored": 133,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Execute next step in heart wire order orchestrator: run me-heart-wire.py to verify Q4 wire order and test heart completion per brother's directive. \u00b7 why: Brother direct said heart should be ",
+      "content": "Hermes decision \u00b7 arm=pascal \u00b7 priority=P0 \u00b7 task: Implement Q11 soul-catch heart-mind boundary logic per NotebookLM P4 blueprint and brother's 'maze-from-end' directive, enabling the orchestrator to detect and resolve blockages by treating",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-18T01:22:24.767361"
-    },
-    {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Extract formal definition of 'maze-from-end' frame from #55591 and #55589 to build a blockage-resolver prompt template for iterative debugging. \u00b7 why \u00b7 Brother direct in #55591 frames blockage as maze \u2014 this is a P0 insight for orchestration. Research arm can parse both canons, extract the structural analog, and make it reusable across loops.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 22,
-      "score": 10.0,
-      "updated_at": "2026-07-18T03:24:33.486488",
-      "use_skill": "notebooklm"
+      "updated_at": "2026-07-18T01:37:50.045176"
     },
     {
       "arm": "code",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-07-18T04:10:08.866684",
       "use_skill": "brain-rrf"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Execute next step in heart wire order orchestrator: run me-heart-wire.py to verify Q4 wire order and test heart completion per brother's directive. \u00b7 why: Brother direct said heart should be ",
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Extract and formalize the 'maze-from-end' frame logic from #55591 into a reusable prompt template for blockage resolution. \u00b7 why \u00b7 Brother-direct #55591 introduces a novel cognitive frame ('maze from end') that is immediately applicable to the heart-mind boundary work in #55600 and the wire-order orchestrator in #55603. Formalizing it now prevents re-derivation and enables rapid reuse across arms.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 18,
       "score": 10.0,
-      "updated_at": "2026-07-18T01:22:24.767361"
-    },
+      "updated_at": "2026-07-18T08:02:59.650517",
+      "use_skill": "brain-rrf"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-18T05:56:47.333666"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator from #55603, ensuring the me-heart-wire.py script correctly sequences the final loops per NotebookLM blueprint and brother's answers. \u00b7 why: This is t",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-18T06:27:13.658459"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
