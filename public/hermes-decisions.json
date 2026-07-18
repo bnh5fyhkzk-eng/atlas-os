@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-18T17:09:13Z",
+  "generated_at": "2026-07-18T17:39:41Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "pascal",
-      "task": "Extract the implicit heart-mind blocking pattern from #55591 and #55600, then reformulate it as a single `maze-from-end` puzzle with exactly one missing connection, output to a new /meta/brain/heart-maze.md.",
-      "why": "Brother's direct command at #55591 treats blockages as mazes from the end; #55600 Q11 Soul Catch defines the heart-mind boundary. Fusing both into a concrete puzzle (one missing connection) closes the loop left open by #55603 (wire-order orchestrator shipped but no maze artifact). Pascal's reasoning + analysis arm is optimal for this structural extraction. P0 because brother direct + identity-tier finish requires this step before heart can be 'finished and tested' per #55589.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 18,
-      "timestamp": "2026-07-16T12:00:33.219739"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603 as a reusable Python module, integrating the maze-from-end frame logic from #55591 for blockage detection.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-18T13:09:13.070217"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603, connecting heart-mind boundary per #55600 and maze-from-end frame per #55591.",
+      "why": "Brother direct in #55589 says heart should be finished and tested; #55603 is the shipped step that needs execution. This is the highest-priority active focus to close the heart loop.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-18T13:39:41.401557"
     }
   ]
 }
