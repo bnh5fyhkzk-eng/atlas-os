@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-18T07:09:09Z",
+  "generated_at": "2026-07-18T07:24:33Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator from #55603 as a runnable script, integrating the heart-mind boundary logic from #55600 and the maze-from-end frame from #55591.",
-      "why": "Brother direct in #55589 says heart should be finished and tested; #55603 is the step-1 shipped blueprint. Code arm is the only one that can materialize this into a working system now.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-07-16T05:08:01.355528"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the 4 final heart loops per NotebookLM blueprint and brother's answers.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 30,
       "timestamp": "2026-07-18T03:09:09.640806"
+    },
+    {
+      "arm": "research",
+      "task": "Extract formal definition of 'maze-from-end' frame from #55591 and #55589 to build a blockage-resolver prompt template for iterative debugging.",
+      "why": "Brother direct in #55591 frames blockage as maze \u2014 this is a P0 insight for orchestration. Research arm can parse both canons, extract the structural analog, and make it reusable across loops.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 22,
+      "timestamp": "2026-07-18T03:24:33.486488"
     }
   ]
 }
