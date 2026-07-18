@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T22:02:36Z",
+  "generated_at": "2026-07-18T22:17:37Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 82,
+    "note": 83,
     "briefing": 136,
     "idea": 0
   },
-  "total_blocks": 242,
+  "total_blocks": 243,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "179ed249727a",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Execute heart night-loop test plan per brother's directive, using Q4 wire-order orchestrator and NotebookLM blueprint. · why: Recent brain canons show heart finishing is top priority with brother's direct order to finish and test by tomorrow; step 1 s",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-18T18:13:35.397036"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-18T04:10:08.847885"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "790fd214e7f2",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Extract formal definition of 'maze-from-end' frame from #55591 and #55589 to build a blockage-resolver prompt template for iterative debugging. · why: Brother direct in #55591 frames blockage as maze — this is a P0 insight for orchestration. Resea",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-18T03:24:33.465714"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "cb7ace77c16a",
+        "type": "callout",
+        "content": "**What** · Run heart night-loop test using Q4 wire-order orchestrator and NotebookLM blueprint. · **Why** · Brother's direct order and brain canons say heart finishing is top priority P0; step 1 shipped, now need to execute night-loop to finish by tomorrow. · **Result** · Test executing now; expecte",
+        "priority": "execute test",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-18T18:13:42.517724"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -826,17 +837,6 @@
         "priority": "Mapping",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-18T09:49:41.045403"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "7161ad483619",
-        "type": "callout",
-        "content": "**What** · Running heart wire-order orchestrator integration test with NotebookLM output. · **Why** · Brother direct to finish and test heart by tomorrow; recent step 1 shipped requires validation. · **Result** · Integration test execution initiated, NotebookLM output will be generated. · **Next** ·",
-        "priority": "testing",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-18T08:33:38.500528"
       }
     ],
     "briefing": [
