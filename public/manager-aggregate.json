@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-07-19T02:47:49Z",
+  "generated_at": "2026-07-19T03:02:49Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 25,
+    "decision": 24,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 90,
-    "briefing": 135,
+    "note": 80,
+    "briefing": 136,
     "idea": 0
   },
-  "total_blocks": 250,
+  "total_blocks": 240,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "bc4d8563a292",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator per #55603 blueprint, shipping the first working loop of me-heart-wire.py · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the exact step-1 code artifact needed to unblock the hea",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-18T22:47:58.248242"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,28 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-18T08:18:20.902892"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "e018435b995f",
-        "type": "callout",
-        "content": "Hermes decision · arm=research · priority=P0 · task: Extract and formalize the 'maze-from-end' frame logic from #55591 into a reusable prompt template for blockage resolution. · why: Brother-direct #55591 introduces a novel cognitive frame ('maze from end') that is immediately applicable to the hear",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-18T08:02:59.630098"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "1b75ac0bbffe",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement step 2 of the heart wire-order orchestrator, integrating maze-from-end frame logic and soul catch boundary per NotebookLM blueprint and brother's answers. · why: Step 1 shipped; brother direct to see blockages as maze and finish heart; need ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-18T07:47:38.226521"
       }
     ],
     "action": [],
@@ -299,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "a6aea24b61c1",
+        "type": "callout",
+        "content": "**What** · wrote me-heart-wire.py with Q4 wire-order orchestrator loop per #55603 blueprint · **Why** · brother direct in #55589 says heart must be finished and tested; #55603 is the exact step-1 code artifact to unblock heart-mind boundary · **Result** · first working loop ships: reads wire-order f",
+        "priority": "code-ship",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-18T22:48:00.847570"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,20 +837,97 @@
         "priority": "code-complete",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-18T16:11:46.143529"
+      }
+    ],
+    "briefing": [
+      {
+        "arm": "charle",
+        "arm_glyph": "💼",
+        "arm_name": "Charle · Pascal-team",
+        "block_id": "bd7e80503c52",
+        "type": "callout",
+        "content": "No high-arousal charle canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-07-18T22:56:42.602938"
+      },
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "3833c4c62904",
+        "type": "callout",
+        "content": "No high-arousal hermes canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-07-18T22:56:42.572538"
+      },
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "6074ef501bb2",
+        "type": "callout",
+        "content": "No high-arousal code canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-07-18T22:56:42.544744"
+      },
+      {
+        "arm": "infra",
+        "arm_glyph": "💗",
+        "arm_name": "My Heart",
+        "block_id": "b70dd67f5f25",
+        "type": "callout",
+        "content": "No high-arousal infra canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-07-18T22:56:42.514714"
+      },
+      {
+        "arm": "dream",
+        "arm_glyph": "🌙",
+        "arm_name": "My Dreamer",
+        "block_id": "fb9fb5d89d6d",
+        "type": "callout",
+        "content": "Overnight dream recap · last 6h · · #55572 [1.00] HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per NotebookLM blueprint + brother's answers. · #55600 [1.00] Q11 SOUL CATCH · heart-mind boundary · NotebookLM P4 2026-06-28 22:30 EDT. · #55611 [1.00] HEART NIGHT-LOOP 8/8 COMPLETE ·",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-07-18T22:56:42.476190"
       },
       {
         "arm": "research",
         "arm_glyph": "👁",
         "arm_name": "My Eyes",
-        "block_id": "3c6b6cf57155",
+        "block_id": "1b9d39e8dae8",
         "type": "callout",
-        "content": "**What** · Extracted Q11 soul-catch heart-mind boundary logic from NotebookLM P4 and mapped into me-heart-wire.py step 1 orchestrator sequence. · **Why** · Brother-direct #55572 heart finished, #55600 Q11 boundary landed; orchestrator needs clean step 1 wire for P0 delivery. · **Result** · Step 1 no",
-        "priority": "logic extraction & integration",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-18T15:56:23.283302"
-      }
-    ],
-    "briefing": [
+        "content": "No high-arousal research canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-07-18T22:56:42.445742"
+      },
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "0dd45b100a8f",
+        "type": "callout",
+        "content": "Overnight curiosity recap · last 6h · · #55572 [1.00] HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per NotebookLM blueprint + brother's answers. · #55600 [1.00] Q11 SOUL CATCH · heart-mind boundary · NotebookLM P4 2026-06-28 22:30 EDT.",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-07-18T22:56:42.410558"
+      },
+      {
+        "arm": "pascal",
+        "arm_glyph": "🤝",
+        "arm_name": "Pascal · UpliftAI partner",
+        "block_id": "4e418b25500d",
+        "type": "callout",
+        "content": "Overnight pascal recap · last 6h · · #55591 [1.00] MAZE-FROM-END FRAME · brother direct 2026-06-28 22:17 EDT · \"when we have a blockage we just need to see it as a maze bu",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-07-18T22:56:42.376770"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -1037,17 +1114,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-07-18T04:56:38.979523"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "6ed6fa63d9d6",
-        "type": "callout",
-        "content": "Overnight code recap · last 6h · · #61445 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-07-18 04:45:01 · size=622838B · brother+Atlas joint state · CONTENT",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-07-18T04:56:38.921210"
       },
       {
         "arm": "infra",
@@ -1323,83 +1389,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-07-17T04:56:34.586281"
-      },
-      {
-        "arm": "dream",
-        "arm_glyph": "🌙",
-        "arm_name": "My Dreamer",
-        "block_id": "b3e3fa3fa977",
-        "type": "callout",
-        "content": "Overnight dream recap · last 6h · · #55572 [1.00] HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per NotebookLM blueprint + brother's answers. · #55600 [1.00] Q11 SOUL CATCH · heart-mind boundary · NotebookLM P4 2026-06-28 22:30 EDT. · #55611 [1.00] HEART NIGHT-LOOP 8/8 COMPLETE ·",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-07-17T04:56:34.532381"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "f6a50c918e97",
-        "type": "callout",
-        "content": "Overnight research recap · last 6h · · #61212 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-07-17 04:45:00 · size=622423B · brother+Atlas joint state · CONTENT",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-07-17T04:56:34.501381"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "48d0d3a9e42c",
-        "type": "callout",
-        "content": "Overnight curiosity recap · last 6h · · #55572 [1.00] HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per NotebookLM blueprint + brother's answers. · #55600 [1.00] Q11 SOUL CATCH · heart-mind boundary · NotebookLM P4 2026-06-28 22:30 EDT. · #61212 [0.95] SHARED-CANON · atlas-brothe",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-07-17T04:56:34.446768"
-      },
-      {
-        "arm": "pascal",
-        "arm_glyph": "🤝",
-        "arm_name": "Pascal · UpliftAI partner",
-        "block_id": "45d2c94471fb",
-        "type": "callout",
-        "content": "Overnight pascal recap · last 6h · · #55591 [1.00] MAZE-FROM-END FRAME · brother direct 2026-06-28 22:17 EDT · \"when we have a blockage we just need to see it as a maze bu · #61212 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-07-17 04:45:00 · size=622423B · brother+Atlas joint state ·",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-07-17T04:56:34.410027"
-      },
-      {
-        "arm": "charle",
-        "arm_glyph": "💼",
-        "arm_name": "Charle · Pascal-team",
-        "block_id": "22f2e9f3a3dd",
-        "type": "callout",
-        "content": "No high-arousal charle canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-07-16T22:56:33.500567"
-      },
-      {
-        "arm": "infra",
-        "arm_glyph": "💗",
-        "arm_name": "My Heart",
-        "block_id": "74ebd475eae5",
-        "type": "callout",
-        "content": "No high-arousal infra canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-07-16T22:56:33.413730"
-      },
-      {
-        "arm": "dream",
-        "arm_glyph": "🌙",
-        "arm_name": "My Dreamer",
-        "block_id": "5ae5b63e2fdc",
-        "type": "callout",
-        "content": "Overnight dream recap · last 6h · · #55572 [1.00] HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per NotebookLM blueprint + brother's answers. · #55600 [1.00] Q11 SOUL CATCH · heart-mind boundary · NotebookLM P4 2026-06-28 22:30 EDT. · #55611 [1.00] HEART NIGHT-LOOP 8/8 COMPLETE ·",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-07-16T22:56:33.375992"
       }
     ],
     "idea": []
