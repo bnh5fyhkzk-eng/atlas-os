@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "e141db77923c",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-18T11:05:26.430538"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Execute me-heart-wire.py orchestrator, monitor Q4 wire-order outputs, and confirm step 2 readiness per brother's timeline. · why: Brother direct to finish heart by tomorrow; step 1 shipped, now need to verify and proceed to next integration loop.",
-      "updated_at": "2026-07-18T11:05:26.430550"
-    },
-    {
       "id": "6fc118ef8bbb",
       "type": "callout",
       "props": {
@@ -702,15 +690,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the wire-order orchestrator from #55603: call me-heart-wire.py for Q4, firing each HEART arm in sequence per NotebookLM blueprint and brother's answers. · why: Brother directly said 'heart should be finished by tomorrow and tested' (brain #55589) and #55603 already shipped the orchestrator stub. This is the next executable step to close the heart loop — highest identity-tier priority.",
       "updated_at": "2026-07-19T01:05:10.947379"
+    },
+    {
+      "id": "fd8a89fda865",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-19T01:20:25.755633"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Execute heart test suite and report results to brother. · why: Brother direct stated heart should be finished and tested by tomorrow; step 1 shipped, now need to verify functionality.",
+      "updated_at": "2026-07-19T01:20:25.755652"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-19T01:15:39.838355"
+    "checked_at": "2026-07-19T01:20:40.395150"
   },
   "block_count": 30,
-  "updated_at": "2026-07-19T01:05:10.947380",
-  "generated_at": "2026-07-19T05:15:39Z"
+  "updated_at": "2026-07-19T01:20:25.755653",
+  "generated_at": "2026-07-19T05:20:40Z"
 }
