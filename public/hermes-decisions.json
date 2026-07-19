@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-19T05:36:02Z",
+  "generated_at": "2026-07-19T06:36:49Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Run the me-heart-wire.py test suite and verify Q4 wire order against NotebookLM blueprint.",
-      "why": "Brother direct: heart should be finished and tested. Step 1 shipped, now need to validate the wire order orchestrator before proceeding.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 30,
-      "timestamp": "2026-07-16T21:54:33.509262"
-    },
     {
       "arm": "code",
       "task": "Implement me-heart-wire.py Q4 wire-order orchestrator per #55603 blueprint, shipping the final loop sequence for HEART FINISHED by tomorrow",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 18,
       "timestamp": "2026-07-19T01:36:02.529144"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the next wire order from Q4 orchestrator using brother's maze-from-end frame for heart-mind boundary integration",
+      "why": "Heart is finished and step 1 shipped; brother's direct maze-from-end frame guides the next blockage resolution; code arm is needed to translate the frame into executable wire order",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 30,
+      "timestamp": "2026-07-19T02:36:49.054655"
     }
   ]
 }
