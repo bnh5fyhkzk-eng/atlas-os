@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-07-19T03:25:54Z",
-  "total_items_scored": 124,
+  "generated_at": "2026-07-19T03:35:54Z",
+  "total_items_scored": 125,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Test the heart module per brother's instruction and verify loops \u00b7 why: Heart is finished and needs testing as per brother direct, code arm can run integration tests",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Run heart wire-order orchestrator integration test with NotebookLM output \u00b7 why: Brother direct to finish and test heart by tomorrow; recent step 1 shipped requires validation",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-18T08:18:20.902892"
+      "updated_at": "2026-07-18T08:33:32.355337"
     },
     {
       "arm": "code",
       "arm_glyph": "\u270b",
       "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Implement maze-from-end logic for heart completion per brother direct \u00b7 why \u00b7 Brother direct maze-from-end frame and heart finish timeline, code arm can implement the logic to unblock heart completion",
+      "content": "HERMES TASK \u00b7 Finish heart night-loop implementation per brother direct and notebooklm blueprint \u00b7 why \u00b7 Brother direct P0 priority: heart must be finished by tomorrow; last canon shows step 1 shipped, need to complete full loop",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
-      "est_minutes": 45,
+      "est_minutes": 60,
       "score": 10.0,
-      "updated_at": "2026-07-18T11:22:59.753389",
-      "use_skill": "none"
+      "updated_at": "2026-07-18T12:23:37.775653",
+      "use_skill": "notebooklm"
     },
     {
       "arm": "research",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Test the heart module per brother's instruction and verify loops \u00b7 why: Heart is finished and needs testing as per brother direct, code arm can run integration tests",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-07-18T08:18:20.902892"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-18T15:56:17.292290"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Complete the heart night-loop implementation per v2 plan and run initial tests \u00b7 why: Brother direct requires heart finished and tested by tomorrow; step 1 shipped, now need to finalize and v",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-18T16:11:39.372712"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
