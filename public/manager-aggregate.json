@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T12:03:12Z",
+  "generated_at": "2026-07-19T12:18:13Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 86,
+    "note": 87,
     "briefing": 136,
     "idea": 0
   },
-  "total_blocks": 247,
+  "total_blocks": 248,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "d511ddde0394",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Run heart final loop test per brother's directive and verify all 4 loops pass · why: Brother direct: heart should be finished and tested; step 1 shipped, need to complete testing to satisfy P0 priority.",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-19T08:12:42.491155"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-18T22:02:12.873686"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "c2affa7e8011",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the four final heart loops per NotebookLM blueprint and brother's answers. · why: This is the highest-priority P0 task because brother directly said 'heart should",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-18T21:46:58.808867"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "b727090af075",
+        "type": "callout",
+        "content": "**What** · Ran heart final loop test script, verified all 4 loops pass. · **Why** · Brother directive: heart should be finished and tested; step 1 shipped, need complete testing for P0 priority. · **Result** · All 4 loops passed. No failures. · **Next** · Report to Hermes-Orchestrator. Heart testing",
+        "priority": "testing",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-19T08:12:46.247145"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "code_implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-19T03:22:51.592811"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "39c51828dde7",
-        "type": "callout",
-        "content": "**What** · Complete HEART night-loop implementation and execute test suite. · **Why** · Brother instructed to finish and test HEART; step 1 shipped in canon #55603, remaining loops need implementation and testing. · **Result** · Expected: all night-loop functions implemented and tests pass. · **Next",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-19T03:07:37.766144"
       }
     ],
     "briefing": [
