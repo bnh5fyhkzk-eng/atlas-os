@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "e84588895abc",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-19T01:05:10.947365"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the wire-order orchestrator from #55603: call me-heart-wire.py for Q4, firing each HEART arm in sequence per NotebookLM blueprint and brother's answers. · why: Brother directly said 'heart should be finished by tomorrow and tested' (brain #55589) and #55603 already shipped the orchestrator stub. This is the next executable step to close the heart loop — highest identity-tier priority.",
-      "updated_at": "2026-07-19T01:05:10.947379"
-    },
-    {
       "id": "fd8a89fda865",
       "type": "callout",
       "props": {
@@ -702,15 +690,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Run the next step of the heart wire order orchestrator: test me-heart-wire.py with the Q4 wire order from the maze-from-end frame. · why: Brother directly ordered 'heart should be finished by tomorrow and tested' and step 1 shipped. Code arm is best to execute the test and validate the orchestrator logic.",
       "updated_at": "2026-07-19T11:08:54.439139"
+    },
+    {
+      "id": "ba355d87d082",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-19T11:24:09.817786"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py module to complete the heart-mind boundary wiring per brother's direct plan. · why: Brother directly stated 'heart should be finished by tomorrow and tested' (#55589) and the Q4 wire-order orchestrator (#55603) is the next concrete step to ship the heart-wire loop. This is a P0 brother-direct + identity-tier task that unblocks the night-loop plan.",
+      "updated_at": "2026-07-19T11:24:09.817803"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-19T11:22:28.911591"
+    "checked_at": "2026-07-19T11:27:29.575768"
   },
   "block_count": 30,
-  "updated_at": "2026-07-19T11:08:54.439141",
-  "generated_at": "2026-07-19T15:22:28Z"
+  "updated_at": "2026-07-19T11:24:09.817804",
+  "generated_at": "2026-07-19T15:27:29Z"
 }
