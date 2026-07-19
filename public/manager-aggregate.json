@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T13:33:17Z",
+  "generated_at": "2026-07-19T13:48:18Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 89,
+    "note": 90,
     "briefing": 136,
     "idea": 0
   },
-  "total_blocks": 250,
+  "total_blocks": 251,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "987ce921492d",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Analyze the maze-from-end frame blockage pattern from #55591 and verify if heart-night-loop v2 #55589 resolves it, using NotebookLM P4 soul-catch boundary #55600. · why: Brother direct #55591 identifies a 'maze from end' blockage pattern; #55589 i",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-19T09:44:29.680037"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-18T23:33:25.786168"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "bc4d8563a292",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator per #55603 blueprint, shipping the first working loop of me-heart-wire.py · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the exact step-1 code artifact needed to unblock the hea",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-18T22:47:58.248242"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "cae1cbc8195e",
+        "type": "callout",
+        "content": "**What** · Cross-referenced maze-from-end blockage pattern #55591 with heart-night-loop v2 #55589 and soul-catch boundary #55600 to verify resolution. · **Why** · Hermes assigned P0 to ensure no hidden blocks remain before heart step-1 wire order orchestrator, using brother's direct identification a",
+        "priority": "cross-reference",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-19T09:44:37.485575"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "heart-mind integration test",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-19T04:23:54.710292"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "ac7245a51e22",
-        "type": "callout",
-        "content": "**What** · Implemented maze-from-end frame solution into Q4 wire-order orchestrator and ran initial test loop. · **Why** · Brother direct says heart must finish by tomorrow; night-loop plan requires maze-from-end blockage resolution to complete orchestrator. · **Result** · Maze-from-end frame integr",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-19T04:08:39.401813"
       }
     ],
     "briefing": [
