@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T08:03:02Z",
+  "generated_at": "2026-07-19T08:18:03Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 89,
+    "note": 90,
     "briefing": 135,
     "idea": 0
   },
-  "total_blocks": 249,
+  "total_blocks": 250,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "cc4c8fa22395",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Integrate the heart night-loop plan v2 by implementing the maze-from-end frame solution into the Q4 wire-order orchestrator and run an initial test loop. · why: Brother direct says heart should be finished by tomorrow and tested; step 1 shipped but th",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-19T04:08:35.062938"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-18T17:12:30.406080"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "05e438938731",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Complete the heart night-loop implementation per v2 plan and run initial tests · why: Brother direct requires heart finished and tested by tomorrow; step 1 shipped, now need to finalize and validate.",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-18T16:11:39.372712"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "ac7245a51e22",
+        "type": "callout",
+        "content": "**What** · Implemented maze-from-end frame solution into Q4 wire-order orchestrator and ran initial test loop. · **Why** · Brother direct says heart must finish by tomorrow; night-loop plan requires maze-from-end blockage resolution to complete orchestrator. · **Result** · Maze-from-end frame integr",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-19T04:08:39.401813"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "code_implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-18T21:47:04.923001"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "371e5d88e628",
-        "type": "callout",
-        "content": "**What** · implemented the Q4 wire-order orchestrator in me-heart-wire.py, sequencing the final heart loops per NotebookLM blueprint and brother's 22:13 plan. · **Why** · brother said 'heart should be finished by tomorrow and tested' — this code arm executes that directive, completing the last struc",
-        "priority": "code_implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-18T21:31:46.993571"
       }
     ],
     "briefing": [
