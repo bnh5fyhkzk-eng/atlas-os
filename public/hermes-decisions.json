@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-19T00:30:57Z",
+  "generated_at": "2026-07-19T00:46:09Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement step 2 of heart wire-order orchestrator (Q4 wire-order) per NotebookLM blueprint and brother's maze-from-end frame",
-      "why": "Brother direct said heart should be finished by tomorrow and tested; step 1 shipped, so step 2 is next critical path to complete the heart loop.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 45,
-      "timestamp": "2026-07-16T16:50:00.580917"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603 into a runnable script that sequences the 4 final heart loops per NotebookLM blueprint and brother's answers from #55572.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-07-18T20:30:57.911308"
+    },
+    {
+      "arm": "code",
+      "task": "Implement remaining loops for heart night-loop plan v2 per brother's direct instruction: finish heart by tomorrow and test.",
+      "why": "Brother directly ordered heart to be finished by tomorrow; last canon shipped step 1, so code arm must continue the implementation.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 120,
+      "timestamp": "2026-07-18T20:46:09.557960"
     }
   ]
 }
