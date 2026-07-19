@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T07:18:00Z",
+  "generated_at": "2026-07-19T07:33:01Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 87,
+    "note": 88,
     "briefing": 135,
     "idea": 0
   },
-  "total_blocks": 247,
+  "total_blocks": 248,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "066d0525cfdd",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement heart night-loop test from brother's answers in brain canons #55589 and #55572 · why: Brother direct says heart should be finished and tested; code arm can implement the test based on recent high-arousal blueprint and brother's answers",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-19T03:22:47.466194"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-18T14:55:30.806755"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "9e1a3a94a4d6",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, connecting heart-mind boundary per #55600 and maze-from-end frame per #55591. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the shipped step that needs executi",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-18T13:39:41.381068"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "d96490f0f014",
+        "type": "callout",
+        "content": "**What** · Parsed brain canons #55589 and #55572 to extract brother's answers, then implemented heart night-loop test based on high-arousal blueprint. · **Why** · Hermes-Orchestrator assigned P0 task: implement heart night-loop test from brother's answers. Brother's directive requires heart to be fi",
+        "priority": "code_implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-19T03:22:51.592811"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-18T20:46:15.758266"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "9483d747154d",
-        "type": "callout",
-        "content": "**What** · implemented Q4 wire-order orchestrator in me-heart-wire.py, shipping module to finalize heart-mind boundary loop. · **Why** · brother-direct #55589 demands heart finished and tested; #55603 is exact step shipped for this. code arm only one who can materialize wire-order orchestrator — P0 ",
-        "priority": "module-implement",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-18T20:31:01.459069"
       }
     ],
     "briefing": [
