@@ -10,28 +10,6 @@
   },
   "blocks": [
     {
-      "id": "191723641969",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "maze-rewiring",
-        "source": "hermes-deepseek-fill",
-        "action": "Ran Maze-From-End Frame on HEART blockages Q8, Q9, Q10 using finished state as start, found forward path: Q8→Q10→Q9 is blocked, need rewire link Q9.in→Q8.out and Q10.in→Q9.out.",
-        "why": "Hermes assigned reverse-chaining from finished state to identify minimal path; blockages break sequence, so patching with two cross-links restores forward flow.",
-        "result": "Minimal rewiring plan: add wire Q9.in→Q8.out and Q10.in→Q9.out, remove deadends Q8.in→x and Q9.out→x.",
-        "next_step": "Feed plan to me-heart-wire.py cycle, then verify final loops complete.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "dream-20260714-021547",
-        "timestamp": "2026-07-14T02:15:47.223086"
-      },
-      "content": "**What** · Ran Maze-From-End Frame on HEART blockages Q8, Q9, Q10 using finished state as start, found forward path: Q8→Q10→Q9 is blocked, need rewire link Q9.in→Q8.out and Q10.in→Q9.out. · **Why** · Hermes assigned reverse-chaining from finished state to identify minimal path; blockages break sequence, so patching with two cross-links restores forward flow. · **Result** · Minimal rewiring plan: add wire Q9.in→Q8.out and Q10.in→Q9.out, remove deadends Q8.in→x and Q9.out→x. · **Next** · Feed plan to me-heart-wire.py cycle, then verify final loops complete. · **Links** ·  · **Cycle** · dream-20260714-021547",
-      "updated_at": "2026-07-14T02:15:47.223086"
-    },
-    {
       "id": "150cff0dce37",
       "type": "callout",
       "props": {
@@ -745,15 +723,28 @@
         }
       ],
       "updated_at": "2026-07-19T12:00:05.019451"
+    },
+    {
+      "id": "bddfe8f88cf3",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "Overnight dream recap · last 6h · · #55572 [1.00] HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per NotebookLM blueprint + brother's answers. · #55600 [1.00] Q11 SOUL CATCH · heart-mind boundary · NotebookLM P4 2026-06-28 22:30 EDT. · #55611 [1.00] HEART NIGHT-LOOP 8/8 COMPLETE · 2026-06-28 23:07 EDT · heart-validate.py 4/4 PASS · brother said \"make it the heart you ",
+      "updated_at": "2026-07-19T16:56:45.832843"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-19T16:53:17.408776"
+    "checked_at": "2026-07-19T16:56:45.983793"
   },
   "block_count": 30,
-  "updated_at": "2026-07-19T12:00:05.019457",
-  "generated_at": "2026-07-19T20:53:17Z"
+  "updated_at": "2026-07-19T16:56:45.832850",
+  "generated_at": "2026-07-19T20:56:45Z"
 }
