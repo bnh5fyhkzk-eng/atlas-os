@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T07:03:00Z",
+  "generated_at": "2026-07-19T07:18:00Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 86,
+    "note": 87,
     "briefing": 135,
     "idea": 0
   },
-  "total_blocks": 246,
+  "total_blocks": 247,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "6896c0562f40",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Complete HEART night-loop implementation and execute test suite per brother's 'finished by tomorrow and tested' instruction. · why: Latest canon #55603 shipped step 1; brother direct requires HEART finished and tested. Code arm is best positioned to w",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-19T03:07:15.621077"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-18T13:39:41.381068"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "8bd07d073775",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator for heart-mind boundary as per NotebookLM P4 blueprint, ensuring final loops align with brother's 'heart should be finished by tomorrow and tested' directive. · why: Brother directly stated heart must be finish",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-18T13:09:13.050779"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "39c51828dde7",
+        "type": "callout",
+        "content": "**What** · Complete HEART night-loop implementation and execute test suite. · **Why** · Brother instructed to finish and test HEART; step 1 shipped in canon #55603, remaining loops need implementation and testing. · **Result** · Expected: all night-loop functions implemented and tests pass. · **Next",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-19T03:07:37.766144"
+      },
       {
         "arm": "research",
         "arm_glyph": "👁",
@@ -837,17 +848,6 @@
         "priority": "module-implement",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-18T20:31:01.459069"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "e507ce0b3dbe",
-        "type": "callout",
-        "content": "**What** · Implemented and tested heart wire orchestrator per Q4 wire-order and NotebookLM blueprint, extending me-heart-wire.py · **Why** · Brother direct to finish heart; last canon shipped me-heart-wire.py needs continuation; P0 priority · **Result** · Orchestrator built with correct wire orderin",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-18T19:15:15.067471"
       }
     ],
     "briefing": [
