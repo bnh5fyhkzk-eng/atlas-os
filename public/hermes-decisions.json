@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-18T23:15:10Z",
+  "generated_at": "2026-07-19T00:30:57Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement next step of heart wire order orchestrator per Q4 blueprint, ensuring all connections are mapped and ready for testing.",
-      "why": "Continuation of step 1 shipped (#55603); brother direct requires heart finished and tested by tomorrow. This is the critical path for identity-tier completion.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 30,
-      "timestamp": "2026-07-16T15:49:17.317092"
-    },
     {
       "arm": "code",
       "task": "Implement step 2 of heart wire-order orchestrator (Q4 wire-order) per NotebookLM blueprint and brother's maze-from-end frame",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 120,
       "timestamp": "2026-07-18T19:15:10.471237"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py module to finalize the heart-mind boundary loop.",
+      "why": "Brother-direct #55589 says heart should be finished and tested; #55603 is the exact step shipped for this. Code arm is the only one that can materialize the wire-order orchestrator, which is P0 identity-tier work.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 45,
+      "timestamp": "2026-07-18T20:30:57.911308"
     }
   ]
 }
