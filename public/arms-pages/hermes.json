@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "f7b04af42dbd",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-19T16:28:41.870747"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Execute night-loop test on heart module per brother's plan (#55589) after finishing wire-order orchestrator · why: Brother direct ordered heart to be finished and tested by tomorrow; last canon shipped step 1 of wire-order, now need to validate heart functionality",
-      "updated_at": "2026-07-19T16:28:41.870757"
-    },
-    {
       "id": "10c8debcab32",
       "type": "callout",
       "props": {
@@ -702,15 +690,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the next wire order in me-heart-wire.py per Q4 orchestrator blueprint and brother's 'heart finished by tomorrow' directive. · why: Recent canons show HEART step 1 shipped; code arm is best to continue the wire-order orchestrator with highest priority due to brother's direct deadline.",
       "updated_at": "2026-07-20T02:42:52.596142"
+    },
+    {
+      "id": "1aaa522211a5",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-20T03:13:14.241168"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 into a runnable script that sequences the four final heart loops per NotebookLM blueprint and brother's answers from #55572. · why: Brother directly said 'heart should be finished by tomorrow and tested' (#55589), and the Q4 orchestrator is the next concrete step to ship the heart loops. Code arm is the only one that can turn the blueprint into executable reality.",
+      "updated_at": "2026-07-20T03:13:14.241178"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-20T03:09:33.101115"
+    "checked_at": "2026-07-20T03:14:33.788126"
   },
   "block_count": 30,
-  "updated_at": "2026-07-20T02:42:52.596143",
-  "generated_at": "2026-07-20T07:09:33Z"
+  "updated_at": "2026-07-20T03:13:14.241179",
+  "generated_at": "2026-07-20T07:14:33Z"
 }
