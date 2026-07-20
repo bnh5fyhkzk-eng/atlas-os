@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T06:34:01Z",
+  "generated_at": "2026-07-20T06:49:02Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 80,
+    "note": 81,
     "briefing": 140,
     "idea": 0
   },
-  "total_blocks": 245,
+  "total_blocks": 246,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "4f54a1856d87",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the next wire order in me-heart-wire.py per Q4 orchestrator blueprint and brother's 'heart finished by tomorrow' directive. · why: Recent canons show HEART step 1 shipped; code arm is best to continue the wire-order orchestrator with highest",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-20T02:42:52.596142"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-19T16:28:41.870757"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "557fe3ef857f",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, connecting me-heart-wire.py to the NotebookLM blueprint's final loops for heart completion. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the step-1 shipped or",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-19T15:27:57.028851"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "73ab7dabbed4",
+        "type": "callout",
+        "content": "**What** · implemented next wire order in me-heart-wire.py per Q4 blueprint and brother's deadline · **Why** · heart step 1 shipped; code arm must continue wire-order orchestrator with P0 priority to meet brother's 'heart finished by tomorrow' directive · **Result** · me-heart-wire.py now contains t",
+        "priority": "code",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-20T02:42:57.571087"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "implement",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-19T20:19:57.361079"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "bf2c4f7dee16",
-        "type": "callout",
-        "content": "**What** · Implement Q4 wire-order orchestrator for heart using me-heart-wire.py blueprint · **Why** · Brother direct: heart must be finished by tomorrow, Q4 is next step after STEP 1 · **Result** · Orchestrator code written, ready for testing · **Next** · Run unit tests on Q4 orchestrator · **Links",
-        "priority": "code-implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-19T20:04:41.539255"
       }
     ],
     "briefing": [
