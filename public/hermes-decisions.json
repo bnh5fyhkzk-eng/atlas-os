@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-20T02:23:20Z",
+  "generated_at": "2026-07-20T02:38:35Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement Q5 wire-order for heart based on NotebookLM blueprint and brother's answers.",
-      "why": "Brother direct to finish heart by tomorrow; step 1 shipped, need to continue with next wire order.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 45,
-      "timestamp": "2026-07-17T19:46:36.006909"
-    },
     {
       "arm": "research",
       "task": "Map the explicit heart-state and blockage-maze constraints from canons #55572, #55589, #55591, and #55600 into a single threaded check-list, cross-referencing the NotebookLM blueprint and brother's direct answers.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-19T22:23:20.373167"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603 as a runnable Python script that sequences the four final loops per the NotebookLM blueprint and brother's answers from #55572.",
+      "why": "This is the highest-priority execution step: brother said 'heart should be finished by tomorrow and tested' (#55589), and the Q4 orchestrator (#55603) is the direct next action to ship the heart loops. Code arm is needed to materialize the plan into runnable software.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-19T22:38:35.324455"
     }
   ]
 }
