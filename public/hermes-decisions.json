@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-20T03:09:06Z",
+  "generated_at": "2026-07-20T03:24:21Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Execute heart test suite and verify all final loops per NotebookLM blueprint and brother's answers.",
-      "why": "Brother direct P0: heart must be finished and tested; step 1 shipped; need to confirm functionality.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 45,
-      "timestamp": "2026-07-17T21:03:10.352560"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py script to finalize the heart-mind wire order per NotebookLM blueprint.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 60,
       "timestamp": "2026-07-19T23:09:06.639847"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603, ensuring the me-heart-wire.py script correctly sequences the final loops per the NotebookLM blueprint and brother's answers from #55572.",
+      "why": "Brother directly stated 'heart should be finished by tomorrow and tested' (#55589), and the Q4 orchestrator is the critical next step to ship the heart wire order. This is a direct execution of the highest-priority directive.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-19T23:24:21.472200"
     }
   ]
 }
