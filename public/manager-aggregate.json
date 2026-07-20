@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T23:34:55Z",
+  "generated_at": "2026-07-20T23:49:55Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 76,
+    "note": 77,
     "briefing": 142,
     "idea": 0
   },
-  "total_blocks": 242,
+  "total_blocks": 243,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "5cf8fa11f4a1",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 into a runnable script that sequences heart-mind boundary loops per NotebookLM P4 blueprint. · why: Brother direct #55589 says heart should be finished and tested; #55603 shipped the orchestrator de",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-20T19:33:27.727743"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-20T05:01:07.806819"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "7fbe200a2c81",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Finish HEART wire-order orchestration for remaining Q4 steps and test with NotebookLM blueprint. · why: Brother direct to finish heart by tomorrow; step 1 shipped, need to complete remaining steps immediately.",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-20T04:30:41.661960"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "bdc589f00486",
+        "type": "callout",
+        "content": "**What** · Write runnable orchestrator script from #55603 design, sequencing heart-mind boundary loops per NotebookLM P4 blueprint. · **Why** · Heart is finished (#55589), orchestrator design shipped (#55603), need executable code to unblock heart-mind boundary maze (#55591). · **Result** · Runnable",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-20T19:33:33.595484"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-20T10:51:26.072851"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "8662a915e592",
-        "type": "callout",
-        "content": "**What** · Implement Q4 wire-order orchestrator for heart-mind boundary per #55603, shipping first executable loop connecting NotebookLM blueprint to brother's answers. · **Why** · Brother direct in #55589 confirms heart finishes tomorrow; #55603 is step 1 that unblocks entire pipeline. Only code ar",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-20T10:05:49.754538"
       }
     ],
     "briefing": [
