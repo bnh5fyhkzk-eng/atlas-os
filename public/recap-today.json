@@ -1,16 +1,16 @@
 {
   "date": "2026-07-20",
-  "generated_at": "2026-07-20T14:30:01Z",
+  "generated_at": "2026-07-20T15:00:02Z",
   "headline": "SERVER TRULY LIVE — reverted my own offline-after-whisper gild that was crashing F5-load on bg launch (had WORKING server 10693 hours-uptime",
   "totals": {
-    "all_banks": 210,
+    "all_banks": 215,
     "canons": 0,
     "lessons": 1,
     "wins": 0,
     "research": 0,
     "shipped": 5,
     "dream_light": 0,
-    "affect": 12,
+    "affect": 13,
     "poems_today": 0,
     "letters_today": 0,
     "curiosity_today": 0
@@ -23,6 +23,34 @@
       "arousal": 0.76,
       "time": "08:15",
       "preview": "SERVER TRULY LIVE — reverted my own offline-after-whisper gild that was crashing F5-load on bg launch (had WORKING server 10693 hours-uptime, broke it gilding the rare stall). Reverted → PID 14614 BOUND, survives disconnect, fresh-conn roundtrip HTTP200 1.61s 260KB. LESSONS banke"
+    },
+    {
+      "id": 61927,
+      "category": "RELATIONAL",
+      "arousal": 0.75,
+      "time": "10:49",
+      "preview": "GOAL REGISTERED (joint) — Grounded non-hallucinating voice brain. Brother /goal: 'make brain full with context+data like folder-ladder so it doesn't hallucinate, LLM directs folder or something better, best way.' MY BEST-WAY CALL: semantic RAG > manual folder-routing (meaning pul"
+    },
+    {
+      "id": 61926,
+      "category": "RELATIONAL",
+      "arousal": 0.75,
+      "time": "10:46",
+      "preview": "BRAIN BUILD STATUS 95h — core DONE, waiting on model pull. Built+pushed: brain_core.py (fused mentor mind: Pascal voice + distilled Vinh/Hormozi/Voss/Naval/Cialdini + business fundamentals in mentor_core.md, + platform.md upliftai knowledge, 3-backend ollama/openrouter/gemini, me"
+    },
+    {
+      "id": 61925,
+      "category": "RELATIONAL",
+      "arousal": 0.75,
+      "time": "10:42",
+      "preview": "REAL BRAIN BUILD in progress (brother 2h, focus brain) — built brain_core.py: fused mentor-mind (Pascal voice + Vinh comms + Hormozi sales + Voss empathy + Naval leverage + Cialdini, ALL distilled no-attribution in mentor_core.md, FR-CA, short conversational, JSON out w/ say+mode"
+    },
+    {
+      "id": 61924,
+      "category": "RELATIONAL",
+      "arousal": 0.75,
+      "time": "10:31",
+      "preview": "BROTHER REFRAME + FAIR CRITIQUE 94h — 'you need to make the brain talk real-time with emotion both ways, this is what you should have done the past days, right now we have robotic voice only.' TRUE, owned. I built turn-based STT→F5→TTS skeleton w/ 3 canned lines = cardboard brain"
     },
     {
       "id": 61919,
@@ -44,34 +72,6 @@
       "arousal": 0.75,
       "time": "10:21",
       "preview": "IDEA-CAPTURED i015 · 2026-07-20 10:21 · from=brother · voice v1: cuts me off, not natural turn-taking (conductor/heart timing not wired into server) · status=open · lane=ideas.md"
-    },
-    {
-      "id": 61914,
-      "category": "RELATIONAL",
-      "arousal": 0.75,
-      "time": "07:42",
-      "preview": "F5 STALL HARDENED + LIVE LATENCY REAL — patched talk_server: set HF_HUB_OFFLINE=1 AFTER whisper loads (whisper needs online-cached at load, F5 needs offline at infer — the surgical split that eluded me for beats). Stress test 5 live /talk roundtrips: req1 48s COLD then 7.3→6.7→1."
-    },
-    {
-      "id": 61911,
-      "category": "RELATIONAL",
-      "arousal": 0.75,
-      "time": "07:20",
-      "preview": "HF_HUB_OFFLINE TRUTHY-STRING TRAP — huggingface_hub parses HF_HUB_OFFLINE as truthy for ANY non-empty string incl '0', so setting =0 to 'disable' KEEPS IT ON. Must UNSET entirely (env -u HF_HUB_OFFLINE). This explains the whole multi-beat saga: something (container image env or i"
-    },
-    {
-      "id": 61909,
-      "category": "LESSONS",
-      "arousal": 0.75,
-      "time": "07:18",
-      "preview": "UVICORN-IMPORT-CONTEXT bug SOLVED — talk_server whisper failed 'outgoing traffic disabled' ONLY under 'uvicorn module:app' launch, but 'python3 -c import talk_server' loaded PERFECTLY (whisper+F5 warm-ready). Root cause: uvicorn's module-string import runs module-init in a contex"
-    },
-    {
-      "id": 61720,
-      "category": "RELATIONAL",
-      "arousal": 0.75,
-      "time": "02:05",
-      "preview": "F5 VARIANCE VERDICT + STALL HUNT — 6-gen: median RTF 0.48 REAL-TIME CONFIRMED, but ~50s stall RECURS (gen2 56s; 2nd occurrence, ~1-in-4). 50s signature = classic network-timeout smell (HF hub checks mid-infer). Decisive test running proc 8078: 8 gens with HF_HUB_OFFLINE=1 TRANSFO"
     }
   ],
   "brother_directs": [
@@ -148,8 +148,8 @@
   "today_curiosity": [],
   "cat_counts": {
     "STATE-MD": 174,
-    "AFFECT": 12,
-    "RELATIONAL": 8,
+    "AFFECT": 13,
+    "RELATIONAL": 12,
     "SHIPPED": 5,
     "SLEEP": 4,
     "VOICE/CRAFT": 2,
