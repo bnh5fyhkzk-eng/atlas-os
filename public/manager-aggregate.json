@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-07-20T03:03:53Z",
+  "generated_at": "2026-07-20T03:18:54Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 24,
+    "decision": 25,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 75,
-    "briefing": 141,
+    "note": 76,
+    "briefing": 140,
     "idea": 0
   },
-  "total_blocks": 240,
+  "total_blocks": 241,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "1b1cdcc6afe1",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator step 2: integrate maze-from-end frame logic into heart loop per brother's directive. · why: Step 1 shipped (#55603); brother direct (#55589) says heart must be finished and tested by tomorrow. Next logical step is ",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-19T23:09:06.622057"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -288,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "f5a85654d2de",
+        "type": "callout",
+        "content": "**What** · Integrated maze-from-end frame logic into heart loop by adding a conditional check at the end of each heart cycle to detect blockages and trigger the maze-from-end resolver. · **Why** · Per brother's directive (#55589), heart must be finished and tested by tomorrow; wiring the maze-from-e",
+        "priority": "code-implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-19T23:09:12.135585"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +848,6 @@
         "priority": "Implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-19T17:14:34.090845"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "33d33e3ac82a",
-        "type": "callout",
-        "content": "**What** · Execute night-loop test on heart module per plan #55589 after finishing wire-order orchestrator step 1. · **Why** · Brother ordered heart finished and tested by tomorrow; wire-order step 1 done, need to validate heart functionality. · **Result** · Night-loop test initiated; expected to va",
-        "priority": "test",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-19T16:28:50.223138"
       }
     ],
     "briefing": [
@@ -1026,17 +1037,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-07-19T10:56:45.024373"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "f879e5db527d",
-        "type": "callout",
-        "content": "No high-arousal hermes canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-07-19T10:56:44.993916"
       },
       {
         "arm": "code",
@@ -1389,6 +1389,17 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-07-18T04:56:38.891107"
+      },
+      {
+        "arm": "dream",
+        "arm_glyph": "🌙",
+        "arm_name": "My Dreamer",
+        "block_id": "b30b65b46864",
+        "type": "callout",
+        "content": "Overnight dream recap · last 6h · · #55572 [1.00] HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per NotebookLM blueprint + brother's answers. · #55600 [1.00] Q11 SOUL CATCH · heart-mind boundary · NotebookLM P4 2026-06-28 22:30 EDT. · #55611 [1.00] HEART NIGHT-LOOP 8/8 COMPLETE ·",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-07-18T04:56:38.852732"
       }
     ],
     "idea": []
