@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-07-20T01:07:17Z",
-  "total_items_scored": 130,
+  "generated_at": "2026-07-20T01:17:18Z",
+  "total_items_scored": 131,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Run heart final loop test per brother's directive and verify all 4 loops pass \u00b7 why: Brother direct: heart should be finished and tested; step 1 shipped, need to complete testing to satisfy P",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement Q4 wire-order orchestrator per #55603 blueprint, shipping the first executable loop of me-heart-wire.py \u00b7 why: Brother direct in #55589 and #55603 demands heart finished and tested;",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-19T08:12:42.491155"
+      "updated_at": "2026-07-19T08:43:05.481576"
     },
     {
       "arm": "code",
@@ -34,22 +34,11 @@
       "category": "launchagents",
       "priority": "P1",
       "source": "backfill",
-      "score": 9.94,
+      "score": 9.86,
       "updated_at": "2026-07-19T18:00:03.669872"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Run heart final loop test per brother's directive and verify all 4 loops pass \u00b7 why: Brother direct: heart should be finished and tested; step 1 shipped, need to complete testing to satisfy P",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-07-19T08:12:42.491155"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -148,6 +137,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-19T11:54:34.969743"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator (me-heart-wire.py) to ship the final heart-night-loop as a runnable Python harness, integrating the Maze-From-End frame and NotebookLM P4 soul-catch b",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-19T13:26:05.050875"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
