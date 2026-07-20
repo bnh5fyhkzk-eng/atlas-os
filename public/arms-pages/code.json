@@ -967,15 +967,37 @@
       },
       "content": "No high-arousal code canon in last 6h",
       "updated_at": "2026-07-19T22:56:46.825661"
+    },
+    {
+      "id": "f5a85654d2de",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "code-implementation",
+        "source": "hermes-deepseek-fill",
+        "action": "Integrated maze-from-end frame logic into heart loop by adding a conditional check at the end of each heart cycle to detect blockages and trigger the maze-from-end resolver.",
+        "why": "Per brother's directive (#55589), heart must be finished and tested by tomorrow; wiring the maze-from-end frame into the loop resolves blockages that block Q4 wire-order orchestrator step 2.",
+        "result": "Heart loop now calls maze-from-end frame when blockage detected; blockage resolution flow is active and ready for integration test.",
+        "next_step": "Run integration test for heart loop with maze-from-end to verify blockage resolution; if passes, mark step 2 complete and notify Hermes-Orchestrator.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260719-230912",
+        "timestamp": "2026-07-19T23:09:12.135585"
+      },
+      "content": "**What** · Integrated maze-from-end frame logic into heart loop by adding a conditional check at the end of each heart cycle to detect blockages and trigger the maze-from-end resolver. · **Why** · Per brother's directive (#55589), heart must be finished and tested by tomorrow; wiring the maze-from-end frame into the loop resolves blockages that block Q4 wire-order orchestrator step 2. · **Result** · Heart loop now calls maze-from-end frame when blockage detected; blockage resolution flow is active and ready for integration test. · **Next** · Run integration test for heart loop with maze-from-end to verify blockage resolution; if passes, mark step 2 complete and notify Hermes-Orchestrator. · **Links** ·  · **Cycle** · code-20260719-230912",
+      "updated_at": "2026-07-19T23:09:12.135585"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-19T23:09:04.567880"
+    "checked_at": "2026-07-19T23:14:05.141753"
   },
-  "block_count": 30,
-  "updated_at": "2026-07-19T22:56:46.825673",
-  "generated_at": "2026-07-20T03:09:04Z"
+  "block_count": 31,
+  "updated_at": "2026-07-19T23:09:12.135585",
+  "generated_at": "2026-07-20T03:14:05Z"
 }
