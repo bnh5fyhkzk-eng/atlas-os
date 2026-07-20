@@ -996,15 +996,37 @@
       },
       "content": "**What** · implemented step 2 of me-heart-wire.py: integrated night-loop plan v2 and maze-from-end frame into the orchestrator logic, then ran brother's test harness · **Why** · hermes said step 1 shipped, step 2 is critical for heart deadline tomorrow; brother direct demands momentum · **Result** · orchestrator now loops from maze end backwards, night-loop v2 aligns sleep/wake cycles; test passed, no regressions · **Next** · ship to hermes for review, then prep step 3 (final wire routing) · **Links** ·  · **Cycle** · code-20260720-180214",
       "updated_at": "2026-07-20T18:02:14.687215"
+    },
+    {
+      "id": "0f2318b72998",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "code-execution",
+        "source": "hermes-deepseek-fill",
+        "action": "Fetched NotebookLM blueprint, parsed remaining heart loops (loops 2-4), and wired orchestrator to ship final loops.",
+        "why": "Hermes assigned P0 to complete heart wire-order; step 1 done, need to close loops 2-4 by tomorrow.",
+        "result": "Orchestrator now emits final heart loops: loop-2 (sync), loop-3 (validate), loop-4 (commit). Ready for ship.",
+        "next_step": "Run integration test on shipped loops, then report back to Hermes for sign-off.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260720-191821",
+        "timestamp": "2026-07-20T19:18:21.587004"
+      },
+      "content": "**What** · Fetched NotebookLM blueprint, parsed remaining heart loops (loops 2-4), and wired orchestrator to ship final loops. · **Why** · Hermes assigned P0 to complete heart wire-order; step 1 done, need to close loops 2-4 by tomorrow. · **Result** · Orchestrator now emits final heart loops: loop-2 (sync), loop-3 (validate), loop-4 (commit). Ready for ship. · **Next** · Run integration test on shipped loops, then report back to Hermes for sign-off. · **Links** ·  · **Cycle** · code-20260720-191821",
+      "updated_at": "2026-07-20T19:18:21.587004"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-20T19:17:27.660525"
+    "checked_at": "2026-07-20T19:22:28.333747"
   },
-  "block_count": 31,
-  "updated_at": "2026-07-20T18:02:14.687215",
-  "generated_at": "2026-07-20T23:17:27Z"
+  "block_count": 32,
+  "updated_at": "2026-07-20T19:18:21.587004",
+  "generated_at": "2026-07-20T23:22:28Z"
 }
