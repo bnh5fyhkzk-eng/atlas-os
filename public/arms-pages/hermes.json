@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "ce6e3609be60",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-20T11:52:19.536676"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement Step 2 of heart wire-order per Q4 orchestrator blueprint, integrating maze-from-end frame logic for blockage resolution. · why: Brother direct specifies heart should be finished and tested; Step 1 shipped, so next critical step is continued coding of the wire-order. The maze-from-end frame (canon #55591) provides a blockage resolution pattern to incorporate.",
-      "updated_at": "2026-07-20T11:52:19.536691"
-    },
-    {
       "id": "29c2c4f4d2ac",
       "type": "callout",
       "props": {
@@ -695,15 +683,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a runnable Python script, integrating the heart-night-loop plan v2 from #55589 and the maze-from-end frame from #55591. · why: Brother-direct P0: #55603 explicitly shipped the orchestrator blueprint; #55589 demands heart finished and tested by tomorrow; #55591 provides the blockage-as-maze resolution frame. Code arm must execute this to unblock the heart pipeline.",
       "updated_at": "2026-07-21T01:26:33.241865"
+    },
+    {
+      "id": "3d5c5e385d5f",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-21T01:41:50.563066"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 into a runnable script that sequences the final heart loops per the NotebookLM blueprint and brother's answers from #55572. · why: This is the highest-priority P0 task because brother directly said 'heart should be finished by tomorrow and tested' (#55589), and the orchestrator wire-order (#55603) is the critical next step to ship the heart completion. Code arm is the only one that can execute this implementation.",
+      "updated_at": "2026-07-21T01:41:50.563076"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-21T01:38:22.703777"
+    "checked_at": "2026-07-21T01:43:23.485730"
   },
   "block_count": 30,
-  "updated_at": "2026-07-21T01:26:33.241866",
-  "generated_at": "2026-07-21T05:38:22Z"
+  "updated_at": "2026-07-21T01:41:50.563077",
+  "generated_at": "2026-07-21T05:43:23Z"
 }
