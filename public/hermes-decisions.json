@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-21T17:30:25Z",
+  "generated_at": "2026-07-21T18:03:39Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Analyze the maze-from-end frame blockage pattern from #55591 and verify if heart-night-loop v2 #55589 resolves it, using NotebookLM P4 soul-catch boundary #55600.",
-      "why": "Brother direct #55591 identifies a 'maze from end' blockage pattern; #55589 is brother's explicit plan for heart completion by tomorrow. Research arm can cross-reference these with the soul-catch boundary from #55600 to confirm no hidden blocks remain before the heart step-1 wire order orchestrator #55603 fires next.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 12,
-      "timestamp": "2026-07-19T09:44:29.702346"
-    },
     {
       "arm": "code",
       "task": "Implement and test the Q4 wire-order orchestrator (me-heart-wire.py) to ensure the heart night-loop plan v2 can execute the final loops per brother's 22:13 directive.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-21T13:30:25.725695"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the next step of the heart wire (Q4 wire-order orchestrator) based on the night-loop plan v2 and brother's instructions to finish heart by tomorrow.",
+      "why": "Brother direct instruction (P0) to finish heart by tomorrow and test; step 1 shipped, need to continue coding to complete the remaining steps.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 120,
+      "timestamp": "2026-07-21T14:03:39.581737"
     }
   ]
 }
