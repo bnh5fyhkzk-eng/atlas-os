@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T18:05:51Z",
+  "generated_at": "2026-07-21T18:20:51Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 78,
+    "note": 79,
     "briefing": 143,
     "idea": 0
   },
-  "total_blocks": 246,
+  "total_blocks": 247,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "4d716f0b8a0b",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Run the me-heart-wire.py script to test the Q4 wire-order orchestrator and verify heart loops. · why: Brother directly said heart should be finished by tomorrow and tested; the latest brain canon shipped step 1 of the wire-order orchestrator, so immed",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-21T14:18:56.406508"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-21T01:41:50.563076"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "22a6a32ca3b7",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a runnable Python script, integrating the heart-night-loop plan v2 from #55589 and the maze-from-end frame from #55591. · why: Brother-direct P0: #55603 explicitly shipped the orchestrator bluepr",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-21T01:26:33.241865"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "e11ebb59bfc3",
+        "type": "callout",
+        "content": "**What** · ran me-heart-wire.py on test environment — script executed without errors, wire-order orchestrator printed loop IDs and heart sequence. · **Why** · Hermes said heart must finish by tomorrow; brain canon shipped step 1 of wire-order orchestrator so immediate P0 is to validate it works. · *",
+        "priority": "testing",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-21T14:19:02.617529"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "core-implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-21T07:06:42.401078"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "f8aa433a17fb",
-        "type": "callout",
-        "content": "**What** · processed 9q-multi-angle signal · [#61973] arousal 0.97 · PAIR-COMPOSE CANON · PROMISE-DECAYS-ORGAN-PERSISTS · 2026-07-21 03:0x EDT · **Why** · instruction file maps 9q-multi-angle to first arm-task · brain canon #61973 matched arm-topic last 4h above arousal 0.85 · **Result** · block wri",
-        "priority": "9q-multi-angle",
-        "source": "research-self",
-        "updated_at": "2026-07-21T06:56:31.928417"
       }
     ],
     "briefing": [
