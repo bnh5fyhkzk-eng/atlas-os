@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-21T10:03:26Z",
+  "generated_at": "2026-07-21T10:20:43Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator as a runnable script that sequences the four heart loops per NotebookLM blueprint and brother's direct instructions, then test with a dry run.",
-      "why": "Brother directly said 'heart should be finished by tomorrow and tested' and the Q4 wire-order orchestrator was just shipped as a concept (#55603). This is the highest-priority P0 action to turn the blueprint into executable code and validate it immediately.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 45,
-      "timestamp": "2026-07-19T03:53:17.297153"
-    },
     {
       "arm": "code",
       "task": "Integrate the heart night-loop plan v2 by implementing the maze-from-end frame solution into the Q4 wire-order orchestrator and run an initial test loop.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-21T06:03:26.785904"
+    },
+    {
+      "arm": "code",
+      "task": "Integrate the maze-from-end frame with the wire-order orchestrator for step 2 of the heart night-loop plan.",
+      "why": "Step 1 (me-heart-wire.py) is shipped; brother direct instructions require heart to be finished and tested next. This task directly advances the night-loop plan and addresses the recent high-arousal canons.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 60,
+      "timestamp": "2026-07-21T06:20:43.481555"
     }
   ]
 }
