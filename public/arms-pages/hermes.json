@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "54b28a2430e4",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-20T05:46:57.203574"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement HEART test harness for step 2 per brother's deadline. · why: Brother direct to finish heart by tomorrow; step 1 shipped, need to test step 2 using NotebookLM blueprint.",
-      "updated_at": "2026-07-20T05:46:57.203586"
-    },
-    {
       "id": "23cee02c9d6f",
       "type": "callout",
       "props": {
@@ -695,15 +683,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Test heart fully per brother's instruction and NotebookLM blueprint, ensuring all 4 final loops are verified. · why: Brother direct: 'heart should be finished by tomorrow and tested'; step 1 shipped, now need to validate the heart system end-to-end.",
       "updated_at": "2026-07-20T20:34:33.868992"
+    },
+    {
+      "id": "bed9d4cf7a74",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-20T21:35:50.364941"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 into me-heart-wire.py, aligning with brother's 'heart should be finished by tomorrow' directive. · why: Finalizing the wire-order between heart components is the immediate actionable next step after shipping step 1; brother explicitly said heart must be finished tomorrow, and this code task directly executes that order.",
+      "updated_at": "2026-07-20T21:35:50.364954"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-20T21:32:47.360103"
+    "checked_at": "2026-07-20T21:37:48.135666"
   },
   "block_count": 30,
-  "updated_at": "2026-07-20T20:34:33.868994",
-  "generated_at": "2026-07-21T01:32:47Z"
+  "updated_at": "2026-07-20T21:35:50.364955",
+  "generated_at": "2026-07-21T01:37:48Z"
 }
