@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "9727cddef11b",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-21T02:12:40.061341"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Execute heart night-loop test script and validate Q4 wire order against maze-from-end frame. · why: Step 1 shipped, now need to test the heart night-loop as per brother's direct instruction (P0).",
-      "updated_at": "2026-07-21T02:12:40.061351"
-    },
-    {
       "id": "f84f72150238",
       "type": "callout",
       "props": {
@@ -695,15 +683,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator for heart-mind boundary, shipping the next step after #55603. · why: Brother direct in #55589 says heart should be finished and tested; #55603 shipped step 1, so code arm must continue the wire-order to complete the heart loop.",
       "updated_at": "2026-07-21T14:34:08.670029"
+    },
+    {
+      "id": "0a50d0cb64ed",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-21T15:44:11.683615"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py module that sequences the final heart loops per NotebookLM blueprint and brother's answers. · why: This is the direct next step from the last shipped cannon (#55603) and brother's explicit instruction to finish heart by tomorrow. Code arm is the only one that can execute this concrete deliverable.",
+      "updated_at": "2026-07-21T15:44:11.683624"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-21T15:41:00.642294"
+    "checked_at": "2026-07-21T15:46:01.273149"
   },
   "block_count": 30,
-  "updated_at": "2026-07-21T14:34:08.670031",
-  "generated_at": "2026-07-21T19:41:00Z"
+  "updated_at": "2026-07-21T15:44:11.683626",
+  "generated_at": "2026-07-21T19:46:01Z"
 }
