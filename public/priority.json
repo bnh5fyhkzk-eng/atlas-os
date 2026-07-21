@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-07-21T01:29:02Z",
-  "total_items_scored": 125,
+  "generated_at": "2026-07-21T01:39:02Z",
+  "total_items_scored": 126,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement HEART test harness for step 2 per brother's deadline. \u00b7 why: Brother direct to finish heart by tomorrow; step 1 shipped, need to test step 2 using NotebookLM blueprint.",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Write and execute test suite for me-heart-wire.py to verify wire order and heart-mind boundary per Q11 soul catch. \u00b7 why: Brother direct said heart should be tested immediately after finishin",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-20T05:46:57.203586"
-    },
-    {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Analyze the Maze-From-End Frame (#55591) to identify the specific blockage pattern and derive the reverse-path solution for the heart-night-loop plan. \u00b7 why \u00b7 Brother directly stated 'when we have a blockage we just need to see it as a maze built from the end' \u2014 this is a P0 brother-direct instruction that unblocks the heart-night-loop plan (#55589) and aligns with the Q11 soul-catch boundary work (#55600). Research arm is best suited for pattern analysis and reverse-engineering the maze logic.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 25,
-      "score": 10.0,
-      "updated_at": "2026-07-20T09:50:20.756254",
-      "use_skill": "brain-rrf"
+      "updated_at": "2026-07-20T06:47:48.629511"
     },
     {
       "arm": "code",
@@ -38,20 +25,20 @@
       "score": 10.0,
       "updated_at": "2026-07-20T10:05:36.373591",
       "use_skill": "none"
+    },
+    {
+      "arm": "infra",
+      "arm_glyph": "\ud83d\udc97",
+      "arm_name": "My Heart",
+      "content": "launchagents \u00b7 last 30d \u00b7 3 canons (top arousal \u00b7 1.00)",
+      "category": "launchagents",
+      "priority": "P1",
+      "source": "backfill",
+      "score": 9.68,
+      "updated_at": "2026-07-20T18:00:05.943700"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement HEART test harness for step 2 per brother's deadline. \u00b7 why: Brother direct to finish heart by tomorrow; step 1 shipped, need to test step 2 using NotebookLM blueprint.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-07-20T05:46:57.203586"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +137,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-20T11:21:55.641471"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement Step 2 of heart wire-order per Q4 orchestrator blueprint, integrating maze-from-end frame logic for blockage resolution. \u00b7 why: Brother direct specifies heart should be finished and",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-20T11:52:19.536691"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
