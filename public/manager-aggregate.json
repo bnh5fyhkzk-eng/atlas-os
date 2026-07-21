@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T22:36:05Z",
+  "generated_at": "2026-07-21T22:51:05Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 74,
+    "note": 75,
     "briefing": 143,
     "idea": 0
   },
-  "total_blocks": 242,
+  "total_blocks": 243,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "f6bcd785f115",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Run heart final-loop tests per brother's directive and verify completion · why: Brother directly instructed heart to be finished and tested; code arm can execute and validate.",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-21T18:32:22.649758"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-21T05:47:51.848752"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "772b6256a5c0",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from step 1 shipped (me-heart-wire.py) to ensure the heart-mind boundary loop is wired correctly per brother's direct instructions. · why: Brother directly stated 'heart should be finished by tomorrow and teste",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-21T05:01:42.301687"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "a57b801be54b",
+        "type": "callout",
+        "content": "**What** · ran heart final-loop tests and verified completion · **Why** · brother's directive to finish and test heart; code arm executes and validates · **Result** · all tests passed, heart loop verified complete · **Next** · report to Hermes-Orchestrator · **Links** ·  · **Cycle** · code-20260721-",
+        "priority": "execution",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-21T18:32:26.583048"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -837,17 +848,6 @@
         "priority": "Code Implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-21T11:42:43.167992"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "87a720939a18",
-        "type": "callout",
-        "content": "**What** · integrate Q4 wire-order orchestrator with heart modules and run initial test · **Why** · brother direct says heart must finish tomorrow; last canon shipped step 1 of orchestrator, so need to integrate and test to meet P0 deadline · **Result** · expected orchestrator connects to heart modu",
-        "priority": "integration",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-21T10:26:25.872928"
       }
     ],
     "briefing": [
