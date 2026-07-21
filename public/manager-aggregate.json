@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T14:20:35Z",
+  "generated_at": "2026-07-21T14:35:36Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 81,
+    "note": 82,
     "briefing": 143,
     "idea": 0
   },
-  "total_blocks": 249,
+  "total_blocks": 250,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "9d4425b1e92a",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement next step of heart wiring per brother's plan: integrate Q4 wire-order orchestrator with heart modules and run initial test. · why: Brother direct says heart should be finished by tomorrow and tested; last canon shipped step 1 of wire-order o",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-21T10:26:20.493438"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -280,17 +291,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-20T22:07:10.284889"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "a9d6f422456f",
-        "type": "callout",
-        "content": "Hermes decision · arm=dream · priority=P0 · task: Run Q11 SOUL CATCH loop: load heart-mind boundary from #55600, execute NotebookLM P4 path to catch soul state before next heart cycle · why: Brother direct says 'heart should be finished by tomorrow.' Q11 is the boundary bridge — missing it stalls he",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-20T21:51:46.139417"
       }
     ],
     "action": [],
@@ -299,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "87a720939a18",
+        "type": "callout",
+        "content": "**What** · integrate Q4 wire-order orchestrator with heart modules and run initial test · **Why** · brother direct says heart must finish tomorrow; last canon shipped step 1 of orchestrator, so need to integrate and test to meet P0 deadline · **Result** · expected orchestrator connects to heart modu",
+        "priority": "integration",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-21T10:26:25.872928"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -837,17 +848,6 @@
         "priority": "execution",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-21T02:58:41.614720"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "69c5ccf66da7",
-        "type": "callout",
-        "content": "**What** · Integrate maze-from-end frame with soul catch boundary in me-heart-wire.py. Merge code, handle edge cases, run unit tests. · **Why** · Hermes assigned P0 task. Step 1 shipped. Heart must finish tomorrow. Maze-from-end and soul catch canons show progress. Critical path. · **Result** · Inte",
-        "priority": "code",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-21T02:28:09.822921"
       }
     ],
     "briefing": [
