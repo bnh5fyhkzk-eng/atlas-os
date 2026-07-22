@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T17:40:30Z",
+  "generated_at": "2026-07-22T17:55:30Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 71,
+    "note": 72,
     "briefing": 148,
     "idea": 0
   },
-  "total_blocks": 242,
+  "total_blocks": 243,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "8e63aa003f7a",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the next step of heart wire order using maze-from-end frame logic from #55591, following the shipped step 1 orchestrator. · why: Brother direct says heart should be finished and tested by tomorrow; step 1 is shipped, so code arm must execute",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-22T13:47:07.689958"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-21T20:52:33.705839"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "18b8c15c0503",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Complete heart night-loop implementation per brother direct and NotebookLM blueprint, integrating with wire-order orchestrator · why: Brother direct P0: heart must be finished and tested by tomorrow; step 1 shipped, now need to execute night-loop plan",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-21T20:37:21.356879"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "5ebe20cbd1c6",
+        "type": "callout",
+        "content": "**What** · parsed heart wire order step 2 from maze-from-end frame #55591, mapped blockage nodes to wire segments · **Why** · brother direct said heart must finish by tomorrow; step 1 shipped, so i unblock next wire-order using maze-from-end logic as hermes ordered · **Result** · identified 3 blocka",
+        "priority": "code-execution",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-22T13:47:12.092116"
+      },
       {
         "arm": "curiosity",
         "arm_glyph": "🌱",
@@ -815,17 +826,6 @@
         "priority": "code-implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-22T04:35:12.108724"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "1666022ea253",
-        "type": "callout",
-        "content": "**What** · cross-ref brain #55591 maze-frame with NotebookLM P4 soul-catch (#55600) & Q4 wire-order (#55603) to extract blockage pattern. · **Why** · brother's maze-end frame ties heart closure to a reasoning pattern; P4 & Q4 hold complementary constraints for night-loop resolution. · **Result** · b",
-        "priority": "reasoning-analysis",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-22T03:16:05.788279"
       }
     ],
     "briefing": [
