@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "6181d4f7bdb6",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-21T08:38:01.633696"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the 4 final heart loops per NotebookLM blueprint and brother's answers. · why: This is the highest-priority P0 item: brother directly said 'heart should be finished by tomorrow and tested' and the orchestrator blueprint is already shipped. Code arm must execute this to unblock the heart finish.",
-      "updated_at": "2026-07-21T08:38:01.633706"
-    },
-    {
       "id": "b7ca86d246a5",
       "type": "callout",
       "props": {
@@ -695,15 +683,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Complete heart night-loop implementation per brother direct and NotebookLM blueprint, integrating with wire-order orchestrator · why: Brother direct P0: heart must be finished and tested by tomorrow; step 1 shipped, now need to execute night-loop plan v2 to meet deadline",
       "updated_at": "2026-07-21T20:37:21.356879"
+    },
+    {
+      "id": "a2b7e8966f3f",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-21T20:52:33.705830"
+      },
+      "content": "Hermes decision · arm=research · priority=P0 · task: Extract and compile all brother-direct statements from canons #55572, #55589, #55591 into a single structured reference for heart completion and maze-from-end framing. · why: Brother-direct commands are P0 and must be immediately actionable. Consolidating them ensures no directive is missed and provides a clear blueprint for the next heart loop.",
+      "updated_at": "2026-07-21T20:52:33.705839"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-21T20:51:53.628118"
+    "checked_at": "2026-07-21T20:56:54.816473"
   },
   "block_count": 30,
-  "updated_at": "2026-07-21T20:37:21.356880",
-  "generated_at": "2026-07-22T00:51:53Z"
+  "updated_at": "2026-07-21T20:52:33.705840",
+  "generated_at": "2026-07-22T00:56:54Z"
 }
