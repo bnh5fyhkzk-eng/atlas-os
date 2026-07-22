@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "20138c104cfe",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-21T14:34:08.670020"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator for heart-mind boundary, shipping the next step after #55603. · why: Brother direct in #55589 says heart should be finished and tested; #55603 shipped step 1, so code arm must continue the wire-order to complete the heart loop.",
-      "updated_at": "2026-07-21T14:34:08.670029"
-    },
-    {
       "id": "0a50d0cb64ed",
       "type": "callout",
       "props": {
@@ -711,15 +699,27 @@
         }
       ],
       "updated_at": "2026-07-22T06:00:06.727786"
+    },
+    {
+      "id": "13cbb9a5d24b",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-22T06:22:09.794964"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Run next step of heart wire order: execute me-heart-wire.py with Q4 parameters and verify output against NotebookLM blueprint. · why: Brother direct says heart should be finished and tested; step 1 shipped, now need to complete and verify the wire order.",
+      "updated_at": "2026-07-22T06:22:09.794976"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-22T06:18:35.348078"
+    "checked_at": "2026-07-22T06:23:36.330179"
   },
   "block_count": 30,
-  "updated_at": "2026-07-22T06:00:06.727791",
-  "generated_at": "2026-07-22T10:18:35Z"
+  "updated_at": "2026-07-22T06:22:09.794977",
+  "generated_at": "2026-07-22T10:23:36Z"
 }
