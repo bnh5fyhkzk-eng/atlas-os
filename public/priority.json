@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-07-22T02:51:08Z",
-  "total_items_scored": 126,
+  "generated_at": "2026-07-22T03:01:09Z",
+  "total_items_scored": 115,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement Q4 wire-order orchestrator per step-1 blueprint: integrate heart-night-loop plan v2 into me-heart-wire.py and ship loop alignment test \u00b7 why: Brother-direct latest (heart finished b",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator as a runnable Python script that sequences the final heart loops per NotebookLM blueprint and brother's answers. \u00b7 why: This is the highest-priority P",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-21T09:40:21.345394"
+      "updated_at": "2026-07-21T09:55:43.090391"
     },
     {
       "arm": "code",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement Q4 wire-order orchestrator per step-1 blueprint: integrate heart-night-loop plan v2 into me-heart-wire.py and ship loop alignment test \u00b7 why: Brother-direct latest (heart finished b",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-07-21T09:40:21.345394"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-21T14:03:39.562069"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Run the me-heart-wire.py script to test the Q4 wire-order orchestrator and verify heart loops. \u00b7 why: Brother directly said heart should be finished by tomorrow and tested; the latest brain c",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-21T14:18:56.406508"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
