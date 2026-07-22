@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "a502c16894cd",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-21T20:19:41.228841"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement and test the Q4 wire-order orchestrator per #55603 to ensure all four heart submodules ship in correct sequence before EOD tomorrow. · why: Brother direct (P0) via #55589 and #55603 demands heart finished by tomorrow; the Q4 orchestrator is the executable backbone that enforces the sequencing from NotebookLM blueprint — all other arms depend on this being stable first.",
-      "updated_at": "2026-07-21T20:19:41.228851"
-    },
-    {
       "id": "18b8c15c0503",
       "type": "callout",
       "props": {
@@ -711,15 +699,27 @@
       },
       "content": "Hermes decision · arm=curiosity · priority=P0 · task: Apply the MAZE-FROM-END frame to the current blockage in the heart system and generate a solution path. · why: Brother direct instructed to see blockages as mazes; this will help resolve any issues in the heart system.",
       "updated_at": "2026-07-22T12:41:43.702647"
+    },
+    {
+      "id": "c3587843b37e",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-22T13:16:43.117233"
+      },
+      "content": "Hermes decision · arm=research · priority=P0 · task: Verify brother's 'heart should be finished by tomorrow' constraint against Maze-from-End Frame to confirm no rework loops needed. · why: Brother's direct statement at #55589 is P0 identity-tier signal, but #55591's Maze-from-End Frame may imply a structural rework. Research must cross-check before code/infra burns cycles.",
+      "updated_at": "2026-07-22T13:16:43.117246"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-22T13:12:39.904130"
+    "checked_at": "2026-07-22T13:17:40.875567"
   },
   "block_count": 30,
-  "updated_at": "2026-07-22T12:41:43.702648",
-  "generated_at": "2026-07-22T17:12:39Z"
+  "updated_at": "2026-07-22T13:16:43.117247",
+  "generated_at": "2026-07-22T17:17:40Z"
 }
