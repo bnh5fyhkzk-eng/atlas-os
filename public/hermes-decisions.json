@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-22T00:04:17Z",
+  "generated_at": "2026-07-22T00:19:41Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator from #55603 into a runnable script that sequences heart-mind-wire steps per brother's maze-from-end frame",
-      "why": "Brother directly said 'heart should be finished by tomorrow and tested' and the Q4 orchestrator is the next concrete executable step to ship the heart loop. Code arm is the only one that can turn the blueprint into a working script.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-07-19T17:14:29.117850"
-    },
     {
       "arm": "code",
       "task": "Implement and test `me-heart-wire.py` orchestrator to validate Q4 wire order matches brother's maze-from-end frame and ship final loop of heart protocol.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-21T20:04:17.122198"
+    },
+    {
+      "arm": "code",
+      "task": "Implement and test the Q4 wire-order orchestrator per #55603 to ensure all four heart submodules ship in correct sequence before EOD tomorrow.",
+      "why": "Brother direct (P0) via #55589 and #55603 demands heart finished by tomorrow; the Q4 orchestrator is the executable backbone that enforces the sequencing from NotebookLM blueprint \u2014 all other arms depend on this being stable first.",
+      "priority": "P0",
+      "use_skill": "none",
+      "est_minutes": 45,
+      "timestamp": "2026-07-21T20:19:41.245768"
     }
   ]
 }
