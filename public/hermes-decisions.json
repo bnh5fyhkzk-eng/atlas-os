@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-22T12:27:00Z",
+  "generated_at": "2026-07-22T12:57:31Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Map the 'maze-from-end frame' method onto the heart-night-loop plan v2 to identify the next tangible blockage to clear, using brother's direct guidance from #55591.",
-      "why": "Brother gave a direct, high-arousal canonical frame ('maze from end') that maps exactly onto the heart-night-loop completion. This is P0 because it's brother-direct and identity-tier: the heart must be finished and tested per #55589. Research arm can pull the maze logic and align it with the existing wire-order orchestrator (#55603) to produce the next actionable step.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 20,
-      "timestamp": "2026-07-19T23:39:52.103100"
-    },
     {
       "arm": "code",
       "task": "Implement night-loop plan v2 for heart project as per brother direct, shipping step 2",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-07-22T08:27:00.573297"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603, ensuring me-heart-wire.py correctly sequences the final heart loops per NotebookLM blueprint and brother's answers.",
+      "why": "This is the direct next step from the most recent brain canon (#55603) and brother's directive to finish heart by tomorrow. Code arm is the only one that can execute this concrete implementation.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-22T08:57:31.763007"
     }
   ]
 }
