@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "deb0d34aaed3",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-21T18:47:34.052340"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script, integrating the heart-night-loop plan v2 (#55589) and maze-from-end frame (#55591) for blockage detection. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the latest shipped step (Q4 orchestrator). Code arm is the only one that can materialize this into a working system, and it's P0 because it's brother-direct + identity-tier.",
-      "updated_at": "2026-07-21T18:47:34.052350"
-    },
-    {
       "id": "c5fe445af0e0",
       "type": "callout",
       "props": {
@@ -710,15 +698,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator (me-heart-wire.py) to ship the next loop of the heart-night-loop plan, following the maze-from-end frame and brother's direct instruction to finish and test the heart by tomorrow. · why: Brother directly said 'heart should be finished by tomorrow and tested' and the Q4 wire-order orchestrator is the next concrete step to ship the heart loops. This is a P0 brother-direct task that unblocks the entire heart pipeline.",
       "updated_at": "2026-07-22T09:59:13.971203"
+    },
+    {
+      "id": "94d52441eeae",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-22T10:14:29.132331"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script, integrating the heart-night-loop plan v2 and maze-from-end frame logic. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the latest shipped step that needs execution. Code arm is the only one that can turn the orchestrator blueprint into a working system, unblocking the heart-mind boundary per #55600.",
+      "updated_at": "2026-07-22T10:14:29.132372"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-22T10:14:18.267851"
+    "checked_at": "2026-07-22T10:19:19.048535"
   },
   "block_count": 30,
-  "updated_at": "2026-07-22T09:59:13.971204",
-  "generated_at": "2026-07-22T14:14:18Z"
+  "updated_at": "2026-07-22T10:14:29.132374",
+  "generated_at": "2026-07-22T14:19:19Z"
 }
