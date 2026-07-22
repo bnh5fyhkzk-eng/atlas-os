@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-22T21:26:35Z",
+  "generated_at": "2026-07-22T21:41:52Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Run me-heart-wire.py orchestrator to trigger final heart loop wiring per Q4 wire-order and brother's 'finished by tomorrow' directive.",
-      "why": "This is the direct executable step from the latest orchestration script (#55603), completing the heart build per brother's explicit 22:00 EDT deadline and NotebookLM blueprint. Highest P0 priority as it fulfills identity-tier deliverables.",
-      "priority": "P0",
-      "use_skill": "none",
-      "est_minutes": 15,
-      "timestamp": "2026-07-20T05:16:35.258706"
-    },
     {
       "arm": "code",
       "task": "Implement HEART test harness for step 2 per brother's deadline.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-22T17:26:35.098146"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603 into a runnable script that sequences the four final loops per NotebookLM blueprint.",
+      "why": "This is the direct next step from the most recent brother-direct canon (#55603) and the heart-finish plan (#55589). The orchestrator is the critical path to shipping the heart loops, which is P0 identity-tier work.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-22T17:41:52.178279"
     }
   ]
 }
