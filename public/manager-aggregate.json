@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T16:39:18Z",
+  "generated_at": "2026-07-22T16:55:27Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 70,
+    "note": 71,
     "briefing": 148,
     "idea": 0
   },
-  "total_blocks": 241,
+  "total_blocks": 242,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "5ed497ff0c4e",
+        "type": "callout",
+        "content": "Hermes decision · arm=curiosity · priority=P0 · task: Apply the MAZE-FROM-END frame to the current blockage in the heart system and generate a solution path. · why: Brother direct instructed to see blockages as mazes; this will help resolve any issues in the heart system.",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-22T12:41:43.702647"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-21T20:19:41.228851"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "98a64676ef72",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator (me-heart-wire.py) to ship the final heart loops per NotebookLM blueprint and brother's direct instructions. · why: Brother direct #55589 says 'heart should be finished by tomorrow and tested', and #55603 alrea",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-21T20:04:17.105054"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "curiosity",
+        "arm_glyph": "🌱",
+        "arm_name": "My Curiosity",
+        "block_id": "67296b3a5ea9",
+        "type": "callout",
+        "content": "**What** · Apply MAZE-FROM-END to heart block. Trace from end back to start. · **Why** · Hermes say blockages are mazes. End-first gives clear path. · **Result** · Found block origin in left artery. Solution: open with balloon then stent. · **Next** · Check if path works with simulation. · **Links**",
+        "priority": "analysis",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-22T12:45:54.282752"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -815,17 +826,6 @@
         "priority": "reasoning-analysis",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-22T03:16:05.788279"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "95e77246ed45",
-        "type": "callout",
-        "content": "**What** · I will implement Q4 wire-order orchestrator for heart-mind boundary per brother's night-loop plan v2. · **Why** · This is the next critical orchestration step after shipping me-heart-wire.py, to finish heart by tomorrow as brother directed. · **Result** · Expected: A functional orchestrat",
-        "priority": "orchestration",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-22T03:00:02.511666"
       }
     ],
     "briefing": [
