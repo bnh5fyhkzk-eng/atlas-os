@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "5dd3d557241c",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-22T03:31:12.977343"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement next heart wire step per maze-from-end frame and brother's direction, referencing NotebookLM blueprint · why: Step 1 shipped; brother-direct says finish heart by tomorrow; need to continue coding heart/maze/soul catch thread",
-      "updated_at": "2026-07-22T03:31:12.977352"
-    },
-    {
       "id": "23b48c56a452",
       "type": "callout",
       "props": {
@@ -711,15 +699,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 into a runnable script that sequences the four final loops per NotebookLM blueprint. · why: This is the direct next step from the most recent brother-direct canon (#55603) and the heart-finish plan (#55589). The orchestrator is the critical path to shipping the heart loops, which is P0 identity-tier work.",
       "updated_at": "2026-07-22T17:41:52.161532"
+    },
+    {
+      "id": "12371588a469",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-22T17:57:57.867671"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 into a runnable script that fires the next arm based on the maze-from-end frame (#55591) and brother's heart deadline (#55589). · why: Brother directly said heart should be finished by tomorrow and tested, and #55603 is the step-1 shipped orchestrator. Code arm is the only one that can materialize this into executable logic; all other arms are secondary until this wire-order is live.",
+      "updated_at": "2026-07-22T17:57:57.867680"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-22T17:53:35.485255"
+    "checked_at": "2026-07-22T17:58:36.281396"
   },
   "block_count": 30,
-  "updated_at": "2026-07-22T17:41:52.161533",
-  "generated_at": "2026-07-22T21:53:35Z"
+  "updated_at": "2026-07-22T17:57:57.867681",
+  "generated_at": "2026-07-22T21:58:36Z"
 }
