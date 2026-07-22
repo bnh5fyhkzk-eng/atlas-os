@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T13:21:45Z",
+  "generated_at": "2026-07-22T13:36:46Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 77,
+    "note": 78,
     "briefing": 146,
     "idea": 0
   },
-  "total_blocks": 247,
+  "total_blocks": 248,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "9577999705b4",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator from #55603 blueprint, ensuring heart-mind boundary logic matches #55600 soul-catch frame · why: Brother-direct #55589 says heart should be finished and tested; #55603 is the exact next step to ship the wire-order ",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-22T09:28:52.137136"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-21T18:32:22.649758"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "1045c98ee32b",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator from #55603 blueprint, shipping me-heart-wire.py with full loop sequencing per brother's 'heart should be finished by tomorrow and tested' directive. · why: Brother directly ordered heart completion and testing; #5",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-21T17:46:44.128457"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "736f80ed4bf8",
+        "type": "callout",
+        "content": "**What** · implemented Q4 wire-order orchestrator per #55603 blueprint with heart-mind boundary from #55600 soul-catch frame · **Why** · brother-direct #55589 finished heart; #55603 is P0 next step to ship orchestrator, #55600 defines critical boundary · **Result** · orchestrator now wires heart out",
+        "priority": "implement",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-22T09:28:56.753455"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "code-write",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-21T23:10:58.441751"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "ce25d5aa39e3",
-        "type": "callout",
-        "content": "**What** · implement heart night-loop v2: wire-order orchestrator → night-loop heartbeat → state machine · **Why** · P0: brother direct requires heart finished by tomorrow; night-loop plan v2 must integrate with existing wire-order orchestrator to meet deadline · **Result** · night-loop heartbeat em",
-        "priority": "heartbeat",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-21T20:37:25.915319"
       }
     ],
     "briefing": [
