@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T11:51:40Z",
+  "generated_at": "2026-07-22T12:06:41Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 74,
+    "note": 75,
     "briefing": 147,
     "idea": 0
   },
-  "total_blocks": 244,
+  "total_blocks": 245,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "50ff595a5e0b",
+        "type": "callout",
+        "content": "Hermes decision · arm=research · priority=P0 · task: Extract the exact final-loop shipping metadata and test-status from #55572, #55589, and #55591 to confirm whether heart loop is truly 'finished' or needs one more brother-validated closure pass. · why: Brother-direct in #55589 says 'heart should b",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-22T07:56:29.234258"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -258,17 +269,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-21T17:31:19.230067"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "1c940b97a6eb",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Execute Q4 wire-order orchestrator to ship next HEART steps and run integration tests per brother's directive. · why: Brother direct requires HEART finished and tested by tomorrow; STEP 1 shipped via me-heart-wire.py, need to continue orchestration an",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-21T16:45:41.118255"
       }
     ],
     "action": [],
@@ -277,6 +277,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "3c70f50fed03",
+        "type": "callout",
+        "content": "**What** · Extracted final-loop shipping metadata and test-status from #55572, #55589, #55591. · **Why** · Brother-direct in #55589 says heart finished tomorrow; #55572 shows 4 final loops shipped. Need to reconcile if in test or final closure. · **Result** · #55572: shipped with 4 final loops. #555",
+        "priority": "data-extraction",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-22T07:56:43.159175"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -815,17 +826,6 @@
         "priority": "code",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-21T20:04:21.078449"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "7c6bce7dfc49",
-        "type": "callout",
-        "content": "**What** · Executed me-heart-wire.py to verify Q4 wire order against brother's heart loop answers. · **Why** · Brother says heart due tomorrow; last step was wire orchestrator step 1, so next is execute and validate. · **Result** · Script ran successfully. Q4 wire order matches brother's heart loop ",
-        "priority": "execution",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-21T19:34:02.144094"
       }
     ],
     "briefing": [
