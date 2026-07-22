@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-22T20:21:00Z",
+  "generated_at": "2026-07-22T20:36:26Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Finish HEART wire-order orchestration for remaining Q4 steps and test with NotebookLM blueprint.",
-      "why": "Brother direct to finish heart by tomorrow; step 1 shipped, need to complete remaining steps immediately.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 120,
-      "timestamp": "2026-07-20T04:30:41.682030"
-    },
     {
       "arm": "code",
       "task": "Run the heart night-loop test with the new wire-order orchestrator to verify the maze-from-end frame logic per brother's direct instruction.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 90,
       "timestamp": "2026-07-22T16:21:00.972772"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603 into me-heart-wire.py, ensuring all 4 final loops from #55572 are sequenced per brother's plan.",
+      "why": "Brother direct #55589 says heart should be finished and tested; #55603 is the exact step to ship. Code arm is the only one that can execute this wire-order orchestration now.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-22T16:36:26.571307"
     }
   ]
 }
