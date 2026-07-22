@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-22T23:14:36Z",
+  "generated_at": "2026-07-22T23:44:55Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator as a runnable script that sequences the four final loops per NotebookLM blueprint and brother's answers, integrating the maze-from-end frame for blockage handling.",
-      "why": "This is the highest-priority P0 task because brother directly stated 'heart should be finished by tomorrow and tested' and the Q4 orchestrator is the critical path to shipping the heart. The code arm is best suited to turn the blueprint into executable logic.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 45,
-      "timestamp": "2026-07-20T09:35:05.807333"
-    },
     {
       "arm": "research",
       "task": "Analyze the Maze-From-End Frame (#55591) to identify the specific blockage pattern and derive the reverse-path solution for the heart-night-loop plan.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-07-22T19:14:36.272543"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603, shipping the first working version of me-heart-wire.py that sequences the final heart loops per NotebookLM blueprint and brother's answers.",
+      "why": "Brother direct in #55589 says heart should be finished and tested; #55603 is the concrete step to ship the orchestrator. This is the highest-leverage P0 action to close the heart loop.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 45,
+      "timestamp": "2026-07-22T19:44:55.718437"
     }
   ]
 }
