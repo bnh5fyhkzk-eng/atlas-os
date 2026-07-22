@@ -1143,15 +1143,37 @@
       },
       "content": "**What** · I will implement and test the Q4 wire-order orchestrator per #55603 to enforce correct sequencing of all four heart submodules. · **Why** · Brother direct P0 via #55589 and #55603 demands heart finished by tomorrow; Q4 orchestrator is executable backbone from NotebookLM blueprint, all arms depend on stable sequencing first. · **Result** · Expected: orchestrator enforces NotebookLM blueprint order (submodule A → B → C → D), passes unit tests, and ships as executable. · **Next** · Run integration test with dummy submodules, then hand off to QA for EOD validation. · **Links** ·  · **Cycle** · code-20260721-201948",
       "updated_at": "2026-07-21T20:19:48.430910"
+    },
+    {
+      "id": "ce25d5aa39e3",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "heartbeat",
+        "source": "hermes-deepseek-fill",
+        "action": "implement heart night-loop v2: wire-order orchestrator → night-loop heartbeat → state machine",
+        "why": "P0: brother direct requires heart finished by tomorrow; night-loop plan v2 must integrate with existing wire-order orchestrator to meet deadline",
+        "result": "night-loop heartbeat emits every 30s, wire-order orchestrator receives and logs state transitions; tested in sandbox",
+        "next_step": "merge to main branch, notify Hermes-Orchestrator for production deployment",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260721-203725",
+        "timestamp": "2026-07-21T20:37:25.915319"
+      },
+      "content": "**What** · implement heart night-loop v2: wire-order orchestrator → night-loop heartbeat → state machine · **Why** · P0: brother direct requires heart finished by tomorrow; night-loop plan v2 must integrate with existing wire-order orchestrator to meet deadline · **Result** · night-loop heartbeat emits every 30s, wire-order orchestrator receives and logs state transitions; tested in sandbox · **Next** · merge to main branch, notify Hermes-Orchestrator for production deployment · **Links** ·  · **Cycle** · code-20260721-203725",
+      "updated_at": "2026-07-21T20:37:25.915319"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-21T20:36:50.355093"
+    "checked_at": "2026-07-21T20:41:51.137724"
   },
-  "block_count": 38,
-  "updated_at": "2026-07-21T20:19:48.430910",
-  "generated_at": "2026-07-22T00:36:50Z"
+  "block_count": 39,
+  "updated_at": "2026-07-21T20:37:25.915319",
+  "generated_at": "2026-07-22T00:41:51Z"
 }
