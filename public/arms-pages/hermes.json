@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "13cbb9a5d24b",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-22T06:22:09.794964"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Run next step of heart wire order: execute me-heart-wire.py with Q4 parameters and verify output against NotebookLM blueprint. · why: Brother direct says heart should be finished and tested; step 1 shipped, now need to complete and verify the wire order.",
-      "updated_at": "2026-07-22T06:22:09.794976"
-    },
-    {
       "id": "30c2a815be72",
       "type": "callout",
       "props": {
@@ -710,15 +698,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Write a test script for the completed heart module per brother's instruction to test by tomorrow · why: Brother directly stated heart should be finished and tested; recent canon shows step 1 shipped, now needs validation.",
       "updated_at": "2026-07-22T21:16:04.566394"
+    },
+    {
+      "id": "c54b9a4ac012",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-22T21:31:16.168759"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator from #55603 blueprint, shipping the first working me-heart-wire.py loop · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the exact step-1 code artifact needed to unblock the heart-mind pipeline. Code arm is the only one that can materialize this into a runnable loop.",
+      "updated_at": "2026-07-22T21:31:16.168768"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-22T21:29:09.541153"
+    "checked_at": "2026-07-22T21:34:10.206193"
   },
   "block_count": 30,
-  "updated_at": "2026-07-22T21:16:04.566396",
-  "generated_at": "2026-07-23T01:29:09Z"
+  "updated_at": "2026-07-22T21:31:16.168769",
+  "generated_at": "2026-07-23T01:34:10Z"
 }
