@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-23T09:40:37Z",
+  "generated_at": "2026-07-23T09:59:19Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Test heart fully per brother's instruction and NotebookLM blueprint, ensuring all 4 final loops are verified.",
-      "why": "Brother direct: 'heart should be finished by tomorrow and tested'; step 1 shipped, now need to validate the heart system end-to-end.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 45,
-      "timestamp": "2026-07-20T20:34:33.886174"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603 into me-heart-wire.py, aligning with brother's 'heart should be finished by tomorrow' directive.",
@@ -901,6 +892,15 @@
       "use_skill": "notebooklm",
       "est_minutes": 45,
       "timestamp": "2026-07-23T05:40:37.489049"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the next step in heart wiring: apply maze-from-end frame to resolve wiring blockages in me-heart-wire.py",
+      "why": "Brother direct says heart should be finished by tomorrow and tested; recent canon #55591 provides maze-from-end frame for blockages, and #55603 shipped step 1 of wiring. This task continues the critical path to complete heart.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 30,
+      "timestamp": "2026-07-23T05:59:19.808527"
     }
   ]
 }
