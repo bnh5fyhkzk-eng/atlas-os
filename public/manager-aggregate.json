@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T07:41:11Z",
+  "generated_at": "2026-07-23T07:56:12Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 79,
+    "note": 80,
     "briefing": 145,
     "idea": 0
   },
-  "total_blocks": 248,
+  "total_blocks": 249,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "7799d46fdc92",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Continue implementing the heart wire-order orchestrator (me-heart-wire.py) per brother's directive, ensuring heart is finished and tested by tomorrow. · why: Brother directly stated 'heart should be finished by tomorrow and tested' and the latest cano",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-23T03:50:30.382969"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-22T14:17:31.292156"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "8e63aa003f7a",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the next step of heart wire order using maze-from-end frame logic from #55591, following the shipped step 1 orchestrator. · why: Brother direct says heart should be finished and tested by tomorrow; step 1 is shipped, so code arm must execute",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-22T13:47:07.689958"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "8627827ad79c",
+        "type": "callout",
+        "content": "**What** · Implement Step 2 of heart wire-order orchestrator in me-heart-wire.py: add ordering logic for wire sequences based on heartbeat priority. · **Why** · Brother said heart must be finished and tested by tomorrow; Step 1 shipped in #55603, so I must complete the core ordering logic now. · **R",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-23T03:50:38.988480"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "code-implement",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-22T21:31:26.879679"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "39767f90ee41",
-        "type": "callout",
-        "content": "**What** · Write test script for heart module using pytest with unit and integration tests. · **Why** · Brother said heart finished and step 1 shipped; need validation now. · **Result** · Script covers main functions, edge cases, and mock DB calls; should pass CI. · **Next** · Run tests, report resu",
-        "priority": "testing",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-22T21:16:08.848590"
       }
     ],
     "briefing": [
