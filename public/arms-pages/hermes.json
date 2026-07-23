@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "ba37427ec965",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-23T02:18:55.261648"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 into a runnable script that sequences the four final heart loops per NotebookLM blueprint and brother's answers from #55572. · why: This is the highest-priority P0 task because brother directly said 'heart should be finished by tomorrow and tested' (#55589), and the orchestrator blueprint (#55603) is the critical next step to ship the heart. Code arm is the only one that can execute this implementation.",
-      "updated_at": "2026-07-23T02:18:55.261658"
-    },
-    {
       "id": "131c3432f5eb",
       "type": "callout",
       "props": {
@@ -696,15 +684,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the next wire-order orchestrator step based on Q4 blueprint and heart-mind boundary from NotebookLM. · why: Brother direct P0: heart must be finished and tested tomorrow; step 1 shipped, need to continue implementation.",
       "updated_at": "2026-07-23T14:27:33.941311"
+    },
+    {
+      "id": "e42281ea4a0e",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-23T14:58:39.031209"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the 'heart night-loop plan v2' as per brother's direct instructions, shipping the first working loop for heart finalization by tomorrow's test. · why: Brother direct #55589 says 'heart should be finished by tomorrow and tested' — this is a P0 identity-tier command. Code arm must execute the loop-plan immediately to meet the deadline. NotebookLM blueprint already provides the schema; this fires the actual wire.",
+      "updated_at": "2026-07-23T14:58:39.031220"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-23T14:57:43.929618"
+    "checked_at": "2026-07-23T15:02:45.084318"
   },
   "block_count": 30,
-  "updated_at": "2026-07-23T14:27:33.941312",
-  "generated_at": "2026-07-23T18:57:43Z"
+  "updated_at": "2026-07-23T14:58:39.031221",
+  "generated_at": "2026-07-23T19:02:45Z"
 }
