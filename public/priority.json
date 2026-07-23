@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-07-23T01:47:11Z",
-  "total_items_scored": 121,
+  "generated_at": "2026-07-23T01:57:12Z",
+  "total_items_scored": 122,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement Q4 wire-order orchestrator: verify me-heart-wire.py runs clean with NotebookLM blueprint and brother's answers in HEART FULLY FINISHED #55572 \u00b7 why: This is the direct next executio",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the 4 final heart loops per NotebookLM blueprint and brother's answers from #55572 and #55589. \u00b7 why: ",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-22T06:55:14.204395"
+      "updated_at": "2026-07-22T07:25:37.302391"
     },
     {
       "arm": "code",
@@ -41,17 +41,6 @@
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement Q4 wire-order orchestrator: verify me-heart-wire.py runs clean with NotebookLM blueprint and brother's answers in HEART FULLY FINISHED #55572 \u00b7 why: This is the direct next executio",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-07-22T06:55:14.204395"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-22T12:41:43.702647"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=research \u00b7 priority=P0 \u00b7 task: Verify brother's 'heart should be finished by tomorrow' constraint against Maze-from-End Frame to confirm no rework loops needed. \u00b7 why: Brother's direct statement at #55589 is P0 identit",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-22T13:16:43.117246"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
