@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T01:10:53Z",
+  "generated_at": "2026-07-23T01:25:54Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 75,
+    "note": 76,
     "briefing": 146,
     "idea": 0
   },
-  "total_blocks": 245,
+  "total_blocks": 246,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "63290655bc66",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Write a test script for the completed heart module per brother's instruction to test by tomorrow · why: Brother directly stated heart should be finished and tested; recent canon shows step 1 shipped, now needs validation.",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-22T21:16:04.566394"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-22T06:22:09.794976"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "6e48297d570a",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Integrate brother's answers from #55589 into heart wire-order orchestrator (me-heart-wire.py) and run first test loop · why: Step 1 shipped; brother direct says heart should be finished and tested. Code arm is needed to implement the next wire order a",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-22T05:51:38.170580"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "39767f90ee41",
+        "type": "callout",
+        "content": "**What** · Write test script for heart module using pytest with unit and integration tests. · **Why** · Brother said heart finished and step 1 shipped; need validation now. · **Result** · Script covers main functions, edge cases, and mock DB calls; should pass CI. · **Next** · Run tests, report resu",
+        "priority": "testing",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-22T21:16:08.848590"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-22T09:59:17.244794"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "736f80ed4bf8",
-        "type": "callout",
-        "content": "**What** · implemented Q4 wire-order orchestrator per #55603 blueprint with heart-mind boundary from #55600 soul-catch frame · **Why** · brother-direct #55589 finished heart; #55603 is P0 next step to ship orchestrator, #55600 defines critical boundary · **Result** · orchestrator now wires heart out",
-        "priority": "implement",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-22T09:28:56.753455"
       }
     ],
     "briefing": [
