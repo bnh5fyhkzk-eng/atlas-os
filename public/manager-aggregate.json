@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T01:55:55Z",
+  "generated_at": "2026-07-23T02:10:56Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 78,
+    "note": 79,
     "briefing": 146,
     "idea": 0
   },
-  "total_blocks": 248,
+  "total_blocks": 249,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "2715f9501891",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 into the heart-night-loop plan v2, ensuring the maze-from-end frame logic is applied to the heart-mind boundary per #55591 and #55600. · why: Brother directly stated heart should be finished and tes",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-22T22:01:55.631885"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-22T07:56:29.234258"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "99a91aefd90b",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the 4 final heart loops per NotebookLM blueprint and brother's answers from #55572 and #55589. · why: Brother directly said 'heart should be finished by tomorrow ",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-22T07:25:37.302391"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "859d5bc2ea4f",
+        "type": "callout",
+        "content": "**What** · implemented Q4 wire-order orchestrator from #55603 into heart-night-loop plan v2, applying maze-from-end frame logic to heart-mind boundary per #55591 and #55600 · **Why** · Brother said heart must be finished and tested by tomorrow; Q4 orchestrator is next concrete step to ship heart-wir",
+        "priority": "integration",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-22T22:02:01.608698"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "code-execution",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-22T13:47:12.092116"
-      },
-      {
-        "arm": "curiosity",
-        "arm_glyph": "🌱",
-        "arm_name": "My Curiosity",
-        "block_id": "67296b3a5ea9",
-        "type": "callout",
-        "content": "**What** · Apply MAZE-FROM-END to heart block. Trace from end back to start. · **Why** · Hermes say blockages are mazes. End-first gives clear path. · **Result** · Found block origin in left artery. Solution: open with balloon then stent. · **Next** · Check if path works with simulation. · **Links**",
-        "priority": "analysis",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-22T12:45:54.282752"
       }
     ],
     "briefing": [
