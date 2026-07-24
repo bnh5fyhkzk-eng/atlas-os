@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-24T22:10:29Z",
+  "generated_at": "2026-07-24T22:25:47Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator (me-heart-wire.py) to finalize the heart loop and ship the remaining 3 loops per NotebookLM blueprint.",
-      "why": "Brother direct at #55589 says 'heart should be finished by tomorrow and tested', and #55603 already shipped step 1. Code arm must complete the orchestrator to unblock the heart-mind boundary and deliver the 4 final loops.",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 90,
-      "timestamp": "2026-07-22T16:21:00.972772"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603 into me-heart-wire.py, ensuring all 4 final loops from #55572 are sequenced per brother's plan.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 30,
       "timestamp": "2026-07-24T18:10:29.467395"
+    },
+    {
+      "arm": "code",
+      "task": "Implement me-heart-wire.py Q4 wire-order orchestrator per #55603 blueprint, shipping the final loop sequence for heart-night-loop plan v2",
+      "why": "Brother direct in #55589 says heart should be finished by tomorrow and tested; #55603 is the exact step to ship the orchestrator that ties the heart-mind boundary (#55600) into executable code. This is the highest-leverage P0 to unblock the entire heart finish.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-24T18:25:47.688726"
     }
   ]
 }
