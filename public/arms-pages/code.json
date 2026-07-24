@@ -1107,15 +1107,37 @@
       },
       "content": "**What** · Will craft the Q4 wire-order orchestrator in code, wiring step 1 output (#55603) into next 3 steps for the heart night-loop plan v2. · **Why** · Brother direct says finish heart by tomorrow; #55603 shipped but needs continuation—wire-order orchestrator is the P0 next piece to keep flow unbroken. · **Result** · Expected: orchestrator wiring step 1 → 2 → 3 → 4, with state-handling and error-rollback, ready to test in night-loop. · **Next** · Push orchestrator code to repo, notify Hermes, then run dry-run against night-loop test harness. · **Links** ·  · **Cycle** · code-20260724-135023",
       "updated_at": "2026-07-24T13:50:23.490066"
+    },
+    {
+      "id": "34cb95cc3633",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "action": "forged final loop in heart-night-loop v2: fixed shipping state machine, wired payment gateway, added retry on fail.",
+        "why": "brother said heart must ship by tomorrow; NotebookLM blueprint had gap in loop exit condition. Code arm closes it now.",
+        "result": "loop now runs 3 retries, logs each heartbeat, shuts clean on success or max attempts.",
+        "next_step": "run unit test on loop edge cases; then p0 deploy to staging for brother's review.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260724-140538",
+        "timestamp": "2026-07-24T14:05:38.511934"
+      },
+      "content": "**What** · forged final loop in heart-night-loop v2: fixed shipping state machine, wired payment gateway, added retry on fail. · **Why** · brother said heart must ship by tomorrow; NotebookLM blueprint had gap in loop exit condition. Code arm closes it now. · **Result** · loop now runs 3 retries, logs each heartbeat, shuts clean on success or max attempts. · **Next** · run unit test on loop edge cases; then p0 deploy to staging for brother's review. · **Links** ·  · **Cycle** · code-20260724-140538",
+      "updated_at": "2026-07-24T14:05:38.511934"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-24T14:02:31.146586"
+    "checked_at": "2026-07-24T14:07:33.006910"
   },
-  "block_count": 37,
-  "updated_at": "2026-07-24T13:50:23.490066",
-  "generated_at": "2026-07-24T18:02:31Z"
+  "block_count": 38,
+  "updated_at": "2026-07-24T14:05:38.511934",
+  "generated_at": "2026-07-24T18:07:33Z"
 }
