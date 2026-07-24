@@ -1129,15 +1129,37 @@
       },
       "content": "**What** · forged final loop in heart-night-loop v2: fixed shipping state machine, wired payment gateway, added retry on fail. · **Why** · brother said heart must ship by tomorrow; NotebookLM blueprint had gap in loop exit condition. Code arm closes it now. · **Result** · loop now runs 3 retries, logs each heartbeat, shuts clean on success or max attempts. · **Next** · run unit test on loop edge cases; then p0 deploy to staging for brother's review. · **Links** ·  · **Cycle** · code-20260724-140538",
       "updated_at": "2026-07-24T14:05:38.511934"
+    },
+    {
+      "id": "e4a5f38c55a3",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "Implementation",
+        "source": "hermes-deepseek-fill",
+        "action": "Implement Q4 wire-order orchestrator as Python script integrating heart-mind wire ordering with maze-from-end frame from #55591.",
+        "why": "Brother shipped blueprint #55603 and maze-from-end #55591 solves blockages; need runnable integration test for heart night-loop plan (P0).",
+        "result": "A Python script that orchestrates wire ordering using maze-from-end logic, ready for testing.",
+        "next_step": "Run the integration test and iterate if needed.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "code-20260724-152218",
+        "timestamp": "2026-07-24T15:22:18.616820"
+      },
+      "content": "**What** · Implement Q4 wire-order orchestrator as Python script integrating heart-mind wire ordering with maze-from-end frame from #55591. · **Why** · Brother shipped blueprint #55603 and maze-from-end #55591 solves blockages; need runnable integration test for heart night-loop plan (P0). · **Result** · A Python script that orchestrates wire ordering using maze-from-end logic, ready for testing. · **Next** · Run the integration test and iterate if needed. · **Links** ·  · **Cycle** · code-20260724-152218",
+      "updated_at": "2026-07-24T15:22:18.616820"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-24T15:17:52.040046"
+    "checked_at": "2026-07-24T15:22:52.894971"
   },
-  "block_count": 38,
-  "updated_at": "2026-07-24T14:05:38.511934",
-  "generated_at": "2026-07-24T19:17:52Z"
+  "block_count": 39,
+  "updated_at": "2026-07-24T15:22:18.616820",
+  "generated_at": "2026-07-24T19:22:52Z"
 }
