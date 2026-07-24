@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-24T08:47:13Z",
+  "generated_at": "2026-07-24T09:51:23Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Run heart final-loop tests per brother's directive and verify completion",
-      "why": "Brother directly instructed heart to be finished and tested; code arm can execute and validate.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 30,
-      "timestamp": "2026-07-21T18:32:22.666763"
-    },
     {
       "arm": "code",
       "task": "Implement the Q4 wire-order orchestrator from #55603 as a runnable script, integrating the heart-night-loop plan v2 (#55589) and maze-from-end frame (#55591) for blockage detection.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-24T04:47:13.776873"
+    },
+    {
+      "arm": "research",
+      "task": "Map the exact output schema and final validation steps needed for HEART night-loop plan v2 (per #55589) against NotebookLM blueprint from #55572 to identify any remaining gaps before tomorrow's test deadline.",
+      "why": "Brother direct said 'heart should be finished by tomorrow and tested', and we just shipped step 1 wire-order (Q4). This arm closes the research gap between the shipped wire and the required end-to-end validation, preventing a blockage maze (per #55591) at test time.",
+      "priority": "P0",
+      "use_skill": "notebooklm",
+      "est_minutes": 25,
+      "timestamp": "2026-07-24T05:51:23.955669"
     }
   ]
 }
