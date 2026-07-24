@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-24T21:09:31Z",
+  "generated_at": "2026-07-24T21:39:52Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "research",
-      "task": "Verify brother's 'heart should be finished by tomorrow' constraint against Maze-from-End Frame to confirm no rework loops needed.",
-      "why": "Brother's direct statement at #55589 is P0 identity-tier signal, but #55591's Maze-from-End Frame may imply a structural rework. Research must cross-check before code/infra burns cycles.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 12,
-      "timestamp": "2026-07-22T13:16:43.134939"
-    },
     {
       "arm": "code",
       "task": "Implement the next step of heart wire order using maze-from-end frame logic from #55591, following the shipped step 1 orchestrator.",
@@ -901,6 +892,15 @@
       "use_skill": "none",
       "est_minutes": 45,
       "timestamp": "2026-07-24T17:09:31.325512"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py module to complete the heart-mind boundary step.",
+      "why": "Brother directly said 'heart should be finished by tomorrow and tested' (#55589) and #55603 is the exact next executable step \u2014 this is the highest priority identity-tier action.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-24T17:39:52.423293"
     }
   ]
 }
