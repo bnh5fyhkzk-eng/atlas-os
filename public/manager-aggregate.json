@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T16:00:03Z",
+  "generated_at": "2026-07-24T16:13:28Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 72,
+    "note": 73,
     "briefing": 146,
     "idea": 0
   },
-  "total_blocks": 242,
+  "total_blocks": 243,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "82e71fe7aca9",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement and test the Q4 wire-order orchestrator per #55603 blueprint, ensuring heart-mind boundary logic from #55600 is respected. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the latest shipped step for the wi",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-24T12:00:32.177500"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-24T01:11:07.362920"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "abe0f394bdbe",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator from #55603 me-heart-wire.py, ensuring final loops ship per NotebookLM blueprint and brother's answers from #55572. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the step-1 shi",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-24T00:55:48.558523"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "3979ca23531e",
+        "type": "callout",
+        "content": "**What** · implemented Q4 wire-order orchestrator per #55603 blueprint, adding heart-mind boundary checks from #55600 · **Why** · brother direct in #55589 says heart must be finished and tested; #55603 is the latest shipped step; #55600 defines critical boundary logic · **Result** · orchestrator now",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-24T12:00:36.039395"
+      },
       {
         "arm": "charle",
         "arm_glyph": "💼",
@@ -826,17 +837,6 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-24T06:09:13.400804"
-      },
-      {
-        "arm": "research",
-        "arm_glyph": "👁",
-        "arm_name": "My Eyes",
-        "block_id": "04e02ce9578f",
-        "type": "callout",
-        "content": "**What** · Mapped HEART night-loop v2 schema and validation steps against NotebookLM blueprint from #55572. · **Why** · Brother direct said heart must be finished and tested tomorrow; shipped wire-order step 1 leaves gaps. This closes research gap, prevents test-time blockage maze per #55591. · **Re",
-        "priority": "research",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-24T05:51:27.629603"
       }
     ],
     "briefing": [
