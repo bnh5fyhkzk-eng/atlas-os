@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-24T15:29:56Z",
+  "generated_at": "2026-07-24T16:00:32Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the four final loops per NotebookLM blueprint and brother's answers from #55572.",
-      "why": "This is the highest-priority P0 task because brother directly said 'heart should be finished by tomorrow and tested' (#55589) and the Q4 orchestrator was just shipped as a step (#55603) \u2014 executing it now closes the heart loop and validates the maze-from-end frame (#55591).",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 45,
-      "timestamp": "2026-07-22T05:05:31.237103"
-    },
     {
       "arm": "code",
       "task": "Integrate brother's answers from #55589 into heart wire-order orchestrator (me-heart-wire.py) and run first test loop",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 30,
       "timestamp": "2026-07-24T11:29:56.397096"
+    },
+    {
+      "arm": "code",
+      "task": "Implement and test the Q4 wire-order orchestrator per #55603 blueprint, ensuring heart-mind boundary logic from #55600 is respected.",
+      "why": "Brother direct in #55589 says heart should be finished and tested; #55603 is the latest shipped step for the wire-order orchestrator, and #55600 defines the critical heart-mind boundary. This is the next concrete execution step to close the loop.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-24T12:00:32.194212"
     }
   ]
 }
