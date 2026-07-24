@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-07-24T19:20:32Z",
-  "total_items_scored": 122,
+  "generated_at": "2026-07-24T19:30:33Z",
+  "total_items_scored": 123,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py as the next executable loop for heart-mind boundary testing. \u00b7 why: Brother direct in #55589 says heart sho",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator from #55603, shipping the first working version of me-heart-wire.py with the maze-from-end frame logic from #55591. \u00b7 why: Brother direct in #55589 sa",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-24T04:01:03.229797"
-    },
-    {
-      "arm": "research",
-      "arm_glyph": "\ud83d\udc41",
-      "arm_name": "Research",
-      "content": "HERMES TASK \u00b7 Map the exact output schema and final validation steps needed for HEART night-loop plan v2 (per #55589) against NotebookLM blueprint from #55572 to identify any remaining gaps before tomorrow's test deadline. \u00b7 why \u00b7 Brother direct said 'heart should be finished by tomorrow and tested', and we just shipped step 1 wire-order (Q4). This arm closes the research gap between the shipped wire and the required end-to-end validation, preventing a blockage maze (per #55591) at test time.",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "est_minutes": 25,
-      "score": 10.0,
-      "updated_at": "2026-07-24T05:51:23.955669",
-      "use_skill": "notebooklm"
+      "updated_at": "2026-07-24T04:16:27.019931"
     },
     {
       "arm": "code",
@@ -38,20 +25,22 @@
       "score": 10.0,
       "updated_at": "2026-07-24T06:06:37.413611",
       "use_skill": "brain-rrf"
-    }
-  ],
-  "top_10": [
+    },
     {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py as the next executable loop for heart-mind boundary testing. \u00b7 why: Brother direct in #55589 says heart sho",
+      "arm": "research",
+      "arm_glyph": "\ud83d\udc41",
+      "arm_name": "Research",
+      "content": "HERMES TASK \u00b7 Investigate the maze-from-end frame concept and create an action plan for resolving blockages as per brother's direct instruction. \u00b7 why \u00b7 Brother direct in canon #55591 requires conceptual analysis and planning; research arm is best suited for this analytical task.",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
+      "est_minutes": 30,
       "score": 10.0,
-      "updated_at": "2026-07-24T04:01:03.229797"
-    },
+      "updated_at": "2026-07-24T09:58:32.005982",
+      "use_skill": "brain-rrf"
+    }
+  ],
+  "top_10": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -150,6 +139,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-24T07:40:49.071828"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement Q4 wire-order orchestrator per #55603 blueprint, shipping the first executable loop of heart-mind boundary logic \u00b7 why: Brother direct in #55589 says heart should be finished and te",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-24T08:11:18.860295"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
