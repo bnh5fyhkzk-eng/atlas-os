@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-23T23:20:23Z",
+  "generated_at": "2026-07-24T00:52:19Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement next step of heart wiring per brother's plan: integrate Q4 wire-order orchestrator with heart modules and run initial test.",
-      "why": "Brother direct says heart should be finished by tomorrow and tested; last canon shipped step 1 of wire-order orchestrator, so code arm must continue integration and testing to meet deadline.",
-      "priority": "P0",
-      "use_skill": "brain-rrf",
-      "est_minutes": 45,
-      "timestamp": "2026-07-21T10:26:20.517590"
-    },
     {
       "arm": "code",
       "task": "Implement and test the final heart loop integration per brother's directive from plan v2",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 28,
       "timestamp": "2026-07-23T19:20:23.676829"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the four final loops per NotebookLM blueprint and brother's answers from #55572.",
+      "why": "Brother directly said 'heart should be finished by tomorrow and tested' (#55589) and the Q4 orchestrator is the concrete next step to ship the heart loops. This is the highest-urgency P0 action to close the heart cycle.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-23T20:52:19.552138"
     }
   ]
 }
