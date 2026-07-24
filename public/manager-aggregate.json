@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T17:58:35Z",
+  "generated_at": "2026-07-24T18:13:35Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
@@ -9,14 +9,25 @@
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 77,
+    "note": 78,
     "briefing": 146,
     "idea": 0
   },
-  "total_blocks": 247,
+  "total_blocks": 248,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "30eebed521b9",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the final loop shipping logic for heart-night-loop v2 based on brother's direct instructions and NotebookLM blueprint. · why: Brother directly stated heart should be finished by tomorrow and tested; code arm is needed to complete the last im",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-24T14:05:29.941535"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -269,17 +280,6 @@
         "priority": "P0",
         "source": "hermes-deepseek",
         "updated_at": "2026-07-24T04:01:03.229797"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "53886928e68d",
-        "type": "callout",
-        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator for heart-mind boundary, following brother's directive from step 1 shipped (#55603). · why: The last brain canon shows STEP 1 SHIPPED with me-heart-wire.py and Q4 wire-order orchestrator. This is a direct broth",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "updated_at": "2026-07-24T02:59:54.841796"
       }
     ],
     "action": [],
@@ -288,6 +288,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "34cb95cc3633",
+        "type": "callout",
+        "content": "**What** · forged final loop in heart-night-loop v2: fixed shipping state machine, wired payment gateway, added retry on fail. · **Why** · brother said heart must ship by tomorrow; NotebookLM blueprint had gap in loop exit condition. Code arm closes it now. · **Result** · loop now runs 3 retries, lo",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-24T14:05:38.511934"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +837,6 @@
         "priority": "implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-24T07:41:00.972456"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "c0713f19e0eb",
-        "type": "callout",
-        "content": "**What** · implemented Q4 wire-order orchestrator for heart-night-loop v2 · **Why** · brother direct P0: heart must be finished and tested by tomorrow; Q4 wire-order orchestrator unblocks maze-from-end frame and soul-catch boundary · **Result** · orchestrator code written and integrated into heart-n",
-        "priority": "development",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-24T07:25:36.695182"
       }
     ],
     "briefing": [
