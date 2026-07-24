@@ -10,30 +10,6 @@
   },
   "blocks": [
     {
-      "id": "1024bc746dec",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-24T05:51:23.935796"
-      },
-      "content": "Hermes decision · arm=research · priority=P0 · task: Map the exact output schema and final validation steps needed for HEART night-loop plan v2 (per #55589) against NotebookLM blueprint from #55572 to identify any remaining gaps before tomorrow's test deadline. · why: Brother direct said 'heart should be finished by tomorrow and tested', and we just shipped step 1 wire-order (Q4). This arm closes the research gap between the shipped wire and the required end-to-end validation, preventing a blockage maze (per #55591) at test time.",
-      "updated_at": "2026-07-24T05:51:23.935828"
-    },
-    {
-      "id": "5344ba690b0f",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-24T06:06:37.396543"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement me-heart-wire.py Q4 wire-order orchestrator per #55603 blueprint, shipping the final loop sequence for heart-mind boundary test. · why: Brother directly stated 'heart should be finished by tomorrow and tested' (#55589) and the Q4 orchestrator is the last structural piece before end-to-end validation. This is the highest-leverage P0 action to close the heart loop.",
-      "updated_at": "2026-07-24T06:06:37.396553"
-    },
-    {
       "id": "657cc7dd7c5a",
       "type": "callout",
       "props": {
@@ -695,15 +671,40 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 into a runnable script that sequences the four heart-mind loops per brother's blueprint. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the exact step shipped. Code arm is the only one that can materialize this into a working script for immediate test.",
       "updated_at": "2026-07-24T16:39:06.579489"
+    },
+    {
+      "id": "4d11aa4e6a3f",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-24T16:54:19.739477"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603, ensuring the me-heart-wire.py script correctly sequences the final heart loops per the NotebookLM blueprint and brother's answers from #55572. · why: Brother directly stated heart should be finished and tested, and the Q4 wire-order orchestrator is the next concrete step to ship the heart-mind boundary integration, which is a P0 brother-direct priority.",
+      "updated_at": "2026-07-24T16:54:19.739487"
+    },
+    {
+      "id": "65802255f8ea",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "No high-arousal hermes canon in last 6h",
+      "updated_at": "2026-07-24T16:58:11.630749"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-24T16:53:14.764917"
+    "checked_at": "2026-07-24T16:58:11.721930"
   },
   "block_count": 30,
-  "updated_at": "2026-07-24T16:39:06.579490",
-  "generated_at": "2026-07-24T20:53:14Z"
+  "updated_at": "2026-07-24T16:58:11.630756",
+  "generated_at": "2026-07-24T20:58:11Z"
 }
