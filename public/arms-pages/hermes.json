@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "87f27ca5e213",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-24T07:40:49.071815"
-      },
-      "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator per #55603 blueprint, ensuring me-heart-wire.py correctly sequences the final heart loops for tomorrow's test. · why: Brother direct at #55589 says heart should be finished by tomorrow and tested; #55603 just shipped the orchestrator blueprint, so code arm must execute it now to unblock the critical path.",
-      "updated_at": "2026-07-24T07:40:49.071828"
-    },
-    {
       "id": "ec1775d75653",
       "type": "callout",
       "props": {
@@ -696,15 +684,27 @@
         }
       ],
       "updated_at": "2026-07-24T18:00:05.161527"
+    },
+    {
+      "id": "f8b4807bcd20",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-24T18:10:29.449423"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement heart-loop test script per brother's 'finished by tomorrow' directive · why: Step 1 shipped; brother's direct P0 order to finish heart by tomorrow; need to execute test immediately.",
+      "updated_at": "2026-07-24T18:10:29.449435"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-24T18:08:31.957091"
+    "checked_at": "2026-07-24T18:13:32.693070"
   },
   "block_count": 30,
-  "updated_at": "2026-07-24T18:00:05.161532",
-  "generated_at": "2026-07-24T22:08:31Z"
+  "updated_at": "2026-07-24T18:10:29.449436",
+  "generated_at": "2026-07-24T22:13:32Z"
 }
