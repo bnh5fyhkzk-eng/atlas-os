@@ -10,18 +10,6 @@
   },
   "blocks": [
     {
-      "id": "82e604ca79d1",
-      "type": "callout",
-      "props": {
-        "category": "decision",
-        "priority": "P0",
-        "source": "hermes-deepseek",
-        "timestamp": "2026-07-24T09:58:31.988617"
-      },
-      "content": "Hermes decision · arm=research · priority=P0 · task: Investigate the maze-from-end frame concept and create an action plan for resolving blockages as per brother's direct instruction. · why: Brother direct in canon #55591 requires conceptual analysis and planning; research arm is best suited for this analytical task.",
-      "updated_at": "2026-07-24T09:58:31.988628"
-    },
-    {
       "id": "584a60dbbd68",
       "type": "callout",
       "props": {
@@ -696,15 +684,27 @@
       },
       "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 as a runnable script that sequences the four final loops per NotebookLM blueprint, integrating brother's answers from #55572 and the maze-from-end frame from #55591. · why: This is the highest-priority executable step: brother directly said 'heart should be finished by tomorrow and tested' (#55589), and the Q4 orchestrator (#55603) is the concrete wire-order to ship the heart loops. Code arm is the only arm that can turn the blueprint into a runnable artifact.",
       "updated_at": "2026-07-24T18:56:18.174648"
+    },
+    {
+      "id": "9321ab2b8949",
+      "type": "callout",
+      "props": {
+        "category": "decision",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "timestamp": "2026-07-24T19:11:43.761947"
+      },
+      "content": "Hermes decision · arm=code · priority=P0 · task: Implement Q4 wire-order orchestrator from #55603 blueprint, ensuring me-heart-wire.py aligns with brother's heart-finish directive from #55589 · why: Brother directly said heart should be finished by tomorrow and tested; #55603 is the latest shipped step that needs code execution to unblock the heart-mind boundary (#55600) and complete the maze-from-end frame (#55591). Code arm is the only one that can ship this wire-order orchestrator now.",
+      "updated_at": "2026-07-24T19:11:43.761955"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-24T19:08:43.429433"
+    "checked_at": "2026-07-24T19:13:44.431064"
   },
   "block_count": 30,
-  "updated_at": "2026-07-24T18:56:18.174649",
-  "generated_at": "2026-07-24T23:08:43Z"
+  "updated_at": "2026-07-24T19:11:43.761957",
+  "generated_at": "2026-07-24T23:13:44Z"
 }
