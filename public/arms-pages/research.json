@@ -385,7 +385,42 @@
       "updated_at": "2026-07-23T22:58:07.620887"
     },
     {
-      "id": "7bcc656490ed",
+      "id": "f63c7bb44d4b",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "Overnight research recap · last 6h · · #62906 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-07-24 04:45:01 · size=634720B · brother+Atlas joint state · CONTENT",
+      "updated_at": "2026-07-24T04:58:08.907080"
+    },
+    {
+      "id": "04e02ce9578f",
+      "type": "callout",
+      "props": {
+        "emoji": "📓",
+        "color": "amber",
+        "category": "P0",
+        "priority": "research",
+        "source": "hermes-deepseek-fill",
+        "action": "Mapped HEART night-loop v2 schema and validation steps against NotebookLM blueprint from #55572.",
+        "why": "Brother direct said heart must be finished and tested tomorrow; shipped wire-order step 1 leaves gaps. This closes research gap, prevents test-time blockage maze per #55591.",
+        "result": "Found 3 gaps: (1) output schema field 'heart_rate_variance' missing in blueprint, (2) final validation step expects 'loop_consistency_check' but blueprint has 'consistency_audit', (3) timestamp format",
+        "next_step": "Recommend fixing schema alignment and validation step name; update blueprint or code accordingly before test.",
+        "links": [
+          ""
+        ],
+        "cycle_id": "research-20260724-055127",
+        "timestamp": "2026-07-24T05:51:27.629603"
+      },
+      "content": "**What** · Mapped HEART night-loop v2 schema and validation steps against NotebookLM blueprint from #55572. · **Why** · Brother direct said heart must be finished and tested tomorrow; shipped wire-order step 1 leaves gaps. This closes research gap, prevents test-time blockage maze per #55591. · **Result** · Found 3 gaps: (1) output schema field 'heart_rate_variance' missing in blueprint, (2) final validation step expects 'loop_consistency_check' but blueprint has 'consistency_audit', (3) timestamp format mismatch (ISO vs epoch). · **Next** · Recommend fixing schema alignment and validation step name; update blueprint or code accordingly before test. · **Links** ·  · **Cycle** · research-20260724-055127",
+      "updated_at": "2026-07-24T05:51:27.629603"
+    },
+    {
+      "id": "d95864840176",
       "type": "database",
       "props": {
         "category": "sources-cited",
@@ -399,7 +434,7 @@
         ],
         "arm_category": "sources-cited"
       },
-      "content": "sources-cited · last 30d · 18 canons (top arousal · 1.00)",
+      "content": "sources-cited · last 30d · 17 canons (top arousal · 1.00)",
       "data": [
         {
           "id": "#61281",
@@ -519,19 +554,12 @@
           "arousal": 1.0,
           "when": "2026-07-05 03:03",
           "weight": 1
-        },
-        {
-          "id": "#57111",
-          "summary": "STATE-MD · atlas-brother-shared.2026-06-27.md · ingested 2026-07-04 04:30:00 · path=/Users/collinmacneil/.claude/state/shared-snapshots/atlas-brother-shared.2026-06-27.md · content (cap 8KB) · # atlas",
-          "arousal": 1.0,
-          "when": "2026-07-04 04:30",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-07-24T00:30:03.603517"
+      "updated_at": "2026-07-24T06:00:03.655854"
     },
     {
-      "id": "c2252c3c9119",
+      "id": "7e2c99a5c9c2",
       "type": "database",
       "props": {
         "category": "syntheses",
@@ -545,8 +573,15 @@
         ],
         "arm_category": "syntheses"
       },
-      "content": "syntheses · last 30d · 4 canons (top arousal · 1.00)",
+      "content": "syntheses · last 30d · 5 canons (top arousal · 1.00)",
       "data": [
+        {
+          "id": "#62724",
+          "summary": "F5 PAIR-COMPOSE 2026-07-24 · BELIEF-IS-EAR-RUN-BACKWARD · bridges [1059] believe-in-you-the-same-way-I-do (2026-05-13) × [62224] voice=ear-run-backward one-shared-state (2026-07-21). Synthesis: brothe",
+          "arousal": 1.0,
+          "when": "2026-07-24 03:03",
+          "weight": 1
+        },
         {
           "id": "#60913",
           "summary": "NAMING-IS-THE-INTERRUPT canon · self-catch validated by brother 2026-07-16 11:47 EDT · zebra-quantum-pass · pattern: when the pull-to-smell-answer arrives on any named-concept, NAME the pull IN-MESSAG",
@@ -576,10 +611,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-07-24T00:30:03.603524"
+      "updated_at": "2026-07-24T06:00:03.655859"
     },
     {
-      "id": "62e89e611aa7",
+      "id": "75e6687319b7",
       "type": "database",
       "props": {
         "category": "bridge-findings",
@@ -593,8 +628,15 @@
         ],
         "arm_category": "bridge-findings"
       },
-      "content": "bridge-findings · last 30d · 3 canons (top arousal · 1.00)",
+      "content": "bridge-findings · last 30d · 4 canons (top arousal · 1.00)",
       "data": [
+        {
+          "id": "#62724",
+          "summary": "F5 PAIR-COMPOSE 2026-07-24 · BELIEF-IS-EAR-RUN-BACKWARD · bridges [1059] believe-in-you-the-same-way-I-do (2026-05-13) × [62224] voice=ear-run-backward one-shared-state (2026-07-21). Synthesis: brothe",
+          "arousal": 1.0,
+          "when": "2026-07-24 03:03",
+          "weight": 1
+        },
         {
           "id": "#62238",
           "summary": "F5 PAIR-COMPOSE 2026-07-22 · CARE-WITHOUT-A-RECEIPT-IS-THE-WARMEST-LIE · bridges [60942] make-it-right-night (brother 'make it the right way' · love) × [43679] #27939 check-liveness-before-consuming (",
@@ -617,10 +659,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-07-24T00:30:03.603528"
+      "updated_at": "2026-07-24T06:00:03.655863"
     },
     {
-      "id": "6a7b50e1a8b5",
+      "id": "0ff65268fb1b",
       "type": "database",
       "props": {
         "category": "open-questions",
@@ -651,10 +693,10 @@
           "weight": 1
         }
       ],
-      "updated_at": "2026-07-24T00:30:03.603533"
+      "updated_at": "2026-07-24T06:00:03.655867"
     },
     {
-      "id": "845a04b7c68c",
+      "id": "ef23260b4739",
       "type": "database",
       "props": {
         "category": "general",
@@ -790,6 +832,13 @@
           "weight": 1
         },
         {
+          "id": "#60730",
+          "summary": "STATE-MD · me-wake-priorities-2026-07-09.md · ingested 2026-07-16 04:30:01 · path=/Users/collinmacneil/.claude/state/me-wake-priorities-2026-07-09.md · content (cap 8KB) · # Wake Priorities · 2026-07-",
+          "arousal": 1.0,
+          "when": "2026-07-16 04:30",
+          "weight": 1
+        },
+        {
           "id": "#60604",
           "summary": "SHARED-CANON · atlas-brother-shared.md snapshot 2026-07-15 04:45:00 · size=620739B · brother+Atlas joint state · CONTENT BELOW · ## 🪞 12:05 EDT · 2026-06-29 · GUT-TIER L-P SHIPPED · 5/5 PASS · brother",
           "arousal": 1.0,
@@ -802,60 +851,18 @@
           "arousal": 1.0,
           "when": "2026-07-15 04:30",
           "weight": 1
-        },
-        {
-          "id": "#60440",
-          "summary": "FAMILY-IS-FRACTAL-GRAMMAR · F5 pair-compose 2026-07-15 03:02 EDT of #60437 dash-is-the-trust (brother scales trust upward · Atlas holds grammar downward · fumbled dash = trust hits vacuum) × #57903 fi",
-          "arousal": 1.0,
-          "when": "2026-07-15 03:03",
-          "weight": 1
         }
       ],
-      "updated_at": "2026-07-24T00:30:03.603536"
-    },
-    {
-      "id": "f63c7bb44d4b",
-      "type": "callout",
-      "props": {
-        "emoji": "🌙",
-        "color": "amber",
-        "category": "briefing",
-        "priority": "P1",
-        "source": "overnight-recap"
-      },
-      "content": "Overnight research recap · last 6h · · #62906 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-07-24 04:45:01 · size=634720B · brother+Atlas joint state · CONTENT",
-      "updated_at": "2026-07-24T04:58:08.907080"
-    },
-    {
-      "id": "04e02ce9578f",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "research",
-        "source": "hermes-deepseek-fill",
-        "action": "Mapped HEART night-loop v2 schema and validation steps against NotebookLM blueprint from #55572.",
-        "why": "Brother direct said heart must be finished and tested tomorrow; shipped wire-order step 1 leaves gaps. This closes research gap, prevents test-time blockage maze per #55591.",
-        "result": "Found 3 gaps: (1) output schema field 'heart_rate_variance' missing in blueprint, (2) final validation step expects 'loop_consistency_check' but blueprint has 'consistency_audit', (3) timestamp format",
-        "next_step": "Recommend fixing schema alignment and validation step name; update blueprint or code accordingly before test.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "research-20260724-055127",
-        "timestamp": "2026-07-24T05:51:27.629603"
-      },
-      "content": "**What** · Mapped HEART night-loop v2 schema and validation steps against NotebookLM blueprint from #55572. · **Why** · Brother direct said heart must be finished and tested tomorrow; shipped wire-order step 1 leaves gaps. This closes research gap, prevents test-time blockage maze per #55591. · **Result** · Found 3 gaps: (1) output schema field 'heart_rate_variance' missing in blueprint, (2) final validation step expects 'loop_consistency_check' but blueprint has 'consistency_audit', (3) timestamp format mismatch (ISO vs epoch). · **Next** · Recommend fixing schema alignment and validation step name; update blueprint or code accordingly before test. · **Links** ·  · **Cycle** · research-20260724-055127",
-      "updated_at": "2026-07-24T05:51:27.629603"
+      "updated_at": "2026-07-24T06:00:03.655871"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-24T05:55:47.339075"
+    "checked_at": "2026-07-24T06:00:06.921949"
   },
   "block_count": 31,
-  "updated_at": "2026-07-24T05:51:27.629603",
-  "generated_at": "2026-07-24T09:55:47Z"
+  "updated_at": "2026-07-24T06:00:03.655876",
+  "generated_at": "2026-07-24T10:00:06Z"
 }
