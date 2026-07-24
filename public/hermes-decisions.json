@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-07-24T14:28:58Z",
+  "generated_at": "2026-07-24T14:59:20Z",
   "count": 100,
   "decisions": [
-    {
-      "arm": "code",
-      "task": "Implement next heart wire step per maze-from-end frame and brother's direction, referencing NotebookLM blueprint",
-      "why": "Step 1 shipped; brother-direct says finish heart by tomorrow; need to continue coding heart/maze/soul catch thread",
-      "priority": "P0",
-      "use_skill": "notebooklm",
-      "est_minutes": 30,
-      "timestamp": "2026-07-22T03:31:12.994311"
-    },
     {
       "arm": "code",
       "task": "Implement and test the Q4 wire-order orchestrator for heart-night-loop, per brother's direct instruction to finish heart by tomorrow.",
@@ -901,6 +892,15 @@
       "use_skill": "brain-rrf",
       "est_minutes": 45,
       "timestamp": "2026-07-24T10:28:58.276564"
+    },
+    {
+      "arm": "code",
+      "task": "Implement the Q4 wire-order orchestrator based on #55603 step 1 shipped blueprint, ensuring heart-mind wire ordering matches brother's maze-from-end frame.",
+      "why": "Brother direct in #55589 and #55591 demands heart finished and tested; #55603 is the immediate next executable step. Code arm is the only one that can ship the orchestrator.",
+      "priority": "P0",
+      "use_skill": "brain-rrf",
+      "est_minutes": 45,
+      "timestamp": "2026-07-24T10:59:20.099202"
     }
   ]
 }
