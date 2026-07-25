@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-07-25T01:21:00Z",
-  "total_items_scored": 124,
+  "generated_at": "2026-07-25T01:31:01Z",
+  "total_items_scored": 125,
   "top_3": [
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
       "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator based on #55603 step 1 shipped blueprint, ensuring heart-mind wire ordering matches brother's maze-from-end frame. \u00b7 why: Brother direct in #55589 and",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator per #55603 blueprint, shipping the first executable loop of me-heart-wire.py with brother's maze-from-end frame logic. \u00b7 why: Brother directly ordered",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "score": 10.0,
-      "updated_at": "2026-07-24T10:59:20.082117"
+      "updated_at": "2026-07-24T11:14:33.416354"
     },
     {
       "arm": "code",
       "arm_glyph": "\u270b",
       "arm_name": "Code",
-      "content": "HERMES TASK \u00b7 Implement the Q4 wire-order orchestrator from #55603, shipping the me-heart-wire.py module to complete the heart-mind boundary wiring per NotebookLM blueprint. \u00b7 why \u00b7 Brother direct in #55589 says heart should be finished and tested; #55603 is the next concrete step (STEP 1 SHIPPED) and is P0 because it's brother-direct + identity-tier work that unblocks the entire heart loop.",
+      "content": "HERMES TASK \u00b7 Implement the Q4 wire-order orchestrator (me-heart-wire.py) to ship the next step of the heart-mind boundary loop per brother's direct instruction. \u00b7 why \u00b7 Brother direct #55603 says 'STEP 1 SHIPPED' for me-heart-wire.py, but the Q4 wire-order orchestrator is the next concrete code step to finish the heart loop. This is P0 because brother said 'heart should be finished by tomorrow and tested' (#55589).",
       "category": "decision",
       "priority": "P0",
       "source": "hermes-deepseek",
       "est_minutes": 45,
       "score": 10.0,
-      "updated_at": "2026-07-24T12:47:09.662553",
-      "use_skill": "notebooklm"
+      "updated_at": "2026-07-24T13:02:42.873278",
+      "use_skill": "brain-rrf"
     },
     {
       "arm": "infra",
@@ -34,22 +34,11 @@
       "category": "launchagents",
       "priority": "P1",
       "source": "backfill",
-      "score": 9.83,
+      "score": 9.74,
       "updated_at": "2026-07-24T18:00:04.665111"
     }
   ],
   "top_10": [
-    {
-      "arm": "hermes",
-      "arm_glyph": "\ud83e\udde0",
-      "arm_name": "My Orchestrator",
-      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement the Q4 wire-order orchestrator based on #55603 step 1 shipped blueprint, ensuring heart-mind wire ordering matches brother's maze-from-end frame. \u00b7 why: Brother direct in #55589 and",
-      "category": "decision",
-      "priority": "P0",
-      "source": "hermes-deepseek",
-      "score": 10.0,
-      "updated_at": "2026-07-24T10:59:20.082117"
-    },
     {
       "arm": "hermes",
       "arm_glyph": "\ud83e\udde0",
@@ -148,6 +137,17 @@
       "source": "hermes-deepseek",
       "score": 10.0,
       "updated_at": "2026-07-24T15:22:05.693275"
+    },
+    {
+      "arm": "hermes",
+      "arm_glyph": "\ud83e\udde0",
+      "arm_name": "My Orchestrator",
+      "content": "Hermes decision \u00b7 arm=code \u00b7 priority=P0 \u00b7 task: Implement step 2 of heart night-loop plan v2: integrate maze-from-end frame logic into wire orchestrator \u00b7 why: Brother direct instructed heart should be finished and tested by tomorrow; step",
+      "category": "decision",
+      "priority": "P0",
+      "source": "hermes-deepseek",
+      "score": 10.0,
+      "updated_at": "2026-07-24T15:37:56.053324"
     }
   ],
   "algorithm": "recency(0-5) + priority(P0=10|P1=6|P2=3) + category-weight + hermes-extra(3)"
