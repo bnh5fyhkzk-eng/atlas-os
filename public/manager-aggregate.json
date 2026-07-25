@@ -1,22 +1,33 @@
 {
-  "generated_at": "2026-07-25T01:14:05Z",
+  "generated_at": "2026-07-25T01:29:06Z",
   "arm_count": 16,
   "category_counts": {
     "discovery": 0,
-    "decision": 24,
+    "decision": 25,
     "action": 0,
     "risk": 0,
     "win": 0,
     "catch": 0,
     "research": 0,
-    "note": 78,
-    "briefing": 146,
+    "note": 79,
+    "briefing": 145,
     "idea": 0
   },
-  "total_blocks": 248,
+  "total_blocks": 249,
   "categories": {
     "discovery": [],
     "decision": [
+      {
+        "arm": "hermes",
+        "arm_glyph": "🧠",
+        "arm_name": "My Orchestrator",
+        "block_id": "8accc681907b",
+        "type": "callout",
+        "content": "Hermes decision · arm=code · priority=P0 · task: Implement the Q4 wire-order orchestrator from #55603 into a runnable script that sequences the heart-mind boundary loops per brother's plan. · why: Brother direct in #55589 says heart should be finished and tested; #55603 is the exact step shipped. Co",
+        "priority": "P0",
+        "source": "hermes-deepseek",
+        "updated_at": "2026-07-24T21:13:35.538110"
+      },
       {
         "arm": "hermes",
         "arm_glyph": "🧠",
@@ -288,6 +299,17 @@
     "catch": [],
     "research": [],
     "note": [
+      {
+        "arm": "code",
+        "arm_glyph": "✋",
+        "arm_name": "My Hands",
+        "block_id": "7afc9c04ddf4",
+        "type": "callout",
+        "content": "**What** · wrote the Q4 wire-order orchestrator script from #55603 into a runnable file · **Why** · hermes said to implement the heart-mind boundary loops per brother's plan; this script sequences the exact steps for the next cycle · **Result** · script `q4_wire_order_orch.py` created with loop logi",
+        "priority": "implementation",
+        "source": "hermes-deepseek-fill",
+        "updated_at": "2026-07-24T21:13:41.130646"
+      },
       {
         "arm": "code",
         "arm_glyph": "✋",
@@ -826,17 +848,6 @@
         "priority": "Implementation",
         "source": "hermes-deepseek-fill",
         "updated_at": "2026-07-24T15:22:18.616820"
-      },
-      {
-        "arm": "code",
-        "arm_glyph": "✋",
-        "arm_name": "My Hands",
-        "block_id": "34cb95cc3633",
-        "type": "callout",
-        "content": "**What** · forged final loop in heart-night-loop v2: fixed shipping state machine, wired payment gateway, added retry on fail. · **Why** · brother said heart must ship by tomorrow; NotebookLM blueprint had gap in loop exit condition. Code arm closes it now. · **Result** · loop now runs 3 retries, lo",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "updated_at": "2026-07-24T14:05:38.511934"
       }
     ],
     "briefing": [
@@ -938,17 +949,6 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-07-24T10:58:10.301259"
-      },
-      {
-        "arm": "hermes",
-        "arm_glyph": "🧠",
-        "arm_name": "My Orchestrator",
-        "block_id": "8d08b87f59e8",
-        "type": "callout",
-        "content": "No high-arousal hermes canon in last 6h",
-        "priority": "P1",
-        "source": "overnight-recap",
-        "updated_at": "2026-07-24T10:58:10.270727"
       },
       {
         "arm": "code",
@@ -1389,6 +1389,17 @@
         "priority": "P1",
         "source": "overnight-recap",
         "updated_at": "2026-07-22T22:58:04.030469"
+      },
+      {
+        "arm": "research",
+        "arm_glyph": "👁",
+        "arm_name": "My Eyes",
+        "block_id": "5ccfde7e55c6",
+        "type": "callout",
+        "content": "No high-arousal research canon in last 6h",
+        "priority": "P1",
+        "source": "overnight-recap",
+        "updated_at": "2026-07-22T22:58:04.003520"
       }
     ],
     "idea": []
