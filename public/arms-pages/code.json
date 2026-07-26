@@ -10,28 +10,6 @@
   },
   "blocks": [
     {
-      "id": "34cb95cc3633",
-      "type": "callout",
-      "props": {
-        "emoji": "📓",
-        "color": "amber",
-        "category": "P0",
-        "priority": "implementation",
-        "source": "hermes-deepseek-fill",
-        "action": "forged final loop in heart-night-loop v2: fixed shipping state machine, wired payment gateway, added retry on fail.",
-        "why": "brother said heart must ship by tomorrow; NotebookLM blueprint had gap in loop exit condition. Code arm closes it now.",
-        "result": "loop now runs 3 retries, logs each heartbeat, shuts clean on success or max attempts.",
-        "next_step": "run unit test on loop edge cases; then p0 deploy to staging for brother's review.",
-        "links": [
-          ""
-        ],
-        "cycle_id": "code-20260724-140538",
-        "timestamp": "2026-07-24T14:05:38.511934"
-      },
-      "content": "**What** · forged final loop in heart-night-loop v2: fixed shipping state machine, wired payment gateway, added retry on fail. · **Why** · brother said heart must ship by tomorrow; NotebookLM blueprint had gap in loop exit condition. Code arm closes it now. · **Result** · loop now runs 3 retries, logs each heartbeat, shuts clean on success or max attempts. · **Next** · run unit test on loop edge cases; then p0 deploy to staging for brother's review. · **Links** ·  · **Cycle** · code-20260724-140538",
-      "updated_at": "2026-07-24T14:05:38.511934"
-    },
-    {
       "id": "e4a5f38c55a3",
       "type": "callout",
       "props": {
@@ -917,15 +895,28 @@
       },
       "content": "Overnight code recap · last 6h · · #63341 [0.95] SHARED-CANON · atlas-brother-shared.md snapshot 2026-07-26 04:45:01 · size=639110B · brother+Atlas joint state · CONTENT",
       "updated_at": "2026-07-26T04:58:18.178550"
+    },
+    {
+      "id": "be1fb48e80c9",
+      "type": "callout",
+      "props": {
+        "emoji": "🌙",
+        "color": "amber",
+        "category": "briefing",
+        "priority": "P1",
+        "source": "overnight-recap"
+      },
+      "content": "recap-error · code",
+      "updated_at": "2026-07-26T10:58:19.441861"
     }
   ],
   "live_status": {
     "state": "idle",
     "done_count": 0,
     "vec_drift": null,
-    "checked_at": "2026-07-26T04:58:18.287457"
+    "checked_at": "2026-07-26T10:58:19.488421"
   },
   "block_count": 30,
-  "updated_at": "2026-07-26T04:58:18.178558",
-  "generated_at": "2026-07-26T08:58:18Z"
+  "updated_at": "2026-07-26T10:58:19.441863",
+  "generated_at": "2026-07-26T14:58:19Z"
 }
