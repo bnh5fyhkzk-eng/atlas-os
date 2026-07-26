@@ -5,7 +5,6 @@
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "rewrites": [
-    { "source": "/", "destination": "/us.html" },
-    { "source": "/((?!api/|assets/|us\\.html|favicon\\.ico|app\\.html).*)", "destination": "/app.html" }
+    { "source": "/((?!api/|assets/|favicon\\.ico|app\\.html).*)", "destination": "/app.html" }
   ]
 }
