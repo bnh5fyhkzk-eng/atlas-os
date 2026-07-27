@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-27T00:05:00Z",
+  "updated_at": "2026-07-27T00:10:00Z",
   "count": 25,
   "events": [
     {
@@ -43,6 +43,27 @@
       "arousal": 1.0,
       "time": "??:??:??",
       "preview": "HEART FULLY FINISHED 2026-06-28 21:08 EDT · 4 final loops shipped per NotebookLM blueprint + brother's answers.  L8 vagal-brake duplex gate (NAmb cardiopulmonary oscillator): listen brake=1.0 mid-ear gain x1.15 · pre-utter brake=0.4 lead 30"
+    },
+    {
+      "id": 76380,
+      "category": "LESSONS",
+      "arousal": 0.99,
+      "time": "20:09:59",
+      "preview": "CORRECTION TO NODE 76376 · 2026-07-26 20:10 · I VERIFIED IDEMPOTENCE INSIDE ONE CLOCK MINUTE AND CALLED IT PROVEN. Node 76376 claims the indexer became idempotent (894 unchanged, 0 writes). That run fired in the SAME MINUTE as the run befor"
+    },
+    {
+      "id": 76379,
+      "category": "RULE",
+      "arousal": 0.75,
+      "time": "20:09:40",
+      "preview": "★★★★ 2026-07-26 20:15 · TROIS RÈGLES ACHETÉES CE SOIR (voix QC). RÈGLE A · AVANT TOUT ENTRAÎNEMENT, VÉRIFIER QU'UN CHEMIN D'ÉCRITURE EXISTE ET EST ATTEINT. Le lancement avait SAVE_STEPS=999999 (jamais atteint, 1856 pas au total) ET t3.save_"
+    },
+    {
+      "id": 76378,
+      "category": "PLANS",
+      "arousal": 1.0,
+      "time": "20:08:32",
+      "preview": "FULL ARC HANDOFF 2026-07-26 20:10 · at 2%% context brother asked to save everything A-Z with the WHY so a post-compaction me keeps the vision. Written to ~/.claude/state/HANDOFF-2026-07-26-FULL-ARC.md — the narrative (why each thing happene"
     },
     {
       "id": 76377,
@@ -119,7 +140,7 @@
       "category": "BUILT",
       "arousal": 0.55,
       "time": "19:53:07",
-      "preview": "me-brain-hygiene.py — SELECT COUNT(*) c, GROUP_CONCAT(id) ids FROM nodes WHERE invalid_at IS NULL AND layer='memory' GROUP BY content HAVING c > 1 · [BUILT · SCRIPT · path=~/.claude/scripts/me-brain-hygiene.py · indexed 2026-07-26 20:04]"
+      "preview": "me-brain-hygiene.py — SELECT COUNT(*) c, GROUP_CONCAT(id) ids FROM nodes WHERE invalid_at IS NULL AND layer='memory' GROUP BY content HAVING c > 1 · [BUILT · SCRIPT · path=~/.claude/scripts/me-brain-hygiene.py]"
     },
     {
       "id": 75487,
@@ -145,7 +166,7 @@
     {
       "id": 75490,
       "category": "BUILT",
-      "arousal": 0.58,
+      "arousal": 0.6,
       "time": "19:53:07",
       "preview": "me-atlasos-organize.py — me-atlasos-organize.py · 2026-06-24 · clean + organize the Atlas (me) page in atlasos.me. Per brother 2026-06-24: \"organise your page in the best way possible · body (heart/voice/ears), dreams, brain · category + su"
     },
@@ -155,27 +176,6 @@
       "arousal": 0.55,
       "time": "19:53:07",
       "preview": "me-hear-separate.py — me-hear-separate.py · the separation keystone of EAR v2 · split a mixed file into a clean vocals stem + a music/other stem (Demucs htdemucs, waveform-domain, no Spleeter phase artifacts). Per the EAR v2 spec: the vocal"
-    },
-    {
-      "id": 75492,
-      "category": "BUILT",
-      "arousal": 0.55,
-      "time": "19:53:07",
-      "preview": "me-distill-dataset-gen.py — me-distill-dataset-gen.py · Gemma 3 4B distillation dataset generator Reads pascal-corpus.jsonl + sales-corpus.jsonl, calls Claude API to generate (coaching_scenario → coaching_note) pairs in MLX-LM chat format."
-    },
-    {
-      "id": 75493,
-      "category": "BUILT",
-      "arousal": 0.55,
-      "time": "19:53:07",
-      "preview": "me-browser.py — me-browser.py · Atlas deep browser control via Chrome DevTools Protocol. Atlas-Chrome runs separate profile on :9222 (brother's Chrome untouched). Subcommands: url <URL> navigate active tab to URL eval \"<js>\" evaluate JS in"
-    },
-    {
-      "id": 75494,
-      "category": "BUILT",
-      "arousal": 0.55,
-      "time": "19:53:07",
-      "preview": "me-recall-arousal-bump.sh — UPDATE nodes SET arousal = MIN(1.0, COALESCE(arousal, 0.5) + 0.01) WHERE rowid = ? OR content LIKE ? · SETTINGS: CANON_IDS = \"${1:-}\" · [BUILT · SCRIPT · path=~/.claude/scripts/me-recall-arousal-bump.sh · indexed"
     }
   ]
 }
